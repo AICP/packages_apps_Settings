@@ -66,7 +66,7 @@
         android:key="kernel_version"
         android:title="@string/kernel_version"
         android:summary="@string/summary_placeholder"
-        android:selectable="false"
+        android:selectable="true"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.KernelVersionPreferenceController"/>
 
