@@ -1304,4 +1304,5 @@ public class Settings extends PreferenceActivity
     public static class ThemeSettingsActivity extends Settings { /* empty */ }
     public static class AicpSettingsActivity extends Settings { /* empty */ }
     public static class PieActivity extends Settings { /* empty */ }
+    public static class NotificationShortcutsSettingsActivity extends Settings { /* empty */ }
 }
