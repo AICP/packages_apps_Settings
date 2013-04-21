@@ -1904,4 +1904,7 @@
     <string name="user_image_take_photo" msgid="1280274310152803669">"Prendre une photo"</string>
     <string name="user_image_choose_photo" msgid="7940990613897477057">"Sélectionner une photo dans la galerie"</string>
     <string name="regulatory_info_text" msgid="5623087902354026557"></string>
+    <string name="link_volume_ringtones">Lier le volume des alertes à la sonnerie</string>
+    <string name="link_volume_mutes">Silence commun pour alertes et sonnerie</string>
+    <string name="volume_keys_control_ring_stream">Les boutons de volume contrôlent le volume de la sonnerie</string>
 </resources>

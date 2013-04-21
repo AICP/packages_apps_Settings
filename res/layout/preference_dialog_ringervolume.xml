@@ -170,13 +170,20 @@
                 android:id="@+id/link_ring_and_volume"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="@string/link_volume_ringtones" />
-
             <CheckBox
                 android:id="@+id/link_mutes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="@string/link_volume_mutes" />
+            <CheckBox
+                android:id="@+id/volume_keys_control_ring_stream"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/volume_keys_control_ring_stream"/>
         </LinearLayout>
 
         <TextView

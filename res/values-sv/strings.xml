@@ -1949,7 +1949,8 @@
     <string name="vibration_title">Telefon vibration</string>
     <string name="link_volume_ringtones">Länka volym</string>
     <string name="link_volume_mutes">Länka dämpade lägen</string>
-
+    <string name="volume_keys_control_ring_stream">Volymknapparna kontrollerar ringsignalsvolym</string>
+    
     <!-- AOKP specific sound settings
     <string name="camera_sounds">Camera sounds</string> ** TODO ** -->
     <string name="safe_headset_volume_title">Säker headsets volym</string>

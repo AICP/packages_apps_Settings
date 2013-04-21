@@ -1902,4 +1902,7 @@
     <string name="user_image_take_photo" msgid="1280274310152803669">"Hacer foto"</string>
     <string name="user_image_choose_photo" msgid="7940990613897477057">"Seleccionar foto de la galería"</string>
     <string name="regulatory_info_text" msgid="5623087902354026557"></string>
+    <string name="link_volume_ringtones">Vincular volúmenes</string>
+    <string name="link_volume_mutes">Vincular silencio</string>
+    <string name="volume_keys_control_ring_stream">Controlar volumen de llamada</string>
 </resources>

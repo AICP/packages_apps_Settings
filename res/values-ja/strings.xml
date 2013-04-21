@@ -1974,7 +1974,8 @@
     <string name="vibration_title">着信バイブレーション</string>
     <string name="link_volume_ringtones">着信音と同じ音量にする</string>
     <string name="link_volume_mutes">ミュート状態をリンクさせる</string>
-
+    <string name="volume_keys_control_ring_stream">ボリュームキーで着信音量を制御する</string>
+    
     <!-- AOKP specific sound settings
     <string name="camera_sounds">シャッター音</string> ** TODO ** -->
     <string name="safe_headset_volume_title">安全なヘッドセット音量</string>

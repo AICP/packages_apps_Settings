@@ -1898,6 +1898,7 @@
     <!-- Głośność -->
     <string name="link_volume_ringtones">Połącz głośności</string>
     <string name="link_volume_mutes">Połącz stan wyciszenia</string>
+    <string name="volume_keys_control_ring_stream">Przyciski głośności regulują głośność dzwonka</string>
     <string name="safe_headset_volume_title">Bezpieczna głośność w słuchawkach</string>
     <string name="vibration_title">Wibracje telefonu</string>
     <string name="volume_adjust_sounds_enable_title">Dźwięk zmiany głośności</string>

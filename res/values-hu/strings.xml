@@ -1941,6 +1941,7 @@
     <string name="advanced_settings_title">Eszköz beállítások</string>
     <string name="link_volume_ringtones">Link hangerő</string>
     <string name="link_volume_mutes">Link néma állapot</string>
+    <string name="volume_keys_control_ring_stream">Csengőhang vezérlése hangerőgombokkal</string>
 
     <!-- AOKP specific sound settings
     <string name="camera_sounds">Camera sounds</string> ** TODO ** -->

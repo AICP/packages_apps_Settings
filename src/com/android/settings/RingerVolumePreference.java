@@ -201,6 +201,8 @@ public class RingerVolumePreference extends VolumePreference {
         // Separate ringtone and notification streams
         final CheckBox linkCheckBox = (CheckBox) view.findViewById(R.id.link_ring_and_volume);
         final CheckBox linkMuteStates = (CheckBox) view.findViewById(R.id.link_mutes);
+        final CheckBox volumeKeysControlRingStream = (CheckBox) view.findViewById(R.id.volume_keys_control_ring_stream);
+
         final View ringerSection = view.findViewById(R.id.ringer_section);
         final View notificationSection = view.findViewById(R.id.notification_section);
         if (Utils.isVoiceCapable(getContext())) {
@@ -255,6 +257,24 @@ public class RingerVolumePreference extends VolumePreference {
                     updateSlidersAndMutedStates();
                 }
             });
+
+            if (System.getInt(getContext().getContentResolver(),
+                    System.VOLUME_KEYS_CONTROL_RING_STREAM, 1) == 1) {
+                volumeKeysControlRingStream.setChecked(true);
+            } else {
+                volumeKeysControlRingStream.setChecked(false);
+            }
+
+            volumeKeysControlRingStream.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    Settings.System.putInt(buttonView.getContext().getContentResolver(),
+                            Settings.System.VOLUME_KEYS_CONTROL_RING_STREAM, isChecked ? 1 : 0);
+                }
+
+            });
+
         } else {
             ringerSection.setVisibility(View.GONE);
         }

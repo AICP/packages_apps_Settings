@@ -1957,7 +1957,8 @@
     <string name="vibration_title">振动效果</string>
     <string name="link_volume_ringtones">合并音量</string>
     <string name="link_volume_mutes">合并静音状态</string>
-
+	<string name="volume_keys_control_ring_stream">音量键将控制铃声音量</string>
+	
     <!-- AOKP specific sound settings
     <string name="camera_sounds">相机快门音</string> ** TODO ** -->
     <string name="safe_headset_volume_title">耳机安全音量</string>

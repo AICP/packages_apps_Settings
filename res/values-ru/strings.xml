@@ -1979,6 +1979,7 @@
     <string name="vibration_title">Вибрация телефона</string>
     <string name="link_volume_ringtones">Связать громкость звонка и уведомлений</string>
     <string name="link_volume_mutes">Беззвучный режим влияет на уведомления</string>
+    <string name="volume_keys_control_ring_stream">Регулировать кнопками громкости</string>
     <string name="safe_headset_volume_title">Безопасная громкость</string>
     <string name="lockscreen_quick_unlock_control_title">Быстрая разблокировка</string>
     <string name="lockscreen_quick_unlock_control_summary">Разблокировка экрана паролем/pin-кодом без нажатия кнопки ввода</string>
