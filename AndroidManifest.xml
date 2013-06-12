@@ -66,6 +66,7 @@
     <uses-permission android:name="android.permission.ACCESS_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CHANGE_PRIVACY_GUARD_STATE" />
 
     <permission
         android:name="android.permission.REQUEST_SUPERUSER"
@@ -1680,12 +1681,13 @@
         </activity>
 
         <activity android:name=".paranoid.Halo" />
-
         <activity android:name=".pie.PieTab" />
 
         <activity android:name=".chameleonos.labs.LabSettings" />
         <activity android:name=".chameleonos.labs.gestureanywhere.GestureAnywhereBuilderActivity" />
         <activity android:name=".chameleonos.labs.gestureanywhere.GestureAnywhereCreateGestureActivity" />
+
+        <activity android:name=".slim.privacyguard.PrivacyGuardManager" />
 
         <activity android:name="Settings$UserSettingsActivity"
                 android:uiOptions="splitActionBarWhenNarrow"
