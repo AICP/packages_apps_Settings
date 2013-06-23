@@ -2173,6 +2173,9 @@
     <!-- Storage setting.  Summary for PTP checkbox [CHAR LIMIT=NONE]-->
     <string name="usb_label_installer_cd">"Install file-transfer tools"</string>
 
+    <string name="storage_rescan_media">Rescan media for the storage volume</string>
+    <string name="storage_rescan_media_complete">Scan completed</string>
+
     <!-- Section header above list of other users storage [CHAR LIMIT=32] -->
     <string name="storage_other_users">Other users</string>
 
