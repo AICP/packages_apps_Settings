@@ -5286,4 +5286,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="app_ops_btn_text">Modify</string>
     <string name="app_ops_no_item_text">This app has no changeable permissions.</string>
 
+    <!-- APN edits -->
+    <string name="confirm_delete_apn">The APN will be deleted.</string>
 </resources>
