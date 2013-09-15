@@ -133,7 +133,8 @@ public class Settings extends PreferenceActivity
             R.id.rom_control,
             R.id.themes,
             R.id.advanced_settings,
-            R.id.sprint_tools
+            R.id.sprint_tools,
+            R.id.halo
     };
 
     private SharedPreferences mDevelopmentPreferences;

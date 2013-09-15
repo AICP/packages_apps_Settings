@@ -94,6 +94,12 @@
                 android:targetClass="com.cyanogenmod.settings.device.DeviceSettings" />
     </header>
 
+    <header
+        android:id="@+id/halo"
+        android:fragment="com.android.settings.paranoid.Halo"
+        android:title="@string/halo_settings_title"
+        android:icon="@drawable/ic_rom_control_halo" />
+
     <header android:id="@+id/sprint_tools"
             android:title="@string/sprint_tools_title"
             android:icon="@drawable/ic_sprint_tools">
