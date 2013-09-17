@@ -3167,6 +3167,8 @@
     <string name="wifi_display_certification">Wireless display certification</string>
     <!-- setting Checkbox summary whether to show options for wireless display certification  -->
     <string name="wifi_display_certification_summary">Show options for wireless display certification</string>
+    <string name="dim_screen_while_plugged">Dim screen on charging</string>
+    <string name="dim_screen_while_plugged_summary">Should screen be dimmed while charging</string>  
     <!-- Setting Checkbox title whether to allow mock locations -->
     <string name="allow_mock_location">Allow mock locations</string>
     <!-- setting Checkbox summary whether to allow mock locations  -->

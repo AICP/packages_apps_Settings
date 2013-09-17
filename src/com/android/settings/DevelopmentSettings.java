@@ -92,6 +92,7 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
     private static final String CLEAR_ADB_KEYS = "clear_adb_keys";
     private static final String ENABLE_TERMINAL = "enable_terminal";
     private static final String KEEP_SCREEN_ON = "keep_screen_on";
+    private static final String DIM_SCREEN_WHILE_PLUGGED = "dim_screen_while_plugged";
     private static final String BT_HCI_SNOOP_LOG = "bt_hci_snoop_log";
     private static final String SELECT_RUNTIME_KEY = "select_runtime";
     private static final String SELECT_RUNTIME_PROPERTY = "persist.sys.dalvik.vm.lib";
@@ -162,6 +163,7 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
     private Preference mBugreport;
     private CheckBoxPreference mBugreportInPower;
     private CheckBoxPreference mKeepScreenOn;
+    private CheckBoxPreference mDimScreenWhilePLugged;
     private CheckBoxPreference mBtHciSnoopLog;
     private CheckBoxPreference mAllowMockLocation;
     private PreferenceScreen mPassword;
@@ -252,6 +254,7 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         mBugreport = findPreference(BUGREPORT);
         mBugreportInPower = findAndInitCheckboxPref(BUGREPORT_IN_POWER_KEY);
         mKeepScreenOn = findAndInitCheckboxPref(KEEP_SCREEN_ON);
+        mDimScreenWhilePLugged = findAndInitCheckboxPref(DIM_SCREEN_WHILE_PLUGGED);
         mBtHciSnoopLog = findAndInitCheckboxPref(BT_HCI_SNOOP_LOG);
         mAllowMockLocation = findAndInitCheckboxPref(ALLOW_MOCK_LOCATION);
         mPassword = (PreferenceScreen) findPreference(LOCAL_BACKUP_PASSWORD);
@@ -423,8 +426,10 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
             // on "stay awake when plugged in" because that would defeat the
             // restriction.
             mDisabledPrefs.add(mKeepScreenOn);
+	    mDisabledPrefs.add(mDimScreenWhilePLugged);
         } else {
             mDisabledPrefs.remove(mKeepScreenOn);
+            mDisabledPrefs.remove(mDimScreenWhilePLugged);
         }
 
         final ContentResolver cr = getActivity().getContentResolver();
@@ -466,6 +471,9 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
                 Settings.Secure.BUGREPORT_IN_POWER_MENU, 0) != 0);
         updateCheckBox(mKeepScreenOn, Settings.Global.getInt(cr,
                 Settings.Global.STAY_ON_WHILE_PLUGGED_IN, 0) != 0);
+        updateCheckBox(mDimScreenWhilePLugged, Settings.Global.getInt(cr,
+                Settings.Global.DIM_SCREEN_WHILE_PLUGGED_IN, 1) != 0);
+        mDimScreenWhilePLugged.setEnabled(mKeepScreenOn.isChecked());
         updateCheckBox(mBtHciSnoopLog, Settings.Secure.getInt(cr,
                 Settings.Secure.BLUETOOTH_HCI_LOG, 0) != 0);
         updateCheckBox(mAllowMockLocation, Settings.Secure.getInt(cr,
@@ -1201,8 +1209,13 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
                     Settings.Global.STAY_ON_WHILE_PLUGGED_IN,
                     mKeepScreenOn.isChecked() ?
                     (BatteryManager.BATTERY_PLUGGED_AC | BatteryManager.BATTERY_PLUGGED_USB) : 0);
+                    mDimScreenWhilePLugged.setEnabled(mKeepScreenOn.isChecked());
+        } else if (preference == mDimScreenWhilePLugged) {
+            Settings.Global.putInt(getActivity().getContentResolver(),
+                    Settings.Global.DIM_SCREEN_WHILE_PLUGGED_IN,
+                    mDimScreenWhilePLugged.isChecked() ? 1 : 0);
         } else if (preference == mBtHciSnoopLog) {
-            writeBtHciSnoopLogOptions();
+               writeBtHciSnoopLogOptions();  
         } else if (preference == mAllowMockLocation) {
             Settings.Secure.putInt(getActivity().getContentResolver(),
                     Settings.Secure.ALLOW_MOCK_LOCATION,
