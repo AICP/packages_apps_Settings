@@ -37,6 +37,11 @@
         android:title="@string/keep_screen_on" 
         android:summary="@string/keep_screen_on_summary"/>
 
+    <CheckBoxPreference 
+        android:key="dim_screen_while_plugged" 
+        android:title="@string/dim_screen_while_plugged" 
+        android:summary="@string/dim_screen_while_plugged_summary"/>
+
     <ListPreference
         android:key="hdcp_checking"
         android:title="@string/hdcp_checking_title"

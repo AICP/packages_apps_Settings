@@ -95,6 +95,7 @@ public class DevelopmentSettings extends PreferenceFragment
 
     private static final String CLEAR_ADB_KEYS = "clear_adb_keys";
     private static final String KEEP_SCREEN_ON = "keep_screen_on";
+    private static final String DIM_SCREEN_WHILE_PLUGGED = "dim_screen_while_plugged";
     private static final String ALLOW_MOCK_LOCATION = "allow_mock_location";
     private static final String HDCP_CHECKING_KEY = "hdcp_checking";
     private static final String HDCP_CHECKING_PROPERTY = "persist.sys.hdcp_checking";
@@ -161,6 +162,7 @@ public class DevelopmentSettings extends PreferenceFragment
     private Preference mBugreport;
     private CheckBoxPreference mBugreportInPower;
     private CheckBoxPreference mKeepScreenOn;
+    private CheckBoxPreference mDimScreenWhilePLugged;
     private CheckBoxPreference mEnforceReadExternal;
     private CheckBoxPreference mAllowMockLocation;
     private PreferenceScreen mPassword;
@@ -241,6 +243,7 @@ public class DevelopmentSettings extends PreferenceFragment
         mBugreport = findPreference(BUGREPORT);
         mBugreportInPower = findAndInitCheckboxPref(BUGREPORT_IN_POWER_KEY);
         mKeepScreenOn = findAndInitCheckboxPref(KEEP_SCREEN_ON);
+        mDimScreenWhilePLugged = findAndInitCheckboxPref(DIM_SCREEN_WHILE_PLUGGED);
         mEnforceReadExternal = findAndInitCheckboxPref(ENFORCE_READ_EXTERNAL);
         mAllowMockLocation = findAndInitCheckboxPref(ALLOW_MOCK_LOCATION);
         mPassword = (PreferenceScreen) findPreference(LOCAL_BACKUP_PASSWORD);
@@ -414,8 +417,10 @@ public class DevelopmentSettings extends PreferenceFragment
             // on "stay awake when plugged in" because that would defeat the
             // restriction.
             mDisabledPrefs.add(mKeepScreenOn);
+	    mDisabledPrefs.add(mDimScreenWhilePLugged);
         } else {
             mDisabledPrefs.remove(mKeepScreenOn);
+            mDisabledPrefs.remove(mDimScreenWhilePLugged);
         }
 
         final ContentResolver cr = getActivity().getContentResolver();
@@ -454,6 +459,9 @@ public class DevelopmentSettings extends PreferenceFragment
                 Settings.Secure.BUGREPORT_IN_POWER_MENU, 0) != 0);
         updateCheckBox(mKeepScreenOn, Settings.Global.getInt(cr,
                 Settings.Global.STAY_ON_WHILE_PLUGGED_IN, 0) != 0);
+        updateCheckBox(mDimScreenWhilePLugged, Settings.Global.getInt(cr,
+                Settings.Global.DIM_SCREEN_WHILE_PLUGGED_IN, 1) != 0);
+        mDimScreenWhilePLugged.setEnabled(mKeepScreenOn.isChecked());
         updateCheckBox(mEnforceReadExternal, isPermissionEnforced(READ_EXTERNAL_STORAGE));
         updateCheckBox(mAllowMockLocation, Settings.Secure.getInt(cr,
                 Settings.Secure.ALLOW_MOCK_LOCATION, 0) != 0);
@@ -1107,6 +1115,11 @@ public class DevelopmentSettings extends PreferenceFragment
                     Settings.Global.STAY_ON_WHILE_PLUGGED_IN,
                     mKeepScreenOn.isChecked() ? 
                     (BatteryManager.BATTERY_PLUGGED_AC | BatteryManager.BATTERY_PLUGGED_USB) : 0);
+                     mDimScreenWhilePLugged.setEnabled(mKeepScreenOn.isChecked());
+        } else if (preference == mDimScreenWhilePLugged) {
+            Settings.Global.putInt(getActivity().getContentResolver(),
+                    Settings.Global.DIM_SCREEN_WHILE_PLUGGED_IN,
+                    mDimScreenWhilePLugged.isChecked() ? 1 : 0);
         } else if (preference == mEnforceReadExternal) {
             if (mEnforceReadExternal.isChecked()) {
                 ConfirmEnforceFragment.show(this);

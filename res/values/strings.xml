@@ -3178,6 +3178,8 @@
     <string name="keep_screen_on">Stay awake</string>
     <!-- setting Checkbox summary whether to keep the screen on when plugged in  -->
     <string name="keep_screen_on_summary">Screen will never sleep while charging</string>
+    <string name="dim_screen_while_plugged">Dim screen on charging</string>
+    <string name="dim_screen_while_plugged_summary">Should screen be dimmed while charging</string>  
     <!-- Setting Checkbox title whether to allow mock locations -->
     <string name="allow_mock_location">Allow mock locations</string>
     <!-- setting Checkbox summary whether to allow mock locations  -->
