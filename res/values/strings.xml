@@ -4555,8 +4555,8 @@
     <!-- Label for are-notifications-enabled checkbox in app details [CHAR LIMIT=20] -->
     <string name="app_notifications_switch_label">Show notifications</string>
     <!-- Label for are-notifications-enabled checkbox in app details [CHAR LIMIT=20] -->
-    <string name="app_halo_label_black">Blacklist HALO notifications</string>
-    <string name="app_halo_label_white">Whitelist HALO notifications</string>
+    <string name="app_halo_label_black">Blacklist Halo notifications</string>
+    <string name="app_halo_label_white">Whitelist Halo notifications</string>
 
 
     <!--  Help URLs for some screens. Not specified here. Specified in product overlays --><skip/>
@@ -4827,40 +4827,40 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Text to display in regulatory info screen (from device overlay). -->
     <string name="regulatory_info_text"></string>
 
-   <!-- HALO -->
+   <!-- Halo -->
     <string name="halo_colors_title">Custom colors</string>
-    <string name="halo_colors_summary">Enable custom colors for HALO instead of the default theme colors</string>
+    <string name="halo_colors_summary">Enable custom colors for Halo instead of the default theme colors</string>
     <string name="halo_circle_color_title">Circle color</string>
     <string name="halo_bubble_color_title">Speech bubble color</string>
     <string name="halo_effect_color_title">Effect color</string>
     <string name="halo_effect_color_summary">Requires a systemui restart</string>
-    <string name="halo_settings_title">HALO</string>
-    <string name="halo_behavior_title">HALO Behavior</string>
-    <string name="halo_enabled_title">Enable HALO</string>
-    <string name="halo_enabled_summary">Completely enable or disable HALO</string>
-    <string name="halo_hide_title">Hide HALO after activity</string>
-    <string name="halo_hide_summary">HALO will appear for incoming tasks and scroll out of sight after a while</string>
-    <string name="halo_reversed_title">Reverse HALO</string>
-    <string name="halo_reversed_summary">Applies for task switching and HALO moving gestures</string>
-    <string name="halo_state_title">HALO policy</string>
-    <string name="halo_state_summary">Enables black/white listing notifications shown in HALO</string>
+    <string name="halo_settings_title">Halo</string>
+    <string name="halo_behavior_title">Halo Behavior</string>
+    <string name="halo_enabled_title">Enable Halo</string>
+    <string name="halo_enabled_summary">Completely enable or disable Halo</string>
+    <string name="halo_hide_title">Hide Halo after activity</string>
+    <string name="halo_hide_summary">Halo will appear for incoming tasks and scroll out of sight after a while</string>
+    <string name="halo_reversed_title">Reverse Halo</string>
+    <string name="halo_reversed_summary">Applies for task switching and Halo moving gestures</string>
+    <string name="halo_state_title">Halo policy</string>
+    <string name="halo_state_summary">Enables black/white listing notifications shown in Halo</string>
     <string name="halo_state_black">Black list</string>
     <string name="halo_state_white">White list</string>
     <string name="halo_pause_title">Pause active app</string>
-    <string name="halo_pause_summary">When opening an app with HALO the underlying app will get paused</string>
+    <string name="halo_pause_summary">When opening an app with Halo the underlying app will get paused</string>
     <string name="halo_ninja_title">Ninja mode</string>
-    <string name="halo_ninja_summary">HALO will disappear completely when empty</string>
+    <string name="halo_ninja_summary">Halo will disappear completely when empty</string>
     <string name="halo_notification_msgbox_title">Enable message pop-up</string>
     <string name="halo_notification_msgbox_summary">Show message box for incoming notifications</string>
     <string name="halo_unlock_ping_title">Ping on unlock</string>
-    <string name="halo_unlock_ping_summary">HALO will ping when device is unlocked if new notifications were received</string>
+    <string name="halo_unlock_ping_summary">Halo will ping when device is unlocked if new notifications were received</string>
  
     <string name="header_summary_halo">@null</string>
 
 
-    <!-- Defines HALO size -->
-    <string name="halo_size_title">HALO size</string>
-    <string name="halo_size_summary">Defines how big HALO is going to be</string>
+    <!-- Defines Halo size -->
+    <string name="halo_size_title">Halo size</string>
+    <string name="halo_size_summary">Defines how big Halo is going to be</string>
     <string name="halo_size_miniscule">Miniscule</string>
     <string name="halo_size_small">Small</string>
     <string name="halo_size_default">Normal (default)</string>
@@ -4869,7 +4869,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="halo_size_monster">Monster</string>
 
     <string name="halo_notification_count_title">Notification count</string>
-    <string name="halo_notification_count_summary">Display notification counts on HALO</string>
+    <string name="halo_notification_count_summary">Display notification counts on Halo</string>
     <string name="halo_notification_count_none">None</string>
     <string name="halo_notification_count_total">Total</string>
     <string name="halo_notification_count_individual">Per app</string>
