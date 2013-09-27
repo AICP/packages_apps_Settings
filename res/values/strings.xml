@@ -4607,7 +4607,7 @@
     <string name="rom_control_title">ROM Control</string>
     <string name="themes_title">Themes</string>
 
-    <string name="mod_version">AOKP version</string>
+    <string name="mod_version">AICP version</string>
     <string name="mod_version_default">Unknown</string>
 
     <!-- Anonymous Statistics #CM -->
@@ -4778,7 +4778,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="ok">OK</string>
 
     <!-- TRDS Settings -->
-    <string name="trds_settings_title">Dark AOKP</string>
+    <string name="trds_settings_title">Dark AICP</string>
 
     <!-- User app limits screen title [CHAR LIMIT=35] -->
     <string name="user_restrictions_title">Application and content restrictions</string>

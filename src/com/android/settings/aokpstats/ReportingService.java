@@ -104,7 +104,7 @@ public class ReportingService extends Service {
             try {
                 List<NameValuePair> kv = new ArrayList<NameValuePair>(2);
                 kv.add(new BasicNameValuePair("hash", deviceId));
-                kv.add(new BasicNameValuePair("aokp_version", deviceVersion));
+                kv.add(new BasicNameValuePair("aicp_version", deviceVersion));
 
                 httpPost.setEntity(new UrlEncodedFormEntity(kv));
                 httpClient.execute(httpPost);
