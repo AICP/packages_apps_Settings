@@ -32,6 +32,10 @@
                     android:targetClass="@string/additional_system_update_menu" />
         </PreferenceScreen>
 
+        <!-- IceCold logo -->
+        <PreferenceScreen android:key="icj_logo"
+                android:layout="@layout/rom_logo" />
+
         <!-- Device status - launches activity -->
         <PreferenceScreen android:key="status_info"
                 android:title="@string/device_status" 
