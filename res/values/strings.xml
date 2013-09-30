@@ -4694,7 +4694,6 @@
     <!-- AOKP specific sound settings
     <string name="camera_sounds">Camera sounds</string> ** TODO ** -->
     <string name="safe_headset_volume_title">Safe headset volume</string>
-
     <string name="lockscreen_quick_unlock_control_title">Quick pin unlock</string>
     <string name="lockscreen_quick_unlock_control_summary">Unlock password/pin lockscreen without pressing enter button</string>
 
@@ -4902,6 +4901,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="ad_text_summary">Show the notification text around the ring.</string>
     <string name="ad_all_notifications_title">All notifications</string>
     <string name="ad_all_notifications_summary">Show all notifications including ongoing, non-clearable notifications.</string>
+    <string name="ad_hide_low_priority_title">Hide low priority</string>
+    <string name="ad_hide_low_priority_summary">Hide low priority notifications such as those from Google Now.</string>
     <string name="ad_pocket_mode_title">Pocket mode</string>
     <string name="ad_pocket_mode_summary">Show active display notifications when you take the device out of your pocket.</string>
     <string name="ad_redisplay_title">Redisplay notifications</string>
