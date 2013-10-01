@@ -1122,4 +1122,24 @@
         <item>18000000</item>
     </string-array>
 
+    <string-array name="ad_displayactive_entries" translatable="false">
+        <item>@string/ad_displayactive_1s</item>
+        <item>@string/ad_displayactive_3s</item>
+        <item>@string/ad_displayactive_5s</item>
+        <item>@string/ad_displayactive_10s</item>
+        <item>@string/ad_displayactive_15s</item>
+        <item>@string/ad_displayactive_30s</item>
+        <item>@string/ad_displayactive_1m</item>
+    </string-array>
+
+    <string-array name="ad_displayactive_values" translatable="false">
+        <item>1000</item>
+        <item>3000</item>
+        <item>5000</item>
+        <item>10000</item>
+        <item>15000</item>
+        <item>30000</item>
+        <item>60000</item>
+    </string-array> 
+
 </resources>

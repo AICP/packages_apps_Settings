@@ -68,6 +68,15 @@
         android:entryValues="@array/ad_redisplay_values"
         android:dependency="ad_enable"/>
 
+    <ListPreference
+        android:key="ad_displayactive"
+        android:persistent="false"
+        android:dialogTitle="@string/ad_displayactive_title"
+        android:title="@string/ad_displayactive_title"
+        android:entries="@array/ad_displayactive_entries"
+        android:entryValues="@array/ad_displayactive_values"
+        android:dependency="ad_enable"/>
+
     <PreferenceCategory
         android:key="ad_customizations"
         android:title="@string/ad_customizations_title" />
