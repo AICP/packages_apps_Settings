@@ -1671,6 +1671,8 @@
 
         <activity android:name=".pie.PieTab" />
 
+        <activity android:name=".chameleonos.LabSettings" />
+
         <activity android:name="Settings$UserSettingsActivity"
                 android:uiOptions="splitActionBarWhenNarrow"
                 android:label="@string/user_settings_title"
