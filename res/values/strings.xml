@@ -5243,4 +5243,13 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="profile_add_nfc_text">This NFC tag refers to an unknown profile. Attaching this NFC tag to an existing profile will allow for selecting the profile in the future.</string>
     <string name="profile_select">Select profile</string>
 
+    <!-- Partition Info -->
+    <string name="partition_info_title">Partition info</string>
+    <string name="partition_info_system">/system</string>
+    <string name="partition_info_data">/data</string>
+    <string name="partition_info_cache">/cache</string>
+    <string name="partition_info_sdcard">/sdcard (FAT)</string>
+    <string name="partition_info_sdext">/sd-ext (EXT)</string>
+    <string name="partition_info_used_of">/</string>
+
 </resources>
