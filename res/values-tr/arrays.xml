@@ -129,8 +129,8 @@
   </string-array>
   <string-array name="wifi_p2p_wps_setup">
     <item msgid="5085064298144493867">"Düğme"</item>
-    <item msgid="1624323946324499595">"Eş cihazın PIN\'i"</item>
-    <item msgid="5366790421523328066">"Bu cihazın PIN\'i"</item>
+    <item msgid="1624323946324499595">"Eş cihazın PIN'i"</item>
+    <item msgid="5366790421523328066">"Bu cihazın PIN'i"</item>
   </string-array>
   <string-array name="wifi_p2p_status">
     <item msgid="1701505390737218306">"Bağlı"</item>
@@ -360,7 +360,7 @@
     <item msgid="3191973083884253830">"Hiçbiri"</item>
     <item msgid="9089630089455370183">"Logcat"</item>
     <item msgid="5397807424362304288">"Systrace (Grafik)"</item>
-    <item msgid="1340692776955662664">"glGetError\'da yığın çağır"</item>
+    <item msgid="1340692776955662664">"glGetError'da yığın çağır"</item>
   </string-array>
   <string-array name="show_non_rect_clip_entries">
     <item msgid="993742912147090253">"Kapalı"</item>
