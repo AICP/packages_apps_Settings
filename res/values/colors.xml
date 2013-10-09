@@ -47,4 +47,7 @@
     <color name="circle_avatar_frame_color">#ffffffff</color>
     <color name="circle_avatar_frame_shadow_color">#80000000</color>
     <color name="circle_avatar_frame_pressed_color">#ffffffff</color>
+
+    <color name="color_text_holo_dark">#FFFFFF</color>
+    <color name="color_pager_tab_strip">#2c2c2c</color>
 </resources>

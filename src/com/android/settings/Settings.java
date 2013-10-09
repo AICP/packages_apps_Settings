@@ -134,7 +134,8 @@ public class Settings extends PreferenceActivity
             R.id.themes,
             R.id.advanced_settings,
             R.id.sprint_tools,
-            R.id.halo
+            R.id.halo,
+            R.id.pie_controls
     };
 
     private SharedPreferences mDevelopmentPreferences;
