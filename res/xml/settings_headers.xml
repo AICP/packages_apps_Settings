@@ -109,6 +109,14 @@
                 android:targetClass="org.teameos.settings.device.DeviceSettings" />
     </header>
 
+    <!-- Pie controls -->
+
+    <header
+        android:id="@+id/pie_controls"
+        android:fragment="com.android.settings.pie.PieTab"
+        android:title="@string/pie_controls_title"
+        android:icon="@drawable/ic_carbon_pie" />
+
     <!-- DEVICE -->
     <header android:id="@+id/device_section"
         android:title="@string/header_category_device" />
