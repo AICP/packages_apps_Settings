@@ -1671,7 +1671,9 @@
 
         <activity android:name=".pie.PieTab" />
 
-        <activity android:name=".chameleonos.LabSettings" />
+        <activity android:name=".chameleonos.labs.LabSettings" />
+        <activity android:name=".chameleonos.labs.gestureanywhere.GestureAnywhereBuilderActivity" />
+        <activity android:name=".chameleonos.labs.gestureanywhere.GestureAnywhereCreateGestureActivity" />
 
         <activity android:name="Settings$UserSettingsActivity"
                 android:uiOptions="splitActionBarWhenNarrow"
