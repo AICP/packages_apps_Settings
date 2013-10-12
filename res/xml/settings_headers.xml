@@ -94,11 +94,12 @@
                 android:targetClass="com.cyanogenmod.settings.device.DeviceSettings" />
     </header>
 
+    <!-- AICP -->
     <header
-        android:id="@+id/halo"
-        android:fragment="com.android.settings.paranoid.Halo"
-        android:title="@string/halo_settings_title"
-        android:icon="@drawable/ic_rom_control_halo" />
+        android:id="@+id/lab_settings"
+        android:fragment="com.android.settings.chameleonos.labs.LabSettings"
+        android:icon="@drawable/ic_settings_aicp"
+        android:title="@string/lab_settings_title" />
 
     <header android:id="@+id/sprint_tools"
             android:title="@string/sprint_tools_title"
@@ -108,14 +109,6 @@
                 android:targetPackage="org.teameos.settings.device"
                 android:targetClass="org.teameos.settings.device.DeviceSettings" />
     </header>
-
-    <!-- Pie controls -->
-
-    <header
-        android:id="@+id/pie_controls"
-        android:fragment="com.android.settings.pie.PieTab"
-        android:title="@string/pie_controls_title"
-        android:icon="@drawable/ic_carbon_pie" />
 
     <!-- DEVICE -->
     <header android:id="@+id/device_section"
@@ -240,13 +233,6 @@
         android:fragment="com.android.settings.AccessibilitySettings"
         android:icon="@drawable/ic_settings_accessibility"
         android:title="@string/accessibility_settings" />
-
-    <!-- ChaOS Lab -->
-    <header
-        android:id="@+id/lab_settings"
-        android:fragment="com.android.settings.chameleonos.labs.LabSettings"
-        android:icon="@drawable/ic_settings_lab"
-        android:title="@string/lab_settings_title" />
 
     <!-- Development -->
     <header

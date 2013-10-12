@@ -17,10 +17,32 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         android:title="@string/lab_settings_title">
 
+    <!-- Halo -->
+    <PreferenceScreen
+        android:key="halo"
+        android:fragment="com.android.settings.paranoid.Halo"
+        android:title="@string/halo_settings_title"
+        android:icon="@drawable/ic_rom_control_halo" />
+
+    <!-- Pie controls -->
+    <PreferenceScreen
+        android:key="pie_controls"
+        android:fragment="com.android.settings.pie.PieTab"
+        android:title="@string/pie_controls_title"
+        android:icon="@drawable/ic_carbon_pie" />
+
+    <!-- Active Display -->
+    <PreferenceScreen
+        android:key="active_display"
+        android:fragment="com.android.settings.liquid.ActiveDisplaySettings"
+        android:title="@string/ad_settings_title"
+        android:icon="@drawable/ic_settings_actived" />
+
+    <!-- Gesture Anywhere -->
     <PreferenceScreen
         android:key="gesture_anywhere"
         android:fragment="com.android.settings.chameleonos.labs.gestureanywhere.GestureAnywhereSettings"
-        android:icon="@drawable/ic_settings_gesture_anywhere"
-        android:title="@string/gesture_anywhere_title" />
+        android:title="@string/gesture_anywhere_title"
+        android:icon="@drawable/ic_settings_gesture_anywhere" />
 
 </PreferenceScreen>
