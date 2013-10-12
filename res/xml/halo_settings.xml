@@ -21,27 +21,19 @@
         android:key="toolbar_halo_controls"
         android:title="@string/halo_settings_title">
 
-        <SwitchPreference
-            android:key="halo_enabled"
-            android:title="@string/halo_enabled_title"
-            android:summary="@string/halo_enabled_summary"
-            android:defaultValue="false" /> 
-
         <ListPreference
             android:key="halo_state"
             android:dialogTitle="@string/halo_state_title"
             android:title="@string/halo_state_title"
             android:summary="@string/halo_state_summary"
             android:entries="@array/entries_halo_state"
-            android:dependency="halo_enabled"
             android:entryValues="@array/values_halo_state" />
 
         <CheckBoxPreference
             android:key="halo_hide"
             android:title="@string/halo_hide_title"
             android:summary="@string/halo_hide_summary"
-            android:defaultValue="false"
-            android:dependency="halo_enabled" />
+            android:defaultValue="false" />
 
         <CheckBoxPreference
             android:key="halo_ninja"
@@ -75,8 +67,7 @@
             android:key="halo_reversed"
             android:title="@string/halo_reversed_title"
             android:summary="@string/halo_reversed_summary"
-            android:defaultValue="true"
-            android:dependency="halo_enabled" />
+            android:defaultValue="true" />
 
   <ListPreference
             android:key="halo_size"
@@ -84,14 +75,12 @@
             android:title="@string/halo_size_title"
             android:summary="@string/halo_size_summary"
             android:entries="@array/entries_halo_size"
-            android:entryValues="@array/values_halo_size"
-            android:dependency="halo_enabled" />
+            android:entryValues="@array/values_halo_size" />
 
         <CheckBoxPreference
             android:key="halo_pause"
             android:title="@string/halo_pause_title"
-            android:summary="@string/halo_pause_summary"
-            android:dependency="halo_enabled" />
+            android:summary="@string/halo_pause_summary" />
 
         <CheckBoxPreference
             android:key="halo_unlock_ping"
@@ -103,7 +92,6 @@
             android:key="halo_colors"
             android:title="@string/halo_colors_title"
             android:summary="@string/halo_colors_summary"
-            android:dependency="halo_enabled"
             android:defaultValue="false" />
 
         <net.margaritov.preference.colorpicker.ColorPickerPreference
