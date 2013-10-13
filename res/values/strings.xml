@@ -5016,6 +5016,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="pie_button_color_title">Buttons color</string>
     <string name="all_color">Custom colors</string>
     <string name="stock_color">Default colors</string>
+    <string name="pie_power_title">Power button</string>
+    <string name="pie_power_summary">Enable power button on Pie</string>
 
     <!-- Gesture prerequisites -->
     <string name="profile_applist_title">Applications</string>
