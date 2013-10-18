@@ -1687,8 +1687,6 @@
         <activity android:name=".chameleonos.labs.gestureanywhere.GestureAnywhereBuilderActivity" />
         <activity android:name=".chameleonos.labs.gestureanywhere.GestureAnywhereCreateGestureActivity" />
 
-        <activity android:name=".slim.privacyguard.PrivacyGuardManager" />
-
         <activity android:name="Settings$UserSettingsActivity"
                 android:uiOptions="splitActionBarWhenNarrow"
                 android:label="@string/user_settings_title"
