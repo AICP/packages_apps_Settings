@@ -26,13 +26,14 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.ContentObserver;
 import android.hardware.display.DisplayManager;
+import android.hardware.display.IRemoteDisplayAdapter;
 import android.hardware.display.WifiDisplay;
 import android.hardware.display.WifiDisplayStatus;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.RemoteException;
 import android.preference.Preference;
-import android.preference.PreferenceActivity;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
@@ -66,6 +67,9 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment {
 
     private boolean mWifiDisplayOnSetting;
     private WifiDisplayStatus mWifiDisplayStatus;
+    private WifiDisplayStatus mRemoteDisplayStatus;
+
+    private IRemoteDisplayAdapter mRemoteDisplayAdapter;
 
     private PreferenceGroup mPairedDevicesCategory;
     private ProgressCategory mAvailableDevicesCategory;
@@ -82,6 +86,7 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment {
         super.onCreate(icicle);
 
         mDisplayManager = (DisplayManager)getActivity().getSystemService(Context.DISPLAY_SERVICE);
+        mRemoteDisplayAdapter = mDisplayManager.getRemoteDisplayAdapter();
 
         addPreferencesFromResource(R.xml.wifi_display_settings);
         setHasOptionsMenu(true);
@@ -122,6 +127,14 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment {
         super.onDestroyView();
     }
 
+    private void scanRemoteDisplays() {
+        try {
+            mRemoteDisplayAdapter.scanRemoteDisplays();
+        }
+        catch (RemoteException e) {
+        }
+    }
+
     @Override
     public void onResume() {
         super.onResume();
@@ -129,13 +142,14 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment {
         Context context = getActivity();
         IntentFilter filter = new IntentFilter();
         filter.addAction(DisplayManager.ACTION_WIFI_DISPLAY_STATUS_CHANGED);
+        filter.addAction(DisplayManager.ACTION_REMOTE_DISPLAY_STATUS_CHANGED);
         context.registerReceiver(mReceiver, filter);
 
         getContentResolver().registerContentObserver(Settings.Secure.getUriFor(
                 Settings.Global.WIFI_DISPLAY_ON), false, mSettingsObserver);
 
         mDisplayManager.scanWifiDisplays();
-
+        scanRemoteDisplays();
         update();
     }
 
@@ -168,6 +182,9 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment {
                 if (mWifiDisplayStatus.getFeatureState() == WifiDisplayStatus.FEATURE_STATE_ON) {
                     mDisplayManager.scanWifiDisplays();
                 }
+                if (mRemoteDisplayStatus.getFeatureState() == WifiDisplayStatus.FEATURE_STATE_ON) {
+                    scanRemoteDisplays();
+                }
                 return true;
         }
         return super.onOptionsItemSelected(item);
@@ -180,10 +197,23 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment {
             WifiDisplayPreference p = (WifiDisplayPreference)preference;
             WifiDisplay display = p.getDisplay();
 
-            if (display.equals(mWifiDisplayStatus.getActiveDisplay())) {
-                showDisconnectDialog(display);
+            boolean isActive = false;
+            if (p.isRemoteDisplay()) {
+                isActive = display.equals(mRemoteDisplayStatus.getActiveDisplay());
             } else {
+                isActive = display.equals(mWifiDisplayStatus.getActiveDisplay());
+            }
+
+            if (isActive) {
+                showDisconnectDialog(display, p.isRemoteDisplay());
+            } else if (!p.isRemoteDisplay()) {
                 mDisplayManager.connectWifiDisplay(display.getDeviceAddress());
+            } else {
+                try {
+                    mRemoteDisplayAdapter.connectRemoteDisplay(display.getDeviceAddress());
+                }
+                catch (RemoteException e) {
+                }
             }
         }
 
@@ -194,7 +224,11 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment {
         mWifiDisplayOnSetting = Settings.Global.getInt(getContentResolver(),
                 Settings.Global.WIFI_DISPLAY_ON, 0) != 0;
         mWifiDisplayStatus = mDisplayManager.getWifiDisplayStatus();
-
+        try {
+            mRemoteDisplayStatus = mRemoteDisplayAdapter.getRemoteDisplayStatus();
+        }
+        catch (RemoteException e) {
+        }
         applyState();
     }
 
@@ -210,6 +244,9 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment {
             final WifiDisplay[] pairedDisplays = mWifiDisplayStatus.getRememberedDisplays();
             final WifiDisplay[] availableDisplays = mWifiDisplayStatus.getAvailableDisplays();
 
+            final WifiDisplay[] pairedRemoteDisplays = mRemoteDisplayStatus.getRememberedDisplays();
+            final WifiDisplay[] availableRemoteDisplays = mRemoteDisplayStatus.getAvailableDisplays();
+
             if (mPairedDevicesCategory == null) {
                 mPairedDevicesCategory = new PreferenceCategory(getActivity());
                 mPairedDevicesCategory.setTitle(R.string.wifi_display_paired_devices);
@@ -219,8 +256,16 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment {
             preferenceScreen.addPreference(mPairedDevicesCategory);
 
             for (WifiDisplay d : pairedDisplays) {
-                mPairedDevicesCategory.addPreference(createWifiDisplayPreference(d, true));
+                mPairedDevicesCategory.addPreference(createWifiDisplayPreference(d, true, false));
             }
+
+            for (WifiDisplay d : pairedRemoteDisplays) {
+                if (d.isHidden()) {
+                    continue;
+                }
+                mPairedDevicesCategory.addPreference(createWifiDisplayPreference(d, true, true));
+            }
+
             if (mPairedDevicesCategory.getPreferenceCount() == 0) {
                 preferenceScreen.removePreference(mPairedDevicesCategory);
             }
@@ -236,10 +281,17 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment {
 
             for (WifiDisplay d : availableDisplays) {
                 if (!contains(pairedDisplays, d.getDeviceAddress())) {
-                    mAvailableDevicesCategory.addPreference(createWifiDisplayPreference(d, false));
+                    mAvailableDevicesCategory.addPreference(createWifiDisplayPreference(d, false, false));
                 }
             }
-            if (mWifiDisplayStatus.getScanState() == WifiDisplayStatus.SCAN_STATE_SCANNING) {
+            for (WifiDisplay d : availableRemoteDisplays) {
+                if (!contains(pairedRemoteDisplays, d.getDeviceAddress())
+                        && !(d.getDeviceName().startsWith("hidden:"))) {
+                    mAvailableDevicesCategory.addPreference(createWifiDisplayPreference(d, false, true));
+                }
+            }
+            if (mWifiDisplayStatus.getScanState() == WifiDisplayStatus.SCAN_STATE_SCANNING ||
+                    mRemoteDisplayStatus.getScanState() == WifiDisplayStatus.SCAN_STATE_SCANNING) {
                 mAvailableDevicesCategory.setProgress(true);
             } else {
                 mAvailableDevicesCategory.setProgress(false);
@@ -253,10 +305,16 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment {
         getActivity().invalidateOptionsMenu();
     }
 
-    private Preference createWifiDisplayPreference(final WifiDisplay d, boolean paired) {
-        WifiDisplayPreference p = new WifiDisplayPreference(getActivity(), d);
-        if (d.equals(mWifiDisplayStatus.getActiveDisplay())) {
-            switch (mWifiDisplayStatus.getActiveDisplayState()) {
+    private Preference createWifiDisplayPreference(final WifiDisplay d, boolean paired, boolean isRemote) {
+        WifiDisplayPreference p = new WifiDisplayPreference(getActivity(), d, isRemote);
+        WifiDisplayStatus displayStatus = null;
+        if (isRemote) {
+            displayStatus = mRemoteDisplayStatus;
+        } else {
+            displayStatus = mWifiDisplayStatus;
+        }
+        if (d.equals(displayStatus.getActiveDisplay())) {
+            switch (displayStatus.getActiveDisplayState()) {
                 case WifiDisplayStatus.DISPLAY_STATE_CONNECTED:
                     p.setSummary(R.string.wifi_display_status_connected);
                     break;
@@ -264,7 +322,7 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment {
                     p.setSummary(R.string.wifi_display_status_connecting);
                     break;
             }
-        } else if (paired && contains(mWifiDisplayStatus.getAvailableDisplays(),
+        } else if (paired && contains(displayStatus.getAvailableDisplays(),
                 d.getDeviceAddress())) {
             p.setSummary(R.string.wifi_display_status_available);
         }
@@ -274,12 +332,18 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment {
         return p;
     }
 
-    private void showDisconnectDialog(final WifiDisplay display) {
+    private void showDisconnectDialog(final WifiDisplay display, final boolean isRemoteDisplay) {
         DialogInterface.OnClickListener ok = new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                if (display.equals(mWifiDisplayStatus.getActiveDisplay())) {
+                if (!isRemoteDisplay && display.equals(mWifiDisplayStatus.getActiveDisplay())) {
                     mDisplayManager.disconnectWifiDisplay();
+                } else if (isRemoteDisplay && display.equals(mRemoteDisplayStatus.getActiveDisplay())) {
+                    try {
+                        mRemoteDisplayAdapter.disconnectRemoteDisplay();
+                    }
+                    catch (RemoteException e) {
+                    }
                 }
             }
         };
@@ -295,7 +359,7 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment {
         dialog.show();
     }
 
-    private void showOptionsDialog(final WifiDisplay display) {
+    private void showOptionsDialog(final WifiDisplay display, final boolean isRemoteDisplay) {
         View view = getActivity().getLayoutInflater().inflate(R.layout.wifi_display_options, null);
         final EditText nameEditText = (EditText)view.findViewById(R.id.name);
         nameEditText.setText(display.getFriendlyDisplayName());
@@ -307,13 +371,29 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment {
                 if (name.isEmpty() || name.equals(display.getDeviceName())) {
                     name = null;
                 }
-                mDisplayManager.renameWifiDisplay(display.getDeviceAddress(), name);
+                if (!isRemoteDisplay) {
+                    mDisplayManager.renameWifiDisplay(display.getDeviceAddress(), name);
+                } else {
+                    try {
+                        mRemoteDisplayAdapter.renameRemoteDisplay(display.getDeviceAddress(), name);
+                    }
+                    catch (RemoteException e) {
+                    }
+                }
             }
         };
         DialogInterface.OnClickListener forget = new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                mDisplayManager.forgetWifiDisplay(display.getDeviceAddress());
+                if (!isRemoteDisplay) {
+                    mDisplayManager.forgetWifiDisplay(display.getDeviceAddress());
+                } else {
+                    try {
+                        mRemoteDisplayAdapter.forgetRemoteDisplay(display.getDeviceAddress());
+                    }
+                    catch (RemoteException e) {
+                    }
+                }
             }
         };
 
@@ -355,6 +435,11 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment {
                         DisplayManager.EXTRA_WIFI_DISPLAY_STATUS);
                 mWifiDisplayStatus = status;
                 applyState();
+            } else if (action.equals(DisplayManager.ACTION_REMOTE_DISPLAY_STATUS_CHANGED)) {
+                WifiDisplayStatus status = (WifiDisplayStatus)intent.getParcelableExtra(
+                        DisplayManager.EXTRA_REMOTE_DISPLAY_STATUS);
+                mRemoteDisplayStatus = status;
+                applyState();
             }
         }
     };
@@ -369,16 +454,23 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment {
     private final class WifiDisplayPreference extends Preference
             implements View.OnClickListener {
         private final WifiDisplay mDisplay;
+        private final boolean mIsRemoteDisplay;
 
-        public WifiDisplayPreference(Context context, WifiDisplay display) {
+        public WifiDisplayPreference(Context context,
+                WifiDisplay display, boolean isRemoteDisplay) {
             super(context);
 
             mDisplay = display;
+            mIsRemoteDisplay = isRemoteDisplay;
             setTitle(display.getFriendlyDisplayName());
         }
 
         public WifiDisplay getDisplay() {
             return mDisplay;
+        }
+
+        public boolean isRemoteDisplay() {
+            return mIsRemoteDisplay;
         }
 
         @Override
@@ -400,7 +492,7 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment {
 
         @Override
         public void onClick(View v) {
-            showOptionsDialog(mDisplay);
+            showOptionsDialog(mDisplay, mIsRemoteDisplay);
         }
     }
 }
