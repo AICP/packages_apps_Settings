@@ -319,7 +319,6 @@ public class SecuritySettings extends SettingsPreferenceFragment
                     }
                 }
             }
-        }
 
         // Show password
         mShowPassword = (CheckBoxPreference) root.findPreference(KEY_SHOW_PASSWORD);
