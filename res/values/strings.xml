@@ -5374,4 +5374,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="media_scanner_on_boot_enabled">Scan media</string>
     <string name="media_scanner_on_boot_ask">Ask to scan (notification)</string>
     <string name="media_scanner_on_boot_disabled">Do not scan media</string>
+
+    <!-- Roaming Date Settings -->
+    <string name="label_global_roaming_settings">Global roaming settings</string>
 </resources>
