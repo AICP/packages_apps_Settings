@@ -98,6 +98,16 @@
                 android:targetClass="com.cyanogenmod.settings.device.DeviceSettings" />
     </header>
 
+    <!-- Performance Control -->
+    <header android:id="@+id/performance_controls"
+            android:title="@string/performance_settings"
+            android:icon="@drawable/ic_settings_performance">
+        <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.brewcrewfoo.performance"
+                android:targetClass="com.brewcrewfoo.performance.activities.MainActivity" />
+    </header>
+
     <!-- AICP -->
     <header
         android:id="@+id/lab_settings"

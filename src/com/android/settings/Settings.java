@@ -137,7 +137,8 @@ public class Settings extends PreferenceActivity
             R.id.themes,
             R.id.advanced_settings,
             R.id.sprint_tools,
-            R.id.lab_settings
+            R.id.lab_settings,
+            R.id.performance_controls
     };
 
     private SharedPreferences mDevelopmentPreferences;
@@ -488,6 +489,10 @@ public class Settings extends PreferenceActivity
             } else if (id == R.id.global_roaming_settings) {
                 if (!SystemProperties.getBoolean(GLOBAL_PROP, false)) {
                     target.remove(header);
+                }
+            } else if (id == R.id.performance_controls) {
+                if (!showDev) {
+                    target.remove(i);
                 }
             }
 
