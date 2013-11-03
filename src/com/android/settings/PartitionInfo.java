@@ -86,7 +86,7 @@ public class PartitionInfo extends PreferenceActivity {
     	    mSDCardPartFATSize.setSummary(ObtainFSPartSize ("/storage/sdcard0"));
 
     	    if (extfsIsMounted == true) {
-                mSDCardPartEXTSize.setSummary(ObtainFSPartSize ("/sd-ext"));
+                mSDCardPartEXTSize.setSummary(ObtainFSPartSize ("/storage/sdcard1"));
             } else {
                 mSDCardPartEXTSize.setEnabled(false);
             }
