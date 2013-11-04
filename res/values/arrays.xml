@@ -1136,7 +1136,19 @@
         <item>15000</item>
         <item>30000</item>
         <item>60000</item>
-    </string-array> 
+    </string-array>
+
+    <string-array name="ad_pocket_mode_entries" translatable="false">
+        <item>@string/ad_pocket_mode_off</item>
+        <item>@string/ad_pocket_mode_notifications</item>
+        <item>@string/ad_pocket_mode_always</item>
+    </string-array>
+
+    <string-array name="ad_pocket_mode_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
 
     <!-- PIE PIE PIE PIE PIE -->
     <string-array name="all_color_style_entries" translatable="false">
