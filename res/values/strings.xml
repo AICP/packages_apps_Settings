@@ -5112,6 +5112,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="ad_displayactive_15s">15 seconds</string>
     <string name="ad_displayactive_30s">30 seconds</string>
     <string name="ad_displayactive_1m">1 minute</string>
+    <string name="ad_pocket_mode_off">Off</string>
+    <string name="ad_pocket_mode_notifications">Notifications only</string>
+    <string name="ad_pocket_mode_always">Always</string>
 
     <!-- Pie controls -->
     <string name="pie_controls_title">Pie controls</string>
