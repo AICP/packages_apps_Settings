@@ -45,4 +45,10 @@
         android:title="@string/gesture_anywhere_title"
         android:icon="@drawable/ic_settings_gesture_anywhere" />
 
+    <PreferenceScreen
+        android:key="identicons"
+        android:fragment="com.android.settings.chameleonos.labs.identicons.IdenticonsSettings"
+        android:icon="@drawable/ic_settings_identicons"
+        android:title="@string/identicons_title" />
+
 </PreferenceScreen>
