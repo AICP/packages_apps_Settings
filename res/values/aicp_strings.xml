@@ -16,7 +16,6 @@
 -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
     <string name="aicp_name_title">AICP Experience</string>
     <string name="aicp_name_summary">Aicp Oreo Edition - 13.0</string>
 
@@ -24,4 +23,11 @@
     <string name="aicpextras_dashboard_summary">ROM Customization</string>
 
     <string name="device_info_title">Phone info</string>
+
+    <!-- Development Settings -->
+    <!-- ADB debugging notifications -->
+    <string name="enable_adb_custom">Android debugging</string>
+    <string name="enable_adb_summary_custom">Enable the Android Debug Bridge (adb) interface</string>
+    <string name="adb_notify">ADB notification</string>
+    <string name="adb_notify_summary">Display a notification when android debugging is enabled</string>
 </resources>
