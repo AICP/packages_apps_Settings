@@ -1929,5 +1929,12 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+        <!-- Disable MultiSIM settings if not available. -->	1934
+        <receiver android:name=".deviceinfo.msim.DisableMSimReceiver">	1935
+            <intent-filter>	1936
+                <action android:name="android.intent.action.BOOT_COMPLETED" />	1937
+            </intent-filter>	1938
+        </receiver>	1939
     </application>
 </manifest>
