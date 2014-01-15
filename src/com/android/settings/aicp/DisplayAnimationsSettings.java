@@ -61,6 +61,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private static final String KEY_VOICEMAIL_BREATH = "voicemail_breath";
     private static final String KEY_ENABLE_CAMERA = "keyguard_enable_camera";
     private static final String PREF_LESS_NOTIFICATION_SOUNDS = "less_notification_sounds";
+    private static final String PREF_LOCKSCREEN_TORCH = "lockscreen_torch";
 
     private ListPreference mListViewAnimation;
     private ListPreference mListViewInterpolator;
@@ -74,6 +75,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private CheckBoxPreference mVoicemailBreath;
     private CheckBoxPreference mEnableCameraWidget;
     private ListPreference mAnnoyingNotifications;
+    private CheckBoxPreference mGlowpadTorch;
 
     private ChooseLockSettingsHelper mChooseLockSettingsHelper;
     private LockPatternUtils mLockUtils;
@@ -137,6 +139,12 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         mVoicemailBreath = (CheckBoxPreference) prefSet.findPreference(KEY_VOICEMAIL_BREATH);
         mVoicemailBreath.setChecked((Settings.System.getInt(resolver, Settings.System.KEY_VOICEMAIL_BREATH, 0) == 1));
 
+        //GlowPadTorch
+        mGlowpadTorch = (CheckBoxPreference) findPreference(PREF_LOCKSCREEN_TORCH);
+        mGlowpadTorch.setChecked(Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
+                 Settings.System.LOCKSCREEN_GLOWPAD_TORCH, 0) == 1);
+        mGlowpadTorch.setOnPreferenceChangeListener(this);
+
         // Lock ring battery
         mLockRingBattery = (CheckBoxPreference)findPreference(BATTERY_AROUND_LOCKSCREEN_RING);
         if (mLockRingBattery != null) {
@@ -153,7 +161,8 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
                 Settings.System.MUTE_ANNOYING_NOTIFICATIONS_THRESHOLD, 0);
         mAnnoyingNotifications.setValue(Integer.toString(notificationThreshold));
         mAnnoyingNotifications.setOnPreferenceChangeListener(this);
-    }
+       }
+       
 
     @Override
     public void onResume() {
@@ -199,6 +208,10 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
                     Settings.System.BATTERY_AROUND_LOCKSCREEN_RING, mLockRingBattery.isChecked() ? 1 : 0);
         } else if (preference == mEnableCameraWidget) {
             mLockUtils.setCameraEnabled(mEnableCameraWidget.isChecked());
+            return true;
+         } else if (preference == mGlowpadTorch) {
+             Settings.System.putInt(getContentResolver(),
+                      Settings.System.LOCKSCREEN_GLOWPAD_TORCH, mGlowpadTorch.isChecked() ? 1 : 0);
             return true;
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);

@@ -72,6 +72,11 @@
             android:key="keyguard_enable_camera"
             android:title="@string/lockscreen_enable_camera_title" />
 
+        <CheckBoxPreference
+          android:key="lockscreen_torch"
+          android:title="@string/lockscreen_glowpad_torch_title"
+          android:summary="@string/lockscreen_glowpad_torch_summary" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -118,7 +123,6 @@
             android:entryValues="@array/less_notification_sounds_values" />
 
      </PreferenceCategory>
-
 
 </PreferenceScreen>
 
