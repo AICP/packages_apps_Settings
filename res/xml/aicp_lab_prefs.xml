@@ -17,6 +17,17 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         android:title="@string/aicp_settings_title">
 
+    <!-- OmniSwitch -->
+  <PreferenceScreen
+        android:id="@+id/omniswitch"
+        android:icon="@drawable/ic_settings_omniswitch" 
+        android:title="@string/omniswitch_settings_title" >
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="org.omnirom.omniswitch"
+            android:targetClass="org.omnirom.omniswitch.SettingsActivity" />
+    </PreferenceScreen>
+
     <!-- Display and Animations -->
     <PreferenceScreen
         android:id="@+id/disp_anim_settings"
