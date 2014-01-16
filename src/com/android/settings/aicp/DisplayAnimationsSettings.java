@@ -30,9 +30,11 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceScreen;
+import android.preference.SeekBarPreference;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -45,9 +47,15 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
 
     private static final String KEY_LISTVIEW_ANIMATION = "listview_animation";
     private static final String KEY_LISTVIEW_INTERPOLATOR = "listview_interpolator";
+    private static final String KEY_BLUR_BEHIND = "blur_behind";
+    private static final String KEY_BLUR_RADIUS = "blur_radius";
+    private static final String KEY_ALLOW_ROTATION = "allow_rotation";
 
     private ListPreference mListViewAnimation;
     private ListPreference mListViewInterpolator;
+    private CheckBoxPreference mBlurBehind;
+    private SeekBarPreference mBlurRadius;
+    private CheckBoxPreference mAllowRotation;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -73,11 +81,39 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         mListViewInterpolator.setSummary(mListViewInterpolator.getEntry());
         mListViewInterpolator.setOnPreferenceChangeListener(this);
         mListViewInterpolator.setEnabled(listviewanimation > 0);
+
+        // Blur lockscreen
+        mBlurBehind = (CheckBoxPreference) findPreference(KEY_BLUR_BEHIND);
+        mBlurBehind.setChecked(Settings.System.getInt(getContentResolver(),
+            Settings.System.LOCKSCREEN_BLUR_BEHIND, 0) == 1);
+        mBlurRadius = (SeekBarPreference) findPreference(KEY_BLUR_RADIUS);
+        mBlurRadius.setProgress(Settings.System.getInt(getContentResolver(),
+            Settings.System.LOCKSCREEN_BLUR_RADIUS, 12));
+        mBlurRadius.setOnPreferenceChangeListener(this);
+
+        // Rotate
+        mAllowRotation = (CheckBoxPreference) findPreference(KEY_ALLOW_ROTATION);
+        mAllowRotation.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.LOCKSCREEN_ROTATION, 0) == 1);
+
     }
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        return super.onPreferenceTreeClick(preferenceScreen, preference);
+        final String key = preference.getKey();
+        if (preference == mBlurBehind) {
+            Settings.System.putInt(getContentResolver(), Settings.System.LOCKSCREEN_BLUR_BEHIND,
+                    mBlurBehind.isChecked() ? 1 : 0);
+            Toast.makeText(getActivity(), "Transparent lockscreen must be enabled in ROMControl!", Toast.LENGTH_LONG).show();
+        } else if (preference == mAllowRotation) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.LOCKSCREEN_ROTATION, mAllowRotation.isChecked()
+                    ? 1 : 0);
+        } else {
+            return super.onPreferenceTreeClick(preferenceScreen, preference);
+        }
+
+        return true;
     }
 
     @Override
@@ -91,14 +127,16 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
                     value);
             mListViewAnimation.setSummary(mListViewAnimation.getEntries()[index]);
             mListViewInterpolator.setEnabled(value > 0);
-        }
-        if (KEY_LISTVIEW_INTERPOLATOR.equals(key)) {
+        } else if (KEY_LISTVIEW_INTERPOLATOR.equals(key)) {
             int value = Integer.parseInt((String) objValue);
             int index = mListViewInterpolator.findIndexOfValue((String) objValue);
             Settings.System.putInt(getContentResolver(),
                     Settings.System.LISTVIEW_INTERPOLATOR,
                     value);
             mListViewInterpolator.setSummary(mListViewInterpolator.getEntries()[index]);
+        } else if (preference == mBlurRadius) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.LOCKSCREEN_BLUR_RADIUS, (Integer)objValue);
         }
 
         return true;

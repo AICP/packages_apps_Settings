@@ -24,6 +24,7 @@
 
     <!-- Display and Animations -->
     <string name="disp_anim_settings_title">Display and animations</string>
+    <string name="lockscreen_settings_title">Lockscreen</string>
 
     <!-- ListView animation -->
     <string name="interface_settings_animation_title">Animation options</string>
@@ -49,5 +50,15 @@
     <string name="listview_overshoot_interpolator">Overshoot</string>
     <string name="listview_anticipate_overshoot_interpolator">Anticipate and overshoot</string>
     <string name="listview_bounce_interpolator">Bounce</string>
+
+    <!--Lockscreen blur-->
+    <string name="blur_behind_title">Blur Lockscreen Background</string>
+    <string name="blur_behind_summary">See through lockscreen with blur effect</string>
+    <string name="blur_radius_title">Blur Radius</string>
+    <string name="blur_radius_summary">Set the blur radius for the blur effect</string>
+
+    <!-- Allow rotation -->
+    <string name="allow_rotate_title">Allow rotation</string>
+    <string name="allow_rotate_summary">Enables landscape mode on lockscreen</string>
 
 </resources>
