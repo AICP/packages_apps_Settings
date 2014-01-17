@@ -50,12 +50,14 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private static final String KEY_BLUR_BEHIND = "blur_behind";
     private static final String KEY_BLUR_RADIUS = "blur_radius";
     private static final String KEY_ALLOW_ROTATION = "allow_rotation";
+    private static final String STATUS_BAR_NETWORK_HIDE = "status_bar_network_hide";
 
     private ListPreference mListViewAnimation;
     private ListPreference mListViewInterpolator;
     private CheckBoxPreference mBlurBehind;
     private SeekBarPreference mBlurRadius;
     private CheckBoxPreference mAllowRotation;
+    private CheckBoxPreference mStatusBarNetworkHide;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -96,19 +98,27 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         mAllowRotation.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.LOCKSCREEN_ROTATION, 0) == 1);
 
+        // NetStat hide if there's no traffic
+        mStatusBarNetworkHide = (CheckBoxPreference) findPreference(STATUS_BAR_NETWORK_HIDE);
+        mStatusBarNetworkHide.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.STATUS_BAR_NETWORK_HIDE, 0) == 1);
     }
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        final String key = preference.getKey();
         if (preference == mBlurBehind) {
-            Settings.System.putInt(getContentResolver(), Settings.System.LOCKSCREEN_BLUR_BEHIND,
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.LOCKSCREEN_BLUR_BEHIND,
                     mBlurBehind.isChecked() ? 1 : 0);
-            Toast.makeText(getActivity(), "Transparent lockscreen must be enabled in ROMControl!", Toast.LENGTH_LONG).show();
         } else if (preference == mAllowRotation) {
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.LOCKSCREEN_ROTATION, mAllowRotation.isChecked()
                     ? 1 : 0);
+        } else if (preference == mStatusBarNetworkHide) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUS_BAR_NETWORK_HIDE, mStatusBarNetworkHide.isChecked()
+                    ? 1 : 0);
+            Toast.makeText(getActivity(), "Network traffic must be enabled in ROMControl!", Toast.LENGTH_LONG).show();
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }

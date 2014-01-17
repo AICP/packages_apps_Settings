@@ -25,6 +25,7 @@
     <!-- Display and Animations -->
     <string name="disp_anim_settings_title">Display and animations</string>
     <string name="lockscreen_settings_title">Lockscreen</string>
+    <string name="bars_settings_title">Status bar</string>
 
     <!-- ListView animation -->
     <string name="interface_settings_animation_title">Animation options</string>
@@ -60,5 +61,9 @@
     <!-- Allow rotation -->
     <string name="allow_rotate_title">Allow rotation</string>
     <string name="allow_rotate_summary">Enables landscape mode on lockscreen</string>
+
+    <!-- Network stats hide if there's no traffic -->
+    <string name="hide_network_speed">Hide when there is no traffic</string>
+    <string name="hide_network_speed_summary">Hide network stats indicator when there is no traffic</string>
 
 </resources>
