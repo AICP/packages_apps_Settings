@@ -23,4 +23,10 @@
         android:title="@string/disp_anim_settings_title"
         android:fragment="com.android.settings.aicp.DisplayAnimationsSettings" />
 
+    <!-- Active Notifications -->
+    <PreferenceScreen
+        android:id="@+id/active_notifications"
+        android:title="@string/Lockscreen_notifications_header"
+        android:fragment="com.android.settings.ActiveNotifications" />
+
 </PreferenceScreen>

@@ -1783,6 +1783,11 @@
              android:label="@string/aicp_settings_title" >
         </activity>
 
+        <activity
+            android:name=".ActiveNotifications"
+            android:label="@string/Lockscreen_notifications_header" >
+        </activity>
+
         <receiver android:name=".widget.SettingsAppWidgetProvider"
                 android:label="@string/gadget_title"
                 android:exported="false"

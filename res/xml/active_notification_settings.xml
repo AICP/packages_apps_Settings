@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2013 The ChameleonOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/ad_settings_title" >
+
+    <PreferenceCategory
+        android:key="ad_customizations"
+        android:title="@string/ad_settings_title" />
+
+        <ListPreference
+            android:key="ad_redisplay"
+            android:persistent="false"
+            android:dialogTitle="@string/ad_redisplay_title"
+            android:title="@string/ad_redisplay_title"
+            android:entries="@array/ad_redisplay_entries"
+            android:entryValues="@array/ad_redisplay_values" />
+
+        <com.android.settings.vanir.AppMultiSelectListPreference
+            android:key="ad_excluded_apps"
+            android:persistent="false"
+            android:title="@string/ad_excluded_apps_title"
+            android:summary="@string/ad_excluded_apps_summary" />
+
+        <CheckBoxPreference
+            android:key="ad_show_date"
+            android:persistent="false"
+            android:title="@string/ad_show_date_title"
+            android:summary="@string/ad_show_date_summary" />
+
+        <CheckBoxPreference
+            android:key="ad_show_ampm"
+            android:persistent="false"
+            android:title="@string/ad_show_ampm_title"
+            android:summary="@string/ad_show_ampm_summary" />
+
+        <ListPreference
+            android:key="ad_threshold"
+            android:persistent="false"
+            android:dialogTitle="@string/ad_threshold_title"
+            android:title="@string/ad_threshold_title"
+            android:entries="@array/ad_threshold_entries"
+            android:entryValues="@array/ad_threshold_values" />
+
+        <ListPreference
+            android:key="ad_timeout"
+            android:persistent="false"
+            android:dialogTitle="@string/ad_timeout_title"
+            android:title="@string/ad_timeout_title"
+            android:entries="@array/ad_timeout_entries"
+            android:entryValues="@array/ad_timeout_values" />
+
+        <SeekBarPreference
+            android:key="ad_brightness"
+            android:persistent="false"
+            android:title="@string/ad_brightness_title"
+            android:summary="@string/ad_brightness_summary"
+            settings:maximum="100"
+            settings:minimum="0"
+            settings:unitsLeft=""
+            settings:unitsRight="%"
+            android:defaultValue="100" />
+
+        <CheckBoxPreference
+            android:key="ad_text"
+            android:persistent="false"
+            android:title="@string/ad_text_title"
+            android:summary="@string/ad_text_summary" />
+
+    <PreferenceCategory
+        android:key="lockscreen_notification_customization"
+        android:title="@string/lockscreen_notifications_title" />
+
+        <SeekBarPreference
+            android:key="offset_top"
+            android:title="@string/offset_top"
+            android:max="100"
+            android:defaultValue="30" />
+
+        <com.android.settings.vanir.NumberPickerPreference
+            android:key="notifications_height"
+            android:dialogMessage="@string/notifications_height"
+            android:title="@string/notifications_height"
+            android:summary="@string/notifications_height_summary" />
+
+        <com.android.settings.vanir.AppMultiSelectListPreference
+			android:key="excluded_apps"
+			android:persistent="false"
+			android:title="@string/excluded_apps_title"
+			android:summary="@string/excluded_apps_summary" />
+
+        <CheckBoxPreference
+            android:key="expanded_view"
+            android:title="@string/expanded_view"
+            android:summary="@string/expanded_view_summary" />
+
+        <CheckBoxPreference
+            android:key="force_expanded_view"
+            android:title="@string/force_expanded_view"
+            android:summary="@string/force_expanded_view_summary" />
+
+</PreferenceScreen>
