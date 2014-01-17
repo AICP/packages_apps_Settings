@@ -265,5 +265,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="auto_brightness_sensitivity_veryhigh">Very high</string>
     <string name="ok">OK</string>
 
+    <!-- Rescan media volume -->
+    <string name="storage_rescan_media">Rescan media for the storage volume</string>
+    <string name="storage_rescan_media_complete">Scan completed</string>
 
 </resources>
