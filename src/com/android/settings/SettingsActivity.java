@@ -249,6 +249,8 @@ public class SettingsActivity extends SettingsDrawerActivity
 
     private static final String SUBSTRATUM_FRAGMENT = "com.android.settings.Substratum";
 
+    private static final String SUPERSU_FRAGMENT = "com.android.settings.SuperSU";
+
     private String mFragmentClass;
     private String mActivityAction;
 
@@ -1068,6 +1070,7 @@ public class SettingsActivity extends SettingsDrawerActivity
      */
     private Fragment switchToFragment(String fragmentName, Bundle args, boolean validate,
             boolean addToBackStack, int titleResId, CharSequence title, boolean withTransition) {
+
         if (MAGISK_FRAGMENT.equals(fragmentName)) {
             Intent magiskIntent = new Intent();
             magiskIntent.setClassName("com.topjohnwu.magisk", "com.topjohnwu.magisk.SplashActivity");
@@ -1078,6 +1081,12 @@ public class SettingsActivity extends SettingsDrawerActivity
             Intent subIntent = new Intent();
             subIntent.setClassName("projekt.substratum", "projekt.substratum.LaunchActivity");
             startActivity(subIntent);
+            finish();
+            return null;
+        } else if (SUPERSU_FRAGMENT.equals(fragmentName)) {
+            Intent superSUIntent = new Intent();
+            superSUIntent.setClassName("eu.chainfire.supersu", "eu.chainfire.supersu.MainActivity");
+            startActivity(superSUIntent);
             finish();
             return null;
         }
@@ -1176,6 +1185,16 @@ public class SettingsActivity extends SettingsDrawerActivity
         setTileEnabled(new ComponentName(packageName,
                         Settings.DevelopmentSettingsActivity.class.getName()),
                 showDev, isAdmin, pm);
+
+        // SuperSU
+        boolean suSupported = false;
+        try {
+            suSupported = (getPackageManager().getPackageInfo("eu.chainfire.supersu", 0).versionCode >= 185);
+        } catch (PackageManager.NameNotFoundException e) {
+        }
+        setTileEnabled(new ComponentName(packageName,
+                        Settings.SuperSUActivity.class.getName()),
+                suSupported, isAdmin, pm);
 
         // Reveal development-only quick settings tiles
         DevelopmentTiles.setTilesEnabled(this, showDev);
