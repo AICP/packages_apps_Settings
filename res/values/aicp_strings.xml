@@ -408,6 +408,10 @@
     <string name="magisk_title">Magisk Manager</string>
     <string name="magisk_summary">Root management</string>
 
+     <!-- Top Level SuperSU settings -->
+    <string name="supersu_title">SuperSU</string>
+    <string name="supersu_summary">Root management</string>
+
     <!-- Top Level Substratum settings -->
     <string name="substratum_title">Substratum</string>
     <string name="substratum_summary">Customize device theme</string>
