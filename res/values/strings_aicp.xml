@@ -66,4 +66,7 @@
     <string name="hide_network_speed">Hide when there is no traffic</string>
     <string name="hide_network_speed_summary">Hide network stats indicator when there is no traffic</string>
 
+    <!-- Lockscreen battery ring -->
+    <string name="battery_around_lockscreen_ring">Battery around unlock ring</string>
+
 </resources>

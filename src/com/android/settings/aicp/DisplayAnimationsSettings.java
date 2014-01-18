@@ -51,6 +51,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private static final String KEY_BLUR_RADIUS = "blur_radius";
     private static final String KEY_ALLOW_ROTATION = "allow_rotation";
     private static final String STATUS_BAR_NETWORK_HIDE = "status_bar_network_hide";
+    private static final String BATTERY_AROUND_LOCKSCREEN_RING = "battery_around_lockscreen_ring";
 
     private ListPreference mListViewAnimation;
     private ListPreference mListViewInterpolator;
@@ -58,6 +59,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private SeekBarPreference mBlurRadius;
     private CheckBoxPreference mAllowRotation;
     private CheckBoxPreference mStatusBarNetworkHide;
+    private CheckBoxPreference mLockRingBattery;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -102,6 +104,13 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         mStatusBarNetworkHide = (CheckBoxPreference) findPreference(STATUS_BAR_NETWORK_HIDE);
         mStatusBarNetworkHide.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.STATUS_BAR_NETWORK_HIDE, 0) == 1);
+
+        // Lock ring battery
+        mLockRingBattery = (CheckBoxPreference)findPreference(BATTERY_AROUND_LOCKSCREEN_RING);
+        if (mLockRingBattery != null) {
+            mLockRingBattery.setChecked(Settings.System.getInt(getContentResolver(),
+                    Settings.System.BATTERY_AROUND_LOCKSCREEN_RING, 0) == 1);
+        }
     }
 
     @Override
@@ -119,6 +128,9 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
                     Settings.System.STATUS_BAR_NETWORK_HIDE, mStatusBarNetworkHide.isChecked()
                     ? 1 : 0);
             Toast.makeText(getActivity(), "Network traffic must be enabled in ROMControl!", Toast.LENGTH_LONG).show();
+        } else if (preference == mLockRingBattery) {
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.BATTERY_AROUND_LOCKSCREEN_RING, mLockRingBattery.isChecked() ? 1 : 0);
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
