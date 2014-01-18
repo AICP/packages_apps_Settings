@@ -1788,6 +1788,10 @@
             android:label="@string/Lockscreen_notifications_header" >
         </activity>
 
+        <activity android:name=".cm.AutoBrightnessSetup"
+                android:excludeFromRecents="true"
+                android:theme="@*android:style/Theme.Holo.Dialog.Alert" />
+
         <receiver android:name=".widget.SettingsAppWidgetProvider"
                 android:label="@string/gadget_title"
                 android:exported="false"
