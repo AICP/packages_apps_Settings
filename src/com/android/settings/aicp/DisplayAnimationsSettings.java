@@ -127,7 +127,10 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.STATUS_BAR_NETWORK_HIDE, mStatusBarNetworkHide.isChecked()
                     ? 1 : 0);
-            Toast.makeText(getActivity(), "Network traffic must be enabled in ROMControl!", Toast.LENGTH_LONG).show();
+            if (mStatusBarNetworkHide.isChecked()) {
+                Toast.makeText(getActivity(), "Network traffic must be enabled in ROMControl!",
+                    Toast.LENGTH_LONG).show();
+            }
         } else if (preference == mLockRingBattery) {
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.BATTERY_AROUND_LOCKSCREEN_RING, mLockRingBattery.isChecked() ? 1 : 0);
