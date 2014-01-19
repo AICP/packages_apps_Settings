@@ -176,11 +176,8 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
         } else if (preference == mExcludedAppsPref) {
             storeExcludedApps((Set<String>) newValue);
             return true;
-        } else if (preference == mExcludedAppsPref) {
-            storeExcludedApps((Set<String>) newValue);
-            return true;
         } else if (preference == mNotifAppsPref) {
-			storeExcludedApps((Set<String>) newValue);
+			storeExcludedNotifApps((Set<String>) newValue);
 			return true;
         } else if (preference == mOffsetTop) {
             Settings.System.putFloat(getContentResolver(), Settings.System.LOCKSCREEN_NOTIFICATIONS_OFFSET_TOP,
