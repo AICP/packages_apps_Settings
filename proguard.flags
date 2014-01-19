@@ -15,6 +15,8 @@
 -keep class com.koushikdutta.**
 -keep class com.android.settings.NotificationStation
 -keep class com.android.settings.nfc.*
+-keep class com.android.settings.aicp.**
+-keep class com.android.settings.slim.**
 -keep class com.android.settings.vanir.*Settings
 
 # Keep click responders
