@@ -24,6 +24,7 @@
 
     <!-- Display and Animations -->
     <string name="disp_anim_settings_title">Display and animations</string>
+    <string name="anim_settings_title">Animations</string>
     <string name="lockscreen_settings_title">Lockscreen</string>
     <string name="bars_settings_title">Status bar</string>
     <string name="wakelock_blocker">Wakelock Blocker</string>

@@ -19,8 +19,8 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <PreferenceCategory
-        android:key="category_display_animations_options"
-        android:title="@string/disp_anim_settings_title" >
+        android:key="category_animations_options"
+        android:title="@string/anim_settings_title" >
 
         <ListPreference
             android:key="listview_animation"
