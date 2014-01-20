@@ -52,6 +52,9 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private static final String KEY_ALLOW_ROTATION = "allow_rotation";
     private static final String STATUS_BAR_NETWORK_HIDE = "status_bar_network_hide";
     private static final String BATTERY_AROUND_LOCKSCREEN_RING = "battery_around_lockscreen_ring";
+    private static final String KEY_SMS_BREATH = "sms_breath";
+    private static final String KEY_MISSED_CALL_BREATH = "missed_call_breath";
+    private static final String KEY_VOICEMAIL_BREATH = "voicemail_breath";
 
     private ListPreference mListViewAnimation;
     private ListPreference mListViewInterpolator;
@@ -60,6 +63,9 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private CheckBoxPreference mAllowRotation;
     private CheckBoxPreference mStatusBarNetworkHide;
     private CheckBoxPreference mLockRingBattery;
+    private CheckBoxPreference mSMSBreath;
+    private CheckBoxPreference mMissedCallBreath;	    
+    private CheckBoxPreference mVoicemailBreath;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -105,6 +111,16 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         mStatusBarNetworkHide.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.STATUS_BAR_NETWORK_HIDE, 0) == 1);
 
+        //  Breath Notification
+        mSMSBreath = (CheckBoxPreference) prefSet.findPreference(KEY_SMS_BREATH);
+        mSMSBreath.setChecked((Settings.System.getInt(resolver, Settings.System.KEY_SMS_BREATH, 0) == 1));
+
+        mMissedCallBreath = (CheckBoxPreference) prefSet.findPreference(KEY_MISSED_CALL_BREATH);
+        mMissedCallBreath.setChecked((Settings.System.getInt(resolver, Settings.System.KEY_MISSED_CALL_BREATH, 0) == 1));
+
+        mVoicemailBreath = (CheckBoxPreference) prefSet.findPreference(KEY_VOICEMAIL_BREATH);
+        mVoicemailBreath.setChecked((Settings.System.getInt(resolver, Settings.System.KEY_VOICEMAIL_BREATH, 0) == 1));
+
         // Lock ring battery
         mLockRingBattery = (CheckBoxPreference)findPreference(BATTERY_AROUND_LOCKSCREEN_RING);
         if (mLockRingBattery != null) {
@@ -115,6 +131,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        boolean value;
         if (preference == mBlurBehind) {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.LOCKSCREEN_BLUR_BEHIND,
@@ -131,6 +148,16 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
                 Toast.makeText(getActivity(), "Network traffic must be enabled in ROMControl!",
                     Toast.LENGTH_LONG).show();
             }
+        } else if (preference == mMissedCallBreath) {
+            value = mMissedCallBreath.isChecked();
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.KEY_MISSED_CALL_BREATH, value ? 1 : 0);
+            return true;
+        } else if (preference == mVoicemailBreath) {
+            value = mVoicemailBreath.isChecked();
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.KEY_VOICEMAIL_BREATH, value ? 1 : 0);
+            return true;
         } else if (preference == mLockRingBattery) {
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.BATTERY_AROUND_LOCKSCREEN_RING, mLockRingBattery.isChecked() ? 1 : 0);
