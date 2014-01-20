@@ -42,4 +42,10 @@
         android:title="@string/Lockscreen_notifications_header"
         android:fragment="com.android.settings.ActiveNotifications" />
 
+    <PreferenceScreen
+        android:id="@+id/wakelock_blocker"
+        android:icon="@drawable/ic_settings_wakelock_blocker"
+        android:title="@string/wakelock_blocker"
+        android:fragment="com.android.settings.aicp.WakeLockBlocker" />
+
 </PreferenceScreen>
