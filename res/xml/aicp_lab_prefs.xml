@@ -20,7 +20,7 @@
     <!-- OmniSwitch -->
   <PreferenceScreen
         android:id="@+id/omniswitch"
-        android:icon="@drawable/ic_settings_omniswitch" 
+        android:icon="@drawable/ic_settings_omniswitch"
         android:title="@string/omniswitch_settings_title" >
         <intent
             android:action="android.intent.action.MAIN"
@@ -31,12 +31,14 @@
     <!-- Display and Animations -->
     <PreferenceScreen
         android:id="@+id/disp_anim_settings"
+        android:icon="@drawable/ic_settings_display_animations"
         android:title="@string/disp_anim_settings_title"
         android:fragment="com.android.settings.aicp.DisplayAnimationsSettings" />
 
     <!-- Active Notifications -->
     <PreferenceScreen
         android:id="@+id/active_notifications"
+        android:icon="@drawable/ic_settings_actived"
         android:title="@string/Lockscreen_notifications_header"
         android:fragment="com.android.settings.ActiveNotifications" />
 
