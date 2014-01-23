@@ -108,4 +108,7 @@
     <string name="sizer_message_filefail">Failed to create profile.</string>
     <string name="sizer_message_noselect">Nothing selected.</string>
 
+    <!-- Hide camera widget -->
+    <string name="lockscreen_enable_camera_title">Camera widget</string>
+
 </resources>

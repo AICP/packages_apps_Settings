@@ -66,7 +66,11 @@
         <CheckBoxPreference
             android:key="battery_around_lockscreen_ring"
             android:title="@string/battery_around_lockscreen_ring"
-            android:defaultValue="true" />
+            android:defaultValue="false" />
+
+        <CheckBoxPreference
+            android:key="keyguard_enable_camera"
+            android:title="@string/lockscreen_enable_camera_title" />
 
     </PreferenceCategory>
 

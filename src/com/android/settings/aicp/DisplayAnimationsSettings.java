@@ -21,8 +21,10 @@ import android.app.Dialog;
 import android.app.admin.DevicePolicyManager;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.hardware.Camera;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.preference.CheckBoxPreference;
@@ -38,6 +40,8 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import com.android.internal.widget.LockPatternUtils;
+import com.android.settings.ChooseLockSettingsHelper;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
@@ -55,6 +59,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private static final String KEY_SMS_BREATH = "sms_breath";
     private static final String KEY_MISSED_CALL_BREATH = "missed_call_breath";
     private static final String KEY_VOICEMAIL_BREATH = "voicemail_breath";
+    private static final String KEY_ENABLE_CAMERA = "keyguard_enable_camera";
 
     private ListPreference mListViewAnimation;
     private ListPreference mListViewInterpolator;
@@ -66,6 +71,11 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private CheckBoxPreference mSMSBreath;
     private CheckBoxPreference mMissedCallBreath;	    
     private CheckBoxPreference mVoicemailBreath;
+    private CheckBoxPreference mEnableCameraWidget;
+
+    private ChooseLockSettingsHelper mChooseLockSettingsHelper;
+    private LockPatternUtils mLockUtils;
+    private DevicePolicyManager mDPM;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -73,6 +83,10 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         ContentResolver resolver = getActivity().getContentResolver();
 
         addPreferencesFromResource(R.xml.aicp_display_animations_settings);
+
+        mChooseLockSettingsHelper = new ChooseLockSettingsHelper(getActivity());
+        mLockUtils = mChooseLockSettingsHelper.utils();
+        mDPM = (DevicePolicyManager) getSystemService(Context.DEVICE_POLICY_SERVICE);
 
         PreferenceScreen prefSet = getPreferenceScreen();
 
@@ -127,6 +141,19 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
             mLockRingBattery.setChecked(Settings.System.getInt(getContentResolver(),
                     Settings.System.BATTERY_AROUND_LOCKSCREEN_RING, 0) == 1);
         }
+
+        // Hide camera widget
+        mEnableCameraWidget = (CheckBoxPreference) findPreference(KEY_ENABLE_CAMERA);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        // Update camera widget
+        if (mEnableCameraWidget != null) {
+            mEnableCameraWidget.setChecked(mLockUtils.getCameraEnabled());
+        }
     }
 
     @Override
@@ -161,6 +188,9 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         } else if (preference == mLockRingBattery) {
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.BATTERY_AROUND_LOCKSCREEN_RING, mLockRingBattery.isChecked() ? 1 : 0);
+        } else if (preference == mEnableCameraWidget) {
+            mLockUtils.setCameraEnabled(mEnableCameraWidget.isChecked());
+            return true;
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
