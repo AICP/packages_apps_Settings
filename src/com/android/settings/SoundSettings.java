@@ -79,6 +79,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private static final String KEY_DOCK_SOUNDS = "dock_sounds";
     private static final String KEY_DOCK_AUDIO_MEDIA_ENABLED = "dock_audio_media_enabled";
     private static final String KEY_QUIET_HOURS = "quiet_hours";
+    private static final String KEY_VOLUME_ADJUST_SOUNDS = "volume_adjust_sounds";
 
     private static final String[] NEED_VOICE_CAPABILITY = {
             KEY_RINGTONE, KEY_DTMF_TONE, KEY_CATEGORY_CALLS,
@@ -97,6 +98,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private Preference mRingtonePreference;
     private Preference mNotificationPreference;
     private PreferenceScreen mQuietHours;
+    private CheckBoxPreference mVolumeAdustSound;
 
     private Runnable mRingtoneLookupRunnable;
 
@@ -243,6 +245,11 @@ public class SoundSettings extends SettingsPreferenceFragment implements
                 }
             }
         };
+
+        mVolumeAdustSound = (CheckBoxPreference) findPreference(KEY_VOLUME_ADJUST_SOUNDS);
+        mVolumeAdustSound.setChecked(Settings.System.getInt(resolver,
+                Settings.System.VOLUME_ADJUST_SOUNDS_ENABLED, 1) == 1);
+        mVolumeAdustSound.setOnPreferenceChangeListener(this);
 
         initDockSettings();
     }
@@ -405,6 +412,11 @@ public class SoundSettings extends SettingsPreferenceFragment implements
             } catch (NumberFormatException e) {
                 Log.e(TAG, "could not persist emergency tone setting", e);
             }
+        }
+        if (KEY_VOLUME_ADJUST_SOUNDS.equals(key)) {
+            Settings.System.putInt(getContentResolver(),
+                Settings.System.VOLUME_ADJUST_SOUNDS_ENABLED,
+                (Boolean) objValue ? 1 : 0);
         }
 
         return true;
