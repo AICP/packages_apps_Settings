@@ -60,6 +60,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private static final String KEY_MISSED_CALL_BREATH = "missed_call_breath";
     private static final String KEY_VOICEMAIL_BREATH = "voicemail_breath";
     private static final String KEY_ENABLE_CAMERA = "keyguard_enable_camera";
+    private static final String PREF_LESS_NOTIFICATION_SOUNDS = "less_notification_sounds";
 
     private ListPreference mListViewAnimation;
     private ListPreference mListViewInterpolator;
@@ -72,6 +73,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private CheckBoxPreference mMissedCallBreath;	    
     private CheckBoxPreference mVoicemailBreath;
     private CheckBoxPreference mEnableCameraWidget;
+    private ListPreference mAnnoyingNotifications;
 
     private ChooseLockSettingsHelper mChooseLockSettingsHelper;
     private LockPatternUtils mLockUtils;
@@ -144,6 +146,13 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
 
         // Hide camera widget
         mEnableCameraWidget = (CheckBoxPreference) findPreference(KEY_ENABLE_CAMERA);
+
+        // Less Notifications sound
+        mAnnoyingNotifications = (ListPreference) findPreference(PREF_LESS_NOTIFICATION_SOUNDS);
+        int notificationThreshold = Settings.System.getInt(getContentResolver(),
+                Settings.System.MUTE_ANNOYING_NOTIFICATIONS_THRESHOLD, 0);
+        mAnnoyingNotifications.setValue(Integer.toString(notificationThreshold));
+        mAnnoyingNotifications.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -219,6 +228,10 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         } else if (preference == mBlurRadius) {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.LOCKSCREEN_BLUR_RADIUS, (Integer)objValue);
+        } else if (PREF_LESS_NOTIFICATION_SOUNDS.equals(key)) {
+            final int value = Integer.valueOf((String) objValue);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.MUTE_ANNOYING_NOTIFICATIONS_THRESHOLD, value);
         }
 
         return true;

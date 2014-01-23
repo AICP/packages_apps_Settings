@@ -89,8 +89,8 @@
 
     <!-- Breathing Notifications -->
     <PreferenceCategory
-            android:key="breathing_notifications_title"
-            android:title="@string/breathing_notifications_title">
+            android:key="notifications_category"
+            android:title="@string/notifications_category_title">
 
         <CheckBoxPreference
             android:key="sms_breath"
@@ -109,6 +109,13 @@
             android:title="@string/voicemail_breath_title"
             android:summary="@string/voicemail_breath_summary"
             android:persistent="false"/>
+
+        <ListPreference
+            android:key="less_notification_sounds"
+            android:title="@string/less_notification_sounds_title"
+            android:summary="@string/less_notification_sounds_summary"
+            android:entries="@array/less_notification_sounds_entries"
+            android:entryValues="@array/less_notification_sounds_values" />
 
      </PreferenceCategory>
 
