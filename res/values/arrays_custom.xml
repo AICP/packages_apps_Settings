@@ -200,18 +200,20 @@
         <item>Thursday</item>
         <item>Friday</item>
         <item>Saturday</item>
+    </string-array>
+
   <!-- Phone blacklist management -->
-    <string-array name="blacklist_policy_unknown_entries" translatable="false">	
+    <string-array name="blacklist_policy_unknown_entries" translatable="false">
         <item>@string/blacklist_policy_block_calls</item>
         <item>@string/blacklist_policy_block_messages</item>
     </string-array>
 
     <string-array name="blacklist_policy_unknown_values" translatable="false">
-        <item>1</item>	
+        <item>1</item>
         <item>16</item>
     </string-array>
 
-    <string-array name="blacklist_policy_private_entries" translatable="false">	
+    <string-array name="blacklist_policy_private_entries" translatable="false">
         <item>@string/blacklist_policy_block_calls</item>
     </string-array>
 
