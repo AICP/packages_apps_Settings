@@ -193,6 +193,11 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
                 Toast.makeText(getActivity(), "Network traffic must be enabled in ROMControl!",
                     Toast.LENGTH_LONG).show();
             }
+        } else if (preference == mSMSBreath) {
+            value = mSMSBreath.isChecked();
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.KEY_SMS_BREATH, value ? 1 : 0);
+            return true;
         } else if (preference == mMissedCallBreath) {
             value = mMissedCallBreath.isChecked();
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
