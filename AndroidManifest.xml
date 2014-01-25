@@ -1791,14 +1791,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="Settings$AnonymousStatsActivity"
-                android:label="@string/anonymous_statistics_title"
-                android:configChanges="orientation|keyboardHidden|screenSize"
-                android:clearTaskOnLaunch="true">
-            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.aokpstats.AnonymousStats" />
-        </activity>
-
         <activity
             android:name=".slim.themes.ThemeSettings"
             android:label="@string/theme_settings_title" >

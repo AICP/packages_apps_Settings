@@ -129,7 +129,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         mStatusBarNetworkHide.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.STATUS_BAR_NETWORK_HIDE, 0) == 1);
 
-        //  Breath Notification
+        // Breath Notification
         mSMSBreath = (CheckBoxPreference) prefSet.findPreference(KEY_SMS_BREATH);
         mSMSBreath.setChecked((Settings.System.getInt(resolver, Settings.System.KEY_SMS_BREATH, 0) == 1));
 
@@ -139,7 +139,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         mVoicemailBreath = (CheckBoxPreference) prefSet.findPreference(KEY_VOICEMAIL_BREATH);
         mVoicemailBreath.setChecked((Settings.System.getInt(resolver, Settings.System.KEY_VOICEMAIL_BREATH, 0) == 1));
 
-        //GlowPadTorch
+        // GlowPad torch
         mGlowpadTorch = (CheckBoxPreference) findPreference(PREF_LOCKSCREEN_TORCH);
         mGlowpadTorch.setChecked(Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
                  Settings.System.LOCKSCREEN_GLOWPAD_TORCH, 0) == 1);
@@ -191,33 +191,29 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
                     ? 1 : 0);
             if (mStatusBarNetworkHide.isChecked()) {
                 Toast.makeText(getActivity(), "Network traffic must be enabled in ROMControl!",
-                    Toast.LENGTH_LONG).show();
+                Toast.LENGTH_LONG).show();
             }
         } else if (preference == mSMSBreath) {
             value = mSMSBreath.isChecked();
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.KEY_SMS_BREATH, value ? 1 : 0);
-            return true;
         } else if (preference == mMissedCallBreath) {
             value = mMissedCallBreath.isChecked();
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.KEY_MISSED_CALL_BREATH, value ? 1 : 0);
-            return true;
         } else if (preference == mVoicemailBreath) {
             value = mVoicemailBreath.isChecked();
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.KEY_VOICEMAIL_BREATH, value ? 1 : 0);
-            return true;
         } else if (preference == mLockRingBattery) {
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                    Settings.System.BATTERY_AROUND_LOCKSCREEN_RING, mLockRingBattery.isChecked() ? 1 : 0);
+                    Settings.System.BATTERY_AROUND_LOCKSCREEN_RING,
+                    mLockRingBattery.isChecked() ? 1 : 0);
         } else if (preference == mEnableCameraWidget) {
             mLockUtils.setCameraEnabled(mEnableCameraWidget.isChecked());
-            return true;
          } else if (preference == mGlowpadTorch) {
              Settings.System.putInt(getContentResolver(),
                       Settings.System.LOCKSCREEN_GLOWPAD_TORCH, mGlowpadTorch.isChecked() ? 1 : 0);
-            return true;
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }

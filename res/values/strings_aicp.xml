@@ -29,6 +29,7 @@
     <string name="bars_settings_title">Status bar</string>
     <string name="wakelock_blocker">Wakelock blocker</string>
     <string name="system_app_remover">Systemapp Remover</string>
+    <string name="notifications_category_title">Notifications</string>
 
     <!-- ListView animation -->
     <string name="interface_settings_animation_title">Animation options</string>
@@ -80,8 +81,8 @@
     <string name="wakelock_blocker_reload">Reload</string>
     <string name="wakelock_blocker_warning_title">Proceed with Caution</string>
     <string name="wakelock_blocker_warning">Blocking wakelocks have the potential to cause instability, crashes or data loss.</string>
+
     <!-- Breathing Notifications -->
-    <string name="breathing_notifications_title">Breathing Notifications</string>
     <string name="sms_breath_title">Breathing SMS</string>
     <string name="sms_breath_summary">Will give your sms notifications a breathing effect in the statusbar</string>
     <string name="missed_call_breath_title">Breathing Missed Call</string>
@@ -112,7 +113,6 @@
     <string name="lockscreen_enable_camera_title">Camera widget</string>
 
     <!-- Less Notification sounds -->
-    <string name="notifications_category_title">Notifications</string>
     <string name="less_notification_sounds_title">Less frequent notification sounds</string>
     <string name="less_notification_sounds_summary">Limit the notification sounds of each app to only play once per set time period</string>
     <string name="less_notification_sounds_default">Default Behaviour</string>
@@ -131,7 +131,6 @@
     <string name="lockscreen_glowpad_torch_summary">Double-tap and hold the slider to start torch</string>
 
     <!-- Lockscreen pimping -->
-    <string name="shortcut_image_not_valid">The chosen app did not return a valid icon or does not support image cropping. Use another app.</string>
     <string name="lockscreen_style_reset_message">Reset all lockscreen colors?</string>
     <string name="lockscreen_style_title">Theme style</string>
     <string name="lockscreen_frame_color_title">Frame color</string>
