@@ -399,4 +399,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="increasing_ring_interval_5seconds">5 seconds</string>
     <string name="increasing_ring_interval_10seconds">10 seconds</string>
 
+    <!-- Default alarm tone -->
+    <string name="alarm_sound_title">Default alarm sound</string>
+    <string name="alarm_sound_dialog_title">Default alarm sound</string>
+
 </resources>
