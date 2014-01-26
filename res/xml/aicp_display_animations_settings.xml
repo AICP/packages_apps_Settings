@@ -108,6 +108,12 @@
             android:key="notifications_category"
             android:title="@string/notifications_category_title">
 
+        <Preference
+            android:fragment="com.android.settings.aicp.NotificationDrawerStyle"
+            android:key="notification_style"
+            android:title="@string/notification_style_title"
+            android:summary="@string/notification_style_summary" />
+
         <CheckBoxPreference
             android:key="sms_breath"
             android:title="@string/sms_breath_title"
