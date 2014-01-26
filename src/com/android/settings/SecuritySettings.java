@@ -70,6 +70,7 @@ public class SecuritySettings extends RestrictedSettingsFragment
     private static final String KEY_LOCK_AFTER_TIMEOUT = "lock_after_timeout";
     private static final String KEY_OWNER_INFO_SETTINGS = "owner_info_settings";
     private static final String KEY_ENABLE_WIDGETS = "keyguard_enable_widgets";
+    private static final String KEY_VISIBLE_GESTURE = "visiblegesture";
 
     private static final int SET_OR_CHANGE_LOCK_METHOD_REQUEST = 123;
     private static final int CONFIRM_EXISTING_FOR_BIOMETRIC_WEAK_IMPROVE_REQUEST = 124;
@@ -118,6 +119,7 @@ public class SecuritySettings extends RestrictedSettingsFragment
     private CheckBoxPreference mEnableKeyguardWidgets;
     private ListPreference mLockNumpadRandom;
     private CheckBoxPreference mLockNotifications;
+    private CheckBoxPreference mVisibleGesture;
 
     private Preference mNotificationAccess;
 
@@ -182,6 +184,9 @@ public class SecuritySettings extends RestrictedSettingsFragment
                 case DevicePolicyManager.PASSWORD_QUALITY_COMPLEX:
                     resid = R.xml.security_settings_password;
                     break;
+                case DevicePolicyManager.PASSWORD_QUALITY_GESTURE_WEAK:
+	              resid = R.xml.security_settings_gesture;
+                    break;             
             }
         }
         addPreferencesFromResource(resid);
@@ -229,6 +234,9 @@ public class SecuritySettings extends RestrictedSettingsFragment
         // visible pattern
         mVisiblePattern = (CheckBoxPreference) root.findPreference(KEY_VISIBLE_PATTERN);
 
+        // visible gesture 
+         mVisibleGesture = (CheckBoxPreference) root.findPreference(KEY_VISIBLE_GESTURE);
+
         // Quick Unlock for PIN and Password Lockscreens
         mQuickUnlock = (CheckBoxPreference) root.findPreference(KEY_QUICK_UNLOCK);
 
@@ -252,6 +260,9 @@ public class SecuritySettings extends RestrictedSettingsFragment
                     root.findPreference(KEY_SECURITY_CATEGORY);
             if (securityCategory != null && mVisiblePattern != null) {
                 securityCategory.removePreference(root.findPreference(KEY_VISIBLE_PATTERN));
+            }
+               if (securityCategory != null && mVisibleGesture != null) {
+                   securityCategory.removePreference(root.findPreference(KEY_VISIBLE_GESTURE));
             }
         }
 
@@ -630,6 +641,8 @@ public class SecuritySettings extends RestrictedSettingsFragment
             lockPatternUtils.setLockPatternEnabled(isToggled(preference));
         } else if (KEY_VISIBLE_PATTERN.equals(key)) {
             lockPatternUtils.setVisiblePatternEnabled(isToggled(preference));
+        } else if (KEY_VISIBLE_GESTURE.equals(key)) {
+            lockPatternUtils.setVisibleGestureEnabled(isToggled(preference));
         } else if (KEY_QUICK_UNLOCK.equals(key)) {
             Settings.AOKP.putBoolean(getContentResolver(),
                  Settings.AOKP.LOCKSCREEN_QUICK_UNLOCK_CONTROL, isToggled(preference));
