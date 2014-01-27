@@ -89,6 +89,8 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
         = "notification_light_pulse_vmail_led_on";
     private static final String NOTIFICATION_LIGHT_PULSE_VMAIL_LED_OFF
         = "notification_light_pulse_vmail_led_off";
+    private static final String KEY_SCREEN_ON_NOTIFICATION_LED
+        = "screen_on_notification_led";
 
     private static final String PULSE_PREF = "pulse_enabled";
     private static final String DEFAULT_PREF = "default";
@@ -107,6 +109,7 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
     private boolean mLightEnabled;
     private boolean mVoiceCapable;
     private PreferenceGroup mApplicationPrefList;
+    private CheckBoxPreference mScreenOnNotificationLed;
     private ApplicationLightPreference mDefaultPref;
     private ApplicationLightPreference mCallPref;
     private ApplicationLightPreference mVoicemailPref;
@@ -128,6 +131,12 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
                 com.android.internal.R.integer.config_defaultNotificationLedOn);
         mDefaultLedOff = resources.getInteger(
                 com.android.internal.R.integer.config_defaultNotificationLedOff);
+
+        int statusScreenOnNotificationLed = Settings.System.getInt(getContentResolver(),
+                Settings.System.SCREEN_ON_NOTIFICATION_LED, 1);
+        mScreenOnNotificationLed = (CheckBoxPreference) findPreference(KEY_SCREEN_ON_NOTIFICATION_LED);
+        mScreenOnNotificationLed.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.SCREEN_ON_NOTIFICATION_LED, 0) == 1);
 
         // Get launch-able applications
         mPackageManager = getPackageManager();
@@ -420,6 +429,19 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
         }
 
         return true;
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        if (preference == mScreenOnNotificationLed) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.SCREEN_ON_NOTIFICATION_LED,
+                    mScreenOnNotificationLed.isChecked() ? 1 : 0);
+
+            return true;
+        }
+
+        return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
     @Override

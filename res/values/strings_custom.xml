@@ -489,4 +489,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="disable_safe_volume_title">Disable safe volume warning</string>
     <string name="disable_safe_volume_summary">This will disable the safe volume warning when using headphones. A reboot is necessary in order to take effect.</string>
 
+    <!-- Screen-On Notification Light -->
+    <string name="screen_on_notification_led_title">Screen-On Notification Light</string>
+    <string name="screen_on_notification_led_summary">Enable Notification Light even when screen is on</string>
+
 </resources>
