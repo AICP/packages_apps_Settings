@@ -50,6 +50,7 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
     private static final String KEY_THRESHOLD = "ad_threshold";
     private static final String KEY_OFFSET_TOP = "offset_top";
     private static final String KEY_EXPANDED_VIEW = "expanded_view";
+    private static final String KEY_WAKE_ON_NOTIFICATION = "wake_on_notification";
     private static final String KEY_FORCE_EXPANDED_VIEW = "force_expanded_view";
     private static final String KEY_NOTIFICATIONS_HEIGHT = "notifications_height";
     private static final String KEY_EXCLUDED_NOTIF_APPS = "excluded_apps";
@@ -65,6 +66,7 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
     private SeekBarPreference mOffsetTop;
     private CheckBoxPreference mExpandedView;
     private CheckBoxPreference mForceExpandedView;
+    private CheckBoxPreference mWakeOnNotification;
     private NumberPickerPreference mNotificationsHeight;
     private AppMultiSelectListPreference mNotifAppsPref;		
 
@@ -138,6 +140,10 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
         mForceExpandedView.setChecked(Settings.System.getInt(getContentResolver(),
                     Settings.System.LOCKSCREEN_NOTIFICATIONS_FORCE_EXPANDED_VIEW, 0) == 1);
 
+        mWakeOnNotification = (CheckBoxPreference) findPreference(KEY_WAKE_ON_NOTIFICATION);
+        mWakeOnNotification.setChecked(Settings.System.getInt(getContentResolver(),
+                    Settings.System.LOCKSCREEN_NOTIFICATIONS_WAKE_ON_NOTIFICATION, 0) == 1);
+
         mNotificationsHeight = (NumberPickerPreference) findPreference(KEY_NOTIFICATIONS_HEIGHT);
         mNotificationsHeight.setValue(Settings.System.getInt(getContentResolver(),
                     Settings.System.LOCKSCREEN_NOTIFICATIONS_HEIGHT, 4));
@@ -209,6 +215,9 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
         } else if (preference == mForceExpandedView) {
             Settings.System.putInt(getContentResolver(), Settings.System.LOCKSCREEN_NOTIFICATIONS_FORCE_EXPANDED_VIEW,
                     mForceExpandedView.isChecked() ? 1 : 0);
+        } else if (preference == mWakeOnNotification) {
+            Settings.System.putInt(getContentResolver(), Settings.System.LOCKSCREEN_NOTIFICATIONS_WAKE_ON_NOTIFICATION,
+                    mWakeOnNotification.isChecked() ? 1 : 0);
         } else if (preference == mShowDatePref) {
             value = mShowDatePref.isChecked();
             Settings.System.putInt(getContentResolver(),
