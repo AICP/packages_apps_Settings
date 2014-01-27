@@ -485,4 +485,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="lock_pattern_size_5">5x5</string>
     <string name="lock_pattern_size_6">6x6</string>
 
+    <!-- Disable safe volume warning with headphones -->
+    <string name="disable_safe_volume_title">Disable safe volume warning</string>
+    <string name="disable_safe_volume_summary">This will disable the safe volume warning when using headphones. A reboot is necessary in order to take effect.</string>
+
 </resources>

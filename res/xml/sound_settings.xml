@@ -38,6 +38,12 @@
             android:fragment="com.android.settings.QuietHours"
             android:title="@string/quiet_hours_title" />
 
+    <CheckBoxPreference
+            android:key="disable_safe_volume"
+            android:title="@string/disable_safe_volume_title"
+            android:summary="@string/disable_safe_volume_summary"
+            android:persistent="false" />
+
     <PreferenceCategory
             android:key="category_calls_and_notification"
             android:title="@string/sound_category_call_ringtone_vibrate_title"/>
