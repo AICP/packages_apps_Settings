@@ -81,7 +81,6 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private static final String KEY_DOCK_AUDIO_MEDIA_ENABLED = "dock_audio_media_enabled";
     private static final String KEY_QUIET_HOURS = "quiet_hours";
     private static final String KEY_VOLUME_ADJUST_SOUNDS = "volume_adjust_sounds";
-    private static final String BUTTON_DISABLE_SAFE_VOLUME = "disable_safe_volume";
 
     private static final String[] NEED_VOICE_CAPABILITY = {
             KEY_RINGTONE, KEY_DTMF_TONE, KEY_CATEGORY_CALLS,
@@ -103,7 +102,6 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private PreferenceScreen mQuietHours;
     private CheckBoxPreference mVolumeAdustSound;
     private Preference mAlarmPreference;
-    private CheckBoxPreference mDisableSafeVolume;
 
     private Runnable mRingtoneLookupRunnable;
 
@@ -219,10 +217,6 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         }
 
         mSoundSettings = (PreferenceGroup) findPreference(KEY_SOUND_SETTINGS);
-
-        mDisableSafeVolume = (CheckBoxPreference) findPreference(BUTTON_DISABLE_SAFE_VOLUME);
-        mDisableSafeVolume.setChecked(Settings.System.getInt(resolver,
-                Settings.System.DISABLE_SAFE_VOLUME, 0) != 0);
 
         mMusicFx = mSoundSettings.findPreference(KEY_MUSICFX);
         Intent i = new Intent(AudioEffect.ACTION_DISPLAY_AUDIO_EFFECT_CONTROL_PANEL);
@@ -412,10 +406,6 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         } else if (preference == mDockAudioMediaEnabled) {
             Settings.Global.putInt(getContentResolver(), Settings.Global.DOCK_AUDIO_MEDIA_ENABLED,
                     mDockAudioMediaEnabled.isChecked() ? 1 : 0);
-        } else if (preference == mDisableSafeVolume) {
-            boolean checked = ((CheckBoxPreference)preference).isChecked();
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.DISABLE_SAFE_VOLUME, checked ? 1:0);
         } else {
             // If we didn't handle it, let preferences handle it.
             return super.onPreferenceTreeClick(preferenceScreen, preference);
