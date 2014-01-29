@@ -111,8 +111,13 @@
             android:inputType="textNoSuggestions"
             android:persistent="false" />
 
-    </PreferenceCategory>
+    <!-- Battery -->
+        <PreferenceScreen
+            android:key="battery_style_pref"
+            android:fragment="com.android.settings.aicp.BatteryIconStyle"
+            android:title="@string/battery_icon_title"/>
 
+    </PreferenceCategory>
 
     <!-- Breathing Notifications -->
     <PreferenceCategory
