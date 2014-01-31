@@ -69,6 +69,13 @@
                 android:targetPackage="com.aokp.romcontrol" />
     </header>
 
+    <!-- Profiles -->
+    <header
+        android:id="@+id/profiles_settings"
+        android:icon="@drawable/ic_settings_profiles"
+        android:fragment="com.android.settings.profiles.ProfilesSettings"
+        android:title="@string/profiles_settings_title" />
+
     <!-- Advanced Settings -->
     <header android:id="@+id/advanced_settings"
             android:title="@string/advanced_settings_title"
@@ -102,13 +109,6 @@
         android:fragment="com.android.settings.aicp.AicpSettings"
         android:icon="@drawable/ic_settings_aicp"
         android:title="@string/aicp_settings_title" />
-
-    <!-- Profiles -->
-    <header
-        android:id="@+id/profiles_settings"
-        android:icon="@drawable/ic_settings_profiles"
-        android:fragment="com.android.settings.profiles.ProfilesSettings"
-        android:title="@string/profiles_settings_title" />
 
     <!-- DEVICE -->
     <header android:id="@+id/device_section"
