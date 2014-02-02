@@ -28,7 +28,7 @@
     <string name="lockscreen_settings_title">Lockscreen</string>
     <string name="bars_settings_title">Status bar</string>
     <string name="wakelock_blocker">Wakelock blocker</string>
-    <string name="system_app_remover">Systemapp Remover</string>
+    <string name="system_app_remover">System app remover</string>
     <string name="notifications_category_title">Notifications</string>
 
     <!-- ListView animation -->
@@ -92,7 +92,7 @@
 
     <!-- SlimSizer  -->
     <string name="listsystem">list</string>
-    <string name="sizer_title">System App Remover</string>
+    <string name="sizer_title">System app remover</string>
     <string name="caution">Caution!</string>
     <string name="sizer_message_startup">This tool allows you to delete system apps. Use with caution and only delete apps you know are safe to be removed.</string>
     <string name="cancel">Cancel</string>
