@@ -25,14 +25,6 @@ limitations under the License.
         android:entries="@array/entries_halo_state"
         android:entryValues="@array/values_halo_state" />
 
-    <ListPreference
-        android:key="halo_size"
-        android:dialogTitle="@string/halo_size_title"
-        android:title="@string/halo_size_title"
-        android:summary="@string/halo_size_summary"
-        android:entries="@array/entries_halo_size"
-        android:entryValues="@array/values_halo_size" />
-
     <CheckBoxPreference
         android:key="halo_hide"
         android:title="@string/halo_hide_title"
@@ -63,5 +55,61 @@ limitations under the License.
         android:title="@string/halo_unlock_ping_title"
         android:summary="@string/halo_unlock_ping_summary"
         android:defaultValue="false" />
+
+    <PreferenceCategory
+        android:key="category_halo_style_options"
+        android:title="@string/halo_style_title" >
+
+        <ListPreference
+            android:key="halo_size"
+            android:dialogTitle="@string/halo_size_title"
+            android:title="@string/halo_size_title"
+            android:summary="@string/halo_size_summary"
+            android:entries="@array/entries_halo_size"
+            android:entryValues="@array/values_halo_size" />
+
+        <CheckBoxPreference
+            android:key="halo_colors"
+            android:title="@string/halo_colors_title"
+            android:summary="@string/halo_colors_summary"
+            android:defaultValue="false" />
+
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="halo_circle_color"
+            android:title="@string/halo_circle_color_title"
+            android:dependency="halo_colors"
+            android:defaultValue="0x801D1D1D"
+            alphaSlider="true" />
+
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="halo_bubble_color"
+            android:title="@string/halo_bubble_color_title"
+            android:summary="@string/halo_bubble_color_summary"
+            android:dependency="halo_colors"
+            android:defaultValue="0xFF1F1F1F"
+            alphaSlider="true" />
+
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="halo_bubble_text_color"
+            android:title="@string/halo_bubble_text_color_title"
+            android:dependency="halo_colors"
+            android:defaultValue="0xFFCCCCCC"
+            alphaSlider="true" />
+
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="halo_number_text_color"
+            android:title="@string/halo_number_text_color_title"
+            android:dependency="halo_colors"
+            android:defaultValue="0xFFCCCCCC"
+            alphaSlider="true" />
+
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="halo_number_container_color"
+            android:title="@string/halo_number_container_color_title"
+            android:dependency="halo_colors"
+            android:defaultValue="0xFFFF0000"
+            alphaSlider="true" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>

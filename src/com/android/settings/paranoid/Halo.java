@@ -30,6 +30,10 @@ import android.provider.Settings;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.Utils;
+import com.android.settings.util.Helpers;
+
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 public class Halo extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
@@ -41,6 +45,12 @@ public class Halo extends SettingsPreferenceFragment
     private static final String KEY_HALO_MSGBOX = "halo_msgbox";
     private static final String KEY_HALO_NOTIFY_COUNT = "halo_notify_count";
     private static final String KEY_HALO_UNLOCK_PING = "halo_unlock_ping";
+    private static final String PREF_HALO_COLORS = "halo_colors";
+    private static final String PREF_HALO_CIRCLE_COLOR = "halo_circle_color";
+    private static final String PREF_HALO_BUBBLE_COLOR = "halo_bubble_color";
+    private static final String PREF_HALO_BUBBLE_TEXT_COLOR = "halo_bubble_text_color";
+    private static final String PREF_HALO_NUMBER_TEXT_COLOR = "halo_number_text_color";
+    private static final String PREF_HALO_NUMBER_CONTAINER_COLOR = "halo_number_container_color";
 
     private ListPreference mHaloState;
     private ListPreference mHaloSize;
@@ -49,6 +59,12 @@ public class Halo extends SettingsPreferenceFragment
     private ListPreference mHaloNotifyCount;
     private CheckBoxPreference mHaloMsgBox;
     private CheckBoxPreference mHaloUnlockPing;
+    private CheckBoxPreference mHaloColors;
+    private ColorPickerPreference mHaloCircleColor;
+    private ColorPickerPreference mHaloBubbleColor;
+    private ColorPickerPreference mHaloBubbleTextColor;
+    private ColorPickerPreference mHaloNumberTextColor;
+    private ColorPickerPreference mHaloNumberContainerColor;
 
     private Context mContext;
     private INotificationManager mNotificationManager;
@@ -104,6 +120,25 @@ public class Halo extends SettingsPreferenceFragment
             // fail...
         }
         mHaloNotifyCount.setOnPreferenceChangeListener(this);
+
+        mHaloColors = (CheckBoxPreference) prefSet.findPreference(PREF_HALO_COLORS);
+        mHaloColors.setChecked(Settings.System.getInt(mContext.getContentResolver(),
+                Settings.System.HALO_PROPERTIES_COLOR, 0) == 1);
+
+        mHaloCircleColor = (ColorPickerPreference) findPreference(PREF_HALO_CIRCLE_COLOR);
+        mHaloCircleColor.setOnPreferenceChangeListener(this);
+
+        mHaloBubbleColor = (ColorPickerPreference) findPreference(PREF_HALO_BUBBLE_COLOR);
+        mHaloBubbleColor.setOnPreferenceChangeListener(this);
+
+        mHaloBubbleTextColor = (ColorPickerPreference) findPreference(PREF_HALO_BUBBLE_TEXT_COLOR);
+        mHaloBubbleTextColor.setOnPreferenceChangeListener(this);
+
+        mHaloNumberTextColor = (ColorPickerPreference) findPreference(PREF_HALO_NUMBER_TEXT_COLOR);
+        mHaloNumberTextColor.setOnPreferenceChangeListener(this);
+
+        mHaloNumberContainerColor = (ColorPickerPreference) findPreference(PREF_HALO_NUMBER_CONTAINER_COLOR);
+        mHaloNumberTextColor.setOnPreferenceChangeListener(this);
     }
 
     private boolean isHaloPolicyBlack() {
@@ -133,6 +168,10 @@ public class Halo extends SettingsPreferenceFragment
             Settings.System.putInt(mContext.getContentResolver(),
                     Settings.System.HALO_UNLOCK_PING, mHaloUnlockPing.isChecked()
                     ? 1 : 0);
+        } else if (preference == mHaloColors) {
+            Settings.System.putInt(mContext.getContentResolver(),
+                    Settings.System.HALO_PROPERTIES_COLOR, mHaloColors.isChecked()
+                    ? 1 : 0);
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
@@ -155,6 +194,46 @@ public class Halo extends SettingsPreferenceFragment
             int haloNotifyCount = Integer.valueOf((String) newValue);
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.HALO_NOTIFY_COUNT, haloNotifyCount);
+            return true;
+        } else if (preference == mHaloCircleColor) {
+            String hex = ColorPickerPreference.convertToARGB(
+                    Integer.valueOf(String.valueOf(newValue)));
+            preference.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.HALO_CIRCLE_COLOR, intHex);
+            return true;
+        } else if (preference == mHaloBubbleColor) {
+            String hex = ColorPickerPreference.convertToARGB(
+                    Integer.valueOf(String.valueOf(newValue)));
+            preference.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.HALO_BUBBLE_COLOR, intHex);
+            return true;
+        } else if (preference == mHaloBubbleTextColor) {
+            String hex = ColorPickerPreference.convertToARGB(
+                    Integer.valueOf(String.valueOf(newValue)));
+            preference.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.HALO_BUBBLE_TEXT_COLOR, intHex);
+            return true;
+        } else if (preference == mHaloNumberTextColor) {
+            String hex = ColorPickerPreference.convertToARGB(
+                    Integer.valueOf(String.valueOf(newValue)));
+            preference.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.HALO_NUMBER_TEXT_COLOR, intHex);
+            return true;
+        } else if (preference == mHaloNumberContainerColor) {
+            String hex = ColorPickerPreference.convertToARGB(
+                    Integer.valueOf(String.valueOf(newValue)));
+            preference.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.HALO_NUMBER_CONTAINER_COLOR, intHex);
             return true;
         }
         return false;
