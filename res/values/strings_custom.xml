@@ -239,11 +239,12 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="display_category_animation_options_title">Animation options</string>
     <string name="system_power_crt_mode_title">CRT animation </string>
     <string name="system_power_crt_mode_dialog_title">CRT animation</string>
-    <string name="system_power_crt_mode_off">Don\'t show</string>
+    <string name="system_power_crt_mode_fade">Fade</string>
     <string name="system_power_crt_mode_horizontal">Collapse horizontal</string>
     <string name="system_power_crt_mode_vertical">Collapse vertical</string>
     <string name="system_power_crt_mode_both">Collapse orientation dependent</string>
     <string name="system_power_crt_mode_scale">Scale down</string>
+    <string name="system_power_crt_mode_none">None</string>
 
     <!--- Volume key cursor control -->
     <string name="volume_key_cursor_control_title">Volume key cursor control</string>

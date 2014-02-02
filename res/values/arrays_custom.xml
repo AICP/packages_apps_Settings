@@ -168,11 +168,12 @@
 
     <!-- CRT off animation mode -->
     <string-array name="entries_system_power_crt_mode">
-        <item>@string/system_power_crt_mode_off</item>
+        <item>@string/system_power_crt_mode_fade</item>
         <item>@string/system_power_crt_mode_horizontal</item>
         <item>@string/system_power_crt_mode_vertical</item>
         <item>@string/system_power_crt_mode_both</item>
         <item>@string/system_power_crt_mode_scale</item>
+        <item>@string/system_power_crt_mode_none</item>
     </string-array>
 
     <string-array name="values_system_power_crt_mode" translatable="false">
@@ -181,6 +182,7 @@
         <item>2</item>
         <item>3</item>
         <item>4</item>
+        <item>5</item>
     </string-array>
 
     <!-- Dynamic data usage -->
