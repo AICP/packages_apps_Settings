@@ -83,7 +83,9 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private static final String KEY_DOCK_SOUNDS = "dock_sounds";
     private static final String KEY_DOCK_AUDIO_MEDIA_ENABLED = "dock_audio_media_enabled";
     private static final String KEY_QUIET_HOURS = "quiet_hours";
+    private static final String KEY_VOLUME_KEYS_RINGER_MODE = "volume_keys_ringer_mode";
     private static final String KEY_VOLUME_OVERLAY = "volume_overlay";
+
 
     private static final String[] NEED_VOICE_CAPABILITY = {
             KEY_RINGTONE, KEY_DTMF_TONE, KEY_CATEGORY_CALLS,
@@ -115,6 +117,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private Intent mDockIntent;
     private CheckBoxPreference mDockAudioMediaEnabled;
     private CheckBoxPreference mVolumeAdustSound;
+    private CheckBoxPreference mVolumeKeysRingerMode;
     private ListPreference mVolumeOverlay;
 
     private BroadcastReceiver mReceiver = new BroadcastReceiver() {
@@ -266,6 +269,11 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         mVolumeAdustSound.setChecked(Settings.System.getInt(resolver,
                 Settings.System.VOLUME_ADJUST_SOUNDS_ENABLED, 1) == 1);
         mVolumeAdustSound.setOnPreferenceChangeListener(this);
+
+        mVolumeKeysRingerMode = (CheckBoxPreference) findPreference(KEY_VOLUME_KEYS_RINGER_MODE);
+        mVolumeKeysRingerMode.setChecked(Settings.System.getInt(resolver,
+                Settings.System.VOLUME_KEYS_RINGER_MODE, 1) == 1);
+        mVolumeKeysRingerMode.setOnPreferenceChangeListener(this);
 
         mVolumeOverlay = (ListPreference) findPreference(KEY_VOLUME_OVERLAY);
         mVolumeOverlay.setOnPreferenceChangeListener(this);
@@ -439,6 +447,10 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         } else if (preference == mVolumeAdustSound) {
             Settings.System.putInt(getContentResolver(),
                 Settings.System.VOLUME_ADJUST_SOUNDS_ENABLED,
+                (Boolean) objValue ? 1 : 0);
+        } else if (preference == mVolumeKeysRingerMode) {
+            Settings.System.putInt(getContentResolver(),
+                Settings.System.VOLUME_KEYS_RINGER_MODE,
                 (Boolean) objValue ? 1 : 0);
         } else if (preference == mVolumeOverlay) {
             int value = Integer.valueOf((String) objValue);

@@ -428,4 +428,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="display_rotation_180_title">180 degrees</string>
     <string name="display_rotation_270_title">270 degrees</string>
 
+    <!-- Volume key ringer toggle -->
+    <string name="title_hardware_keys_volume_keys_ringer_toggle">Volume keys ringer toggle</string>
+    <string name="summary_hardware_keys_volume_keys_ringer_toggle">Whether pressing both volume keys will toggle the ringer mode or not</string>
+
 </resources>
