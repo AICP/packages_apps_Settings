@@ -199,7 +199,6 @@
     <string name="halo_circle_color_title">Circle color</string>
     <string name="halo_bubble_text_color_title">Speech bubble text color</string>
     <string name="halo_bubble_color_title">Speech bubble color</string>
-    <string name="halo_bubble_color_summary">Requires a systemui restart</string>
     <string name="halo_number_text_color_title">Notificaton number text color</string>
     <string name="halo_number_container_color_title">Notificaton number bubble color</string>
 

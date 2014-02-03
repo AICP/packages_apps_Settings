@@ -71,7 +71,6 @@ limitations under the License.
         <CheckBoxPreference
             android:key="halo_colors"
             android:title="@string/halo_colors_title"
-            android:summary="@string/halo_colors_summary"
             android:defaultValue="false" />
 
         <net.margaritov.preference.colorpicker.ColorPickerPreference
@@ -84,7 +83,6 @@ limitations under the License.
         <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="halo_bubble_color"
             android:title="@string/halo_bubble_color_title"
-            android:summary="@string/halo_bubble_color_summary"
             android:dependency="halo_colors"
             android:defaultValue="0xFF1F1F1F"
             alphaSlider="true" />

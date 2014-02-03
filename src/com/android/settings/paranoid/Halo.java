@@ -138,7 +138,7 @@ public class Halo extends SettingsPreferenceFragment
         mHaloNumberTextColor.setOnPreferenceChangeListener(this);
 
         mHaloNumberContainerColor = (ColorPickerPreference) findPreference(PREF_HALO_NUMBER_CONTAINER_COLOR);
-        mHaloNumberTextColor.setOnPreferenceChangeListener(this);
+        mHaloNumberContainerColor.setOnPreferenceChangeListener(this);
     }
 
     private boolean isHaloPolicyBlack() {
