@@ -55,6 +55,13 @@
         android:title="@string/color_tile_title"
         android:fragment="com.android.settings.aicp.TileColors" />
 
+    <!-- Density changer -->
+    <PreferenceScreen
+        android:id="@+id/density_changer"
+        android:title="@string/lcd_density_title"
+        android:icon="@drawable/ic_settings_density_changer"
+        android:fragment="com.android.settings.aicp.DensityChanger" />
+
     <!-- WakeLock blocker -->
     <PreferenceScreen
         android:id="@+id/wakelock_blocker"
