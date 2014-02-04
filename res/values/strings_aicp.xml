@@ -31,6 +31,7 @@
     <string name="wakelock_blocker">Wakelock blocker</string>
     <string name="system_app_remover">System app remover</string>
     <string name="notifications_category_title">Notifications</string>
+    <string name="omniswitch_settings_title">OmniSwitch</string>
 
     <!-- ListView animation -->
     <string name="interface_settings_animation_title">Animation options</string>

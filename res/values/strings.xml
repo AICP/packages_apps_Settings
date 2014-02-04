@@ -4904,16 +4904,4 @@
     <!-- Text to display in regulatory info screen (from device overlay). -->
     <string name="regulatory_info_text"></string>
 
-    <!-- OmniSwitch -->
-    <string name="omniswitch_settings_title">OmniSwitch</string>
-
-    <!-- Partition Info -->
-    <string name="partition_info_title">Partition info</string>
-    <string name="partition_info_system">/system</string>
-    <string name="partition_info_data">/data</string>
-    <string name="partition_info_cache">/cache</string>
-    <string name="partition_info_sdcard">/sdcard (FAT)</string>
-    <string name="partition_info_sdext">/external-sd</string>
-    <string name="partition_info_used_of">/</string>
-
 </resources>
