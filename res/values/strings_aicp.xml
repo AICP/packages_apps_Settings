@@ -495,7 +495,7 @@
     <string name="follow_through_title">Be advised: Tap to download</string>
     <string name="follow_through_summary">Its recommended to use a Multi-DPI Play Store to avoid issues after changing density.</string>
     <string name="stock_density_title">Change LCD Density to stock values</string>
-    <string name="stock_density_summary">Tablets and older phones use 160. Most phones use 240. Galaxy Nexus uses 320 by default.</string>
+    <string name="stock_density_summary">Most phones and Nexus 7 2013 use 320. Nexus 5 uses 480 by default.</string>
     <string name="stock_density_changed_summary">"Density set to: "</string>
     <string name="reboot_title">Reboot!</string>
     <string name="reboot_summary">and enjoy</string>
