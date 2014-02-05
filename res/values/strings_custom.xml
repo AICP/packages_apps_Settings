@@ -430,7 +430,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
     <!-- Volume key ringer toggle -->
     <string name="title_hardware_keys_volume_keys_ringer_toggle">Volume keys ringer toggle</string>
-    <string name="summary_hardware_keys_volume_keys_ringer_toggle">Whether pressing both volume keys will toggle the ringer mode or not</string>
+    <string name="summary_hardware_keys_volume_keys_ringer_toggle">Toggle the ringer mode by pressing both volume keys</string>
 
     <!-- Partition Info -->
     <string name="partition_info_title">Partition info</string>
