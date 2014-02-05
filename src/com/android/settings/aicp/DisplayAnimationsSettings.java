@@ -62,6 +62,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private static final String KEY_ENABLE_CAMERA = "keyguard_enable_camera";
     private static final String PREF_LESS_NOTIFICATION_SOUNDS = "less_notification_sounds";
     private static final String PREF_LOCKSCREEN_TORCH = "lockscreen_torch";
+    private static final String KEY_ENABLE_POWER_MENU = "lockscreen_enable_power_menu";
 
     private ListPreference mListViewAnimation;
     private ListPreference mListViewInterpolator;
@@ -76,6 +77,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private CheckBoxPreference mEnableCameraWidget;
     private ListPreference mAnnoyingNotifications;
     private CheckBoxPreference mGlowpadTorch;
+    private CheckBoxPreference mEnablePowerMenu;
 
     private ChooseLockSettingsHelper mChooseLockSettingsHelper;
     private LockPatternUtils mLockUtils;
@@ -161,6 +163,12 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
                 Settings.System.MUTE_ANNOYING_NOTIFICATIONS_THRESHOLD, 0);
         mAnnoyingNotifications.setValue(Integer.toString(notificationThreshold));
         mAnnoyingNotifications.setOnPreferenceChangeListener(this);
+
+        mEnablePowerMenu = (CheckBoxPreference) findPreference(KEY_ENABLE_POWER_MENU);
+        mEnablePowerMenu.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.LOCKSCREEN_ENABLE_POWER_MENU, 1) == 1);
+        mEnablePowerMenu.setOnPreferenceChangeListener(this);
+
        }
        
 
@@ -211,9 +219,13 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
                     mLockRingBattery.isChecked() ? 1 : 0);
         } else if (preference == mEnableCameraWidget) {
             mLockUtils.setCameraEnabled(mEnableCameraWidget.isChecked());
-         } else if (preference == mGlowpadTorch) {
-             Settings.System.putInt(getContentResolver(),
-                      Settings.System.LOCKSCREEN_GLOWPAD_TORCH, mGlowpadTorch.isChecked() ? 1 : 0);
+        } else if (preference == mGlowpadTorch) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.LOCKSCREEN_GLOWPAD_TORCH, mGlowpadTorch.isChecked() ? 1 : 0);
+        } else if (preference == mEnablePowerMenu) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.LOCKSCREEN_ENABLE_POWER_MENU,
+                    mEnablePowerMenu.isChecked() ? 1: 0);
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }

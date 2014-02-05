@@ -517,4 +517,7 @@
     <string name="custom_density_dialog_button_got">Got it!</string>
     <string name="custom_density_dialog_button_reboot">Reboot now</string>
 
+    <!-- Enable power menu -->
+    <string name="lockscreen_enable_power_menu_title">Power menu in lockscreen</string>
+
 </resources>

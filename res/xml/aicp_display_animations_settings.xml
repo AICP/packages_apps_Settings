@@ -73,6 +73,11 @@
             android:title="@string/lockscreen_enable_camera_title" />
 
         <CheckBoxPreference
+            android:key="lockscreen_enable_power_menu"
+            android:title="@string/lockscreen_enable_power_menu_title"
+            android:persistent="false" />
+
+        <CheckBoxPreference
             android:key="lockscreen_torch"
             android:title="@string/lockscreen_glowpad_torch_title"
             android:summary="@string/lockscreen_glowpad_torch_summary" />
