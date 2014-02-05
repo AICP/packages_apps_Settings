@@ -36,6 +36,8 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
+
 public class ActiveNotificationSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
     private static final String TAG = "ActiveDisplaySettings";
@@ -54,6 +56,7 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
     private static final String KEY_FORCE_EXPANDED_VIEW = "force_expanded_view";
     private static final String KEY_NOTIFICATIONS_HEIGHT = "notifications_height";
     private static final String KEY_EXCLUDED_NOTIF_APPS = "excluded_apps";
+    private static final String KEY_NOTIFICATION_COLOR = "notification_color";
 
     private CheckBoxPreference mShowTextPref;
     private CheckBoxPreference mShowDatePref;
@@ -68,7 +71,8 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
     private CheckBoxPreference mForceExpandedView;
     private CheckBoxPreference mWakeOnNotification;
     private NumberPickerPreference mNotificationsHeight;
-    private AppMultiSelectListPreference mNotifAppsPref;		
+    private AppMultiSelectListPreference mNotifAppsPref;
+    private ColorPickerPreference mNotificationColor;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -148,6 +152,16 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
         mNotificationsHeight.setValue(Settings.System.getInt(getContentResolver(),
                     Settings.System.LOCKSCREEN_NOTIFICATIONS_HEIGHT, 4));
 
+        mNotificationColor = (ColorPickerPreference) prefSet.findPreference(KEY_NOTIFICATION_COLOR);
+        mNotificationColor.setAlphaSliderEnabled(true);
+        int color = Settings.System.getInt(getContentResolver(),
+                Settings.System.LOCKSCREEN_NOTIFICATIONS_COLOR, 0x55555555);
+        String hexColor = String.format("#%08x", (0xffffffff & color));
+        mNotificationColor.setSummary(hexColor);
+        mNotificationColor.setDefaultValue(color);
+        mNotificationColor.setNewPreviewColor(color);
+        mNotificationColor.setOnPreferenceChangeListener(this);
+
         Point displaySize = new Point();
         ((WindowManager)getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay().getSize(displaySize);
         int max = Math.round((float)displaySize.y * (1f - (mOffsetTop.getProgress() / 100f)) /
@@ -185,6 +199,14 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
         } else if (preference == mNotifAppsPref) {
 			storeExcludedNotifApps((Set<String>) newValue);
 			return true;
+        } else if (preference == mNotificationColor) {
+            String hex = ColorPickerPreference.convertToARGB(
+            Integer.valueOf(String.valueOf(newValue)));
+            preference.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.LOCKSCREEN_NOTIFICATIONS_COLOR, intHex);
+            return true;
         } else if (preference == mOffsetTop) {
             Settings.System.putFloat(getContentResolver(), Settings.System.LOCKSCREEN_NOTIFICATIONS_OFFSET_TOP,
                     (Integer)newValue / 100f);
