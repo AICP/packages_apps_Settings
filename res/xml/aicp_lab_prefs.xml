@@ -52,6 +52,7 @@
     <!-- Tile colors -->
     <PreferenceScreen
         android:id="@+id/tile_colors"
+        android:icon="@drawable/ic_settings_tile_colors"
         android:title="@string/color_tile_title"
         android:fragment="com.android.settings.aicp.TileColors" />
 
