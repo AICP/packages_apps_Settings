@@ -23,6 +23,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.IPackageDataObserver;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -51,6 +52,7 @@ public class DensityChanger extends SettingsPreferenceFragment implements
     private static final String TAG = "DensityChanger";
 
     ListPreference mStockDensity;
+    Preference mFollowThrough;
     Preference mReboot;
     Preference mClearMarketData;
     Preference mRebootClearData;
@@ -90,6 +92,7 @@ public class DensityChanger extends SettingsPreferenceFragment implements
         mStockDensity = (ListPreference) findPreference("stock_density");
         mStockDensity.setOnPreferenceChangeListener(this);
 
+        mFollowThrough = findPreference("follow_through");
         mReboot = findPreference("reboot");
         mClearMarketData = findPreference("clear_market_data");
         mRebootClearData = findPreference("reboot_cleardata");
@@ -115,6 +118,12 @@ public class DensityChanger extends SettingsPreferenceFragment implements
             PowerManager pm = (PowerManager) getActivity()
                     .getSystemService(Context.POWER_SERVICE);
             pm.reboot("Resetting density");
+            return true;
+
+        } else if (preference == mFollowThrough) {
+            Uri uri = Uri.parse("http://goo.gl/5B5LMo");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
             return true;
 
         } else if (preference == mRebootClearData) {

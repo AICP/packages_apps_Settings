@@ -491,7 +491,7 @@
     <string name="lcd_density_summary">unknown</string>
     <string name="current_lcd_density">"Current LCD Density: "</string>
     <string name="lcd_density_wizard">LCD Density Wizard</string>
-    <string name="follow_through_title">Be advised:</string>
+    <string name="follow_through_title">Be advised: Tap to download</string>
     <string name="follow_through_summary">Its recommended to use a Multi-DPI Play Store to avoid issues after changing density.</string>
     <string name="stock_density_title">Change LCD Density to stock values</string>
     <string name="stock_density_summary">Tablets and older phones use 160. Most phones use 240. Galaxy Nexus uses 320 by default.</string>
