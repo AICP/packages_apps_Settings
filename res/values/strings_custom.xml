@@ -441,4 +441,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="partition_info_sdext">/external-sd</string>
     <string name="partition_info_used_of">/</string>
 
+    <!-- Nfc settings -->
+    <string name="nfc_polling_mode_title">NFC polling mode</string>
+    <string name="nfc_polling_mode_screen_off">Screen off</string>
+    <string name="nfc_polling_mode_screen_locked">Screen on, locked</string>
+    <string name="nfc_polling_mode_screen_unlocked">Screen on, unlocked (default)</string>
+
 </resources>
