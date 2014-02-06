@@ -1130,4 +1130,8 @@
     <string name="recents_swipe_title">Recents swipe</string>
     <string name="recents_swipe_summary">Swipe left in stick recents to launch\nnotification in floating window.</string>
 
+    <!-- Sound settings screen, setting check box label -->
+    <string name="camera_sounds_title">Camera shutter sound</string>
+    <string name="camera_sounds_summary">WARNING: Disabling the camera shutter sound is illegal in some areas!</string>
+
 </resources>
