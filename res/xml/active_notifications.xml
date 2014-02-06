@@ -79,4 +79,19 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/excluded_apps_category" />
+        
+        <com.android.settings.vanir.AppMultiSelectListPreference
+            android:key="ad_excluded_apps"
+            android:persistent="false"
+            android:title="@string/ad_excluded_apps_title"
+            android:summary="@string/ad_excluded_apps_summary" />
+
+        <com.android.settings.vanir.AppMultiSelectListPreference
+			android:key="excluded_apps"
+			android:persistent="false"
+			android:title="@string/excluded_apps_title"
+			android:summary="@string/excluded_apps_summary" />
+
 </PreferenceScreen>

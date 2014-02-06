@@ -26,15 +26,10 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceScreen;
 import android.preference.SeekBarPreference;
 import android.provider.Settings;
-import android.text.TextUtils;
 import android.view.WindowManager;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
@@ -44,9 +39,7 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
 
     private static final String KEY_SHOW_TEXT = "ad_text";
     private static final String KEY_REDISPLAY = "ad_redisplay";
-    private static final String KEY_EXCLUDED_APPS = "ad_excluded_apps";
     private static final String KEY_SHOW_DATE = "ad_show_date";
-    private static final String KEY_SHOW_AMPM = "ad_show_ampm";
     private static final String KEY_BRIGHTNESS = "ad_brightness";
     private static final String KEY_TIMEOUT = "ad_timeout";
     private static final String KEY_THRESHOLD = "ad_threshold";
@@ -60,10 +53,8 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
 
     private CheckBoxPreference mShowTextPref;
     private CheckBoxPreference mShowDatePref;
-    private CheckBoxPreference mShowAmPmPref;
     private ListPreference mRedisplayPref;
     private SeekBarPreference mBrightnessLevel;
-    private AppMultiSelectListPreference mExcludedAppsPref;
     private ListPreference mDisplayTimeout;
     private ListPreference mProximityThreshold;
     private SeekBarPreference mOffsetTop;
@@ -71,7 +62,6 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
     private CheckBoxPreference mForceExpandedView;
     private CheckBoxPreference mWakeOnNotification;
     private NumberPickerPreference mNotificationsHeight;
-    private AppMultiSelectListPreference mNotifAppsPref;
     private ColorPickerPreference mNotificationColor;
 
     @Override
@@ -79,6 +69,9 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.active_notification_settings);
+
+        boolean AmonAmarth = Settings.System.getInt(getContentResolver(),
+                Settings.System.ENABLE_ACTIVE_DISPLAY, 0) == 1;
 
         mShowTextPref = (CheckBoxPreference) findPreference(KEY_SHOW_TEXT);
         mShowTextPref.setChecked((Settings.System.getInt(getContentResolver(),
@@ -95,10 +88,6 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
         mShowDatePref = (CheckBoxPreference) findPreference(KEY_SHOW_DATE);
         mShowDatePref.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.ACTIVE_DISPLAY_SHOW_DATE, 0) == 1));
-
-        mShowAmPmPref = (CheckBoxPreference) findPreference(KEY_SHOW_AMPM);
-        mShowAmPmPref.setChecked((Settings.System.getInt(getContentResolver(),
-                Settings.System.ACTIVE_DISPLAY_SHOW_AMPM, 0) == 1));
 
         int level = Settings.System.getInt(getContentResolver(),
                 Settings.System.ACTIVE_DISPLAY_BRIGHTNESS, 0);
@@ -119,16 +108,6 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
                 Settings.System.ACTIVE_DISPLAY_THRESHOLD, 5000L);
         mProximityThreshold.setValue(String.valueOf(threshold));
         updateThresholdSummary(threshold);
-
-        mExcludedAppsPref = (AppMultiSelectListPreference) findPreference(KEY_EXCLUDED_APPS);
-        Set<String> excludedApps = getExcludedApps();
-        if (excludedApps != null) mExcludedAppsPref.setValues(excludedApps);
-        mExcludedAppsPref.setOnPreferenceChangeListener(this);
-
-        mNotifAppsPref = (AppMultiSelectListPreference) findPreference(KEY_EXCLUDED_NOTIF_APPS);
-        Set<String> excludedNotifApps = getExcludedNotifApps();
-        if (excludedNotifApps != null) mNotifAppsPref.setValues(excludedNotifApps);
-        mNotifAppsPref.setOnPreferenceChangeListener(this);
 
         mOffsetTop = (SeekBarPreference) findPreference(KEY_OFFSET_TOP);
         mOffsetTop.setProgress((int)(Settings.System.getFloat(getContentResolver(),
@@ -169,6 +148,14 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
         mNotificationsHeight.setMinValue(1);
         mNotificationsHeight.setMaxValue(max);
         mNotificationsHeight.setOnPreferenceChangeListener(this);
+
+        if (AmonAmarth) {
+            mWakeOnNotification.setEnabled(false);
+            mWakeOnNotification.setSummary(R.string.wake_on_notification_disable);
+        } else {
+            mWakeOnNotification.setEnabled(true);
+            mWakeOnNotification.setSummary(R.string.wake_on_notification_summary);
+        }
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -193,12 +180,6 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
             long threshold = Integer.valueOf((String) newValue);
             updateThresholdSummary(threshold);
             return true;
-        } else if (preference == mExcludedAppsPref) {
-            storeExcludedApps((Set<String>) newValue);
-            return true;
-        } else if (preference == mNotifAppsPref) {
-			storeExcludedNotifApps((Set<String>) newValue);
-			return true;
         } else if (preference == mNotificationColor) {
             String hex = ColorPickerPreference.convertToARGB(
             Integer.valueOf(String.valueOf(newValue)));
@@ -245,11 +226,6 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
             Settings.System.putInt(getContentResolver(),
                     Settings.System.ACTIVE_DISPLAY_SHOW_DATE,
                     value ? 1 : 0);
-        } else if (preference == mShowAmPmPref) {
-            value = mShowAmPmPref.isChecked();
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.ACTIVE_DISPLAY_SHOW_AMPM,
-                    value ? 1 : 0);
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
@@ -279,46 +255,5 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
                     Settings.System.ACTIVE_DISPLAY_THRESHOLD, value);
         } catch (ArrayIndexOutOfBoundsException e) {
         }
-    }
-
-    private Set<String> getExcludedApps() {
-        String excluded = Settings.System.getString(getContentResolver(),
-                Settings.System.ACTIVE_DISPLAY_EXCLUDED_APPS);
-        if (TextUtils.isEmpty(excluded))
-            return null;
-
-        return new HashSet<String>(Arrays.asList(excluded.split("\\|")));
-    }
-
-    private void storeExcludedApps(Set<String> values) {
-        StringBuilder builder = new StringBuilder();
-        String delimiter = "";
-        for (String value : values) {
-            builder.append(delimiter);
-            builder.append(value);
-            delimiter = "|";
-        }
-        Settings.System.putString(getContentResolver(),
-                Settings.System.ACTIVE_DISPLAY_EXCLUDED_APPS, builder.toString());
-    }
-
-    private Set<String> getExcludedNotifApps() {
-        String excludedNotif = Settings.System.getString(getContentResolver(),
-        Settings.System.LOCKSCREEN_NOTIFICATIONS_EXCLUDED_APPS);
-        if (TextUtils.isEmpty(excludedNotif)) return null;
-
-        return new HashSet<String>(Arrays.asList(excludedNotif.split("\\|")));
-    }
-
-    private void storeExcludedNotifApps(Set<String> values) {
-        StringBuilder Notifbuilder = new StringBuilder();
-        String delimiter = "";
-        for (String value : values) {
-			Notifbuilder.append(delimiter);
-			Notifbuilder.append(value);
-			delimiter = "|";
-        }
-        Settings.System.putString(getContentResolver(),
-			Settings.System.LOCKSCREEN_NOTIFICATIONS_EXCLUDED_APPS, Notifbuilder.toString());
     }
 }

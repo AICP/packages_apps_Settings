@@ -216,6 +216,7 @@
     <string name="active_quiet_hours_summary">Observe quiet hours settings</string>
     <string name="Lockscreen_notifications_header">Active notifications</string>
     <string name="lockscreen_notifications">Active notifications</string>
+    <string name="excluded_apps_category">Excluded applications</string>
 
     <!-- Lockscreen Notifications -->
     <string name="lockscreen_notifications_title">Lockscreen notifications</string>
@@ -224,7 +225,7 @@
     <string name="lockscreen_notifications_switch_toast">Secure lockscreen: Please enable lockscreen notifications in security</string>
     <string name="lockscreen_notifications_summary">Lockscreen and screen-off notification handling</string>
     <string name="lockscreen_notifications_dialog_title">Lockscreen is secured!</string>
-    <string name="lockscreen_notifications_dialog_message">Allow notifications to be shown on the secure lockscreen?</string>
+    <string name="lockscreen_notifications_dialog_message">Warning: lockscreen is secure and notification content is enabled! Set privacy mode to disable.</string>
     <string name="pocket_mode_title">Pocket mode</string>
     <string name="pocket_mode_summary">Show active notifications when you take the device out of your pocket.</string>
 
@@ -243,12 +244,13 @@
     <string name="notification_color">Notification color</string>
     <string name="wake_on_notification">Wake on notification</string>
     <string name="wake_on_notification_summary">Wake device when a new notification is received</string>
+    <string name="wake_on_notification_disable">Enabling active display overrides wake for lockscreen notifications</string>
     <string name="notifications_height">Notification count</string>
     <string name="notifications_height_summary">Number of notifications displayed at once</string>
     <string name="offset_top">Offset to the top of the screen:</string>
     <string name="privacy_mode">Privacy Mode</string>
     <string name="privacy_mode_summary">Disables notifications from beeing shown and dismissed. This way, you just see the icons of your notifications.</string>
-    <string name="excluded_apps_title">Excluded applications</string>
+    <string name="excluded_apps_title">Lockscreen notifications blacklist</string>
     <string name="excluded_apps_summary">Excluded applications will not show up as lockscreen notifications</string>
 
     <!-- Active Display -->
@@ -261,7 +263,7 @@
     <string name="ad_redisplay_title">Redisplay notifications</string>
     <string name="ad_timeout_title">Display timeout</string>
     <string name="ad_threshold_title">Threshold to proximity</string>
-    <string name="ad_excluded_apps_title">Excluded applications</string>
+    <string name="ad_excluded_apps_title">Active display blacklist</string>
     <string name="ad_excluded_apps_summary">Excluded applications will not show up in active display.</string>
     <string name="ad_brightness_title">Notification brightness</string>
     <string name="ad_brightness_summary">Brightness level for displaying notifications when automatic brightness is not enabled.</string>

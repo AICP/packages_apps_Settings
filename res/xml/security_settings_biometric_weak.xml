@@ -61,11 +61,6 @@
             android:title="@string/owner_info_settings_title"
             android:summary="@string/owner_info_settings_summary"/>
 
-        <CheckBoxPreference
-            android:key="lockscreen_notifications_allowed"
-            android:title="@string/lockscreen_notifications_title"
-            android:summary="@string/lockscreen_notifications_allowed_summary" />
-
     </PreferenceCategory>
 
 </PreferenceScreen>

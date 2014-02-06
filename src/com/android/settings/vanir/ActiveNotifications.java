@@ -20,15 +20,21 @@ import android.preference.PreferenceScreen;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
+import android.text.TextUtils;
 import android.view.Gravity;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 
 import com.android.internal.widget.LockPatternUtils;
-import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.vanir.AppMultiSelectListPreference;
 
 import static android.hardware.Sensor.TYPE_PROXIMITY;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class ActiveNotifications extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, CompoundButton.OnCheckedChangeListener,
@@ -39,11 +45,12 @@ public class ActiveNotifications extends SettingsPreferenceFragment implements
     private static final String KEY_POCKET_MODE = "pocket_mode";
     private static final String KEY_HIDE_LOW_PRIORITY = "hide_low_priority";
     private static final String KEY_HIDE_NON_CLEARABLE = "hide_non_clearable";
-    private static final String KEY_EXCLUDED_APPS = "ad_excluded_apps";
     private static final String KEY_DISMISS_ALL = "dismiss_all";
     private static final String KEY_PRIVACY_MODE = "privacy_mode";
     private static final String KEY_QUIET_HOURS = "quiet_hours";
     private static final String KEY_ADDITIONAL = "additional_options";
+    private static final String KEY_EXCLUDED_APPS = "ad_excluded_apps";
+    private static final String KEY_EXCLUDED_NOTIF_APPS = "excluded_apps";
 
     private Switch mEnabledSwitch;
     private Preference mAdditional;
@@ -58,7 +65,8 @@ public class ActiveNotifications extends SettingsPreferenceFragment implements
     private CheckBoxPreference mHideLowPriority;
     private CheckBoxPreference mHideNonClearable;
     private CheckBoxPreference mDismissAll;
-
+    private AppMultiSelectListPreference mExcludedAppsPref;
+    private AppMultiSelectListPreference mNotifAppsPref;
     private CheckBoxPreference mPrivacyMode;
     private CheckBoxPreference mQuietHours;
 
@@ -143,6 +151,16 @@ public class ActiveNotifications extends SettingsPreferenceFragment implements
         mQuietHours.setChecked(Settings.System.getInt(cr,
                     Settings.System.ACTIVE_NOTIFICATIONS_QUIET_HOURS, 0) == 1);
 
+        mExcludedAppsPref = (AppMultiSelectListPreference) findPreference(KEY_EXCLUDED_APPS);
+        Set<String> excludedApps = getExcludedApps();
+        if (excludedApps != null) mExcludedAppsPref.setValues(excludedApps);
+        mExcludedAppsPref.setOnPreferenceChangeListener(this);
+
+        mNotifAppsPref = (AppMultiSelectListPreference) findPreference(KEY_EXCLUDED_NOTIF_APPS);
+        Set<String> excludedNotifApps = getExcludedNotifApps();
+        if (excludedNotifApps != null) mNotifAppsPref.setValues(excludedNotifApps);
+        mNotifAppsPref.setOnPreferenceChangeListener(this);
+
         mAdditional = (PreferenceScreen) prefs.findPreference(KEY_ADDITIONAL);
 
         updateDependency();
@@ -166,6 +184,8 @@ public class ActiveNotifications extends SettingsPreferenceFragment implements
         mQuietHours.setEnabled(mActiveNotifications);
         mPrivacyMode.setEnabled(mActiveNotifications);
         mAdditional.setEnabled(mActiveNotifications);
+        mNotifAppsPref.setEnabled(mActiveNotifications);
+        mExcludedAppsPref.setEnabled(mActiveNotifications);
     }
         
     @Override
@@ -205,7 +225,12 @@ public class ActiveNotifications extends SettingsPreferenceFragment implements
             int mode = Integer.valueOf((String) value);
             updatePocketModeSummary(mode);
             return true;
-
+        } else if (pref == mExcludedAppsPref) {
+            storeExcludedApps((Set<String>) value);
+            return true;
+        } else if (pref == mNotifAppsPref) {
+			storeExcludedNotifApps((Set<String>) value);
+			return true;
         } else {
             return false;
         }
@@ -213,8 +238,7 @@ public class ActiveNotifications extends SettingsPreferenceFragment implements
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        final boolean lesConditionnelles = ((Settings.System.getInt(getContentResolver(),
-                Settings.System.LOCKSCREEN_NOTIFICATIONS_ALLOWED, 0) == 0) && isKeyguardSecure());
+        final boolean lesConditionnelles = isKeyguardSecure();
         if (buttonView == mEnabledSwitch) {
             if (isChecked && lesConditionnelles) {
                 if (isChecked) {
@@ -228,7 +252,6 @@ public class ActiveNotifications extends SettingsPreferenceFragment implements
                             .setTitle(R.string.lockscreen_notifications_dialog_title)
                             .setIconAttribute(android.R.attr.alertDialogIcon)
                             .setPositiveButton(android.R.string.yes, this)
-                            .setNegativeButton(android.R.string.no, this)
                             .show();
                     mEnableDialog.setOnDismissListener(this);
                 }
@@ -253,10 +276,6 @@ public class ActiveNotifications extends SettingsPreferenceFragment implements
         if (dialog == mEnableDialog) {
             if (which == DialogInterface.BUTTON_POSITIVE) {
                 mDialogClicked = true;
-                Settings.System.putInt(getActivity().getContentResolver(),
-                        Settings.System.LOCKSCREEN_NOTIFICATIONS_ALLOWED, 1);
-            } else if (which == DialogInterface.BUTTON_NEGATIVE) {
-                mDialogClicked = true;
             }
         }
     }
@@ -271,6 +290,48 @@ public class ActiveNotifications extends SettingsPreferenceFragment implements
     private boolean hasProximitySensor() {
         SensorManager sm = (SensorManager) getActivity().getSystemService(Context.SENSOR_SERVICE);
         return sm.getDefaultSensor(TYPE_PROXIMITY) != null;
+    }
+
+
+    private Set<String> getExcludedApps() {
+        String excluded = Settings.System.getString(getContentResolver(),
+                Settings.System.ACTIVE_DISPLAY_EXCLUDED_APPS);
+        if (TextUtils.isEmpty(excluded))
+            return null;
+
+        return new HashSet<String>(Arrays.asList(excluded.split("\\|")));
+    }
+
+    private void storeExcludedApps(Set<String> values) {
+        StringBuilder builder = new StringBuilder();
+        String delimiter = "";
+        for (String value : values) {
+            builder.append(delimiter);
+            builder.append(value);
+            delimiter = "|";
+        }
+        Settings.System.putString(getContentResolver(),
+                Settings.System.ACTIVE_DISPLAY_EXCLUDED_APPS, builder.toString());
+    }
+
+    private Set<String> getExcludedNotifApps() {
+        String excludedNotif = Settings.System.getString(getContentResolver(),
+        Settings.System.LOCKSCREEN_NOTIFICATIONS_EXCLUDED_APPS);
+        if (TextUtils.isEmpty(excludedNotif)) return null;
+
+        return new HashSet<String>(Arrays.asList(excludedNotif.split("\\|")));
+    }
+
+    private void storeExcludedNotifApps(Set<String> values) {
+        StringBuilder Notifbuilder = new StringBuilder();
+        String delimiter = "";
+        for (String value : values) {
+			Notifbuilder.append(delimiter);
+			Notifbuilder.append(value);
+			delimiter = "|";
+        }
+        Settings.System.putString(getContentResolver(),
+			Settings.System.LOCKSCREEN_NOTIFICATIONS_EXCLUDED_APPS, Notifbuilder.toString());
     }
 
     public void onDismiss(DialogInterface dialog) {
