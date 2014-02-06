@@ -18,6 +18,25 @@
         android:title="@string/display_settings"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <!-- System settings -->
+    <PreferenceCategory
+            android:key="system_category"
+            android:title="@string/system_category_title">
+
+        <CheckBoxPreference
+            android:key="srec_enable_touches"
+            android:title="@string/srec_enable_touches_title"
+            android:summary="@string/srec_enable_touches_summary"
+            android:persistent="false" />
+
+        <CheckBoxPreference
+            android:key="srec_enable_mic"
+            android:title="@string/srec_enable_mic_title"
+            android:summary="@string/srec_enable_mic_summary"
+            android:persistent="false" />
+
+    </PreferenceCategory>
+
     <PreferenceCategory
         android:key="category_animations_options"
         android:title="@string/anim_settings_title" >
@@ -154,7 +173,7 @@
             android:entries="@array/less_notification_sounds_entries"
             android:entryValues="@array/less_notification_sounds_values" />
 
-     </PreferenceCategory>
+    </PreferenceCategory>
 
 </PreferenceScreen>
 

@@ -63,6 +63,8 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private static final String PREF_LESS_NOTIFICATION_SOUNDS = "less_notification_sounds";
     private static final String PREF_LOCKSCREEN_TORCH = "lockscreen_torch";
     private static final String KEY_ENABLE_POWER_MENU = "lockscreen_enable_power_menu";
+    private static final String SREC_ENABLE_TOUCHES = "srec_enable_touches";
+    private static final String SREC_ENABLE_MIC = "srec_enable_mic";
 
     private ListPreference mListViewAnimation;
     private ListPreference mListViewInterpolator;
@@ -78,6 +80,8 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private ListPreference mAnnoyingNotifications;
     private CheckBoxPreference mGlowpadTorch;
     private CheckBoxPreference mEnablePowerMenu;
+    private CheckBoxPreference mSrecEnableTouches;
+    private CheckBoxPreference mSrecEnableMic;
 
     private ChooseLockSettingsHelper mChooseLockSettingsHelper;
     private LockPatternUtils mLockUtils;
@@ -169,6 +173,14 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
                 Settings.System.LOCKSCREEN_ENABLE_POWER_MENU, 1) == 1);
         mEnablePowerMenu.setOnPreferenceChangeListener(this);
 
+        mSrecEnableTouches = (CheckBoxPreference) findPreference(SREC_ENABLE_TOUCHES);
+        mSrecEnableTouches.setChecked((Settings.System.getInt(resolver,
+                Settings.System.SREC_ENABLE_TOUCHES, 0) == 1));
+        mSrecEnableTouches.setOnPreferenceChangeListener(this);
+        mSrecEnableMic = (CheckBoxPreference) findPreference(SREC_ENABLE_MIC);
+        mSrecEnableMic.setChecked((Settings.System.getInt(resolver,
+                Settings.System.SREC_ENABLE_MIC, 0) == 1));
+
        }
        
 
@@ -226,6 +238,14 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
             Settings.System.putInt(getContentResolver(),
                     Settings.System.LOCKSCREEN_ENABLE_POWER_MENU,
                     mEnablePowerMenu.isChecked() ? 1: 0);
+        } else if  (preference == mSrecEnableTouches) {
+            boolean checked = ((CheckBoxPreference)preference).isChecked();
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.SREC_ENABLE_TOUCHES, checked ? 1:0);
+        } else if  (preference == mSrecEnableMic) {
+            boolean checked = ((CheckBoxPreference)preference).isChecked();
+			            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.SREC_ENABLE_MIC, checked ? 1:0);
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }

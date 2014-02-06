@@ -32,6 +32,7 @@
     <string name="system_app_remover">System app remover</string>
     <string name="notifications_category_title">Notifications</string>
     <string name="omniswitch_settings_title">OmniSwitch</string>
+    <string name="system_category_title">System</string>
 
     <!-- ListView animation -->
     <string name="interface_settings_animation_title">Animation options</string>
@@ -522,5 +523,11 @@
 
     <!-- Enable power menu -->
     <string name="lockscreen_enable_power_menu_title">Power menu in lockscreen</string>
+
+    <!-- Screen recorder settings -->
+    <string name="srec_enable_touches_title">Enable Pointer</string>	
+    <string name="srec_enable_touches_summary">Enable visual pointer to show touches during screen recording</string>	
+    <string name="srec_enable_mic_title">Use Microphone</string>	
+    <string name="srec_enable_mic_summary">Use microphone as audio input during screen recording</string>
 
 </resources>
