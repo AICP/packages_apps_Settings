@@ -102,12 +102,6 @@
             android:defaultValue="true" />
 
     <CheckBoxPreference
-            android:key="volume_adjust_sounds"
-            android:title="@string/volume_adjust_sounds_enable_title"
-            android:summary="@string/volume_adjust_sounds_enable_summary"
-            android:defaultValue="true" />
-
-    <CheckBoxPreference
             android:key="volume_keys_ringer_mode"
             android:title="@string/title_hardware_keys_volume_keys_ringer_toggle"
             android:summary="@string/summary_hardware_keys_volume_keys_ringer_toggle"
