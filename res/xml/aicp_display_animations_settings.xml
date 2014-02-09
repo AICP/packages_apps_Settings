@@ -35,6 +35,14 @@
             android:summary="@string/srec_enable_mic_summary"
             android:persistent="false" />
 
+        <ListPreference
+            android:key="recents_clear_all"
+            android:dialogTitle="@string/recents_clear_all_dialogtitle"
+            android:title="@string/recents_clear_all_title"
+            android:entries="@array/recents_clear_all_entries"
+            android:entryValues="@array/recents_clear_all_values"
+            android:defaultValue="4" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

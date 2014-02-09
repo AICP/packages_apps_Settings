@@ -65,6 +65,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private static final String KEY_ENABLE_POWER_MENU = "lockscreen_enable_power_menu";
     private static final String SREC_ENABLE_TOUCHES = "srec_enable_touches";
     private static final String SREC_ENABLE_MIC = "srec_enable_mic";
+    private static final String RECENTS_CLEAR_ALL = "recents_clear_all";
 
     private ListPreference mListViewAnimation;
     private ListPreference mListViewInterpolator;
@@ -82,6 +83,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private CheckBoxPreference mEnablePowerMenu;
     private CheckBoxPreference mSrecEnableTouches;
     private CheckBoxPreference mSrecEnableMic;
+    private ListPreference mClearAll;
 
     private ChooseLockSettingsHelper mChooseLockSettingsHelper;
     private LockPatternUtils mLockUtils;
@@ -181,6 +183,14 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         mSrecEnableMic.setChecked((Settings.System.getInt(resolver,
                 Settings.System.SREC_ENABLE_MIC, 0) == 1));
 
+        // Clear all position
+        mClearAll = (ListPreference) findPreference(RECENTS_CLEAR_ALL);
+        int value = Settings.System.getInt(resolver,
+                Settings.System.CLEAR_RECENTS_BUTTON_LOCATION, 4);
+        mClearAll.setValue(String.valueOf(value));
+        mClearAll.setSummary(mClearAll.getEntry());
+        mClearAll.setOnPreferenceChangeListener(this);
+
        }
        
 
@@ -278,6 +288,13 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
             final int value = Integer.valueOf((String) objValue);
             Settings.System.putInt(getContentResolver(),
                     Settings.System.MUTE_ANNOYING_NOTIFICATIONS_THRESHOLD, value);
+        } else if (RECENTS_CLEAR_ALL.equals(key)) {
+            int value = Integer.parseInt((String) objValue);
+            int index = mClearAll.findIndexOfValue((String) objValue);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.CLEAR_RECENTS_BUTTON_LOCATION,
+                    value);
+            mClearAll.setSummary(mClearAll.getEntries()[index]);
         }
 
         return true;

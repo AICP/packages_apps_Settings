@@ -372,4 +372,21 @@
         <item>4</item>
     </string-array>
 
+    <!-- Clear all position -->
+    <string-array name="recents_clear_all_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="recents_clear_all_entries">
+        <item>@string/recents_clear_all_off</item>
+        <item>@string/recents_clear_all_tr</item>
+        <item>@string/recents_clear_all_tl</item>
+        <item>@string/recents_clear_all_br</item>
+        <item>@string/recents_clear_all_bl</item>
+    </string-array>
+
 </resources>

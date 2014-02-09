@@ -553,4 +553,13 @@
     <string name="omniswitch_first_time_title">Information</string>
     <string name="omniswitch_first_time_message">Make sure you have enabled OmniSwitch. You can do this by using \"Settings\" below</string>
 
+    <!-- Clear all position -->
+    <string name="recents_clear_all_title">Clear all button position</string>
+    <string name="recents_clear_all_dialogtitle">Set the clear all button\u2026</string>
+    <string name="recents_clear_all_off">off</string>
+    <string name="recents_clear_all_tr">top right</string>
+    <string name="recents_clear_all_tl">top left</string>
+    <string name="recents_clear_all_br">bottom right</string>
+    <string name="recents_clear_all_bl">bottom left</string>
+
 </resources>
