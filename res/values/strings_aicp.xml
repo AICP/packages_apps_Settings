@@ -562,4 +562,9 @@
     <string name="recents_clear_all_br">bottom right</string>
     <string name="recents_clear_all_bl">bottom left</string>
 
+    <!-- Disable ads -->
+    <string name="misc_tweaks_hfm">Hosts File Manager</string>
+    <string name="hfm_disable_ads_title">Disable Ads</string>
+    <string name="hfm_disable_ads_summary">Change hosts file to disable ads</string>
+
 </resources>

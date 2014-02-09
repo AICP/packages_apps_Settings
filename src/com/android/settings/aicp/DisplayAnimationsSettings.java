@@ -44,6 +44,7 @@ import com.android.internal.widget.LockPatternUtils;
 import com.android.settings.ChooseLockSettingsHelper;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.hfm.HfmHelpers;
 
 public class DisplayAnimationsSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, OnPreferenceClickListener {
@@ -66,6 +67,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private static final String SREC_ENABLE_TOUCHES = "srec_enable_touches";
     private static final String SREC_ENABLE_MIC = "srec_enable_mic";
     private static final String RECENTS_CLEAR_ALL = "recents_clear_all";
+    private static final String HFM_DISABLE_ADS = "hfm_disable_ads";
 
     private ListPreference mListViewAnimation;
     private ListPreference mListViewInterpolator;
@@ -84,6 +86,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private CheckBoxPreference mSrecEnableTouches;
     private CheckBoxPreference mSrecEnableMic;
     private ListPreference mClearAll;
+    private CheckBoxPreference mHfmDisableAds;
 
     private ChooseLockSettingsHelper mChooseLockSettingsHelper;
     private LockPatternUtils mLockUtils;
@@ -191,6 +194,11 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         mClearAll.setSummary(mClearAll.getEntry());
         mClearAll.setOnPreferenceChangeListener(this);
 
+        // Disable ads
+        mHfmDisableAds = (CheckBoxPreference) findPreference(HFM_DISABLE_ADS);
+        mHfmDisableAds.setChecked((Settings.System.getInt(resolver,
+                Settings.System.HFM_DISABLE_ADS, 0) == 1));
+
        }
        
 
@@ -256,6 +264,11 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
             boolean checked = ((CheckBoxPreference)preference).isChecked();
 			            Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.SREC_ENABLE_MIC, checked ? 1:0);
+        } else if  (preference == mHfmDisableAds) {
+            boolean checked = ((CheckBoxPreference)preference).isChecked();
+                    Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.HFM_DISABLE_ADS, checked ? 1:0);
+            HfmHelpers.checkStatus(getActivity());
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
