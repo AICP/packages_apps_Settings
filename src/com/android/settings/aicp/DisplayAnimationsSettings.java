@@ -69,24 +69,24 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private static final String RECENTS_CLEAR_ALL = "recents_clear_all";
     private static final String HFM_DISABLE_ADS = "hfm_disable_ads";
 
-    private ListPreference mListViewAnimation;
-    private ListPreference mListViewInterpolator;
-    private CheckBoxPreference mBlurBehind;
-    private SeekBarPreference mBlurRadius;
     private CheckBoxPreference mAllowRotation;
-    private CheckBoxPreference mStatusBarNetworkHide;
-    private CheckBoxPreference mLockRingBattery;
-    private CheckBoxPreference mSMSBreath;
-    private CheckBoxPreference mMissedCallBreath;	    
-    private CheckBoxPreference mVoicemailBreath;
+    private CheckBoxPreference mBlurBehind;
     private CheckBoxPreference mEnableCameraWidget;
-    private ListPreference mAnnoyingNotifications;
-    private CheckBoxPreference mGlowpadTorch;
     private CheckBoxPreference mEnablePowerMenu;
+    private CheckBoxPreference mGlowpadTorch;
+    private CheckBoxPreference mHfmDisableAds;
+    private CheckBoxPreference mLockRingBattery;
+    private CheckBoxPreference mMissedCallBreath;
+    private CheckBoxPreference mSMSBreath;
+    private CheckBoxPreference mStatusBarNetworkHide;
     private CheckBoxPreference mSrecEnableTouches;
     private CheckBoxPreference mSrecEnableMic;
+    private CheckBoxPreference mVoicemailBreath;
+    private ListPreference mAnnoyingNotifications;
     private ListPreference mClearAll;
-    private CheckBoxPreference mHfmDisableAds;
+    private ListPreference mListViewAnimation;
+    private ListPreference mListViewInterpolator;
+    private SeekBarPreference mBlurRadius;
 
     private ChooseLockSettingsHelper mChooseLockSettingsHelper;
     private LockPatternUtils mLockUtils;
@@ -107,14 +107,14 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
 
         // ListView Animations
         mListViewAnimation = (ListPreference) prefSet.findPreference(KEY_LISTVIEW_ANIMATION);
-        int listviewanimation = Settings.System.getInt(getContentResolver(),
+        int listviewanimation = Settings.System.getInt(resolver,
                 Settings.System.LISTVIEW_ANIMATION, 0);
         mListViewAnimation.setValue(String.valueOf(listviewanimation));
         mListViewAnimation.setSummary(mListViewAnimation.getEntry());
         mListViewAnimation.setOnPreferenceChangeListener(this);
 
         mListViewInterpolator = (ListPreference) prefSet.findPreference(KEY_LISTVIEW_INTERPOLATOR);
-        int listviewinterpolator = Settings.System.getInt(getContentResolver(),
+        int listviewinterpolator = Settings.System.getInt(resolver,
                 Settings.System.LISTVIEW_INTERPOLATOR, 0);
         mListViewInterpolator.setValue(String.valueOf(listviewinterpolator));
         mListViewInterpolator.setSummary(mListViewInterpolator.getEntry());
@@ -122,22 +122,22 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         mListViewInterpolator.setEnabled(listviewanimation > 0);
 
         // Blur lockscreen
-        mBlurBehind = (CheckBoxPreference) findPreference(KEY_BLUR_BEHIND);
-        mBlurBehind.setChecked(Settings.System.getInt(getContentResolver(),
+        mBlurBehind = (CheckBoxPreference) prefSet.findPreference(KEY_BLUR_BEHIND);
+        mBlurBehind.setChecked(Settings.System.getInt(resolver,
             Settings.System.LOCKSCREEN_BLUR_BEHIND, 0) == 1);
         mBlurRadius = (SeekBarPreference) findPreference(KEY_BLUR_RADIUS);
-        mBlurRadius.setProgress(Settings.System.getInt(getContentResolver(),
+        mBlurRadius.setProgress(Settings.System.getInt(resolver,
             Settings.System.LOCKSCREEN_BLUR_RADIUS, 12));
         mBlurRadius.setOnPreferenceChangeListener(this);
 
         // Rotate
-        mAllowRotation = (CheckBoxPreference) findPreference(KEY_ALLOW_ROTATION);
-        mAllowRotation.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
+        mAllowRotation = (CheckBoxPreference) prefSet.findPreference(KEY_ALLOW_ROTATION);
+        mAllowRotation.setChecked(Settings.System.getInt(resolver,
                 Settings.System.LOCKSCREEN_ROTATION, 0) == 1);
 
         // NetStat hide if there's no traffic
-        mStatusBarNetworkHide = (CheckBoxPreference) findPreference(STATUS_BAR_NETWORK_HIDE);
-        mStatusBarNetworkHide.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
+        mStatusBarNetworkHide = (CheckBoxPreference) prefSet.findPreference(STATUS_BAR_NETWORK_HIDE);
+        mStatusBarNetworkHide.setChecked(Settings.System.getInt(resolver,
                 Settings.System.STATUS_BAR_NETWORK_HIDE, 0) == 1);
 
         // Breath Notification
@@ -151,43 +151,44 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         mVoicemailBreath.setChecked((Settings.System.getInt(resolver, Settings.System.KEY_VOICEMAIL_BREATH, 0) == 1));
 
         // GlowPad torch
-        mGlowpadTorch = (CheckBoxPreference) findPreference(PREF_LOCKSCREEN_TORCH);
-        mGlowpadTorch.setChecked(Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
+        mGlowpadTorch = (CheckBoxPreference) prefSet.findPreference(PREF_LOCKSCREEN_TORCH);
+        mGlowpadTorch.setChecked(Settings.System.getInt(resolver,
                  Settings.System.LOCKSCREEN_GLOWPAD_TORCH, 0) == 1);
         mGlowpadTorch.setOnPreferenceChangeListener(this);
 
         // Lock ring battery
-        mLockRingBattery = (CheckBoxPreference)findPreference(BATTERY_AROUND_LOCKSCREEN_RING);
+        mLockRingBattery = (CheckBoxPreference) prefSet.findPreference(BATTERY_AROUND_LOCKSCREEN_RING);
         if (mLockRingBattery != null) {
-            mLockRingBattery.setChecked(Settings.System.getInt(getContentResolver(),
+            mLockRingBattery.setChecked(Settings.System.getInt(resolver,
                     Settings.System.BATTERY_AROUND_LOCKSCREEN_RING, 0) == 1);
         }
 
         // Hide camera widget
-        mEnableCameraWidget = (CheckBoxPreference) findPreference(KEY_ENABLE_CAMERA);
+        mEnableCameraWidget = (CheckBoxPreference) prefSet.findPreference(KEY_ENABLE_CAMERA);
 
         // Less Notifications sound
-        mAnnoyingNotifications = (ListPreference) findPreference(PREF_LESS_NOTIFICATION_SOUNDS);
-        int notificationThreshold = Settings.System.getInt(getContentResolver(),
+        mAnnoyingNotifications = (ListPreference) prefSet.findPreference(PREF_LESS_NOTIFICATION_SOUNDS);
+        int notificationThreshold = Settings.System.getInt(resolver,
                 Settings.System.MUTE_ANNOYING_NOTIFICATIONS_THRESHOLD, 0);
         mAnnoyingNotifications.setValue(Integer.toString(notificationThreshold));
         mAnnoyingNotifications.setOnPreferenceChangeListener(this);
 
-        mEnablePowerMenu = (CheckBoxPreference) findPreference(KEY_ENABLE_POWER_MENU);
-        mEnablePowerMenu.setChecked(Settings.System.getInt(getContentResolver(),
+        mEnablePowerMenu = (CheckBoxPreference) prefSet.findPreference(KEY_ENABLE_POWER_MENU);
+        mEnablePowerMenu.setChecked(Settings.System.getInt(resolver,
                 Settings.System.LOCKSCREEN_ENABLE_POWER_MENU, 1) == 1);
         mEnablePowerMenu.setOnPreferenceChangeListener(this);
 
-        mSrecEnableTouches = (CheckBoxPreference) findPreference(SREC_ENABLE_TOUCHES);
+        // Screen recording
+        mSrecEnableTouches = (CheckBoxPreference) prefSet.findPreference(SREC_ENABLE_TOUCHES);
         mSrecEnableTouches.setChecked((Settings.System.getInt(resolver,
                 Settings.System.SREC_ENABLE_TOUCHES, 0) == 1));
         mSrecEnableTouches.setOnPreferenceChangeListener(this);
-        mSrecEnableMic = (CheckBoxPreference) findPreference(SREC_ENABLE_MIC);
+        mSrecEnableMic = (CheckBoxPreference) prefSet.findPreference(SREC_ENABLE_MIC);
         mSrecEnableMic.setChecked((Settings.System.getInt(resolver,
                 Settings.System.SREC_ENABLE_MIC, 0) == 1));
 
         // Clear all position
-        mClearAll = (ListPreference) findPreference(RECENTS_CLEAR_ALL);
+        mClearAll = (ListPreference) prefSet.findPreference(RECENTS_CLEAR_ALL);
         int value = Settings.System.getInt(resolver,
                 Settings.System.CLEAR_RECENTS_BUTTON_LOCATION, 4);
         mClearAll.setValue(String.valueOf(value));
@@ -195,7 +196,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         mClearAll.setOnPreferenceChangeListener(this);
 
         // Disable ads
-        mHfmDisableAds = (CheckBoxPreference) findPreference(HFM_DISABLE_ADS);
+        mHfmDisableAds = (CheckBoxPreference) prefSet.findPreference(HFM_DISABLE_ADS);
         mHfmDisableAds.setChecked((Settings.System.getInt(resolver,
                 Settings.System.HFM_DISABLE_ADS, 0) == 1));
 
@@ -214,17 +215,18 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        ContentResolver resolver = getActivity().getContentResolver();
         boolean value;
         if (preference == mBlurBehind) {
-            Settings.System.putInt(getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.LOCKSCREEN_BLUR_BEHIND,
                     mBlurBehind.isChecked() ? 1 : 0);
         } else if (preference == mAllowRotation) {
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.LOCKSCREEN_ROTATION, mAllowRotation.isChecked()
                     ? 1 : 0);
         } else if (preference == mStatusBarNetworkHide) {
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.STATUS_BAR_NETWORK_HIDE, mStatusBarNetworkHide.isChecked()
                     ? 1 : 0);
             if (mStatusBarNetworkHide.isChecked()) {
@@ -233,40 +235,40 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
             }
         } else if (preference == mSMSBreath) {
             value = mSMSBreath.isChecked();
-            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.KEY_SMS_BREATH, value ? 1 : 0);
         } else if (preference == mMissedCallBreath) {
             value = mMissedCallBreath.isChecked();
-            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.KEY_MISSED_CALL_BREATH, value ? 1 : 0);
         } else if (preference == mVoicemailBreath) {
             value = mVoicemailBreath.isChecked();
-            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.KEY_VOICEMAIL_BREATH, value ? 1 : 0);
         } else if (preference == mLockRingBattery) {
-            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.BATTERY_AROUND_LOCKSCREEN_RING,
                     mLockRingBattery.isChecked() ? 1 : 0);
         } else if (preference == mEnableCameraWidget) {
             mLockUtils.setCameraEnabled(mEnableCameraWidget.isChecked());
         } else if (preference == mGlowpadTorch) {
-            Settings.System.putInt(getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.LOCKSCREEN_GLOWPAD_TORCH, mGlowpadTorch.isChecked() ? 1 : 0);
         } else if (preference == mEnablePowerMenu) {
-            Settings.System.putInt(getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.LOCKSCREEN_ENABLE_POWER_MENU,
                     mEnablePowerMenu.isChecked() ? 1: 0);
         } else if  (preference == mSrecEnableTouches) {
             boolean checked = ((CheckBoxPreference)preference).isChecked();
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.SREC_ENABLE_TOUCHES, checked ? 1:0);
         } else if  (preference == mSrecEnableMic) {
             boolean checked = ((CheckBoxPreference)preference).isChecked();
-			            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.SREC_ENABLE_MIC, checked ? 1:0);
         } else if  (preference == mHfmDisableAds) {
             boolean checked = ((CheckBoxPreference)preference).isChecked();
-                    Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.HFM_DISABLE_ADS, checked ? 1:0);
             HfmHelpers.checkStatus(getActivity());
         } else {
@@ -278,11 +280,12 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
         final String key = preference.getKey();
         if (KEY_LISTVIEW_ANIMATION.equals(key)) {
             int value = Integer.parseInt((String) objValue);
             int index = mListViewAnimation.findIndexOfValue((String) objValue);
-            Settings.System.putInt(getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.LISTVIEW_ANIMATION,
                     value);
             mListViewAnimation.setSummary(mListViewAnimation.getEntries()[index]);
@@ -290,21 +293,21 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         } else if (KEY_LISTVIEW_INTERPOLATOR.equals(key)) {
             int value = Integer.parseInt((String) objValue);
             int index = mListViewInterpolator.findIndexOfValue((String) objValue);
-            Settings.System.putInt(getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.LISTVIEW_INTERPOLATOR,
                     value);
             mListViewInterpolator.setSummary(mListViewInterpolator.getEntries()[index]);
         } else if (preference == mBlurRadius) {
-            Settings.System.putInt(getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.LOCKSCREEN_BLUR_RADIUS, (Integer)objValue);
         } else if (PREF_LESS_NOTIFICATION_SOUNDS.equals(key)) {
             final int value = Integer.valueOf((String) objValue);
-            Settings.System.putInt(getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.MUTE_ANNOYING_NOTIFICATIONS_THRESHOLD, value);
         } else if (RECENTS_CLEAR_ALL.equals(key)) {
             int value = Integer.parseInt((String) objValue);
             int index = mClearAll.findIndexOfValue((String) objValue);
-            Settings.System.putInt(getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.CLEAR_RECENTS_BUTTON_LOCATION,
                     value);
             mClearAll.setSummary(mClearAll.getEntries()[index]);
