@@ -1917,6 +1917,25 @@
                 android:theme="@*android:style/Theme.Holo.Dialog" />
         <!-- Profiles - end -->
 
+        <!-- Telo -->
+        <activity android:name=".aicp.teloradio.TeloRadioSettings"
+            android:label="@string/telo_radio_settings_title"
+            android:launchMode="singleTask"
+            android:process="com.android.phone">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".aicp.teloradio.TeloRadioBoot">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+
         <receiver android:name=".widget.SettingsAppWidgetProvider"
                 android:label="@string/gadget_title"
                 android:exported="false"
