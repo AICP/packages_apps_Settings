@@ -596,4 +596,8 @@
     <string name="telo_radio_info_title">About the Connection Manager</string>
     <string name="telo_radio_info_summary">The connection manager TeloRadio &#169; is a feature created by Telo (TeloKang ROM) Android Inc. Original Idea atl4ntis (Cataclysm ROM).</string>
 
+    <!-- Left hand navbar -->
+    <string name="navigation_bar_left_title">Left handed mode</string>
+    <string name="navigation_bar_left_summary">Place the navigation bar on the left side of the screen in landscape mode</string>
+
 </resources>

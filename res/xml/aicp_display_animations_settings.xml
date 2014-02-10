@@ -49,6 +49,12 @@
             android:entryValues="@array/recents_clear_all_values"
             android:defaultValue="4" />
 
+        <CheckBoxPreference
+            android:key="navigation_bar_left"
+            android:title="@string/navigation_bar_left_title"
+            android:summary="@string/navigation_bar_left_summary"
+            android:defaultValue="false" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

@@ -31,11 +31,13 @@ import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
+import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.preference.SeekBarPreference;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
+import android.view.WindowManagerGlobal;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -45,11 +47,13 @@ import com.android.settings.ChooseLockSettingsHelper;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.hfm.HfmHelpers;
+import com.android.settings.Utils;
 
 public class DisplayAnimationsSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, OnPreferenceClickListener {
     private static final String TAG = "DisplayAnimationsSettings";
 
+    private static final String CATEGORY_SYSTEM = "system_category";
     private static final String KEY_LISTVIEW_ANIMATION = "listview_animation";
     private static final String KEY_LISTVIEW_INTERPOLATOR = "listview_interpolator";
     private static final String KEY_BLUR_BEHIND = "blur_behind";
@@ -68,6 +72,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private static final String SREC_ENABLE_MIC = "srec_enable_mic";
     private static final String RECENTS_CLEAR_ALL = "recents_clear_all";
     private static final String HFM_DISABLE_ADS = "hfm_disable_ads";
+    private static final String KEY_NAVBAR_LEFT_IN_LANDSCAPE = "navigation_bar_left";
 
     private CheckBoxPreference mAllowRotation;
     private CheckBoxPreference mBlurBehind;
@@ -77,6 +82,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private CheckBoxPreference mHfmDisableAds;
     private CheckBoxPreference mLockRingBattery;
     private CheckBoxPreference mMissedCallBreath;
+    private CheckBoxPreference mNavigationBarLeft;
     private CheckBoxPreference mSMSBreath;
     private CheckBoxPreference mStatusBarNetworkHide;
     private CheckBoxPreference mSrecEnableTouches;
@@ -200,7 +206,26 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         mHfmDisableAds.setChecked((Settings.System.getInt(resolver,
                 Settings.System.HFM_DISABLE_ADS, 0) == 1));
 
-       }
+        // Navigation bar left
+        mNavigationBarLeft = (CheckBoxPreference) prefSet.findPreference(KEY_NAVBAR_LEFT_IN_LANDSCAPE);
+        mNavigationBarLeft.setChecked((Settings.System.getInt(resolver,
+                Settings.System.NAVBAR_LEFT_IN_LANDSCAPE, 0) == 1));
+
+        try {
+            boolean hasNavBar = WindowManagerGlobal.getWindowManagerService().hasNavigationBar();
+            PreferenceCategory navCategory = (PreferenceCategory) findPreference(CATEGORY_SYSTEM);
+
+            if (hasNavBar) {
+                if (!Utils.isPhone(getActivity())) {
+                    navCategory.removePreference(mNavigationBarLeft);
+                }
+            } else {
+                navCategory.removePreference(mNavigationBarLeft);
+            }
+        } catch (RemoteException e) {
+            Log.e(TAG, "Error getting navigation bar status");
+        }
+    }
        
 
     @Override
@@ -271,6 +296,10 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
             Settings.System.putInt(resolver,
                     Settings.System.HFM_DISABLE_ADS, checked ? 1:0);
             HfmHelpers.checkStatus(getActivity());
+        } else if (preference == mNavigationBarLeft) {
+            value = mNavigationBarLeft.isChecked();
+            Settings.System.putInt(resolver,
+                    Settings.System.NAVBAR_LEFT_IN_LANDSCAPE, value ? 1 : 0);
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
