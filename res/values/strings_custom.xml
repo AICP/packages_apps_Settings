@@ -453,6 +453,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="adb_paranoid_summary">Immediately reboot if an unknown computer is connected while device is locked</string>
 
     <!-- Volume steps options -->
+    <string name="live_volume_title">Live volume steps</string>
     <string name="volume_steps_60">60</string>
     <string name="volume_steps_45">45</string>
     <string name="volume_steps_30">30</string>
