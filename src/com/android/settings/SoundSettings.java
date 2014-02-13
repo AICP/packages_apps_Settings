@@ -56,6 +56,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+import com.android.settings.widget.SeekBarPreferenceCham;
+
 public class SoundSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
     private static final String TAG = "SoundSettings";
@@ -92,6 +94,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private static final String KEY_QUIET_HOURS = "quiet_hours";
     private static final String KEY_VOLUME_KEYS_RINGER_MODE = "volume_keys_ringer_mode";
     private static final String KEY_VOLUME_OVERLAY = "volume_overlay";
+    private static final String KEY_VOLUME_PANEL_TIMEOUT = "volume_panel_timeout";
 
 
     private static final String[] NEED_VOICE_CAPABILITY = {
@@ -133,6 +136,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mVolumeKeysRingerMode;
     private ListPreference mVolumeOverlay;
     private CheckBoxPreference mVolumeAdustSound;
+    private SeekBarPreferenceCham mVolumePanelTimeout;
 
     private BroadcastReceiver mReceiver = new BroadcastReceiver() {
         @Override
@@ -334,6 +338,12 @@ public class SoundSettings extends SettingsPreferenceFragment implements
                 UserHandle.USER_CURRENT);
         mVolumeOverlay.setValue(Integer.toString(volumeOverlay));
         mVolumeOverlay.setSummary(mVolumeOverlay.getEntry());
+
+        mVolumePanelTimeout = (SeekBarPreferenceCham) findPreference(KEY_VOLUME_PANEL_TIMEOUT);
+        int statusVolumePanelTimeout = Settings.System.getInt(resolver,
+                Settings.System.VOLUME_PANEL_TIMEOUT, 3000);
+        mVolumePanelTimeout.setValue(statusVolumePanelTimeout / 1000);
+        mVolumePanelTimeout.setOnPreferenceChangeListener(this);
 
         initDockSettings();
     }
@@ -562,6 +572,10 @@ public class SoundSettings extends SettingsPreferenceFragment implements
             updateVolumeSteps(preference.getKey(),Integer.parseInt(objValue.toString()));
         } else if (preference == mVolumeStepsVoiceCall) {
             updateVolumeSteps(preference.getKey(),Integer.parseInt(objValue.toString()));
+        } else if (preference == mVolumePanelTimeout) {
+            int volumePanelTimeout = (Integer) objValue;
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.VOLUME_PANEL_TIMEOUT, volumePanelTimeout * 1000);
         } 
         return true;
     }

@@ -68,6 +68,16 @@
             android:entries="@array/volume_steps_entries"
             android:entryValues="@array/volume_steps_entries" />
 
+    <com.android.settings.widget.SeekBarPreferenceCham
+            android:key="volume_panel_timeout"
+            android:title="@string/volume_panel_timeout_title"
+            android:summary="@string/volume_panel_timeout_summary"
+            android:max="10"
+            settings:min="1"
+            settings:unitsLeft=""
+            settings:unitsRight="sec"
+            android:persistent="false" />
+
     <Preference
             android:key="musicfx"
             android:title="@string/musicfx_title">

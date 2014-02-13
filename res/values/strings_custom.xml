@@ -467,4 +467,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="volume_steps_system_title">Volume steps: System</string>
     <string name="volume_steps_voice_call_title">Volume steps: Voice Call</string>
 
+    <!-- Volume panel time out -->
+    <string name="volume_panel_timeout_title">Timeout</string>
+    <string name="volume_panel_timeout_summary">Volume panel timeout</string>
+
 </resources>
