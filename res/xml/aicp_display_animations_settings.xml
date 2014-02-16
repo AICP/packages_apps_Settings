@@ -45,6 +45,8 @@
             android:entryValues="@array/listview_interpolator_values"
             android:defaultValue="0" />
 
+    </PreferenceCategory>
+
         <!-- Toast animation -->
         <ListPreference
             android:key="toast_animation"
@@ -52,6 +54,17 @@
             android:entries="@array/toast_animation_entries"
             android:entryValues="@array/toast_animation_values"
             android:persistent="false" />
+
+    <!-- Smooth progress bar -->
+    <PreferenceCategory
+	android:key="progressbar"
+	android:title="@string/progressbar_title" >
+
+        <PreferenceScreen
+            android:key="progressbar_settings"
+            android:fragment="com.android.settings.aicp.ProgressBar"
+            android:title="@string/progressbar_title" >
+        </PreferenceScreen>
 
     </PreferenceCategory>
 
