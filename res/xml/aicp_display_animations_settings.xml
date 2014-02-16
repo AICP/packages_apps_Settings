@@ -128,6 +128,20 @@
 
     </PreferenceCategory>
 
+    <!-- Smooth progress bar -->
+    <PreferenceCategory
+	android:key="progressbar"
+	android:title="@string/progressbar_title" >
+
+        <PreferenceScreen
+            android:key="progressbar_settings"
+            android:fragment="com.android.settings.aicp.ProgressBar"
+            android:title="@string/progressbar_title" >
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+
     <PreferenceCategory
         android:key="category_bars_options"
         android:title="@string/bars_settings_title" >
