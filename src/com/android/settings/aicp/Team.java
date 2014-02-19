@@ -68,19 +68,19 @@ public class Team extends SettingsPreferenceFragment implements
             Toast.makeText(getActivity(), "Likes: Everything you throw at him, it's his job to like 'em all!",
                     Toast.LENGTH_LONG).show();
         } else if (preference == mN3ocort3x) {
-            Toast.makeText(getActivity(), "Likes: Red and tatooed!",
+            Toast.makeText(getActivity(), "Likes: Red haired and tattooed!",
                     Toast.LENGTH_LONG).show();
         } else if (preference == mOblikas) {
             Toast.makeText(getActivity(), "Likes: Contrary to his father, long walks on the beach!",
                     Toast.LENGTH_LONG).show();
         } else if (preference == mLordClockan) {
-            Toast.makeText(getActivity(), "Likes: Skinny with small buts!",
+            Toast.makeText(getActivity(), "Likes: Skinny with small butts!",
                     Toast.LENGTH_LONG).show();
         } else if (preference == mEyosen) {
             Toast.makeText(getActivity(), "Likes: Long limbs! He wishes!",
                     Toast.LENGTH_LONG).show();
         } else if (preference == mTtoivainen) {
-            Toast.makeText(getActivity(), "Likes: Geek girls that are good in math!",
+            Toast.makeText(getActivity(), "Likes: The superior type, scandinavian blondes!",
                     Toast.LENGTH_LONG).show();
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
