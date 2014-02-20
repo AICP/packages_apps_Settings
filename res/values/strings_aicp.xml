@@ -22,6 +22,16 @@
     <string name="aicp_settings_title">AICP extras</string>
     <string name="aicp_settings_summary">AICP features that don\'t belong in RC</string>
 
+    <!-- Aicp team -->
+    <string name="aicp_team_title">AICP team</string>
+    <string name="aicp_lordclockan_title">LorD ClockaN</string>
+    <string name="aicp_zipsnet_title">ZipsNet</string>
+    <string name="aicp_n3ocort3x_title">n3ocort3x</string>
+    <string name="aicp_semdoc_title">Semdoc</string>
+    <string name="aicp_eyosen_title">Eyosen</string>
+    <string name="aicp_oblikas_title">Oblikas</string>
+    <string name="aicp_ttoivainen_title">TToivanen</string>
+
     <!-- Display and Animations -->
     <string name="disp_anim_settings_title">Display and animations</string>
     <string name="anim_settings_title">Animations</string>

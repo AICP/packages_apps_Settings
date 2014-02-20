@@ -21,6 +21,12 @@
         <PreferenceScreen android:key="aicp_logo"
                 android:layout="@layout/aicp_rom_logo" />
 
+        <!-- AICP team -->
+        <PreferenceScreen
+            android:key="aicp_team"
+            android:title="@string/aicp_team_title"
+            android:fragment="com.android.settings.aicp.Team" />
+
         <!-- Device status - launches activity -->
         <PreferenceScreen android:key="status_info"
                 android:title="@string/device_status" 
