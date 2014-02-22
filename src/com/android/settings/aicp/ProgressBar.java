@@ -69,7 +69,7 @@ public class ProgressBar extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.progressbar);
 
         mprogressbar_mirror = (CheckBoxPreference) findPreference(PROGRESSBAR_MIRROR);
-        mprogressbar_mirror.setChecked(Settings.System.getInt(getContentResolver(),ž
+        mprogressbar_mirror.setChecked(Settings.System.getInt(getContentResolver(),
                 Settings.System.PROGRESSBAR_MIRROR, 0) == 1);
 
         mprogressbar_reverse = (CheckBoxPreference) findPreference(PROGRESSBAR_REVERSE);
