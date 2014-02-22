@@ -17,6 +17,8 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!--Advanced Section Header-->
+    <string name="advanced_category_title">Advanced</string>
     <!--  About device screen, Hardware info -->
     <string name="hardware_info">Hardware info</string>
     <!--  About device Screen, hardware info, rear camera -->
