@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.cm;
+package com.android.settings.cyanogenmod;
 
 import com.android.settings.R;
 
