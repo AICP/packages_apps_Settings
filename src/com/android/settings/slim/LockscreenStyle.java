@@ -312,8 +312,7 @@ public class LockscreenStyle extends SettingsPreferenceFragment
                 Settings.Secure.LOCKSCREEN_LOCK_ICON);
 
         if (path != null) {
-            File f = new File(Uri.parse(path).getPath());
-
+            File f = new File(path);
             if (f != null && f.exists()) {
                 f.delete();
             }
@@ -360,7 +359,7 @@ public class LockscreenStyle extends SettingsPreferenceFragment
 
     private int requestImageSize() {
         return (int) TypedValue.applyDimension(
-                TypedValue.COMPLEX_UNIT_DIP, 144, getResources().getDisplayMetrics());
+                TypedValue.COMPLEX_UNIT_DIP, 180, getResources().getDisplayMetrics());
     }
 
     private void showDialogInner(int id) {
