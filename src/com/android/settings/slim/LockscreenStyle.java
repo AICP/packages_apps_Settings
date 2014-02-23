@@ -25,6 +25,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -53,6 +54,7 @@ import com.android.internal.widget.LockPatternUtils;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 import java.io.File;
+import java.io.FileOutputStream;
 
 public class LockscreenStyle extends SettingsPreferenceFragment
         implements OnPreferenceChangeListener {
@@ -78,12 +80,16 @@ public class LockscreenStyle extends SettingsPreferenceFragment
     private ColorPickerPreference mLockColor;
     private ColorPickerPreference mDotsColor;
 
+    private ListPreference mLockIcon;
 
     private boolean mCheckPreferences;
+
+    private File mLockImage;
 
     private static final int MENU_RESET = Menu.FIRST;
 
     private static final int DLG_RESET = 0;
+    private static final int REQUEST_PICK_LOCK_ICON = 100;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -103,6 +109,18 @@ public class LockscreenStyle extends SettingsPreferenceFragment
 
         // Set to string so we don't have to create multiple objects of it
         mDefault = getResources().getString(R.string.default_string);
+
+        mLockImage = new File(getActivity().getFilesDir() + "/lock_icon.tmp");
+
+        mLockIcon = (ListPreference)
+                findPreference(KEY_LOCKSCREEN_LOCK_ICON);
+        mLockIcon.setOnPreferenceChangeListener(this);
+
+        mColorizeCustom = (CheckBoxPreference)
+                findPreference(KEY_LOCKSCREEN_COLORIZE_ICON);
+        mColorizeCustom.setChecked(Settings.Secure.getInt(getContentResolver(),
+                Settings.Secure.LOCKSCREEN_COLORIZE_LOCK, 0) == 1);
+        mColorizeCustom.setOnPreferenceChangeListener(this);
 
         mFrameColor = (ColorPickerPreference)
                 findPreference(KEY_LOCKSCREEN_FRAME_COLOR);
@@ -134,9 +152,54 @@ public class LockscreenStyle extends SettingsPreferenceFragment
                 R.string.lockscreen_dots_color_summary), dotsColor);
         mDotsColor.setNewPreviewColor(dotsColor);
 
+        boolean imageExists = Settings.Secure.getString(getContentResolver(),
+                Settings.Secure.LOCKSCREEN_LOCK_ICON) != null;
+
+        mColorizeCustom.setEnabled(imageExists);
+
+        updateLockSummary();
+
         setHasOptionsMenu(true);
         mCheckPreferences = true;
         return prefSet;
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode == Activity.RESULT_OK) {
+            if (requestCode == REQUEST_PICK_LOCK_ICON) {
+
+                if (mLockImage.length() == 0 || !mLockImage.exists()) {
+                    Toast.makeText(getActivity(),
+                            getResources().getString(R.string.shortcut_image_not_valid),
+                            Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                File image = new File(getActivity().getFilesDir() + File.separator
+                        + "lock_icon" + System.currentTimeMillis() + ".png");
+                String path = image.getAbsolutePath();
+                mLockImage.renameTo(image);
+                image.setReadable(true, false);
+
+                deleteLockIcon();  // Delete current icon if it exists before saving new.
+                Settings.Secure.putString(getContentResolver(),
+                        Settings.Secure.LOCKSCREEN_LOCK_ICON, path);
+
+                mColorizeCustom.setEnabled(path != null);
+            }
+        } else {
+            if (mLockImage.exists()) {
+                mLockImage.delete();
+            }
+        }
+        updateLockSummary();
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        menu.add(0, MENU_RESET, 0, R.string.reset)
+                .setIcon(R.drawable.ic_settings_backup) // use the backup icon
+                .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
     }
 
     @Override
@@ -151,7 +214,22 @@ public class LockscreenStyle extends SettingsPreferenceFragment
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mFrameColor) {
+        if (preference == mLockIcon) {
+            int indexOf = mLockIcon.findIndexOfValue(newValue.toString());
+            if (indexOf == 0) {
+                requestLockImage();
+            } else  if (indexOf == 2) {
+                deleteLockIcon();
+            } else {
+                resizeStockLock();
+            }
+            return true;
+        } else if (preference == mColorizeCustom) {
+            Settings.Secure.putInt(getContentResolver(),
+                    Settings.Secure.LOCKSCREEN_COLORIZE_LOCK,
+                    (Boolean) newValue ? 1 : 0);
+            return true;
+        } else if (preference == mFrameColor) {
             int val = Integer.valueOf(String.valueOf(newValue));
             Settings.Secure.putInt(getContentResolver(),
                     Settings.Secure.LOCKSCREEN_FRAME_COLOR, val);
@@ -184,6 +262,105 @@ public class LockscreenStyle extends SettingsPreferenceFragment
             String hexColor = String.format("#%08x", (0xffffffff & value));
             preference.setSummary(defaultSummary + " (" + hexColor + ")");
         }
+    }
+
+    private void updateLockSummary() {
+        int resId;
+        String value = Settings.Secure.getString(getContentResolver(),
+                Settings.Secure.LOCKSCREEN_LOCK_ICON);
+        if (value == null) {
+            resId = R.string.lockscreen_lock_icon_default;
+            mLockIcon.setValueIndex(2);
+        } else if (value.contains("stock_lock")) {
+            resId = R.string.lockscreen_lock_icon_stock;
+            mLockIcon.setValueIndex(1);
+        } else {
+            resId = R.string.lockscreen_lock_icon_custom;
+            mLockIcon.setValueIndex(0);
+        }
+        mLockIcon.setSummary(getResources().getString(resId));
+    }
+
+    private void requestLockImage() {
+        Intent intent = new Intent(Intent.ACTION_PICK,
+                android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+
+        int px = requestImageSize();
+
+        intent.setType("image/*");
+        intent.putExtra("crop", "true");
+        intent.putExtra("aspectX", 324);
+        intent.putExtra("aspectY", 324);
+        intent.putExtra("outputX", 324);
+        intent.putExtra("outputY", 324);
+        intent.putExtra("scale", true);
+        intent.putExtra("scaleUpIfNeeded", false);
+        intent.putExtra("outputFormat", Bitmap.CompressFormat.PNG.toString());
+
+        try {
+            mLockImage.createNewFile();
+            mLockImage.setWritable(true, false);
+            intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(mLockImage));
+            startActivityForResult(intent, REQUEST_PICK_LOCK_ICON);
+        } catch (Exception e) {
+            Log.e(TAG, e.getMessage(), e);
+        }
+    }
+
+    private void deleteLockIcon() {
+        String path = Settings.Secure.getString(getContentResolver(),
+                Settings.Secure.LOCKSCREEN_LOCK_ICON);
+
+        if (path != null) {
+            File f = new File(Uri.parse(path).getPath());
+
+            if (f != null && f.exists()) {
+                f.delete();
+            }
+        }
+
+        Settings.Secure.putString(getContentResolver(),
+                Settings.Secure.LOCKSCREEN_LOCK_ICON, null);
+
+        mColorizeCustom.setEnabled(false);
+        updateLockSummary();
+    }
+
+    private void resizeStockLock() {
+        Bitmap stockLock = BitmapFactory.decodeResource(getResources(), R.drawable.stock_lock);
+        if (stockLock != null) {
+            String path = null;
+            int px = requestImageSize();
+            stockLock = Bitmap.createScaledBitmap(stockLock, px, px, true);
+            try {
+                mLockImage.createNewFile();
+                mLockImage.setWritable(true, false);
+                File image = new File(getActivity().getFilesDir() + File.separator
+                            + "stock_lock" + System.currentTimeMillis() + ".png");
+                path = image.getAbsolutePath();
+                mLockImage.renameTo(image);
+                FileOutputStream outPut = new FileOutputStream(image);
+                stockLock.compress(Bitmap.CompressFormat.PNG, 100, outPut);
+                image.setReadable(true, false);
+                outPut.flush();
+                outPut.close();
+            } catch (Exception e) {
+                // Unicorns are better when they're dirty.
+                Log.e(TAG, e.getMessage(), e);
+                return;
+            }
+
+            deleteLockIcon();  // Delete current icon if it exists before saving new.
+            Settings.Secure.putString(getContentResolver(),
+                    Settings.Secure.LOCKSCREEN_LOCK_ICON, path);
+            mColorizeCustom.setEnabled(path != null);
+            updateLockSummary();
+        }
+    }
+
+    private int requestImageSize() {
+        return (int) TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_DIP, 144, getResources().getDisplayMetrics());
     }
 
     private void showDialogInner(int id) {
@@ -238,4 +415,3 @@ public class LockscreenStyle extends SettingsPreferenceFragment
         }
     }
 }
-

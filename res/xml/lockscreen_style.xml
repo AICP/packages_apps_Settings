@@ -17,6 +17,17 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/lockscreen_style_title" >
 
+    <ListPreference
+        android:key="lockscreen_lock_icon"
+        android:title="@string/lockscreen_icon_title"
+        android:entries="@array/lock_icon_entries"
+        android:entryValues="@array/lock_icon_values"/>
+
+    <CheckBoxPreference
+        android:key="lockscreen_colorize_icon"
+        android:title="@string/lockscreen_colorize_handle_title"
+        android:summary="@string/lockscreen_colorize_handle_summary" />
+
     <net.margaritov.preference.colorpicker.ColorPickerPreference
         android:key="lockscreen_frame_color"
         android:title="@string/lockscreen_frame_color_title"
