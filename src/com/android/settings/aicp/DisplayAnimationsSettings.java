@@ -73,6 +73,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private static final String RECENTS_CLEAR_ALL = "recents_clear_all";
     private static final String HFM_DISABLE_ADS = "hfm_disable_ads";
     private static final String KEY_NAVBAR_LEFT_IN_LANDSCAPE = "navigation_bar_left";
+    private static final String SMART_PULLDOWN = "smart_pulldown";
 
     private CheckBoxPreference mAllowRotation;
     private CheckBoxPreference mBlurBehind;
@@ -92,6 +93,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private ListPreference mClearAll;
     private ListPreference mListViewAnimation;
     private ListPreference mListViewInterpolator;
+    private ListPreference mSmartPulldown;
     private SeekBarPreference mBlurRadius;
 
     private ChooseLockSettingsHelper mChooseLockSettingsHelper;
@@ -210,7 +212,6 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         mNavigationBarLeft = (CheckBoxPreference) prefSet.findPreference(KEY_NAVBAR_LEFT_IN_LANDSCAPE);
         mNavigationBarLeft.setChecked((Settings.System.getInt(resolver,
                 Settings.System.NAVBAR_LEFT_IN_LANDSCAPE, 0) == 1));
-
         try {
             boolean hasNavBar = WindowManagerGlobal.getWindowManagerService().hasNavigationBar();
             PreferenceCategory navCategory = (PreferenceCategory) findPreference(CATEGORY_SYSTEM);
@@ -224,6 +225,18 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
             }
         } catch (RemoteException e) {
             Log.e(TAG, "Error getting navigation bar status");
+        }
+
+        // Smart pulldown
+        mSmartPulldown = (ListPreference) prefSet.findPreference(SMART_PULLDOWN);
+        if (Utils.isPhone(getActivity())) {
+            int smartPulldown = Settings.System.getInt(resolver,
+                    Settings.System.QS_SMART_PULLDOWN, 0);
+            mSmartPulldown.setValue(String.valueOf(smartPulldown));
+            updateSmartPulldownSummary(smartPulldown);
+            mSmartPulldown.setOnPreferenceChangeListener(this);
+        } else {
+            prefSet.removePreference(mSmartPulldown);
         }
     }
        
@@ -340,6 +353,11 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
                     Settings.System.CLEAR_RECENTS_BUTTON_LOCATION,
                     value);
             mClearAll.setSummary(mClearAll.getEntries()[index]);
+        } else if (preference == mSmartPulldown) {
+            int smartPulldown = Integer.valueOf((String) objValue);
+            Settings.System.putInt(resolver, Settings.System.QS_SMART_PULLDOWN,
+                    smartPulldown);
+            updateSmartPulldownSummary(smartPulldown);
         }
 
         return true;
@@ -348,5 +366,15 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     @Override
     public boolean onPreferenceClick(Preference preference) {
         return false;
+    }
+
+    private void updateSmartPulldownSummary(int i) {
+        if (i == 0) {
+            mSmartPulldown.setSummary(R.string.smart_pulldown_off);
+        } else if (i == 1) {
+            mSmartPulldown.setSummary(R.string.smart_pulldown_dismissable);
+        } else if (i == 2) {
+            mSmartPulldown.setSummary(R.string.smart_pulldown_persistent);
+        }
     }
 }

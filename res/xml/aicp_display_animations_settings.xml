@@ -183,6 +183,14 @@
             android:title="@string/notification_style_title"
             android:summary="@string/notification_style_summary" />
 
+        <ListPreference
+            android:key="smart_pulldown"
+            android:title="@string/smart_pulldown_title"
+            android:summary="@string/smart_pulldown_summary"
+            android:entries="@array/smart_pulldown_entries"
+            android:entryValues="@array/smart_pulldown_values"
+            android:persistent="false" />
+
         <CheckBoxPreference
             android:key="sms_breath"
             android:title="@string/sms_breath_title"
