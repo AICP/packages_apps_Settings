@@ -74,6 +74,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private static final String HFM_DISABLE_ADS = "hfm_disable_ads";
     private static final String KEY_NAVBAR_LEFT_IN_LANDSCAPE = "navigation_bar_left";
     private static final String SMART_PULLDOWN = "smart_pulldown";
+    private static final String KEY_TOAST_ANIMATION = "toast_animation";
 
     private CheckBoxPreference mAllowRotation;
     private CheckBoxPreference mBlurBehind;
@@ -94,6 +95,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private ListPreference mListViewAnimation;
     private ListPreference mListViewInterpolator;
     private ListPreference mSmartPulldown;
+    private ListPreference mToastAnimation;
     private SeekBarPreference mBlurRadius;
 
     private ChooseLockSettingsHelper mChooseLockSettingsHelper;
@@ -238,6 +240,14 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         } else {
             prefSet.removePreference(mSmartPulldown);
         }
+
+        // Toast animations
+        mToastAnimation = (ListPreference) prefSet.findPreference(KEY_TOAST_ANIMATION);
+        mToastAnimation.setSummary(mToastAnimation.getEntry());
+        int CurrentToastAnimation = Settings.System.getInt(resolver,
+                Settings.System.TOAST_ANIMATION, 1);
+        mToastAnimation.setValueIndex(CurrentToastAnimation);
+        mToastAnimation.setOnPreferenceChangeListener(this);
     }
        
 
@@ -269,7 +279,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
                     ? 1 : 0);
             if (mStatusBarNetworkHide.isChecked()) {
                 Toast.makeText(getActivity(), "Network traffic must be enabled in ROMControl!",
-                Toast.LENGTH_LONG).show();
+                        Toast.LENGTH_LONG).show();
             }
         } else if (preference == mSMSBreath) {
             value = mSMSBreath.isChecked();
@@ -358,6 +368,13 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
             Settings.System.putInt(resolver, Settings.System.QS_SMART_PULLDOWN,
                     smartPulldown);
             updateSmartPulldownSummary(smartPulldown);
+        } else if (preference == mToastAnimation) {
+            int index = mToastAnimation.findIndexOfValue((String) objValue);
+            Settings.System.putString(resolver,
+                    Settings.System.TOAST_ANIMATION, (String) objValue);
+            mToastAnimation.setSummary(mToastAnimation.getEntries()[index]);
+            Toast.makeText(getActivity(), "Toast animation test!!!",
+                    Toast.LENGTH_SHORT).show();
         }
 
         return true;
