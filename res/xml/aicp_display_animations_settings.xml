@@ -77,6 +77,12 @@
             android:entryValues="@array/listview_interpolator_values"
             android:defaultValue="0" />
 
+        <PreferenceScreen
+            android:key="interface_animation_scroll"
+            android:fragment="com.android.settings.aicp.ScrollAnimationInterfaceSettings"
+            android:title="@string/scrolling_title"
+            android:summary="@string/scrolling_summary" />
+
         <ListPreference
             android:key="toast_animation"
             android:title="@string/toast_animation_title"
