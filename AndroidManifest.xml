@@ -1915,6 +1915,10 @@
 
         <activity android:name=".profiles.ProfilesAppPicker" android:label="@string/select_application"
                 android:theme="@*android:style/Theme.Holo.Dialog" />
+
+        <activity android:name=".cyanogenmod.LockscreenTargets" />
+
+        <activity android:name=".cyanogenmod.LockscreenInterface" />
         <!-- Profiles - end -->
 
         <!-- Telo -->
