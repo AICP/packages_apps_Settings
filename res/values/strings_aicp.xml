@@ -68,6 +68,8 @@
     <string name="listview_overshoot_interpolator">Overshoot</string>
     <string name="listview_anticipate_overshoot_interpolator">Anticipate and overshoot</string>
     <string name="listview_bounce_interpolator">Bounce</string>
+    <string name="listview_cycle_interpolator">Cycle</string>
+    <string name="listview_linear_interpolator">Linear</string>
 
     <!--Lockscreen blur-->
     <string name="blur_behind_title">Blur Lockscreen Background</string>
@@ -713,5 +715,29 @@
     <string name="animation_no_scroll_summary_on">Enabled</string>
     <string name="animation_no_scroll_summary_off">Disabled</string>
     <string name="scroll_disclaimer_summary">Note: Most apps need to be restarted for custom values to take effect</string>
+
+    <!-- IME animations -->
+    <string name="animation_default">Default</string>
+    <string name="animation_fade">Fade</string>
+    <string name="animation_slide_right">Slide in right</string>
+    <string name="animation_slide_left">Slide in left</string>
+    <string name="animation_slide_right_no_fade">Slide in right (No fade)</string>
+    <string name="animation_slide_left_no_fade">Slide in left (No fade)</string>
+    <string name="animation_slide_up">Slide in bottom</string>
+    <string name="animation_slide_down">Slide in top</string>
+    <string name="animation_translucent">Translucent</string>
+    <string name="animation_grow_shrink">Grow in (Top)</string>
+    <string name="animation_grow_shrink_center">Grow in (Center)</string>
+    <string name="animation_grow_shrink_bottom">Grow in (Bottom)</string>
+    <string name="animation_grow_shrink_left">Grow in (Left)</string>
+    <string name="animation_grow_shrink_right">Grow in (Right)</string>
+    <string name="animation_random">Random</string>
+    <string name="ime_animation_title">IME animations</string>
+    <string name="ime_animation_summary">Set keyboard animations</string>
+    <string name="ime_animation_test_title">Test IME Animation Here</string>
+    <string name="ime_enter_animation_title">Enter Animation</string>
+    <string name="ime_exit_animation_title">Exit Animation</string>
+    <string name="ime_interpolator_title">Interpolator</string>
+    <string name="ime_duration_title">IME Duration</string>
 
 </resources>

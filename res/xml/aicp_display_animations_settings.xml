@@ -78,10 +78,16 @@
             android:defaultValue="0" />
 
         <PreferenceScreen
-            android:key="interface_animation_scroll"
+            android:key="interface_animation_keyboard"
             android:fragment="com.android.settings.aicp.ScrollAnimationInterfaceSettings"
             android:title="@string/scrolling_title"
             android:summary="@string/scrolling_summary" />
+
+        <PreferenceScreen
+            android:key="interface_animation_scroll"
+            android:fragment="com.android.settings.aicp.KeyboardAnimationInterfaceSettings"
+            android:title="@string/ime_animation_title"
+            android:summary="@string/ime_animation_summary" />
 
         <ListPreference
             android:key="toast_animation"
