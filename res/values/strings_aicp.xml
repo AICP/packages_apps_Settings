@@ -645,6 +645,8 @@
     <string name="toast_none_animation">None</string>
     <string name="toast_default_animation">Default</string>
     <string name="toast_fade_animation">Fade Animation</string>
+    <string name="toast_SlideLeftRight_animation">Slide Left To Right Animation</string>
+    <string name="toast_SlideRightLeft_animation">Slide Right To Left Animation</string>
     <string name="toast_SlideRight_animation">SlideRight Animation</string>
     <string name="toast_SlideLeft_animation">SlideLeft Animation</string>
     <string name="toast_Xylon_animation">Xylon Animation</string>
