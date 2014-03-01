@@ -172,19 +172,13 @@
             android:summary="@string/hide_network_speed_summary"
             android:defaultValue="false" />
 
-        <com.android.settings.aicp.CustomCarrier
-            android:key="notification_custom_carrier_label"
-            android:title="@string/notification_custom_carrier_label_title"
-            android:dialogTitle="@string/notification_custom_carrier_label_title"
-            android:positiveButtonText="@string/wifi_save"
-            android:negativeButtonText="@string/wifi_cancel"
-            android:selectAllOnFocus="true"
-            android:imeOptions="actionDone"
-            android:inputType="textNoSuggestions"
-            android:persistent="false" />
+        <CheckBoxPreference
+            android:key="bold_clock_text"
+            android:title="@string/clock_use_bold_text"
+            android:defaultValue="false" />
 
     <!-- Battery -->
-        <PreferenceScreen
+    <PreferenceScreen
             android:key="battery_style_pref"
             android:fragment="com.android.settings.aicp.BatteryIconStyle"
             android:title="@string/battery_icon_title"/>
@@ -208,6 +202,17 @@
             android:summary="@string/smart_pulldown_summary"
             android:entries="@array/smart_pulldown_entries"
             android:entryValues="@array/smart_pulldown_values"
+            android:persistent="false" />
+
+        <com.android.settings.aicp.CustomCarrier
+            android:key="notification_custom_carrier_label"
+            android:title="@string/notification_custom_carrier_label_title"
+            android:dialogTitle="@string/notification_custom_carrier_label_title"
+            android:positiveButtonText="@string/wifi_save"
+            android:negativeButtonText="@string/wifi_cancel"
+            android:selectAllOnFocus="true"
+            android:imeOptions="actionDone"
+            android:inputType="textNoSuggestions"
             android:persistent="false" />
 
         <CheckBoxPreference

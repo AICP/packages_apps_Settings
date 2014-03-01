@@ -742,4 +742,7 @@
     <string name="ime_interpolator_title">Interpolator</string>
     <string name="ime_duration_title">IME Duration</string>
 
+    <!-- StatusBar Bold Clock -->
+    <string name="clock_use_bold_text">Use Bold Text</string>
+
 </resources>
