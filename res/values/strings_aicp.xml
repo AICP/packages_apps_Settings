@@ -142,8 +142,8 @@
     <string name="less_notification_sounds_5m">5 minutes</string>
 
     <!-- GlowpadTorch -->
-    <string name="lockscreen_glowpad_torch_title">Slider torch</string>
-    <string name="lockscreen_glowpad_torch_summary">Double-tap and hold the slider to start torch</string>
+    <string name="lockscreen_glowpad_torch_title">Lock icon torch</string>
+    <string name="lockscreen_glowpad_torch_summary">Press and hold lockscreen icon handle to enable torch</string>
 
     <!-- Lockscreen pimping -->
     <string name="lockscreen_style_title">Theme style</string>
