@@ -172,10 +172,11 @@
             android:summary="@string/hide_network_speed_summary"
             android:defaultValue="false" />
 
-        <CheckBoxPreference
-            android:key="bold_clock_text"
-            android:title="@string/clock_use_bold_text"
-            android:defaultValue="false" />
+        <ListPreference
+            android:key="font_style"
+            android:entries="@array/clock_font_style_entries"
+            android:entryValues="@array/clock_font_style_values"
+            android:title="@string/clock_font_style_title" />
 
     <!-- Battery -->
     <PreferenceScreen

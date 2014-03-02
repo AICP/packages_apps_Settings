@@ -76,11 +76,10 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private static final String KEY_NAVBAR_LEFT_IN_LANDSCAPE = "navigation_bar_left";
     private static final String SMART_PULLDOWN = "smart_pulldown";
     private static final String KEY_TOAST_ANIMATION = "toast_animation";
-    private static final String KEY_CLOCK_BOLD = "bold_clock_text";
+    private static final String PREF_FONT_STYLE = "font_style";
 
     private CheckBoxPreference mAllowRotation;
     private CheckBoxPreference mBlurBehind;
-    private CheckBoxPreference mBoldClock;
     private CheckBoxPreference mEnableCameraWidget;
     private CheckBoxPreference mEnablePowerMenu;
     private CheckBoxPreference mGlowpadTorch;
@@ -95,6 +94,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private CheckBoxPreference mVoicemailBreath;
     private ListPreference mAnnoyingNotifications;
     private ListPreference mClearAll;
+    private ListPreference mFontStyle;
     private ListPreference mListViewAnimation;
     private ListPreference mListViewInterpolator;
     private ListPreference mSmartPulldown;
@@ -252,10 +252,12 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         mToastAnimation.setValueIndex(CurrentToastAnimation);
         mToastAnimation.setOnPreferenceChangeListener(this);
 
-        // Bold clock
-        mBoldClock = (CheckBoxPreference) prefSet.findPreference(KEY_CLOCK_BOLD);
-        mBoldClock.setChecked((Settings.System.getInt(resolver,
-                Settings.System.STATUS_BAR_BOLD_CLOCK, 0) == 1));
+        // Clock style
+        mFontStyle = (ListPreference) prefSet.findPreference(PREF_FONT_STYLE);
+        mFontStyle.setOnPreferenceChangeListener(this);
+        mFontStyle.setValue(Integer.toString(Settings.System.getInt(resolver,
+                Settings.System.STATUSBAR_CLOCK_FONT_STYLE, 4)));
+        mFontStyle.setSummary(mFontStyle.getEntry());
     }
        
 
@@ -331,11 +333,6 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
             value = mNavigationBarLeft.isChecked();
             Settings.System.putInt(resolver,
                     Settings.System.NAVBAR_LEFT_IN_LANDSCAPE, value ? 1 : 0);
-        } else if (preference == mBoldClock) {
-            value = mBoldClock.isChecked();
-            Settings.System.putInt(resolver,
-                    Settings.System.STATUS_BAR_BOLD_CLOCK, value ? 1 : 0);
-                    Helpers.restartSystemUI();
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
@@ -388,6 +385,12 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
             mToastAnimation.setSummary(mToastAnimation.getEntries()[index]);
             Toast.makeText(getActivity(), "Toast animation test!!!",
                     Toast.LENGTH_SHORT).show();
+        } else if (preference == mFontStyle) {
+            int val = Integer.parseInt((String) objValue);
+            int index = mFontStyle.findIndexOfValue((String) objValue);
+            Settings.System.putInt(resolver,
+                    Settings.System.STATUSBAR_CLOCK_FONT_STYLE, val);
+            mFontStyle.setSummary(mFontStyle.getEntries()[index]);
         }
 
         return true;

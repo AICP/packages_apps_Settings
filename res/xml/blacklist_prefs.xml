@@ -15,6 +15,8 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:phone="http://schemas.android.com/apk/res/com.android.phone"
+    android:key="button_blacklist"
     android:title="@string/blacklist_title" >
 
     <CheckBoxPreference
@@ -43,7 +45,6 @@
         android:key="button_blacklist_regex"
         android:title="@string/blacklist_regex_title"
         android:summary="@string/blacklist_regex_summary"
-        android:defaultValue="false"
         android:persistent="true" />
 
 </PreferenceScreen>
