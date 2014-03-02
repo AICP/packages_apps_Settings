@@ -25,14 +25,20 @@ import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.hardware.Camera;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.RemoteException;
+import android.os.UserHandle;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
+import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
+import android.preference.RingtonePreference;
 import android.preference.SeekBarPreference;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
@@ -77,6 +83,9 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private static final String SMART_PULLDOWN = "smart_pulldown";
     private static final String KEY_TOAST_ANIMATION = "toast_animation";
     private static final String PREF_FONT_STYLE = "font_style";
+    private static final String PREF_NOTI_REMINDER_SOUND =  "noti_reminder_sound";
+    private static final String PREF_NOTI_REMINDER_ENABLED = "noti_reminder_enabled";
+    private static final String PREF_NOTI_REMINDER_RINGTONE = "noti_reminder_ringtone";
 
     private CheckBoxPreference mAllowRotation;
     private CheckBoxPreference mBlurBehind;
@@ -87,6 +96,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private CheckBoxPreference mLockRingBattery;
     private CheckBoxPreference mMissedCallBreath;
     private CheckBoxPreference mNavigationBarLeft;
+    private CheckBoxPreference mReminder;
     private CheckBoxPreference mSMSBreath;
     private CheckBoxPreference mStatusBarNetworkHide;
     private CheckBoxPreference mSrecEnableTouches;
@@ -97,8 +107,10 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private ListPreference mFontStyle;
     private ListPreference mListViewAnimation;
     private ListPreference mListViewInterpolator;
+    private ListPreference mReminderMode;
     private ListPreference mSmartPulldown;
     private ListPreference mToastAnimation;
+    private RingtonePreference mReminderRingtone;
     private SeekBarPreference mBlurRadius;
 
     private ChooseLockSettingsHelper mChooseLockSettingsHelper;
@@ -258,6 +270,36 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         mFontStyle.setValue(Integer.toString(Settings.System.getInt(resolver,
                 Settings.System.STATUSBAR_CLOCK_FONT_STYLE, 4)));
         mFontStyle.setSummary(mFontStyle.getEntry());
+
+        // Notification Remider
+        mReminder = (CheckBoxPreference) prefSet.findPreference(PREF_NOTI_REMINDER_ENABLED);
+        mReminder.setChecked(Settings.System.getIntForUser(resolver,
+                Settings.System.REMINDER_ALERT_ENABLED, 0, UserHandle.USER_CURRENT) == 1);
+        mReminder.setOnPreferenceChangeListener(this);
+
+        mReminderMode = (ListPreference) prefSet.findPreference(PREF_NOTI_REMINDER_SOUND);
+        int mode = Settings.System.getIntForUser(resolver,
+                Settings.System.REMINDER_ALERT_NOTIFY, 0, UserHandle.USER_CURRENT);
+        mReminderMode.setValue(String.valueOf(mode));
+        mReminderMode.setOnPreferenceChangeListener(this);
+        updateReminderModeSummary(mode);
+
+        mReminderRingtone =
+                (RingtonePreference) prefSet.findPreference(PREF_NOTI_REMINDER_RINGTONE);
+        Uri ringtone = null;
+        String ringtoneString = Settings.System.getStringForUser(resolver,
+                Settings.System.REMINDER_ALERT_RINGER, UserHandle.USER_CURRENT);
+        if (ringtoneString == null) {
+            // Value not set, defaults to Default Ringtone
+            ringtone = RingtoneManager.getDefaultUri(
+                    RingtoneManager.TYPE_RINGTONE);
+        } else {
+            ringtone = Uri.parse(ringtoneString);
+        }
+        Ringtone alert = RingtoneManager.getRingtone(getActivity(), ringtone);
+        mReminderRingtone.setSummary(alert.getTitle(getActivity()));
+        mReminderRingtone.setOnPreferenceChangeListener(this);
+        mReminderRingtone.setEnabled(mode != 0);
     }
        
 
@@ -391,6 +433,24 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
             Settings.System.putInt(resolver,
                     Settings.System.STATUSBAR_CLOCK_FONT_STYLE, val);
             mFontStyle.setSummary(mFontStyle.getEntries()[index]);
+        } else if (preference == mReminder) {
+            Settings.System.putIntForUser(resolver,
+                    Settings.System.REMINDER_ALERT_ENABLED,
+                    (Boolean) objValue ? 1 : 0, UserHandle.USER_CURRENT);
+        } else if (preference == mReminderMode) {
+            int mode = Integer.valueOf((String) objValue);
+            Settings.System.putIntForUser(resolver,
+                    Settings.System.REMINDER_ALERT_NOTIFY,
+                    mode, UserHandle.USER_CURRENT);
+            updateReminderModeSummary(mode);
+            mReminderRingtone.setEnabled(mode != 0);
+        } else if (preference == mReminderRingtone) {
+            Uri val = Uri.parse((String) objValue);
+            Ringtone ringtone = RingtoneManager.getRingtone(getActivity(), val);
+            mReminderRingtone.setSummary(ringtone.getTitle(getActivity()));
+            Settings.System.putStringForUser(getContentResolver(),
+                    Settings.System.REMINDER_ALERT_RINGER,
+                    val.toString(), UserHandle.USER_CURRENT);
         }
 
         return true;
@@ -409,5 +469,21 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         } else if (i == 2) {
             mSmartPulldown.setSummary(R.string.smart_pulldown_persistent);
         }
+    }
+
+    private void updateReminderModeSummary(int value) {
+        int resId;
+        switch (value) {
+            case 1:
+                resId = R.string.enabled;
+                break;
+            case 2:
+                resId = R.string.noti_reminder_sound_looping;
+                break;
+            default:
+                resId = R.string.disabled;
+                break;
+        }
+        mReminderMode.setSummary(getResources().getString(resId));
     }
 }
