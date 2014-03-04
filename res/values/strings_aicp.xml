@@ -188,6 +188,8 @@
 
     <!-- Halo -->
     <string name="halo_settings_title">Halo</string>
+    <string name="halo_active_title">Enable HALO</string>
+    <string name="halo_active_summary">If checked enable HALO feature</string>
     <string name="halo_style_title">Halo style</string>
     <string name="halo_behavior_title">Halo Behavior</string>
     <string name="halo_hide_title">Hide Halo after activity</string>
