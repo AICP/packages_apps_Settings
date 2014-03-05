@@ -768,4 +768,8 @@
     <string name="noti_reminder_ringtone">Notify ringtone</string>
     <string name="disabled">Disabled</string>
 
+    <!-- Slim's recent -->
+    <string name="custom_recent_title">Enable Slim Recents</string>
+    <string name="custom_recent_summary">Tick this box to switch between Slim/stock recents</string>
+
 </resources>

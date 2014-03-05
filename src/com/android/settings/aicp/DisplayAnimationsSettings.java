@@ -86,6 +86,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private static final String PREF_NOTI_REMINDER_SOUND =  "noti_reminder_sound";
     private static final String PREF_NOTI_REMINDER_ENABLED = "noti_reminder_enabled";
     private static final String PREF_NOTI_REMINDER_RINGTONE = "noti_reminder_ringtone";
+    private static final String CUSTOM_RECENT_MODE = "custom_recent_mode";
 
     private CheckBoxPreference mAllowRotation;
     private CheckBoxPreference mBlurBehind;
@@ -96,6 +97,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private CheckBoxPreference mLockRingBattery;
     private CheckBoxPreference mMissedCallBreath;
     private CheckBoxPreference mNavigationBarLeft;
+    private CheckBoxPreference mRecentsCustom;
     private CheckBoxPreference mReminder;
     private CheckBoxPreference mSMSBreath;
     private CheckBoxPreference mStatusBarNetworkHide;
@@ -300,6 +302,13 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         mReminderRingtone.setSummary(alert.getTitle(getActivity()));
         mReminderRingtone.setOnPreferenceChangeListener(this);
         mReminderRingtone.setEnabled(mode != 0);
+
+        // Slim's recents
+        boolean enableRecentsCustom = Settings.AOKP.getBoolean(getContentResolver(),
+                                      Settings.System.CUSTOM_RECENT, false);
+        mRecentsCustom = (CheckBoxPreference) findPreference(CUSTOM_RECENT_MODE);
+        mRecentsCustom.setChecked(enableRecentsCustom);
+        mRecentsCustom.setOnPreferenceChangeListener(this);
     }
        
 
@@ -451,6 +460,11 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
             Settings.System.putStringForUser(getContentResolver(),
                     Settings.System.REMINDER_ALERT_RINGER,
                     val.toString(), UserHandle.USER_CURRENT);
+        } else if (preference == mRecentsCustom) {
+            Settings.AOKP.putBoolean(resolver,
+                    Settings.System.CUSTOM_RECENT,
+                    ((Boolean) objValue) ? true : false);
+            Helpers.restartSystemUI();
         }
 
         return true;
