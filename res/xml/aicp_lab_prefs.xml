@@ -66,6 +66,12 @@
         android:icon="@drawable/ic_settings_teloradio"
         android:fragment="com.android.settings.aicp.teloradio.TeloRadioSettings" />
 
+    <!-- KernelTweaker -->
+    <PreferenceScreen
+        android:key="kerneltweaker_start"
+        android:title="@string/kerneltweaker_settings_title"
+        android:icon="@drawable/ic_kernel_tweaker" />
+
     <!-- Density changer -->
     <PreferenceScreen
         android:id="@+id/density_changer"
