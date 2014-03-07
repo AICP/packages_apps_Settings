@@ -93,4 +93,10 @@
         android:title="@string/system_app_remover"
         android:fragment="com.android.settings.slim.SystemappRemover" />
 
+    <!-- AICP OTA -->
+    <PreferenceScreen
+        android:key="aicp_ota_start"
+        android:title="@string/aicp_ota_settings_title"
+        android:icon="@drawable/ic_aicp_ota" />
+
 </PreferenceScreen>

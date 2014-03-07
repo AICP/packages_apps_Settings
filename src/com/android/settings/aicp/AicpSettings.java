@@ -40,6 +40,7 @@ public class AicpSettings extends SettingsPreferenceFragment
     private static final String TAG = "AicpLabs";
 
     private static final String KERNELTWEAKER_START = "kerneltweaker_start";
+    private static final String AICPOTA_START = "aicp_ota_start";
 
     // Package name of the kernel tweaker app
     public static final String KERNELTWEAKER_PACKAGE_NAME = "com.dsht.kerneltweaker";
@@ -47,7 +48,14 @@ public class AicpSettings extends SettingsPreferenceFragment
     public static Intent INTENT_KERNELTWEAKER = new Intent(Intent.ACTION_MAIN)
             .setClassName(KERNELTWEAKER_PACKAGE_NAME, KERNELTWEAKER_PACKAGE_NAME + ".MainActivity");
 
+    // Package name of the Aicp ota app
+    public static final String AICPOTA_PACKAGE_NAME = "com.aicp.aicpota";
+    // Intent for launching the Aicp ota main actvity
+    public static Intent INTENT_AICPOTA = new Intent(Intent.ACTION_MAIN)
+            .setClassName(AICPOTA_PACKAGE_NAME, AICPOTA_PACKAGE_NAME + ".MainActivity");
+
     private Preference mKernelTweaker;
+    private Preference mAicpOta;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -60,6 +68,9 @@ public class AicpSettings extends SettingsPreferenceFragment
 
         mKernelTweaker = (Preference)
                 prefSet.findPreference(KERNELTWEAKER_START);
+
+        mAicpOta = (Preference)
+                prefSet.findPreference(AICPOTA_START);
 
     }
 
@@ -79,8 +90,11 @@ public class AicpSettings extends SettingsPreferenceFragment
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        if (preference == mKernelTweaker){
+        if (preference == mKernelTweaker) {
             startActivity(INTENT_KERNELTWEAKER);
+            return true;
+        } else if (preference == mAicpOta) {
+            startActivity(INTENT_AICPOTA);
             return true;
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
