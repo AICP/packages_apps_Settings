@@ -86,6 +86,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private static final String PREF_NOTI_REMINDER_SOUND =  "noti_reminder_sound";
     private static final String PREF_NOTI_REMINDER_ENABLED = "noti_reminder_enabled";
     private static final String PREF_NOTI_REMINDER_RINGTONE = "noti_reminder_ringtone";
+    private static final String PREF_NOTI_REMINDER_INTERVAL = "noti_reminder_interval";
     private static final String CUSTOM_RECENT_MODE = "custom_recent_mode";
 
     private CheckBoxPreference mAllowRotation;
@@ -109,6 +110,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private ListPreference mFontStyle;
     private ListPreference mListViewAnimation;
     private ListPreference mListViewInterpolator;
+    private ListPreference mReminderInterval;
     private ListPreference mReminderMode;
     private ListPreference mSmartPulldown;
     private ListPreference mToastAnimation;
@@ -279,6 +281,12 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
                 Settings.System.REMINDER_ALERT_ENABLED, 0, UserHandle.USER_CURRENT) == 1);
         mReminder.setOnPreferenceChangeListener(this);
 
+        mReminderInterval = (ListPreference) prefSet.findPreference(PREF_NOTI_REMINDER_INTERVAL);
+        int interval = Settings.System.getIntForUser(resolver,
+                Settings.System.REMINDER_ALERT_INTERVAL, 0, UserHandle.USER_CURRENT);
+        mReminderInterval.setOnPreferenceChangeListener(this);
+        updateReminderIntervalSummary(interval);
+
         mReminderMode = (ListPreference) prefSet.findPreference(PREF_NOTI_REMINDER_SOUND);
         int mode = Settings.System.getIntForUser(resolver,
                 Settings.System.REMINDER_ALERT_NOTIFY, 0, UserHandle.USER_CURRENT);
@@ -446,6 +454,12 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
             Settings.System.putIntForUser(resolver,
                     Settings.System.REMINDER_ALERT_ENABLED,
                     (Boolean) objValue ? 1 : 0, UserHandle.USER_CURRENT);
+        } else if (preference == mReminderInterval) {
+            int interval = Integer.valueOf((String) objValue);
+            Settings.System.putIntForUser(resolver,
+                    Settings.System.REMINDER_ALERT_INTERVAL,
+                    interval, UserHandle.USER_CURRENT);
+            updateReminderIntervalSummary(interval);
         } else if (preference == mReminderMode) {
             int mode = Integer.valueOf((String) objValue);
             Settings.System.putIntForUser(resolver,
@@ -483,6 +497,35 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         } else if (i == 2) {
             mSmartPulldown.setSummary(R.string.smart_pulldown_persistent);
         }
+    }
+
+    private void updateReminderIntervalSummary(int value) {
+        int resId;
+        switch (value) {
+            case 1000:
+                resId = R.string.noti_reminder_interval_1s;
+                break;
+            case 2000:
+                resId = R.string.noti_reminder_interval_2s;
+                break;
+            case 2500:
+                resId = R.string.noti_reminder_interval_2dot5s;
+                break;
+            case 3000:
+                resId = R.string.noti_reminder_interval_3s;
+                break;
+            case 3500:
+                resId = R.string.noti_reminder_interval_3dot5s;
+                break;
+            case 4000:
+                resId = R.string.noti_reminder_interval_4s;
+                break;
+            default:
+                resId = R.string.noti_reminder_interval_1dot5s;
+                break;
+        }
+        mReminderInterval.setValue(Integer.toString(value));
+        mReminderInterval.setSummary(getResources().getString(resId));
     }
 
     private void updateReminderModeSummary(int value) {
