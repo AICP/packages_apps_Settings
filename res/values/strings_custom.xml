@@ -503,4 +503,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="battery_prefs_title">Options</string>
     <string name="battery_stats_title">Statistics</string>
 
+    <!-- Swap volume buttons -->
+    <string name="swap_vol_buttons_title">Swap vol buttons on rotation</string>
+    <string name="swap_vol_buttons_title_summary">Swap volume buttons when the screen is rotated by 90 or 180 degrees.</string>
+
 </resources>

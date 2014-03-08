@@ -88,6 +88,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private static final String KEY_VOLUME_KEYS_RINGER_MODE = "volume_keys_ringer_mode";
     private static final String KEY_VOLUME_OVERLAY = "volume_overlay";
     private static final String KEY_VOLUME_PANEL_TIMEOUT = "volume_panel_timeout";
+    private static final String KEY_SWAP_VOLUME_BUTTONS = "swap_volume_buttons";
 
 
     private static final String[] NEED_VOICE_CAPABILITY = {
@@ -122,6 +123,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mVolumeKeysRingerMode;
     private ListPreference mVolumeOverlay;
     private SeekBarPreferenceCham mVolumePanelTimeout;
+    private CheckBoxPreference mSwapVolButtons;
 
     private BroadcastReceiver mReceiver = new BroadcastReceiver() {
         @Override
@@ -286,6 +288,11 @@ public class SoundSettings extends SettingsPreferenceFragment implements
                 Settings.System.VOLUME_PANEL_TIMEOUT, 3000);
         mVolumePanelTimeout.setValue(statusVolumePanelTimeout / 1000);
         mVolumePanelTimeout.setOnPreferenceChangeListener(this);
+
+        mSwapVolButtons = (CheckBoxPreference) findPreference(KEY_SWAP_VOLUME_BUTTONS);
+        mSwapVolButtons.setChecked(Settings.System.getInt(resolver,
+                Settings.System.SWAP_VOLUME_BUTTONS, 1) == 0);
+        mSwapVolButtons.setOnPreferenceChangeListener(this);
 
         initDockSettings();
     }
@@ -462,6 +469,10 @@ public class SoundSettings extends SettingsPreferenceFragment implements
             int volumePanelTimeout = (Integer) objValue;
             Settings.System.putInt(getContentResolver(),
                     Settings.System.VOLUME_PANEL_TIMEOUT, volumePanelTimeout * 1000);
+        } else if (preference == mSwapVolButtons) {
+            Settings.System.putInt(getContentResolver(),
+                Settings.System.SWAP_VOLUME_BUTTONS,
+                (Boolean) objValue ? 1 : 0);
         } 
         return true;
     }

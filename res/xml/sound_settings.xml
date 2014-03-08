@@ -122,7 +122,7 @@
             android:summary="@string/summary_hardware_keys_volume_keys_ringer_toggle"
             android:defaultValue="true" />
 
-     <ListPreference
+    <ListPreference
             android:key="volume_overlay"
             android:title="@string/volume_overlay_title"
             android:entries="@array/volume_overlay_entries"
@@ -133,6 +133,12 @@
             android:title="@string/emergency_tone_title"
             android:entries="@array/emergency_tone_entries"
             android:entryValues="@array/emergency_tone_values" />
+
+    <CheckBoxPreference
+            android:key="swap_volume_buttons"
+            android:title="@string/swap_vol_buttons_title"
+            android:summary="@string/swap_vol_buttons_title_summary"
+            android:defaultValue="fale" />
 
     <!-- Dock -->
     <PreferenceCategory
