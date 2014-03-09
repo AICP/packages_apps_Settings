@@ -88,9 +88,11 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private static final String PREF_NOTI_REMINDER_RINGTONE = "noti_reminder_ringtone";
     private static final String PREF_NOTI_REMINDER_INTERVAL = "noti_reminder_interval";
     private static final String CUSTOM_RECENT_MODE = "custom_recent_mode";
+    private static final String DISABLE_FC_NOTIFICATIONS = "disable_fc_notifications";
 
     private CheckBoxPreference mAllowRotation;
     private CheckBoxPreference mBlurBehind;
+    private CheckBoxPreference mDisableFC;
     private CheckBoxPreference mEnableCameraWidget;
     private CheckBoxPreference mEnablePowerMenu;
     private CheckBoxPreference mGlowpadTorch;
@@ -317,6 +319,11 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         mRecentsCustom = (CheckBoxPreference) findPreference(CUSTOM_RECENT_MODE);
         mRecentsCustom.setChecked(enableRecentsCustom);
         mRecentsCustom.setOnPreferenceChangeListener(this);
+
+        // Disable FC notification
+        mDisableFC = (CheckBoxPreference) prefSet.findPreference(DISABLE_FC_NOTIFICATIONS);
+        mDisableFC.setChecked((Settings.System.getInt(resolver,
+                Settings.System.DISABLE_FC_NOTIFICATIONS, 0) == 1));
     }
        
 
@@ -392,6 +399,10 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
             value = mNavigationBarLeft.isChecked();
             Settings.System.putInt(resolver,
                     Settings.System.NAVBAR_LEFT_IN_LANDSCAPE, value ? 1 : 0);
+        } else if  (preference == mDisableFC) {
+            boolean checked = ((CheckBoxPreference)preference).isChecked();
+            Settings.System.putInt(resolver,
+                    Settings.System.DISABLE_FC_NOTIFICATIONS, checked ? 1:0);
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }

@@ -786,4 +786,11 @@
     <!-- AICP OTA -->
     <string name="aicp_ota_settings_title">Aicp OTA</string>
 
+    <!-- Text for forcing expanded notifications -->
+    <string name="disable_fc_notifications_title">Diable FC Notifications</string>
+    <string name="disable_fc_notifications_summary">This will hide all force close notificaitons</string>
+
+    <!-- Text for Misc Tweaks entry -->
+    <string name="misc_tweaks_title">Misc. Tweaks</string>
+
 </resources>

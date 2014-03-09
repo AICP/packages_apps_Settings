@@ -279,5 +279,18 @@
 
     </PreferenceCategory>
 
+    <!-- Breathing Notifications -->
+    <PreferenceCategory
+            android:key="misc_category"
+            android:title="@string/misc_tweaks_title">
+
+        <CheckBoxPreference
+            android:key="disable_fc_notifications"
+            android:title="@string/disable_fc_notifications_title"
+            android:summary="@string/disable_fc_notifications_summary"
+            android:persistent="false" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
 
