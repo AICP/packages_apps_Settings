@@ -63,8 +63,10 @@
     <PreferenceScreen
         android:key="app_sidebar"
         android:fragment="com.android.settings.aicp.AppSidebar"
+        android:icon="@drawable/ic_aicp_sidebar"
         android:title="@string/app_sidebar_title"/>
 
+    <!-- Gesture anywhere -->
     <PreferenceScreen
         android:key="gesture_anywhere"
         android:fragment="com.android.settings.aicp.gestureanywhere.GestureAnywhereSettings"
