@@ -1853,6 +1853,7 @@
         </activity>
 
         <activity android:name=".aicp.NotificationDrawerStyle" />
+        <activity android:name=".aicp.AppSidebar" />
 
         <activity android:name=".ApnEditor" />
 

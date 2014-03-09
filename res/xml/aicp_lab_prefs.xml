@@ -59,6 +59,12 @@
         android:title="@string/color_tile_title"
         android:fragment="com.android.settings.aicp.TileColors" />
 
+    <!-- App sidebar -->
+    <PreferenceScreen
+        android:key="app_sidebar"
+        android:fragment="com.android.settings.aicp.AppSidebar"
+        android:title="@string/app_sidebar_title"/>
+
     <!-- TeloRadio -->
     <PreferenceScreen
         android:id="@+id/telo_radio_settings"
