@@ -1854,6 +1854,8 @@
 
         <activity android:name=".aicp.NotificationDrawerStyle" />
         <activity android:name=".aicp.AppSidebar" />
+        <activity android:name=".aicp.gestureanywhere.GestureAnywhereBuilderActivity" />
+        <activity android:name=".aicp.gestureanywhere.GestureAnywhereCreateGestureActivity" />
 
         <activity android:name=".ApnEditor" />
 

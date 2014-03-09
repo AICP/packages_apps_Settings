@@ -65,6 +65,12 @@
         android:fragment="com.android.settings.aicp.AppSidebar"
         android:title="@string/app_sidebar_title"/>
 
+    <PreferenceScreen
+        android:key="gesture_anywhere"
+        android:fragment="com.android.settings.aicp.gestureanywhere.GestureAnywhereSettings"
+        android:icon="@drawable/ic_settings_gesture_anywhere"
+        android:title="@string/gesture_anywhere_title" />
+
     <!-- TeloRadio -->
     <PreferenceScreen
         android:id="@+id/telo_radio_settings"

@@ -33,4 +33,8 @@
     <!-- Height of an expanded list item in edit playlist mode -->
     <dimen name="expanded_height">128dip</dimen>
 
+    <!-- Gesture Anywhere -->
+    <dimen name="ga_gesture_thumbnail_inset">8dip</dimen>
+    <dimen name="ga_gesture_thumbnail_size">64dip</dimen>
+
 </resources>
