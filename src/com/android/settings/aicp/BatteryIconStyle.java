@@ -330,6 +330,16 @@ public class BatteryIconStyle extends SettingsPreferenceFragment
                 Settings.System.STATUS_BAR_BATTERY_TEXT_COLOR, -2);
         Settings.System.putInt(getActivity().getContentResolver(),
                 Settings.System.STATUS_BAR_BATTERY_TEXT_CHARGING_COLOR, -2);
+        Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.STATUS_BAR_CIRCLE_BATTERY_ANIMATIONSPEED, 3);
+        Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.STATUSBAR_BATTERY_BAR_COLOR, 0xffffffff);
+        Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.STATUSBAR_BATTERY_BAR_STYLE, 0);
+        Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.STATUSBAR_BATTERY_BAR_THICKNESS, 1);
+        Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.STATUSBAR_BATTERY_BAR, 0);
     }
 
     private void updateBatteryIconOptions(int batteryIconStat) {

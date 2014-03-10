@@ -184,8 +184,8 @@
             android:entryValues="@array/clock_font_style_values"
             android:title="@string/clock_font_style_title" />
 
-    <!-- Battery -->
-    <PreferenceScreen
+        <!-- Battery -->
+        <PreferenceScreen
             android:key="battery_style_pref"
             android:fragment="com.android.settings.aicp.BatteryIconStyle"
             android:title="@string/battery_icon_title"/>
@@ -194,8 +194,8 @@
 
     <!-- Breathing Notifications -->
     <PreferenceCategory
-            android:key="notifications_category"
-            android:title="@string/notifications_category_title">
+        android:key="notifications_category"
+        android:title="@string/notifications_category_title">
 
         <Preference
             android:fragment="com.android.settings.aicp.NotificationDrawerStyle"
@@ -279,10 +279,10 @@
 
     </PreferenceCategory>
 
-    <!-- Breathing Notifications -->
+    <!-- Misc -->
     <PreferenceCategory
-            android:key="misc_category"
-            android:title="@string/misc_tweaks_title">
+        android:key="misc_category"
+        android:title="@string/misc_tweaks_title">
 
         <CheckBoxPreference
             android:key="disable_fc_notifications"
