@@ -438,7 +438,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="partition_info_data">/data</string>
     <string name="partition_info_cache">/cache</string>
     <string name="partition_info_sdcard">/sdcard (FAT)</string>
-    <string name="partition_info_sdext">/external-sd</string>
+    <string name="partition_info_sdext">/sd-ext (EXT)</string>
     <string name="partition_info_used_of">/</string>
 
     <!-- Nfc settings -->
