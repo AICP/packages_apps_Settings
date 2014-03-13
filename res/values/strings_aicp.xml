@@ -161,6 +161,10 @@
     <string name="lockscreen_lock_icon_default">AICP icon</string>
     <string name="lockscreen_colorize_handle_title">Colorize custom handle</string>
     <string name="lockscreen_colorize_handle_summary">Lock color will be set to your custom image</string>
+    <string name="lockscreen_targets_color_title">Targets color</string>
+    <string name="lockscreen_targets_color_summary">Color of the challenge targets</string>
+    <string name="lockscreen_misc_color_title">Miscellaneous color</string>
+    <string name="lockscreen_misc_color_summary">Color of the remaining items</string>
 
     <!-- Color Picker -->
     <string name="reset">Reset</string>
