@@ -89,12 +89,15 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private static final String PREF_NOTI_REMINDER_INTERVAL = "noti_reminder_interval";
     private static final String CUSTOM_RECENT_MODE = "custom_recent_mode";
     private static final String DISABLE_FC_NOTIFICATIONS = "disable_fc_notifications";
+    private static final String KEY_EXPANDED_DESKTOP = "power_menu_expanded_desktop";
+    private static final String KEY_EXPANDED_DESKTOP_NO_NAVBAR = "power_menu_expanded_desktop_no_navbar";
 
     private CheckBoxPreference mAllowRotation;
     private CheckBoxPreference mBlurBehind;
     private CheckBoxPreference mDisableFC;
     private CheckBoxPreference mEnableCameraWidget;
     private CheckBoxPreference mEnablePowerMenu;
+    private CheckBoxPreference mExpandedDesktopNoNavbarPref;
     private CheckBoxPreference mGlowpadTorch;
     private CheckBoxPreference mHfmDisableAds;
     private CheckBoxPreference mLockRingBattery;
@@ -109,6 +112,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private CheckBoxPreference mVoicemailBreath;
     private ListPreference mAnnoyingNotifications;
     private ListPreference mClearAll;
+    private ListPreference mExpandedDesktopPref;
     private ListPreference mFontStyle;
     private ListPreference mListViewAnimation;
     private ListPreference mListViewInterpolator;
@@ -324,6 +328,29 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         mDisableFC = (CheckBoxPreference) prefSet.findPreference(DISABLE_FC_NOTIFICATIONS);
         mDisableFC.setChecked((Settings.System.getInt(resolver,
                 Settings.System.DISABLE_FC_NOTIFICATIONS, 0) == 1));
+
+        // Expanded desktop
+        mExpandedDesktopPref = (ListPreference) prefSet.findPreference(KEY_EXPANDED_DESKTOP);
+        mExpandedDesktopNoNavbarPref = (CheckBoxPreference) prefSet.findPreference(KEY_EXPANDED_DESKTOP_NO_NAVBAR);
+        int expandedDesktopValue = Settings.System.getInt(resolver,
+                Settings.System.EXPANDED_DESKTOP_STYLE, 0);
+
+        // Hide no-op "Status bar visible" mode on devices without navbar
+        try {
+            if (WindowManagerGlobal.getWindowManagerService().hasNavigationBar()) {
+                mExpandedDesktopPref.setOnPreferenceChangeListener(this);
+                mExpandedDesktopPref.setValue(String.valueOf(expandedDesktopValue));
+                updateExpandedDesktop(expandedDesktopValue);
+
+                prefSet.removePreference(mExpandedDesktopNoNavbarPref);
+            } else {
+                mExpandedDesktopNoNavbarPref.setChecked(expandedDesktopValue > 0);
+
+                prefSet.removePreference(mExpandedDesktopPref);
+            }
+        } catch (RemoteException e) {
+            Log.e(TAG, "Error getting navigation bar status");
+        }
     }
        
 
@@ -403,6 +430,9 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
             boolean checked = ((CheckBoxPreference)preference).isChecked();
             Settings.System.putInt(resolver,
                     Settings.System.DISABLE_FC_NOTIFICATIONS, checked ? 1:0);
+        } else if (preference == mExpandedDesktopNoNavbarPref) {
+            value = mExpandedDesktopNoNavbarPref.isChecked();
+            updateExpandedDesktop(value ? 2 : 0);
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
@@ -490,6 +520,11 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
                     Settings.System.CUSTOM_RECENT,
                     ((Boolean) objValue) ? true : false);
             Helpers.restartSystemUI();
+        } else if (preference == mExpandedDesktopPref) {
+            int expandedDesktopValue = Integer.valueOf((String) objValue);
+            Settings.System.putInt(resolver,
+                    Settings.System.EXPANDED_DESKTOP_STYLE, expandedDesktopValue);
+            updateExpandedDesktop(expandedDesktopValue);
         }
 
         return true;
@@ -553,5 +588,35 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
                 break;
         }
         mReminderMode.setSummary(getResources().getString(resId));
+    }
+
+    private void updateExpandedDesktop(int value) {
+        Resources res = getResources();
+        int summary = -1;
+
+        Settings.System.putInt(getContentResolver(),
+                Settings.System.EXPANDED_DESKTOP_STYLE, value);
+
+        if (value == 0) {
+            // Expanded desktop deactivated
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.POWER_MENU_EXPANDED_DESKTOP_ENABLED, 0);
+            summary = R.string.expanded_desktop_disabled;
+            // Disable expanded desktop if enabled
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.EXPANDED_DESKTOP_STATE, 0);
+        } else if (value == 1) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.POWER_MENU_EXPANDED_DESKTOP_ENABLED, 1);
+            summary = R.string.expanded_desktop_status_bar;
+        } else if (value == 2) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.POWER_MENU_EXPANDED_DESKTOP_ENABLED, 1);
+            summary = R.string.expanded_desktop_no_status_bar;
+        }
+
+        if (mExpandedDesktopPref != null && summary != -1) {
+            mExpandedDesktopPref.setSummary(res.getString(summary));
+        }
     }
 }
