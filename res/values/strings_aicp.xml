@@ -43,6 +43,13 @@
     <string name="notifications_category_title">Notifications</string>
     <string name="omniswitch_settings_title">OmniSwitch</string>
     <string name="system_category_title">System</string>
+    <string name="recents_category_title">Recents</string>
+    <string name="powermenu_category_title">Powermenu</string>
+    <string name="notification_category_title">Statusbar and notifications</string>
+    <string name="reminder_category_title">Notification reminder</string>
+    <string name="breathing_category_title">Breathing notifications</string>
+    <string name="system_settings">System</string>
+    <string name="screenrecorder_settings">Screenrecorder</string>
 
     <!-- ListView animation -->
     <string name="interface_settings_animation_title">Animation options</string>
@@ -146,7 +153,7 @@
     <string name="lockscreen_glowpad_torch_summary">Press and hold lockscreen icon handle to enable torch</string>
 
     <!-- Lockscreen pimping -->
-    <string name="lockscreen_style_title">Theme style</string>
+    <string name="lockscreen_style_title">Lockscreen style</string>
     <string name="lockscreen_style_summary">Colorize lockscreen and set custom unlock icon</string>
     <string name="lockscreen_style_reset_message">Reset all lockscreen colors?</string>
     <string name="lockscreen_frame_color_title">Frame color</string>
@@ -579,7 +586,7 @@
     <string name="omniswitch_first_time_message">Make sure you have enabled OmniSwitch. You can do this by using \"Settings\" below</string>
 
     <!-- Clear all position -->
-    <string name="recents_clear_all_title">Clear all button position</string>
+    <string name="recents_clear_all_title">Clear all button position for stock recents</string>
     <string name="recents_clear_all_dialogtitle">Set the clear all button\u2026</string>
     <string name="recents_clear_all_off">Off</string>
     <string name="recents_clear_all_tr">Top right</string>

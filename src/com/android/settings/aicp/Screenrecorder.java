@@ -48,27 +48,54 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 import com.android.settings.util.Helpers;
 
-public class DisplayAnimationsSettings extends SettingsPreferenceFragment implements
+public class Screenrecorder extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, OnPreferenceClickListener {
-    private static final String TAG = "DisplayAnimationsSettings";
+    private static final String TAG = "ScreenrecorderSettings";
+
+    private static final String SREC_ENABLE_TOUCHES = "srec_enable_touches";
+    private static final String SREC_ENABLE_MIC = "srec_enable_mic";
+
+    private CheckBoxPreference mSrecEnableTouches;
+    private CheckBoxPreference mSrecEnableMic;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ContentResolver resolver = getActivity().getContentResolver();
 
-        addPreferencesFromResource(R.xml.aicp_display_animations_settings);
+        addPreferencesFromResource(R.xml.aicp_screenrecorder);
 
         PreferenceScreen prefSet = getPreferenceScreen();
 
-    }
+        // Screen recording
+        mSrecEnableTouches = (CheckBoxPreference) prefSet.findPreference(SREC_ENABLE_TOUCHES);
+        mSrecEnableTouches.setChecked((Settings.System.getInt(resolver,
+                Settings.System.SREC_ENABLE_TOUCHES, 0) == 1));
+        mSrecEnableTouches.setOnPreferenceChangeListener(this);
+        mSrecEnableMic = (CheckBoxPreference) prefSet.findPreference(SREC_ENABLE_MIC);
+        mSrecEnableMic.setChecked((Settings.System.getInt(resolver,
+                Settings.System.SREC_ENABLE_MIC, 0) == 1));
 
+    }
+       
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         ContentResolver resolver = getActivity().getContentResolver();
         boolean value;
-        return super.onPreferenceTreeClick(preferenceScreen, preference);
+        if  (preference == mSrecEnableTouches) {
+            boolean checked = ((CheckBoxPreference)preference).isChecked();
+            Settings.System.putInt(resolver,
+                    Settings.System.SREC_ENABLE_TOUCHES, checked ? 1:0);
+        } else if  (preference == mSrecEnableMic) {
+            boolean checked = ((CheckBoxPreference)preference).isChecked();
+            Settings.System.putInt(resolver,
+                    Settings.System.SREC_ENABLE_MIC, checked ? 1:0);
+        } else {
+            return super.onPreferenceTreeClick(preferenceScreen, preference);
+        }
+
+        return true;
     }
 
     @Override
@@ -82,4 +109,5 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     public boolean onPreferenceClick(Preference preference) {
         return false;
     }
+
 }

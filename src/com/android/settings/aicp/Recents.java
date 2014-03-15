@@ -16,17 +16,11 @@
 
 package com.android.settings.aicp;
 
-import android.app.ActivityManagerNative;
-import android.app.Dialog;
 import android.content.ContentResolver;
 import android.content.Context;
-import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.RemoteException;
-import android.os.UserHandle;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -34,12 +28,8 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
-import android.preference.RingtonePreference;
-import android.preference.SeekBarPreference;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
-import android.util.Log;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -48,33 +38,68 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 import com.android.settings.util.Helpers;
 
-public class DisplayAnimationsSettings extends SettingsPreferenceFragment implements
+public class Recents extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, OnPreferenceClickListener {
-    private static final String TAG = "DisplayAnimationsSettings";
+    private static final String TAG = "RecentsSettings";
+
+    private static final String RECENTS_CLEAR_ALL = "recents_clear_all";
+    private static final String CUSTOM_RECENT_MODE = "custom_recent_mode";
+
+    private CheckBoxPreference mRecentsCustom;
+    private ListPreference mClearAll;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ContentResolver resolver = getActivity().getContentResolver();
 
-        addPreferencesFromResource(R.xml.aicp_display_animations_settings);
+        addPreferencesFromResource(R.xml.aicp_recents);
 
         PreferenceScreen prefSet = getPreferenceScreen();
 
-    }
+        // Clear all position
+        mClearAll = (ListPreference) prefSet.findPreference(RECENTS_CLEAR_ALL);
+        int value = Settings.System.getInt(resolver,
+                Settings.System.CLEAR_RECENTS_BUTTON_LOCATION, 4);
+        mClearAll.setValue(String.valueOf(value));
+        mClearAll.setSummary(mClearAll.getEntry());
+        mClearAll.setOnPreferenceChangeListener(this);
 
+        // Slim's recents
+        boolean enableRecentsCustom = Settings.AOKP.getBoolean(getContentResolver(),
+                                      Settings.System.CUSTOM_RECENT, false);
+        mRecentsCustom = (CheckBoxPreference) findPreference(CUSTOM_RECENT_MODE);
+        mRecentsCustom.setChecked(enableRecentsCustom);
+        mRecentsCustom.setOnPreferenceChangeListener(this);
+
+    }
+       
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         ContentResolver resolver = getActivity().getContentResolver();
         boolean value;
-        return super.onPreferenceTreeClick(preferenceScreen, preference);
+        return true;
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         ContentResolver resolver = getActivity().getContentResolver();
         final String key = preference.getKey();
+        if (RECENTS_CLEAR_ALL.equals(key)) {
+            int value = Integer.parseInt((String) objValue);
+            int index = mClearAll.findIndexOfValue((String) objValue);
+            Settings.System.putInt(resolver,
+                    Settings.System.CLEAR_RECENTS_BUTTON_LOCATION,
+                    value);
+            mClearAll.setSummary(mClearAll.getEntries()[index]);
+        } else if (preference == mRecentsCustom) {
+            Settings.AOKP.putBoolean(resolver,
+                    Settings.System.CUSTOM_RECENT,
+                    ((Boolean) objValue) ? true : false);
+            Helpers.restartSystemUI();
+        }
+
         return true;
     }
 
