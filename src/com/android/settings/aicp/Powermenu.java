@@ -133,6 +133,8 @@ public class Powermenu extends SettingsPreferenceFragment implements
             int expandedDesktopValue = Integer.valueOf((String) objValue);
             Settings.System.putInt(resolver,
                     Settings.System.EXPANDED_DESKTOP_STYLE, expandedDesktopValue);
+            Settings.System.putInt(resolver,
+                    Settings.System.EXPANDED_DESKTOP_STYLE_TEMP, expandedDesktopValue);
             updateExpandedDesktop(expandedDesktopValue);
         } else if (preference == mOnTheGoPowerMenu) {
             boolean value = (Boolean) objValue;
