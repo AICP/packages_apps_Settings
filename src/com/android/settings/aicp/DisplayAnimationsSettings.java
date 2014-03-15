@@ -91,6 +91,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private static final String DISABLE_FC_NOTIFICATIONS = "disable_fc_notifications";
     private static final String KEY_EXPANDED_DESKTOP = "power_menu_expanded_desktop";
     private static final String KEY_EXPANDED_DESKTOP_NO_NAVBAR = "power_menu_expanded_desktop_no_navbar";
+    private static final String POWER_MENU_ONTHEGO_ENABLED = "power_menu_onthego_enabled";
 
     private CheckBoxPreference mAllowRotation;
     private CheckBoxPreference mBlurBehind;
@@ -103,6 +104,7 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
     private CheckBoxPreference mLockRingBattery;
     private CheckBoxPreference mMissedCallBreath;
     private CheckBoxPreference mNavigationBarLeft;
+    private CheckBoxPreference mOnTheGoPowerMenu;
     private CheckBoxPreference mRecentsCustom;
     private CheckBoxPreference mReminder;
     private CheckBoxPreference mSMSBreath;
@@ -351,6 +353,12 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         } catch (RemoteException e) {
             Log.e(TAG, "Error getting navigation bar status");
         }
+
+        // On the go
+        mOnTheGoPowerMenu = (CheckBoxPreference) prefSet.findPreference(POWER_MENU_ONTHEGO_ENABLED);
+        mOnTheGoPowerMenu.setChecked(Settings.System.getInt(resolver,
+        Settings.System.POWER_MENU_ONTHEGO_ENABLED, 0) == 1);
+        mOnTheGoPowerMenu.setOnPreferenceChangeListener(this);
     }
        
 
@@ -525,6 +533,10 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
             Settings.System.putInt(resolver,
                     Settings.System.EXPANDED_DESKTOP_STYLE, expandedDesktopValue);
             updateExpandedDesktop(expandedDesktopValue);
+        } else if (preference == mOnTheGoPowerMenu) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(resolver,
+                    Settings.System.POWER_MENU_ONTHEGO_ENABLED, value ? 1 : 0);
         }
 
         return true;

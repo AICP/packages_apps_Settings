@@ -879,4 +879,8 @@
     <string name="expanded_desktop_status_bar">With status bar</string>
     <string name="expanded_desktop_no_status_bar">Without status bar</string>
 
+    <!-- On the go -->
+    <string name="power_menu_onthego_title">On-The-Go Mode</string>
+    <string name="power_menu_onthego_title_summary">Enables On-The-Go Mode button in power menu.</string>
+
 </resources>
