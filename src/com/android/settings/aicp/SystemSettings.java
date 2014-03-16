@@ -62,10 +62,13 @@ public class SystemSettings extends SettingsPreferenceFragment implements
     private static final String HFM_DISABLE_ADS = "hfm_disable_ads";
     private static final String KEY_NAVBAR_LEFT_IN_LANDSCAPE = "navigation_bar_left";
     private static final String DISABLE_FC_NOTIFICATIONS = "disable_fc_notifications";
+    private static final String KEY_DONT_SHOW_NAVBAR_ON_SWIPE_EXPANDED_DESKTOP_ENABLED =
+            "dont_show_navbar_on_swipe_expanded_desktop_enabled";
 
     private CheckBoxPreference mDisableFC;
     private CheckBoxPreference mHfmDisableAds;
     private CheckBoxPreference mNavigationBarLeft;
+    private CheckBoxPreference mDontShowNavbar;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -85,6 +88,19 @@ public class SystemSettings extends SettingsPreferenceFragment implements
         mNavigationBarLeft = (CheckBoxPreference) prefSet.findPreference(KEY_NAVBAR_LEFT_IN_LANDSCAPE);
         mNavigationBarLeft.setChecked((Settings.System.getInt(resolver,
                 Settings.System.NAVBAR_LEFT_IN_LANDSCAPE, 0) == 1));
+
+        // Disable FC notification
+        mDisableFC = (CheckBoxPreference) prefSet.findPreference(DISABLE_FC_NOTIFICATIONS);
+        mDisableFC.setChecked((Settings.System.getInt(resolver,
+                Settings.System.DISABLE_FC_NOTIFICATIONS, 0) == 1));
+
+        // Don't show navbar on swipe up while in expanded mode
+        mDontShowNavbar = (CheckBoxPreference) prefSet.findPreference(
+                KEY_DONT_SHOW_NAVBAR_ON_SWIPE_EXPANDED_DESKTOP_ENABLED);
+        mDontShowNavbar.setChecked((Settings.System.getInt(resolver,
+                Settings.System.DONT_SHOW_NAVBAR_ON_SWIPE_EXPANDED_DESKTOP_ENABLED, 0) == 1));
+
+
         try {
             boolean hasNavBar = WindowManagerGlobal.getWindowManagerService().hasNavigationBar();
             PreferenceCategory navCategory = (PreferenceCategory) findPreference(CATEGORY_SYSTEM);
@@ -95,15 +111,11 @@ public class SystemSettings extends SettingsPreferenceFragment implements
                 }
             } else {
                 navCategory.removePreference(mNavigationBarLeft);
+                navCategory.removePreference(mDontShowNavbar);
             }
         } catch (RemoteException e) {
             Log.e(TAG, "Error getting navigation bar status");
         }
-
-        // Disable FC notification
-        mDisableFC = (CheckBoxPreference) prefSet.findPreference(DISABLE_FC_NOTIFICATIONS);
-        mDisableFC.setChecked((Settings.System.getInt(resolver,
-                Settings.System.DISABLE_FC_NOTIFICATIONS, 0) == 1));
 
     }
        
@@ -125,6 +137,10 @@ public class SystemSettings extends SettingsPreferenceFragment implements
             boolean checked = ((CheckBoxPreference)preference).isChecked();
             Settings.System.putInt(resolver,
                     Settings.System.DISABLE_FC_NOTIFICATIONS, checked ? 1:0);
+        } else if  (preference == mDontShowNavbar) {
+            boolean checked = ((CheckBoxPreference)preference).isChecked();
+            Settings.System.putInt(resolver,
+                    Settings.System.DONT_SHOW_NAVBAR_ON_SWIPE_EXPANDED_DESKTOP_ENABLED, checked ? 1:0);
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }

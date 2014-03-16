@@ -27,6 +27,12 @@
             android:summary="@string/navigation_bar_left_summary"
             android:defaultValue="false" />
 
+        <CheckBoxPreference
+            android:key="dont_show_navbar_on_swipe_expanded_desktop_enabled"
+            android:title="@string/dont_show_navbar_title"
+            android:summary="@string/dont_show_navbar_summary"
+            android:persistent="false" />
+
         <PreferenceScreen
             android:key="progressbar_settings"
             android:fragment="com.android.settings.aicp.ProgressBar"

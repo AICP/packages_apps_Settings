@@ -899,4 +899,8 @@
     <string name="power_menu_onthego_title">On-The-Go Mode</string>
     <string name="power_menu_onthego_title_summary">Enables On-The-Go Mode button in power menu.</string>
 
+    <!-- Don't show navbar on swipe up -->
+    <string name="dont_show_navbar_title">Don\'t show navbar on swipe</string>
+    <string name="dont_show_navbar_summary">Whether navbar will be shown on swipe up while in expanded mode WITH STATUSBAR ONLY.</string>
+
 </resources>
