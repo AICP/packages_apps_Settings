@@ -172,7 +172,7 @@ public class LockscreenStyle extends SettingsPreferenceFragment
                 findPreference(KEY_LOCKSCREEN_MISC_COLOR);
         mMiscColor.setOnPreferenceChangeListener(this);
         int miscColor = Settings.Secure.getInt(getContentResolver(),
-                    Settings.Secure.LOCKSCREEN_DOTS_COLOR, -2);
+                    Settings.Secure.LOCKSCREEN_MISC_COLOR, -2);
         setPreferenceSummary(mMiscColor,
                 getResources().getString(
                 R.string.lockscreen_misc_color_summary), miscColor);
