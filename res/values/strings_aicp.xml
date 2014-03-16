@@ -788,8 +788,17 @@
     <string name="noti_reminder_interval_4s">4 seconds</string>
 
     <!-- Slim's recent -->
-    <string name="custom_recent_title">Enable Slim Recents</string>
+    <string name="custom_recent_title">Enable Slim\'s recents</string>
     <string name="custom_recent_summary">Tick this box to switch between Slim/stock recents</string>
+    <string name="recent_panel_category">Slim\'s recent apps panel</string>
+    <string name="recent_panel_scale_title">Size</string>
+    <string name="recent_panel_scale_summary">Recent apps panel size in percent.</string>
+    <string name="recent_panel_100">100% (default)</string>
+    <string name="recent_panel_85">85%</string>
+    <string name="recent_panel_70">70%</string>
+    <!-- ATTENTION: RTL languages need to replace left with right -->
+    <string name="recent_panel_lefty_mode_title">Show on the left edge</string>
+    <string name="recent_panel_lefty_mode_summary">Show recent apps panel on the left edge.</string>
 
     <!-- Kenrel tweaker -->
     <string name="kerneltweaker_settings_title">Kernel Tweaker</string>
