@@ -328,11 +328,14 @@
     <string name="pocket_mode_lockscreen">Show Lockscreen notifications</string>
     <string name="pocket_mode_active">Turn on Active Display</string>
 
-    <!-- Custom Carrier -->
-    <string name="notification_carrier_label_title">Carrier label</string>
-    <string name="notification_custom_carrier_label_title">Custom carrier label</string>
-    <string name="notification_custom_carrier_label_explain">Please enter a new label. Enter an empty label to revert to stock label.</string>
-    <string name="notification_custom_carrier_label_notset">Custom label currently not set</string>
+    <!-- Custom Carrier and Wifi Label Options -->
+    <string name="carrier_label_title">Carrier and Wifi label</string>
+    <string name="custom_carrier_label_title">Custom carrier label</string>
+    <string name="custom_carrier_label_explain">Please enter a new label. Enter an empty label to revert to stock label.</string>
+    <string name="custom_carrier_label_notset">Custom label currently not set</string>
+    <string name="hide_carrier_title">Hide carrier label</string>
+    <string name="notification_show_wifi_ssid_title">Show Wifi network name</string>
+    <string name="notification_show_wifi_ssid_summary">Display the name of the currently connected Wifi network</string>
 
     <!-- StatusBar Battery Settings -->
     <string name="battery_icon_title">Battery icon</string>

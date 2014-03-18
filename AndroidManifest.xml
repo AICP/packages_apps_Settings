@@ -1856,6 +1856,7 @@
         <activity android:name=".aicp.AppSidebar" />
         <activity android:name=".aicp.gestureanywhere.GestureAnywhereBuilderActivity" />
         <activity android:name=".aicp.gestureanywhere.GestureAnywhereCreateGestureActivity" />
+        <activity android:name=".aicp.CarrierLabel" />
 
         <activity android:name=".ApnEditor" />
 
