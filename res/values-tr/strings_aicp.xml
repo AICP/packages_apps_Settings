@@ -200,7 +200,7 @@
     <!-- Halo -->
     <string name="halo_settings_title">HALO</string>
     <string name="halo_active_title">HALO\'yu etkinleştirin</string>
-    <string name="halo_active_summary">Seçildiğinde HALO\'yu etkinleşir</string>
+    <string name="halo_active_summary">Seçildiğinde HALO\'yu etkinleştirir</string>
     <string name="halo_style_title">HALO stili</string>
     <string name="halo_behavior_title">HALO davranışı</string>
     <string name="halo_hide_title">Bir eylemden sonra HALO\'yu gizle</string>
@@ -328,11 +328,14 @@
     <string name="pocket_mode_lockscreen">Kilit ekranında bildirimleri göster</string>
     <string name="pocket_mode_active">Aktif ekran\'ı etkinleştir</string>
 
-    <!-- Custom Carrier -->
+    <!-- Custom Carrier and Wifi Label Options -->
     <string name="notification_carrier_label_title">Şebeke etiketi</string>
     <string name="notification_custom_carrier_label_title">Özel şebeke etiketi</string>
     <string name="notification_custom_carrier_label_explain">Yeni etiket girin. Eğer boş bırakırsanız varsayılana döner.</string>
     <string name="notification_custom_carrier_label_notset">Özel etiket şuan ayarlanmadı</string>
+    <string name="hide_carrier_title">Özel şebeke etiketini gizle</string>
+    <string name="notification_show_wifi_ssid_title">Kablosuz Ağ adını göster</string>
+    <string name="notification_show_wifi_ssid_summary">Bağlı olunan kablosuz ağının adını gösterir</string>
 
     <!-- StatusBar Battery Settings -->
     <string name="battery_icon_title">Pil simgesi</string>
@@ -550,7 +553,7 @@
     <string name="set_custom_density_set">Ayarla</string>
     <string name="custom_density_dialog_title">"DİKKAT!"</string>
     <string name="custom_density_dialog_summary">"LCD Yoğunluğunu değiştirmek, beklenmedik uygulama davranışlarına sorun verebilir. Multi-DPI Play Store yüklediğinizden emin olun."</string>
-    <string name="custom_density_dialog_button_got">Yoğunluk değiştirildi</string>
+    <string name="custom_density_dialog_button_got">Ekran yoğunluğu değiştirildi</string>
     <string name="custom_density_dialog_button_reboot">Şimdi yeniden başlat</string>
 
     <!-- Enable power menu -->
@@ -790,6 +793,15 @@
     <!-- Slim's recent -->
     <string name="custom_recent_title">SlimRom tarzı Son Uygulamalar</string>
     <string name="custom_recent_summary">Son uygulamalar ekranına ince ve sade bir görünüm verir</string>
+    <string name="recent_panel_category">SlimRom tarzı Son Uygulamalar Paneli</string>
+    <string name="recent_panel_scale_title">Boyut</string>
+    <string name="recent_panel_scale_summary">Son Uygulamalar paneli boyutu (%)</string>
+    <string name="recent_panel_100">%100 (varsayılan)</string>
+    <string name="recent_panel_85">%85</string>
+    <string name="recent_panel_70">%70</string>
+    <!-- ATTENTION: RTL languages need to replace left with right -->
+    <string name="recent_panel_lefty_mode_title">Slim Son Uygulamalar paneli solda</string>
+    <string name="recent_panel_lefty_mode_summary">Slim Son Uygulamalar paneli konumu ekranın solunda.</string>
 
     <!-- Kenrel tweaker -->
     <string name="kerneltweaker_settings_title">Kernel Tweaker</string>
@@ -798,8 +810,8 @@
     <string name="aicp_ota_settings_title">Aicp OTA</string>
 
     <!-- Text for forcing expanded notifications -->
-    <string name="disable_fc_notifications_title">ÇD Bildirimlerini kapat</string>
-    <string name="disable_fc_notifications_summary">Tüm Çalışmayı Durdurdu bildirimlerini kapat</string>
+    <string name="disable_fc_notifications_title">Çalışmayı Durdurdu Bildirimlerini kapat</string>
+    <string name="disable_fc_notifications_summary">Tüm Çalışmayı Durdurdu bildirimlerini kapatın</string>
 
     <!-- Text for Misc Tweaks entry -->
     <string name="misc_tweaks_title">Çeşitli İnce Ayarlar</string>
@@ -889,5 +901,9 @@
     <!-- On the go -->
     <string name="power_menu_onthego_title">On-The-Go Modu</string>
     <string name="power_menu_onthego_title_summary">Güç menüsünde On-The-Go Modu butonu gösterir.</string>
+
+    <!-- Don't show navbar on swipe up -->
+    <string name="dont_show_navbar_title">Gezinme çubuğunu gösterme</string>
+    <string name="dont_show_navbar_summary">Genişletilmiş mod ve Sadece Durum Çubuğu seçeneği etkin iken, parmakla yukarı kaydırma ile gezinme çubuğu gösterilir.</string>
 
 </resources>
