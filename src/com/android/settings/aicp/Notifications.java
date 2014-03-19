@@ -66,7 +66,9 @@ public class Notifications extends SettingsPreferenceFragment implements
     private static final String PREF_NOTI_REMINDER_ENABLED = "noti_reminder_enabled";
     private static final String PREF_NOTI_REMINDER_RINGTONE = "noti_reminder_ringtone";
     private static final String PREF_NOTI_REMINDER_INTERVAL = "noti_reminder_interval";
+    private static final String PREF_STATUS_BAR_CUSTOM_HEADER = "status_bar_custom_header";
 
+    private CheckBoxPreference mCustomHeader;
     private CheckBoxPreference mMissedCallBreath;
     private CheckBoxPreference mReminder;
     private CheckBoxPreference mSMSBreath;
@@ -165,6 +167,11 @@ public class Notifications extends SettingsPreferenceFragment implements
         mReminderRingtone.setOnPreferenceChangeListener(this);
         mReminderRingtone.setEnabled(mode != 0);
 
+        // Custom notif header
+        mCustomHeader = (CheckBoxPreference) prefSet.findPreference(PREF_STATUS_BAR_CUSTOM_HEADER);
+        mCustomHeader.setChecked((Settings.System.getInt(resolver, 
+                Settings.System.STATUS_BAR_CUSTOM_HEADER, 0) == 1));
+
     }
        
     @Override
@@ -191,6 +198,10 @@ public class Notifications extends SettingsPreferenceFragment implements
             value = mVoicemailBreath.isChecked();
             Settings.System.putInt(resolver,
                     Settings.System.KEY_VOICEMAIL_BREATH, value ? 1 : 0);
+        } else if (preference == mCustomHeader) {
+            value = mCustomHeader.isChecked();
+            Settings.System.putInt(resolver,
+                    Settings.System.STATUS_BAR_CUSTOM_HEADER, value ? 1 : 0);
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
