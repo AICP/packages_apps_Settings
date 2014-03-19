@@ -16,6 +16,7 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         android:title="@string/system_settings"
+        android:key="system_screen"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <PreferenceCategory
@@ -40,17 +41,17 @@
             android:entryValues="@array/navigation_bar_menu_values"
             android:title="@string/menu_button_location" />
 
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="system_category"
-        android:title="@string/system_category_title">
-
         <CheckBoxPreference
             android:key="dont_show_navbar_on_swipe_expanded_desktop_enabled"
             android:title="@string/dont_show_navbar_title"
             android:summary="@string/dont_show_navbar_summary"
             android:persistent="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="system_category"
+        android:title="@string/system_category_title">
 
         <PreferenceScreen
             android:key="progressbar_settings"

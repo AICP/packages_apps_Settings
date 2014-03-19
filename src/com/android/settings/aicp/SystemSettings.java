@@ -75,6 +75,9 @@ public class SystemSettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mNavigationMenuForce;
     private ListPreference mNavigationMenu;
 
+    private PreferenceScreen mSystemScreen;
+    private PreferenceCategory mNavbarCategory;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,6 +86,9 @@ public class SystemSettings extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.aicp_system);
 
         PreferenceScreen prefSet = getPreferenceScreen();
+
+        mSystemScreen = (PreferenceScreen) findPreference("system_screen");
+        mNavbarCategory = (PreferenceCategory) findPreference("navbar_category");
 
         // Disable ads
         mHfmDisableAds = (CheckBoxPreference) prefSet.findPreference(HFM_DISABLE_ADS);
@@ -127,10 +133,7 @@ public class SystemSettings extends SettingsPreferenceFragment implements
                     navCategory.removePreference(mNavigationBarLeft);
                 }
             } else {
-                navCategory.removePreference(mNavigationBarLeft);
-                navCategory.removePreference(mDontShowNavbar);
-                navCategory.removePreference(mNavigationMenuForce);
-                navCategory.removePreference(mNavigationMenu);
+                mSystemScreen.removePreference(mNavbarCategory);
             }
         } catch (RemoteException e) {
             Log.e(TAG, "Error getting navigation bar status");
