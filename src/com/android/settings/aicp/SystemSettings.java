@@ -59,16 +59,21 @@ public class SystemSettings extends SettingsPreferenceFragment implements
     private static final String TAG = "SystemSettings";
 
     private static final String CATEGORY_SYSTEM = "system_category";
+    private static final String CATEGORY_NAVBAR = "navbar_category";
     private static final String HFM_DISABLE_ADS = "hfm_disable_ads";
     private static final String KEY_NAVBAR_LEFT_IN_LANDSCAPE = "navigation_bar_left";
     private static final String DISABLE_FC_NOTIFICATIONS = "disable_fc_notifications";
     private static final String KEY_DONT_SHOW_NAVBAR_ON_SWIPE_EXPANDED_DESKTOP_ENABLED =
             "dont_show_navbar_on_swipe_expanded_desktop_enabled";
+    private static final String KEY_NAVIGATION_MENU = "navigation_menu";
+    private static final String KEY_NAVIGATION_MENU_FORCE = "navigation_menu_force";
 
     private CheckBoxPreference mDisableFC;
     private CheckBoxPreference mHfmDisableAds;
     private CheckBoxPreference mNavigationBarLeft;
     private CheckBoxPreference mDontShowNavbar;
+    private CheckBoxPreference mNavigationMenuForce;
+    private ListPreference mNavigationMenu;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -100,10 +105,22 @@ public class SystemSettings extends SettingsPreferenceFragment implements
         mDontShowNavbar.setChecked((Settings.System.getInt(resolver,
                 Settings.System.DONT_SHOW_NAVBAR_ON_SWIPE_EXPANDED_DESKTOP_ENABLED, 0) == 1));
 
+        // Navigation mnenu force
+        mNavigationMenuForce = (CheckBoxPreference) prefSet.findPreference(KEY_NAVIGATION_MENU_FORCE);
+        mNavigationMenuForce.setChecked((Settings.System.getInt(resolver,
+                Settings.System.NAVIGATION_MENU_FORCE, 0) == 1));
+
+        // Navigation menu
+        mNavigationMenu = (ListPreference) prefSet.findPreference(KEY_NAVIGATION_MENU);
+        mNavigationMenu.setOnPreferenceChangeListener(this);
+        mNavigationMenu.setValue(Integer.toString(Settings.System.getInt(resolver,
+                Settings.System.NAVIGATION_MENU, 0)));
+        mNavigationMenu.setSummary(mNavigationMenu.getEntry());
+
 
         try {
             boolean hasNavBar = WindowManagerGlobal.getWindowManagerService().hasNavigationBar();
-            PreferenceCategory navCategory = (PreferenceCategory) findPreference(CATEGORY_SYSTEM);
+            PreferenceCategory navCategory = (PreferenceCategory) findPreference(CATEGORY_NAVBAR);
 
             if (hasNavBar) {
                 if (!Utils.isPhone(getActivity())) {
@@ -112,6 +129,8 @@ public class SystemSettings extends SettingsPreferenceFragment implements
             } else {
                 navCategory.removePreference(mNavigationBarLeft);
                 navCategory.removePreference(mDontShowNavbar);
+                navCategory.removePreference(mNavigationMenuForce);
+                navCategory.removePreference(mNavigationMenu);
             }
         } catch (RemoteException e) {
             Log.e(TAG, "Error getting navigation bar status");
@@ -141,6 +160,10 @@ public class SystemSettings extends SettingsPreferenceFragment implements
             boolean checked = ((CheckBoxPreference)preference).isChecked();
             Settings.System.putInt(resolver,
                     Settings.System.DONT_SHOW_NAVBAR_ON_SWIPE_EXPANDED_DESKTOP_ENABLED, checked ? 1:0);
+        } else if (preference == mNavigationMenuForce) {
+            value = mNavigationMenuForce.isChecked();
+            Settings.System.putInt(resolver,
+                    Settings.System.NAVIGATION_MENU_FORCE, value ? 1 : 0);
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
@@ -152,6 +175,14 @@ public class SystemSettings extends SettingsPreferenceFragment implements
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         ContentResolver resolver = getActivity().getContentResolver();
         final String key = preference.getKey();
+        if (preference == mNavigationMenu) {
+            int val = Integer.parseInt((String) objValue);
+            int index = mNavigationMenu.findIndexOfValue((String) objValue);
+            Settings.System.putInt(resolver,
+                    Settings.System.NAVIGATION_MENU, val);
+            mNavigationMenu.setSummary(mNavigationMenu.getEntries()[index]);
+        }
+
         return true;
     }
 

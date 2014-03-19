@@ -50,6 +50,8 @@
     <string name="breathing_category_title">Breathing notifications</string>
     <string name="system_settings">System</string>
     <string name="screenrecorder_settings">Screenrecorder</string>
+    <string name="navbar_category_title">Navbar</string>
+    <string name="system_category_title">System</string>
 
     <!-- ListView animation -->
     <string name="interface_settings_animation_title">Animation options</string>
@@ -905,5 +907,13 @@
     <!-- Don't show navbar on swipe up -->
     <string name="dont_show_navbar_title">Don\'t show navbar on swipe</string>
     <string name="dont_show_navbar_summary">Whether navbar will be shown on swipe up while in expanded mode WITH STATUSBAR ONLY.</string>
+
+    <!-- Navigation menu button -->
+    <string name="menu_button_location">Menu button location</string>
+    <string name="menu_location_right">Right</string>
+    <string name="menu_location_left">Left</string>
+    <string name="menu_location_both">Both</string>
+    <string name="navigation_bar_menu_force">Force show menu</string>
+    <string name="navigation_bar_menu_force_summary">Always show the menu button(s)</string>
 
 </resources>
