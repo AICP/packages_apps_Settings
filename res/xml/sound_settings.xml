@@ -60,6 +60,11 @@
             android:persistent="false"
             android:ringtoneType="ringtone" />
 
+    <PreferenceScreen
+        android:key="sound_packages"
+        android:fragment="com.android.settings.sounds.SoundPackageSettings"
+        android:title="@string/sound_packages_title" />
+
     <com.android.settings.aicp.IncreasingRingPreference
             android:key="increasing_ring"
             android:title="@string/increasing_ring_title"
