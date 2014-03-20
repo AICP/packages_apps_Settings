@@ -560,9 +560,9 @@
     <string name="lockscreen_enable_power_menu_title">Kilit ekranında güç menüsü</string>
 
     <!-- Screen recorder settings -->
-    <string name="srec_enable_touches_title">İşaretçiyi etkinleştir</string>	
-    <string name="srec_enable_touches_summary">Ekranı kaydederken dokunmaları göstermek için işaretçiyi etkinleştir</string>	
-    <string name="srec_enable_mic_title">Mikrofonu kullan</string>	
+    <string name="srec_enable_touches_title">İşaretçiyi etkinleştir</string>
+    <string name="srec_enable_touches_summary">Ekranı kaydederken dokunmaları göstermek için işaretçiyi etkinleştir</string>
+    <string name="srec_enable_mic_title">Mikrofonu kullan</string>
     <string name="srec_enable_mic_summary">Ekranı kaydederken mikrofon seslerini de kaydet</string>
 
     <!-- Battery Bar -->
@@ -795,7 +795,7 @@
     <string name="custom_recent_summary">Son uygulamalar ekranına ince ve sade bir görünüm verir</string>
     <string name="recent_panel_category">SlimRom tarzı Son Uygulamalar Paneli</string>
     <string name="recent_panel_scale_title">Boyut</string>
-    <string name="recent_panel_scale_summary">Son Uygulamalar paneli boyutu (%)</string>
+    <string name="recent_panel_scale_summary">Son Uygulamalar paneli boyutu</string>
     <string name="recent_panel_100">%100 (varsayılan)</string>
     <string name="recent_panel_85">%85</string>
     <string name="recent_panel_70">%70</string>
