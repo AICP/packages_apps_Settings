@@ -103,6 +103,8 @@ import com.android.settings.print.PrintSettingsFragment;
 import com.android.settings.profiles.ProfileEnabler;
 import com.android.settings.QuietHours;
 import com.android.settings.slim.themes.ThemeEnabler;
+import com.android.settings.slim.NotificationsShortcutFragment;
+import com.android.settings.slim.dslv.ButtonsListViewSettings;
 import com.android.settings.search.SettingsAutoCompleteTextView;
 import com.android.settings.search.SearchPopulator;
 import com.android.settings.search.SettingsSearchFilterAdapter;
@@ -437,6 +439,8 @@ public class Settings extends PreferenceActivity
         DreamSettings.class.getName(),
         UserSettings.class.getName(),
         NotificationAccessSettings.class.getName(),
+        NotificationsShortcutFragment.class.getName(),
+        ButtonsListViewSettings.class.getName(),
         ManageAccountsSettings.class.getName(),
         PrintSettingsFragment.class.getName(),
         PrintJobSettingsFragment.class.getName(),
@@ -1304,4 +1308,6 @@ public class Settings extends PreferenceActivity
     public static class ThemeSettingsActivity extends Settings { /* empty */ }
     public static class AicpSettingsActivity extends Settings { /* empty */ }
     public static class PieActivity extends Settings { /* empty */ }
+    public static class NotificationsShortcutFragmentActivity extends Settings { /* empty */ }
+    public static class ButtonsListViewSettingsActivity extends Settings { /* empty */ }
 }

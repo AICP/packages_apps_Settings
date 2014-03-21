@@ -57,6 +57,19 @@
         android:title="@string/notification_style_title"
         android:summary="@string/notification_style_summary" />
 
+     <PreferenceScreen
+             android:id="@+id/slim_notification_shortcuts_fragment"
+             android:key="slim_notification_shortcuts"
+             android:fragment="com.android.settings.slim.dslv.ButtonsListViewSettings"
+             android:summary="@string/notification_shortcuts_settings_summary"
+             android:title="@string/notification_shortcuts_settings_title">
+         <extra android:name="buttonMode" android:value="1" />
+         <extra android:name="maxAllowedButtons" android:value="16" />
+         <extra android:name="disableLongpress" android:value="true" />
+         <extra android:name="useAppPickerOnly" android:value="true" />
+         <extra android:name="fragment" android:value="com.android.settings.slim.NotificationsShortcutFragment" />
+     </PreferenceScreen>
+
     <ListPreference
         android:key="smart_pulldown"
         android:title="@string/smart_pulldown_title"
