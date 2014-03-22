@@ -76,6 +76,7 @@ public class SecuritySettings extends RestrictedSettingsFragment
     private static final int CONFIRM_EXISTING_FOR_BIOMETRIC_WEAK_IMPROVE_REQUEST = 124;
     private static final int CONFIRM_EXISTING_FOR_BIOMETRIC_WEAK_LIVELINESS_OFF = 125;
     private static final String LOCK_NUMPAD_RANDOM = "lock_numpad_random";
+    private static final String LOCK_BEFORE_UNLOCK = "lock_before_unlock";
 
 
     // Misc Settings
@@ -105,6 +106,7 @@ public class SecuritySettings extends RestrictedSettingsFragment
     private CheckBoxPreference mBiometricWeakLiveliness;
     private CheckBoxPreference mVisiblePattern;
     private CheckBoxPreference mQuickUnlock;
+    private CheckBoxPreference mLockBeforeUnlock;
 
     private CheckBoxPreference mShowPassword;
 
@@ -272,6 +274,16 @@ public class SecuritySettings extends RestrictedSettingsFragment
                     Settings.Secure.LOCK_NUMPAD_RANDOM, 0)));
             mLockNumpadRandom.setSummary(mLockNumpadRandom.getEntry());
             mLockNumpadRandom.setOnPreferenceChangeListener(this);
+        }
+
+        // Lock before Unlock
+        mLockBeforeUnlock = (CheckBoxPreference) root
+                .findPreference(LOCK_BEFORE_UNLOCK);
+        if (mLockBeforeUnlock != null) {
+            mLockBeforeUnlock.setChecked(
+                    Settings.Secure.getInt(getContentResolver(),
+                    Settings.Secure.LOCK_BEFORE_UNLOCK, 0) == 1);
+            mLockBeforeUnlock.setOnPreferenceChangeListener(this);
         }
 
         // Append the rest of the settings
@@ -704,6 +716,10 @@ public class SecuritySettings extends RestrictedSettingsFragment
                     Integer.valueOf((String) value));
             mLockNumpadRandom.setValue(String.valueOf(value));
             mLockNumpadRandom.setSummary(mLockNumpadRandom.getEntry());
+        } else if (preference == mLockBeforeUnlock) {
+            Settings.Secure.putInt(getContentResolver(),
+                    Settings.Secure.LOCK_BEFORE_UNLOCK,
+                    ((Boolean) value) ? 1 : 0);
         }
         return true;
     }

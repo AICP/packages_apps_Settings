@@ -500,4 +500,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="default_sound_pack">Default (System)</string>
     <string name="error_pack_install">Error while installing the sound pack</string>
 
+    <!-- Lock before unlock -->
+    <string name="lock_before_unlock_title">Show slider before secure unlock</string>
+    <string name="lock_before_unlock_summary">Show slider lockscreen before secure unlock mechanism</string>
+
 </resources>
