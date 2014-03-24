@@ -29,6 +29,11 @@
         android:entryValues="@array/clock_font_style_values"
         android:title="@string/clock_font_style_title" />
 
+    <PreferenceScreen
+        android:key="battery_style_pref"
+        android:fragment="com.android.settings.aicp.StatusBarColor"
+        android:title="@string/custom_status_bar_header_title" />
+
     <Preference
         android:fragment="com.android.settings.aicp.NotificationDrawerStyle"
         android:key="notification_style"

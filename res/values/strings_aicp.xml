@@ -920,4 +920,19 @@
     <string name="custom_statusbar_header_title">Contextual notification panel header</string>
     <string name="custom_statusbar_header_summary">Sets the background of the notification panel header to an image based on the current date and time</string>
 
+    <!-- Status bar color -->
+    <string name="custom_status_bar_header_title">System bars color</string>
+    <string name="custom_status_bar_color_title">Custom system bars color</string>
+    <string name="status_bar_opaque_color">Opaque color</string>
+    <string name="status_bar_transparent_color">Dimmed color</string>
+    <string name="status_bar_color_reset">Reset status bar color</string>
+    <string name="restart_status_bar_menu_title">Restart status bar</string>
+    <string name="restart_status_bar_title">Restart?</string>
+    <string name="restart_status_bar_message">Restarting the System UI will significally change the values you modify.</string>
+    <string name="custom_system_icon_color_title">Custom system icon color</string>
+    <string name="system_icon_color">Icon color</string>
+    <string name="custom_color_summary">Override the system color of the System UI</string>
+    <string name="custom_status_bar_apply_title">Apply</string>
+    <string name="custom_status_bar_apply_summary">Restart SystemUI to apply changes to\nthe system bars colors.</string>
+
 </resources>
