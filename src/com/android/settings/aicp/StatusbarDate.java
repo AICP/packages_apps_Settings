@@ -134,7 +134,7 @@ public class StatusbarDate extends SettingsPreferenceFragment implements
                 mClockDateStyle.setEnabled(true);
                 mClockDateFormat.setEnabled(true);
             }
-            if (mClockDateDisplay.isChecked()) {
+            if (val != 0) {
                 Toast.makeText(getActivity(), "Don't use together with ROMControl settings of date!!!",
                         Toast.LENGTH_LONG).show();
             }
