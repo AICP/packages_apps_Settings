@@ -30,6 +30,11 @@
         android:title="@string/clock_font_style_title" />
 
     <PreferenceScreen
+        android:key="statusbar_date"
+        android:fragment="com.android.settings.aicp.StatusbarDate"
+        android:title="@string/clock_date_display_title" />
+
+    <PreferenceScreen
         android:key="battery_style_pref"
         android:fragment="com.android.settings.aicp.StatusBarColor"
         android:title="@string/custom_status_bar_header_title" />
