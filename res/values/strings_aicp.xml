@@ -951,4 +951,8 @@
     <string name="clock_date_style_uppercase">Uppercase</string>
     <string name="clock_date_format_custom">Custom java format</string>
 
+    <!-- Lockscreen widget frame -->
+    <string name="lockscreen_widget_frame_title">Disable widget frames</string>
+    <string name="lockscreen_widget_frame_summary">Disable widget background frames</string>
+
 </resources>

@@ -63,10 +63,12 @@ public class Lockscreen extends SettingsPreferenceFragment implements
     private static final String BATTERY_AROUND_LOCKSCREEN_RING = "battery_around_lockscreen_ring";
     private static final String KEY_ENABLE_CAMERA = "keyguard_enable_camera";
     private static final String PREF_LOCKSCREEN_TORCH = "lockscreen_torch";
+    private static final String KEY_DISABLE_FRAME = "lockscreen_disable_frame";
 
     private CheckBoxPreference mAllowRotation;
     private CheckBoxPreference mBlurBehind;
     private CheckBoxPreference mEnableCameraWidget;
+    private CheckBoxPreference mDisableFrame;
     private CheckBoxPreference mGlowpadTorch;
     private CheckBoxPreference mLockRingBattery;
     private SeekBarPreference mBlurRadius;
@@ -118,6 +120,12 @@ public class Lockscreen extends SettingsPreferenceFragment implements
         // Hide camera widget
         mEnableCameraWidget = (CheckBoxPreference) prefSet.findPreference(KEY_ENABLE_CAMERA);
 
+        // Lockscreen widget frame
+        mDisableFrame = (CheckBoxPreference) prefSet.findPreference(KEY_DISABLE_FRAME);
+        mDisableFrame.setChecked(Settings.System.getInt(resolver,
+                    Settings.System.LOCKSCREEN_WIDGET_FRAME_ENABLED, 0) == 1);
+        mDisableFrame.setOnPreferenceChangeListener(this);
+
     }
        
 
@@ -166,6 +174,10 @@ public class Lockscreen extends SettingsPreferenceFragment implements
         if (preference == mBlurRadius) {
             Settings.System.putInt(resolver,
                     Settings.System.LOCKSCREEN_BLUR_RADIUS, (Integer)objValue);
+        } else if (preference == mDisableFrame) {
+            Settings.System.putInt(resolver,
+                    Settings.System.LOCKSCREEN_WIDGET_FRAME_ENABLED,
+                    (Boolean) objValue ? 1 : 0);
         }
 
         return true;

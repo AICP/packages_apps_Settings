@@ -51,6 +51,11 @@
         android:title="@string/lockscreen_glowpad_torch_title"
         android:summary="@string/lockscreen_glowpad_torch_summary" />
 
+    <CheckBoxPreference
+        android:key="lockscreen_disable_frame"
+        android:title="@string/lockscreen_widget_frame_title"
+        android:summary="@string/lockscreen_widget_frame_summary" />
+
     <PreferenceScreen
         android:key="keyguard_style"
         android:fragment="com.android.settings.slim.LockscreenStyle"
