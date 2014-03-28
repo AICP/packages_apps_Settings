@@ -214,12 +214,6 @@ public class QuietHours extends SettingsPreferenceFragment implements
 
             mPreferencesChangeListener = new OnSharedPreferenceChangeListener() {
                 public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
-                    if (key.equals(KEY_AUTO_SMS_CALL)
-                            || key.equals(KEY_AUTO_SMS)
-                            || key.equals(KEY_CALL_BYPASS)
-                            || key.equals(KEY_SMS_BYPASS)) {
-                        SmsCallController.getInstance(mContext).scheduleService();
-                    }
                     if (key.equals(KEY_SMS_BYPASS_CODE)) {
                         setSmsBypassCodeSummary();
                     }
@@ -261,12 +255,10 @@ public class QuietHours extends SettingsPreferenceFragment implements
                     mQuietHoursTimeRange.getStartTime());
             Settings.AOKP.putInt(resolver, Settings.AOKP.QUIET_HOURS_END,
                     mQuietHoursTimeRange.getEndTime());
-            SmsCallController.getInstance(mContext).scheduleService();
             return true;
         } else if (preference == mQuietHoursEnabled) {
             Settings.AOKP.putInt(resolver, Settings.AOKP.QUIET_HOURS_ENABLED,
                     (Boolean) newValue ? 1 : 0);
-            SmsCallController.getInstance(mContext).scheduleService();
             return true;
         } else if (preference == mAutoEnable) {
             int val = Integer.parseInt((String) newValue);
@@ -289,7 +281,6 @@ public class QuietHours extends SettingsPreferenceFragment implements
                 mQuietHoursEnabled.setChecked(enabled);
             }
             mAutoEnable.setSummary(mAutoEnable.getEntries()[val]);
-            SmsCallController.getInstance(mContext).scheduleService();
             return true;
         } else if (preference == mQuietHoursNotifications) {
             Settings.AOKP.putInt(resolver, Settings.AOKP.QUIET_HOURS_NOTIFICATIONS,
