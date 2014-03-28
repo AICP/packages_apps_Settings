@@ -27,7 +27,7 @@ import android.telephony.PhoneStateListener;
 import android.telephony.SmsMessage;
 import android.telephony.TelephonyManager;
 
-import com.android.internal.util.slim.QuietHoursHelper;
+import com.android.internal.util.cm.QuietHoursUtils;
 
 import com.android.settings.R;
 
@@ -134,7 +134,7 @@ public class SmsCallService extends Service {
                 if ((mBypassCallCount
                         == SmsCallController.getInstance(
                                 SmsCallService.this).returnUserCallBypassCount())
-                        && QuietHoursHelper.inQuietHours(SmsCallService.this, null)
+                        && QuietHoursUtils.inQuietHours(SmsCallService.this, null)
                         && timeConstraintMet) {
                     // Don't auto-respond if alarm fired
                     mIncomingCall = false;
@@ -158,7 +158,7 @@ public class SmsCallService extends Service {
                         SmsCallService.this).returnUserAutoCall();
 
                 if (userAutoSms != SmsCallController.DEFAULT_DISABLED
-                        && QuietHoursHelper.inQuietHours(SmsCallService.this, null)) {
+                        && QuietHoursUtils.inQuietHours(SmsCallService.this, null)) {
                     final boolean isContact =
                             SmsCallController.getInstance(
                                     SmsCallService.this).isContact(mIncomingNumber);
@@ -193,7 +193,7 @@ public class SmsCallService extends Service {
 
             if ((bypassCodePref != SmsCallController.DEFAULT_DISABLED
                    || userAutoSms != SmsCallController.DEFAULT_DISABLED)
-                    && QuietHoursHelper.inQuietHours(SmsCallService.this, null)) {
+                    && QuietHoursUtils.inQuietHours(SmsCallService.this, null)) {
                 final String bypassCode =
                         SmsCallController.getInstance(
                                 SmsCallService.this).returnUserTextBypassCode();
