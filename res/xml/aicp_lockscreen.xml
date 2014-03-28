@@ -16,6 +16,7 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         android:title="@string/lockscreen_settings_title"
+        android:key="lockscreen_screen"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <CheckBoxPreference
@@ -61,5 +62,17 @@
         android:fragment="com.android.settings.slim.LockscreenStyle"
         android:title="@string/lockscreen_style_title"
         android:summary="@string/lockscreen_style_summary" />
+
+    <PreferenceCategory
+        android:key="hwbutton_category"
+        android:title="@string/hwbutton_category_title">
+
+        <PreferenceScreen
+            android:fragment="com.android.settings.aicp.LockscreenButtons"
+            android:key="lockscreen_buttons"
+            android:title="@string/lockscreen_buttons_title"
+            android:summary="@string/lockscreen_buttons_summary" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
