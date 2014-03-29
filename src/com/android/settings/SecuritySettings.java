@@ -572,6 +572,9 @@ public class SecuritySettings extends RestrictedSettingsFragment
         if (mVisiblePattern != null) {
             mVisiblePattern.setChecked(lockPatternUtils.isVisiblePatternEnabled());
         }
+        if (mVisibleGesture != null) {
+            mVisibleGesture.setChecked(lockPatternUtils.isVisibleGestureEnabled());
+        }
         if (mQuickUnlock != null) {
             mQuickUnlock.setChecked(Settings.AOKP.getBoolean(getContentResolver(),
                     Settings.AOKP.LOCKSCREEN_QUICK_UNLOCK_CONTROL, false));
