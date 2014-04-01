@@ -30,6 +30,10 @@
             android:key="visiblegesture"
             android:title="@string/lockgesture_settings_enable_visible_pattern_title"/>
 
+        <CheckBoxPreference
+            android:key="keyguard_enable_widgets"
+            android:title="@string/security_enable_widgets_title"/>
+
         <ListPreference
             android:key="lock_after_timeout"
             android:title="@string/lock_after_timeout"
