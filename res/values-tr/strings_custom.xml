@@ -75,7 +75,6 @@
     <!-- Font size sample text. This needs to be a very short string, as it is shown in
     multiple font sizes in a limited amount of space. -->
     <string name="font_size_sample">Örnek</string>
-    <string name="summary_font_size" translatable="false">%1$s</string>
 
     <!-- Quiet hours #CM -->
     <string name="quiet_hours_title">Sessiz saatler</string>
@@ -135,7 +134,6 @@
     <string name="auto_brightness_dialog_title">Otomatik parlaklık seviyeleri</string>
     <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g> lüks</string>
     <string name="auto_brightness_last_level_format"><xliff:g id="level">%1$d</xliff:g> -\n\u221e lüks</string>
-    <string name="auto_brightness_brightness_format" translatable="false"><xliff:g id="percent">%s</xliff:g>%%</string>
     <string name="auto_brightness_adjust_button">Ayarla</string>
     <string name="auto_brightness_close_button">Kapat</string>
     <string name="auto_brightness_reset_button">Sıfırla</string>
