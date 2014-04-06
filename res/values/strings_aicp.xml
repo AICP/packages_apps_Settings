@@ -970,4 +970,8 @@
     <string name="lockscreen_buttons_toggle_sound">Toggle sound</string>
     <string name="lockscreen_buttons_sleep">Go to sleep</string>
 
+    <!-- RAM circle -->
+    <string name="stock_recent_panel_category">Stock recents panel</string>
+    <string name="ram_circle_title">RAM circle</string>
+
 </resources>

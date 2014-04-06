@@ -47,11 +47,13 @@ public class Recents extends SettingsPreferenceFragment implements
     private static final String CUSTOM_RECENT_MODE = "custom_recent_mode";
     private static final String RECENT_PANEL_LEFTY_MODE = "recent_panel_lefty_mode";
     private static final String RECENT_PANEL_SCALE = "recent_panel_scale";
+    private static final String RAM_CIRCLE = "ram_circle";
 
     private ListPreference mClearAll;
     private CheckBoxPreference mRecentsCustom;
     private CheckBoxPreference mRecentPanelLeftyMode;
     private ListPreference mRecentPanelScale;
+    private ListPreference mRamCircle;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -69,6 +71,14 @@ public class Recents extends SettingsPreferenceFragment implements
         mClearAll.setValue(String.valueOf(value));
         mClearAll.setSummary(mClearAll.getEntry());
         mClearAll.setOnPreferenceChangeListener(this);
+
+        // RAM circle
+        mRamCircle = (ListPreference) prefSet.findPreference(RAM_CIRCLE);
+        int circleStatus = Settings.System.getInt(resolver,
+                Settings.System.RAM_CIRCLE, 0);
+        mRamCircle.setValue(String.valueOf(circleStatus));
+        mRamCircle.setSummary(mRamCircle.getEntry());
+        mRamCircle.setOnPreferenceChangeListener(this);
 
         // Slim's recents
         boolean enableRecentsCustom = Settings.AOKP.getBoolean(getContentResolver(),
@@ -123,6 +133,12 @@ public class Recents extends SettingsPreferenceFragment implements
             Settings.System.putInt(resolver,
                     Settings.System.RECENT_PANEL_GRAVITY,
                     ((Boolean) objValue) ? Gravity.LEFT : Gravity.RIGHT);
+        } else if (preference == mRamCircle) {
+            int value = Integer.valueOf((String) objValue);
+            int index = mRamCircle.findIndexOfValue((String) objValue);
+            Settings.System.putInt(resolver,
+                    Settings.System.RAM_CIRCLE, value);
+            mRamCircle.setSummary(mRamCircle.getEntries()[index]);
         }
 
         return true;

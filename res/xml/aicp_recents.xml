@@ -18,13 +18,26 @@
         android:title="@string/recents_category_title"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <ListPreference
-        android:key="recents_clear_all"
-        android:dialogTitle="@string/recents_clear_all_dialogtitle"
-        android:title="@string/recents_clear_all_title"
-        android:entries="@array/recents_clear_all_entries"
-        android:entryValues="@array/recents_clear_all_values"
-        android:defaultValue="4" />
+    <PreferenceCategory
+            android:key="stock_recents"
+            android:title="@string/stock_recent_panel_category">
+
+        <ListPreference
+            android:key="recents_clear_all"
+            android:dialogTitle="@string/recents_clear_all_dialogtitle"
+            android:title="@string/recents_clear_all_title"
+            android:entries="@array/recents_clear_all_entries"
+            android:entryValues="@array/recents_clear_all_values"
+            android:defaultValue="4" />
+
+        <ListPreference
+            android:key="ram_circle"
+            android:title="@string/ram_circle_title"
+            android:dialogTitle="@string/ram_circle_title"
+            android:entries="@array/ram_circle_entries"
+            android:entryValues="@array/ram_circle_values" />
+
+    </PreferenceCategory>
 
     <PreferenceCategory
             android:key="slim_recents"
