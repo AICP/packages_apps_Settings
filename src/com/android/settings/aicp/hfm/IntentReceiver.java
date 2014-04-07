@@ -14,36 +14,26 @@
  * limitations under the License.
  */
 
-package com.android.settings.hfm;
+package com.android.settings.aicp.hfm;
 
-import android.app.Service;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.os.IBinder;
+import android.preference.PreferenceManager;
 import android.util.Log;
 
-public class CheckHosts extends Service {
+public class IntentReceiver extends BroadcastReceiver {
 
-    private static final String TAG = "HFMCheckHosts";
+    private static final String TAG = "HFMBootReceiver";
 
-    public static final String HFM_DISABLE_ADS = "hfm_disable_ads";
-
-    private Context mContext;
+    public static final String ACTION_RUN_BOOTCOMPLETE = "android.intent.action.BOOT_COMPLETED";
 
     @Override
-    public IBinder onBind(Intent intent) {
-        return null;
-    }
-
-    @Override
-    public void onCreate() {
-        mContext = this;
-    }
-
-    @Override
-    public void onStart(Intent intent, int startId) {
-        Log.i(TAG, "Started check");
-        HfmHelpers.checkStatus(mContext);
+    public void onReceive(Context context, Intent intent) {
+        Log.i(TAG, "Started Receiver");
+        Intent serv = new Intent(context, CheckHosts.class);
+        serv.setAction(intent.getAction());
+        serv.putExtras(intent);
+        context.startService(serv);
     }
 }

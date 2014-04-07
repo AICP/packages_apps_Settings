@@ -51,7 +51,6 @@ import java.util.ArrayList;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.hfm.HfmHelpers;
 import com.android.settings.Utils;
 import com.android.settings.util.Helpers;
 import com.android.settings.vanir.AppMultiSelectListPreference;
@@ -68,7 +67,6 @@ public class SystemSettings extends SettingsPreferenceFragment implements
 
     private static final String CATEGORY_SYSTEM = "system_category";
     private static final String CATEGORY_NAVBAR = "navbar_category";
-    private static final String HFM_DISABLE_ADS = "hfm_disable_ads";
     private static final String KEY_NAVBAR_LEFT_IN_LANDSCAPE = "navigation_bar_left";
     private static final String DISABLE_FC_NOTIFICATIONS = "disable_fc_notifications";
     private static final String KEY_DONT_SHOW_NAVBAR_ON_SWIPE_EXPANDED_DESKTOP_ENABLED =
@@ -80,8 +78,10 @@ public class SystemSettings extends SettingsPreferenceFragment implements
 
     private AppMultiSelectListPreference mIncludedAppCircleBar;
     private CheckBoxPreference mDisableFC;
+
     private CheckBoxPreference mEnableAppCircleBar;
     private CheckBoxPreference mHfmDisableAds;
+
     private CheckBoxPreference mNavigationBarLeft;
     private CheckBoxPreference mDontShowNavbar;
     private CheckBoxPreference mNavigationMenuForce;
@@ -101,11 +101,6 @@ public class SystemSettings extends SettingsPreferenceFragment implements
 
         mSystemScreen = (PreferenceScreen) findPreference("system_screen");
         mNavbarCategory = (PreferenceCategory) findPreference("navbar_category");
-
-        // Disable ads
-        mHfmDisableAds = (CheckBoxPreference) prefSet.findPreference(HFM_DISABLE_ADS);
-        mHfmDisableAds.setChecked((Settings.System.getInt(resolver,
-                Settings.System.HFM_DISABLE_ADS, 0) == 1));
 
         // Navigation bar left
         mNavigationBarLeft = (CheckBoxPreference) prefSet.findPreference(KEY_NAVBAR_LEFT_IN_LANDSCAPE);
@@ -167,12 +162,7 @@ public class SystemSettings extends SettingsPreferenceFragment implements
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         ContentResolver resolver = getActivity().getContentResolver();
         boolean value;
-        if  (preference == mHfmDisableAds) {
-            boolean checked = ((CheckBoxPreference)preference).isChecked();
-            Settings.System.putInt(resolver,
-                    Settings.System.HFM_DISABLE_ADS, checked ? 1:0);
-            HfmHelpers.checkStatus(getActivity());
-        } else if (preference == mNavigationBarLeft) {
+        if (preference == mNavigationBarLeft) {
             value = mNavigationBarLeft.isChecked();
             Settings.System.putInt(resolver,
                     Settings.System.NAVBAR_LEFT_IN_LANDSCAPE, value ? 1 : 0);
