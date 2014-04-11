@@ -80,10 +80,10 @@
     <string name="listview_cycle_interpolator">Cycle</string>
     <string name="listview_linear_interpolator">Linear</string>
 
-    <!--Lockscreen blur-->
-    <string name="blur_behind_title">Blur Lockscreen Background</string>
+    <!--Lockscreen blur/see through-->
+    <string name="blur_behind_title">Blur/See through lockscreen</string>
     <string name="blur_behind_summary">See through lockscreen with blur effect</string>
-    <string name="blur_radius_title">Blur Radius</string>
+    <string name="blur_radius_title">Blur radius</string>
     <string name="blur_radius_summary">Set the blur radius for the blur effect</string>
 
     <!-- Allow rotation -->

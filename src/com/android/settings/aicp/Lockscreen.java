@@ -101,7 +101,7 @@ public class Lockscreen extends SettingsPreferenceFragment implements
         // Blur lockscreen
         mBlurBehind = (CheckBoxPreference) prefSet.findPreference(KEY_BLUR_BEHIND);
         mBlurBehind.setChecked(Settings.System.getInt(resolver,
-            Settings.System.LOCKSCREEN_BLUR_BEHIND, 0) == 1);
+            Settings.System.LOCKSCREEN_SEE_THROUGH, 0) == 1);
         mBlurRadius = (SeekBarPreference) findPreference(KEY_BLUR_RADIUS);
         mBlurRadius.setProgress(Settings.System.getInt(resolver,
             Settings.System.LOCKSCREEN_BLUR_RADIUS, 12));
@@ -158,7 +158,7 @@ public class Lockscreen extends SettingsPreferenceFragment implements
         boolean value;
         if (preference == mBlurBehind) {
             Settings.System.putInt(resolver,
-                    Settings.System.LOCKSCREEN_BLUR_BEHIND,
+                    Settings.System.LOCKSCREEN_SEE_THROUGH,
                     mBlurBehind.isChecked() ? 1 : 0);
         } else if (preference == mAllowRotation) {
             Settings.System.putInt(resolver,
