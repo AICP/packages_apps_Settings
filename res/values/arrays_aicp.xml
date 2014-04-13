@@ -702,6 +702,18 @@
         <item>70</item>
     </string-array>
 
+    <string-array name="recent_panel_expanded_mode_entries">
+        <item>@string/recent_panel_expanded_mode_auto</item>
+        <item>@string/recent_panel_expanded_mode_always</item>
+        <item>@string/recent_panel_expanded_mode_never</item>
+    </string-array>
+
+    <string-array name="recent_panel_expanded_mode_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
     <!-- Navigation menu button -->
     <string-array name="navigation_bar_menu_entries" translatable="false">
         <item>@string/menu_location_right</item>

@@ -47,12 +47,15 @@ public class Recents extends SettingsPreferenceFragment implements
     private static final String CUSTOM_RECENT_MODE = "custom_recent_mode";
     private static final String RECENT_PANEL_LEFTY_MODE = "recent_panel_lefty_mode";
     private static final String RECENT_PANEL_SCALE = "recent_panel_scale";
+    private static final String RECENT_PANEL_EXPANDED_MODE =
+            "recent_panel_expanded_mode";
     private static final String RAM_CIRCLE = "ram_circle";
 
     private ListPreference mClearAll;
     private CheckBoxPreference mRecentsCustom;
     private CheckBoxPreference mRecentPanelLeftyMode;
     private ListPreference mRecentPanelScale;
+    private ListPreference mRecentPanelExpandedMode;
     private ListPreference mRamCircle;
 
     @Override
@@ -89,7 +92,8 @@ public class Recents extends SettingsPreferenceFragment implements
 
         boolean recentLeftyMode = Settings.System.getInt(resolver,
                 Settings.System.RECENT_PANEL_GRAVITY, Gravity.RIGHT) == Gravity.LEFT;
-        mRecentPanelLeftyMode = (CheckBoxPreference) prefSet.findPreference(RECENT_PANEL_LEFTY_MODE);
+        mRecentPanelLeftyMode =
+                (CheckBoxPreference) prefSet.findPreference(RECENT_PANEL_LEFTY_MODE);
         mRecentPanelLeftyMode.setChecked(recentLeftyMode);
         mRecentPanelLeftyMode.setOnPreferenceChangeListener(this);
 
@@ -98,6 +102,13 @@ public class Recents extends SettingsPreferenceFragment implements
         mRecentPanelScale = (ListPreference) prefSet.findPreference(RECENT_PANEL_SCALE);
         mRecentPanelScale.setValue(recentScale + "");
         mRecentPanelScale.setOnPreferenceChangeListener(this);
+
+        int recentExpandedMode = Settings.System.getInt(resolver,
+                Settings.System.RECENT_PANEL_EXPANDED_MODE, 0);
+        mRecentPanelExpandedMode =
+                (ListPreference) prefSet.findPreference(RECENT_PANEL_EXPANDED_MODE);
+        mRecentPanelExpandedMode.setValue(recentExpandedMode + "");
+        mRecentPanelExpandedMode.setOnPreferenceChangeListener(this);
 
     }
        
@@ -139,6 +150,10 @@ public class Recents extends SettingsPreferenceFragment implements
             Settings.System.putInt(resolver,
                     Settings.System.RAM_CIRCLE, value);
             mRamCircle.setSummary(mRamCircle.getEntries()[index]);
+        } else if (preference == mRecentPanelExpandedMode) {
+            int value = Integer.parseInt((String) objValue);
+            Settings.System.putInt(resolver,
+                    Settings.System.RECENT_PANEL_EXPANDED_MODE, value);
         }
 
         return true;
