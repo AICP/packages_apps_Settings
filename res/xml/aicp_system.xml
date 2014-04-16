@@ -50,6 +50,24 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="category_app_circle_bar"
+        android:title="@string/category_app_circle_bar_title">
+
+        <CheckBoxPreference
+        android:key="enable_app_circle_bar"
+        android:title="@string/app_circle_bar_title"
+        android:summary="@string/app_circle_bar_summary" />
+
+        <com.android.settings.vanir.AppMultiSelectListPreference
+        android:key="app_circle_bar_included_apps"
+        android:persistent="false"
+        android:title="@string/app_circle_bar_included_apps_title"
+        android:summary="@string/app_circle_bar_included_apps_summary"
+        android:dependency="enable_app_circle_bar" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="system_category"
         android:title="@string/system_category_title">
 

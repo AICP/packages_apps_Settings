@@ -979,4 +979,11 @@
     <string name="stock_recent_panel_category">Stock recents panel</string>
     <string name="ram_circle_title">RAM circle</string>
 
+    <!-- App circle bar -->
+    <string name="category_app_circle_bar_title">App launcher</string>
+    <string name="app_circle_bar_title">App circle bar</string>
+    <string name="app_circle_bar_summary">Show circle app launcher after touching right side of screen</string>
+    <string name="app_circle_bar_included_apps_title">Included apps</string>
+    <string name="app_circle_bar_included_apps_summary">Apps will show in app circle bar</string>
+
 </resources>

@@ -42,6 +42,7 @@ import android.preference.RingtonePreference;
 import android.preference.SeekBarPreference;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.WindowManagerGlobal;
 import android.widget.Toast;
@@ -53,6 +54,13 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.hfm.HfmHelpers;
 import com.android.settings.Utils;
 import com.android.settings.util.Helpers;
+import com.android.settings.vanir.AppMultiSelectListPreference;
+
+import java.util.HashSet;
+import java.util.Set;
+import java.lang.Thread;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class SystemSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, OnPreferenceClickListener {
@@ -67,8 +75,12 @@ public class SystemSettings extends SettingsPreferenceFragment implements
             "dont_show_navbar_on_swipe_expanded_desktop_enabled";
     private static final String KEY_NAVIGATION_MENU = "navigation_menu";
     private static final String KEY_NAVIGATION_MENU_FORCE = "navigation_menu_force";
+    private static final String PREF_ENABLE_APP_CIRCLE_BAR = "enable_app_circle_bar";
+    private static final String PREF_INCLUDE_APP_CIRCLE_BAR_KEY = "app_circle_bar_included_apps";
 
+    private AppMultiSelectListPreference mIncludedAppCircleBar;
     private CheckBoxPreference mDisableFC;
+    private CheckBoxPreference mEnableAppCircleBar;
     private CheckBoxPreference mHfmDisableAds;
     private CheckBoxPreference mNavigationBarLeft;
     private CheckBoxPreference mDontShowNavbar;
@@ -123,7 +135,6 @@ public class SystemSettings extends SettingsPreferenceFragment implements
                 Settings.System.NAVIGATION_MENU, 0)));
         mNavigationMenu.setSummary(mNavigationMenu.getEntry());
 
-
         try {
             boolean hasNavBar = WindowManagerGlobal.getWindowManagerService().hasNavigationBar();
             PreferenceCategory navCategory = (PreferenceCategory) findPreference(CATEGORY_NAVBAR);
@@ -138,6 +149,16 @@ public class SystemSettings extends SettingsPreferenceFragment implements
         } catch (RemoteException e) {
             Log.e(TAG, "Error getting navigation bar status");
         }
+
+        // App circle bar
+        mEnableAppCircleBar = (CheckBoxPreference) prefSet.findPreference(PREF_ENABLE_APP_CIRCLE_BAR);
+        mEnableAppCircleBar.setChecked((Settings.System.getInt(resolver,
+                Settings.System.ENABLE_APP_CIRCLE_BAR, 0) == 1));
+
+        mIncludedAppCircleBar = (AppMultiSelectListPreference) prefSet.findPreference(PREF_INCLUDE_APP_CIRCLE_BAR_KEY);
+        Set<String> includedApps = getIncludedApps();
+        if (includedApps != null) mIncludedAppCircleBar.setValues(includedApps);
+        mIncludedAppCircleBar.setOnPreferenceChangeListener(this);
 
     }
        
@@ -167,6 +188,10 @@ public class SystemSettings extends SettingsPreferenceFragment implements
             value = mNavigationMenuForce.isChecked();
             Settings.System.putInt(resolver,
                     Settings.System.NAVIGATION_MENU_FORCE, value ? 1 : 0);
+        } else if  (preference == mEnableAppCircleBar) {
+            boolean checked = ((CheckBoxPreference)preference).isChecked();
+            Settings.System.putInt(resolver,
+                    Settings.System.ENABLE_APP_CIRCLE_BAR, checked ? 1:0);
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
@@ -184,6 +209,8 @@ public class SystemSettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(resolver,
                     Settings.System.NAVIGATION_MENU, val);
             mNavigationMenu.setSummary(mNavigationMenu.getEntries()[index]);
+        } else if (preference == mIncludedAppCircleBar) {
+            storeIncludedApps((Set<String>) objValue);
         }
 
         return true;
@@ -192,5 +219,26 @@ public class SystemSettings extends SettingsPreferenceFragment implements
     @Override
     public boolean onPreferenceClick(Preference preference) {
         return false;
+    }
+
+    private Set<String> getIncludedApps() {
+        String included = Settings.System.getString(getActivity().getContentResolver(),
+                Settings.System.WHITELIST_APP_CIRCLE_BAR);
+        if (TextUtils.isEmpty(included)) {
+            return null;
+        }
+        return new HashSet<String>(Arrays.asList(included.split("\\|")));
+    }
+
+    private void storeIncludedApps(Set<String> values) {
+        StringBuilder builder = new StringBuilder();
+        String delimiter = "";
+        for (String value : values) {
+            builder.append(delimiter);
+            builder.append(value);
+            delimiter = "|";
+        }
+        Settings.System.putString(getActivity().getContentResolver(),
+                Settings.System.WHITELIST_APP_CIRCLE_BAR, builder.toString());
     }
 }
