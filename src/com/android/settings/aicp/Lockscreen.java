@@ -66,6 +66,7 @@ public class Lockscreen extends SettingsPreferenceFragment implements
     private static final String KEY_ENABLE_CAMERA = "keyguard_enable_camera";
     private static final String PREF_LOCKSCREEN_TORCH = "lockscreen_torch";
     private static final String KEY_DISABLE_FRAME = "lockscreen_disable_frame";
+    private static final String KEY_PEEK_STATE = "notification_peek";
 
     private CheckBoxPreference mAllowRotation;
     private CheckBoxPreference mBlurBehind;
@@ -73,6 +74,7 @@ public class Lockscreen extends SettingsPreferenceFragment implements
     private CheckBoxPreference mDisableFrame;
     private CheckBoxPreference mGlowpadTorch;
     private CheckBoxPreference mLockRingBattery;
+    private CheckBoxPreference mNotificationPeek;
     private SeekBarPreference mBlurRadius;
 
     private PreferenceScreen mLockscreenScreen;
@@ -134,6 +136,11 @@ public class Lockscreen extends SettingsPreferenceFragment implements
                     Settings.System.LOCKSCREEN_WIDGET_FRAME_ENABLED, 0) == 1);
         mDisableFrame.setOnPreferenceChangeListener(this);
 
+        // Notification peek
+        mNotificationPeek = (CheckBoxPreference) prefSet.findPreference(KEY_PEEK_STATE);
+        mNotificationPeek.setChecked((Settings.System.getInt(resolver, 
+                Settings.System.PEEK_STATE, 0) == 1));
+
         // Remove lockscreen button actions if device doesn't have hardware keys
         if (!hasButtons()) {
             mLockscreenScreen.removePreference(mHwButtonsCategory);
@@ -173,6 +180,14 @@ public class Lockscreen extends SettingsPreferenceFragment implements
         } else if (preference == mGlowpadTorch) {
             Settings.System.putInt(resolver,
                     Settings.System.LOCKSCREEN_GLOWPAD_TORCH, mGlowpadTorch.isChecked() ? 1 : 0);
+        } else if (preference == mNotificationPeek) {
+            Settings.System.putInt(resolver,
+                    Settings.System.PEEK_STATE, mNotificationPeek.isChecked()
+                    ? 1 : 0);
+            if (mNotificationPeek.isChecked()) {
+                Toast.makeText(getActivity(), R.string.notification_peek_toast,
+                        Toast.LENGTH_LONG).show();
+            }
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
