@@ -52,6 +52,7 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 import com.android.settings.util.Helpers;
+import com.android.settings.widget.SeekBarPreferenceCham;
 
 public class Lockscreen extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, OnPreferenceClickListener {
@@ -67,6 +68,7 @@ public class Lockscreen extends SettingsPreferenceFragment implements
     private static final String PREF_LOCKSCREEN_TORCH = "lockscreen_torch";
     private static final String KEY_DISABLE_FRAME = "lockscreen_disable_frame";
     private static final String KEY_PEEK_STATE = "notification_peek";
+    private static final String KEY_PEEK_TIME = "notification_peek_time";
 
     private CheckBoxPreference mAllowRotation;
     private CheckBoxPreference mBlurBehind;
@@ -76,6 +78,7 @@ public class Lockscreen extends SettingsPreferenceFragment implements
     private CheckBoxPreference mLockRingBattery;
     private CheckBoxPreference mNotificationPeek;
     private SeekBarPreference mBlurRadius;
+    private SeekBarPreferenceCham mNotificationPeekTime;
 
     private PreferenceScreen mLockscreenScreen;
     private PreferenceCategory mHwButtonsCategory;
@@ -140,6 +143,10 @@ public class Lockscreen extends SettingsPreferenceFragment implements
         mNotificationPeek = (CheckBoxPreference) prefSet.findPreference(KEY_PEEK_STATE);
         mNotificationPeek.setChecked((Settings.System.getInt(resolver, 
                 Settings.System.PEEK_STATE, 0) == 1));
+        mNotificationPeekTime = (SeekBarPreferenceCham) prefSet.findPreference(KEY_PEEK_TIME);
+        mNotificationPeekTime.setValue(Settings.System.getInt(resolver,
+                Settings.System.PEEK_TIME, 5000));
+        mNotificationPeekTime.setOnPreferenceChangeListener(this);
 
         // Remove lockscreen button actions if device doesn't have hardware keys
         if (!hasButtons()) {
@@ -206,6 +213,10 @@ public class Lockscreen extends SettingsPreferenceFragment implements
             Settings.System.putInt(resolver,
                     Settings.System.LOCKSCREEN_WIDGET_FRAME_ENABLED,
                     (Boolean) objValue ? 1 : 0);
+        } else if ( preference == mNotificationPeekTime) {
+            int time = ((Integer)objValue).intValue();
+            Settings.System.putInt(resolver,
+                    Settings.System.PEEK_TIME, time);
         }
 
         return true;
