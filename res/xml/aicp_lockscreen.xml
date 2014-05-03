@@ -63,6 +63,12 @@
         android:title="@string/lockscreen_style_title"
         android:summary="@string/lockscreen_style_summary" />
 
+    <CheckBoxPreference
+        android:key="notification_peek"
+        android:title="@string/notification_peek_title"
+        android:summary="@string/notification_peek_summary"
+        android:persistent="false" />
+
     <PreferenceCategory
         android:key="hwbutton_category"
         android:title="@string/hwbutton_category_title">
