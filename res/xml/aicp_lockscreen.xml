@@ -63,30 +63,11 @@
         android:title="@string/lockscreen_style_title"
         android:summary="@string/lockscreen_style_summary" />
 
-    <PreferenceCategory
-        android:key="peek_category"
-        android:title="@string/notification_peek_category">
-
-        <CheckBoxPreference
-            android:key="notification_peek"
-            android:title="@string/notification_peek_title"
-            android:summary="@string/notification_peek_summary"
-            android:persistent="false" />
-
-        <com.android.settings.widget.SeekBarPreferenceCham
-            android:key="notification_peek_time"
-            android:persistent="false"
-            android:title="@string/notification_peek_time_title"
-            android:summary="@string/notification_peek_time_summary"
-            android:max="10000"
-            settings:min="500"
-            settings:unitsLeft=""
-            settings:unitsRight="ms"
-            settings:interval="100"
-            android:defaultValue="5000"
-            android:dependency="notification_peek" />
-
-    </PreferenceCategory>
+    <CheckBoxPreference
+        android:key="notification_peek"
+        android:title="@string/notification_peek_title"
+        android:summary="@string/notification_peek_summary"
+        android:persistent="false" />
 
     <PreferenceCategory
         android:key="hwbutton_category"
