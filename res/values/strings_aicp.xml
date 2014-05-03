@@ -996,8 +996,11 @@
     <string name="app_circle_bar_included_apps_summary">Apps will show in app circle bar</string>
 
     <!--Notification peek-->
+    <string name="notification_peek_category">Peek</string>
     <string name="notification_peek_title">Notification peek</string>
     <string name="notification_peek_summary">Show latest notification after picking up your device</string>
     <string name="notification_peek_toast">This option can\'t work with any\nother lockscreen notification options!</string>
+    <string name="notification_peek_time_title">Peek time</string>
+    <string name="notification_peek_time_summary">How long to display peeked notification</string>
 
 </resources>
