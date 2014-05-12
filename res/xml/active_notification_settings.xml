@@ -51,17 +51,6 @@
             android:entries="@array/ad_timeout_entries"
             android:entryValues="@array/ad_timeout_values" />
 
-        <SeekBarPreference
-            android:key="ad_brightness"
-            android:persistent="false"
-            android:title="@string/ad_brightness_title"
-            android:summary="@string/ad_brightness_summary"
-            settings:maximum="100"
-            settings:minimum="0"
-            settings:unitsLeft=""
-            settings:unitsRight="%"
-            android:defaultValue="100" />
-
         <CheckBoxPreference
             android:key="ad_text"
             android:persistent="false"

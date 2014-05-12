@@ -40,7 +40,6 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
     private static final String KEY_SHOW_TEXT = "ad_text";
     private static final String KEY_REDISPLAY = "ad_redisplay";
     private static final String KEY_SHOW_DATE = "ad_show_date";
-    private static final String KEY_BRIGHTNESS = "ad_brightness";
     private static final String KEY_TIMEOUT = "ad_timeout";
     private static final String KEY_THRESHOLD = "ad_threshold";
     private static final String KEY_OFFSET_TOP = "offset_top";
@@ -54,7 +53,6 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
     private CheckBoxPreference mShowTextPref;
     private CheckBoxPreference mShowDatePref;
     private ListPreference mRedisplayPref;
-    private SeekBarPreference mBrightnessLevel;
     private ListPreference mDisplayTimeout;
     private ListPreference mProximityThreshold;
     private SeekBarPreference mOffsetTop;
@@ -69,9 +67,6 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.active_notification_settings);
-
-        boolean AmonAmarth = Settings.System.getInt(getContentResolver(),
-                Settings.System.ENABLE_ACTIVE_DISPLAY, 0) == 1;
 
         mShowTextPref = (CheckBoxPreference) findPreference(KEY_SHOW_TEXT);
         mShowTextPref.setChecked((Settings.System.getInt(getContentResolver(),
@@ -88,12 +83,6 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
         mShowDatePref = (CheckBoxPreference) findPreference(KEY_SHOW_DATE);
         mShowDatePref.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.ACTIVE_DISPLAY_SHOW_DATE, 0) == 1));
-
-        int level = Settings.System.getInt(getContentResolver(),
-                Settings.System.ACTIVE_DISPLAY_BRIGHTNESS, 0);
-        mBrightnessLevel = (SeekBarPreference) findPreference(KEY_BRIGHTNESS);
-        mBrightnessLevel.setProgress((int) (level));
-        mBrightnessLevel.setOnPreferenceChangeListener(this);
 
         mDisplayTimeout = (ListPreference) prefSet.findPreference(KEY_TIMEOUT);
         mDisplayTimeout.setOnPreferenceChangeListener(this);
@@ -149,6 +138,52 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
         mNotificationsHeight.setMaxValue(max);
         mNotificationsHeight.setOnPreferenceChangeListener(this);
 
+        updateEnabled();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateEnabled();
+    }
+
+    private void updateEnabled() {
+        boolean Megadeth = Settings.System.getInt(getContentResolver(),
+                Settings.System.LOCKSCREEN_NOTIFICATIONS, 0) == 1;
+
+        boolean AmonAmarth = Settings.System.getInt(getContentResolver(),
+                Settings.System.ENABLE_ACTIVE_DISPLAY, 0) == 1;
+
+        if (!AmonAmarth) {
+            mRedisplayPref.setEnabled(false);
+            mShowDatePref.setEnabled(false);
+            mProximityThreshold.setEnabled(false);
+            mDisplayTimeout.setEnabled(false);
+            mShowTextPref.setEnabled(false);
+        } else {
+            mRedisplayPref.setEnabled(true);
+            mShowDatePref.setEnabled(true);
+            mProximityThreshold.setEnabled(true);
+            mDisplayTimeout.setEnabled(true);
+            mShowTextPref.setEnabled(true);
+        }
+
+        if (!Megadeth) {
+            mWakeOnNotification.setEnabled(false);
+            mOffsetTop.setEnabled(false);
+            mNotificationsHeight.setEnabled(false);
+            mNotificationColor.setEnabled(false);
+            mForceExpandedView.setEnabled(false);
+            mExpandedView.setEnabled(false);
+        } else {
+            mWakeOnNotification.setEnabled(true);
+            mOffsetTop.setEnabled(true);
+            mNotificationsHeight.setEnabled(true);
+            mNotificationColor.setEnabled(true);
+            mForceExpandedView.setEnabled(true);
+            mExpandedView.setEnabled(true);
+        }
+
         if (AmonAmarth) {
             mWakeOnNotification.setEnabled(false);
             mWakeOnNotification.setSummary(R.string.wake_on_notification_disable);
@@ -162,11 +197,6 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
         if (preference == mRedisplayPref) {
             int timeout = Integer.valueOf((String) newValue);
             updateRedisplaySummary(timeout);
-            return true;
-        } else if (preference == mBrightnessLevel) {
-            int brightness = Integer.parseInt((String) newValue);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.ACTIVE_DISPLAY_BRIGHTNESS, brightness);
             return true;
         } else if (preference == mNotificationsHeight) {
             Settings.System.putInt(getContentResolver(),
