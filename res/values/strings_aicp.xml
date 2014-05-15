@@ -1003,4 +1003,8 @@
     <string name="notification_peek_time_title">Peek time</string>
     <string name="notification_peek_time_summary">How long to display peeked notification</string>
 
+    <!-- Statusbar Second Clock -->
+    <string name="clock_use_second">Use second clock</string>
+    <string name="clock_use_second_summary">Show second in clock</string>
+
 </resources>

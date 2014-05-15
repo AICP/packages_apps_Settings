@@ -29,6 +29,12 @@
         android:entryValues="@array/clock_font_style_values"
         android:title="@string/clock_font_style_title" />
 
+    <CheckBoxPreference
+        android:key="clock_use_second"
+        android:title="@string/clock_use_second"
+        android:summary="@string/clock_use_second_summary"
+        android:defaultValue="false" />
+
     <PreferenceScreen
         android:key="statusbar_date"
         android:fragment="com.android.settings.aicp.StatusbarDate"
