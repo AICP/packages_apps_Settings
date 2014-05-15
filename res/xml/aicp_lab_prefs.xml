@@ -45,6 +45,13 @@
         android:key="lockscreen_targets"
         android:title="@string/lockscreen_target_title" />
 
+    <!-- Driving mode -->
+    <PreferenceScreen
+        android:key="interface_voice_tts"
+        android:icon="@drawable/ic_settings_driving"
+        android:title="@string/voice_tts_title"
+        android:fragment="com.android.settings.aicp.TtsNotification" />
+
     <!-- Active Notifications -->
     <PreferenceScreen
         android:id="@+id/active_notifications"
