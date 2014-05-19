@@ -579,4 +579,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="shake_secure_timeout_10min">10 minutes after screen turned off</string>
     <string name="shake_secure_timeout_30min">30 minutes after screen turned off</string>
 
+    <!-- Bluetooth accept all Filestypes -->
+    <string name="bluetooth_accept_all_files">Accept all file types</string>
 </resources>
