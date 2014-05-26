@@ -42,6 +42,7 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
     private static final String KEY_SHOW_DATE = "ad_show_date";
     private static final String KEY_TIMEOUT = "ad_timeout";
     private static final String KEY_THRESHOLD = "ad_threshold";
+    private static final String KEY_ACTIVE_DISPLAY_DOUBLE_TAP = "active_display_double_tap";
     private static final String KEY_OFFSET_TOP = "offset_top";
     private static final String KEY_EXPANDED_VIEW = "expanded_view";
     private static final String KEY_WAKE_ON_NOTIFICATION = "wake_on_notification";
@@ -52,6 +53,7 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
 
     private CheckBoxPreference mShowTextPref;
     private CheckBoxPreference mShowDatePref;
+    private CheckBoxPreference mAdDoubleTap;
     private ListPreference mRedisplayPref;
     private ListPreference mDisplayTimeout;
     private ListPreference mProximityThreshold;
@@ -80,8 +82,12 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
         mRedisplayPref.setValue(String.valueOf(timeout));
         updateRedisplaySummary(timeout);
 
-        mShowDatePref = (CheckBoxPreference) findPreference(KEY_SHOW_DATE);
+        mShowDatePref = (CheckBoxPreference) findPreference(KEY_ACTIVE_DISPLAY_DOUBLE_TAP);
         mShowDatePref.setChecked((Settings.System.getInt(getContentResolver(),
+                Settings.System.ACTIVE_DISPLAY_DOUBLE_TAP, 0) == 1));
+
+        mAdDoubleTap = (CheckBoxPreference) findPreference(KEY_SHOW_DATE);
+        mAdDoubleTap.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.ACTIVE_DISPLAY_SHOW_DATE, 0) == 1));
 
         mDisplayTimeout = (ListPreference) prefSet.findPreference(KEY_TIMEOUT);
@@ -157,12 +163,14 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
         if (!AmonAmarth) {
             mRedisplayPref.setEnabled(false);
             mShowDatePref.setEnabled(false);
+            mAdDoubleTap.setEnabled(false);
             mProximityThreshold.setEnabled(false);
             mDisplayTimeout.setEnabled(false);
             mShowTextPref.setEnabled(false);
         } else {
             mRedisplayPref.setEnabled(true);
             mShowDatePref.setEnabled(true);
+            mAdDoubleTap.setEnabled(true);
             mProximityThreshold.setEnabled(true);
             mDisplayTimeout.setEnabled(true);
             mShowTextPref.setEnabled(true);
@@ -255,6 +263,11 @@ public class ActiveNotificationSettings extends SettingsPreferenceFragment imple
             value = mShowDatePref.isChecked();
             Settings.System.putInt(getContentResolver(),
                     Settings.System.ACTIVE_DISPLAY_SHOW_DATE,
+                    value ? 1 : 0);
+        } else if (preference == mAdDoubleTap) {
+            value = mAdDoubleTap.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.ACTIVE_DISPLAY_DOUBLE_TAP,
                     value ? 1 : 0);
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);

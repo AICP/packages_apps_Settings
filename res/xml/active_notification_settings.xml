@@ -30,6 +30,12 @@
             android:entryValues="@array/ad_redisplay_values" />
 
         <CheckBoxPreference
+            android:key="active_display_double_tap"
+            android:persistent="false"
+            android:title="@string/ad_double_tap_title"
+            android:summary="@string/ad_double_tap_summary" />
+
+        <CheckBoxPreference
             android:key="ad_show_date"
             android:persistent="false"
             android:title="@string/ad_show_date_title"

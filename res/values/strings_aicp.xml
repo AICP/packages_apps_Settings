@@ -331,6 +331,8 @@
     <string name="pocket_mode_off">Disabled</string>
     <string name="pocket_mode_lockscreen">Show Lockscreen notifications</string>
     <string name="pocket_mode_active">Turn on Active Display</string>
+    <string name="ad_double_tap_title">Double tap to sleep</string>
+    <string name="ad_double_tap_summary">Turn screen off with double tap</string>
 
     <!-- Custom Carrier and Wifi Label Options -->
     <string name="carrier_label_title">Carrier and Wifi label</string>
