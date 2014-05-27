@@ -90,6 +90,7 @@ import com.android.settings.print.PrintJobSettingsFragment;
 import com.android.settings.print.PrintServiceSettingsFragment;
 import com.android.settings.print.PrintSettingsFragment;
 import com.android.settings.profiles.ProfileEnabler;
+import com.android.settings.QuietHours;
 import com.android.settings.slim.themes.ThemeEnabler;
 import com.android.settings.tts.TextToSpeechSettings;
 import com.android.settings.users.UserSettings;
@@ -367,7 +368,8 @@ public class Settings extends PreferenceActivity
         KeyboardLayoutPickerFragment.class.getName(),
         BlacklistSettings.class.getName(),
         ApnSettings.class.getName(),
-        ThemeSettings.class.getName()
+        ThemeSettings.class.getName(),
+        QuietHours.class.getName()
     };
 
     @Override
@@ -1198,4 +1200,5 @@ public class Settings extends PreferenceActivity
     public static class ApnEditorActivity extends Settings { /* empty */ }
     public static class BlacklistSettingsActivity extends Settings { /* empty */ }
     public static class ProfilesSettingsActivity extends Settings { /* empty */ }
+    public static class QuietHoursSettingsActivity extends Settings { /* empty */ }
 }
