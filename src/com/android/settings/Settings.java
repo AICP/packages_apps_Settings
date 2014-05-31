@@ -1201,4 +1201,5 @@ public class Settings extends PreferenceActivity
     public static class BlacklistSettingsActivity extends Settings { /* empty */ }
     public static class ProfilesSettingsActivity extends Settings { /* empty */ }
     public static class QuietHoursSettingsActivity extends Settings { /* empty */ }
+    public static class ThemeSettingsActivity extends Settings { /* empty */ }
 }
