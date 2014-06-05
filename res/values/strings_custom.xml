@@ -498,6 +498,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="wifi_setting_priority_summary">Specify the priority of the Wi-Fi networks</string>
     <!-- Wi-Fi SSID string limits -->
     <string name="wifi_ssid_input_limit">SSID exceeds maximum length</string>
+    <!-- Wi-Fi P2P string limits -->
+    <string name="p2p_device_name_input_limit">P2P name exceeds maximum length</string>
 
     <!-- Title for the accessibility preference to home button to answers a call. [CHAR LIMIT=35] -->
     <string name="accessibility_home_button_answers_call_prerefence_title">Home button answers call</string>
