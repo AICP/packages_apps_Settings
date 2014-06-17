@@ -50,6 +50,7 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 import com.android.settings.util.Helpers;
+import com.android.settings.widget.SeekBarPreferenceCham;
 
 public class Notifications extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, OnPreferenceClickListener {
@@ -69,6 +70,7 @@ public class Notifications extends SettingsPreferenceFragment implements
     private static final String PREF_STATUS_BAR_CUSTOM_HEADER = "status_bar_custom_header";
     private static final String CLOCK_USE_SECOND = "clock_use_second";
     private static final String PREF_HOVER_STATE = "hover_state";
+    private static final String PREF_SHOW_HOVER_TIME = "show_hover_time";
 
     private CheckBoxPreference mClockUseSecond;
     private CheckBoxPreference mCustomHeader;
@@ -84,6 +86,7 @@ public class Notifications extends SettingsPreferenceFragment implements
     private ListPreference mReminderMode;
     private ListPreference mSmartPulldown;
     private RingtonePreference mReminderRingtone;
+    private SeekBarPreferenceCham mShowHoverTime;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -181,10 +184,14 @@ public class Notifications extends SettingsPreferenceFragment implements
         mClockUseSecond.setChecked((Settings.System.getInt(resolver,
                 Settings.System.CLOCK_USE_SECOND, 0) == 1));
 
-        // Hover state
+        // Hover
         mHoverState = (CheckBoxPreference) prefSet.findPreference(PREF_HOVER_STATE);
         mHoverState.setChecked((Settings.System.getInt(resolver,
                 Settings.System.HOVER_STATE, 0) == 1));
+        mShowHoverTime = (SeekBarPreferenceCham) prefSet.findPreference(PREF_SHOW_HOVER_TIME);
+        mShowHoverTime.setValue(Settings.System.getInt(resolver,
+                Settings.System.SHOW_HOVER_TIME, 5000));
+        mShowHoverTime.setOnPreferenceChangeListener(this);
 
     }
        
@@ -274,6 +281,10 @@ public class Notifications extends SettingsPreferenceFragment implements
             Settings.System.putStringForUser(getContentResolver(),
                     Settings.System.REMINDER_ALERT_RINGER,
                     val.toString(), UserHandle.USER_CURRENT);
+        } else if ( preference == mShowHoverTime) {
+            int time = ((Integer)objValue).intValue();
+            Settings.System.putInt(resolver,
+                    Settings.System.SHOW_HOVER_TIME, time);
         }
 
         return true;

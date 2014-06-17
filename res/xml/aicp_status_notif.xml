@@ -92,6 +92,19 @@
             android:title="@string/hover_state_title"
             android:persistent="false"/>
 
+        <com.android.settings.widget.SeekBarPreferenceCham
+            android:key="show_hover_time"
+            android:persistent="false"
+            android:title="@string/show_hover_time_title"
+            android:summary="@string/show_hover_time_summary"
+            android:max="10000"
+            settings:min="500"
+            settings:unitsLeft=""
+            settings:unitsRight="ms"
+            settings:interval="100"
+            android:defaultValue="5000"
+            android:dependency="hover_state" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

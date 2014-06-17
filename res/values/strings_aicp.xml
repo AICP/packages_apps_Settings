@@ -1097,8 +1097,10 @@
     <string name="time_ten_to">Ten till</string>
     <string name="time_five_to">Five till</string>
 
-    <!-- Hover state -->
+    <!-- Hover -->
     <string name="hover_title">Hover</string>
     <string name="hover_state_title">Enable Hover</string>
+    <string name="show_hover_time_title">Hover time</string>
+    <string name="show_hover_time_summary">How long to display hover notification.</string>
 
 </resources>
