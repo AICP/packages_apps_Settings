@@ -143,4 +143,15 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="hover_category"
+        android:title="@string/hover_title">
+
+        <CheckBoxPreference
+            android:key="hover_state"
+            android:title="@string/hover_state_title"
+            android:persistent="false"/>
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

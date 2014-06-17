@@ -1097,4 +1097,8 @@
     <string name="time_ten_to">Ten till</string>
     <string name="time_five_to">Five till</string>
 
+    <!-- Hover state -->
+    <string name="hover_title">Hover</string>
+    <string name="hover_state_title">Enable Hover</string>
+
 </resources>

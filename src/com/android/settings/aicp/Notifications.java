@@ -68,9 +68,11 @@ public class Notifications extends SettingsPreferenceFragment implements
     private static final String PREF_NOTI_REMINDER_INTERVAL = "noti_reminder_interval";
     private static final String PREF_STATUS_BAR_CUSTOM_HEADER = "status_bar_custom_header";
     private static final String CLOCK_USE_SECOND = "clock_use_second";
+    private static final String PREF_HOVER_STATE = "hover_state";
 
     private CheckBoxPreference mClockUseSecond;
     private CheckBoxPreference mCustomHeader;
+    private CheckBoxPreference mHoverState;
     private CheckBoxPreference mMissedCallBreath;
     private CheckBoxPreference mReminder;
     private CheckBoxPreference mSMSBreath;
@@ -179,6 +181,11 @@ public class Notifications extends SettingsPreferenceFragment implements
         mClockUseSecond.setChecked((Settings.System.getInt(resolver,
                 Settings.System.CLOCK_USE_SECOND, 0) == 1));
 
+        // Hover state
+        mHoverState = (CheckBoxPreference) prefSet.findPreference(PREF_HOVER_STATE);
+        mHoverState.setChecked((Settings.System.getInt(resolver,
+                Settings.System.HOVER_STATE, 0) == 1));
+
     }
        
     @Override
@@ -213,6 +220,10 @@ public class Notifications extends SettingsPreferenceFragment implements
             value = mClockUseSecond.isChecked();
             Settings.System.putInt(resolver,
                     Settings.System.CLOCK_USE_SECOND, value ? 1 : 0);
+        } else if (preference == mHoverState) {
+            value = mHoverState.isChecked();
+            Settings.System.putInt(resolver,
+                    Settings.System.HOVER_STATE, value ? 1 : 0);
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
