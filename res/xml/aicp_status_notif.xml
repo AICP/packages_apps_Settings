@@ -84,6 +84,17 @@
         android:entryValues="@array/less_notification_sounds_values" />
 
     <PreferenceCategory
+        android:key="hover_category"
+        android:title="@string/hover_title">
+
+        <CheckBoxPreference
+            android:key="hover_state"
+            android:title="@string/hover_state_title"
+            android:persistent="false"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="reminder_category"
         android:title="@string/reminder_category_title">
 
