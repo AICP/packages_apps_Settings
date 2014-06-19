@@ -1103,4 +1103,12 @@
     <string name="show_hover_time_title">Hover time</string>
     <string name="show_hover_time_summary">How long to display hover notification.</string>
 
+    <!-- Lockscreen targets number -->
+    <string name="lockscreen_targets_number_title">Lockscreen targets</string>
+    <string name="lockscreen_targets_number_summary">Select how many lockscreen targets you want</string>
+    <string name="lockscreen_targets_number_4">4 custom targets</string>
+    <string name="lockscreen_targets_number_7">7 custom targets</string>
+    <string name="lockscreen_targets_dialog_title">LC targets info</string>
+    <string name="lockscreen_targets_dialog_message">Re-set at least 1 target to\napply this setting to lockscreen!</string>
+
 </resources>

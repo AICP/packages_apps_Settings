@@ -17,10 +17,12 @@
 package com.android.settings.aicp;
 
 import android.app.ActivityManagerNative;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.admin.DevicePolicyManager;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
@@ -69,6 +71,7 @@ public class Lockscreen extends SettingsPreferenceFragment implements
     private static final String KEY_DISABLE_FRAME = "lockscreen_disable_frame";
     private static final String KEY_PEEK_STATE = "notification_peek";
     private static final String KEY_PEEK_TIME = "notification_peek_time";
+    private static final String KEY_LOCKSCREEN_TARGETS_NUMBER = "lockscreen_targets_number";
 
     private CheckBoxPreference mAllowRotation;
     private CheckBoxPreference mBlurBehind;
@@ -77,6 +80,7 @@ public class Lockscreen extends SettingsPreferenceFragment implements
     private CheckBoxPreference mGlowpadTorch;
     private CheckBoxPreference mLockRingBattery;
     private CheckBoxPreference mNotificationPeek;
+    private ListPreference mLockscreenTargetsNumber;
     private SeekBarPreference mBlurRadius;
     private SeekBarPreferenceCham mNotificationPeekTime;
 
@@ -148,6 +152,18 @@ public class Lockscreen extends SettingsPreferenceFragment implements
                 Settings.System.PEEK_TIME, 5000));
         mNotificationPeekTime.setOnPreferenceChangeListener(this);
 
+        // Lockscreen targets number
+        mLockscreenTargetsNumber = (ListPreference) prefSet.findPreference(KEY_LOCKSCREEN_TARGETS_NUMBER);
+        if (Utils.isPhone(getActivity())) {
+            int lockscreenTargetsNumber = Settings.System.getInt(resolver,
+                    Settings.System.LOCKSCREEN_TARGETS_NUMBER, 4);
+            mLockscreenTargetsNumber.setValue(String.valueOf(lockscreenTargetsNumber));
+            updateLockscreenTargetsSummary(lockscreenTargetsNumber);
+            mLockscreenTargetsNumber.setOnPreferenceChangeListener(this);
+        } else {
+            prefSet.removePreference(mLockscreenTargetsNumber);
+        }
+
         // Remove lockscreen button actions if device doesn't have hardware keys
         if (!hasButtons()) {
             mLockscreenScreen.removePreference(mHwButtonsCategory);
@@ -217,6 +233,12 @@ public class Lockscreen extends SettingsPreferenceFragment implements
             int time = ((Integer)objValue).intValue();
             Settings.System.putInt(resolver,
                     Settings.System.PEEK_TIME, time);
+        } else if (preference == mLockscreenTargetsNumber) {
+            int lockscreenTargetsNumber = Integer.valueOf((String) objValue);
+            Settings.System.putInt(resolver, Settings.System.LOCKSCREEN_TARGETS_NUMBER,
+                    lockscreenTargetsNumber);
+            updateLockscreenTargetsSummary(lockscreenTargetsNumber);
+            lockscreenTargetsWarning();
         }
 
         return true;
@@ -233,5 +255,23 @@ public class Lockscreen extends SettingsPreferenceFragment implements
      */
     public boolean hasButtons() {
         return !getResources().getBoolean(com.android.internal.R.bool.config_showNavigationBar);
+    }
+
+    private void updateLockscreenTargetsSummary(int i) {
+        if (i == 4) {
+            mLockscreenTargetsNumber.setSummary(R.string.lockscreen_targets_number_4);
+        } else if (i == 7) {
+            mLockscreenTargetsNumber.setSummary(R.string.lockscreen_targets_number_7);
+        }
+    }
+
+    private void lockscreenTargetsWarning() {
+        new AlertDialog.Builder(getActivity())
+                .setTitle(getResources().getString(R.string.lockscreen_targets_dialog_title))
+                .setMessage(getResources().getString(R.string.lockscreen_targets_dialog_message))
+                .setNegativeButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int whichButton) {
+                        }
+                }).show();
     }
 }
