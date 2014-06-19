@@ -19,6 +19,14 @@
         android:key="lockscreen_screen"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <ListPreference
+        android:key="lockscreen_targets_number"
+        android:title="@string/lockscreen_targets_number_title"
+        android:summary="@string/lockscreen_targets_number_summary"
+        android:entries="@array/lockscreen_targets_number_entries"
+        android:entryValues="@array/lockscreen_targets_number_values"
+        android:persistent="false" />
+
     <CheckBoxPreference
         android:key="blur_behind"
         android:title="@string/blur_behind_title"
