@@ -841,4 +841,25 @@
         <item>300000</item>
     </string-array>
 
+    <!-- Lockscreen targets number -->
+    <string-array name="lockscreen_targets_number_entries" translatable="false">
+        <item>@string/lockscreen_targets_number_2</item>
+        <item>@string/lockscreen_targets_number_3</item>
+        <item>@string/lockscreen_targets_number_4</item>
+        <item>@string/lockscreen_targets_number_5</item>
+        <item>@string/lockscreen_targets_number_6</item>
+        <item>@string/lockscreen_targets_number_7</item>
+        <item>@string/lockscreen_targets_number_8</item>
+    </string-array>
+
+    <string-array name="lockscreen_targets_number_values" translatable="false">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+
 </resources>
