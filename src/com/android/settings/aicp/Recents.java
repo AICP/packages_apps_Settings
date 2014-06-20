@@ -49,6 +49,8 @@ public class Recents extends SettingsPreferenceFragment implements
     private static final String RECENT_PANEL_SCALE = "recent_panel_scale";
     private static final String RECENT_PANEL_EXPANDED_MODE =
             "recent_panel_expanded_mode";
+    private static final String RECENT_PANEL_SHOW_TOPMOST =
+            "recent_panel_show_topmost";
     private static final String RAM_CIRCLE = "ram_circle";
 
     private ListPreference mClearAll;
@@ -110,6 +112,12 @@ public class Recents extends SettingsPreferenceFragment implements
         mRecentPanelExpandedMode.setValue(recentExpandedMode + "");
         mRecentPanelExpandedMode.setOnPreferenceChangeListener(this);
 
+        boolean enableRecentsShowTopmost = Settings.System.getInt(resolver,
+                Settings.System.RECENT_PANEL_SHOW_TOPMOST, 0) == 1;
+        mRecentsShowTopmost = (CheckBoxPreference) prefSet.findPreference(RECENT_PANEL_SHOW_TOPMOST);
+        mRecentsShowTopmost.setChecked(enableRecentsShowTopmost);
+        mRecentsShowTopmost.setOnPreferenceChangeListener(this);
+
     }
        
 
@@ -154,6 +162,10 @@ public class Recents extends SettingsPreferenceFragment implements
             int value = Integer.parseInt((String) objValue);
             Settings.System.putInt(resolver,
                     Settings.System.RECENT_PANEL_EXPANDED_MODE, value);
+        } else if (preference == mRecentsShowTopmost) {
+            Settings.System.putInt(resolver,
+                    Settings.System.RECENT_PANEL_SHOW_TOPMOST,
+                    ((Boolean) objValue) ? 1 : 0);
         }
 
         return true;
