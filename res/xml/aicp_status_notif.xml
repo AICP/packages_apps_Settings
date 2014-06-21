@@ -90,7 +90,7 @@
         <CheckBoxPreference
             android:key="hover_state"
             android:title="@string/hover_state_title"
-            android:persistent="false"/>
+            android:persistent="false" />
 
         <com.android.settings.widget.SeekBarPreferenceCham
             android:key="show_hover_time"
@@ -103,6 +103,38 @@
             settings:unitsRight="ms"
             settings:interval="100"
             android:defaultValue="5000"
+            android:dependency="hover_state" />
+
+        <CheckBoxPreference
+            android:key="hover_require_fullscreen_mode"
+            android:title="@string/hover_require_fullscreen_mode_title"
+            android:summary="@string/hover_require_fullscreen_mode_summary"
+            android:defaultValue="false"
+            android:persistent="false"
+            android:dependency="hover_state" />
+
+        <CheckBoxPreference
+            android:key="hover_exclude_non_clearable"
+            android:title="@string/hover_exclude_non_clearable_title"
+            android:summary="@string/hover_exclude_non_clearable_summary"
+            android:defaultValue="false"
+            android:persistent="false"
+            android:dependency="hover_state" />
+
+        <CheckBoxPreference
+            android:key="hover_exclude_low_priority"
+            android:title="@string/hover_exclude_low_priority_title"
+            android:summary="@string/hover_exclude_low_priority_summary"
+            android:defaultValue="false"
+            android:persistent="false"
+            android:dependency="hover_state" />
+
+        <CheckBoxPreference
+            android:key="hover_exclude_topmost"
+            android:title="@string/hover_exclude_topmost_title"
+            android:summary="@string/hover_exclude_topmost_summary"
+            android:defaultValue="true"
+            android:persistent="false"
             android:dependency="hover_state" />
 
     </PreferenceCategory>

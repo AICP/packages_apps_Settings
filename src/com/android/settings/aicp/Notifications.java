@@ -71,10 +71,18 @@ public class Notifications extends SettingsPreferenceFragment implements
     private static final String CLOCK_USE_SECOND = "clock_use_second";
     private static final String PREF_HOVER_STATE = "hover_state";
     private static final String PREF_SHOW_HOVER_TIME = "show_hover_time";
+    private static final String PREF_HOVER_REQUIRE_FULLSCREEN_MODE = "hover_require_fullscreen_mode";
+    private static final String PREF_HOVER_EXCLUDE_NON_CLEARABLE = "hover_exclude_non_clearable";
+    private static final String PREF_HOVER_EXCLUDE_LOW_PRIORITY = "hover_exclude_low_priority";
+    private static final String PREF_HOVER_EXCLUDE_TOPMOST = "hover_exclude_topmost";
 
     private CheckBoxPreference mClockUseSecond;
     private CheckBoxPreference mCustomHeader;
     private CheckBoxPreference mHoverState;
+    private CheckBoxPreference mHoverRequireFullScreen;
+    private CheckBoxPreference mHoverNonClearable;
+    private CheckBoxPreference mHoverLowPriority;
+    private CheckBoxPreference mHoverTopmost;
     private CheckBoxPreference mMissedCallBreath;
     private CheckBoxPreference mReminder;
     private CheckBoxPreference mSMSBreath;
@@ -192,6 +200,18 @@ public class Notifications extends SettingsPreferenceFragment implements
         mShowHoverTime.setValue(Settings.System.getInt(resolver,
                 Settings.System.SHOW_HOVER_TIME, 5000));
         mShowHoverTime.setOnPreferenceChangeListener(this);
+        mHoverRequireFullScreen = (CheckBoxPreference) prefSet.findPreference(PREF_HOVER_REQUIRE_FULLSCREEN_MODE);
+        mHoverRequireFullScreen.setChecked((Settings.System.getInt(resolver,
+                Settings.System.HOVER_REQUIRE_FULLSCREEN_MODE, 0) == 1));
+        mHoverNonClearable = (CheckBoxPreference) prefSet.findPreference(PREF_HOVER_EXCLUDE_NON_CLEARABLE);
+        mHoverNonClearable.setChecked((Settings.System.getInt(resolver,
+                Settings.System.HOVER_EXCLUDE_NON_CLEARABLE, 0) == 1));
+        mHoverLowPriority = (CheckBoxPreference) prefSet.findPreference(PREF_HOVER_EXCLUDE_LOW_PRIORITY);
+        mHoverLowPriority.setChecked((Settings.System.getInt(resolver,
+                Settings.System.HOVER_EXCLUDE_LOW_PRIORITY, 0) == 1));
+        mHoverTopmost = (CheckBoxPreference) prefSet.findPreference(PREF_HOVER_EXCLUDE_TOPMOST);
+        mHoverTopmost.setChecked((Settings.System.getInt(resolver,
+                Settings.System.HOVER_EXCLUDE_TOPMOST, 0) == 1));
 
     }
        
@@ -231,6 +251,22 @@ public class Notifications extends SettingsPreferenceFragment implements
             value = mHoverState.isChecked();
             Settings.System.putInt(resolver,
                     Settings.System.HOVER_STATE, value ? 1 : 0);
+        } else if (preference == mHoverRequireFullScreen) {
+            value = mHoverRequireFullScreen.isChecked();
+            Settings.System.putInt(resolver,
+                    Settings.System.HOVER_REQUIRE_FULLSCREEN_MODE, value ? 1 : 0);
+        } else if (preference == mHoverNonClearable) {
+            value = mHoverNonClearable.isChecked();
+            Settings.System.putInt(resolver,
+                    Settings.System.HOVER_EXCLUDE_NON_CLEARABLE, value ? 1 : 0);
+        } else if (preference == mHoverLowPriority) {
+            value = mHoverLowPriority.isChecked();
+            Settings.System.putInt(resolver,
+                    Settings.System.HOVER_EXCLUDE_LOW_PRIORITY, value ? 1 : 0);
+        } else if (preference == mHoverTopmost) {
+            value = mHoverTopmost.isChecked();
+            Settings.System.putInt(resolver,
+                    Settings.System.HOVER_EXCLUDE_TOPMOST, value ? 1 : 0);
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }

@@ -1104,5 +1104,13 @@
     <string name="hover_state_title">Enable Hover</string>
     <string name="show_hover_time_title">Hover time</string>
     <string name="show_hover_time_summary">How long to display hover notification.</string>
+    <string name="hover_require_fullscreen_mode_title">Require Expanded Desktop</string>
+    <string name="hover_require_fullscreen_mode_summary">Only show up when StatusBar is hidden</string>
+    <string name="hover_exclude_low_priority_title">Exclude low priority</string>
+    <string name="hover_exclude_low_priority_summary">Notifications marked as low priority</string>
+    <string name="hover_exclude_non_clearable_title">Exclude non-clearable</string>
+    <string name="hover_exclude_non_clearable_summary">Notifications marked as non clearable</string>
+    <string name="hover_exclude_topmost_title">Exclude topmost app</string>
+    <string name="hover_exclude_topmost_summary">Exclude notifications from the app running in foreground</string>
 
 </resources>
