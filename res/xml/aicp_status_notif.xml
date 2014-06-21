@@ -83,6 +83,11 @@
         android:entries="@array/less_notification_sounds_entries"
         android:entryValues="@array/less_notification_sounds_values" />
 
+    <PreferenceScreen
+        android:key="heads_up"
+        android:fragment="com.android.settings.aicp.HeadsUpDoNotDisturbSettings"
+        android:title="@string/category_heads_up" />
+
     <PreferenceCategory
         android:key="hover_category"
         android:title="@string/hover_title">
