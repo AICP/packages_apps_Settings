@@ -1105,4 +1105,10 @@
     <string name="show_hover_time_title">Hover time</string>
     <string name="show_hover_time_summary">How long to display hover notification.</string>
 
+    <!-- Heads Up -->
+    <string name="category_heads_up">Heads up</string>
+    <string name="title_heads_up_enabled">Enable heads up</string>
+    <string name="add_heads_up_dnd_package">Add app to \'Do not disturb\'</string>
+    <string name="heads_up_dnd_title">Do not disturb</string>
+
 </resources>
