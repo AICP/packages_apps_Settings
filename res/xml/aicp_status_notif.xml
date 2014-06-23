@@ -89,6 +89,22 @@
         android:title="@string/hover_title" />
 
     <PreferenceCategory
+            android:title="@string/category_heads_up">
+
+        <CheckBoxPreference
+            android:key="heads_up_enabled"
+            android:title="@string/title_heads_up_enabled"
+            android:defaultValue="false" />
+
+        <PreferenceScreen
+            android:key="heads_up"
+            android:fragment="com.android.settings.aicp.HeadsUpDoNotDisturbSettings"
+            android:title="@string/category_heads_up_settings"
+            android:dependency="heads_up_enabled" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="reminder_category"
         android:title="@string/reminder_category_title">
 

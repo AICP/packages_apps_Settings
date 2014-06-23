@@ -69,9 +69,11 @@ public class Notifications extends SettingsPreferenceFragment implements
     private static final String PREF_NOTI_REMINDER_INTERVAL = "noti_reminder_interval";
     private static final String PREF_STATUS_BAR_CUSTOM_HEADER = "status_bar_custom_header";
     private static final String CLOCK_USE_SECOND = "clock_use_second";
+    private static final String PREF_HEADS_UP_NOTIFICATION = "heads_up_enabled";
 
     private CheckBoxPreference mClockUseSecond;
     private CheckBoxPreference mCustomHeader;
+    private CheckBoxPreference mHeadsUpEnabled;
     private CheckBoxPreference mMissedCallBreath;
     private CheckBoxPreference mReminder;
     private CheckBoxPreference mSMSBreath;
@@ -180,6 +182,11 @@ public class Notifications extends SettingsPreferenceFragment implements
         mClockUseSecond.setChecked((Settings.System.getInt(resolver,
                 Settings.System.CLOCK_USE_SECOND, 0) == 1));
 
+        // Heads up
+        mHeadsUpEnabled = (CheckBoxPreference) prefSet.findPreference(PREF_HEADS_UP_NOTIFICATION);
+        mHeadsUpEnabled.setChecked((Settings.System.getInt(resolver,
+                Settings.System.HEADS_UP_NOTIFICATION, 0) == 1));
+
     }
        
     @Override
@@ -214,6 +221,10 @@ public class Notifications extends SettingsPreferenceFragment implements
             value = mClockUseSecond.isChecked();
             Settings.System.putInt(resolver,
                     Settings.System.CLOCK_USE_SECOND, value ? 1 : 0);
+        } else if (preference == mHeadsUpEnabled) {
+            value = mHeadsUpEnabled.isChecked();
+            Settings.System.putInt(resolver,
+                    Settings.System.HEADS_UP_NOTIFICATION, value ? 1 : 0);
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
