@@ -1953,6 +1953,8 @@
 
         <activity android:name=".cyanogenmod.LockscreenInterface" />
 
+        <activity android:name=".aicp.HeadsUpSettings" />
+
         <activity android:name="Settings$ThemeSettingsActivity"
                   android:label="@string/themes_settings_title"
                   android:taskAffinity=""

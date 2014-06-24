@@ -47,6 +47,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 import com.android.settings.R;
+import com.android.settings.cyanogenmod.SystemSettingSwitchPreference;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 import com.android.settings.util.Helpers;
@@ -83,6 +84,7 @@ public class Notifications extends SettingsPreferenceFragment implements
     private ListPreference mReminderMode;
     private ListPreference mSmartPulldown;
     private RingtonePreference mReminderRingtone;
+    private SystemSettingSwitchPreference mSwitchPreference;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -180,8 +182,20 @@ public class Notifications extends SettingsPreferenceFragment implements
         mClockUseSecond.setChecked((Settings.System.getInt(resolver,
                 Settings.System.CLOCK_USE_SECOND, 0) == 1));
 
+        // Heads up
+        mSwitchPreference = (SystemSettingSwitchPreference)
+                prefSet.findPreference(Settings.System.HEADS_UP_NOTIFICATION);
     }
-       
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        boolean headsUpEnabled = Settings.System.getIntForUser(
+                getActivity().getContentResolver(),
+                Settings.System.HEADS_UP_NOTIFICATION, 0, UserHandle.USER_CURRENT) == 1;
+        mSwitchPreference.setChecked(headsUpEnabled);
+    }
+
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         ContentResolver resolver = getActivity().getContentResolver();
