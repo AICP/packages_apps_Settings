@@ -51,6 +51,7 @@ public class HeadsUpDoNotDisturbSettings extends SettingsPreferenceFragment
     private PackageAdapter mPackageAdapter;
     private PackageManager mPackageManager;
     private PreferenceGroup mApplicationPrefList;
+    private CheckBoxPreference mEnabledPref;
 
     private String mPackageList;
     private Map<String, Package> mPackages;
@@ -62,6 +63,10 @@ public class HeadsUpDoNotDisturbSettings extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.heads_up_settings);
         mPackageManager = getPackageManager();
         mPackageAdapter = new PackageAdapter();
+
+        mEnabledPref = (CheckBoxPreference)
+                findPreference(Settings.System.HEADS_UP_NOTIFICATION);
+        mEnabledPref.setOnPreferenceChangeListener(this);
 
         mApplicationPrefList = (PreferenceGroup) findPreference("applications_list");
         mApplicationPrefList.setOrderingAsAdded(false);
@@ -353,8 +358,12 @@ public class HeadsUpDoNotDisturbSettings extends SettingsPreferenceFragment
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-        Preference pref = preference;
-        updateValues(pref.getKey());
+        if (preference == mEnabledPref) {
+            getActivity().invalidateOptionsMenu();
+        }else {
+            Preference pref = preference;
+            updateValues(pref.getKey());
+        }
         return true;
     }
 
