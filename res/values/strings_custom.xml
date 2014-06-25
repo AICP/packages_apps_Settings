@@ -601,4 +601,11 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="floating_blacklist_label">Blacklist from Floating Mode</string>
     <string name="hover_blacklist_label">Blacklist from Hover</string>
 
+    <!-- Wifi AP: connected devices -->
+    <string name="wifi_ap_clients_title">Connected devices</string>
+    <string name="wifi_ap_client_ap_disabled">Hotspot is disabled</string>
+    <string name="wifi_ap_client_none_connected">No client is connected</string>
+    <string name="wifi_ap_client_reachable"><xliff:g id="addr">%1$s</xliff:g> - reachable</string>
+    <string name="wifi_ap_client_unreachable"><xliff:g id="addr">%1$s</xliff:g> - unreachable</string>
+
 </resources>
