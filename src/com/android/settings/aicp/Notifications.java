@@ -47,7 +47,6 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 import com.android.settings.R;
-import com.android.settings.cyanogenmod.SystemSettingSwitchPreference;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 import com.android.settings.util.Helpers;
@@ -83,8 +82,8 @@ public class Notifications extends SettingsPreferenceFragment implements
     private ListPreference mReminderInterval;
     private ListPreference mReminderMode;
     private ListPreference mSmartPulldown;
+    private Preference mHeadsUp;
     private RingtonePreference mReminderRingtone;
-    private SystemSettingSwitchPreference mSwitchPreference;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -183,17 +182,16 @@ public class Notifications extends SettingsPreferenceFragment implements
                 Settings.System.CLOCK_USE_SECOND, 0) == 1));
 
         // Heads up
-        mSwitchPreference = (SystemSettingSwitchPreference)
-                prefSet.findPreference(Settings.System.HEADS_UP_NOTIFICATION);
+        mHeadsUp = findPreference(Settings.System.HEADS_UP_NOTIFICATION);
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        boolean headsUpEnabled = Settings.System.getIntForUser(
-                getActivity().getContentResolver(),
-                Settings.System.HEADS_UP_NOTIFICATION, 0, UserHandle.USER_CURRENT) == 1;
-        mSwitchPreference.setChecked(headsUpEnabled);
+        boolean headsUpEnabled = Settings.System.getInt(
+                getContentResolver(), Settings.System.HEADS_UP_NOTIFICATION, 0) == 1;
+        mHeadsUp.setSummary(headsUpEnabled
+                ? R.string.summary_heads_up_enabled : R.string.summary_heads_up_disabled);
     }
 
     @Override

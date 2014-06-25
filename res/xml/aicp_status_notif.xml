@@ -88,11 +88,10 @@
         android:key="hover_category"
         android:title="@string/hover_title" />
 
-    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+    <Preference
             android:key="heads_up_enabled"
             android:fragment="com.android.settings.aicp.HeadsUpSettings"
-            android:title="@string/category_heads_up"
-            android:summary="@string/summary_heads_up" />
+            android:title="@string/category_heads_up" />
 
     <PreferenceCategory
         android:key="reminder_category"
