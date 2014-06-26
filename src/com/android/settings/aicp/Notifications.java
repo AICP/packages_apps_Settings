@@ -69,10 +69,12 @@ public class Notifications extends SettingsPreferenceFragment implements
     private static final String PREF_NOTI_REMINDER_INTERVAL = "noti_reminder_interval";
     private static final String PREF_STATUS_BAR_CUSTOM_HEADER = "status_bar_custom_header";
     private static final String CLOCK_USE_SECOND = "clock_use_second";
+    private static final String PREF_NOTIFICAITION_SWIPE = "notification_swipe";
 
     private CheckBoxPreference mClockUseSecond;
     private CheckBoxPreference mCustomHeader;
     private CheckBoxPreference mMissedCallBreath;
+    private CheckBoxPreference mNotificationSwipe;
     private CheckBoxPreference mReminder;
     private CheckBoxPreference mSMSBreath;
     private CheckBoxPreference mStatusBarNetworkHide;
@@ -183,6 +185,11 @@ public class Notifications extends SettingsPreferenceFragment implements
 
         // Heads up
         mHeadsUp = findPreference(Settings.System.HEADS_UP_NOTIFICATION);
+
+        // Notification swipe
+        mNotificationSwipe = (CheckBoxPreference) prefSet.findPreference(PREF_NOTIFICAITION_SWIPE);
+        mNotificationSwipe.setChecked((Settings.System.getInt(resolver,
+                Settings.System.STATUS_BAR_NOTIFICATION_SWIPE_FLOATING, 0) == 1));
     }
 
     @Override
@@ -226,6 +233,10 @@ public class Notifications extends SettingsPreferenceFragment implements
             value = mClockUseSecond.isChecked();
             Settings.System.putInt(resolver,
                     Settings.System.CLOCK_USE_SECOND, value ? 1 : 0);
+        } else if (preference == mNotificationSwipe) {
+            value = mNotificationSwipe.isChecked();
+            Settings.System.putInt(resolver,
+                    Settings.System.STATUS_BAR_NOTIFICATION_SWIPE_FLOATING, value ? 1 : 0);
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }

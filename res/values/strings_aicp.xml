@@ -1124,5 +1124,10 @@
     <string name="heads_up_blacklist_title">Blacklist</string>
     <string name="heads_up_disabled_notice">To allow applications to display interactive notifications in a pop-up window on your screen, enable Heads up.</string>
 
+    <!-- Swipe -->
+    <string name="notification_swipe_title">Notification swipe</string>
+    <string name="notification_swipe_summary">Swipe left to launch notification\nin floating window.</string>
+    <string name="recents_swipe_title">Recents swipe</string>
+    <string name="recents_swipe_summary">Swipe left in stick recents to launch\nnotification in floating window.</string>
 
 </resources>

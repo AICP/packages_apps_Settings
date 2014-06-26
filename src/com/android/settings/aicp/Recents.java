@@ -52,6 +52,7 @@ public class Recents extends SettingsPreferenceFragment implements
     private static final String RECENT_PANEL_SHOW_TOPMOST =
             "recent_panel_show_topmost";
     private static final String RAM_CIRCLE = "ram_circle";
+    private static final String PREF_RECENTS_SWIPE_FLOATING = "recents_swipe";
 
     private ListPreference mClearAll;
     private CheckBoxPreference mRecentsCustom;
@@ -60,6 +61,7 @@ public class Recents extends SettingsPreferenceFragment implements
     private ListPreference mRecentPanelExpandedMode;
     private CheckBoxPreference mRecentsShowTopmost;
     private ListPreference mRamCircle;
+    private CheckBoxPreference mRecentsSwipe;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -119,6 +121,11 @@ public class Recents extends SettingsPreferenceFragment implements
         mRecentsShowTopmost.setChecked(enableRecentsShowTopmost);
         mRecentsShowTopmost.setOnPreferenceChangeListener(this);
 
+        // Recents swipe
+        mRecentsSwipe = (CheckBoxPreference) prefSet.findPreference(PREF_RECENTS_SWIPE_FLOATING);
+        mRecentsSwipe.setChecked((Settings.System.getInt(resolver,
+                Settings.System.RECENTS_SWIPE_FLOATING, 0) == 1));
+
     }
        
 
@@ -126,6 +133,14 @@ public class Recents extends SettingsPreferenceFragment implements
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         ContentResolver resolver = getActivity().getContentResolver();
         boolean value;
+        if (preference == mRecentsSwipe) {
+            value = mRecentsSwipe.isChecked();
+            Settings.System.putInt(resolver,
+                    Settings.System.RECENTS_SWIPE_FLOATING, value ? 1 : 0);
+        } else {
+            return super.onPreferenceTreeClick(preferenceScreen, preference);
+        }
+
         return true;
     }
 

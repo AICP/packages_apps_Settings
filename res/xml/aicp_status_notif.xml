@@ -93,6 +93,12 @@
             android:fragment="com.android.settings.aicp.HeadsUpSettings"
             android:title="@string/category_heads_up" />
 
+    <CheckBoxPreference
+        android:key="notification_swipe"
+        android:title="@string/notification_swipe_title"
+        android:summary="@string/notification_swipe_summary"
+        android:defaultValue="false" />
+
     <PreferenceCategory
         android:key="reminder_category"
         android:title="@string/reminder_category_title">

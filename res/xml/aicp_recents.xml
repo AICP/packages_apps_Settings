@@ -37,6 +37,12 @@
             android:entries="@array/ram_circle_entries"
             android:entryValues="@array/ram_circle_values" />
 
+        <CheckBoxPreference
+            android:key="recents_swipe"
+            android:title="@string/recents_swipe_title"
+            android:summary="@string/recents_swipe_summary"
+            android:persistent="false" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
