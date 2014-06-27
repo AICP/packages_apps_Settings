@@ -190,6 +190,7 @@ public class Notifications extends SettingsPreferenceFragment implements
         mNotificationSwipe = (CheckBoxPreference) prefSet.findPreference(PREF_NOTIFICAITION_SWIPE);
         mNotificationSwipe.setChecked((Settings.System.getInt(resolver,
                 Settings.System.STATUS_BAR_NOTIFICATION_SWIPE_FLOATING, 0) == 1));
+
     }
 
     @Override
