@@ -14,6 +14,13 @@
      limitations under the License.
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+            android:title="@string/category_heads_up">
+       <CheckBoxPreference
+            android:key="heads_up_floating_window"
+            android:title="@string/heads_up_floating_window"
+            android:defaultValue="true" />
+    </PreferenceCategory>
 
     <PreferenceCategory
             android:title="@string/heads_up_dnd_title"
