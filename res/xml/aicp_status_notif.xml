@@ -94,6 +94,11 @@
             android:title="@string/category_heads_up" />
 
     <CheckBoxPreference
+            android:key="heads_up_floating_window"
+            android:title="@string/heads_up_floating_window"
+            android:defaultValue="true" />
+
+    <CheckBoxPreference
         android:key="notification_swipe"
         android:title="@string/notification_swipe_title"
         android:summary="@string/notification_swipe_summary"

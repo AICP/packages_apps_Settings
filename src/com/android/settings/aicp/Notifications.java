@@ -70,6 +70,7 @@ public class Notifications extends SettingsPreferenceFragment implements
     private static final String PREF_STATUS_BAR_CUSTOM_HEADER = "status_bar_custom_header";
     private static final String CLOCK_USE_SECOND = "clock_use_second";
     private static final String PREF_NOTIFICAITION_SWIPE = "notification_swipe";
+    private static final String PREF_HEADS_UP_FLOATING_WINDOW = "heads_up_floating_window";
 
     private CheckBoxPreference mClockUseSecond;
     private CheckBoxPreference mCustomHeader;
@@ -86,6 +87,7 @@ public class Notifications extends SettingsPreferenceFragment implements
     private ListPreference mSmartPulldown;
     private Preference mHeadsUp;
     private RingtonePreference mReminderRingtone;
+    private CheckBoxPreference mHeadsUpFloat;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -190,6 +192,11 @@ public class Notifications extends SettingsPreferenceFragment implements
         mNotificationSwipe = (CheckBoxPreference) prefSet.findPreference(PREF_NOTIFICAITION_SWIPE);
         mNotificationSwipe.setChecked((Settings.System.getInt(resolver,
                 Settings.System.STATUS_BAR_NOTIFICATION_SWIPE_FLOATING, 0) == 1));
+
+        // Notification swipe
+        mHeadsUpFloat = (CheckBoxPreference) prefSet.findPreference(PREF_HEADS_UP_FLOATING_WINDOW);
+        mHeadsUpFloat.setChecked((Settings.AOKP.getBoolean(resolver,
+                Settings.System.HEADS_UP_FLOATING_WINDOW, true) == false));
     }
 
     @Override
@@ -237,6 +244,10 @@ public class Notifications extends SettingsPreferenceFragment implements
             value = mNotificationSwipe.isChecked();
             Settings.System.putInt(resolver,
                     Settings.System.STATUS_BAR_NOTIFICATION_SWIPE_FLOATING, value ? 1 : 0);
+        } else if (preference == mHeadsUpFloat) {
+            value = mHeadsUpFloat.isChecked();
+            Settings.AOKP.putBoolean(resolver,
+                    Settings.System.HEADS_UP_FLOATING_WINDOW, value ? true : false);
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
