@@ -15,8 +15,8 @@
 -->
 
 <preference-headers
-        xmlns:android="http://schemas.android.com/apk/res/android">
-
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <!-- WIRELESS and NETWORKS Section -->
     <header android:id="@+id/wireless_section"
@@ -69,6 +69,7 @@
 
     <!-- Other wireless and network controls -->
     <header
+        settings:includeXmlForSearch="@xml/wireless_settings"
         android:id="@+id/wireless_settings"
         android:title="@string/radio_controls_title"
         android:breadCrumbTitle="@string/wireless_networks_settings_title"
@@ -89,6 +90,7 @@
 
     <!-- AICP Settings -->
     <header
+        settings:includeXmlForSearch="@xml/aicp_lab_prefs"
         android:id="@+id/aicp_settings"
         android:fragment="com.android.settings.aicp.AicpSettings"
         android:icon="@drawable/ic_settings_aicp"
@@ -106,6 +108,7 @@
 
     <!-- Dark AICP -->
     <header
+        settings:includeXmlForSearch="@xml/theme_settings"
         android:id="@+id/theme_settings"
         android:fragment="com.android.settings.slim.themes.ThemeSettings"
         android:icon="@drawable/ic_settings_theme"
@@ -120,6 +123,7 @@
 
     <!-- Themes -->
     <header
+        settings:includeXmlForSearch="@xml/theme_settings_tmobile"
         android:id="@+id/theme_settings_tmobile"
         android:title="@string/themes_settings_title"
         android:breadCrumbTitle="@string/themes_settings_title"
@@ -139,6 +143,7 @@
 
     <!-- Sound -->
     <header
+        settings:includeXmlForSearch="@xml/sound_settings"
         android:id="@+id/sound_settings"
         android:icon="@drawable/ic_settings_sound"
         android:fragment="com.android.settings.SoundSettings"
@@ -146,6 +151,7 @@
 
     <!-- Display -->
     <header
+        settings:includeXmlForSearch="@xml/display_settings"
         android:id="@+id/display_settings"
         android:icon="@drawable/ic_settings_display"
         android:fragment="com.android.settings.DisplaySettings"
@@ -226,6 +232,7 @@
 
     <!-- Security -->
     <header
+        settings:includeXmlForSearch="@xml/security_settings"
         android:fragment="com.android.settings.SecuritySettings"
         android:icon="@drawable/ic_settings_security"
         android:title="@string/security_settings_title"
@@ -233,6 +240,7 @@
 
     <!-- Language -->
     <header
+        settings:includeXmlForSearch="@xml/language_settings"
         android:id="@+id/language_settings"
         android:fragment="com.android.settings.inputmethod.InputMethodAndLanguageSettings"
         android:icon="@drawable/ic_settings_language"
@@ -244,6 +252,7 @@
 
     <!-- Date & Time -->
     <header
+        settings:includeXmlForSearch="@xml/date_time_prefs"
         android:id="@+id/date_time_settings"
         android:fragment="com.android.settings.DateTimeSettings"
         android:icon="@drawable/ic_settings_date_time"
@@ -251,6 +260,7 @@
 
     <!-- Accessibility feedback -->
     <header
+        settings:includeXmlForSearch="@xml/accessibility_settings"
         android:id="@+id/accessibility_settings"
         android:fragment="com.android.settings.accessibility.AccessibilitySettings"
         android:icon="@drawable/ic_settings_accessibility"
@@ -276,6 +286,7 @@
 
     <!-- Development -->
     <header
+        settings:includeXmlForSearch="@xml/development_prefs"
         android:id="@+id/development_settings"
         android:fragment="com.android.settings.DevelopmentSettings"
         android:icon="@drawable/ic_settings_development"
@@ -283,6 +294,7 @@
 
     <!-- About Device -->
     <header
+        settings:includeXmlForSearch="@xml/device_info_settings"
         android:id="@+id/about_settings"
         android:fragment="com.android.settings.DeviceInfoSettings"
         android:icon="@drawable/ic_settings_about"

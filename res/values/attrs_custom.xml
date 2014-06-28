@@ -40,4 +40,9 @@
     <declare-styleable name="ImageListPreference">
         <attr name="entryImages" format="reference" />
     </declare-styleable>
+
+    <declare-styleable name="SearchableInfo">
+        <attr name="includeXmlForSearch" format="reference" />
+        <attr name="excludeFromSearch" format="boolean" />
+    </declare-styleable>
 </resources>
