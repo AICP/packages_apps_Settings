@@ -1157,4 +1157,7 @@
     <string name="identicons_style_spirograph">Spirograph</string>
     <string name="identicons_style_dotmatrix">Dot matrix</string>
 
+    <!-- Allow multiuser -->
+    <string name="multiuser_preference_title">Multiuser support</string>
+
 </resources>
