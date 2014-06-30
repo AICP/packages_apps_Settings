@@ -1956,6 +1956,12 @@
 
         <activity android:name=".aicp.HeadsUpSettings" />
 
+        <service android:name=".aicp.identicons.IdenticonCreationService"
+                 android:exported="false" />
+
+        <service android:name=".aicp.identicons.IdenticonRemovalService"
+                 android:exported="false" />
+
         <activity android:name="Settings$ThemeSettingsActivity"
                   android:label="@string/themes_settings_title"
                   android:taskAffinity=""
