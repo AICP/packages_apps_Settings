@@ -19,6 +19,7 @@
 
         <!-- AICP logo -->
         <PreferenceScreen android:key="aicp_logo"
+                android:enabled="false"
                 android:layout="@layout/aicp_rom_logo" />
 
         <!-- AICP team -->
