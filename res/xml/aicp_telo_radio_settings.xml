@@ -83,6 +83,7 @@
 
 	<Preference android:key="telo_radio_info"
             style="?android:preferenceInformationStyle"
+            android:enabled="false"
             android:title="@string/telo_radio_info_title"
             android:summary="@string/telo_radio_info_summary" />
 
