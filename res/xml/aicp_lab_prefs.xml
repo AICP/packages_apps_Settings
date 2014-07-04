@@ -93,6 +93,12 @@
         android:title="@string/kerneltweaker_settings_title"
         android:icon="@drawable/ic_kernel_tweaker" />
 
+    <!-- Weather -->
+    <PreferenceScreen
+        android:id="@+id/weather"
+        android:title="@string/weather_settings_title"
+        android:fragment="com.android.settings.aicp.Weather" />
+
     <!-- Density changer -->
     <PreferenceScreen
         android:id="@+id/density_changer"
