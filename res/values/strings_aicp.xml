@@ -1161,4 +1161,13 @@
     <!-- Allow multiuser -->
     <string name="multiuser_preference_title">Multiuser support</string>
 
+    <!-- Weather -->
+    <string name="weather_settings_title">Weather</string>
+    <string name="weather_alert_title">Weather warning</string>
+    <string name="weather_alert_message">Phone will now reboot\nto apply changes!</string>
+    <string name="weather_header_title">Weather header</string>
+    <string name="weather_header_summary">Add a small weather\ninfo in statusbar header.</string>
+    <string name="weather_notification_title">Weather notification</string>
+    <string name="weather_notification_summary">Add weather info as notification</string>
+
 </resources>
