@@ -43,6 +43,18 @@
             android:summary="@string/recents_swipe_summary"
             android:persistent="false" />
 
+        <CheckBoxPreference
+            android:key="cfx_systemui_header_weather_view"
+            android:title="@string/weather_header_title"
+            android:summary="@string/weather_header_summary"
+            android:persistent="false" />
+
+        <CheckBoxPreference
+            android:key="cfx_weather_notification"
+            android:title="@string/weather_notification_title"
+            android:summary="@string/weather_notification_summary"
+            android:persistent="false" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

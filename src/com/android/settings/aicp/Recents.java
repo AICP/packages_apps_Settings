@@ -53,6 +53,8 @@ public class Recents extends SettingsPreferenceFragment implements
             "recent_panel_show_topmost";
     private static final String RAM_CIRCLE = "ram_circle";
     private static final String PREF_RECENTS_SWIPE_FLOATING = "recents_swipe";
+    private static final String PREF_SYSTEMUI_WEATHER_HEADER_VIEW = "cfx_systemui_header_weather_view";
+    private static final String PREF_SYSTEMUI_WEATHER_NOTIFICATION = "cfx_weather_notification";
 
     private ListPreference mClearAll;
     private CheckBoxPreference mRecentsCustom;
@@ -62,6 +64,9 @@ public class Recents extends SettingsPreferenceFragment implements
     private CheckBoxPreference mRecentsShowTopmost;
     private ListPreference mRamCircle;
     private CheckBoxPreference mRecentsSwipe;
+
+    private CheckBoxPreference mWeather;
+    private CheckBoxPreference mWeatherNotification;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -126,6 +131,19 @@ public class Recents extends SettingsPreferenceFragment implements
         mRecentsSwipe.setChecked((Settings.System.getInt(resolver,
                 Settings.System.RECENTS_SWIPE_FLOATING, 0) == 1));
 
+
+        boolean enableWeather = Settings.AOKP.getBoolean(getContentResolver(),
+                Settings.System.SYSTEMUI_WEATHER_HEADER_VIEW, false);
+        mWeather = (CheckBoxPreference) prefSet.findPreference(PREF_SYSTEMUI_WEATHER_HEADER_VIEW);
+        mWeather.setChecked(enableWeather);
+        mWeather.setOnPreferenceChangeListener(this);
+
+        boolean enableWeatherNotification = Settings.AOKP.getBoolean(getContentResolver(),
+                Settings.System.SYSTEMUI_WEATHER_NOTIFICATION, false);
+        mWeatherNotification = (CheckBoxPreference) prefSet.findPreference(PREF_SYSTEMUI_WEATHER_NOTIFICATION);
+        mWeatherNotification.setChecked(enableWeatherNotification);
+        mWeatherNotification.setOnPreferenceChangeListener(this);
+
     }
        
 
@@ -182,6 +200,16 @@ public class Recents extends SettingsPreferenceFragment implements
             Settings.System.putInt(resolver,
                     Settings.System.RECENT_PANEL_SHOW_TOPMOST,
                     ((Boolean) objValue) ? 1 : 0);
+        } else if (preference == mWeather) {
+            Settings.AOKP.putBoolean(resolver,
+                    Settings.System.SYSTEMUI_WEATHER_HEADER_VIEW,
+                    ((Boolean) objValue) ? true : false);
+            Helpers.restartSystemUI();
+        } else if (preference == mWeatherNotification) {
+            Settings.AOKP.putBoolean(resolver,
+                    Settings.System.SYSTEMUI_WEATHER_NOTIFICATION,
+                    ((Boolean) objValue) ? true : false);
+            Helpers.restartSystemUI();
         }
 
         return true;
