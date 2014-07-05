@@ -41,6 +41,8 @@ public class QuietHours extends SettingsPreferenceFragment implements
 
     private static final String KEY_QUIET_HOURS_DIM = "quiet_hours_dim";
 
+    private static final String KEY_QUIET_HOURS_SYSTEM = "quiet_hours_system";
+
     private static final String KEY_QUIET_HOURS_TIMERANGE = "quiet_hours_timerange";
 
     private CheckBoxPreference mQuietHoursEnabled;
@@ -52,6 +54,8 @@ public class QuietHours extends SettingsPreferenceFragment implements
     private CheckBoxPreference mQuietHoursStill;
 
     private CheckBoxPreference mQuietHoursDim;
+
+    private CheckBoxPreference mQuietHoursSystem;
 
     private TimeRangePreference mQuietHoursTimeRange;
 
@@ -73,6 +77,7 @@ public class QuietHours extends SettingsPreferenceFragment implements
             mQuietHoursRinger = (CheckBoxPreference) prefSet.findPreference(KEY_QUIET_HOURS_RINGER);
             mQuietHoursStill = (CheckBoxPreference) prefSet.findPreference(KEY_QUIET_HOURS_STILL);
             mQuietHoursDim = (CheckBoxPreference) findPreference(KEY_QUIET_HOURS_DIM);
+            mQuietHoursSystem = (CheckBoxPreference) findPreference(KEY_QUIET_HOURS_SYSTEM);
 
             // Set the preference state and listeners where applicable
             mQuietHoursEnabled.setChecked(Settings.AOKP.getInt(resolver, Settings.AOKP.QUIET_HOURS_ENABLED, 0) == 1);
@@ -115,6 +120,10 @@ public class QuietHours extends SettingsPreferenceFragment implements
         } else if (preference == mQuietHoursDim) {
             Settings.AOKP.putInt(resolver, Settings.AOKP.QUIET_HOURS_DIM,
                     mQuietHoursDim.isChecked() ? 1 : 0);
+            return true;
+        } else if (preference == mQuietHoursSystem) {
+            Settings.AOKP.putInt(resolver, Settings.AOKP.QUIET_HOURS_SYSTEM,
+                    mQuietHoursSystem.isChecked() ? 1 : 0);
             return true;
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
