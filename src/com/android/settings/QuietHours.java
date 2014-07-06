@@ -158,6 +158,7 @@ public class QuietHours extends SettingsPreferenceFragment implements
             mQuietHoursNotifications.setChecked(Settings.AOKP.getInt(resolver, Settings.AOKP.QUIET_HOURS_NOTIFICATIONS, 0) == 1);
             mQuietHoursRinger.setChecked(Settings.AOKP.getInt(resolver, Settings.AOKP.QUIET_HOURS_RINGER, 0) == 1);
             mQuietHoursStill.setChecked(Settings.AOKP.getInt(resolver, Settings.AOKP.QUIET_HOURS_STILL, 0) == 1);
+            mQuietHoursSystem.setChecked(Settings.AOKP.getInt(resolver, Settings.AOKP.QUIET_HOURS_SYSTEM, 0) == 1);
             mRingtoneLoop.setOnPreferenceChangeListener(this);
             mAutoEnable.setValue(mPrefs.getString(KEY_QUIET_HOURS_AUTO, "0"));
             mAutoEnable.setOnPreferenceChangeListener(this);
@@ -216,7 +217,6 @@ public class QuietHours extends SettingsPreferenceFragment implements
             } else {
                 mQuietHoursDim.setChecked(Settings.AOKP.getInt(
                         resolver, Settings.AOKP.QUIET_HOURS_DIM, 0) == 1);
-                mQuietHoursDim.setOnPreferenceChangeListener(this);
             }
 
             mPreferencesChangeListener = new OnSharedPreferenceChangeListener() {
@@ -248,7 +248,31 @@ public class QuietHours extends SettingsPreferenceFragment implements
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         ContentResolver resolver = mContext.getContentResolver();
-        if (preference == mAutoSmsMessage) {
+        if (preference == mQuietHoursEnabled) {
+            Settings.AOKP.putInt(resolver, Settings.AOKP.QUIET_HOURS_ENABLED,
+                    mQuietHoursEnabled.isChecked() ? 1 : 0);
+            return true;
+        } else if (preference == mQuietHoursNotifications) {
+            Settings.AOKP.putInt(resolver, Settings.AOKP.QUIET_HOURS_NOTIFICATIONS,
+                    mQuietHoursNotifications.isChecked() ? 1 : 0);
+            return true;
+        } else if (preference == mQuietHoursRinger) {
+            Settings.AOKP.putInt(resolver, Settings.AOKP.QUIET_HOURS_RINGER,
+                    mQuietHoursRinger.isChecked() ? 1 : 0);
+            return true;
+        } else if (preference == mQuietHoursStill) {
+            Settings.AOKP.putInt(resolver, Settings.AOKP.QUIET_HOURS_STILL,
+                    mQuietHoursStill.isChecked() ? 1 : 0);
+            return true;
+        } else if (preference == mQuietHoursDim) {
+            Settings.AOKP.putInt(resolver, Settings.AOKP.QUIET_HOURS_DIM,
+                    mQuietHoursDim.isChecked() ? 1 : 0);
+            return true;
+        } else if (preference == mQuietHoursSystem) {
+            Settings.AOKP.putInt(resolver, Settings.AOKP.QUIET_HOURS_SYSTEM,
+                    mQuietHoursSystem.isChecked() ? 1 : 0);
+            return true;
+        } else if (preference == mAutoSmsMessage) {
             showDialogInner(DLG_AUTO_SMS_MESSAGE);
             return true;
         } else if (preference == mSmsBypassCode) {
@@ -266,10 +290,6 @@ public class QuietHours extends SettingsPreferenceFragment implements
                     mQuietHoursTimeRange.getStartTime());
             Settings.AOKP.putInt(resolver, Settings.AOKP.QUIET_HOURS_END,
                     mQuietHoursTimeRange.getEndTime());
-            return true;
-        } else if (preference == mQuietHoursEnabled) {
-            Settings.AOKP.putInt(resolver, Settings.AOKP.QUIET_HOURS_ENABLED,
-                    (Boolean) newValue ? 1 : 0);
             return true;
         } else if (preference == mAutoEnable) {
             int val = Integer.parseInt((String) newValue);
@@ -292,26 +312,6 @@ public class QuietHours extends SettingsPreferenceFragment implements
                 mQuietHoursEnabled.setChecked(enabled);
             }
             mAutoEnable.setSummary(mAutoEnable.getEntries()[val]);
-            return true;
-        } else if (preference == mQuietHoursNotifications) {
-            Settings.AOKP.putInt(resolver, Settings.AOKP.QUIET_HOURS_NOTIFICATIONS,
-                    (Boolean) newValue ? 1 : 0);
-            return true;
-        } else if (preference == mQuietHoursRinger) {
-            Settings.AOKP.putInt(resolver, Settings.AOKP.QUIET_HOURS_RINGER,
-                    (Boolean) newValue ? 1 : 0);
-            return true;
-        } else if (preference == mQuietHoursStill) {
-            Settings.AOKP.putInt(resolver, Settings.AOKP.QUIET_HOURS_STILL,
-                    (Boolean) newValue ? 1 : 0);
-            return true;
-        } else if (preference == mQuietHoursDim) {
-            Settings.AOKP.putInt(resolver, Settings.AOKP.QUIET_HOURS_DIM,
-                    (Boolean) newValue ? 1 : 0);
-            return true;
-        } else if (preference == mQuietHoursSystem) {
-            Settings.AOKP.putInt(resolver, Settings.AOKP.QUIET_HOURS_SYSTEM,
-                    (Boolean) newValue ? 1 : 0);
             return true;
                 } else if (preference == mRingtoneLoop) {
             mRingtoneLoop.setSummary((Boolean) newValue
