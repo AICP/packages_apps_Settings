@@ -28,6 +28,17 @@
             android:title="@string/aicp_team_title"
             android:fragment="com.android.settings.aicp.Team" />
 
+
+        <!-- AICP Stats -->
+        <PreferenceScreen
+            android:key="aicpstats"
+            android:title="@string/aicp_stats"
+            android:summary="@string/aicp_stats_summary" >
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.settings"
+                android:targetClass="com.android.settings.aicp.stats.AnonymousStats" />
+        </PreferenceScreen>
+
         <!-- Device status - launches activity -->
         <PreferenceScreen android:key="status_info"
                 android:title="@string/device_status" 

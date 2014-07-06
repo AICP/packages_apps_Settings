@@ -36,6 +36,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CLEAR_APP_USER_DATA" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
@@ -1969,6 +1970,49 @@
             <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
                 android:resource="@id/profiles_settings" />
             </activity>
+
+        <!-- Anonymous Stats -->
+        <activity
+            android:name="com.android.settings.aicp.stats.AnonymousStats" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.android.settings.aicp.stats.PreviewActivity"
+                  android:parentActivityName="com.android.settings.aicp.stats.AnonymousStats" >
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:hardwareAccelerated="true"
+            android:value="com.android.settings.aicp.stats.AnonymousStats" />
+    </activity>
+
+        <activity android:name="com.android.settings.aicp.stats.ViewStats"
+                  android:hardwareAccelerated="true"
+                  android:parentActivityName="com.android.settings.aicp.stats.AnonymousStats" >
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.android.settings.aicp.stats.AnonymousStats" />
+    </activity>        
+
+        <receiver
+            android:name="com.android.settings.aicp.stats.ReportingServiceManager"
+            android:enabled="true"
+            android:exported="false"
+            android:label="ReportingServiceManager" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+
+        </receiver>
+
+        <service
+            android:name="com.android.settings.aicp.stats.ReportingService"
+            android:enabled="true"
+            android:exported="false"
+            android:label="ReportingService" >
+        </service>
 
         <!-- Keep compatibility with old shortcuts. -->
         <activity-alias android:name="ProfileSettings"

@@ -684,4 +684,36 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Filter Settings -->
     <string name="filter_settings_title">Filter Settings</string>
 
+     <!-- Anonymous Statistics -->
+    <string name="aicp_stats">AICP Statistics</string>
+    <string name="aicp_stats_summary">Help make AICP better by opting into anonymous stats reporting</string>
+    <string name="main_title">Anonymous Usage Data</string>
+    <string name="thankyou">Thank you for opting in helping us!</string>
+    <string name="notification_ticker">Statistics Opted-In</string>
+    <string name="notification_title">AICP Statistics</string>
+    <string name="notification_desc">Enable or Disable Anonymous Statistics</string>
+    <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.org/blog/cmstats-what-it-is-and
+-why-you-should-opt-in&quot;&gt;Learn More&lt;/a&gt;</string>
+    <string name="anonymous_statistics_title">AICP Statistics</string>
+    <string name="anonymous_statistics_summary">Help make DU better by opting into anonymous statistics reporting</string> 
+    <string name="anonymous_statistics_warning_title">About</string>
+    <string name="anonymous_statistics_warning">Opting into AICP Statistics will allow non-personal data to be submitted to the developers of AICP to track unique installations across devices. The information submitted includes an unique identifier, which does not compromise your privacy or personal data. The data is submitted during each boot.\n\nFor an example of the data that is submitted, tap on Preview Data.</string>
+    <string name="enable_reporting_title">Enable reporting</string>
+    <string name="preview_data_title">Preview the stats</string>
+    <string name="preview_data_summary">%s</string>
+    <string name="view_stats_title">View the stats</string>
+    <string name="anonymous_learn_more">Learn more</string>
+    <string name="pref_uninstall">Uninstall</string>
+    <string name="pref_uninstall_desc">Uninstall \'AICP Stats\' from the device?</string>
+    <string name="btn_yes">Yes</string>
+    <string name="btn_no">No</string>
+    <string name="preview_id_title">Unique ID</string>
+    <string name="preview_device_title">Device</string>	
+    <string name="preview_version_title">Version</string>
+    <string name="preview_country_title">Country</string>
+    <string name="preview_carrier_title">Carrier</string>
+    <string name="preview_romversion_title">AICP Version</string> 
+    <string name="exit">Exit</string>
+    <string name="thank_you">Thanks for opting in!!</string> 
+
 </resources>

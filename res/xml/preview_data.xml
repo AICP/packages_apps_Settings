@@ -23,30 +23,42 @@
         android:key="preview_id"
         style="?android:preferenceInformationStyle"
         android:title="@string/preview_id_title"
-        android:summary="%s" />
+        android:summary="%s" 
+        android:selectable="false" />
 
     <Preference
         android:key="preview_device"
         style="?android:preferenceInformationStyle"
         android:title="@string/preview_device_title"
-        android:summary="%s" />
+        android:summary="%s" 
+        android:selectable="false" />
 
     <Preference
         android:key="preview_version"
         style="?android:preferenceInformationStyle"
         android:title="@string/preview_version_title"
-        android:summary="%s" />
+        android:summary="%s"
+        android:selectable="false" />
 
     <Preference
         android:key="preview_country"
         style="?android:preferenceInformationStyle"
         android:title="@string/preview_country_title"
-        android:summary="%s" />
+        android:summary="%s"
+        android:selectable="false" />
 
     <Preference
         android:key="preview_carrier"
         style="?android:preferenceInformationStyle"
         android:title="@string/preview_carrier_title"
-        android:summary="%s" />
+        android:summary="%s"
+        android:selectable="false" />
+
+    <Preference
+        android:key="preview_romversion"
+        style="?android:preferenceInformationStyle"
+        android:title="@string/preview_romversion_title"
+        android:summary="%s"
+        android:selectable="true" />
 
 </PreferenceScreen>
