@@ -177,6 +177,7 @@ public class QuietHours extends SettingsPreferenceFragment implements
                     (TelephonyManager) mContext.getSystemService(Context.TELEPHONY_SERVICE);
             if (telephonyManager.getPhoneType() == TelephonyManager.PHONE_TYPE_NONE) {
                 prefSet.removePreference(mAutoEnable);
+                prefSet.removePreference(mQuietHoursRinger);
                 prefSet.removePreference((PreferenceGroup) findPreference("sms_respond"));
                 prefSet.removePreference((PreferenceGroup) findPreference("quiethours_bypass"));
             } else {
@@ -213,7 +214,9 @@ public class QuietHours extends SettingsPreferenceFragment implements
             if (mQuietHoursDim != null && getResources().getBoolean(com.android.internal.R.bool.config_intrusiveNotificationLed) == false) {
                 getPreferenceScreen().removePreference(mQuietHoursDim);
             } else {
-                mQuietHoursDim.setChecked(Settings.AOKP.getInt(resolver, Settings.AOKP.QUIET_HOURS_DIM, 0) == 1);
+                mQuietHoursDim.setChecked(Settings.AOKP.getInt(
+                        resolver, Settings.AOKP.QUIET_HOURS_DIM, 0) == 1);
+                mQuietHoursDim.setOnPreferenceChangeListener(this);
             }
 
             mPreferencesChangeListener = new OnSharedPreferenceChangeListener() {
@@ -476,7 +479,7 @@ public class QuietHours extends SettingsPreferenceFragment implements
 
         void observe() {
             ContentResolver resolver = mContext.getContentResolver();
-            resolver.registerContentObserver(Settings.AOKP.getUriFor(
+            resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.AOKP.QUIET_HOURS_ENABLED),
                     false, this, UserHandle.USER_ALL);
         }
