@@ -73,6 +73,8 @@ import com.android.internal.util.ArrayUtils;
 import com.android.settings.accessibility.AccessibilitySettings;
 import com.android.settings.accessibility.CaptionPropertiesFragment;
 import com.android.settings.accessibility.ToggleAccessibilityServicePreferenceFragment;
+import com.android.settings.accessibility.ToggleGlobalGesturePreferenceFragment;
+import com.android.settings.accessibility.ToggleScreenMagnificationPreferenceFragment;
 import com.android.settings.accounts.AccountSyncSettings;
 import com.android.settings.accounts.AuthenticatorHelper;
 import com.android.settings.accounts.ManageAccountsSettings;
@@ -265,7 +267,7 @@ public class Settings extends PreferenceActivity
             getWindow().setUiOptions(getIntent().getIntExtra(EXTRA_UI_OPTIONS, 0));
         }
 
-        if (getIntent().hasExtra(EXTRA_DISABLE_SEARCH)) {
+        if (getIntent().hasExtra(EXTRA_DISABLE_SEARCH) != onIsMultiPane()) {
             mDisableSearchIcon = getIntent().getBooleanExtra(EXTRA_DISABLE_SEARCH, false);
         }
 
@@ -617,6 +619,10 @@ public class Settings extends PreferenceActivity
                 ThemeSettings.class.getName().equals(fragmentName) ||
                 ManageApplications.class.getName().equals(fragmentName) ||
                 PaymentSettings.class.getName().equals(fragmentName) ||
+                CaptionPropertiesFragment.class.getName().equals(fragmentName) ||
+                ToggleScreenMagnificationPreferenceFragment.class.getName().equals(fragmentName) ||
+                ToggleGlobalGesturePreferenceFragment.class.getName().equals(fragmentName) ||
+                DevelopmentSettings.class.getName().equals(fragmentName) ||
                 WifiDisplaySettings.class.getName().equals(fragmentName)) {
             // Should force disable search options
             intent.putExtra(EXTRA_DISABLE_SEARCH, true);
