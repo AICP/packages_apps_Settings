@@ -127,6 +127,18 @@
             android:title="@string/haptic_feedback_enable_title"
             android:defaultValue="true" />
 
+    <com.android.settings.widget.SeekBarPreference
+            android:key="vibration_duration"
+            android:title="@string/minimum_vibration_duration" />
+
+    <ListPreference
+            android:key="vibrator_multiplier"
+             android:persistent="false"
+             android:title="@string/vibrator_multiplier_title"
+             android:dialogTitle="@string/vibrator_multiplier_title"
+             android:entries="@array/vibration_multiplier_values"
+             android:entryValues="@array/vibration_multiplier_values" />
+
     <CheckBoxPreference
             android:key="volume_keys_ringer_mode"
             android:title="@string/title_hardware_keys_volume_keys_ringer_toggle"
