@@ -344,7 +344,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
 
         mSwapVolButtons = (CheckBoxPreference) findPreference(KEY_SWAP_VOLUME_BUTTONS);
         mSwapVolButtons.setChecked(Settings.System.getInt(resolver,
-                Settings.System.SWAP_VOLUME_BUTTONS, 1) == 0);
+                Settings.System.SWAP_VOLUME_BUTTONS, 0) != 0);
         mSwapVolButtons.setOnPreferenceChangeListener(this);
 
         // power state change notification sounds
