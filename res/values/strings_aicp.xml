@@ -934,7 +934,7 @@
     <string name="menu_location_left">Left</string>
     <string name="menu_location_both">Both</string>
     <string name="navigation_bar_menu_force">Force show menu</string>
-    <string name="navigation_bar_menu_force_summary">Always show the menu button(s)</string>
+    <string name="navigation_bar_menu_force_summary">Always show the menu on the right.</string>
 
     <!-- Custom notif header -->
     <string name="custom_statusbar_header_title">Contextual notification panel header</string>
