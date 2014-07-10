@@ -72,7 +72,6 @@ public class SystemSettings extends SettingsPreferenceFragment implements
     private static final String DISABLE_FC_NOTIFICATIONS = "disable_fc_notifications";
     private static final String KEY_DONT_SHOW_NAVBAR_ON_SWIPE_EXPANDED_DESKTOP_ENABLED =
             "dont_show_navbar_on_swipe_expanded_desktop_enabled";
-    private static final String KEY_NAVIGATION_MENU = "navigation_menu";
     private static final String KEY_NAVIGATION_MENU_FORCE = "navigation_menu_force";
     private static final String PREF_ENABLE_APP_CIRCLE_BAR = "enable_app_circle_bar";
     private static final String PREF_INCLUDE_APP_CIRCLE_BAR_KEY = "app_circle_bar_included_apps";
@@ -130,13 +129,6 @@ public class SystemSettings extends SettingsPreferenceFragment implements
         mNavigationMenuForce = (CheckBoxPreference) prefSet.findPreference(KEY_NAVIGATION_MENU_FORCE);
         mNavigationMenuForce.setChecked((Settings.System.getInt(resolver,
                 Settings.System.NAVIGATION_MENU_FORCE, 0) == 1));
-
-        // Navigation menu
-        mNavigationMenu = (ListPreference) prefSet.findPreference(KEY_NAVIGATION_MENU);
-        mNavigationMenu.setOnPreferenceChangeListener(this);
-        mNavigationMenu.setValue(Integer.toString(Settings.System.getInt(resolver,
-                Settings.System.NAVIGATION_MENU, 0)));
-        mNavigationMenu.setSummary(mNavigationMenu.getEntry());
 
         try {
             boolean hasNavBar = WindowManagerGlobal.getWindowManagerService().hasNavigationBar();
@@ -201,6 +193,10 @@ public class SystemSettings extends SettingsPreferenceFragment implements
             value = mNavigationMenuForce.isChecked();
             Settings.System.putInt(resolver,
                     Settings.System.NAVIGATION_MENU_FORCE, value ? 1 : 0);
+            if (!value) {
+                Settings.System.putInt(resolver,
+                        Settings.System.NAVIGATION_MENU, 0);
+            }
         } else if  (preference == mEnableAppCircleBar) {
             boolean checked = ((CheckBoxPreference)preference).isChecked();
             Settings.System.putInt(resolver,
@@ -216,13 +212,7 @@ public class SystemSettings extends SettingsPreferenceFragment implements
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         ContentResolver resolver = getActivity().getContentResolver();
         final String key = preference.getKey();
-        if (preference == mNavigationMenu) {
-            int val = Integer.parseInt((String) objValue);
-            int index = mNavigationMenu.findIndexOfValue((String) objValue);
-            Settings.System.putInt(resolver,
-                    Settings.System.NAVIGATION_MENU, val);
-            mNavigationMenu.setSummary(mNavigationMenu.getEntries()[index]);
-        } else if (preference == mIncludedAppCircleBar) {
+        if (preference == mIncludedAppCircleBar) {
             storeIncludedApps((Set<String>) objValue);
         } else if (preference == mTriggerWidthPref) {
             int width = ((Integer)objValue).intValue();
