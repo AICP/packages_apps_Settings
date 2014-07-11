@@ -58,9 +58,11 @@ public class Weather extends SettingsPreferenceFragment implements
 
     private static final String PREF_SYSTEMUI_WEATHER_HEADER_VIEW = "cfx_systemui_header_weather_view";
     private static final String PREF_SYSTEMUI_WEATHER_NOTIFICATION = "cfx_weather_notification";
+    private static final String PREF_SYSTEMUI_WEATHER_ICON = "cfx_weather_icon";
 
     private CheckBoxPreference mWeatherHeader;
     private CheckBoxPreference mWeatherNotification;
+    private CheckBoxPreference mWeatherIcon;
 
     private Preference mWeather;
 
@@ -90,6 +92,12 @@ public class Weather extends SettingsPreferenceFragment implements
         mWeatherNotification = (CheckBoxPreference) prefSet.findPreference(PREF_SYSTEMUI_WEATHER_NOTIFICATION);
         mWeatherNotification.setChecked(enableWeatherNotification);
         mWeatherNotification.setOnPreferenceChangeListener(this);
+
+        boolean enableWeatherIcon = Settings.AOKP.getBoolean(getContentResolver(),
+                Settings.System.SYSTEMUI_WEATHER_ICON, false);
+        mWeatherIcon = (CheckBoxPreference) prefSet.findPreference(PREF_SYSTEMUI_WEATHER_ICON);
+        mWeatherIcon.setChecked(enableWeatherIcon);
+        mWeatherIcon.setOnPreferenceChangeListener(this);
 
     }
 
@@ -129,6 +137,11 @@ public class Weather extends SettingsPreferenceFragment implements
         } else if (preference == mWeatherNotification) {
             Settings.AOKP.putBoolean(resolver,
                     Settings.System.SYSTEMUI_WEATHER_NOTIFICATION,
+                    ((Boolean) objValue) ? true : false);
+            openWeatherWarning();
+        } else if (preference == mWeatherIcon) {
+            Settings.AOKP.putBoolean(resolver,
+                    Settings.System.SYSTEMUI_WEATHER_ICON,
                     ((Boolean) objValue) ? true : false);
             openWeatherWarning();
         }

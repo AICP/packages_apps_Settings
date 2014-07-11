@@ -34,4 +34,11 @@
         android:summary="@string/weather_notification_summary"
         android:persistent="false" />
 
+    <CheckBoxPreference
+        android:key="cfx_weather_icon"
+        android:title="@string/weather_icon_title"
+        android:summary="@string/weather_icon_summary"
+        android:persistent="false"
+        android:dependency="cfx_weather_notification" />
+
 </PreferenceScreen>
