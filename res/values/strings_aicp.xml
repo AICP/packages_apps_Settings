@@ -1170,4 +1170,7 @@
     <string name="weather_notification_title">Weather notification</string>
     <string name="weather_notification_summary">Add weather info as notification</string>
 
+    <!-- Control ringer -->
+    <string name="volume_keys_control_ring_stream">Volume keys control ringtone volume</string>
+
 </resources>
