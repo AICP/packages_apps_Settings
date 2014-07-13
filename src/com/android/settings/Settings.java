@@ -76,6 +76,7 @@ import com.android.settings.accessibility.ToggleAccessibilityServicePreferenceFr
 import com.android.settings.accounts.AccountSyncSettings;
 import com.android.settings.accounts.AuthenticatorHelper;
 import com.android.settings.accounts.ManageAccountsSettings;
+import com.android.settings.aicp.AicpSettings;
 import com.android.settings.applications.AppOpsSummary;
 import com.android.settings.applications.ManageApplications;
 import com.android.settings.applications.ProcessStatsUi;
@@ -445,7 +446,8 @@ public class Settings extends PreferenceActivity
         BlacklistSettings.class.getName(),
         ApnSettings.class.getName(),
         ThemeSettings.class.getName(),
-        QuietHours.class.getName()
+        QuietHours.class.getName(),
+        AicpSettings.class.getName()
     };
 
     @Override
@@ -1320,4 +1322,5 @@ public class Settings extends PreferenceActivity
     public static class ProfilesSettingsActivity extends Settings { /* empty */ }
     public static class QuietHoursSettingsActivity extends Settings { /* empty */ }
     public static class ThemeSettingsActivity extends Settings { /* empty */ }
+    public static class AicpSettingsActivity extends Settings { /* empty */ }
 }
