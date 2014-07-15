@@ -1735,6 +1735,8 @@
 
         <activity android:name=".paranoid.Halo" />
 
+        <activity android:name=".cyanogenmod.SpamList" />
+
         <!-- Pseudo-activity used to provide an intent-filter entry point to sound packages settings -->
         <activity android:name="Settings$SoundPackageSettingsActivity"
                 android:label="@string/sound_packages_title"
