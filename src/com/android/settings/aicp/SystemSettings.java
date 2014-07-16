@@ -78,16 +78,18 @@ public class SystemSettings extends SettingsPreferenceFragment implements
     private static final String KEY_TRIGGER_WIDTH = "trigger_width";
     private static final String KEY_TRIGGER_TOP = "trigger_top";
     private static final String KEY_TRIGGER_BOTTOM = "trigger_bottom";
+    private static final String PREF_PROXIMITY_ON_WAKE = "proximity_on_wake";
 
     private AppMultiSelectListPreference mIncludedAppCircleBar;
-    private CheckBoxPreference mDisableFC;
 
+    private CheckBoxPreference mDisableFC;
     private CheckBoxPreference mEnableAppCircleBar;
     private CheckBoxPreference mHfmDisableAds;
-
     private CheckBoxPreference mNavigationBarLeft;
     private CheckBoxPreference mDontShowNavbar;
     private CheckBoxPreference mNavigationMenuForce;
+    private CheckBoxPreference mProximityWake;
+
     private ListPreference mNavigationMenu;
 
     private SeekBarPreferenceCham mTriggerWidthPref;
@@ -170,6 +172,11 @@ public class SystemSettings extends SettingsPreferenceFragment implements
                 Settings.System.APP_CIRCLE_BAR_TRIGGER_HEIGHT, 100));
         mTriggerBottomPref.setOnPreferenceChangeListener(this);
 
+        // Proximity wake up
+        mProximityWake = (CheckBoxPreference) prefSet.findPreference(PREF_PROXIMITY_ON_WAKE);
+        mProximityWake.setChecked((Settings.System.getInt(resolver,
+                Settings.System.PROXIMITY_ON_WAKE, 0) == 1));
+
     }
        
 
@@ -184,11 +191,11 @@ public class SystemSettings extends SettingsPreferenceFragment implements
         } else if  (preference == mDisableFC) {
             boolean checked = ((CheckBoxPreference)preference).isChecked();
             Settings.System.putInt(resolver,
-                    Settings.System.DISABLE_FC_NOTIFICATIONS, checked ? 1:0);
+                    Settings.System.DISABLE_FC_NOTIFICATIONS, checked ? 1 : 0);
         } else if  (preference == mDontShowNavbar) {
             boolean checked = ((CheckBoxPreference)preference).isChecked();
             Settings.System.putInt(resolver,
-                    Settings.System.DONT_SHOW_NAVBAR_ON_SWIPE_EXPANDED_DESKTOP_ENABLED, checked ? 1:0);
+                    Settings.System.DONT_SHOW_NAVBAR_ON_SWIPE_EXPANDED_DESKTOP_ENABLED, checked ? 1 : 0);
         } else if (preference == mNavigationMenuForce) {
             value = mNavigationMenuForce.isChecked();
             Settings.System.putInt(resolver,
@@ -201,6 +208,10 @@ public class SystemSettings extends SettingsPreferenceFragment implements
             boolean checked = ((CheckBoxPreference)preference).isChecked();
             Settings.System.putInt(resolver,
                     Settings.System.ENABLE_APP_CIRCLE_BAR, checked ? 1:0);
+        } else if  (preference == mProximityWake) {
+            boolean checked = ((CheckBoxPreference)preference).isChecked();
+            Settings.System.putInt(resolver,
+                    Settings.System.PROXIMITY_ON_WAKE, checked ? 1 : 0);
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }

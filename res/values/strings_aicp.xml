@@ -1183,4 +1183,8 @@
     <!-- Control ringer -->
     <string name="volume_keys_control_ring_stream">Volume keys control ringtone volume</string>
 
+    <!-- Proximity wake -->
+    <string name="proximity_wake_title">Proximity wake-up</string>
+    <string name="proximity_wake_summary">Use proximity sensor to help decide whether to wake device up</string>
+
 </resources>
