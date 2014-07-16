@@ -98,6 +98,12 @@
         android:key="system_category"
         android:title="@string/system_category_title">
 
+        <CheckBoxPreference
+            android:key="proximity_on_wake"
+            android:title="@string/proximity_wake_title"
+            android:summary="@string/proximity_wake_summary"
+            android:defaultValue="false" />
+
         <PreferenceScreen
             android:key="progressbar_settings"
             android:fragment="com.android.settings.aicp.ProgressBar"
