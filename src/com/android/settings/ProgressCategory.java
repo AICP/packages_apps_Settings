@@ -23,7 +23,7 @@ import android.view.View;
 
 public class ProgressCategory extends ProgressCategoryBase {
 
-    private int mEmptyTextRes;
+    private final int mEmptyTextRes;
     private boolean mProgress = false;
     private Preference mNoDeviceFoundPreference;
     private boolean mNoDeviceFoundAdded;
@@ -64,22 +64,8 @@ public class ProgressCategory extends ProgressCategoryBase {
     }
 
     @Override
-    public void removeAll() {
-        super.removeAll();
-        mNoDeviceFoundAdded = false;
-    }
-
-    @Override
     public void setProgress(boolean progressOn) {
         mProgress = progressOn;
-        notifyChanged();
-    }
-
-    public void setEmptyTextRes(int emptyTextRes) {
-        mEmptyTextRes = emptyTextRes;
-        if (mNoDeviceFoundPreference != null) {
-            mNoDeviceFoundPreference.setTitle(emptyTextRes);
-        }
         notifyChanged();
     }
 }

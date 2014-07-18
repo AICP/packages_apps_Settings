@@ -40,14 +40,9 @@ import android.util.Log;
 import android.widget.Toast;
 
 public class WifiApEnabler {
-    public interface OnStateChangeListener {
-        void onStateChanged(boolean enabled);
-    }
-
     private final Context mContext;
     private final CheckBoxPreference mCheckBox;
     private final CharSequence mOriginalSummary;
-    private final OnStateChangeListener mListener;
 
     private WifiManager mWifiManager;
     private final IntentFilter mIntentFilter;
@@ -84,11 +79,9 @@ public class WifiApEnabler {
         }
     };
 
-    public WifiApEnabler(Context context, CheckBoxPreference checkBox,
-            OnStateChangeListener listener) {
+    public WifiApEnabler(Context context, CheckBoxPreference checkBox) {
         mContext = context;
         mCheckBox = checkBox;
-        mListener = listener;
         mOriginalSummary = checkBox.getSummary();
         checkBox.setPersistent(false);
         mWaitForWifiStateChange = true;
@@ -215,7 +208,7 @@ public class WifiApEnabler {
                  * Summary on enable is handled by tether
                  * broadcast notice
                  */
-                updateState(true);
+                mCheckBox.setChecked(true);
                 /* Doesnt need the airplane check */
                 mCheckBox.setEnabled(true);
                 break;
@@ -224,23 +217,16 @@ public class WifiApEnabler {
                 mCheckBox.setEnabled(false);
                 break;
             case WifiManager.WIFI_AP_STATE_DISABLED:
-                updateState(false);
+                mCheckBox.setChecked(false);
                 mCheckBox.setSummary(mOriginalSummary);
                 if (mWaitForWifiStateChange == false) {
                     enableWifiCheckBox();
                 }
                 break;
             default:
-                updateState(false);
+                mCheckBox.setChecked(false);
                 mCheckBox.setSummary(R.string.wifi_error);
                 enableWifiCheckBox();
-        }
-    }
-
-    private void updateState(boolean enabled) {
-        mCheckBox.setChecked(enabled);
-        if (mListener != null) {
-            mListener.onStateChanged(enabled);
         }
     }
 
