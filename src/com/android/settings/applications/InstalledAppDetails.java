@@ -25,6 +25,7 @@ import com.android.settings.applications.ApplicationsState.AppEntry;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.AlertDialog;
+import android.app.AppOpsManager;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.Fragment;
@@ -84,6 +85,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -147,8 +149,10 @@ public class InstalledAppDetails extends Fragment
     private Button mMoveAppButton;
     private CompoundButton mNotificationSwitch, mHaloState;
     private Button mBlacklistButton;
+    private Button mAppOpsButton;
 
     private PackageMoveObserver mPackageMoveObserver;
+    private AppOpsManager mAppOps;
 
     private final HashSet<String> mHomePackages = new HashSet<String>();
 
@@ -447,6 +451,19 @@ public class InstalledAppDetails extends Fragment
         }
     }
 
+    private void initAppOpsButton() {
+        boolean enabled = true;
+        if (isThisASystemPackage()) {
+            enabled = false;
+        }
+
+        mAppOpsButton.setEnabled(enabled);
+        if (enabled) {
+            // Register listener
+            mAppOpsButton.setOnClickListener(this);
+        }
+    }
+
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle icicle) {
@@ -539,6 +556,9 @@ public class InstalledAppDetails extends Fragment
         mPeekBlacklist = (CheckBox) mBlacklistDialogView.findViewById(R.id.peek_blacklist);
         mFloatingBlacklist = (CheckBox) mBlacklistDialogView.findViewById(R.id.floating_blacklist);
         mHoverBlacklist = (CheckBox) mBlacklistDialogView.findViewById(R.id.hover_blacklist);
+
+        mAppOps = (AppOpsManager) getActivity().getSystemService(Context.APP_OPS_SERVICE);
+        mAppOpsButton = (Button) view.findViewById(R.id.app_ops_button);
 
         return view;
     }
@@ -833,7 +853,8 @@ public class InstalledAppDetails extends Fragment
         }
 
         // Security permissions section
-        LinearLayout permsView = (LinearLayout) mRootView.findViewById(R.id.permissions_section);
+        RelativeLayout permsView =
+            (RelativeLayout) mRootView.findViewById(R.id.permissions_section);
         AppSecurityPermissions asp = new AppSecurityPermissions(getActivity(), packageName);
         int premiumSmsPermission = getPremiumSmsPermission(packageName);
         // Premium SMS permission implies the app also has SEND_SMS permission, so the original
@@ -1087,12 +1108,14 @@ public class InstalledAppDetails extends Fragment
             initMoveButton();
             initNotificationButton();
             initBlacklistButton();
+            initAppOpsButton();
         } else {
             mMoveAppButton.setText(R.string.moving);
             mMoveAppButton.setEnabled(false);
             mUninstallButton.setEnabled(false);
             mSpecialDisableButton.setEnabled(false);
             mBlacklistButton.setEnabled(false);
+            mAppOpsButton.setEnabled(false);
         }
     }
 
@@ -1538,6 +1561,12 @@ public class InstalledAppDetails extends Fragment
             mPm.movePackage(mAppEntry.info.packageName, mPackageMoveObserver, moveFlags);
         } else if (v == mBlacklistButton) {
             showDialogInner(DLG_BLACKLIST, 0);
+        } else if (v == mAppOpsButton) {
+            Bundle args = new Bundle();
+            args.putString(AppOpsDetails.ARG_PACKAGE_NAME, mAppEntry.info.packageName);
+            PreferenceActivity pa = (PreferenceActivity) getActivity();
+            pa.startPreferencePanel(AppOpsDetails.class.getName(), args,
+                    R.string.app_ops_settings, null, this, 2);
         }
     }
 

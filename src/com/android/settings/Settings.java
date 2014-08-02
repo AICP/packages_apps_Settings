@@ -1294,6 +1294,7 @@ public class Settings extends PreferenceActivity
             return super.isValidFragment(className);
         }
     }
+    public static class AppOpsDetailsActivity extends Settings { /* empty */ }
     public static class StorageUseActivity extends Settings { /* empty */ }
     public static class DevelopmentSettingsActivity extends Settings { /* empty */ }
     public static class AccessibilitySettingsActivity extends Settings { /* empty */ }
