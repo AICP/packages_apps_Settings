@@ -17,7 +17,11 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-        <PreferenceScreen
+     <PreferenceCategory
+        android:key="filter_settings"
+        android:title="@string/filter_settings_title">
+
+       <PreferenceScreen
             android:key="blacklist"
             android:title="@string/blacklist_title"
             android:fragment="com.android.settings.blacklist.BlacklistSettings" />
@@ -26,5 +30,6 @@
             android:title="@string/block_notifications_title"
             android:fragment="com.android.settings.cyanogenmod.SpamList" />
 
+    </PreferenceCategory>
 
 </PreferenceScreen>

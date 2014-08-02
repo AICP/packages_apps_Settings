@@ -171,8 +171,6 @@ public class SecuritySettings extends RestrictedSettingsFragment
 
         // App security settings
         addPreferencesFromResource(R.xml.security_settings_app_slim);
-        addPreferencesFromResource(R.xml.security_settings_app_custom);
-        mBlacklist = (PreferenceScreen) root.findPreference(KEY_BLACKLIST);
 
         // Add options for lock/unlock screen
         int resid = 0;
@@ -426,6 +424,10 @@ public class SecuritySettings extends RestrictedSettingsFragment
                 mToggleVerifyApps.setEnabled(false);
             }
         }
+
+        // Blacklist and Filters.
+        addPreferencesFromResource(R.xml.security_settings_app_custom);
+        mBlacklist = (PreferenceScreen) root.findPreference(KEY_BLACKLIST);
 
         // Determine options based on device telephony support
         if (!pm.hasSystemFeature(PackageManager.FEATURE_TELEPHONY)) {
