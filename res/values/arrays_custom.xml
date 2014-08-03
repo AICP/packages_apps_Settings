@@ -433,4 +433,34 @@
         <item>2.0</item>
     </string-array>
 
+    <!-- List of user selectable networks to override defaults where necessary.
+         In some instances default tether networks conflict with other routed
+         networks, e.g., OpenVPN routed setups. This allows the user to select
+         other networks to override the defaults built in to either config.xml
+         or Tethering.java -->
+    <string-array translatable="false" name="tether_user_networks_entries">
+        <item>Use System Default</item>
+        <item>192.168.208.0/24</item>
+        <item>192.168.209.0/24</item>
+        <item>192.168.210.0/24</item>
+        <item>172.48.21.0/24</item>
+        <item>172.48.22.0/24</item>
+        <item>172.48.23.0/24</item>
+        <item>172.49.21.0/24</item>
+        <item>172.49.22.0/24</item>
+        <item>172.49.23.0/24</item>
+        <item>172.50.21.0/24</item>
+        <item>172.50.22.0/24</item>
+        <item>172.50.23.0/24</item>
+        <item>10.208.21.0/24</item>
+        <item>10.208.22.0/24</item>
+        <item>10.208.23.0/24</item>
+        <item>10.209.21.0/24</item>
+        <item>10.209.22.0/24</item>
+        <item>10.209.23.0/24</item>
+        <item>10.210.21.0/24</item>
+        <item>10.210.22.0/24</item>
+        <item>10.210.23.0/24</item>
+    </string-array>
+
 </resources>

@@ -21,6 +21,14 @@
         android:title="@string/usb_tethering_button_text"
         android:persistent="false" />
 
+    <ListPreference
+        android:key="tether_usb_network"
+        android:title="@string/tether_usb_network_text"
+        android:defaultValue="@string/tether_user_network_default"
+        android:entries="@array/tether_user_networks_entries"
+        android:entryValues="@array/tether_user_networks_entries"
+        android:summary="@string/tether_usb_network_summary" />
+
     <CheckBoxPreference
         android:key="enable_wifi_ap"
         android:title="@string/wifi_tether_checkbox_text"
