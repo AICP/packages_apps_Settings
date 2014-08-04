@@ -225,10 +225,10 @@
 
     <!-- App Ops -->
     <header
-        android:fragment="com.android.settings.applications.AppOpsSummary"
+        android:fragment="com.android.settings.slim.privacyguard.PrivacyGuardManager"
         android:icon="@drawable/ic_app_ops"
-        android:title="@string/app_ops_settings"
-        android:id="@+id/appops_settings" />
+        android:title="@string/privacy_guard_manager_title"
+        android:id="@+id/privacy_guard_manager" />
 
     <!-- Security -->
     <header
