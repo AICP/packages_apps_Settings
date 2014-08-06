@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2012 The CyanogenMod Project
+<!--
+     Copyright (C) 2012 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,33 +15,66 @@
      limitations under the License.
 -->
 
-<PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/anonymous_statistics_title"
-    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/anonymous_statistics_title" >
 
-    <Preference
-        android:layout="@layout/thank_you" android:selectable="false"/>
+    <PreferenceCategory
+        android:key="pref_settings"
+        android:title="@string/pref_settings" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:disableDependentsState="true"
+            android:key="pref_anonymous_opt_in"
+            android:title="@string/enable_reporting_title" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="pref_anonymous_opt_in"
+            android:key="pref_anonymous_opt_out_persist"
+            android:title="@string/disable_reporting_persistent" />
 
-    <CheckBoxPreference
-        android:key="pref_anonymous_opt_in"
-        android:defaultValue="true"
-        android:title="@string/enable_reporting_title" />
+        <!-- Preference
+            android:key="pref_uninstall_romstats"
+            android:title="@string/pref_uninstall" /-->
+    </PreferenceCategory>
     
-    <PreferenceScreen
-        android:title="@string/preview_data_title">
-        <intent
-             android:action="android.intent.action.VIEW"
-             android:targetPackage="com.android.settings"
-             android:targetClass="com.android.settings.aicp.stats.PreviewActivity" />
-    </PreferenceScreen>
+    <PreferenceCategory android:title="@string/pref_stats" android:key="pref_stats">
+        <PreferenceScreen android:title="@string/preview_data_title" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetClass="com.android.settings.aicp.stats.PreviewActivity"
+                android:targetPackage="com.android.settings" />
+        </PreferenceScreen>
 
-    <Preference
-        android:key="pref_view_stats"
-        android:title="@string/view_stats_title" />
-
-    <Preference
-        android:key="pref_uninstall_romstats"
-        android:title="@string/pref_uninstall" />
+        <Preference
+            android:key="pref_view_stats"
+            android:title="@string/view_stats_title" />
+        <Preference
+            android:key="pref_last_report_on"
+            android:title="@string/last_report_on" />
+        <Preference
+            android:key="pref_reporting_interval"
+            android:title="@string/reporting_interval" />
+        <Preference
+            android:key="pref_app_signature"
+            android:title="@string/app_signature" />
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="@string/pref_info" >
+        <Preference
+            android:key="pref_about"
+            android:summary="@string/pref_info_about"
+            android:title="@string/app_name" />
+        <!--
+             Preference
+            android:key="pref_changelog"
+            android:summary="@string/pref_info_changelog_desc"
+            android:title="@string/pref_info_changelog" /
+        -->
+        <Preference
+            android:key="pref_website"
+            android:summary="@string/pref_info_website_url"
+            android:title="@string/pref_info_website" />
+    </PreferenceCategory>
 
 </PreferenceScreen>

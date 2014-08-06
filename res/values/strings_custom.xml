@@ -54,11 +54,28 @@
     <string name="anonymous_statistics_warning">Opting into AOKP Statistics will allow non-personal data to be submitted to the
         developers of AOKP to track unique installations across devices. The information submitted includes an unique identifier,
         which does not compromise your privacy or personal data. The data is submitted once weekly, during boot.\n\nFor an example of the data that is submitted, tap on Preview Data.</string>
+
+    <string name="pref_settings">Settings</string>
     <string name="enable_reporting_title">Enable reporting</string>
+    <string name="disable_reporting_persistent">Persistent opt-out</string>
     <string name="preview_data_title">Preview data</string>
     <string name="preview_data_summary">%s</string>
     <string name="view_stats_title">View stats</string>
     <string name="anonymous_learn_more">Learn more</string>
+
+    <string name="pref_stats">Information</string>
+    <string name="last_report_on">Last reported</string>
+    <string name="reporting_interval">Reporting interval</string>
+    <plurals name="reporting_interval_days">
+        <item quantity="one">1 day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <string name="next_report_on">Next report</string>
+    <string name="app_signature">App signature</string>
+    
+    <string name="pref_hideicon">Hide icon from launcher</string>
+    <string name="pref_hideicon_desc">Application launcher icon will be hidden from your App Drawer</string>
+    
 
     <!-- Anonymous Statistics - Notification -->
     <string name="anonymous_notification_desc">Enable or Disable AOKP Statistics</string>
@@ -69,6 +86,15 @@
     <string name="preview_version_title">Version</string>
     <string name="preview_country_title">Country</string>
     <string name="preview_carrier_title">Carrier</string>
+    <string name="preview_romname_title">ROM Name</string> 
+    <string name="preview_romversion_title">ROM Version</string>
+
+    <string name="pref_info">About &amp; Support</string>
+    <string name="pref_info_about">About</string>
+    <string name="pref_info_changelog">Change log</string>
+    <string name="pref_info_changelog_desc">Show the change log</string>
+    <string name="pref_info_website">Web site</string>
+    <string name="pref_info_website_url">http://www.aicp-rom.com</string>
 
     <!-- Delete apn confirmation dialog message -->
     <string name="confirm_delete_apn">The APN will be deleted.</string>
@@ -685,6 +711,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="filter_settings_title">Filter Settings</string>
 
      <!-- Anonymous Statistics -->
+    <string name="app_name">AICP Stats</string>
     <string name="aicp_stats">AICP Statistics</string>
     <string name="aicp_stats_summary">Help make AICP better by opting into anonymous stats reporting</string>
     <string name="main_title">Anonymous Usage Data</string>
