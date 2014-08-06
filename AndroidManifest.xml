@@ -1973,7 +1973,7 @@
 
         <!-- Anonymous Stats -->
         <activity
-            android:name="com.android.settings.aicp.stats.AnonymousStats" >
+            android:name="com.android.settings.aicp.stats.AnonymousStats">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
@@ -1981,19 +1981,12 @@
 
         <activity android:name="com.android.settings.aicp.stats.PreviewActivity"
                   android:parentActivityName="com.android.settings.aicp.stats.AnonymousStats" >
+
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:hardwareAccelerated="true"
             android:value="com.android.settings.aicp.stats.AnonymousStats" />
-    </activity>
-
-        <activity android:name="com.android.settings.aicp.stats.ViewStats"
-                  android:hardwareAccelerated="true"
-                  android:parentActivityName="com.android.settings.aicp.stats.AnonymousStats" >
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value="com.android.settings.aicp.stats.AnonymousStats" />
-    </activity>        
+        </activity>
 
         <receiver
             android:name="com.android.settings.aicp.stats.ReportingServiceManager"
