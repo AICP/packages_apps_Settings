@@ -16,10 +16,10 @@
 
 package com.android.settings.aicp.stats;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
@@ -33,109 +33,159 @@ import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.AsyncTask;
 import android.os.IBinder;
+import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import com.android.settings.R;
 
+import com.google.analytics.tracking.android.GoogleAnalytics;
+import com.google.analytics.tracking.android.Tracker;
+
 public class ReportingService extends Service {
 
+	private StatsUploadTask mTask;
+	
 	@Override
 	public IBinder onBind(Intent intent) {
 		return null;
 	}
 
-	@Override
-	public int onStartCommand(Intent intent, int flags, int startId) {
-		if (intent.getBooleanExtra("firstBoot", false)) {
-			promptUser();
-			Log.d(Utilities.TAG, "Prompting user for opt-in.");
-		} else {
-			Log.d(Utilities.TAG, "User has opted in -- reporting.");
-			Thread thread = new Thread() {
-				@Override
-				public void run() {
-					report();
-				}
-			};
-			thread.start();
+    @Override
+    public int onStartCommand (Intent intent, int flags, int startId) {
+    	boolean canReport = true;
+        if (intent.getBooleanExtra("promptUser", false)) {
+        	Log.d(Const.TAG, "Prompting user for opt-in.");
+            promptUser();
+            canReport = false;
+        }
+        
+        String RomStatsUrl = Utilities.getStatsUrl();
+        if (RomStatsUrl == null || RomStatsUrl.isEmpty()) {
+        	Log.e(Const.TAG, "This ROM is not configured for ROM Statistics.");
+        	canReport = false;
+        }
+        
+        if (canReport) {
+	    	Log.d(Const.TAG, "User has opted in -- reporting.");
+	    	
+	        if (mTask == null || mTask.getStatus() == AsyncTask.Status.FINISHED) {
+	            mTask = new StatsUploadTask();
+	            mTask.execute();
+	        }
+        }
+
+        return Service.START_REDELIVER_INTENT;
+    }
+    
+    private class StatsUploadTask extends AsyncTask<Void, Void, Boolean> {
+        @Override
+        protected Boolean doInBackground(Void... params) {
+    		String deviceId = Utilities.getUniqueID(getApplicationContext());
+    		String deviceName = Utilities.getDevice();
+    		String deviceVersion = Utilities.getModVersion();
+    		String deviceCountry = Utilities.getCountryCode(getApplicationContext());
+    		String deviceCarrier = Utilities.getCarrier(getApplicationContext());
+    		String deviceCarrierId = Utilities.getCarrierId(getApplicationContext());
+    		String romName = Utilities.getRomName();
+    		String romVersion = Utilities.getRomVersion();
+    		String romStatsSignCert = Utilities.getSigningCert(getApplicationContext());
+
+    		String romStatsUrl = Utilities.getStatsUrl();
+    		
+    		Log.d(Const.TAG, "SERVICE: Report URL=" + romStatsUrl);
+    		Log.d(Const.TAG, "SERVICE: Device ID=" + deviceId);
+    		Log.d(Const.TAG, "SERVICE: Device Name=" + deviceName);
+    		Log.d(Const.TAG, "SERVICE: Device Version=" + deviceVersion);
+    		Log.d(Const.TAG, "SERVICE: Country=" + deviceCountry);
+    		Log.d(Const.TAG, "SERVICE: Carrier=" + deviceCarrier);
+    		Log.d(Const.TAG, "SERVICE: Carrier ID=" + deviceCarrierId);
+    		Log.d(Const.TAG, "SERVICE: ROM Name=" + romName);
+    		Log.d(Const.TAG, "SERVICE: ROM Version=" + romVersion);
+    		Log.d(Const.TAG, "SERVICE: Sign Cert=" + romStatsSignCert);
+
+			if (Utilities.getGaTracking() != null) {
+				Log.d(Const.TAG, "Reporting to Google Analytics is enabled");
+				
+				GoogleAnalytics ga = GoogleAnalytics.getInstance(ReportingService.this);
+				Tracker tracker = ga.getTracker(Utilities.getGaTracking());
+				tracker.sendEvent(deviceName, deviceVersion, deviceCountry, null);
+				tracker.sendEvent("checkin", deviceName, romVersion, null);
+				tracker.close();
+			}
+    		
+            // report to the cmstats service
+            HttpClient httpClient = new DefaultHttpClient();
+            HttpPost httpPost = new HttpPost(romStatsUrl + "submit");
+            boolean success = false;
+
+            try {
+                List<NameValuePair> kv = new ArrayList<NameValuePair>(5);
+    			kv.add(new BasicNameValuePair("device_hash", deviceId));
+    			kv.add(new BasicNameValuePair("device_name", deviceName));
+    			kv.add(new BasicNameValuePair("device_version", deviceVersion));
+    			kv.add(new BasicNameValuePair("device_country", deviceCountry));
+    			kv.add(new BasicNameValuePair("device_carrier", deviceCarrier));
+    			kv.add(new BasicNameValuePair("device_carrier_id", deviceCarrierId));
+    			kv.add(new BasicNameValuePair("rom_name", romName));
+    			kv.add(new BasicNameValuePair("rom_version", romVersion));
+    			kv.add(new BasicNameValuePair("sign_cert", romStatsSignCert));
+
+                httpPost.setEntity(new UrlEncodedFormEntity(kv));
+                httpClient.execute(httpPost);
+
+                success = true;
+            } catch (IOException e) {
+                Log.w(Const.TAG, "Could not upload stats checkin", e);
+            }
+
+            return success;
+        }
+        
+        @Override
+		protected void onPostExecute(Boolean result) {
+			final Context context = ReportingService.this;
+			long interval;
+
+			if (result) {
+				final SharedPreferences prefs = AnonymousStats.getPreferences(context);
+
+				// save the current date for future checkins
+				prefs.edit().putLong(Const.ANONYMOUS_LAST_CHECKED, System.currentTimeMillis()).apply();
+				
+				// save a hashed rom version (used to to an immediate checkin in case of new rom version
+	    		prefs.edit().putString(Const.ANONYMOUS_LAST_REPORT_VERSION, Utilities.getRomVersionHash()).apply();
+
+				// set interval = 0; this causes setAlarm to schedule next report after UPDATE_INTERVAL
+				interval = 0;
+			} else {
+				// error, try again in 3 hours
+				interval = 3L * 60L * 60L * 1000L;
+			}
+
+			ReportingServiceManager.setAlarm(context, interval);
+			stopSelf();
 		}
-		return Service.START_REDELIVER_INTENT;
 	}
 
-	private void report() {
-		Log.d(Utilities.TAG, "Reporting stats");
-
-		String deviceId = Utilities.getUniqueID(getApplicationContext());
-		String deviceName = Utilities.getDevice();
-		String deviceVersion = Utilities.getModVersion();
-		String deviceCountry = Utilities
-				.getCountryCode(getApplicationContext());
-		String deviceCarrier = Utilities.getCarrier(getApplicationContext());
-		String deviceCarrierId = Utilities
-				.getCarrierId(getApplicationContext());
-		String RomName = Utilities.getRomName();
-		String RomVersion = Utilities.getRomVersion();
-
-		String RomStatsUrl = Utilities.getStatsUrl();
-
-		if (RomStatsUrl == null || RomStatsUrl.isEmpty()) {
-			Log.e(Utilities.TAG,
-					"This ROM is not configured for ROM Statistics.");
-			return;
-		}
-
-		Log.d(Utilities.TAG, "SERVICE: Report URL=" + RomStatsUrl);
-		Log.d(Utilities.TAG, "SERVICE: Device ID=" + deviceId);
-		Log.d(Utilities.TAG, "SERVICE: Device Name=" + deviceName);
-		Log.d(Utilities.TAG, "SERVICE: Device Version=" + deviceVersion);
-		Log.d(Utilities.TAG, "SERVICE: Country=" + deviceCountry);
-		Log.d(Utilities.TAG, "SERVICE: Carrier=" + deviceCarrier);
-		Log.d(Utilities.TAG, "SERVICE: Carrier ID=" + deviceCarrierId);
-		Log.d(Utilities.TAG, "SERVICE: ROM Name=" + RomName);
-		Log.d(Utilities.TAG, "SERVICE: ROM Version=" + RomVersion);
-
-		HttpClient httpclient = new DefaultHttpClient();
-		HttpPost httppost = new HttpPost(
-				"http://stats.aicp-rom.com/submit.php");
-		try {
-			List<NameValuePair> kv = new ArrayList<NameValuePair>(5);
-			kv.add(new BasicNameValuePair("device_hash", deviceId));
-			kv.add(new BasicNameValuePair("device_name", deviceName));
-			kv.add(new BasicNameValuePair("device_version", deviceVersion));
-			kv.add(new BasicNameValuePair("device_country", deviceCountry));
-			kv.add(new BasicNameValuePair("device_carrier", deviceCarrier));
-			kv.add(new BasicNameValuePair("device_carrier_id", deviceCarrierId));
-			kv.add(new BasicNameValuePair("rom_name", RomName));
-			kv.add(new BasicNameValuePair("rom_version", RomVersion));
-			httppost.setEntity(new UrlEncodedFormEntity(kv));
-			HttpResponse resp = httpclient.execute(httppost);
-
-			Log.d(Utilities.TAG, "Response is: "
-					+ resp.getStatusLine().getStatusCode());
-			getSharedPreferences(Utilities.SETTINGS_PREF_NAME, 0)
-					.edit()
-					.putLong(AnonymousStats.ANONYMOUS_LAST_CHECKED,
-							System.currentTimeMillis()).apply();
-		} catch (Exception e) {
-			Log.e(Utilities.TAG, "Got Exception", e);
-		}
-
-		ReportingServiceManager.setAlarm(this);
-		stopSelf();
-	}
-
-	@SuppressWarnings("deprecation")
 	private void promptUser() {
 		NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-		Notification n = new Notification(R.drawable.icon,
-				getString(R.string.notification_ticker),
-				System.currentTimeMillis());
-		Intent nI = new Intent(this, AnonymousStats.class);
-		PendingIntent pI = PendingIntent.getActivity(getApplicationContext(),
-				0, nI, 0);
-		n.setLatestEventInfo(getApplicationContext(),
-				getString(R.string.notification_title),
-				getString(R.string.notification_desc), pI);
-		nm.notify(1, n);
+
+		Intent mainActivity = new Intent(getApplicationContext(), AnonymousStats.class);
+		PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, mainActivity, 0);
+
+		Notification notification = new NotificationCompat.Builder(getBaseContext())
+				.setSmallIcon(R.drawable.ic_launcher)
+				.setTicker(getString(R.string.notification_ticker))
+				.setContentTitle(getString(R.string.notification_title))
+				.setContentText(getString(R.string.notification_desc))
+				.setWhen(System.currentTimeMillis())
+				.setContentIntent(pendingIntent)
+				.setAutoCancel(true)
+				.build();
+
+		nm.notify(Utilities.NOTIFICATION_ID, notification);
 	}
+ 
 }
