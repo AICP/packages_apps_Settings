@@ -140,7 +140,6 @@ public class Settings extends PreferenceActivity
         "com.android.settings.PARENT_FRAGMENT_CLASS";
 
     private static final String EXTRA_UI_OPTIONS = "settings:ui_options";
-    private static final String EXTRA_DISABLE_SEARCH = "settings:disable_search";
 
     private static final String SAVE_KEY_CURRENT_HEADER = "com.android.settings.CURRENT_HEADER";
     private static final String SAVE_KEY_PARENT_HEADER = "com.android.settings.PARENT_HEADER";
@@ -148,8 +147,6 @@ public class Settings extends PreferenceActivity
     static final int DIALOG_ONLY_ONE_HOME = 1;
 
     private static boolean sShowNoHomeNotice = false;
-
-    private boolean mDisableSearchIcon = false;
 
     private String mFragmentClass;
     private int mTopLevelHeaderId;
@@ -223,6 +220,11 @@ public class Settings extends PreferenceActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        // We only want to inflate the search menu item in the top-level activity
+        if (getClass() != Settings.class) {
+            return false;
+        }
+
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.settings_search, menu);
         mSearchItem = menu.findItem(R.id.action_search);
@@ -258,7 +260,6 @@ public class Settings extends PreferenceActivity
         mSearchBar.setOnItemClickListener(this);
         mSearchBar.setAdapter(new SettingsSearchFilterAdapter(this));
 
-        mSearchItem.setVisible(!mDisableSearchIcon);
         return true;
     }
 
@@ -266,10 +267,6 @@ public class Settings extends PreferenceActivity
     protected void onCreate(Bundle savedInstanceState) {
         if (getIntent().hasExtra(EXTRA_UI_OPTIONS)) {
             getWindow().setUiOptions(getIntent().getIntExtra(EXTRA_UI_OPTIONS, 0));
-        }
-
-        if (getIntent().hasExtra(EXTRA_DISABLE_SEARCH) != onIsMultiPane()) {
-            mDisableSearchIcon = getIntent().getBooleanExtra(EXTRA_DISABLE_SEARCH, false);
         }
 
         mAuthenticatorHelper = new AuthenticatorHelper();
@@ -612,22 +609,6 @@ public class Settings extends PreferenceActivity
                 PrintSettingsFragment.class.getName().equals(fragmentName) ||
                 PrintServiceSettingsFragment.class.getName().equals(fragmentName)) {
             intent.putExtra(EXTRA_UI_OPTIONS, ActivityInfo.UIOPTION_SPLIT_ACTION_BAR_WHEN_NARROW);
-            // Should also disable the search options here to not confuse
-            // the end user
-            intent.putExtra(EXTRA_DISABLE_SEARCH, true);
-        } else if (ApplicationSettings.class.getName().equals(fragmentName) ||
-                DataUsageSummary.class.getName().equals(fragmentName) ||
-                PowerUsageSummary.class.getName().equals(fragmentName) ||
-                ThemeSettings.class.getName().equals(fragmentName) ||
-                ManageApplications.class.getName().equals(fragmentName) ||
-                PaymentSettings.class.getName().equals(fragmentName) ||
-                CaptionPropertiesFragment.class.getName().equals(fragmentName) ||
-                ToggleScreenMagnificationPreferenceFragment.class.getName().equals(fragmentName) ||
-                ToggleGlobalGesturePreferenceFragment.class.getName().equals(fragmentName) ||
-                DevelopmentSettings.class.getName().equals(fragmentName) ||
-                WifiDisplaySettings.class.getName().equals(fragmentName)) {
-            // Should force disable search options
-            intent.putExtra(EXTRA_DISABLE_SEARCH, true);
         }
 
         intent.setClass(this, SubSettings.class);
@@ -1204,7 +1185,9 @@ public class Settings extends PreferenceActivity
 
     @Override
     public boolean onPreferenceStartFragment(PreferenceFragment caller, Preference pref) {
-        mSearchItem.collapseActionView();
+        if (mSearchItem != null) {
+            mSearchItem.collapseActionView();
+        }
         // Override the fragment title for Wallpaper settings
         int titleRes = pref.getTitleRes();
         if (pref.getFragment().equals(WallpaperTypeSettings.class.getName())) {
@@ -1254,9 +1237,6 @@ public class Settings extends PreferenceActivity
             mCurrentState = newConfig.uiThemeMode;
             HeaderAdapter.mThemeEnabler.setSwitchState();
         }
-
-        mSearchBar.clearFocus();
-        mSearchItem.collapseActionView();
     }
 
     public static void requestHomeNotice() {
