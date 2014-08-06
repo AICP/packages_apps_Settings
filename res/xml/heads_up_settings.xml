@@ -28,6 +28,12 @@
             android:persistent="false"
             android:defaultValue="false" />
 
+       <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
+            android:key="heads_up_exclude_from_lock_screen"
+            android:title="@string/heads_up_exclude_from_lock_screen"
+            android:persistent="false"
+            android:defaultValue="false" />
+
        <ListPreference
             android:key="heads_up_time_out"
             android:title="@string/heads_up_time_out_title"
