@@ -20,7 +20,6 @@ package com.android.settings;
 import static android.provider.Settings.System.SCREEN_OFF_TIMEOUT;
 
 import android.app.Activity;
-import android.app.ActivityManager;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
@@ -356,9 +355,7 @@ public class SecuritySettings extends RestrictedSettingsFragment
         // Enable or disable keyguard widget checkbox based on DPM state
         mEnableKeyguardWidgets = (CheckBoxPreference) root.findPreference(KEY_ENABLE_WIDGETS);
         if (mEnableKeyguardWidgets != null) {
-            if (ActivityManager.isLowRamDeviceStatic()
-                    || mLockPatternUtils.isLockScreenDisabled()) {
-                // Widgets take a lot of RAM, so disable them on low-memory devices
+            if (mLockPatternUtils.isLockScreenDisabled()) {
                 if (mSecurityCategory != null) {
                     mSecurityCategory.removePreference(root.findPreference(KEY_ENABLE_WIDGETS));
                     mEnableKeyguardWidgets = null;
