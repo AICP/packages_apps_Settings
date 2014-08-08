@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2012 The CyanogenMod Project
+<!--
+     Copyright (C) 2012 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,51 +15,44 @@
      limitations under the License.
 -->
 
-<PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/preview_data_title"
-    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/preview_data_title" >
 
     <Preference
+        style="?android:preferenceInformationStyle"
         android:key="preview_id"
-        style="?android:preferenceInformationStyle"
-        android:title="@string/preview_id_title"
-        android:summary="%s" 
-        android:selectable="false" />
-
+        android:summary="%s"
+        android:title="@string/preview_id_title" />
     <Preference
+        style="?android:preferenceInformationStyle"
         android:key="preview_device"
-        style="?android:preferenceInformationStyle"
-        android:title="@string/preview_device_title"
-        android:summary="%s" 
-        android:selectable="false" />
-
+        android:summary="%s"
+        android:title="@string/preview_device_title" />
     <Preference
+        style="?android:preferenceInformationStyle"
         android:key="preview_version"
-        style="?android:preferenceInformationStyle"
-        android:title="@string/preview_version_title"
         android:summary="%s"
-        android:selectable="false" />
-
+        android:title="@string/preview_version_title" />
     <Preference
+        style="?android:preferenceInformationStyle"
         android:key="preview_country"
-        style="?android:preferenceInformationStyle"
-        android:title="@string/preview_country_title"
         android:summary="%s"
-        android:selectable="false" />
-
+        android:title="@string/preview_country_title" />
     <Preference
+        style="?android:preferenceInformationStyle"
         android:key="preview_carrier"
-        style="?android:preferenceInformationStyle"
-        android:title="@string/preview_carrier_title"
         android:summary="%s"
-        android:selectable="false" />
-
+        android:title="@string/preview_carrier_title" />
     <Preference
-        android:key="preview_romversion"
         style="?android:preferenceInformationStyle"
-        android:title="@string/preview_romversion_title"
+        android:key="preview_romname"
         android:summary="%s"
-        android:selectable="true" />
+        android:title="@string/preview_romname_title" />
+    <Preference
+        style="?android:preferenceInformationStyle"
+        android:key="preview_romversion"
+        android:summary="%s"
+        android:title="@string/preview_romversion_title" />
 
 </PreferenceScreen>
