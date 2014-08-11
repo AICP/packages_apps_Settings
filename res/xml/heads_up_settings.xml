@@ -21,6 +21,13 @@
             android:title="@string/heads_up_floating_window"
             android:defaultValue="true" />
 
+       <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
+            android:key="heads_up_expanded"
+            android:title="@string/heads_up_expanded_title"
+            android:summary="@string/heads_up_expanded_summary"
+            android:persistent="false"
+            android:defaultValue="false" />
+
        <ListPreference
             android:key="heads_up_time_out"
             android:title="@string/heads_up_time_out_title"
