@@ -827,6 +827,9 @@
     <string name="recent_panel_lefty_mode_summary">Show recent apps panel on the left edge.</string>
     <string name="recent_panel_show_topmost_title">Show topmost task</string>
     <string name="recent_panel_show_topmost_summary">Don\'t exclude the topmost task in recents view</string>
+    <string name="recent_panel_bg_color_title">Background color</string>
+    <string name="reset_default_message">Reset default</string>
+    <string name="qs_style_reset_message">Reset all colors to default?</string>
 
     <!-- Kenrel tweaker -->
     <string name="kerneltweaker_settings_title">Kernel Tweaker</string>
