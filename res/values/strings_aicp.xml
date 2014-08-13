@@ -827,6 +827,9 @@
     <string name="recent_panel_lefty_mode_summary">Show recent apps panel on the left edge.</string>
     <string name="recent_panel_show_topmost_title">Show topmost task</string>
     <string name="recent_panel_show_topmost_summary">Don\'t exclude the topmost task in recents view</string>
+    <string name="recent_panel_bg_color_title">Background color</string>
+    <string name="reset_default_message">Reset default</string>
+    <string name="qs_style_reset_message">Reset all colors to default?</string>
 
     <!-- Kenrel tweaker -->
     <string name="kerneltweaker_settings_title">Kernel Tweaker</string>
@@ -1142,7 +1145,7 @@
     <string name="notification_swipe_title">Notification swipe</string>
     <string name="notification_swipe_summary">Swipe left to launch notification\nin floating window.</string>
     <string name="recents_swipe_title">Recents swipe</string>
-    <string name="recents_swipe_summary">Swipe left in stick recents to launch\nnotification in floating window.</string>
+    <string name="recents_swipe_summary">Swipe left in stock recents to launch\nnotification in floating window.</string>
 
     <!-- Sound settings screen, setting check box label -->
     <string name="camera_sounds_title">Camera shutter sound</string>
