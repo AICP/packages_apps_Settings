@@ -102,7 +102,7 @@
             android:key="proximity_on_wake"
             android:title="@string/proximity_wake_title"
             android:summary="@string/proximity_wake_summary"
-            android:defaultValue="false" />
+            android:defaultValue="true" />
 
         <PreferenceScreen
             android:key="progressbar_settings"

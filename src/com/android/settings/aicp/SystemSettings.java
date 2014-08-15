@@ -103,6 +103,7 @@ public class SystemSettings extends SettingsPreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ContentResolver resolver = getActivity().getContentResolver();
+        Resources res = getResources();
 
         addPreferencesFromResource(R.xml.aicp_system);
 
@@ -176,7 +177,12 @@ public class SystemSettings extends SettingsPreferenceFragment implements
         mProximityWake = (CheckBoxPreference) prefSet.findPreference(PREF_PROXIMITY_ON_WAKE);
         mProximityWake.setChecked((Settings.System.getInt(resolver,
                 Settings.System.PROXIMITY_ON_WAKE, 0) == 1));
-
+        boolean proximityCheckOnWait = res.getBoolean(
+                com.android.internal.R.bool.config_proximityCheckOnWake);
+        if (!proximityCheckOnWait) {
+            mSystemScreen.removePreference(findPreference(PREF_PROXIMITY_ON_WAKE));
+            Settings.System.putInt(getContentResolver(), Settings.System.PROXIMITY_ON_WAKE, 1);
+        }
     }
 
 
