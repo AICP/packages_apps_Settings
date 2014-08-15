@@ -68,6 +68,7 @@ public class SystemSettings extends SettingsPreferenceFragment implements
 
     private static final String CATEGORY_SYSTEM = "system_category";
     private static final String CATEGORY_NAVBAR = "navbar_category";
+
     private static final String KEY_NAVBAR_LEFT_IN_LANDSCAPE = "navigation_bar_left";
     private static final String DISABLE_FC_NOTIFICATIONS = "disable_fc_notifications";
     private static final String KEY_DONT_SHOW_NAVBAR_ON_SWIPE_EXPANDED_DESKTOP_ENABLED =
@@ -98,11 +99,13 @@ public class SystemSettings extends SettingsPreferenceFragment implements
 
     private PreferenceScreen mSystemScreen;
     private PreferenceCategory mNavbarCategory;
+    private PreferenceCategory mSystemCategory;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ContentResolver resolver = getActivity().getContentResolver();
+        Resources res = getResources();
 
         addPreferencesFromResource(R.xml.aicp_system);
 
@@ -110,6 +113,7 @@ public class SystemSettings extends SettingsPreferenceFragment implements
 
         mSystemScreen = (PreferenceScreen) findPreference("system_screen");
         mNavbarCategory = (PreferenceCategory) findPreference("navbar_category");
+        mSystemCategory = (PreferenceCategory) findPreference("system_category");
 
         // Navigation bar left
         mNavigationBarLeft = (CheckBoxPreference) prefSet.findPreference(KEY_NAVBAR_LEFT_IN_LANDSCAPE);
@@ -176,6 +180,15 @@ public class SystemSettings extends SettingsPreferenceFragment implements
         mProximityWake = (CheckBoxPreference) prefSet.findPreference(PREF_PROXIMITY_ON_WAKE);
         mProximityWake.setChecked((Settings.System.getInt(resolver,
                 Settings.System.PROXIMITY_ON_WAKE, 0) == 1));
+
+        boolean proximityCheckOnWait = res.getBoolean(
+                com.android.internal.R.bool.config_proximityCheckOnWake);
+        PreferenceCategory sysCategory = (PreferenceCategory) findPreference(CATEGORY_SYSTEM);
+
+        if (!proximityCheckOnWait) {
+            sysCategory.removePreference(mProximityWake);
+            Settings.System.putInt(getContentResolver(), Settings.System.PROXIMITY_ON_WAKE, 1);
+        }
 
     }
 
