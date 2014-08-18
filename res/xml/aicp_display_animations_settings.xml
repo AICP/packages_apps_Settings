@@ -28,6 +28,11 @@
             android:summary="@string/aokp_animation_summary"
             android:fragment="com.android.settings.aicp.AnimationControls" />
 
+        <PreferenceScreen
+            android:key="overscroll_effects"
+            android:fragment="com.android.settings.aicp.OverscrollEffects"
+            android:title="@string/ui_overscroll_title" />
+
         <!-- List View animations -->
         <ListPreference
             android:key="listview_animation"
