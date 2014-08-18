@@ -116,6 +116,11 @@
             android:summary="@string/scrolling_summary" />
 
         <PreferenceScreen
+            android:key="overscroll_effects"
+            android:fragment="com.android.settings.aicp.OverscrollEffects"
+            android:title="@string/ui_overscroll_title" />
+
+        <PreferenceScreen
             android:key="hfm_settings"
             android:fragment="com.android.settings.aicp.hfm.HfmSettings"
             android:title="@string/hfm_pref_screen_title" />
