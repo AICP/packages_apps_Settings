@@ -120,6 +120,11 @@
             android:fragment="com.android.settings.aicp.OverscrollEffects"
             android:title="@string/ui_overscroll_title" />
 
+        <CheckBoxPreference
+            android:key="disable_bootaudio"
+            android:title="@string/disable_bootaudio_title"
+            android:persistent="false" />
+
         <PreferenceScreen
             android:key="hfm_settings"
             android:fragment="com.android.settings.aicp.hfm.HfmSettings"
