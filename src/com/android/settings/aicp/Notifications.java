@@ -70,6 +70,7 @@ public class Notifications extends SettingsPreferenceFragment implements
     private static final String PREF_STATUS_BAR_CUSTOM_HEADER = "status_bar_custom_header";
     private static final String CLOCK_USE_SECOND = "clock_use_second";
     private static final String PREF_NOTIFICAITION_SWIPE = "notification_swipe";
+    private static final String STATUSBAR_6BAR_SIGNAL = "statusbar_6bar_signal";
 
     private CheckBoxPreference mClockUseSecond;
     private CheckBoxPreference mCustomHeader;
@@ -78,13 +79,17 @@ public class Notifications extends SettingsPreferenceFragment implements
     private CheckBoxPreference mReminder;
     private CheckBoxPreference mSMSBreath;
     private CheckBoxPreference mStatusBarNetworkHide;
+    private CheckBoxPreference mStatusBarSixBarSignal;
     private CheckBoxPreference mVoicemailBreath;
+
     private ListPreference mAnnoyingNotifications;
     private ListPreference mFontStyle;
     private ListPreference mReminderInterval;
     private ListPreference mReminderMode;
     private ListPreference mSmartPulldown;
+
     private Preference mHeadsUp;
+
     private RingtonePreference mReminderRingtone;
 
     @Override
@@ -191,6 +196,11 @@ public class Notifications extends SettingsPreferenceFragment implements
         mNotificationSwipe.setChecked((Settings.System.getInt(resolver,
                 Settings.System.STATUS_BAR_NOTIFICATION_SWIPE_FLOATING, 0) == 1));
 
+        // 6 bar signal
+        mStatusBarSixBarSignal = (CheckBoxPreference) findPreference(STATUSBAR_6BAR_SIGNAL);
+        mStatusBarSixBarSignal.setChecked((Settings.System.getInt(resolver,
+                Settings.System.STATUSBAR_6BAR_SIGNAL, 0) == 1));
+
     }
 
     @Override
@@ -238,6 +248,10 @@ public class Notifications extends SettingsPreferenceFragment implements
             value = mNotificationSwipe.isChecked();
             Settings.System.putInt(resolver,
                     Settings.System.STATUS_BAR_NOTIFICATION_SWIPE_FLOATING, value ? 1 : 0);
+        } else if (preference == mStatusBarSixBarSignal) {	195
+            value = mStatusBarSixBarSignal.isChecked();
+            Settings.System.putInt(resolver,
+                    Settings.System.STATUSBAR_6BAR_SIGNAL, value ? 1:0);
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
