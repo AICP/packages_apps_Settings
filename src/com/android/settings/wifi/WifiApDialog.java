@@ -233,7 +233,11 @@ public class WifiApDialog extends AlertDialog implements View.OnClickListener,
             validate();
             break;
         case R.id.tether_wifi_network:
-            mWifiTetherNetwork = ((Spinner)parent).getItemAtPosition(position).toString();
+            if (position == 0) {
+                mWifiTetherNetwork = null;
+            } else {
+                mWifiTetherNetwork = ((Spinner)parent).getItemAtPosition(position).toString();
+            }
             break;
         }
     }
