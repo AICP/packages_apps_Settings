@@ -1217,4 +1217,8 @@
     <string name="disable_bootaudio_summary">Quiet</string>
     <string name="disable_bootaudio_summary_disabled">To enable boot audio, you must have an MP3 file at \n/system/media/audio.mp3</string>
 
+    <!-- 6 bar signal -->
+    <string name="status_bar_six_bar_signal_title">Enable Six Bar Signal</string>
+    <string name="status_bar_six_bar_signal_summary">Enable to show six bar signal in statusbar/qs</string>
+
 </resources>
