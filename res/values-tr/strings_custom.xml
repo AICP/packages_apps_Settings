@@ -49,10 +49,10 @@
 
     <!-- Anonymous Statistics #CM -->
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
-    <string name="anonymous_statistics_title">AOKP İstatistikleri</string>
-    <string name="anonymous_statistics_summary">Anonim olarak istatistikleri raporlayarak AOKP\'yi daha iyi yapmamıza yardım edin</string>
+    <string name="anonymous_statistics_title">AICP İstatistikleri</string>
+    <string name="anonymous_statistics_summary">Anonim olarak istatistikleri raporlayarak AICP\'yi daha iyi yapmamıza yardım edin</string>
     <string name="anonymous_statistics_warning_title">Hakkında</string>
-    <string name="anonymous_statistics_warning">Anonim AOKP istatistikleri yollamayı seçtiğinizde, kişisel olmayan bilgiler AOKP geliştiricilerine, cihazlar arası kurulumları takip etmeleri için yollanır.	Yollanan bilgi, eşşiz bir tanımlayıcı içerir. Sizin gizliliğinizi veya kişisel verilerinizi içermez. Bu veriler, haftada bir, açılış sırasında toplanır.\n\nToplanmış veriye bakmak için Veriyi Göster\'e basınız.</string>
+    <string name="anonymous_statistics_warning">Anonim AICP istatistikleri yollamayı seçtiğinizde, kişisel olmayan bilgiler AICP geliştiricilerine, cihazlar arası kurulumları takip etmeleri için yollanır.	Yollanan bilgi, eşşiz bir tanımlayıcı içerir. Sizin gizliliğinizi veya kişisel verilerinizi içermez. Bu veriler, haftada bir, açılış sırasında toplanır.\n\nToplanmış veriye bakmak için Veriyi Göster\'e basınız.</string>
     <string name="enable_reporting_title">Raporlamayı aktif et</string>
     <string name="preview_data_title">Verileri göster</string>
     <string name="preview_data_summary">%s</string>
@@ -60,7 +60,7 @@
     <string name="anonymous_learn_more">Daha fazla bilgi</string>
 
     <!-- Anonymous Statistics - Notification -->
-    <string name="anonymous_notification_desc">AOKP İstatistiklerini aç veya kapat</string>
+    <string name="anonymous_notification_desc">AICP İstatistiklerini aç veya kapat</string>
 
     <!-- Anonymous Statistics - Preview -->
     <string name="preview_id_title">Eşsiz ID</string>

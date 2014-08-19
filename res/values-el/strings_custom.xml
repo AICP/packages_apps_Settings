@@ -26,17 +26,17 @@
   <string name="cpu_info">Επεξεργαστής</string>
   <string name="chipset_info">Chipset</string>
   <string name="mem_info">Μνήμη</string>
-  <string name="mod_version">Έκδοση AOKP</string>
+  <string name="mod_version">Έκδοση AICP</string>
   <string name="mod_version_default">Άγνωστο</string>
   <string name="build_date">Ημερομηνία έκδοσης</string>
   <string name="build_date_default">2012-01-01-0000</string>
   <string name="quick_links_title">Γρήγοροι σύνδεσμοι</string>
   <string name="advanced_settings_title">Επιλογές συσκευής</string>
-  <string name="anonymous_statistics_title">Στατιστικά AOKP</string>
-  <string name="anonymous_statistics_summary">Βοηθήστε στη βελτίωση του AOKP στέλνοντας ανώνυμα στατιστικά χρήσης</string>
+  <string name="anonymous_statistics_title">Στατιστικά AICP</string>
+  <string name="anonymous_statistics_summary">Βοηθήστε στη βελτίωση του AICP στέλνοντας ανώνυμα στατιστικά χρήσης</string>
   <string name="anonymous_statistics_warning_title">Σχετικά με</string>
-  <string name="anonymous_statistics_warning">Ενεργοποιώντας τα στατιστικά του AOKP επιτρέπετε την αποστολή
-        μη προσωπικών δεδομένων στους προγραμματιστές του AOKP για παρακολούθηση του αριθμού μοναδικών εγκαταστάσεων
+  <string name="anonymous_statistics_warning">Ενεργοποιώντας τα στατιστικά του AICP επιτρέπετε την αποστολή
+        μη προσωπικών δεδομένων στους προγραμματιστές του AICP για παρακολούθηση του αριθμού μοναδικών εγκαταστάσεων
         σε όλες τις συσκευές. Οι πληροφορίες που αποστέλλονται συμπεριλαμβάνουν ένα μοναδικό αναγνωριστικό, το οποίο δεν θέτει
         σε κίνδυνο την ασφάλεια σας ή τα προσωπικά δεδομένα. Τα δεδομένα αποστέλλονται σε κάθε εκκίνηση.\n\nΓια ένα παράδειγμα
         των δεδομένων που αποστέλλονται, πατήστε στην Προεπισκόπηση δεδομένων.</string>
@@ -45,7 +45,7 @@
   <string name="preview_data_summary">%s</string>
   <string name="view_stats_title">Εμφάνιση στατιστικών</string>
   <string name="anonymous_learn_more">Μάθετε περισσότερα</string>
-  <string name="anonymous_notification_desc">Ενεργοποίηση ή απενεργοποίηση στατιστικών AOKP</string>
+  <string name="anonymous_notification_desc">Ενεργοποίηση ή απενεργοποίηση στατιστικών AICP</string>
   <string name="preview_id_title">Μοναδικό αναγνωριστικό</string>
   <string name="preview_device_title">Συσκευή</string>
   <string name="preview_version_title">Έκδοση</string>

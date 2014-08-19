@@ -23,12 +23,12 @@
   <string name="device_front_camera">Első Kamera</string>
   <string name="device_screen_resolution">Képernyő felbontás</string>
   <string name="mem_info">Memória</string>
-  <string name="mod_version">AOKP verzió</string>
+  <string name="mod_version">AICP verzió</string>
   <string name="mod_version_default">Ismeretlen</string>
   <string name="build_date">Építési dátum</string>
   <string name="quick_links_title">Gyors Elérés</string>
   <string name="advanced_settings_title">Eszköz Beállítások</string>
-  <string name="anonymous_notification_desc">AOKP statisztikák engedélyezése vagy tiltása</string>
+  <string name="anonymous_notification_desc">AICP statisztikák engedélyezése vagy tiltása</string>
   <string name="preview_id_title">Egyedi Azonosító</string>
   <string name="preview_device_title">Eszköz</string>
   <string name="preview_version_title">Verzió</string>
