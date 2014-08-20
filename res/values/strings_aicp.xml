@@ -1221,4 +1221,8 @@
     <string name="status_bar_six_bar_signal_title">Enable Six Bar Signal</string>
     <string name="status_bar_six_bar_signal_summary">Enable to show six bar signal in statusbar/qs</string>
 
+    <!-- Quick camera -->
+    <string name="quick_camera_title">Power button camera</string>
+    <string name="quick_camera_summary">Enable launching camera by longpressing power\nbutton while in APM.</string>
+
 </resources>

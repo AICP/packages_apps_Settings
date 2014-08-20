@@ -99,6 +99,13 @@
         android:title="@string/system_category_title">
 
         <CheckBoxPreference
+            android:key="power_menu_quickcam"
+            android:title="@string/quick_camera_title"
+            android:summary="@string/quick_camera_summary"
+            android:defaultValue="false"
+            android:persistent="false" />
+
+        <CheckBoxPreference
             android:key="proximity_on_wake"
             android:title="@string/proximity_wake_title"
             android:summary="@string/proximity_wake_summary"

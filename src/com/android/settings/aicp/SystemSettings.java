@@ -83,6 +83,7 @@ public class SystemSettings extends SettingsPreferenceFragment implements
     private static final String KEY_TRIGGER_BOTTOM = "trigger_bottom";
     private static final String PREF_PROXIMITY_ON_WAKE = "proximity_on_wake";
     private static final String DISABLE_BOOTAUDIO = "disable_bootaudio";
+    private static final String KEY_POWER_MENU_QUICKCAM = "power_menu_quickcam";
 
     private AppMultiSelectListPreference mIncludedAppCircleBar;
 
@@ -94,6 +95,7 @@ public class SystemSettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mNavigationMenuForce;
     private CheckBoxPreference mProximityWake;
     private CheckBoxPreference mDisableBootAudio;
+    private CheckBoxPreference mPowerMenuQuickcam;
 
     private ListPreference mNavigationMenu;
 
@@ -207,6 +209,11 @@ public class SystemSettings extends SettingsPreferenceFragment implements
                 mDisableBootAudio.setSummary(R.string.disable_bootaudio_summary);
         }
 
+        // Power menu quickcam
+        mPowerMenuQuickcam = (CheckBoxPreference) prefSet.findPreference(KEY_POWER_MENU_QUICKCAM);
+        mPowerMenuQuickcam.setChecked((Settings.System.getInt(resolver,
+                Settings.System.POWER_MENU_QUICKCAM, 0) == 1));
+
     }
 
 
@@ -256,6 +263,10 @@ public class SystemSettings extends SettingsPreferenceFragment implements
                         "mv /system/media/boot_audio /system/media/audio.mp3");
                 Helpers.getMount("ro");
             }
+        } else if (preference == mPowerMenuQuickcam) {
+            value = mPowerMenuQuickcam.isChecked();
+            Settings.System.putInt(resolver,
+                    Settings.System.POWER_MENU_QUICKCAM, value ? 1 : 0);
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
