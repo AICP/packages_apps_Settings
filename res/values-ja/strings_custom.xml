@@ -26,16 +26,16 @@
   <string name="cpu_info">CPU</string>
   <string name="chipset_info">チップセット</string>
   <string name="mem_info">メモリー</string>
-  <string name="mod_version">AOKPバージョン</string>
+  <string name="mod_version">AICPバージョン</string>
   <string name="mod_version_default">不明</string>
   <string name="build_date">ビルド日時</string>
   <string name="build_date_default">2012-01-01-0000</string>
   <string name="quick_links_title">クイックリンク</string>
   <string name="advanced_settings_title">デバイスオプション</string>
-  <string name="anonymous_statistics_title">AOKP利用統計</string>
-  <string name="anonymous_statistics_summary">AOKPをより良くするための匿名利用統計報告をオプトインする</string>
+  <string name="anonymous_statistics_title">AICP利用統計</string>
+  <string name="anonymous_statistics_summary">AICPをより良くするための匿名利用統計報告をオプトインする</string>
   <string name="anonymous_statistics_warning_title">利用統計について</string>
-  <string name="anonymous_statistics_warning">匿名利用状況の送信を許諾することによって、AOKPの開発者がデバイス単位のユニークインストール数を追跡することができます。
+  <string name="anonymous_statistics_warning">匿名利用状況の送信を許諾することによって、AICPの開発者がデバイス単位のユニークインストール数を追跡することができます。
          送信される情報にはユニークIDが含まれますが、これはあなたの個人情報、端末のタイプ及びバージョン情報とは結びつきません。
          データ送信は週に一回端末の起動時に行われます。\n\n送信されるデータの例はプレビューをクリックすることにより確認できます。</string>
   <string name="enable_reporting_title">リポートを有効にする</string>
@@ -43,7 +43,7 @@
   <string name="preview_data_summary">%s</string>
   <string name="view_stats_title">統計を表示</string>
   <string name="anonymous_learn_more">詳細</string>
-  <string name="anonymous_notification_desc">AOKP利用統計を有効/無効にする</string>
+  <string name="anonymous_notification_desc">AICP利用統計を有効/無効にする</string>
   <string name="preview_id_title">ユニークID</string>
   <string name="preview_device_title">デバイス</string>
   <string name="preview_version_title">バージョン</string>

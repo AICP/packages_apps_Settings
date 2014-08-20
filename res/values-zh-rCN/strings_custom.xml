@@ -33,9 +33,9 @@
     <string name="chipset_info">芯片组</string>
     <!-- About phone screen, Free memory info -->
     <string name="mem_info">内存</string>
-    <!-- About phone screen,  AOKP version name-->
-    <string name="mod_version">AOKP 版本</string>
-    <!-- About phone screen,  AOKP unknown name-->
+    <!-- About phone screen,  AICP version name-->
+    <string name="mod_version">AICP 版本</string>
+    <!-- About phone screen,  AICP unknown name-->
     <string name="mod_version_default">未知</string>
     <!-- About phone screen, build date of ROM -->
     <string name="build_date">编译日期</string>
@@ -46,10 +46,10 @@
 
     <!-- Anonymous Statistics #CM -->
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
-    <string name="anonymous_statistics_title">AOKP 统计</string>
-    <string name="anonymous_statistics_summary">发送匿名的统计报告帮助 AOKP 更好发展</string>
+    <string name="anonymous_statistics_title">AICP 统计</string>
+    <string name="anonymous_statistics_summary">发送匿名的统计报告帮助 AICP 更好发展</string>
     <string name="anonymous_statistics_warning_title">关于</string>
-    <string name="anonymous_statistics_warning">AOKP 数据统计允许将非个人数据提交给开发者用于统计使用设备的数量。
+    <string name="anonymous_statistics_warning">AICP 数据统计允许将非个人数据提交给开发者用于统计使用设备的数量。
     提交的数据包括设备唯一ID，这不会损害您的隐私和个人数据。
     数据将在设备启动引导时提交，每周提交一次。\n\n提交的数据示例请查看预览数据。</string>
     <string name="enable_reporting_title">启用报告</string>
@@ -58,7 +58,7 @@
     <string name="anonymous_learn_more">更多信息</string>
 
     <!-- Anonymous Statistics - Notification -->
-    <string name="anonymous_notification_desc">启用/禁用 AOKP 统计</string>
+    <string name="anonymous_notification_desc">启用/禁用 AICP 统计</string>
 
     <!-- Anonymous Statistics - Preview -->
     <string name="preview_id_title">唯一ID</string>

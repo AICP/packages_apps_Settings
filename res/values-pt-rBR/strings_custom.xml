@@ -26,24 +26,24 @@
   <string name="cpu_info">CPU</string>
   <string name="chipset_info">Chipset</string>
   <string name="mem_info">Memória</string>
-  <string name="mod_version">Versão AOKP</string>
+  <string name="mod_version">Versão AICP</string>
   <string name="mod_version_default">Desconhecido</string>
   <string name="build_date">Data de compilação</string>
   <string name="build_date_default">2012-01-01-0000</string>
   <string name="quick_links_title">Links rápidos</string>
   <string name="advanced_settings_title">Opções do dispositivo</string>
-  <string name="anonymous_statistics_title">Estatísticas AOKP</string>
-  <string name="anonymous_statistics_summary">Ajude a melhorar o AOKP optando pelo relatório de estatísticas anônimas</string>
+  <string name="anonymous_statistics_title">Estatísticas AICP</string>
+  <string name="anonymous_statistics_summary">Ajude a melhorar o AICP optando pelo relatório de estatísticas anônimas</string>
   <string name="anonymous_statistics_warning_title">Sobre</string>
-  <string name="anonymous_statistics_warning">Optar por enviar estatísticas anonimas do AOKP permitirá que dados não-pessoais sejam enviados para os
-        desenvolvedores do AOKP para rastrear instalações únicas em dispositivos. As informações enviadas incluem um identificador unico,
+  <string name="anonymous_statistics_warning">Optar por enviar estatísticas anonimas do AICP permitirá que dados não-pessoais sejam enviados para os
+        desenvolvedores do AICP para rastrear instalações únicas em dispositivos. As informações enviadas incluem um identificador unico,
         que não compromete sua privacidade ou dados pessoais. Os dados são enviados durante cada inicialização.\n\nPara um exemplo de dados que são enviados, toque em Pré-visualizar Dados.</string>
   <string name="enable_reporting_title">Habilitar relatório</string>
   <string name="preview_data_title">Pré-visualizar dados</string>
   <string name="preview_data_summary">%s</string>
   <string name="view_stats_title">Ver estatísticas</string>
   <string name="anonymous_learn_more">Saiba mais</string>
-  <string name="anonymous_notification_desc">Habilitar ou Desabilitar Estatísticas AOKP</string>
+  <string name="anonymous_notification_desc">Habilitar ou Desabilitar Estatísticas AICP</string>
   <string name="preview_id_title">ID único</string>
   <string name="preview_device_title">Dispositivo</string>
   <string name="preview_version_title">Versão</string>
