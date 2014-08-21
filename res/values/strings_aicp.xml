@@ -830,6 +830,7 @@
     <string name="recent_panel_bg_color_title">Background color</string>
     <string name="reset_default_message">Reset default</string>
     <string name="qs_style_reset_message">Reset all colors to default?</string>
+    <string name="trds_default_color">TRDS default</string>
 
     <!-- Kenrel tweaker -->
     <string name="kerneltweaker_settings_title">Kernel Tweaker</string>
