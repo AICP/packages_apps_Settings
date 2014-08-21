@@ -25,6 +25,7 @@ import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
@@ -54,6 +55,11 @@ import android.telephony.TelephonyManager;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.VolumePanel;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.MenuInflater;
+
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -91,6 +97,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private static final String KEY_QUIET_HOURS = "quiet_hours";
     private static final String KEY_VOLUME_KEYS_RINGER_MODE = "volume_keys_ringer_mode";
     private static final String KEY_VOLUME_OVERLAY = "volume_overlay";
+    private static final String VOLUME_PANEL_BG_COLOR = "volume_panel_bg_color";
     private static final String KEY_VOLUME_PANEL_TIMEOUT = "volume_panel_timeout";
     private static final String KEY_SWAP_VOLUME_BUTTONS = "swap_volume_buttons";
 
@@ -148,6 +155,10 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mPowerSounds;
     private CheckBoxPreference mPowerSoundsVibrate;
     private Preference mPowerSoundsRingtone;
+    private ColorPickerPreference mVolumePanelBgColor;
+
+    private static final int MENU_RESET = Menu.FIRST;
+    private static final int DEFAULT_BACKGROUND_COLOR = 0x00ffffff;
 
     private Vibrator mVib;
 
@@ -385,7 +396,60 @@ public class SoundSettings extends SettingsPreferenceFragment implements
             }
         }
 
+        // Volume panel background color
+        mVolumePanelBgColor =
+                (ColorPickerPreference) findPreference(VOLUME_PANEL_BG_COLOR);
+        mVolumePanelBgColor.setOnPreferenceChangeListener(this);
+        final int intColor = Settings.System.getInt(getContentResolver(),
+                Settings.System.VOLUME_PANEL_BG_COLOR, 0x00ffffff);
+        String hexColor = String.format("#%08x", (0x00ffffff & intColor));
+        if (hexColor.equals("#00ffffff")) {
+            mVolumePanelBgColor.setSummary(R.string.trds_default_color);
+        } else {
+            mVolumePanelBgColor.setSummary(hexColor);
+        }
+        mVolumePanelBgColor.setNewPreviewColor(intColor);
+        setHasOptionsMenu(true);
+
         initDockSettings();
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        menu.add(0, MENU_RESET, 0, R.string.reset_default_message)
+                .setIcon(R.drawable.ic_settings_backup)
+                .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case MENU_RESET:
+                resetToDefault();
+                return true;
+            default:
+                return super.onContextItemSelected(item);
+        }
+    }
+
+    private void resetToDefault() {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+        alertDialog.setTitle(R.string.reset);
+        alertDialog.setMessage(R.string.qs_style_reset_message);
+        alertDialog.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                resetValues();
+            }
+        });
+        alertDialog.setNegativeButton(R.string.cancel, null);
+        alertDialog.create().show();
+    }
+
+    private void resetValues() {
+        Settings.System.putInt(getContentResolver(),
+                Settings.System.VOLUME_PANEL_BG_COLOR, DEFAULT_BACKGROUND_COLOR);
+        mVolumePanelBgColor.setNewPreviewColor(DEFAULT_BACKGROUND_COLOR);
+        mVolumePanelBgColor.setSummary(R.string.trds_default_color);
     }
 
     @Override
@@ -564,6 +628,18 @@ public class SoundSettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(getContentResolver(),
                     Settings.System.MODE_VOLUME_OVERLAY, value);
             mVolumeOverlay.setSummary(mVolumeOverlay.getEntries()[index]);
+        } else if (preference == mVolumePanelBgColor) {
+            String hex = ColorPickerPreference.convertToARGB(
+                    Integer.valueOf(String.valueOf(objValue)));
+            if (hex.equals("#00ffffff")) {
+                preference.setSummary(R.string.trds_default_color);
+            } else {
+                preference.setSummary(hex);
+            }
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.VOLUME_PANEL_BG_COLOR,
+                    intHex);
         } else if (preference == mVolumePanelTimeout) {
             int volumePanelTimeout = (Integer) objValue;
             Settings.System.putInt(getContentResolver(),
