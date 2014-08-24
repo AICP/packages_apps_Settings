@@ -1760,6 +1760,15 @@
 
         <activity android:name=".paranoid.Halo" />
 
+        <activity
+            android:name=".paranoid.Pie"
+            android:label="@string/pie_controls_title" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.intent.category.SHORTCUT" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".cyanogenmod.SpamList" />
 
         <!-- Pseudo-activity used to provide an intent-filter entry point to sound packages settings -->

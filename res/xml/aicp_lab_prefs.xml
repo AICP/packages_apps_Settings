@@ -18,11 +18,18 @@
         android:title="@string/aicp_settings_title">
 
     <!-- HALO -->
-  <PreferenceScreen
+    <PreferenceScreen
         android:id="@+id/halo_settings"
         android:fragment="com.android.settings.paranoid.Halo"
         android:icon="@drawable/ic_settings_halo"
         android:title="@string/halo_settings_title" />
+
+    <!-- PIE -->
+    <PreferenceScreen
+        android:id="@+id/pie_control"
+        android:fragment="com.android.settings.paranoid.Pie"
+        android:title="@string/pie_controls_title"
+        android:icon="@drawable/ic_aicp_pie" />
 
     <!-- OmniSwitch -->
     <PreferenceScreen
