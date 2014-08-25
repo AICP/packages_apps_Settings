@@ -96,6 +96,7 @@ import com.android.settings.location.LocationSettings;
 import com.android.settings.net.MobileDataEnabler;
 import com.android.settings.nfc.AndroidBeam;
 import com.android.settings.nfc.PaymentSettings;
+import com.android.settings.paranoid.Pie;
 import com.android.settings.print.PrintJobSettingsFragment;
 import com.android.settings.print.PrintServiceSettingsFragment;
 import com.android.settings.print.PrintSettingsFragment;
@@ -446,7 +447,8 @@ public class Settings extends PreferenceActivity
         ApnSettings.class.getName(),
         ThemeSettings.class.getName(),
         QuietHours.class.getName(),
-        AicpSettings.class.getName()
+        AicpSettings.class.getName(),
+        Pie.class.getName()
     };
 
     @Override
@@ -1309,4 +1311,5 @@ public class Settings extends PreferenceActivity
     public static class QuietHoursSettingsActivity extends Settings { /* empty */ }
     public static class ThemeSettingsActivity extends Settings { /* empty */ }
     public static class AicpSettingsActivity extends Settings { /* empty */ }
+    public static class PieActivity extends Settings { /* empty */ }
 }

@@ -1263,6 +1263,7 @@
     <string name="pie_chevron_left_title">Left chevron color</string>
     <string name="pie_chevron_right_title">Right chevron color</string>
     <string name="pie_juice_title">Battery juice color</string>
+    <string name="pie_button_color">Button color</string>
     <string name="pie_button_color_title">Buttons color</string>
     <string name="pie_gap_title">Item gap</string>
     <string name="pie_gap_summary">Adjust the gap that separates the Pie elements</string>

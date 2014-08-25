@@ -88,6 +88,12 @@
         android:entryValues="@array/values_pie_gap"
         android:dependency="pie_controls" />
 
+    <PreferenceScreen
+        android:key="pie_color"
+        android:title="@string/pie_color_title"
+        android:fragment="com.android.settings.paranoid.PieColor"
+        android:dependency="pie_controls" />
+
     <CheckBoxPreference
         android:key="pie_notifications"
         android:title="@string/pie_notifications_title"
