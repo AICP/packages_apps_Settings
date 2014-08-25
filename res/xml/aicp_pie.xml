@@ -101,16 +101,52 @@
         android:defaultValue="false"
         android:dependency="pie_controls" />
 
-    <CheckBoxPreference
-        android:key="pie_menu"
-        android:title="@string/pie_menu_title"
-        android:summary="@string/pie_menu_summary"
-        android:dependency="pie_controls" />
+    <PreferenceCategory
+        android:key="pie_targets"
+        android:title="@string/pie_targets_title" >
 
-    <CheckBoxPreference
-        android:key="pie_search"
-        android:title="@string/pie_search_title"
-        android:summary="@string/pie_search_summary"
-        android:dependency="pie_controls" />
+        <CheckBoxPreference
+            android:key="pie_menu"
+            android:title="@string/pie_menu_title"
+            android:summary="@string/pie_menu_summary"
+            android:dependency="pie_controls" />
+
+        <CheckBoxPreference
+            android:key="pie_search"
+            android:title="@string/pie_search_title"
+            android:summary="@string/pie_search_summary"
+            android:dependency="pie_controls" />
+
+        <CheckBoxPreference
+            android:key="pie_lastapp"
+            android:title="@string/pie_lastapp_title"
+            android:summary="@string/pie_lastapp_summary"
+            android:dependency="pie_controls" />
+
+        <CheckBoxPreference
+            android:key="pie_killtask"
+            android:title="@string/pie_killtask_title"
+            android:summary="@string/pie_killtask_summary"
+            android:dependency="pie_controls" />
+
+        <CheckBoxPreference
+            android:key="pie_appwindow"
+            android:title="@string/pie_appwindow_title"
+            android:summary="@string/pie_appwindow_summary"
+            android:dependency="pie_controls" />
+
+        <CheckBoxPreference
+            android:key="pie_actnotif"
+            android:title="@string/pie_actnotif_title"
+            android:summary="@string/pie_actnotif_summary"
+            android:dependency="pie_controls" />
+
+        <CheckBoxPreference
+            android:key="pie_power"
+            android:title="@string/pie_power_title"
+            android:summary="@string/pie_power_summary"
+            android:dependency="pie_controls" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
