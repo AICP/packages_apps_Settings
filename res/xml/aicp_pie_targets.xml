@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/pie_targets_title">
+
+    <CheckBoxPreference
+        android:key="pie_menu"
+        android:title="@string/pie_menu_title"
+        android:summary="@string/pie_menu_summary" />
+
+    <CheckBoxPreference
+        android:key="pie_search"
+        android:title="@string/pie_search_title"
+        android:summary="@string/pie_search_summary" />
+
+    <CheckBoxPreference
+        android:key="pie_lastapp"
+        android:title="@string/pie_lastapp_title"
+        android:summary="@string/pie_lastapp_summary" />
+
+    <CheckBoxPreference
+        android:key="pie_killtask"
+        android:title="@string/pie_killtask_title"
+        android:summary="@string/pie_killtask_summary" />
+
+    <CheckBoxPreference
+        android:key="pie_appwindow"
+        android:title="@string/pie_appwindow_title"
+        android:summary="@string/pie_appwindow_summary" />
+
+    <CheckBoxPreference
+        android:key="pie_actnotif"
+        android:title="@string/pie_actnotif_title"
+        android:summary="@string/pie_actnotif_summary" />
+
+    <CheckBoxPreference
+        android:key="pie_power"
+        android:title="@string/pie_power_title"
+        android:summary="@string/pie_power_summary" />
+
+</PreferenceScreen>

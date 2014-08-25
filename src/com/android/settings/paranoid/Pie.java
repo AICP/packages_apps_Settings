@@ -16,7 +16,6 @@
 
 package com.android.settings.paranoid;
 
-import android.app.ActionBar;
 import android.content.ContentResolver;
 import android.database.ContentObserver;
 import android.content.Context;
@@ -46,8 +45,6 @@ public class Pie extends SettingsPreferenceFragment
     private static final String PIE_ANGLE = "pie_angle";
     private static final String PIE_GAP = "pie_gap";
     private static final String PIE_NOTIFICATIONS = "pie_notifications";
-    private static final String PIE_MENU = "pie_menu";
-    private static final String PIE_SEARCH = "pie_search";
     private static final String PIE_CENTER = "pie_center";
     private static final String PIE_STICK = "pie_stick";
 
@@ -59,8 +56,6 @@ public class Pie extends SettingsPreferenceFragment
     private ListPreference mPieGap;
     private CheckBoxPreference mPieNotifi;
     private SwitchPreference mPieControls;
-    private CheckBoxPreference mPieMenu;
-    private CheckBoxPreference mPieSearch;
     private CheckBoxPreference mPieCenter;
     private CheckBoxPreference mPieStick;
 
@@ -92,7 +87,7 @@ public class Pie extends SettingsPreferenceFragment
 
         mPieStick = (CheckBoxPreference) prefSet.findPreference(PIE_STICK);
         mPieStick.setChecked(Settings.System.getInt(mResolver,
-                Settings.System.PIE_STICK, 1) != 0);
+                Settings.System.PIE_STICK, 0) != 0);
 
         mPieGravity = (ListPreference) prefSet.findPreference(PIE_GRAVITY);
         int pieGravity = Settings.System.getInt(mResolver,
@@ -138,13 +133,6 @@ public class Pie extends SettingsPreferenceFragment
         mPieAngle.setValue(String.valueOf(pieAngle));
         mPieAngle.setOnPreferenceChangeListener(this);
 
-        mPieMenu = (CheckBoxPreference) prefSet.findPreference(PIE_MENU);
-        mPieMenu.setChecked(Settings.System.getInt(mResolver,
-                Settings.System.PIE_MENU, 1) != 0);
-
-        mPieSearch = (CheckBoxPreference) prefSet.findPreference(PIE_SEARCH);
-        mPieSearch.setChecked(Settings.System.getInt(mResolver,
-                Settings.System.PIE_SEARCH, 1) != 0);
     }
 
     @Override
@@ -153,20 +141,14 @@ public class Pie extends SettingsPreferenceFragment
             Settings.System.putInt(mResolver,
                     Settings.System.PIE_NOTIFICATIONS,
                     mPieNotifi.isChecked() ? 1 : 0);
-        } else if (preference == mPieMenu) {
-            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                    Settings.System.PIE_MENU,
-                    mPieMenu.isChecked() ? 1 : 0);
-        } else if (preference == mPieSearch) {
-            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                    Settings.System.PIE_SEARCH,
-                    mPieSearch.isChecked() ? 1 : 0);
         } else if (preference == mPieCenter) {
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                    Settings.System.PIE_CENTER, mPieCenter.isChecked() ? 1 : 0);
+                    Settings.System.PIE_CENTER,
+                    mPieCenter.isChecked() ? 1 : 0);
         } else if (preference == mPieStick) {
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                    Settings.System.PIE_STICK, mPieStick.isChecked() ? 1 : 0);
+                    Settings.System.PIE_STICK,
+                    mPieStick.isChecked() ? 1 : 0);
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
