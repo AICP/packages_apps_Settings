@@ -1924,10 +1924,21 @@
             android:label="@string/theme_settings_title" >
         </activity>
 
-        <activity
-             android:name=".aicp.AicpSettings"
-             android:label="@string/aicp_settings_title" >
+        <!-- Aicp Extras -->
+        <activity android:name="Settings$AicpSettingsActivity"
+            android:label="@string/aicp_settings_title"
+            android:taskAffinity=""
+            android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.aicp.AicpSettings" />
         </activity>
+
+        <activity
+             android:name=".aicp.AicpSettings" />
 
         <activity
             android:name=".ActiveNotifications"
