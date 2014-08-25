@@ -101,16 +101,10 @@
         android:defaultValue="false"
         android:dependency="pie_controls" />
 
-    <CheckBoxPreference
-        android:key="pie_menu"
-        android:title="@string/pie_menu_title"
-        android:summary="@string/pie_menu_summary"
-        android:dependency="pie_controls" />
-
-    <CheckBoxPreference
-        android:key="pie_search"
-        android:title="@string/pie_search_title"
-        android:summary="@string/pie_search_summary"
+    <PreferenceScreen
+        android:key="pie_targets"
+        android:title="@string/pie_targets_title"
+        android:fragment="com.android.settings.paranoid.PieTargets"
         android:dependency="pie_controls" />
 
 </PreferenceScreen>

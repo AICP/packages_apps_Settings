@@ -1302,5 +1302,16 @@
     <string name="pie_menu_summary">Whether or not the menu button should always be shown, even when its not needed</string>
     <string name="pie_restart_launcher_title">Restart Launcher</string>
     <string name="pie_restart_launcher_summary">Changing screensize can have adverse effects. This option allows your launcher to regain sanity, the cost is a slight blackout (recommended)</string>
+    <string name="pie_targets_title">Targets</string>
+    <string name="pie_lastapp_title">Last app</string>
+    <string name="pie_lastapp_summary">Enable last app button</string>
+    <string name="pie_killtask_title">Kill task</string>
+    <string name="pie_killtask_summary">Enable kill task button</string>
+    <string name="pie_appwindow_title">App window</string>
+    <string name="pie_appwindow_summary">Enable app window button</string>
+    <string name="pie_actnotif_title">Action notifications</string>
+    <string name="pie_actnotif_summary">Enable expand notifications button</string>
+    <string name="pie_power_title">Power button</string>
+    <string name="pie_power_summary">Enable power button on Pie</string>
 
 </resources>
