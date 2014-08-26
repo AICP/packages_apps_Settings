@@ -1312,4 +1312,8 @@
     <string name="pie_screenshot_title">Screenshot</string>
     <string name="pie_screenshot_summary">Enable screenshot button on Pie</string>
 
+    <!-- Brightness slider -->
+    <string name="notification_brightness_slider_title">Brightness slider</string>
+    <string name="notification_brightness_slider_summary">Show brightness slider in drawer</string>
+
 </resources>

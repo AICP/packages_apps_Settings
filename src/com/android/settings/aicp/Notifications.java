@@ -71,7 +71,9 @@ public class Notifications extends SettingsPreferenceFragment implements
     private static final String CLOCK_USE_SECOND = "clock_use_second";
     private static final String PREF_NOTIFICAITION_SWIPE = "notification_swipe";
     private static final String STATUSBAR_6BAR_SIGNAL = "statusbar_6bar_signal";
+    private static final String PREF_NOTIFICATION_BRIGHTNESS_SLIDER = "notification_brightness_slider";
 
+    private CheckBoxPreference mBrightnessSlider;
     private CheckBoxPreference mClockUseSecond;
     private CheckBoxPreference mCustomHeader;
     private CheckBoxPreference mMissedCallBreath;
@@ -201,6 +203,13 @@ public class Notifications extends SettingsPreferenceFragment implements
         mStatusBarSixBarSignal.setChecked((Settings.System.getInt(resolver,
                 Settings.System.STATUSBAR_6BAR_SIGNAL, 0) == 1));
 
+        // Beightness slider
+        boolean enableBrightnessSlider = Settings.AOKP.getBoolean(getContentResolver(),
+                Settings.System.NOTIFICATION_BRIGHTNESS_SLIDER, false);
+        mBrightnessSlider = (CheckBoxPreference) prefSet.findPreference(PREF_NOTIFICATION_BRIGHTNESS_SLIDER);
+        mBrightnessSlider.setChecked(enableBrightnessSlider);
+        mBrightnessSlider.setOnPreferenceChangeListener(this);
+
     }
 
     @Override
@@ -302,6 +311,11 @@ public class Notifications extends SettingsPreferenceFragment implements
             Settings.System.putStringForUser(getContentResolver(),
                     Settings.System.REMINDER_ALERT_RINGER,
                     val.toString(), UserHandle.USER_CURRENT);
+        } else if (preference == mBrightnessSlider) {
+            Settings.AOKP.putBoolean(resolver,
+                    Settings.System.NOTIFICATION_BRIGHTNESS_SLIDER,
+                    ((Boolean) objValue) ? true : false);
+            Helpers.restartSystemUI();
         }
 
         return true;
