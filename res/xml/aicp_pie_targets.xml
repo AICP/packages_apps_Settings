@@ -37,4 +37,14 @@
         android:title="@string/pie_power_title"
         android:summary="@string/pie_power_summary" />
 
+    <CheckBoxPreference
+        android:key="pie_torch"
+        android:title="@string/pie_torch_title"
+        android:summary="@string/pie_torch_summary" />
+
+    <CheckBoxPreference
+        android:key="pie_screenshot"
+        android:title="@string/pie_screenshot_title"
+        android:summary="@string/pie_screenshot_summary" />
+
 </PreferenceScreen>

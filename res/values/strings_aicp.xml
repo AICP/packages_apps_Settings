@@ -1228,12 +1228,8 @@
 
     <!-- PIE -->
     <string name="pie_controls_title">Pie Controls</string>
-    <string name="pie_controls_summary">Adjust the Pie controls</string>
     <string name="pie_enable_title">Enable Pie</string>
-    <string name="pie_enable_summaryOn">Nom nom nom nom</string>
-    <string name="pie_enable_summaryOff">No Nom nom nom nom</string>
-    <string name="pie_expanded_only_title">Only in expanded desktop</string>
-    <string name="pie_expanded_only_summary">Only allow pie to work when Expanded Desktop is on</string>
+    <string name="pie_enable_summary">Nom nom nom nom</string>
     <string name="pie_gravity_title">Pie gravity</string>
     <string name="pie_gravity_summary">Select the location where the Pie will be placed</string>
     <string name="pie_gravity_top">Top</string>
@@ -1300,8 +1296,6 @@
     <string name="pie_notifications_summary">Enabling this will let the Notification panel and QuickSettings tiles become available when swiping</string>
     <string name="pie_menu_title">Always show menu button</string>
     <string name="pie_menu_summary">Whether or not the menu button should always be shown, even when its not needed</string>
-    <string name="pie_restart_launcher_title">Restart Launcher</string>
-    <string name="pie_restart_launcher_summary">Changing screensize can have adverse effects. This option allows your launcher to regain sanity, the cost is a slight blackout (recommended)</string>
     <string name="pie_targets_title">Targets</string>
     <string name="pie_lastapp_title">Last app</string>
     <string name="pie_lastapp_summary">Enable last app button</string>
@@ -1313,5 +1307,9 @@
     <string name="pie_actnotif_summary">Enable expand notifications button</string>
     <string name="pie_power_title">Power button</string>
     <string name="pie_power_summary">Enable power button on Pie</string>
+    <string name="pie_torch_title">Torch</string>
+    <string name="pie_torch_summary">Enable torch button</string>
+    <string name="pie_screenshot_title">Screenshot</string>
+    <string name="pie_screenshot_summary">Enable screenshot button on Pie</string>
 
 </resources>

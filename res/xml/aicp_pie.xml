@@ -19,8 +19,7 @@
 
     <SwitchPreference
         android:key="pie_controls"
-        android:title="@string/pie_controls_title"
-        android:summary="@string/pie_controls_summary" />
+        android:title="@string/pie_controls_title" />
 
     <ListPreference
         android:key="pie_trigger"
