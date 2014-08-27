@@ -1316,4 +1316,7 @@
     <string name="notification_brightness_slider_title">Brightness slider</string>
     <string name="notification_brightness_slider_summary">Show brightness slider in drawer</string>
 
+    <!-- Wifi in PowerMenu -->
+    <string name="power_menu_wifi_title">Add WiFi to the menu</string>
+
 </resources>

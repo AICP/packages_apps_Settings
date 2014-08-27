@@ -19,6 +19,12 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <CheckBoxPreference
+        android:key="power_menu_wifi_enabled"
+        android:title="@string/power_menu_wifi_title"
+        android:defaultValue="false"
+        android:persistent="false" />
+
+    <CheckBoxPreference
         android:key="lockscreen_enable_power_menu"
         android:title="@string/lockscreen_enable_power_menu_title"
         android:persistent="false" />

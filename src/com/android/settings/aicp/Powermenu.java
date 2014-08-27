@@ -56,10 +56,12 @@ public class Powermenu extends SettingsPreferenceFragment implements
     private static final String KEY_EXPANDED_DESKTOP = "power_menu_expanded_desktop";
     private static final String KEY_EXPANDED_DESKTOP_NO_NAVBAR = "power_menu_expanded_desktop_no_navbar";
     private static final String POWER_MENU_ONTHEGO_ENABLED = "power_menu_onthego_enabled";
+    private static final String KEY_POWER_MENU_WIFI_ENABLED = "power_menu_wifi_enabled";
 
     private CheckBoxPreference mEnablePowerMenu;
     private CheckBoxPreference mExpandedDesktopNoNavbarPref;
     private CheckBoxPreference mOnTheGoPowerMenu;
+    private CheckBoxPreference mWifiPowerMenu;
     private ListPreference mExpandedDesktopPref;
 
     @Override
@@ -104,6 +106,12 @@ public class Powermenu extends SettingsPreferenceFragment implements
         mOnTheGoPowerMenu.setChecked(Settings.System.getInt(resolver,
         Settings.System.POWER_MENU_ONTHEGO_ENABLED, 0) == 1);
         mOnTheGoPowerMenu.setOnPreferenceChangeListener(this);
+
+        // Wifi in powermenu
+        mWifiPowerMenu = (CheckBoxPreference) prefSet.findPreference(KEY_POWER_MENU_WIFI_ENABLED);
+        mWifiPowerMenu.setChecked(Settings.System.getInt(resolver,
+                Settings.System.POWER_MENU_WIFI_ENABLED, 0) == 1);
+        mWifiPowerMenu.setOnPreferenceChangeListener(this);
     }
        
 
@@ -140,6 +148,10 @@ public class Powermenu extends SettingsPreferenceFragment implements
             boolean value = (Boolean) objValue;
             Settings.System.putInt(resolver,
                     Settings.System.POWER_MENU_ONTHEGO_ENABLED, value ? 1 : 0);
+        } else if (preference == mWifiPowerMenu) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(resolver,
+                    Settings.System.POWER_MENU_WIFI_ENABLED, value ? 1 : 0);
         }
 
         return true;
