@@ -236,6 +236,9 @@ public class QuietHours extends SettingsPreferenceFragment implements
     public void onResume() {
         super.onResume();
         mPrefs.registerOnSharedPreferenceChangeListener(mPreferencesChangeListener);
+        if (mQuietHoursTimeRange != null) {
+            mQuietHoursTimeRange.updatePreferenceViews();
+        }
     }
 
     @Override
@@ -498,5 +501,4 @@ public class QuietHours extends SettingsPreferenceFragment implements
             }
         }
     }
-
 }
