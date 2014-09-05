@@ -129,7 +129,7 @@ public class Notifications extends SettingsPreferenceFragment implements
         mSmartPulldown = (ListPreference) prefSet.findPreference(SMART_PULLDOWN);
         if (Utils.isPhone(getActivity())) {
             int smartPulldown = Settings.System.getInt(resolver,
-                    Settings.System.QS_SMART_PULLDOWN, 0);
+                    Settings.System.QS_SMART_PULLDOWN, 2);
             mSmartPulldown.setValue(String.valueOf(smartPulldown));
             updateSmartPulldownSummary(smartPulldown);
             mSmartPulldown.setOnPreferenceChangeListener(this);
