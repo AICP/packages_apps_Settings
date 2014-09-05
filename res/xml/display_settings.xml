@@ -19,8 +19,14 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
         <com.android.settings.BrightnessPreference
-                android:title="@string/brightness"
-                android:persistent="false"/>
+            android:title="@string/brightness"
+            android:persistent="false"/>
+
+        <com.android.settings.cyanogenmod.ButtonBacklightBrightness
+            android:key="button_backlight"
+            android:title="@string/button_backlight_title"
+            android:dialogTitle="@string/button_backlight_title"
+            android:persistent="false" />
 
         <PreferenceScreen
             android:persistent="false"
@@ -75,30 +81,30 @@
 
     </PreferenceCategory>
 
-        <PreferenceCategory
-            android:key="category_light_options"
-            android:title="@string/display_category_light_options_title" >
-
-            <PreferenceScreen
-                android:key="battery_light"
-                android:title="@string/battery_light_title"
-                android:fragment="com.android.settings.cm.notificationlight.BatteryLightSettings" />
-
-            <CheckBoxPreference
-                android:key="notification_pulse"
-                android:title="@string/notification_pulse_title"
-                android:persistent="false" />
-
-            <PreferenceScreen
-                android:key="notification_light"
-                android:title="@string/notification_light_title"
-                android:fragment="com.android.settings.cm.notificationlight.NotificationLightSettings" />
-
-        </PreferenceCategory>
+    <PreferenceCategory
+        android:key="category_light_options"
+        android:title="@string/display_category_light_options_title" >
 
         <PreferenceScreen
-                android:key="wifi_display"
-                android:title="@string/wifi_display_settings_title"
-                android:fragment="com.android.settings.wfd.WifiDisplaySettings" />
+            android:key="battery_light"
+            android:title="@string/battery_light_title"
+            android:fragment="com.android.settings.cm.notificationlight.BatteryLightSettings" />
+
+        <CheckBoxPreference
+            android:key="notification_pulse"
+            android:title="@string/notification_pulse_title"
+            android:persistent="false" />
+
+        <PreferenceScreen
+            android:key="notification_light"
+            android:title="@string/notification_light_title"
+            android:fragment="com.android.settings.cm.notificationlight.NotificationLightSettings" />
+
+    </PreferenceCategory>
+
+    <PreferenceScreen
+        android:key="wifi_display"
+        android:title="@string/wifi_display_settings_title"
+        android:fragment="com.android.settings.wfd.WifiDisplaySettings" />
 
 </PreferenceScreen>

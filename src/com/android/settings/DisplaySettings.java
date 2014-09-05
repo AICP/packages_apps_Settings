@@ -43,6 +43,7 @@ import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
 
 import com.android.internal.view.RotationPolicy;
+import com.android.settings.cyanogenmod.ButtonBacklightBrightness;
 import com.android.settings.DreamSettings;
 import com.android.settings.slim.DisplayRotation;
 
@@ -66,9 +67,9 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_ANIMATION_OPTIONS = "category_animation_options";
     private static final String KEY_POWER_CRT_MODE = "system_power_crt_mode";
     private static final String KEY_SCREEN_COLOR_SETTINGS = "screencolor_settings";
+    private static final String KEY_BUTTON_BACKLIGHT = "button_backlight";
 
     private static final int DLG_GLOBAL_CHANGE_WARNING = 1;
-
 
     private static final String ROTATION_ANGLE_0 = "0";
     private static final String ROTATION_ANGLE_90 = "90";
@@ -187,6 +188,12 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         mScreenColorSettings = (PreferenceScreen) findPreference(KEY_SCREEN_COLOR_SETTINGS);
         if (!isPostProcessingSupported()) {
             getPreferenceScreen().removePreference(mScreenColorSettings);
+        }
+
+        final ButtonBacklightBrightness backlight =
+                (ButtonBacklightBrightness) findPreference(KEY_BUTTON_BACKLIGHT);
+        if (!backlight.isButtonSupported() && !backlight.isKeyboardSupported()) {
+            getPreferenceScreen().removePreference(backlight);
         }
     }
 
