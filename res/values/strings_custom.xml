@@ -767,4 +767,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="backlight_summary_enabled_with_timeout">Enabled for <xliff:g id="timeout">%s</xliff:g></string>
     <string name="backlight_summary_enabled">Enabled</string>
 
+    <!-- Lock screen misc. settings -->
+    <string name="lockscreen_battery_status_title">Battery status</string>
+    <string name="lockscreen_battery_status_charging">Only when charging</string>
+    <string name="lockscreen_battery_status_alwayson">Always on</string>
+    <string name="lockscreen_battery_status_alwaysoff">Always off</string>
+
 </resources>
