@@ -63,6 +63,15 @@
         android:title="@string/lockscreen_style_title"
         android:summary="@string/lockscreen_style_summary" />
 
+    <ListPreference
+        android:key="lockscreen_battery_status"
+        android:persistent="false"
+        android:dialogTitle="@string/lockscreen_battery_status_title"
+        android:title="@string/lockscreen_battery_status_title"
+        android:entries="@array/lockscreen_battery_status_entries"
+        android:entryValues="@array/lockscreen_battery_status_values"
+        android:defaultValue="0" />
+
     <PreferenceCategory
         android:key="peek_category"
         android:title="@string/notification_peek_category">
