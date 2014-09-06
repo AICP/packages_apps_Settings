@@ -69,6 +69,7 @@ public class Lockscreen extends SettingsPreferenceFragment implements
     private static final String KEY_DISABLE_FRAME = "lockscreen_disable_frame";
     private static final String KEY_PEEK_STATE = "notification_peek";
     private static final String KEY_PEEK_TIME = "notification_peek_time";
+    private static final String KEY_BATTERY_STATUS = "lockscreen_battery_status";
 
     private CheckBoxPreference mAllowRotation;
     private CheckBoxPreference mBlurBehind;
@@ -79,6 +80,7 @@ public class Lockscreen extends SettingsPreferenceFragment implements
     private CheckBoxPreference mNotificationPeek;
     private SeekBarPreference mBlurRadius;
     private SeekBarPreferenceCham mNotificationPeekTime;
+    private ListPreference mBatteryStatus;
 
     private PreferenceScreen mLockscreenScreen;
     private PreferenceCategory mHwButtonsCategory;
@@ -153,6 +155,15 @@ public class Lockscreen extends SettingsPreferenceFragment implements
             mLockscreenScreen.removePreference(mHwButtonsCategory);
         }
 
+        // Force lockscreen battery show
+        mBatteryStatus = (ListPreference) findPreference(KEY_BATTERY_STATUS);
+        if (mBatteryStatus != null) {
+            mBatteryStatus.setOnPreferenceChangeListener(this);
+            int batteryStatus = Settings.System.getInt(resolver,
+                    Settings.System.LOCKSCREEN_BATTERY_VISIBILITY, 0);
+            mBatteryStatus.setValueIndex(batteryStatus);
+            mBatteryStatus.setSummary(mBatteryStatus.getEntries()[batteryStatus]);
+        }
     }
        
 
@@ -206,6 +217,7 @@ public class Lockscreen extends SettingsPreferenceFragment implements
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         ContentResolver resolver = getActivity().getContentResolver();
         final String key = preference.getKey();
+
         if (preference == mBlurRadius) {
             Settings.System.putInt(resolver,
                     Settings.System.LOCKSCREEN_BLUR_RADIUS, (Integer)objValue);
@@ -213,10 +225,16 @@ public class Lockscreen extends SettingsPreferenceFragment implements
             Settings.System.putInt(resolver,
                     Settings.System.LOCKSCREEN_WIDGET_FRAME_ENABLED,
                     (Boolean) objValue ? 1 : 0);
-        } else if ( preference == mNotificationPeekTime) {
+        } else if (preference == mNotificationPeekTime) {
             int time = ((Integer)objValue).intValue();
             Settings.System.putInt(resolver,
                     Settings.System.PEEK_TIME, time);
+        } else if (preference == mBatteryStatus) {
+            int value = Integer.valueOf((String) objValue);
+            int index = mBatteryStatus.findIndexOfValue((String) objValue);
+            Settings.System.putInt(resolver,
+                    Settings.System.LOCKSCREEN_BATTERY_VISIBILITY, value);
+            mBatteryStatus.setSummary(mBatteryStatus.getEntries()[index]);
         }
 
         return true;
