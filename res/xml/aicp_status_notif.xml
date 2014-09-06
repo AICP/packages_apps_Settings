@@ -57,6 +57,13 @@
         android:title="@string/notification_style_title"
         android:summary="@string/notification_style_summary" />
 
+    <PreferenceScreen
+        android:id="@+id/slim_notification_shortcuts"
+        android:fragment="com.android.settings.slim.notificationshortcuts.NotificationShortcuts"
+        android:key="slim_shortcuts_settings"
+        android:title="@string/notification_shortcuts_settings_title"
+        android:summary="@string/notification_shortcuts_settings_summary" />
+
     <ListPreference
         android:key="smart_pulldown"
         android:title="@string/smart_pulldown_title"
