@@ -26,8 +26,6 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.DialogInterface;
-import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
@@ -93,10 +91,6 @@ public class OmniSwitch extends SettingsPreferenceFragment implements
         ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mRecentsUseOmniSwitch) {
             boolean value = (Boolean) objValue;
-            if (value && !isOmniSwitchInstalled()){
-                openOmniSwitchNotInstalledWarning();
-                return false;
-            }
 
             // if value has never been set before
             if (value && !mOmniSwitchInitCalled){
@@ -106,25 +100,12 @@ public class OmniSwitch extends SettingsPreferenceFragment implements
 
             Settings.System.putInt(
                     resolver, Settings.System.RECENTS_USE_OMNISWITCH, value ? 1 : 0);
-            mOmniSwitchSettings.setEnabled(value && isOmniSwitchInstalled());
-            mOmniSwitchSettings.setSummary(isOmniSwitchInstalled() ?
-                    getResources().getString(R.string.omniswitch_start_settings_summary) :
-                    getResources().getString(R.string.omniswitch_not_installed_summary));
+            mOmniSwitchSettings.setEnabled(value);
         } else {
             return false;
         }
 
         return true;
-    }
-
-    private void openOmniSwitchNotInstalledWarning() {
-        new AlertDialog.Builder(getActivity())
-                .setTitle(getResources().getString(R.string.omniswitch_not_installed_title))
-                .setMessage(getResources().getString(R.string.omniswitch_not_installed_message))
-                .setNegativeButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int whichButton) {
-                        }
-                }).show();
     }
 
     private void openOmniSwitchFirstTimeWarning() {
@@ -137,13 +118,4 @@ public class OmniSwitch extends SettingsPreferenceFragment implements
                 }).show();
     }
 
-    private boolean isOmniSwitchInstalled() {
-        final PackageManager pm = getPackageManager();
-        try {
-            pm.getPackageInfo(OMNISWITCH_PACKAGE_NAME, PackageManager.GET_ACTIVITIES);
-            return true;
-        } catch (NameNotFoundException e) {
-            return false;
-        }
-    }
 }
