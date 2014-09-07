@@ -106,6 +106,7 @@ public class SystemappRemover extends Fragment {
         safetyList.add("SettingsProvider.apk");
         safetyList.add("SystemUI.apk");
         safetyList.add("TeleService.apk");
+        safetyList.add("ROMControl.apk");
 
         // create arraylist from /system/app and /system/priv-app content
         File system = new File(systemPath);
