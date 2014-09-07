@@ -102,6 +102,7 @@ public class SystemappRemover extends Fragment {
         safetyList.add("Keyguard.apk");
         safetyList.add("MediaProvider.apk");
         safetyList.add("ProxyHandler.apk");
+        safetyList.add("ROMControl.apk");
         safetyList.add("Settings.apk");
         safetyList.add("SettingsProvider.apk");
         safetyList.add("SystemUI.apk");
