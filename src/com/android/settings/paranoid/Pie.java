@@ -159,7 +159,7 @@ public class Pie extends SettingsPreferenceFragment
                     Settings.System.PIE_CONTROLS,
                     (Boolean) newValue ? 1 : 0);
             if (mPieControls.isChecked()) {
-                Toast.makeText(getActivity(), "Wait 10 seconds for Pie to activate!!!",
+                Toast.makeText(getActivity(), "Wait 10 seconds for Pie to\nactivate/deactivate!!!",
                         Toast.LENGTH_LONG).show();
             }
             return true;
