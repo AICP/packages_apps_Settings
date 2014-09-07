@@ -109,6 +109,7 @@ import com.android.settings.search.SettingsSearchFilterAdapter;
 import com.android.settings.search.SettingsSearchFilterAdapter.SearchInfo;
 import com.android.settings.tts.TextToSpeechSettings;
 import com.android.settings.users.UserSettings;
+import com.android.settings.util.Helpers;
 import com.android.settings.vpn2.VpnSettings;
 import com.android.settings.wfd.WifiDisplaySettings;
 import com.android.settings.wifi.AdvancedWifiSettings;
@@ -144,6 +145,8 @@ public class Settings extends PreferenceActivity
 
     private static final String SAVE_KEY_CURRENT_HEADER = "com.android.settings.CURRENT_HEADER";
     private static final String SAVE_KEY_PARENT_HEADER = "com.android.settings.PARENT_HEADER";
+
+    private static final String ROMCONTROL_PACKAGE_NAME = "com.aokp.romcontrol";
 
     static final int DIALOG_ONLY_ONE_HOME = 1;
 
@@ -708,6 +711,10 @@ public class Settings extends PreferenceActivity
                 }
             } else if (id == R.id.account_add) {
                 if (um.hasUserRestriction(UserManager.DISALLOW_MODIFY_ACCOUNTS)) {
+                    target.remove(i);
+                }
+            } else if (id == R.id.romcontrol_settings) {
+                if (!Helpers.isPackageInstalled(ROMCONTROL_PACKAGE_NAME, getPackageManager())) {
                     target.remove(i);
                 }
             }
