@@ -379,11 +379,11 @@
         </activity>
 
         <!-- "Blacklist settings" UI, used only on voice-capable phone devices. -->
-        <activity android:name="Settings$BlacklistSettingsActivity"
+        <activity android:name="Settings$BlacklistSettingsActivity"	
                 android:theme="@style/Theme.DialogWhenLarge"
-                android:uiOptions="splitActionBarWhenNarrow"
-                android:label="@string/blacklist_title"
-                android:taskAffinity=""
+                android:uiOptions="splitActionBarWhenNarrow"	
+                android:label="@string/blacklist_title"	
+                android:taskAffinity=""	
                 android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -2132,26 +2132,6 @@
                 <category android:name="android.intent.category.HOME" />
             </intent-filter>
         </receiver>
-
-        <!-- Notification Shortcuts -->
-        <activity android:name="Settings$NotificationShortcutsSettingsActivity"
-                android:label="@string/notification_shortcuts_settings_title"
-                android:clearTaskOnLaunch="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <action android:name="com.android.settings.slim.notificationshortcuts.NOTIFICATION_SHORTCUTS" />
-                <action android:name="android.settings.slim.notificationshortcuts.NOTIFICATION_SHORTCUTS" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.VOICE_LAUNCH" />
-                <category android:name="com.android.settings.SHORTCUT" />
-            </intent-filter>
-            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.slim.notificationshortcuts.NotificationShortcuts" />
-            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
-                android:resource="@id/slim_notification_shortcuts" />
-        </activity>
-
-        <activity android:name="net.margaritov.preference.colorpicker" />
 
         <receiver android:name=".widget.SettingsAppWidgetProvider"
                 android:label="@string/gadget_title"
