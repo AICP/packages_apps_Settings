@@ -19,13 +19,16 @@ package com.android.settings.aicp;
 
 import android.content.ContentResolver;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
+
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.util.Helpers;
 
 /**
  * LAB files borrowed from excellent ChameleonOS for AICP
@@ -39,21 +42,26 @@ public class AicpSettings extends SettingsPreferenceFragment
 
     private static final String TAG = "AicpLabs";
 
-    private static final String KERNELTWEAKER_START = "kerneltweaker_start";
-    private static final String AICPOTA_START = "aicp_ota_start";
+    private static final String KEY_OMNISWITCH = "omniswitch";
+    private static final String KEY_KERNELTWEAKER_START = "kerneltweaker_start";
+    private static final String KEY_AICPOTA_START = "aicp_ota_start";
 
-    // Package name of the kernel tweaker app
+    // Package name of the OmniSwitch app
+    public static final String OMNISWITCH_PACKAGE_NAME = "org.omnirom.omniswitch";
+
+    // Package name of the KernelTweaker app
     public static final String KERNELTWEAKER_PACKAGE_NAME = "com.dsht.kerneltweaker";
-    // Intent for launching the kernel tweaker main actvity
+    // Intent for launching the KernelTweaker main actvity
     public static Intent INTENT_KERNELTWEAKER = new Intent(Intent.ACTION_MAIN)
             .setClassName(KERNELTWEAKER_PACKAGE_NAME, KERNELTWEAKER_PACKAGE_NAME + ".MainActivity");
 
-    // Package name of the Aicp ota app
+    // Package name of the AICP OTA app
     public static final String AICPOTA_PACKAGE_NAME = "com.paranoid.paranoidota";
-    // Intent for launching the Aicp ota main actvity
+    // Intent for launching the AICP OTA main actvity
     public static Intent INTENT_AICPOTA = new Intent(Intent.ACTION_MAIN)
             .setClassName(AICPOTA_PACKAGE_NAME, AICPOTA_PACKAGE_NAME + ".MainActivity");
 
+    private Preference mOmniSwitch;
     private Preference mKernelTweaker;
     private Preference mAicpOta;
 
@@ -64,14 +72,25 @@ public class AicpSettings extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.aicp_lab_prefs);
 
         PreferenceScreen prefSet = getPreferenceScreen();
-        ContentResolver resolver = getActivity().getContentResolver();
+        PackageManager pm = getPackageManager();
+
+        mOmniSwitch = (Preference)
+                prefSet.findPreference(KEY_OMNISWITCH);
+        if (!Helpers.isPackageInstalled(OMNISWITCH_PACKAGE_NAME, pm)) {
+            prefSet.removePreference(mOmniSwitch);
+        }
 
         mKernelTweaker = (Preference)
-                prefSet.findPreference(KERNELTWEAKER_START);
+                prefSet.findPreference(KEY_KERNELTWEAKER_START);
+        if (!Helpers.isPackageInstalled(KERNELTWEAKER_PACKAGE_NAME, pm)) {
+            prefSet.removePreference(mKernelTweaker);
+        }
 
         mAicpOta = (Preference)
-                prefSet.findPreference(AICPOTA_START);
-
+                prefSet.findPreference(KEY_AICPOTA_START);
+        if (!Helpers.isPackageInstalled(AICPOTA_PACKAGE_NAME, pm)) {
+            prefSet.removePreference(mAicpOta);
+        }
     }
 
     @Override
