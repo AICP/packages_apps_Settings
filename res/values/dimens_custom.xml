@@ -37,7 +37,4 @@
     <dimen name="ga_gesture_thumbnail_inset">8dip</dimen>
     <dimen name="ga_gesture_thumbnail_size">64dip</dimen>
 
-    <!-- Notification Shortcuts -->
-    <dimen name="notification_shortcut_picker_left_padding">36dip</dimen>
-
 </resources>
