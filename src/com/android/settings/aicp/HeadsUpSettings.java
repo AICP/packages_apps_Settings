@@ -51,6 +51,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 import com.android.settings.cyanogenmod.PackageListAdapter;
 import com.android.settings.cyanogenmod.PackageListAdapter.PackageItem;
+import com.android.settings.util.Helpers;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -66,6 +67,7 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
 
     private static final String PREF_HEADS_UP_TIME_OUT = "heads_up_time_out";
     private static final String PREF_HEADS_UP_EXPANDED = "heads_up_expanded";
+    private static final String PREF_SHOW_HEADS_UP_BOTTOM = "show_heads_up_bottom";
     private static final String PREF_HEADS_UP_EXCLUDE_FROM_LOCK_SCREEN = "heads_up_exclude_from_lock_screen";
 
     private PackageListAdapter mPackageAdapter;
@@ -77,6 +79,7 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
     private ListPreference mHeadsUpTimeOut;
     private CheckBoxPreference mHeadsUpExpanded;
     private CheckBoxPreference mHeadsExcludeFromLockscreen;
+    private CheckBoxPreference mShowHeadsUpBottom;
 
     private String mDndPackageList;
     private String mBlacklistPackageList;
@@ -140,6 +143,11 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
         mHeadsUpExpanded.setChecked(Settings.System.getIntForUser(getContentResolver(),
                 Settings.System.HEADS_UP_EXPANDED, 0, UserHandle.USER_CURRENT) == 1);
         mHeadsUpExpanded.setOnPreferenceChangeListener(this);
+
+        mShowHeadsUpBottom = (CheckBoxPreference) findPreference(PREF_SHOW_HEADS_UP_BOTTOM);
+        mShowHeadsUpBottom.setChecked(Settings.System.getIntForUser(getContentResolver(),
+                Settings.System.SHOW_HEADS_UP_BOTTOM, 0, UserHandle.USER_CURRENT) == 1);
+        mShowHeadsUpBottom.setOnPreferenceChangeListener(this);
 
         mHeadsExcludeFromLockscreen = (CheckBoxPreference) findPreference(PREF_HEADS_UP_EXCLUDE_FROM_LOCK_SCREEN);
         mHeadsExcludeFromLockscreen.setChecked(Settings.System.getIntForUser(getContentResolver(),
@@ -239,6 +247,12 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
             Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.HEADS_UP_EXPANDED,
                     (Boolean) newValue ? 1 : 0, UserHandle.USER_CURRENT);
+            return true;
+        } else if (preference == mShowHeadsUpBottom) {
+            Settings.System.putIntForUser(getContentResolver(),
+                    Settings.System.SHOW_HEADS_UP_BOTTOM,
+                    (Boolean) newValue ? 1 : 0, UserHandle.USER_CURRENT);
+            Helpers.restartSystemUI();
             return true;
         } else if (preference == mHeadsExcludeFromLockscreen) {
             Settings.System.putIntForUser(getContentResolver(),

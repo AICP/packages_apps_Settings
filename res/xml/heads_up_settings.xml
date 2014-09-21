@@ -16,10 +16,17 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory
             android:title="@string/category_heads_up">
+
        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
             android:key="heads_up_floating_window"
             android:title="@string/heads_up_floating_window"
             android:defaultValue="true" />
+
+       <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
+            android:key="show_heads_up_bottom"
+            android:title="@string/show_heads_up_bottom"
+            android:persistent="false"
+            android:defaultValue="false" />
 
        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
             android:key="heads_up_expanded"
