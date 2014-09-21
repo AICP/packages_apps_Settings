@@ -52,6 +52,7 @@ public class CarrierLabel extends SettingsPreferenceFragment  implements
             "pref_notification_shortcuts_hide_carrier";
     private static final String STATUS_BAR_CARRIER = "status_bar_carrier";
     private static final String STATUS_BAR_CARRIER_COLOR = "status_bar_carrier_color";
+    private static final String TOGGLE_CARRIER_LOGO = "toggle_carrier_logo";
 
     static final int DEFAULT_STATUS_CARRIER_COLOR = 0xffffffff;
 
@@ -60,6 +61,7 @@ public class CarrierLabel extends SettingsPreferenceFragment  implements
 
     private CheckBoxPreference mHideCarrier;
     private CheckBoxPreference mStatusBarCarrier;
+    private CheckBoxPreference mToggleCarrierLogo;
     private ColorPickerPreference mCarrierColorPicker;
 
     Preference mCustomLabel;
@@ -92,6 +94,10 @@ public class CarrierLabel extends SettingsPreferenceFragment  implements
         mStatusBarCarrier = (CheckBoxPreference) findPreference(STATUS_BAR_CARRIER);
         mStatusBarCarrier.setChecked((Settings.System.getInt(mCr,
                 Settings.System.STATUS_BAR_CARRIER, 0) == 1));
+
+        mToggleCarrierLogo = (CheckBoxPreference) findPreference(TOGGLE_CARRIER_LOGO);
+        mToggleCarrierLogo.setChecked((Settings.System.getInt(mCr,
+                Settings.System.TOGGLE_CARRIER_LOGO, 0) == 1));
 
         // MIUI-like carrier Label color
         mCarrierColorPicker = (ColorPickerPreference) mPrefSet.findPreference(STATUS_BAR_CARRIER_COLOR);
@@ -130,7 +136,12 @@ public class CarrierLabel extends SettingsPreferenceFragment  implements
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
        if (preference == mStatusBarCarrier) {
-           Settings.System.putInt(mCr, Settings.System.STATUS_BAR_CARRIER, mStatusBarCarrier.isChecked() ? 1 : 0);
+           Settings.System.putInt(mCr, Settings.System.STATUS_BAR_CARRIER,
+                   mStatusBarCarrier.isChecked() ? 1 : 0);
+           return true;
+       } else if (preference == mToggleCarrierLogo) {
+           Settings.System.putInt(mCr, Settings.System.TOGGLE_CARRIER_LOGO,
+                   mToggleCarrierLogo.isChecked() ? 1 : 0);
            return true;
        } else if (preference == mCustomLabel) {
             AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
