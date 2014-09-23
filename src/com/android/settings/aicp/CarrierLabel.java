@@ -93,11 +93,11 @@ public class CarrierLabel extends SettingsPreferenceFragment  implements
         // MIUI-like carrier Label
         mStatusBarCarrier = (CheckBoxPreference) findPreference(STATUS_BAR_CARRIER);
         mStatusBarCarrier.setChecked((Settings.System.getInt(mCr,
-                Settings.System.STATUS_BAR_CARRIER, 0) != 1));
+                Settings.System.STATUS_BAR_CARRIER, 0) == 1));
 
         mToggleCarrierLogo = (CheckBoxPreference) findPreference(TOGGLE_CARRIER_LOGO);
         mToggleCarrierLogo.setChecked((Settings.System.getInt(mCr,
-                Settings.System.TOGGLE_CARRIER_LOGO, 0) != 1));
+                Settings.System.TOGGLE_CARRIER_LOGO, 0) == 1));
 
         // MIUI-like carrier Label color
         mCarrierColorPicker = (ColorPickerPreference) mPrefSet.findPreference(STATUS_BAR_CARRIER_COLOR);
