@@ -1142,6 +1142,8 @@
     <string name="heads_up_expanded_summary">Show heads up notification always expanded</string>
     <string name="heads_up_exclude_from_lock_screen">Disable on lockscreen</string>
     <string name="show_heads_up_bottom">Show on bottom</string>
+    <string name="heads_up_bg_color_title">Background color</string>
+    <string name="heads_up_text_color_title">Text color</string>
 
     <!-- Swipe -->
     <string name="notification_swipe_title">Notification swipe</string>
