@@ -117,6 +117,14 @@
 
     <!-- Profiles -->
     <header
+        settings:includeXmlForSearch="@xml/blur_manager"
+        android:id="@+id/blur_manager_settings"
+        android:icon="@drawable/ic_blur"
+        android:fragment="com.android.settings.aicp.BlurManagerSettings"
+        android:title="@string/blur_manager_title" />
+
+    <!-- Profiles -->
+    <header
         android:id="@+id/profiles_settings"
         android:icon="@drawable/ic_settings_profiles"
         android:fragment="com.android.settings.profiles.ProfilesSettings"

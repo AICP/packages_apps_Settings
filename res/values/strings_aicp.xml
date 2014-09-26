@@ -1327,4 +1327,9 @@
     <string name="lockscreen_battery_status_alwayson">Always on</string>
     <string name="lockscreen_battery_status_alwaysoff">Always off</string>
 
+    <!-- Blur Manager -->
+    <string name="blur_manager_title">Blur manager</string>
+    <string name="recents_panel_blur">Recents panel</string>
+    <string name="systemui_blur">Notifications panel</string>
+
 </resources>
