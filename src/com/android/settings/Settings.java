@@ -37,8 +37,17 @@ import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.ColorMatrix;
+import android.graphics.ColorMatrixColorFilter;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.graphics.Paint;
 import android.nfc.NfcAdapter;
+import android.os.BlurManager;
 import android.os.Bundle;
 import android.os.INetworkManagementService;
 import android.os.RemoteException;
@@ -79,6 +88,7 @@ import com.android.settings.accounts.AccountSyncSettings;
 import com.android.settings.accounts.AuthenticatorHelper;
 import com.android.settings.accounts.ManageAccountsSettings;
 import com.android.settings.aicp.AicpSettings;
+import com.android.settings.aicp.BlurManagerSettings;
 import com.android.settings.applications.AppOpsSummary;
 import com.android.settings.applications.ManageApplications;
 import com.android.settings.applications.ProcessStatsUi;
@@ -158,6 +168,8 @@ public class Settings extends PreferenceActivity
 
     private int mCurrentState = 0;
 
+    private BlurManager mBlurManager;
+
     // Show only these settings for restricted users
     private int[] SETTINGS_FOR_RESTRICTED = {
             R.id.wireless_section,
@@ -185,7 +197,8 @@ public class Settings extends PreferenceActivity
             R.id.print_settings,
             R.id.nfc_payment_settings,
             R.id.home_settings,
-            R.id.aicp_settings
+            R.id.aicp_settings,
+            R.id.blur_manager_settings
     };
 
     private SharedPreferences mDevelopmentPreferences;
@@ -201,6 +214,8 @@ public class Settings extends PreferenceActivity
     private ActionBar mActionBar;
     private MenuItem mSearchItem;
     private SettingsAutoCompleteTextView mSearchBar;
+
+    private Bitmap mBlurredWallpaper;
 
     private boolean mBatteryPresent = true;
     private BroadcastReceiver mBatteryInfoReceiver = new BroadcastReceiver() {
@@ -270,6 +285,16 @@ public class Settings extends PreferenceActivity
             getWindow().setUiOptions(getIntent().getIntExtra(EXTRA_UI_OPTIONS, 0));
         }
 
+        mBlurManager = (BlurManager) getSystemService(Context.BLUR_SERVICE);
+        mBlurManager.setOnBitmapReady(new BlurManager.OnBitmapReady() {
+            @Override
+            public void onBitmapReady(Bitmap bitmap) {
+                if (bitmap == null) return;
+                getWindow().setBackgroundDrawable(new BitmapDrawable(adjustBitmap(bitmap, 0.6f, 0.4f)));
+            }
+        });
+        mBlurManager.getBlurWallpaper(20);
+
         mAuthenticatorHelper = new AuthenticatorHelper();
         mAuthenticatorHelper.updateAuthDescriptions(this);
         mAuthenticatorHelper.onAccountsUpdated(this, null);
@@ -335,6 +360,8 @@ public class Settings extends PreferenceActivity
 
     @Override
     public void onResume() {
+        mBlurManager.getBlurWallpaper(20);
+
         super.onResume();
         mDevelopmentPreferencesListener = new SharedPreferences.OnSharedPreferenceChangeListener() {
             @Override
@@ -448,7 +475,8 @@ public class Settings extends PreferenceActivity
         ThemeSettings.class.getName(),
         QuietHours.class.getName(),
         AicpSettings.class.getName(),
-        Pie.class.getName()
+        Pie.class.getName(),
+	BlurManagerSettings.class.getName()
     };
 
     @Override
@@ -1235,6 +1263,26 @@ public class Settings extends PreferenceActivity
 
     public static void requestHomeNotice() {
         sShowNoHomeNotice = true;
+    }
+
+    private Bitmap adjustBitmap(Bitmap bmp, float contrast, float brightness) {
+        ColorMatrix cm = new ColorMatrix(new float[]
+            {
+                contrast, 0, 0, 0, brightness,
+                0, contrast, 0, 0, brightness,
+                0, 0, contrast, 0, brightness,
+                0, 0, 0, contrast, 0
+            });
+
+        Bitmap ret = Bitmap.createBitmap(bmp.getWidth(), bmp.getHeight(), bmp.getConfig());
+
+        Canvas canvas = new Canvas(ret);
+
+        Paint paint = new Paint();
+        paint.setColorFilter(new ColorMatrixColorFilter(cm));
+        canvas.drawBitmap(bmp, 0, 0, paint);
+
+        return ret;
     }
 
     /*

@@ -1346,4 +1346,9 @@
     <string name="network_traffic_color_reset">Reset color</string>
     <string name="network_traffic_color_reset_message">Reset network traffic color to default?</string>
 
+    <!-- Blur Manager -->
+    <string name="blur_manager_title">Blur manager</string>
+    <string name="recents_panel_blur">Recents panel</string>
+    <string name="systemui_blur">Notifications panel</string>
+
 </resources>
