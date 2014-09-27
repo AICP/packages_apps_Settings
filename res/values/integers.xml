@@ -19,4 +19,10 @@
     <!-- Minimum prediction score required to pass a gesture as recognized -->
     <integer name="min_gesture_prediction_score">2</integer>
 
+    <!-- Overlays for NetworkTraffic to use -->
+    <integer name="maskUp">0x00000001</integer>
+    <integer name="maskDown">0x00000002</integer>
+    <integer name="maskUnit">0x00000004</integer>
+    <integer name="maskPeriod">0xFFFF0000</integer>
+
 </resources>

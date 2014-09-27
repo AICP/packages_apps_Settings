@@ -56,7 +56,6 @@ public class Notifications extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, OnPreferenceClickListener {
     private static final String TAG = "NotificationsSettings";
 
-    private static final String STATUS_BAR_NETWORK_HIDE = "status_bar_network_hide";
     private static final String KEY_SMS_BREATH = "sms_breath";
     private static final String KEY_MISSED_CALL_BREATH = "missed_call_breath";
     private static final String KEY_VOICEMAIL_BREATH = "voicemail_breath";
@@ -80,7 +79,6 @@ public class Notifications extends SettingsPreferenceFragment implements
     private CheckBoxPreference mNotificationSwipe;
     private CheckBoxPreference mReminder;
     private CheckBoxPreference mSMSBreath;
-    private CheckBoxPreference mStatusBarNetworkHide;
     private CheckBoxPreference mStatusBarSixBarSignal;
     private CheckBoxPreference mVoicemailBreath;
 
@@ -102,11 +100,6 @@ public class Notifications extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.aicp_status_notif);
 
         PreferenceScreen prefSet = getPreferenceScreen();
-
-        // NetStat hide if there's no traffic
-        mStatusBarNetworkHide = (CheckBoxPreference) prefSet.findPreference(STATUS_BAR_NETWORK_HIDE);
-        mStatusBarNetworkHide.setChecked(Settings.System.getInt(resolver,
-                Settings.System.STATUS_BAR_NETWORK_HIDE, 0) == 1);
 
         // Breath Notification
         mSMSBreath = (CheckBoxPreference) prefSet.findPreference(KEY_SMS_BREATH);
@@ -225,15 +218,7 @@ public class Notifications extends SettingsPreferenceFragment implements
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         ContentResolver resolver = getActivity().getContentResolver();
         boolean value;
-        if (preference == mStatusBarNetworkHide) {
-            Settings.System.putInt(resolver,
-                    Settings.System.STATUS_BAR_NETWORK_HIDE, mStatusBarNetworkHide.isChecked()
-                    ? 1 : 0);
-            if (mStatusBarNetworkHide.isChecked()) {
-                Toast.makeText(getActivity(), "Network traffic must be enabled in ROMControl!",
-                        Toast.LENGTH_LONG).show();
-            }
-        } else if (preference == mSMSBreath) {
+        if (preference == mSMSBreath) {
             value = mSMSBreath.isChecked();
             Settings.System.putInt(resolver,
                     Settings.System.KEY_SMS_BREATH, value ? 1 : 0);
