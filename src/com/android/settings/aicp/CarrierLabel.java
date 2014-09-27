@@ -52,6 +52,7 @@ public class CarrierLabel extends SettingsPreferenceFragment  implements
             "pref_notification_shortcuts_hide_carrier";
     private static final String STATUS_BAR_CARRIER = "status_bar_carrier";
     private static final String STATUS_BAR_CARRIER_COLOR = "status_bar_carrier_color";
+    private static final String NO_KEYGUARD_CARRIER = "no_carrier_label";
 
     static final int DEFAULT_STATUS_CARRIER_COLOR = 0xffffffff;
 
@@ -61,6 +62,7 @@ public class CarrierLabel extends SettingsPreferenceFragment  implements
     private CheckBoxPreference mHideCarrier;
     private CheckBoxPreference mStatusBarCarrier;
     private ColorPickerPreference mCarrierColorPicker;
+    private CheckBoxPreference mNoKeyguardCarrier;
 
     Preference mCustomLabel;
     String mCustomLabelText = null;
@@ -112,6 +114,20 @@ public class CarrierLabel extends SettingsPreferenceFragment  implements
             public boolean onPreferenceChange(Preference preference,
                         Object newValue) {
                 Settings.System.putInt(mCr, Settings.System.NOTIFICATION_SHORTCUTS_HIDE_CARRIER, (Boolean) newValue ? 1 : 0);
+                return true;
+            }
+        });
+
+        // Hide Carrier Label in keyguard
+        mNoKeyguardCarrier = (CheckBoxPreference) mPrefSet.findPreference(
+                NO_KEYGUARD_CARRIER);
+        mNoKeyguardCarrier.setChecked(Settings.System.getIntForUser(getContentResolver(),
+                Settings.System.NO_CARRIER_LABEL, 0, UserHandle.USER_CURRENT_OR_SELF) == 1);
+        mNoKeyguardCarrier.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+            @Override
+            public boolean onPreferenceChange(Preference preference,
+                        Object newValue) {
+                Settings.System.putInt(mCr, Settings.System.NO_CARRIER_LABEL, (Boolean) newValue ? 1 : 0);
                 return true;
             }
         });
