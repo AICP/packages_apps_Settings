@@ -71,6 +71,7 @@ public class Notifications extends SettingsPreferenceFragment implements
     private static final String PREF_NOTIFICAITION_SWIPE = "notification_swipe";
     private static final String STATUSBAR_6BAR_SIGNAL = "statusbar_6bar_signal";
     private static final String PREF_NOTIFICATION_BRIGHTNESS_SLIDER = "notification_brightness_slider";
+    private static final String PREF_FORCE_EXPANDED_NOTIFICATIONS = "force_expanded_notifications";
 
     private CheckBoxPreference mBrightnessSlider;
     private CheckBoxPreference mClockUseSecond;
@@ -81,6 +82,7 @@ public class Notifications extends SettingsPreferenceFragment implements
     private CheckBoxPreference mSMSBreath;
     private CheckBoxPreference mStatusBarSixBarSignal;
     private CheckBoxPreference mVoicemailBreath;
+    private CheckBoxPreference mForceExpandedNotifications;
 
     private ListPreference mAnnoyingNotifications;
     private ListPreference mFontStyle;
@@ -203,6 +205,11 @@ public class Notifications extends SettingsPreferenceFragment implements
         mBrightnessSlider.setChecked(enableBrightnessSlider);
         mBrightnessSlider.setOnPreferenceChangeListener(this);
 
+        // Force Expanded Notifications
+        mForceExpandedNotifications = (CheckBoxPreference) prefSet.findPreference(PREF_FORCE_EXPANDED_NOTIFICATIONS);
+        mForceExpandedNotifications.setChecked((Settings.System.getInt(resolver,
+                Settings.System.FORCE_EXPANDED_NOTIFICATIONS, 0) == 1));
+
     }
 
     @Override
@@ -245,7 +252,11 @@ public class Notifications extends SettingsPreferenceFragment implements
         } else if (preference == mStatusBarSixBarSignal) {
             value = mStatusBarSixBarSignal.isChecked();
             Settings.System.putInt(resolver,
-                    Settings.System.STATUSBAR_6BAR_SIGNAL, value ? 1:0);
+                    Settings.System.STATUSBAR_6BAR_SIGNAL, value ? 1 : 0);
+        } else if (preference == mForceExpandedNotifications) {
+            value = mForceExpandedNotifications.isChecked();
+            Settings.System.putInt(resolver,
+                    Settings.System.FORCE_EXPANDED_NOTIFICATIONS, value ? 1 : 0);
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
