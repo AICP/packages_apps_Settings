@@ -29,7 +29,6 @@
          very long strings too. -->
     <integer name="maximum_user_dictionary_word_length" translatable="false">48</integer>
 
-
     <!-- This used to define screen color's Hue progress bar minimum value -->
     <integer name="minimum_hue_value" translatable="false">0</integer>
 
@@ -65,5 +64,13 @@
 
     <!-- This is used to define screen color's contrast progress bar maximum value-->
     <integer name="maximum_contrast_value" translatable="false">360</integer>
+
+    <!-- SAR Level for a device -->
+    <!-- Must be overlaid by device -->
+    <bool name="config_show_sar_enable" translatable="false">false</bool>
+    <!-- Maximum Specific Absorption Rate for head -->
+    <string name="sar_head_level" translatable="false"></string>
+    <!-- Maximum Specific Absorption Rate for body -->
+    <string name="sar_body_level" translatable="false"></string>
 
 </resources>
