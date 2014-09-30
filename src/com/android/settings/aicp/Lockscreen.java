@@ -70,9 +70,11 @@ public class Lockscreen extends SettingsPreferenceFragment implements
     private static final String KEY_PEEK_STATE = "notification_peek";
     private static final String KEY_PEEK_TIME = "notification_peek_time";
     private static final String KEY_BATTERY_STATUS = "lockscreen_battery_status";
+    private static final String PREF_STATUS_BAR_CLOCK_LOCKSCREEN = "status_bar_clock_lockscreen";
 
     private CheckBoxPreference mAllowRotation;
     private CheckBoxPreference mBlurBehind;
+    private CheckBoxPreference mClockInStatusbar;
     private CheckBoxPreference mEnableCameraWidget;
     private CheckBoxPreference mDisableFrame;
     private CheckBoxPreference mGlowpadTorch;
@@ -164,6 +166,12 @@ public class Lockscreen extends SettingsPreferenceFragment implements
             mBatteryStatus.setValueIndex(batteryStatus);
             mBatteryStatus.setSummary(mBatteryStatus.getEntries()[batteryStatus]);
         }
+
+        // Clock in statusbar
+        mClockInStatusbar = (CheckBoxPreference) prefSet.findPreference(PREF_STATUS_BAR_CLOCK_LOCKSCREEN);
+        mClockInStatusbar.setChecked(Settings.System.getInt(resolver,
+                 Settings.System.STATUS_BAR_CLOCK_LOCKSCREEN, 0) == 1);
+        mClockInStatusbar.setOnPreferenceChangeListener(this);
     }
        
 
@@ -206,6 +214,9 @@ public class Lockscreen extends SettingsPreferenceFragment implements
                 Toast.makeText(getActivity(), R.string.notification_peek_toast,
                         Toast.LENGTH_LONG).show();
             }
+        } else if (preference == mClockInStatusbar) {
+            Settings.System.putInt(resolver,
+                    Settings.System.STATUS_BAR_CLOCK_LOCKSCREEN, mClockInStatusbar.isChecked() ? 1 : 0);
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }

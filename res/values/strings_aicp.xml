@@ -1348,6 +1348,10 @@
 
     <!-- Force expand notifications -->
     <string name="notification_force_expand_title">Force expanded notification</string>
-    <string name="notification_force_expand_summary">Force expanded notifications on all apps that support it</string>
+    <string name="notification_force_expand_summary">Force expanded notifications on all apps that support it.</string>
+
+    <!-- Statusbar clock on lockscreen -->
+    <string name="status_bar_show_clock_lockscreen_title">Statusbar clock</string>
+    <string name="status_bar_show_clock_lockscreen_summary">Show clock in statusbar while\non lockscreen.</string>
 
 </resources>
