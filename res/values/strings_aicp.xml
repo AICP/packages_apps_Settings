@@ -345,6 +345,7 @@
     <string name="notification_show_wifi_ssid_title">Show Wifi network name</string>
     <string name="notification_show_wifi_ssid_summary">Display the name of the currently connected Wifi network</string>
     <string name="no_carrier_on_keyguard_title">Hide carrier in lockscreen</string>
+    <string name="disable_carrier_logo">Disable Carrier Logo</string>
 
     <!-- StatusBar Battery Settings -->
     <string name="battery_icon_title">Battery icon</string>
