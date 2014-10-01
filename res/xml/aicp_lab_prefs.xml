@@ -74,12 +74,12 @@
         android:title="@string/color_tile_title"
         android:fragment="com.android.settings.aicp.TileColors" />
 
-    <!-- App sidebar -->
+    <!-- App bars -->
     <PreferenceScreen
-        android:key="app_sidebar"
-        android:fragment="com.android.settings.aicp.AppSidebar"
+        android:key="app_sidebars"
+        android:fragment="com.android.settings.aicp.AppBars"
         android:icon="@drawable/ic_aicp_sidebar"
-        android:title="@string/app_sidebar_title"/>
+        android:title="@string/app_bars_title"/>
 
     <!-- Gesture anywhere -->
     <PreferenceScreen

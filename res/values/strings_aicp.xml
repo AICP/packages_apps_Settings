@@ -53,6 +53,9 @@
     <string name="navbar_category_title">Navbar</string>
     <string name="system_category_title">System</string>
 
+    <!-- App bars categpry -->
+    <string name="app_bars_title">Application bars</string>
+
     <!-- ListView animation -->
     <string name="interface_settings_animation_title">Animation options</string>
     <string name="listview_animation_title">ListView animation</string>
