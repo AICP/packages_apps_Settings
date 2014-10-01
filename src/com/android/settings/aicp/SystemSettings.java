@@ -54,7 +54,6 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 import com.android.settings.util.CMDProcessor;
 import com.android.settings.util.Helpers;
-import com.android.settings.vanir.AppMultiSelectListPreference;
 import com.android.settings.widget.SeekBarPreferenceCham;
 
 import java.io.File;
@@ -76,19 +75,11 @@ public class SystemSettings extends SettingsPreferenceFragment implements
     private static final String KEY_DONT_SHOW_NAVBAR_ON_SWIPE_EXPANDED_DESKTOP_ENABLED =
             "dont_show_navbar_on_swipe_expanded_desktop_enabled";
     private static final String KEY_NAVIGATION_MENU_FORCE = "navigation_menu_force";
-    private static final String PREF_ENABLE_APP_CIRCLE_BAR = "enable_app_circle_bar";
-    private static final String PREF_INCLUDE_APP_CIRCLE_BAR_KEY = "app_circle_bar_included_apps";
-    private static final String KEY_TRIGGER_WIDTH = "trigger_width";
-    private static final String KEY_TRIGGER_TOP = "trigger_top";
-    private static final String KEY_TRIGGER_BOTTOM = "trigger_bottom";
     private static final String PREF_PROXIMITY_ON_WAKE = "proximity_on_wake";
     private static final String DISABLE_BOOTAUDIO = "disable_bootaudio";
     private static final String KEY_POWER_MENU_QUICKCAM = "power_menu_quickcam";
 
-    private AppMultiSelectListPreference mIncludedAppCircleBar;
-
     private CheckBoxPreference mDisableFC;
-    private CheckBoxPreference mEnableAppCircleBar;
     private CheckBoxPreference mHfmDisableAds;
     private CheckBoxPreference mNavigationBarLeft;
     private CheckBoxPreference mDontShowNavbar;
@@ -98,10 +89,6 @@ public class SystemSettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mPowerMenuQuickcam;
 
     private ListPreference mNavigationMenu;
-
-    private SeekBarPreferenceCham mTriggerWidthPref;
-    private SeekBarPreferenceCham mTriggerTopPref;
-    private SeekBarPreferenceCham mTriggerBottomPref;
 
     private PreferenceScreen mSystemScreen;
     private PreferenceCategory mNavbarCategory;
@@ -156,31 +143,6 @@ public class SystemSettings extends SettingsPreferenceFragment implements
         } catch (RemoteException e) {
             Log.e(TAG, "Error getting navigation bar status");
         }
-
-        // App circle bar
-        mEnableAppCircleBar = (CheckBoxPreference) prefSet.findPreference(PREF_ENABLE_APP_CIRCLE_BAR);
-        mEnableAppCircleBar.setChecked((Settings.System.getInt(resolver,
-                Settings.System.ENABLE_APP_CIRCLE_BAR, 0) == 1));
-
-        mIncludedAppCircleBar = (AppMultiSelectListPreference) prefSet.findPreference(PREF_INCLUDE_APP_CIRCLE_BAR_KEY);
-        Set<String> includedApps = getIncludedApps();
-        if (includedApps != null) mIncludedAppCircleBar.setValues(includedApps);
-        mIncludedAppCircleBar.setOnPreferenceChangeListener(this);
-
-        mTriggerWidthPref = (SeekBarPreferenceCham) findPreference(KEY_TRIGGER_WIDTH);
-        mTriggerWidthPref.setValue(Settings.System.getInt(getContentResolver(),
-                Settings.System.APP_CIRCLE_BAR_TRIGGER_WIDTH, 10));
-        mTriggerWidthPref.setOnPreferenceChangeListener(this);
-
-        mTriggerTopPref = (SeekBarPreferenceCham) findPreference(KEY_TRIGGER_TOP);
-        mTriggerTopPref.setValue(Settings.System.getInt(getContentResolver(),
-                Settings.System.APP_CIRCLE_BAR_TRIGGER_TOP, 0));
-        mTriggerTopPref.setOnPreferenceChangeListener(this);
-
-        mTriggerBottomPref = (SeekBarPreferenceCham) findPreference(KEY_TRIGGER_BOTTOM);
-        mTriggerBottomPref.setValue(Settings.System.getInt(getContentResolver(),
-                Settings.System.APP_CIRCLE_BAR_TRIGGER_HEIGHT, 100));
-        mTriggerBottomPref.setOnPreferenceChangeListener(this);
 
         // Proximity wake up
         mProximityWake = (CheckBoxPreference) prefSet.findPreference(PREF_PROXIMITY_ON_WAKE);
@@ -241,10 +203,6 @@ public class SystemSettings extends SettingsPreferenceFragment implements
                 Settings.System.putInt(resolver,
                         Settings.System.NAVIGATION_MENU, 0);
             }
-        } else if  (preference == mEnableAppCircleBar) {
-            boolean checked = ((CheckBoxPreference)preference).isChecked();
-            Settings.System.putInt(resolver,
-                    Settings.System.ENABLE_APP_CIRCLE_BAR, checked ? 1:0);
         } else if  (preference == mProximityWake) {
             boolean checked = ((CheckBoxPreference)preference).isChecked();
             Settings.System.putInt(resolver,
@@ -276,27 +234,6 @@ public class SystemSettings extends SettingsPreferenceFragment implements
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-        ContentResolver resolver = getActivity().getContentResolver();
-        final String key = preference.getKey();
-        if (preference == mIncludedAppCircleBar) {
-            storeIncludedApps((Set<String>) objValue);
-        } else if (preference == mTriggerWidthPref) {
-            int width = ((Integer)objValue).intValue();
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.APP_CIRCLE_BAR_TRIGGER_WIDTH, width);
-            return true;
-        } else if (preference == mTriggerTopPref) {
-            int top = ((Integer)objValue).intValue();
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.APP_CIRCLE_BAR_TRIGGER_TOP, top);
-            return true;
-        } else if (preference == mTriggerBottomPref) {
-            int bottom = ((Integer)objValue).intValue();
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.APP_CIRCLE_BAR_TRIGGER_HEIGHT, bottom);
-            return true;
-        }
-
         return true;
     }
 
@@ -305,38 +242,4 @@ public class SystemSettings extends SettingsPreferenceFragment implements
         return false;
     }
 
-    private Set<String> getIncludedApps() {
-        String included = Settings.System.getString(getActivity().getContentResolver(),
-                Settings.System.WHITELIST_APP_CIRCLE_BAR);
-        if (TextUtils.isEmpty(included)) {
-            return null;
-        }
-        return new HashSet<String>(Arrays.asList(included.split("\\|")));
-    }
-
-    private void storeIncludedApps(Set<String> values) {
-        StringBuilder builder = new StringBuilder();
-        String delimiter = "";
-        for (String value : values) {
-            builder.append(delimiter);
-            builder.append(value);
-            delimiter = "|";
-        }
-        Settings.System.putString(getActivity().getContentResolver(),
-                Settings.System.WHITELIST_APP_CIRCLE_BAR, builder.toString());
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        Settings.System.putInt(getContentResolver(),
-                Settings.System.APP_CIRCLE_BAR_SHOW_TRIGGER, 0);
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        Settings.System.putInt(getContentResolver(),
-                Settings.System.APP_CIRCLE_BAR_SHOW_TRIGGER, 1);
-    }
 }

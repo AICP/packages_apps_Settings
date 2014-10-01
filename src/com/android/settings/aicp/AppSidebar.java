@@ -56,7 +56,7 @@ public class AppSidebar extends SettingsPreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.app_sidebar_settings);
+        addPreferencesFromResource(R.xml.aicp_app_sidebar_settings);
 
         mEnabledPref = (SwitchPreference) findPreference(KEY_ENABLED);
         mEnabledPref.setChecked((Settings.System.getInt(getContentResolver(),

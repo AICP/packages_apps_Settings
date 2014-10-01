@@ -53,6 +53,9 @@
     <string name="navbar_category_title">Navbar</string>
     <string name="system_category_title">System</string>
 
+    <!-- App bars categpry -->
+    <string name="app_bars_title">Application bars</string>
+
     <!-- ListView animation -->
     <string name="interface_settings_animation_title">Animation options</string>
     <string name="listview_animation_title">ListView animation</string>
@@ -842,7 +845,7 @@
     <string name="misc_tweaks_title">Misc. Tweaks</string>
 
     <!-- App sidebar -->
-    <string name="app_sidebar_title">Appbar</string>
+    <string name="app_sidebar_title">App Sidebar</string>
     <string name="app_sidebar_enable_title">Enable Appbar</string>
     <string name="app_sidebar_enable_summaryOn">\@appbar is enabled</string>
     <string name="app_sidebar_enable_summaryOff">\@appbar is disabled</string>
