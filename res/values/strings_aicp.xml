@@ -1358,4 +1358,8 @@
     <string name="status_bar_show_clock_lockscreen_title">Statusbar clock</string>
     <string name="status_bar_show_clock_lockscreen_summary">Show clock in statusbar while\non lockscreen.</string>
 
+    <!-- Disable Smart Cover -->
+    <string name="disable_smart_cover_title">Force disable smart cover window</string>
+    <string name="disable_smart_cover_desc">Check if your phone has a smart cover and you do not wish to trigger the smart window</string>
+
 </resources>
