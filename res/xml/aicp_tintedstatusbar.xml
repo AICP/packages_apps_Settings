@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2013 The OmniROM Project
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 2 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/tinted_statusbar_title" >
+
+        <ListPreference
+                android:key="tinted_statusbar"
+                android:title="@string/title_tinted_statusbar"
+                android:entries="@array/tinted_statusbar_entries"
+                android:entryValues="@array/tinted_statusbar_values"
+                android:defaultValue="0"
+                android:persistent="false" />
+
+        <ListPreference
+                android:key="tinted_statusbar_option"
+                android:title="@string/title_tinted_statusbar_option"
+                android:entries="@array/tinted_statusbar_option_entries"
+                android:entryValues="@array/tinted_statusbar_values"
+                android:defaultValue="0"
+                android:persistent="false" />
+
+        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
+            android:key="status_bar_tinted_filter"
+            android:title="@string/tinted_statusbar_filter_title"
+            android:summary="@string/tinted_statusbar_filter_summary" />
+
+        <com.android.settings.widget.SeekBarPreferenceCham
+            android:key="tinted_statusbar_transparent"
+            android:persistent="false"
+            android:title="@string/tinted_statusbar_transparent_title"
+            android:max="100"
+            settings:min="0"
+            settings:interval="10"
+            settings:unitsLeft=""
+            settings:unitsRight="%" />
+
+        <com.android.settings.widget.SeekBarPreferenceCham
+            android:key="tinted_navbar_transparent"
+            android:persistent="false"
+            android:title="@string/tinted_navbar_transparent_title"
+            android:max="100"
+            settings:min="0"
+            settings:interval="10"
+            settings:unitsLeft=""
+            settings:unitsRight="%" />
+</PreferenceScreen>
