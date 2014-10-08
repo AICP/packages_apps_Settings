@@ -199,6 +199,7 @@ public class BatteryIconStyle extends SettingsPreferenceFragment
 
         updateBatteryBarOptions();
         updateBatteryIconOptions(statusBarBattery);
+        updateTintPref();
 
         setHasOptionsMenu(true);
         mCheckPreferences = true;
@@ -344,6 +345,7 @@ public class BatteryIconStyle extends SettingsPreferenceFragment
 
     private void updateBatteryIconOptions(int batteryIconStat) {
         mBatteryTextChargingColor.setTitle(R.string.battery_bolt_color);
+
         if (batteryIconStat == 0) {
             mBatteryColor.setEnabled(true);
             mBatteryTextColor.setEnabled(false);
@@ -393,6 +395,19 @@ public class BatteryIconStyle extends SettingsPreferenceFragment
             mBatteryBarChargingAnimation.setEnabled(true);
             mBatteryBarColor.setEnabled(true);
         }
+    }
+
+     private void updateTintPref() {
+          ContentResolver resolver = getActivity().getContentResolver();
+          int tintEnabled = Settings.System.getInt(resolver,
+                  Settings.System.STATUS_BAR_TINTED_COLOR, 0);
+          int tintStatusbar = Settings.System.getInt(resolver,
+                  Settings.System.STATUS_BAR_TINTED_OPTION, 0);
+          if (tintEnabled != 0 || tintStatusbar != 1) {
+                mBatteryColor.setEnabled(false);
+                mBatteryTextColor.setEnabled(false);
+                mBatteryTextChargingColor.setEnabled(false);
+          }
     }
 
 }
