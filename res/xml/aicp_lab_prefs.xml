@@ -31,6 +31,13 @@
         android:title="@string/pie_controls_title"
         android:icon="@drawable/ic_aicp_pie" />
 
+    <!-- Tinted statusbar -->
+    <Preference
+        android:key="category_tinted_statusbar"
+        android:title="@string/title_tinted_statusbar"
+        android:fragment="com.android.settings.aicp.TintedStatusBar"
+        android:icon="@drawable/ic_dt_tintedstatusbar" />
+
     <!-- OmniSwitch -->
     <PreferenceScreen
         android:key="omniswitch"

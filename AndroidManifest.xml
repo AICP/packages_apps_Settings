@@ -1975,6 +1975,7 @@
         <activity android:name=".aicp.gestureanywhere.GestureAnywhereBuilderActivity" />
         <activity android:name=".aicp.gestureanywhere.GestureAnywhereCreateGestureActivity" />
         <activity android:name=".aicp.CarrierLabel" />
+        <activity android:name=".aicp.TintedStatusBar" />
 
         <activity android:name=".ApnEditor" />
 
