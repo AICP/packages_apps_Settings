@@ -1370,6 +1370,8 @@
     <string name="tinted_statusbar_all">Both</string>
     <string name="tinted_statusbar_filter_title">Reverse color</string>
     <string name="tinted_statusbar_filter_summary">Enable using reverse color</string>
+    <string name="tinted_statusbar_full_mode_title">Full color mode</string>
+    <string name="tinted_statusbar_full_mode_summary">Allow to change color of window shade panel</string>
     <string name="tinted_statusbar_transparent_title">Status bar opacity</string>
     <string name="tinted_navbar_transparent_title">Navigation bar opacity</string>
 

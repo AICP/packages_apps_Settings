@@ -36,6 +36,11 @@
                 android:persistent="false" />
 
         <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
+            android:key="status_bar_tinted_full_mode"
+            android:title="@string/tinted_statusbar_full_mode_title"
+            android:summary="@string/tinted_statusbar_full_mode_summary" />
+
+        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
             android:key="status_bar_tinted_filter"
             android:title="@string/tinted_statusbar_filter_title"
             android:summary="@string/tinted_statusbar_filter_summary" />
