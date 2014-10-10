@@ -54,7 +54,6 @@ public class TintedStatusBar extends SettingsPreferenceFragment implements
     private static final String TINTED_NAVBAR_TRANSPARENT = "tinted_navbar_transparent";
     private static final String TINTED_STATUSBAR_FULL_MODE = "status_bar_tinted_full_mode";
     private static final String CATEGORY_TINTED = "category_tinted_statusbar";
-    private static final String CATEGORY_NAVBAR = "category_navigation_bar";
 
     private ListPreference mTintedStatusbar;
     private ListPreference mTintedStatusbarOption;
@@ -102,18 +101,12 @@ public class TintedStatusBar extends SettingsPreferenceFragment implements
         mTintedNavbarTransparency.setEnabled(tintedStatusbar != 0);
         mTintedNavbarTransparency.setOnPreferenceChangeListener(this);
 
-        if (!Utils.isPhone(getActivity())) {
-            tintedCategory.removePreference(mTintedStatusbarOption);
-            tintedCategory.removePreference(mTintedNavbarTransparency);
-            prefSet.removePreference(findPreference(CATEGORY_NAVBAR));
-        } else {
-            int tintedStatusbarOption = Settings.System.getInt(resolver,
-                    Settings.System.STATUS_BAR_TINTED_OPTION, 0);
-            mTintedStatusbarOption.setValue(String.valueOf(tintedStatusbarOption));
-            mTintedStatusbarOption.setSummary(mTintedStatusbarOption.getEntry());
-            mTintedStatusbarOption.setEnabled(tintedStatusbar != 0);
-            mTintedStatusbarOption.setOnPreferenceChangeListener(this);
-        }
+        int tintedStatusbarOption = Settings.System.getInt(resolver,
+                Settings.System.STATUS_BAR_TINTED_OPTION, 0);
+        mTintedStatusbarOption.setValue(String.valueOf(tintedStatusbarOption));
+        mTintedStatusbarOption.setSummary(mTintedStatusbarOption.getEntry());
+        mTintedStatusbarOption.setEnabled(tintedStatusbar != 0);
+        mTintedStatusbarOption.setOnPreferenceChangeListener(this);
     }
 
     @Override
