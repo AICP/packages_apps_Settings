@@ -1375,4 +1375,9 @@
     <string name="tinted_statusbar_transparent_title">Status bar opacity</string>
     <string name="tinted_navbar_transparent_title">Navigation bar opacity</string>
 
+    <!-- Lockscreen Lid Settings -->
+    <string name="smart_cover_category_title">Smart cover</string>
+    <string name="smart_cover_wake_title">Smart cover wake</string>
+    <string name="smart_cover_wake_summary">Wakeup device when smart cover opens</string>
+
 </resources>
