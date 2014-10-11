@@ -1375,4 +1375,8 @@
     <string name="tinted_statusbar_transparent_title">Status bar opacity</string>
     <string name="tinted_navbar_transparent_title">Navigation bar opacity</string>
 
+    <!-- Disable Smart Cover -->
+    <string name="disable_smart_cover_title">Force disable smart cover window</string>
+    <string name="disable_smart_cover_desc">Check if your phone has a smart cover and you do not wish to trigger the smart window</string>
+
 </resources>

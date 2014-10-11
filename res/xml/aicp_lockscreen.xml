@@ -48,6 +48,11 @@
         android:title="@string/lockscreen_enable_camera_title" />
 
     <CheckBoxPreference
+        android:key="disable_smart_cover"
+        android:title="@string/disable_smart_cover_title"
+        android:summary="@string/disable_smart_cover_desc" />
+
+    <CheckBoxPreference
         android:key="lockscreen_torch"
         android:title="@string/lockscreen_glowpad_torch_title"
         android:summary="@string/lockscreen_glowpad_torch_summary" />
