@@ -43,7 +43,7 @@
     <string name="notifications_category_title">Benachrichtigungen</string>
     <string name="omniswitch_settings_title">OmniSwitch</string>
     <string name="system_category_title">System</string>
-    <string name="recents_category_title">Kürzlich</string>
+    <string name="recents_category_title">Letzte Apps</string>
     <string name="powermenu_category_title">Powermenü</string>
     <string name="notification_category_title">Statusleiste und Benachrichtigungen</string>
     <string name="reminder_category_title">Erinnerung f. Benachrichtigung-</string>
@@ -590,15 +590,15 @@
 
     <!-- OmniSwitch -->
     <string name="omniswitch_category">OmniSwitch</string>
-    <string name="recents_use_omniswitch_title">Nutzen für Kürzlich</string>
-    <string name="recents_use_omniswitch_summary">Benutze OmniSwitch anstatt der standard kürzlich geöffnete Apps</string>
+    <string name="recents_use_omniswitch_title">Nutzen für letzte Apps</string>
+    <string name="recents_use_omniswitch_summary">Benutze OmniSwitch anstatt standard letzte Apps</string>
     <string name="omniswitch_start_settings_title">Einstellungen</string>
     <string name="omniswitch_start_settings_summary">Öffne OmniSwitch Einstellungen</string>
     <string name="omniswitch_first_time_title">Information</string>
     <string name="omniswitch_first_time_message">Stelle sicher, das OmniSwitch an ist. Dies können Sie tun durch drücken von \"Einstellungen\" unten</string>
 
     <!-- Clear all position -->
-    <string name="recents_clear_all_title">Alles löschen Tastenposition für standard kürzlich</string>
+    <string name="recents_clear_all_title">Alles löschen Tastenposition für standard letze Apps</string>
     <string name="recents_clear_all_dialogtitle">Alles löschen Taste ist\u2026</string>
     <string name="recents_clear_all_off">Aus</string>
     <string name="recents_clear_all_tr">Oben rechts</string>
@@ -806,11 +806,11 @@
     <string name="noti_reminder_interval_4s">4 Sekunden</string>
 
     <!-- Slim's recent -->
-    <string name="custom_recent_title">Slim\'s kürzliche Apps</string>
-    <string name="custom_recent_summary">Markieren Sie dieses Feld, um zwischen Slim / Standard kürzlich zu wechseln</string>
-    <string name="recent_panel_category">Slim\'s kürzliche Apps</string>
+    <string name="custom_recent_title">Slim\'s letzte Apps</string>
+    <string name="custom_recent_summary">Markieren Sie das Feld, um zwischen Slim / Standard letzte Apps zu wechseln</string>
+    <string name="recent_panel_category">Slim\'s letzte Apps</string>
     <string name="recent_panel_scale_title">Größe</string>
-    <string name="recent_panel_scale_summary">Kürzliche Apps Panel-Größe in Prozent.</string>
+    <string name="recent_panel_scale_summary">Letzte Apps Panel-Größe in Prozent.</string>
     <string name="recent_panel_100">100% (Standard)</string>
     <string name="recent_panel_85">85%</string>
     <string name="recent_panel_70">70%</string>
@@ -997,7 +997,7 @@
     <string name="lockscreen_buttons_sleep">Bilschirm aus</string>
 
     <!-- RAM circle -->
-    <string name="stock_recent_panel_category">Standard kürzliche Apps</string>
+    <string name="stock_recent_panel_category">Standard letzte Apps</string>
     <string name="ram_circle_title">RAM Kreis</string>
 
     <!-- App circle bar -->
@@ -1145,8 +1145,8 @@
     <!-- Swipe -->
     <string name="notification_swipe_title">Wischen d. Benachrichtigung</string>
     <string name="notification_swipe_summary">Wischen nach links einer Benachrichtigung öffnet\nein schwebendes Fenster.</string>
-    <string name="recents_swipe_title">Wischen bei kürzlich</string>
-    <string name="recents_swipe_summary">Wischen nach links in den standard kürzlich öffnet\nein schwebendes Fenster.</string>
+    <string name="recents_swipe_title">Wischen bei letzte Apps</string>
+    <string name="recents_swipe_summary">Wischen nach links in den standard letzte Apps\nöffnet ein schwebendes Fenster.</string>
 
     <!-- Sound settings screen, setting check box label -->
     <string name="camera_sounds_title">Kamera Auslöseton</string>
@@ -1323,5 +1323,52 @@
     <string name="lockscreen_battery_status_charging">Nur beim Laden</string>
     <string name="lockscreen_battery_status_alwayson">Immer an</string>
     <string name="lockscreen_battery_status_alwaysoff">Immer aus</string>
+
+    <!-- Network traffic -->
+    <string name="network_traffic_title">Netzwerkverkehr</string>
+    <string name="show_network_traffic_state">Statusleiste Netzwerkverkehr</string>
+    <string name="show_network_traffic_unit">Einheit anzeigen</string>
+    <string name="show_network_traffic_frequency">Update-Intervall</string>
+    <string name="show_network_traffic_disable">Aus</string>
+    <string name="show_network_traffic_up">Abgehend</string>
+    <string name="show_network_traffic_down">Eingehend</string>
+    <string name="show_network_traffic_all">Abgehend und eigehend</string>
+    <string name="show_network_traffic_bit">Bits pro Sekunde</string>
+    <string name="show_network_traffic_byte">Bytes pro Sekunde</string>
+    <string name="show_network_traffic_500">500 ms</string>
+    <string name="show_network_traffic_1000">1000 ms</string>
+    <string name="show_network_traffic_1500">1500 ms</string>
+    <string name="show_network_traffic_2000">2000 ms</string>
+    <string name="network_traffic_autohide">Verstecken</string>
+    <string name="network_traffic_autohide_summary">Anzeige für Netzwerkverkehr bei Inaktivität verstecken</string>
+    <string name="network_traffic_autohide_threshold">Inaktivitätswert</string>
+    <string name="network_traffic_color_style">Farbstil</string>
+    <string name="network_traffic_color_reset">Zurücksetzen</string>
+    <string name="network_traffic_color_reset_message">Farben für Netzwerkverkehr auf voreinstellung setzen?</string>
+
+    <!-- Force expand notifications -->
+    <string name="notification_force_expand_title">Erweiterte Benachrichtigungen erzwingen</string>
+    <string name="notification_force_expand_summary">Erweiterte Benachrichtigungen für alle Apps die es unterstützen erzwingen.</string>
+
+    <!-- Statusbar clock on lockscreen -->
+    <string name="status_bar_show_clock_lockscreen_title">Statusleisten-Uhr</string>
+    <string name="status_bar_show_clock_lockscreen_summary">Anzeige der Statusleisten-Uhr\nim Sperrbildschirm.</string>
+
+    <!-- Tinted statusbar -->
+    <string name="tinted_statusbar_title">Farben</string>
+    <string name="title_tinted_statusbar">Dynamischer Farbwechsler</string>
+    <string name="title_tinted_statusbar_option">Anwenden für</string>
+    <string name="tinted_statusbar_off">Aus</string>
+    <string name="tinted_statusbar_actionbar">Farbe der Aktionsleiste</string>
+    <string name="tinted_statusbar_system">Farbe des Bildschirms</string>
+    <string name="tinted_statusbar_statusbar">Statusleiste</string>
+    <string name="tinted_statusbar_navbar">Navigationsleiste</string>
+    <string name="tinted_statusbar_all">Beide</string>
+    <string name="tinted_statusbar_filter_title">Farben umkehren</string>
+    <string name="tinted_statusbar_filter_summary">Aktiviert zeigt umgekehrten Farben</string>
+    <string name="tinted_statusbar_full_mode_title">Vollfarbmodus</string>
+    <string name="tinted_statusbar_full_mode_summary">Farbe des Schubladenhintergrunds wird angepasst</string>
+    <string name="tinted_statusbar_transparent_title">Deckkraft der Statusleiste</string>
+    <string name="tinted_navbar_transparent_title">Deckkraft der Navigationsleiste</string>
 
 </resources>
