@@ -178,7 +178,7 @@ public class CarrierLabel extends SettingsPreferenceFragment  implements
                             Settings.System.CUSTOM_CARRIER_LABEL, value);
                     updateCustomLabelTextSummary();
                     Intent i = new Intent();
-                    i.setAction("com.android.settins.LABEL_CHANGED");
+                    i.setAction("com.vanir.UPDATE_NETWORK_PREFERENCES");
                     getActivity().sendBroadcast(i);
                     Helpers.restartSystemUI();
                 }

@@ -816,4 +816,11 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="maximum_head_level">Head: %1$s W/kg</string>
     <string name="maximum_body_level">Body: %1$s W/kg</string>
 
+    <!-- Notify changed networks -->
+    <string name="wifi_notify_changed_networks">Wifi connected notification</string>
+    <string name="notify_changed_networks_default">Default - off</string>
+    <string name="notify_changed_networks_toast">Toast</string>
+    <string name="notify_changed_networks_notification">Notification</string>
+    <string name="notify_changed_networks_notification_sound">Notification with sound</string>
+
 </resources>
