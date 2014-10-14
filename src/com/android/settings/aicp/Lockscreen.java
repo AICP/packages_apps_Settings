@@ -71,6 +71,8 @@ public class Lockscreen extends SettingsPreferenceFragment implements
     private static final String KEY_PEEK_TIME = "notification_peek_time";
     private static final String KEY_BATTERY_STATUS = "lockscreen_battery_status";
     private static final String PREF_STATUS_BAR_CLOCK_LOCKSCREEN = "status_bar_clock_lockscreen";
+    private static final String PREF_LOCKSCREEN_LID_WAKE = "smart_cover_wake";
+    private static final String SMART_COVER_CATEGORY = "smart_cover_category";
 
     private CheckBoxPreference mAllowRotation;
     private CheckBoxPreference mBlurBehind;
@@ -80,12 +82,14 @@ public class Lockscreen extends SettingsPreferenceFragment implements
     private CheckBoxPreference mGlowpadTorch;
     private CheckBoxPreference mLockRingBattery;
     private CheckBoxPreference mNotificationPeek;
+    private CheckBoxPreference mSmartCoverWake;
     private SeekBarPreference mBlurRadius;
     private SeekBarPreferenceCham mNotificationPeekTime;
     private ListPreference mBatteryStatus;
 
     private PreferenceScreen mLockscreenScreen;
     private PreferenceCategory mHwButtonsCategory;
+    private PreferenceCategory mSmartCoverCategory;
 
     private ChooseLockSettingsHelper mChooseLockSettingsHelper;
     private LockPatternUtils mLockUtils;
@@ -95,6 +99,7 @@ public class Lockscreen extends SettingsPreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ContentResolver resolver = getActivity().getContentResolver();
+        Resources res = getResources();
 
         addPreferencesFromResource(R.xml.aicp_lockscreen);
 
@@ -106,6 +111,7 @@ public class Lockscreen extends SettingsPreferenceFragment implements
 
         mLockscreenScreen = (PreferenceScreen) findPreference("lockscreen_screen");
         mHwButtonsCategory = (PreferenceCategory) findPreference("hwbutton_category");
+        mSmartCoverCategory = (PreferenceCategory) findPreference("smart_cover_category");
 
         // Blur lockscreen
         mBlurBehind = (CheckBoxPreference) prefSet.findPreference(KEY_BLUR_BEHIND);
@@ -172,6 +178,16 @@ public class Lockscreen extends SettingsPreferenceFragment implements
         mClockInStatusbar.setChecked(Settings.System.getInt(resolver,
                  Settings.System.STATUS_BAR_CLOCK_LOCKSCREEN, 0) == 1);
         mClockInStatusbar.setOnPreferenceChangeListener(this);
+
+        // Smart Cover
+        mSmartCoverWake = (CheckBoxPreference) prefSet.findPreference(PREF_LOCKSCREEN_LID_WAKE);
+        mSmartCoverWake.setChecked(Settings.System.getInt(resolver,
+            Settings.System.LOCKSCREEN_LID_WAKE, 0) == 1);
+        // Remove Smartcover option if device doesn't support it
+        if (!hasSmartCover()) {
+            mLockscreenScreen.removePreference(mSmartCoverCategory);
+        }
+
     }
        
 
@@ -217,6 +233,10 @@ public class Lockscreen extends SettingsPreferenceFragment implements
         } else if (preference == mClockInStatusbar) {
             Settings.System.putInt(resolver,
                     Settings.System.STATUS_BAR_CLOCK_LOCKSCREEN, mClockInStatusbar.isChecked() ? 1 : 0);
+        } else if (preference == mSmartCoverWake) {
+            Settings.System.putInt(resolver,
+                    Settings.System.LOCKSCREEN_LID_WAKE,
+                    mSmartCoverWake.isChecked() ? 1 : 0);
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
@@ -262,5 +282,13 @@ public class Lockscreen extends SettingsPreferenceFragment implements
      */
     public boolean hasButtons() {
         return !getResources().getBoolean(com.android.internal.R.bool.config_showNavigationBar);
+    }
+
+    /**
+     * Checks if the device has SmartCover.
+     * @return has SmartCover
+     */
+    public boolean hasSmartCover() {
+        return !getResources().getBoolean(com.android.internal.R.bool.config_lidControlsSleep);
     }
 }
