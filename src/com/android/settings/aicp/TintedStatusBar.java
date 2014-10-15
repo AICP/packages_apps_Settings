@@ -139,6 +139,7 @@ public class TintedStatusBar extends SettingsPreferenceFragment implements
             Settings.System.putInt(resolver,
                 Settings.System.STATUS_BAR_TINTED_OPTION, val);
             mTintedStatusbarOption.setSummary(mTintedStatusbarOption.getEntries()[index]);
+            mTintedStatusbarFullmode.setEnabled((val == 0) || (val == 2));
         } else if (preference == mTintedStatusbarTransparency) {
             int val = ((Integer)objValue).intValue();
             Settings.System.putInt(resolver,
