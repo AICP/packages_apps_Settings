@@ -1380,4 +1380,8 @@
     <string name="smart_cover_wake_title">Smart cover wake</string>
     <string name="smart_cover_wake_summary">Wakeup device when smart cover opens</string>
 
+    <!-- ticker preference -->
+    <string name="ticker_disabled_title">Disable notification ticker</string>
+    <string name="ticker_disabled_summary">Don\'t scroll text from incoming notifications in the status bar</string>
+
 </resources>
