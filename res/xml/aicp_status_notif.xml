@@ -29,6 +29,12 @@
         android:summary="@string/notification_force_expand_summary"
         android:defaultValue="false" />
 
+    <CheckBoxPreference
+        android:key="ticker_disabled"
+        android:title="@string/ticker_disabled_title"
+        android:summary="@string/ticker_disabled_summary"
+        android:defaultValue="false" />
+
     <ListPreference
         android:key="font_style"
         android:entries="@array/clock_font_style_entries"

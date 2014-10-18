@@ -72,6 +72,7 @@ public class Notifications extends SettingsPreferenceFragment implements
     private static final String STATUSBAR_6BAR_SIGNAL = "statusbar_6bar_signal";
     private static final String PREF_NOTIFICATION_BRIGHTNESS_SLIDER = "notification_brightness_slider";
     private static final String PREF_FORCE_EXPANDED_NOTIFICATIONS = "force_expanded_notifications";
+    private static final String PREF_TICKER = "ticker_disabled";
 
     private CheckBoxPreference mBrightnessSlider;
     private CheckBoxPreference mClockUseSecond;
@@ -83,6 +84,7 @@ public class Notifications extends SettingsPreferenceFragment implements
     private CheckBoxPreference mStatusBarSixBarSignal;
     private CheckBoxPreference mVoicemailBreath;
     private CheckBoxPreference mForceExpandedNotifications;
+    private CheckBoxPreference mTicker;
 
     private ListPreference mAnnoyingNotifications;
     private ListPreference mFontStyle;
@@ -210,6 +212,10 @@ public class Notifications extends SettingsPreferenceFragment implements
         mForceExpandedNotifications.setChecked((Settings.System.getInt(resolver,
                 Settings.System.FORCE_EXPANDED_NOTIFICATIONS, 0) == 1));
 
+        // Ticker
+        mTicker = (CheckBoxPreference) prefSet.findPreference(PREF_TICKER);
+        mTicker.setChecked(Settings.System.getInt(resolver, Settings.System.TICKER_DISABLED, 0) == 1);
+
     }
 
     @Override
@@ -257,6 +263,10 @@ public class Notifications extends SettingsPreferenceFragment implements
             value = mForceExpandedNotifications.isChecked();
             Settings.System.putInt(resolver,
                     Settings.System.FORCE_EXPANDED_NOTIFICATIONS, value ? 1 : 0);
+        } else if (preference == mTicker) {
+            value = mTicker.isChecked();
+            Settings.System.putInt(resolver,
+                    Settings.System.TICKER_DISABLED, value ? 1 : 0);
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
