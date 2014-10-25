@@ -44,7 +44,6 @@ public class BatteryLightSettings extends SettingsPreferenceFragment implements
 
     private boolean mLightEnabled;
     private boolean mLightPulse;
-    private boolean mMultiColorLed;
     private CheckBoxPreference mPulsePref;
     private ApplicationLightPreference mLowColorPref;
     private ApplicationLightPreference mMediumColorPref;
@@ -72,6 +71,8 @@ public class BatteryLightSettings extends SettingsPreferenceFragment implements
         if(mMultiColorLed) {
             // Only used when the colors are changeable
             setHasOptionsMenu(true);
+        } else {
+            resetColors();
         }
     }
 
