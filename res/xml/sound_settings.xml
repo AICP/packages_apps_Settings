@@ -169,6 +169,12 @@
             android:summary="@string/swap_vol_buttons_title_summary"
             android:defaultValue="fale" />
 
+    <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
+            android:key="screenshot_sound"
+            android:title="@string/screenshot_sound_title"
+            android:summary="@string/screenshot_sound_summary"
+            android:defaultValue="true" />
+
     <PreferenceCategory
         android:title="@string/power_notifications_category_title">
 

@@ -823,4 +823,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="notify_changed_networks_notification">Notification</string>
     <string name="notify_changed_networks_notification_sound">Notification with sound</string>
 
+    <!-- Screenshot sound -->
+    <string name="screenshot_sound_title">Screenshot sound</string>
+    <string name="screenshot_sound_summary">Plays sound effect when screenshot is taken</string>
+
 </resources>
