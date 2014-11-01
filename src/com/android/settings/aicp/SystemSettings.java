@@ -55,6 +55,7 @@ import com.android.settings.Utils;
 import com.android.settings.util.CMDProcessor;
 import com.android.settings.util.Helpers;
 import com.android.settings.widget.SeekBarPreferenceCham;
+import com.android.settings.widget.SeekBarPreferenceGlow;
 
 import java.io.File;
 import java.lang.Thread;
@@ -78,6 +79,7 @@ public class SystemSettings extends SettingsPreferenceFragment implements
     private static final String PREF_PROXIMITY_ON_WAKE = "proximity_on_wake";
     private static final String DISABLE_BOOTAUDIO = "disable_bootaudio";
     private static final String KEY_POWER_MENU_QUICKCAM = "power_menu_quickcam";
+    private static final String NAVIGATION_BUTTON_GLOW_TIME = "navigation_button_glow_time";
 
     private CheckBoxPreference mDisableFC;
     private CheckBoxPreference mHfmDisableAds;
@@ -89,6 +91,8 @@ public class SystemSettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mPowerMenuQuickcam;
 
     private ListPreference mNavigationMenu;
+
+    private SeekBarPreferenceGlow mNavigationButtonGlowTime;
 
     private PreferenceScreen mSystemScreen;
     private PreferenceCategory mNavbarCategory;
@@ -123,6 +127,12 @@ public class SystemSettings extends SettingsPreferenceFragment implements
                 KEY_DONT_SHOW_NAVBAR_ON_SWIPE_EXPANDED_DESKTOP_ENABLED);
         mDontShowNavbar.setChecked((Settings.System.getInt(resolver,
                 Settings.System.DONT_SHOW_NAVBAR_ON_SWIPE_EXPANDED_DESKTOP_ENABLED, 0) == 1));
+
+        // Navbar glow time
+        mNavigationButtonGlowTime = (SeekBarPreferenceGlow) prefSet.findPreference(NAVIGATION_BUTTON_GLOW_TIME);
+        mNavigationButtonGlowTime.setDefault(Settings.System.getInt(resolver,
+                Settings.System.NAVIGATION_BUTTON_GLOW_TIME, 500));
+        mNavigationButtonGlowTime.setOnPreferenceChangeListener(this);
 
         // Navigation mnenu force
         mNavigationMenuForce = (CheckBoxPreference) prefSet.findPreference(KEY_NAVIGATION_MENU_FORCE);
@@ -234,8 +244,13 @@ public class SystemSettings extends SettingsPreferenceFragment implements
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
+        final String key = preference.getKey();
+	if (preference == mNavigationButtonGlowTime) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.NAVIGATION_BUTTON_GLOW_TIME, (Integer)objValue);
+        }
         return true;
-    }
+     }
 
     @Override
     public boolean onPreferenceClick(Preference preference) {

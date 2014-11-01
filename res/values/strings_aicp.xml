@@ -1375,8 +1375,11 @@
     <string name="tinted_statusbar_transparent_title">Status bar opacity</string>
     <string name="tinted_navbar_transparent_title">Navigation bar opacity</string>
 
-    <!-- ticker preference -->
+    <!-- Ticker preference -->
     <string name="ticker_disabled_title">Disable notification ticker</string>
     <string name="ticker_disabled_summary">Don\'t scroll text from incoming notifications in the status bar</string>
+
+    <!-- Navigation bar glow time -->
+    <string name="navigation_button_glow_time_title">Button glow time</string>
 
 </resources>

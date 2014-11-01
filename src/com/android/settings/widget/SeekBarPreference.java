@@ -164,4 +164,6 @@ public class SeekBarPreference extends Preference
 
     }
 
+    public void setDefault(int defaultValue1) { defaultValue = defaultValue1; } 
+
 }
