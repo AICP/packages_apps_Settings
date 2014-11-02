@@ -46,7 +46,6 @@ public class ActiveNotifications extends SettingsPreferenceFragment implements
     private static final String KEY_POCKET_MODE = "pocket_mode";
     private static final String KEY_HIDE_LOW_PRIORITY = "hide_low_priority";
     private static final String KEY_HIDE_NON_CLEARABLE = "hide_non_clearable";
-    private static final String KEY_DISMISS_ALL = "dismiss_all";
     private static final String KEY_PRIVACY_MODE = "privacy_mode";
     private static final String KEY_QUIET_HOURS = "quiet_hours";
     private static final String KEY_ADDITIONAL = "additional_options";
@@ -65,7 +64,6 @@ public class ActiveNotifications extends SettingsPreferenceFragment implements
     private ListPreference mPocketModePref;
     private CheckBoxPreference mHideLowPriority;
     private CheckBoxPreference mHideNonClearable;
-    private CheckBoxPreference mDismissAll;
     private AppMultiSelectListPreference mExcludedAppsPref;
     private AppMultiSelectListPreference mNotifAppsPref;
     private CheckBoxPreference mPrivacyMode;
@@ -140,10 +138,6 @@ public class ActiveNotifications extends SettingsPreferenceFragment implements
         mHideNonClearable.setChecked(Settings.System.getInt(cr,
                     Settings.System.LOCKSCREEN_NOTIFICATIONS_HIDE_NON_CLEARABLE, 0) == 1);
 
-        mDismissAll = (CheckBoxPreference) prefs.findPreference(KEY_DISMISS_ALL);
-        mDismissAll.setChecked(Settings.System.getInt(cr,
-                    Settings.System.LOCKSCREEN_NOTIFICATIONS_DISMISS_ALL, 1) == 1);
-
         mPrivacyMode = (CheckBoxPreference) prefs.findPreference(KEY_PRIVACY_MODE);
         mPrivacyMode.setChecked(Settings.System.getInt(cr,
                     Settings.System.ACTIVE_NOTIFICATIONS_PRIVACY_MODE, 0) == 1);
@@ -188,7 +182,6 @@ public class ActiveNotifications extends SettingsPreferenceFragment implements
         mEnabledPref.setEnabled(mActiveNotifications);
         mHideLowPriority.setEnabled(mActiveNotifications);
         mHideNonClearable.setEnabled(mActiveNotifications);
-        mDismissAll.setEnabled(!mHideNonClearable.isChecked() && mActiveNotifications);
         mQuietHours.setEnabled(mActiveNotifications);
         mPrivacyMode.setEnabled(mActiveNotifications);
         mAdditional.setEnabled(mActiveNotifications);
@@ -198,28 +191,28 @@ public class ActiveNotifications extends SettingsPreferenceFragment implements
         
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        ContentResolver cr = getActivity().getContentResolver();
         if (preference == mEnabledPref) {
-            Settings.System.putInt(getContentResolver(),
+            Settings.System.putInt(mContext.getContentResolver(),
                     Settings.System.ENABLE_ACTIVE_DISPLAY, mEnabledPref.isChecked() ? 1 : 0);
+
         } else if (preference == mLockNotif) {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.LOCKSCREEN_NOTIFICATIONS, mLockNotif.isChecked() ? 1 : 0);
+
         } else if (preference == mHideLowPriority) {
-            Settings.System.putInt(cr, Settings.System.ACTIVE_NOTIFICATIONS_HIDE_LOW_PRIORITY,
+            Settings.System.putInt(mContext.getContentResolver(), Settings.System.ACTIVE_NOTIFICATIONS_HIDE_LOW_PRIORITY,
                     mHideLowPriority.isChecked() ? 1 : 0);
+
         } else if (preference == mHideNonClearable) {
-            Settings.System.putInt(cr, Settings.System.LOCKSCREEN_NOTIFICATIONS_HIDE_NON_CLEARABLE,
+            Settings.System.putInt(mContext.getContentResolver(), Settings.System.LOCKSCREEN_NOTIFICATIONS_HIDE_NON_CLEARABLE,
                     mHideNonClearable.isChecked() ? 1 : 0);
-            mDismissAll.setEnabled(!mHideNonClearable.isChecked());
-        } else if (preference == mDismissAll) {
-            Settings.System.putInt(cr, Settings.System.LOCKSCREEN_NOTIFICATIONS_DISMISS_ALL,
-                    mDismissAll.isChecked() ? 1 : 0);
+
         } else if (preference == mPrivacyMode) {
-            Settings.System.putInt(cr, Settings.System.ACTIVE_NOTIFICATIONS_PRIVACY_MODE,
+            Settings.System.putInt(mContext.getContentResolver(), Settings.System.ACTIVE_NOTIFICATIONS_PRIVACY_MODE,
                     mPrivacyMode.isChecked() ? 1 : 0);
+
         } else if (preference == mQuietHours) {
-            Settings.System.putInt(cr, Settings.System.ACTIVE_NOTIFICATIONS_QUIET_HOURS,
+            Settings.System.putInt(mContext.getContentResolver(), Settings.System.ACTIVE_NOTIFICATIONS_QUIET_HOURS,
                     mQuietHours.isChecked() ? 1 : 0);
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
