@@ -52,11 +52,6 @@
             android:title="@string/hide_non_clearable"
             android:summary="@string/hide_non_clearable_summary" />
 
-        <CheckBoxPreference
-            android:key="dismiss_all"
-            android:title="@string/dismiss_all"
-            android:summary="@string/dismiss_all_summary" />
-
     </PreferenceCategory>
 
     <PreferenceScreen

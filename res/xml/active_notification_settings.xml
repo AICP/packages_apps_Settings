@@ -89,6 +89,11 @@
             android:summary="@string/wake_on_notification_summary" />
 
         <CheckBoxPreference
+            android:key="dismiss_all"
+            android:title="@string/dismiss_all"
+            android:summary="@string/dismiss_all_summary" />
+
+        <CheckBoxPreference
             android:key="expanded_view"
             android:title="@string/expanded_view"
             android:summary="@string/expanded_view_summary" />
