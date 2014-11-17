@@ -1209,6 +1209,9 @@ public class SettingsActivity extends Activity
                             UserManager.DISALLOW_DEBUGGING_FEATURES)) {
                         removeTile = true;
                     }
+                } else if (id == R.id.advanced_settings) {
+                    if (!needsAdvancedSettings())
+                    removeTile = true;
                 }
 
                 if (UserHandle.MU_ENABLED && UserHandle.myUserId() != 0
@@ -1259,6 +1262,10 @@ public class SettingsActivity extends Activity
 
         sp.edit().putBoolean(HomeSettings.HOME_PREFS_DO_SHOW, true).apply();
         return true;
+    }
+
+    private boolean needsAdvancedSettings() {
+        return getResources().getBoolean(R.bool.has_advanced_settings);
     }
 
     private void getMetaData() {

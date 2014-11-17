@@ -35,6 +35,9 @@
     <!-- Carrier_enabled editable -->
     <bool name="config_allow_edit_carrier_enabled" translatable="false">false</bool>
 
+    <!-- Whether or not device settings should be displayed or not for the device -->
+    <bool name="has_advanced_settings">false</bool>
+
    <!-- Volume Rocker Wake Support. Some devices do not support (PMU) this.
         Setting to false will disable Volume Rocker Wake support -->
     <bool name="config_show_volumeRockerWake">true</bool>

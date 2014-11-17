@@ -162,6 +162,17 @@
                 android:icon="@drawable/ic_settings_aicp"
                 />
 
+        <!-- Quick Links -->
+        <dashboard-tile
+                android:id="@+id/advanced_settings"
+                android:title="@string/advanced_settings_title"
+                android:icon="@drawable/ic_settings_advanced">
+                <intent
+                    android:action="com.cyanogenmod.action.LAUNCH_DEVICE_SETTINGS"
+                    android:targetPackage="com.cyanogenmod.settings.device"
+                    android:targetClass="com.cyanogenmod.settings.device.DeviceSettings" />
+        </dashboard-tile>
+
     </dashboard-category>
 
     <!-- PERSONAL -->
