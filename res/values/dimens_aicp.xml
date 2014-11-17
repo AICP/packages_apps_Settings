@@ -22,6 +22,7 @@
     <dimen name="pa_security_height">400dp</dimen>
     <dimen name="profile_instruction_padding">8dp</dimen>
     <dimen name="shortcut_picker_left_padding">70dip</dimen>
+    <dimen name="fab_line_width">2dp</dimen>
 
     <!-- Gesture Anywhere -->
     <dimen name="ga_gesture_thumbnail_inset">8dip</dimen>
