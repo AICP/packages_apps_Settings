@@ -2186,6 +2186,9 @@
         <activity
              android:name=".aicp.AicpSettings" />
 
+        <activity
+             android:name="com.cyanogenmod.settings.device.DeviceSettings" />
+
         <provider
             android:name=".search.SettingsSearchIndexablesProvider"
             android:authorities="com.android.settings"

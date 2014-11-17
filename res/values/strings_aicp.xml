@@ -335,4 +335,7 @@
     <string name="ime_switcher_notify">Selector notification</string>
     <string name="ime_switcher_notify_summary">Display input method selector notification</string>
 
+    <!-- Device specific settings -->
+    <string name="advanced_settings_title">Device options</string>
+
 </resources>
