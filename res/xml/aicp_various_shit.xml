@@ -42,4 +42,10 @@
             android:title="@string/proximity_on_wake_title"
             android:summary="@string/proximity_on_wake_summary" />
 
+    <!-- Network traffic indicator -->
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="network_traffic_state"
+            android:title="@string/network_traffic_indicator_title"
+            android:summary="@string/network_traffic_indicator_summary" />
+
 </PreferenceScreen>

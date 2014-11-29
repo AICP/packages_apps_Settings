@@ -336,6 +336,8 @@
     <string name="status_bar_brightness_control_summary">Enable to control brightness while\nsliding over status bar.</string>
     <string name="proximity_on_wake_title">Proximity on wake</string>
     <string name="proximity_on_wake_summary">Check the proximity sensor during wakeup.</string>
+    <string name="network_traffic_indicator_title">Network trafic indicator</string>
+    <string name="network_traffic_indicator_summary">Show network activity in status bar.</string>
 
     <!-- Advanced reboot options -->
     <string name="advanced_reboot_title">Advanced reboot</string>
