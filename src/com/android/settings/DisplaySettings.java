@@ -47,6 +47,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.RemoteException;
 import android.os.SystemProperties;
+import android.preference.EditTextPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceManager;
@@ -80,6 +81,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     /** If there is no setting in the provider, use this. */
     private static final int FALLBACK_SCREEN_TIMEOUT_VALUE = 30000;
 
+    private static final String PROP_DISPLAY_DENSITY = "persist.sf.lcd_density";
+
     private static final String KEY_DISPLAY_ROTATION = "display_rotation";
     private static final String KEY_SCREEN_TIMEOUT = "screen_timeout";
     private static final String KEY_FONT_SIZE = "font_size";
@@ -94,6 +97,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_WAKEUP_WHEN_PLUGGED_UNPLUGGED = "wakeup_when_plugged_unplugged";
     private static final String KEY_WAKEUP_CATEGORY = "category_wakeup_options";
     private static final String KEY_TAP_TO_WAKE = "double_tap_wake_gesture";
+    private static final String KEY_DISPLAY_DENSITY = "display_density";
 
     private static final String CATEGORY_ADVANCED = "advanced_display_prefs";
     private static final String KEY_DISPLAY_COLOR = "color_calibration";
@@ -237,6 +241,10 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             advancedPrefs.removePreference(mTapToWake);
             mTapToWake = null;
         }
+
+        mDisplayDensity = (EditTextPreference) findPreference(KEY_DISPLAY_DENSITY);
+        mDisplayDensity.setText(SystemProperties.get(PROP_DISPLAY_DENSITY, "0"));
+        mDisplayDensity.setOnPreferenceChangeListener(this);
     }
 
     private static boolean allowAllRotations(Context context) {
@@ -543,7 +551,33 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     Settings.System.WAKEUP_WHEN_PLUGGED_UNPLUGGED,
                     (Boolean) objValue ? 1 : 0);
         }
+        if (KEY_DISPLAY_DENSITY.equals(key)) {
+            final int max = getResources().getInteger(R.integer.display_density_max);
+            final int min = getResources().getInteger(R.integer.display_density_min);
 
+            int value = SystemProperties.getInt(PROP_DISPLAY_DENSITY, 0);
+            try {
+                value = Integer.parseInt((String) objValue);
+            } catch (NumberFormatException e) {
+                Log.e(TAG, "Invalid input", e);
+            }
+
+            // 0 disables the custom density, so do not check for the value, else…
+            if (value != 0) {
+                // …cap the value
+                if (value < min) {
+                    value = min;
+                } else if (value > max) {
+                    value = max;
+                }
+            }
+
+            SystemProperties.set(PROP_DISPLAY_DENSITY, String.valueOf(value));
+            mDisplayDensity.setText(String.valueOf(value));
+
+            // we handle it, return false
+            return false;
+        }
         return true;
     }
 
