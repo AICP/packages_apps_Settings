@@ -57,5 +57,13 @@
         android:key="hfm_settings"
         android:title="@string/hfm_pref_screen_title"
         android:fragment="com.android.settings.aicp.hfm.HfmSettings" />
+    
+    <!-- DPI changer -->
+    <EditTextPreference
+            android:key="display_density"
+            android:title="@string/display_density"
+            android:summary="@string/display_density_summary"
+            android:persistent="false"
+            android:inputType="numberSigned" />
 
 </PreferenceScreen>

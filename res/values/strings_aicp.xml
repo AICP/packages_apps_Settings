@@ -502,4 +502,8 @@
     <string name="lock_numpad_random_always">Always</string>
     <string name="lock_numpad_random_on_request">On request</string>
 
+    <!-- Display desity -->
+    <string name="display_density">Display density</string>
+    <string name="display_density_summary">Overrides the default display density (0 to disable, requires a reboot)</string>
+
 </resources>
