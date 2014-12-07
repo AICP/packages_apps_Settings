@@ -46,4 +46,8 @@
     <!-- Volume rocker support. Some devices do not have a volume rocker. -->
     <bool name="has_volume_rocker">true</bool>
 
+    <!-- Custom display density -->
+    <integer name="display_density_max">480</integer>
+    <integer name="display_density_min">240</integer>
+
 </resources>

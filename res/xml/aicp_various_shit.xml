@@ -52,6 +52,14 @@
         android:fragment="com.android.settings.aicp.Traffic"
         android:title="@string/network_traffic_title" />
 
+    <!-- DPI changer -->
+    <EditTextPreference
+        android:key="display_density"
+        android:title="@string/display_density"
+        android:summary="@string/display_density_summary"
+        android:persistent="false"
+        android:inputType="numberSigned" />
+
     <!-- Ad blocker -->
     <PreferenceScreen
         android:key="hfm_settings"

@@ -21,12 +21,14 @@ import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
-import android.preference.SwitchPreference;
+import android.os.SystemProperties;
+import android.preference.EditTextPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
+import android.preference.SwitchPreference;
+
+import android.util.Log;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -35,16 +37,19 @@ import com.android.settings.util.Helpers;
 /**
  * LAB files borrowed from excellent ChameleonOS for AICP
  */
-public class VariousShit extends SettingsPreferenceFragment
-        implements OnSharedPreferenceChangeListener {
+public class VariousShit extends SettingsPreferenceFragment implements
+        Preference.OnPreferenceChangeListener {
 
     private static final String TAG = "VariousShit";
 
     private static final String KEY_LOCKCLOCK = "lock_clock";
+    private static final String PROP_DISPLAY_DENSITY = "persist.sf.lcd_density";
+    private static final String KEY_DISPLAY_DENSITY = "display_density";
 
     // Package name of the cLock app
     public static final String LOCKCLOCK_PACKAGE_NAME = "com.cyanogenmod.lockclock";
 
+    private EditTextPreference mDisplayDensity;
     private SwitchPreference mProximityWake;
     private PreferenceScreen mVariousShitScreen;
 
@@ -71,11 +76,15 @@ public class VariousShit extends SettingsPreferenceFragment
         }
 
         // cLock app check
-        mLockClock = (Preference)
-                prefSet.findPreference(KEY_LOCKCLOCK);
+        mLockClock = (Preference) findPreference(KEY_LOCKCLOCK);
         if (!Helpers.isPackageInstalled(LOCKCLOCK_PACKAGE_NAME, pm)) {
             prefSet.removePreference(mLockClock);
         }
+
+        // Custom density
+        mDisplayDensity = (EditTextPreference) findPreference(KEY_DISPLAY_DENSITY);
+        mDisplayDensity.setText(SystemProperties.get(PROP_DISPLAY_DENSITY, "0"));
+        mDisplayDensity.setOnPreferenceChangeListener(this);
 
     }
 
@@ -90,12 +99,41 @@ public class VariousShit extends SettingsPreferenceFragment
     }
 
     @Override
-    public void onSharedPreferenceChanged(SharedPreferences preferences, String key) {
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
     @Override
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        return super.onPreferenceTreeClick(preferenceScreen, preference);
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
+        final String key = preference.getKey();
+        if (KEY_DISPLAY_DENSITY.equals(key)) {
+            final int max = getResources().getInteger(R.integer.display_density_max);
+            final int min = getResources().getInteger(R.integer.display_density_min);
+
+            int value = SystemProperties.getInt(PROP_DISPLAY_DENSITY, 0);
+            try {
+                value = Integer.parseInt((String) objValue);
+            } catch (NumberFormatException e) {
+                Log.e(TAG, "Invalid input", e);
+            }
+
+            // 0 disables the custom density, so do not check for the value, else…
+            if (value != 0) {
+                // …cap the value
+                if (value < min) {
+                    value = min;
+                } else if (value > max) {
+                    value = max;
+                }
+            }
+
+            SystemProperties.set(PROP_DISPLAY_DENSITY, String.valueOf(value));
+            mDisplayDensity.setText(String.valueOf(value));
+
+            // we handle it, return false
+            return false;
+        }
+        return true;
     }
 }
 
