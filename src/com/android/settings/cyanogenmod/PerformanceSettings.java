@@ -57,10 +57,15 @@ public class PerformanceSettings extends SettingsPreferenceFragment implements
     private static final String FORCE_HIGHEND_GFX_PREF = "pref_force_highend_gfx";
     private static final String FORCE_HIGHEND_GFX_PERSIST_PROP = "persist.sys.force_highendgfx";
 
+    private static final String SCROLLINGCACHE_PREF = "pref_scrollingcache";
+    private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
+    private static final String SCROLLINGCACHE_DEFAULT = "1";
+
     // Don't nag the user with the dragons ahead warning every time
     private static final String KEY_DRAGONS_ARE_AWESOME = "pref_dragons_awesome";
 
     private ListPreference mPerfProfilePref;
+    private ListPreference mScrollingCachePref;
     private SwitchPreference mForceHighEndGfx;
 
     private String[] mPerfProfileEntries;
@@ -139,6 +144,11 @@ public class PerformanceSettings extends SettingsPreferenceFragment implements
             prefSet.removePreference(category);
         }
 
+        mScrollingCachePref = (ListPreference) findPreference(SCROLLINGCACHE_PREF);
+        mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
+                SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
+        mScrollingCachePref.setOnPreferenceChangeListener(this);
+
         mPerformanceProfileObserver = new PerformanceProfileObserver(new Handler());
     }
 
@@ -209,7 +219,12 @@ public class PerformanceSettings extends SettingsPreferenceFragment implements
                 mPowerManager.setPowerProfile(String.valueOf(newValue));
                 setCurrentPerfProfileSummary();
                 return true;
+            } else if (preference == mScrollingCachePref) {
+                if (newValue != null) {
+                    SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String) newValue);
+                }
             }
+            return true;
         }
         return false;
     }
