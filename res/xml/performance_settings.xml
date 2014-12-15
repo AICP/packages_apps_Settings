@@ -52,6 +52,19 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="performance_controls_advanced"
+        android:title="@string/performance_controls_advanced">
+
+        <ListPreference
+            android:key="pref_scrollingcache"
+            android:dialogTitle="@string/pref_scrollingcache_title"
+            android:title="@string/pref_scrollingcache_title"
+            android:summary="@string/pref_scrollingcache_summary"
+            android:entries="@array/entries_scrollingcache"
+            android:entryValues="@array/values_scrollingcache" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="perf_graphics_prefs"
         android:title="@string/graphics_title">
 
