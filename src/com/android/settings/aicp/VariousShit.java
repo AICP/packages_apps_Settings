@@ -17,7 +17,9 @@
 
 package com.android.settings.aicp;
 
+import android.app.AlertDialog;
 import android.content.ContentResolver;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
@@ -30,6 +32,8 @@ import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
+import android.text.Spannable;
+import android.widget.EditText;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -51,6 +55,7 @@ public class VariousShit extends SettingsPreferenceFragment
     private static final String KEY_NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
     private static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
     private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
+    private static final String KEY_CUSTOM_NO_NOTIFICATIONS_TEXT = "custom_no_notifications_text";
 
     // Package name of the cLock app
     public static final String LOCKCLOCK_PACKAGE_NAME = "com.cyanogenmod.lockclock";
@@ -62,6 +67,9 @@ public class VariousShit extends SettingsPreferenceFragment
     private PreferenceScreen mVariousShitScreen;
 
     private Preference mLockClock;
+
+    Preference mCustomNoNotificaions;
+    String mCustomNoNotificaionsText = null;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -115,6 +123,10 @@ public class VariousShit extends SettingsPreferenceFragment
         mStatusBarBatteryShowPercent.setSummary(mStatusBarBatteryShowPercent.getEntry());
         mStatusBarBatteryShowPercent.setOnPreferenceChangeListener(this);
 
+        // Custom No notifications text
+        mCustomNoNotificaions = findPreference(KEY_CUSTOM_NO_NOTIFICATIONS_TEXT);
+        updateCustomNoNotificaionsText();
+
     }
 
     @Override
@@ -133,6 +145,37 @@ public class VariousShit extends SettingsPreferenceFragment
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        if (preference == mCustomNoNotificaions) {
+            AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
+
+            alert.setTitle(R.string.custom_no_notifications_text_title);
+            alert.setMessage(R.string.custom_no_notifications_text_message);
+
+            // Set an EditText view to get user input
+            final EditText input = new EditText(getActivity());
+            input.setText(mCustomNoNotificaionsText != null ? mCustomNoNotificaionsText : "");
+            alert.setView(input);
+
+            alert.setPositiveButton(getResources().getString(R.string.ok), new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int whichButton) {
+                    String value = ((Spannable) input.getText()).toString();
+                    Settings.System.putString(getActivity().getContentResolver(),
+                            Settings.System.CUSTOM_NO_NOTIFICATIONS_TEXT, value);
+                    updateCustomNoNotificaionsText();
+                    Intent i = new Intent();
+                    i.setAction("com.android.settins.LABEL_CHANGED");
+                    getActivity().sendBroadcast(i);
+                    Helpers.restartSystemUI();
+                }
+            });
+            alert.setNegativeButton(getResources().getString(R.string.cancel), new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int whichButton) {
+                    // Canceled.
+                }
+            });
+
+            alert.show();
+        }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
@@ -171,6 +214,16 @@ public class VariousShit extends SettingsPreferenceFragment
         boolean enabled = !(value.equals(STATUS_BAR_BATTERY_STYLE_TEXT)
                 || value.equals(STATUS_BAR_BATTERY_STYLE_HIDDEN));
         mStatusBarBatteryShowPercent.setEnabled(enabled);
+    }
+
+    private void updateCustomNoNotificaionsText() {
+        mCustomNoNotificaionsText = Settings.System.getString(getActivity().getContentResolver(),
+                Settings.System.CUSTOM_NO_NOTIFICATIONS_TEXT);
+        if (mCustomNoNotificaionsText == null || mCustomNoNotificaionsText.length() == 0) {
+            mCustomNoNotificaions.setSummary(R.string.custom_no_notifications_text_null);
+        } else {
+            mCustomNoNotificaions.setSummary(mCustomNoNotificaionsText);
+        }
     }
 }
 

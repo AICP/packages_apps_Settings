@@ -71,6 +71,12 @@
         android:summary="@string/screenshot_sound_summary"
         android:defaultValue="true" />
 
+    <!-- Custom No notification text -->
+    <Preference
+        android:key="custom_no_notifications_text"
+        android:title="@string/custom_no_notifications_text_title"
+        android:summary="@string/custom_no_notifications_text_summary"/>
+
     <!-- LockClock settings -->
     <PreferenceScreen
         android:key="lock_clock"

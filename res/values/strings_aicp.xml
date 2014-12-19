@@ -582,4 +582,10 @@
     <string name="battery_saver_title">Warning color</string>
     <string name="battery_saver_style_reset_message">Reset battery saver warning color?</string>
 
+    <!-- Custom No notification text -->
+    <string name="custom_no_notifications_text_title">Custom "No notifications" text</string>
+    <string name="custom_no_notifications_text_summary">Type "empty" to get NO text.</string>
+    <string name="custom_no_notifications_text_null">Custom text currently not set</string>
+    <string name="custom_no_notifications_text_message">Please enter a new text. Enter an empty label to revert to stock text.</string>
+
 </resources>
