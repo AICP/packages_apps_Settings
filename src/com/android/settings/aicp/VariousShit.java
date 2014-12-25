@@ -25,6 +25,7 @@ import android.content.res.Resources;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.preference.SwitchPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -59,6 +60,8 @@ public class VariousShit extends SettingsPreferenceFragment
 
     private Context mContext;
 
+    private static final String KEY_JOKE = "joke";
+
     // Package name of the cLock app
     public static final String LOCKCLOCK_PACKAGE_NAME = "com.cyanogenmod.lockclock";
 
@@ -69,6 +72,8 @@ public class VariousShit extends SettingsPreferenceFragment
     private PreferenceScreen mVariousShitScreen;
 
     private Preference mLockClock;
+    private Preference mJoke;
+    long[] mHits = new long[3];
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -132,6 +137,9 @@ public class VariousShit extends SettingsPreferenceFragment
         mStatusBarBatteryShowPercent.setSummary(mStatusBarBatteryShowPercent.getEntry());
         mStatusBarBatteryShowPercent.setOnPreferenceChangeListener(this);
 
+        // Joke
+        mJoke = (Preference) findPreference(KEY_JOKE);
+        //findPreference(KEY_JOKE).setEnabled(true);
     }
 
     @Override
@@ -150,7 +158,19 @@ public class VariousShit extends SettingsPreferenceFragment
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        return super.onPreferenceTreeClick(preferenceScreen, preference);
+        if (preference == mJoke) {
+            System.arraycopy(mHits, 1, mHits, 0, mHits.length-1);
+            mHits[mHits.length-1] = SystemClock.uptimeMillis();
+            if (mHits[0] >= (SystemClock.uptimeMillis()-500)) {
+                Toast.makeText(getActivity(),
+                        R.string.hidden_shit_toast,
+                        Toast.LENGTH_LONG).show();
+            }
+        } else {
+            return super.onPreferenceTreeClick(preferenceScreen, preference);
+        }
+
+        return false;
     }
 
     @Override
