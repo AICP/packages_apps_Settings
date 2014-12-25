@@ -52,7 +52,11 @@
     <!-- Aicp Settings -->
     <string name="aicp_settings_title">AICP Extras</string>
     <string name="aicp_ota_settings_title">Aicp OTA</string>
+
+    <!-- Joke -->
     <string name="hidden_shit_toast">Hidden shit UNLEASHED!!!</string>
+    <string name="hidden_shit_title">Hidden shit</string>
+    <string name="hidden_shit_summary">You are now in unleashed mode!</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>

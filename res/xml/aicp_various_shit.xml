@@ -103,7 +103,12 @@
 
     <!-- Joke -->
     <Preference
-        android:key="joke"
+        android:key="hidden_shit"
         android:title="\n \n" />
+
+    <CheckBoxPreference
+        android:key="hidden_shit_unlocked"
+        android:title="@string/hidden_shit_title"
+        android:summary="@string/hidden_shit_summary" />
 
 </PreferenceScreen>

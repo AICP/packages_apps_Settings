@@ -26,6 +26,7 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.preference.CheckBoxPreference;
 import android.preference.SwitchPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -37,6 +38,8 @@ import android.widget.Toast;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.util.Helpers;
+
+import java.util.ArrayList;
 
 /**
  * LAB files borrowed from excellent ChameleonOS for AICP
@@ -56,11 +59,12 @@ public class VariousShit extends SettingsPreferenceFragment
     private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
     private static final String KEY_TOAST_ANIMATION = "toast_animation";
 
+    private static final String KEY_HIDDEN_SHIT = "hidden_shit";
+    private static final String KEY_HIDDEN_SHIT_UNLOCKED = "hidden_shit_unlocked";
+
     private ListPreference mToastAnimation;
 
     private Context mContext;
-
-    private static final String KEY_JOKE = "joke";
 
     // Package name of the cLock app
     public static final String LOCKCLOCK_PACKAGE_NAME = "com.cyanogenmod.lockclock";
@@ -72,8 +76,14 @@ public class VariousShit extends SettingsPreferenceFragment
     private PreferenceScreen mVariousShitScreen;
 
     private Preference mLockClock;
-    private Preference mJoke;
+
+    private Preference mHiddenShit;
+    private CheckBoxPreference mHiddenShitUnlocked;
     long[] mHits = new long[3];
+
+    private final ArrayList<Preference> mAllPrefs = new ArrayList<Preference>();
+    private final ArrayList<CheckBoxPreference> mResetCbPrefs
+            = new ArrayList<CheckBoxPreference>();
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -137,9 +147,23 @@ public class VariousShit extends SettingsPreferenceFragment
         mStatusBarBatteryShowPercent.setSummary(mStatusBarBatteryShowPercent.getEntry());
         mStatusBarBatteryShowPercent.setOnPreferenceChangeListener(this);
 
-        // Joke
-        mJoke = (Preference) findPreference(KEY_JOKE);
-        //findPreference(KEY_JOKE).setEnabled(true);
+        // Hidden shit
+        mHiddenShit = (Preference) findPreference(KEY_HIDDEN_SHIT);
+        mAllPrefs.add(mHiddenShit);
+        mHiddenShitUnlocked =
+                findAndInitCheckboxPref(KEY_HIDDEN_SHIT_UNLOCKED);
+        mHiddenShitUnlocked.setOnPreferenceChangeListener(this);
+
+        boolean hiddenShitOpened = Settings.System.getInt(
+                getActivity().getContentResolver(),
+                Settings.System.HIDDEN_SHIT, 0) == 1;
+        mHiddenShitUnlocked.setChecked(hiddenShitOpened);
+
+        if (hiddenShitOpened) {
+            mVariousShitScreen.removePreference(mHiddenShit);
+        } else {
+            mVariousShitScreen.removePreference(mHiddenShitUnlocked);
+        }
     }
 
     @Override
@@ -158,13 +182,20 @@ public class VariousShit extends SettingsPreferenceFragment
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        if (preference == mJoke) {
+        if (preference == mHiddenShit) {
             System.arraycopy(mHits, 1, mHits, 0, mHits.length-1);
             mHits[mHits.length-1] = SystemClock.uptimeMillis();
-            if (mHits[0] >= (SystemClock.uptimeMillis()-500)) {
+            if ((Settings.System.getInt(getActivity().getContentResolver(),
+                    Settings.System.HIDDEN_SHIT, 0) == 0) &&
+                    (mHits[0] >= (SystemClock.uptimeMillis()-500))) {
+                Settings.System.putInt(getActivity().getContentResolver(),
+                        Settings.System.HIDDEN_SHIT, 1);
                 Toast.makeText(getActivity(),
                         R.string.hidden_shit_toast,
                         Toast.LENGTH_LONG).show();
+                getPreferenceScreen().removePreference(mHiddenShit);
+                addPreference(mHiddenShitUnlocked);
+                mHiddenShitUnlocked.setChecked(true);
             }
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
@@ -206,6 +237,11 @@ public class VariousShit extends SettingsPreferenceFragment
             mToastAnimation.setSummary(mToastAnimation.getEntries()[index]);
             Toast.makeText(mContext, "Toast Test", Toast.LENGTH_SHORT).show();
             return true;
+        } else if (preference == mHiddenShitUnlocked) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.HIDDEN_SHIT,
+                    (Boolean) objValue ? 1 : 0);
+            return true;
         }
         return false;
     }
@@ -214,6 +250,22 @@ public class VariousShit extends SettingsPreferenceFragment
         boolean enabled = !(value.equals(STATUS_BAR_BATTERY_STYLE_TEXT)
                 || value.equals(STATUS_BAR_BATTERY_STYLE_HIDDEN));
         mStatusBarBatteryShowPercent.setEnabled(enabled);
+    }
+
+    private void addPreference(Preference preference) {
+        getPreferenceScreen().addPreference(preference);
+        preference.setOnPreferenceChangeListener(this);
+        mAllPrefs.add(preference);
+    }
+
+    private CheckBoxPreference findAndInitCheckboxPref(String key) {
+        CheckBoxPreference pref = (CheckBoxPreference) findPreference(key);
+        if (pref == null) {
+            throw new IllegalArgumentException("Cannot find preference with key = " + key);
+        }
+        mAllPrefs.add(pref);
+        mResetCbPrefs.add(pref);
+        return pref;
     }
 }
 
