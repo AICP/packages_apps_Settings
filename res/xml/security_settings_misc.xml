@@ -69,6 +69,11 @@
             android:summary="@string/advanced_reboot_summary"
             android:persistent="false" />
 
+	<SwitchPreference
+	    android:key="enable_quickboot"
+	    android:title="@string/enable_quickboot_title"
+	    android:summary="@string/enable_quickboot_summary" />
+
         <Preference android:key="manage_device_admin"
                 android:title="@string/manage_device_admin"
                 android:summary="@string/manage_device_admin_summary"
