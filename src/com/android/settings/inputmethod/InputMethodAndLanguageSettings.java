@@ -68,6 +68,7 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
     private static final String KEY_INPUT_METHOD_SELECTOR = "input_method_selector";
     private static final String KEY_USER_DICTIONARY_SETTINGS = "key_user_dictionary_settings";
     private static final String VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
+    private static final String SHOW_ENTER_KEY = "show_enter_key";
     private static final String TAG = "KeyboardInputSettings";
     // false: on ICS or later
     private static final boolean SHOW_INPUT_METHOD_SWITCHER_SETTINGS = false;
@@ -100,6 +101,7 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
     private Intent mIntentWaitingForResult;
     private ListPreference mVolumeKeyCursorControl;
     private CheckBoxPreference mFullscreenKeyboard;
+    private CheckBoxPreference mShowEnterKey;
     private InputMethodSettingValuesWrapper mInputMethodSettingValues;
 
     private final OnPreferenceChangeListener mOnImePreferenceChangedListener =
@@ -123,6 +125,10 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
         mFullscreenKeyboard = (CheckBoxPreference) findPreference(PREF_FULLSCREEN_KEYBOARD);
         mFullscreenKeyboard.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.FULLSCREEN_KEYBOARD, 0) == 1);
+
+        mShowEnterKey = (CheckBoxPreference) findPreference(SHOW_ENTER_KEY);
+        mShowEnterKey.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.FORMAL_TEXT_INPUT, 0) == 1);
 
         try {
             mDefaultInputMethodSelectorVisibility = Integer.valueOf(
