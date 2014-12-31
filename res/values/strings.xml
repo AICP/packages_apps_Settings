@@ -2986,6 +2986,9 @@
     <string name="hardkeyboard_category">Physical keyboard settings</string>
     <!-- On Text & language settings screen, setting summary for the Auto-punctuate setting. -->
     <string name="auto_punctuate_summary">Press Space key twice to insert \u0022.\u0022</string>
+    <!-- On Text & language settings screen, setting Force enter key rather than smiley key -->
+    <string name="show_enter_key_title">Show enter key</string>
+    <string name="show_enter_key_summary">Force keyboard to show enter instead of emoticon key</string>
     <!-- On Security & location settings screen, setting check box name. Title of the checkbox to set whether password edit fields will show the most recent character typed and then hide it, or just hide it right away.  By hide, I mean mask it out. -->
     <string name="show_password">Make passwords visible</string>
     <!-- Warning message about security implications of enabling an input method, displayed as a dialog
