@@ -17,7 +17,9 @@
 
 package com.android.settings.aicp;
 
+import android.app.admin.DevicePolicyManager;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
@@ -57,6 +59,7 @@ public class VariousShit extends SettingsPreferenceFragment
     private static final String KEY_NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
     private static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
     private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
+    private static final String KEY_LOCKSCREEN_CAMERA_WIDGET_HIDE = "camera_widget_hide";
 
     private static final String KEY_HIDDEN_SHIT = "hidden_shit";
     private static final String KEY_HIDDEN_SHIT_UNLOCKED = "hidden_shit_unlocked";
@@ -68,6 +71,7 @@ public class VariousShit extends SettingsPreferenceFragment
     private ListPreference mNavigationBarHeight;
     private ListPreference mStatusBarBattery;
     private ListPreference mStatusBarBatteryShowPercent;
+    private SwitchPreference mCameraWidgetHide;
     private SwitchPreference mProximityWake;
     private PreferenceScreen mVariousShitScreen;
 
@@ -92,6 +96,7 @@ public class VariousShit extends SettingsPreferenceFragment
         PreferenceScreen prefSet = getPreferenceScreen();
         PackageManager pm = getPackageManager();
         Resources res = getResources();
+
 
         mVariousShitScreen = (PreferenceScreen) findPreference("various_shit_screen");
 
@@ -153,6 +158,21 @@ public class VariousShit extends SettingsPreferenceFragment
         } else {
             mVariousShitScreen.removePreference(mHiddenShitUnlocked);
             mVariousShitScreen.removePreference(mHiddenImg);
+        }
+
+        // Camera widget hide
+        boolean mCameraDisabled = false;
+        DevicePolicyManager dpm =
+            (DevicePolicyManager) getActivity().getSystemService(Context.DEVICE_POLICY_SERVICE);
+        if (dpm != null) {
+            mCameraDisabled = dpm.getCameraDisabled(null);
+        }
+        if (!mCameraDisabled){
+            mCameraWidgetHide = (SwitchPreference)findPreference(KEY_LOCKSCREEN_CAMERA_WIDGET_HIDE);
+            mCameraWidgetHide.setChecked(Settings.System.getBoolean(resolver,
+                    Settings.System.CAMERA_WIDGET_HIDE, false));
+        } else {
+            mVariousShitScreen.removePreference(mCameraWidgetHide);
         }
     }
 

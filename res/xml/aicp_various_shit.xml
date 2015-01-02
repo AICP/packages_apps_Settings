@@ -34,6 +34,12 @@
         android:entries="@array/status_bar_battery_percentage_entries"
         android:entryValues="@array/status_bar_battery_percentage_values" />
 
+    <!-- Disable camera swipe -->
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+        android:key="camera_widget_hide"
+        android:title="@string/camera_widget_hide"
+        android:summary="@string/camera_widget_hide_summary" />
+
     <!-- Proximity on wake -->
     <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
         android:key="proximity_on_wake"
