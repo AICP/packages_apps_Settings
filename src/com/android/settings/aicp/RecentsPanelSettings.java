@@ -29,11 +29,15 @@ import android.provider.Settings;
 
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
+import com.android.settings.util.Helpers;
 
 public class RecentsPanelSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String TAG = "RecentsPanelSettings";
+
+    private static final String KEY_OMNISWITCH = "omniswitch";
+    public static final String OMNISWITCH_PACKAGE_NAME = "org.omnirom.omniswitch";
 
     private static final String SHOW_CLEAR_ALL_RECENTS = "show_clear_all_recents";
     private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
@@ -48,6 +52,7 @@ public class RecentsPanelSettings extends SettingsPreferenceFragment implements
 
         PreferenceScreen prefSet = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
+        PackageManager pm = getPackageManager();
 
         mRecentsClearAll = (SwitchPreference) prefSet.findPreference(SHOW_CLEAR_ALL_RECENTS);
         mRecentsClearAll.setChecked(Settings.System.getIntForUser(resolver,
@@ -60,6 +65,12 @@ public class RecentsPanelSettings extends SettingsPreferenceFragment implements
         mRecentsClearAllLocation.setValue(String.valueOf(location));
         mRecentsClearAllLocation.setOnPreferenceChangeListener(this);
         updateRecentsLocation(location);
+
+        mOmniSwitch = (Preference)
+                prefSet.findPreference(KEY_OMNISWITCH);
+        if (!Helpers.isPackageInstalled(OMNISWITCH_PACKAGE_NAME, pm)) {
+            prefSet.removePreference(mOmniSwitch);
+        }
     }
 
     @Override
