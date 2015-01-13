@@ -88,6 +88,12 @@
 
          </PreferenceCategory>
 
+        <ListPreference
+                android:key="lcd_density"
+                android:title="@string/lcd_density"
+                android:summary="@string/lcd_density_summary"
+                android:persistent="false" />
+
         <!-- DeviceHandler device specific screen off gesture settings -->
         <Preference
                 android:key="screen_off_gesture_settings"

@@ -734,4 +734,9 @@
 
     <string name="alarm_ringtone_title">Default alarm ringtone</string>
 
+    <!-- Setting option name to change LCD density -->
+    <string name="lcd_density">LCD density</string>
+    <string name="dialog_title_lcd_density">LCD density</string>
+    <string name="lcd_density_summary">xxx DPI</string>
+
 </resources>

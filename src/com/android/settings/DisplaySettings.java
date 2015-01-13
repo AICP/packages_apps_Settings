@@ -33,6 +33,7 @@ import static android.provider.Settings.System.SCREEN_OFF_TIMEOUT;
 import android.app.Activity;
 import android.app.ActivityManagerNative;
 import android.app.Dialog;
+import android.app.IActivityManager;
 import android.app.admin.DevicePolicyManager;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -48,6 +49,7 @@ import android.database.ContentObserver;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.RemoteException;
+import android.os.ServiceManager;
 import android.os.SystemProperties;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -61,6 +63,7 @@ import android.preference.SwitchPreference;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.text.TextUtils;
+import android.util.DisplayMetrics;
 import android.util.Log;
 
 import com.android.settings.slim.DisplayRotation;
@@ -85,6 +88,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
 
     private static final String KEY_DISPLAY_ROTATION = "display_rotation";
     private static final String KEY_SCREEN_TIMEOUT = "screen_timeout";
+    private static final String KEY_LCD_DENSITY = "lcd_density";
     private static final String KEY_FONT_SIZE = "font_size";
     private static final String KEY_SCREEN_SAVER = "screensaver";
     private static final String KEY_LIFT_TO_WAKE = "lift_to_wake";
@@ -113,6 +117,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String ROTATION_ANGLE_180 = "180";
     private static final String ROTATION_ANGLE_270 = "270";
 
+    private ListPreference mLcdDensityPreference;
     private PreferenceScreen mDisplayRotationPreference;
     private PreferenceScreen mScreenColorSettings;
 
@@ -168,6 +173,20 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         mScreenTimeoutPreference.setOnPreferenceChangeListener(this);
         disableUnusableTimeouts(mScreenTimeoutPreference);
         updateTimeoutPreferenceDescription(currentTimeout);
+
+        mLcdDensityPreference = (ListPreference) findPreference(KEY_LCD_DENSITY);
+        int defaultDensity = DisplayMetrics.DENSITY_DEVICE;
+        String[] densityEntries = new String[8];
+        for (int idx = 0; idx < 8; ++idx) {
+            int pct = (75 + idx*5);
+            densityEntries[idx] = Integer.toString(defaultDensity * pct / 100);
+        }
+        int currentDensity = DisplayMetrics.DENSITY_CURRENT;
+        mLcdDensityPreference.setEntries(densityEntries);
+        mLcdDensityPreference.setEntryValues(densityEntries);
+        mLcdDensityPreference.setValue(String.valueOf(currentDensity));
+        mLcdDensityPreference.setOnPreferenceChangeListener(this);
+        updateLcdDensityPreferenceDescription(currentDensity);
 
         mFontSizePref = (FontDialogPreference) findPreference(KEY_FONT_SIZE);
         mFontSizePref.setOnPreferenceChangeListener(this);
@@ -360,6 +379,19 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         preference.setSummary(summary);
     }
 
+    private void updateLcdDensityPreferenceDescription(int currentDensity) {
+        ListPreference preference = mLcdDensityPreference;
+        String summary;
+        if (currentDensity < 10 || currentDensity >= 1000) {
+            // Unsupported value
+            summary = "";
+        }
+        else {
+            summary = Integer.toString(currentDensity) + " DPI";
+        }
+        preference.setSummary(summary);
+    }
+
     private void disableUnusableTimeouts(ListPreference screenTimeoutPreference) {
         final DevicePolicyManager dpm =
                 (DevicePolicyManager) getActivity().getSystemService(
@@ -494,6 +526,24 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         }
     }
 
+    public void writeLcdDensityPreference(int value) {
+        try {
+            SystemProperties.set("persist.sys.lcd_density", Integer.toString(value));
+        }
+        catch (Exception e) {
+            Log.w(TAG, "Unable to save LCD density");
+        }
+        try {
+            final IActivityManager am = ActivityManagerNative.asInterface(ServiceManager.checkService("activity"));
+            if (am != null) {
+                am.restart();
+            }
+        }
+        catch (RemoteException e) {
+            Log.e(TAG, "Failed to restart");
+        }
+    }
+
     private static boolean isTapToWakeSupported() {
         try {
             return TapToWake.isSupported();
@@ -558,6 +608,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             } catch (NumberFormatException e) {
                 Log.e(TAG, "could not persist screen timeout setting", e);
             }
+        }
+        if (KEY_LCD_DENSITY.equals(key)) {
+            int value = Integer.parseInt((String) objValue);
+            writeLcdDensityPreference(value);
+            updateLcdDensityPreferenceDescription(value);
         }
         if (KEY_FONT_SIZE.equals(key)) {
             writeFontSizePreference(objValue);
