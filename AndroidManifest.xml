@@ -1793,8 +1793,6 @@
 
         <!-- CyanogenMod activities End -->
 
-        <activity android:name=".cyanogenmod.SpamList" />
-
         <!-- "Blacklist settings" UI, used only on voice-capable phone devices. -->
         <activity android:name="Settings$BlacklistSettingsActivity"
                 android:uiOptions="splitActionBarWhenNarrow"
