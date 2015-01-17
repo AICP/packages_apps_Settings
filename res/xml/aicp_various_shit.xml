@@ -15,6 +15,7 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
         android:title="@string/various_shit_title"
         android:key="various_shit_screen">
 
@@ -34,7 +35,18 @@
             android:title="@string/dialer_widget_hide"
             android:summary="@string/dialer_widget_hide_summary" />
 
-   </PreferenceCategory>
+    </PreferenceCategory>
+
+    <!-- Volume panel timeout -->
+    <com.android.settings.widget.SeekBarPreferenceCham
+            android:key="volume_panel_timeout"
+            android:title="@string/volume_panel_timeout_title"
+            android:summary="@string/volume_panel_timeout_summary"
+            android:max="10"
+            settings:min="1"
+            settings:unitsLeft=""
+            settings:unitsRight="sec"
+            android:persistent="false" />
 
     <!-- Proximity on wake -->
     <com.android.settings.cyanogenmod.SystemSettingSwitchPreference

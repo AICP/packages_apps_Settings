@@ -44,6 +44,7 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.util.Helpers;
 import com.android.settings.Utils;
+import com.android.settings.widget.SeekBarPreferenceCham;
 
 /**
  * LAB files borrowed from excellent ChameleonOS for AICP
@@ -59,6 +60,7 @@ public class VariousShit extends SettingsPreferenceFragment
 
     private static final String KEY_LOCKSCREEN_CAMERA_WIDGET_HIDE = "camera_widget_hide";
     private static final String KEY_LOCKSCREEN_DIALER_WIDGET_HIDE = "dialer_widget_hide";
+    private static final String KEY_VOLUME_PANEL_TIMEOUT = "volume_panel_timeout";
 
     private static final String KEY_HIDDEN_SHIT = "hidden_shit";
     private static final String KEY_HIDDEN_SHIT_UNLOCKED = "hidden_shit_unlocked";
@@ -72,6 +74,7 @@ public class VariousShit extends SettingsPreferenceFragment
     private SwitchPreference mDialerWidgetHide;
     private SwitchPreference mProximityWake;
     private PreferenceScreen mVariousShitScreen;
+    private SeekBarPreferenceCham mVolumePanelTimeout;
 
     private Preference mLockClock;
 
@@ -159,6 +162,13 @@ public class VariousShit extends SettingsPreferenceFragment
         if (!Utils.isVoiceCapable(getActivity())){
             mVariousShitScreen.removePreference(mDialerWidgetHide);
         }
+
+        // Volume panel timeout
+        mVolumePanelTimeout = (SeekBarPreferenceCham) prefSet.findPreference(KEY_VOLUME_PANEL_TIMEOUT);
+        int statusVolumePanelTimeout = Settings.System.getInt(resolver,
+                Settings.System.VOLUME_PANEL_TIMEOUT, 3000);
+        mVolumePanelTimeout.setValue(statusVolumePanelTimeout / 1000);
+        mVolumePanelTimeout.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -228,6 +238,11 @@ public class VariousShit extends SettingsPreferenceFragment
             Settings.System.putIntForUser(getActivity().getContentResolver(),
                     Settings.System.DIALER_WIDGET_HIDE, value ? 1 : 0, UserHandle.USER_CURRENT);
             Helpers.restartSystem();
+        } else if (preference == mVolumePanelTimeout) {
+            int volumePanelTimeout = (Integer) objValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.VOLUME_PANEL_TIMEOUT, volumePanelTimeout * 1000);
+            return true;
         }
         return false;
     }
