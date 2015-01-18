@@ -156,7 +156,7 @@ public class VariousShit extends SettingsPreferenceFragment
         mDialerWidgetHide.setChecked(Settings.System.getIntForUser(resolver,
             Settings.System.DIALER_WIDGET_HIDE, 0, UserHandle.USER_CURRENT) == 1);
         mDialerWidgetHide.setOnPreferenceChangeListener(this);
-        if (!Utils.isVoiceCapable(getActivity())){
+        if ((!Utils.isVoiceCapable(getActivity()) || Utils.isWifiOnly(getActivity())) {
             mVariousShitScreen.removePreference(mDialerWidgetHide);
         }
     }
