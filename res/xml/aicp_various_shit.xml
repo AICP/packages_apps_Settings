@@ -51,6 +51,12 @@
             android:title="@string/status_bar_show_weather_title"
             android:summary="@string/status_bar_show_weather_summary"
             android:defaultValue="true" />
+
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="lockscreen_weather"
+            android:title="@string/lockscreen_weather_title"
+            android:defaultValue="true" />
+
     </PreferenceCategory>
 
     <!-- Navbar height -->
