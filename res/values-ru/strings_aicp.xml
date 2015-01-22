@@ -31,9 +31,9 @@
   <!--  About device Screen, hardware info, screen res -->
   <string name="device_screen_resolution">Разрешение экрана</string>
   <!--  About device Screen, hardware info, GPU info -->
-  <string name="gpu_info">GPU</string>
+  <string name="gpu_info">Видеоускоритель</string>
   <!-- About device screen, Cpu info. -->
-  <string name="cpu_info">CPU</string>
+  <string name="cpu_info">Процессор</string>
   <!-- About device screen, Chipset info -->
   <string name="chipset_info">Чипсет</string>
   <!-- About phone screen, Free memory info -->
@@ -146,7 +146,7 @@
   <string name="ime_switcher_notify_summary">Показывать способ ввода в панели уведомлений</string>
   
   <!-- Various shit -->
-  <string name="various_shit_title">Разный стафф</string>
+  <string name="various_shit_title">Основное</string>
   <string name="battery_percentage_title">Батарея в процентах</string>
   <string name="battery_percentage_summary">Показать проценты на иконке</string>
   <string name="proximity_on_wake_title">Датчик приближения</string>
@@ -225,7 +225,7 @@
   <string name="status_bar_toggle_info">Автоматическое регулирование подсветки включено</string>
   
   <!-- SuperSU header name - the app hides itself from launcher based on this resource name being present in com.android.settings -->
-  <string name="supersu_title">SuperSU</string>
+  <string name="supersu_title">Суперпользователь</string>
   
   <!-- MediaScanner behavior on boot -->
   <string name="options_settings_title">Опции</string>
@@ -471,24 +471,24 @@
   <string name="lockscreen_shorcuts_longpress_summary">Open custom lock screen shortcuts on longpress</string>
   
   <!-- Unaccounted and overcounted battery stats -->
-  <string name="show_unac_and_overcounted_stats_title">Show unaccounted/overcounted stats</string>
-  <string name="show_unac_and_overcounted_stats_summary">Show in battery statistics unaccounted and over-counted usage.</string>
+  <string name="show_unac_and_overcounted_stats_title">Покаpfnm неучтенную/сверхучтенную статистику</string>
+  <string name="show_unac_and_overcounted_stats_summary">Показать в статистике батареи неучтенное и сверхучтенное использование.</string>
   
   <!-- Heads up -->
-  <string name="heads_up_title">Heads up notification</string>
-  <string name="app_notification_enable_heads_up_title">Show heads up</string>
-  <string name="app_notification_enable_heads_up_summary">Show notifications from this app as heads up</string>
-  <string name="heads_up_snooze_title">Snooze timer</string>
-  <string name="heads_up_snooze_summary">If snooze button is pressed, disable heads up for <xliff:g id="number">%d</xliff:g> minutes</string>
-  <string name="heads_up_snooze_disabled_summary">Snooze timer is disabled</string>
+  <string name="heads_up_title">Уведомления HeadsUp</string>
+  <string name="app_notification_enable_heads_up_title">Показывать HeadsUp</string>
+  <string name="app_notification_enable_heads_up_summary">Показать уведомления из этого приложения как "heads up"</string>
+  <string name="heads_up_snooze_title">Таймер сна</string>
+  <string name="heads_up_snooze_summary">Если таймер сна включен, уведомления HeadsUp отключены на <xliff:g id="number">%d</xliff:g> мин.</string>
+  <string name="heads_up_snooze_disabled_summary">Таймер сна отключен</string>
   <string name="heads_up_snooze_3min">3 минуты</string>
   <string name="heads_up_snooze_5min">5 минут</string>
   <string name="heads_up_snooze_10min">10 минут</string>
   <string name="heads_up_snooze_15min">15 минут</string>
   <string name="heads_up_snooze_20min">20 минут</string>
-  <string name="heads_up_time_out_title">Time out</string>
-  <string name="heads_up_time_out_summary">Heads up notification will show up for <xliff:g id="number">%d</xliff:g> seconds</string>
-  <string name="heads_up_time_out_never_summary">Heads up notification will show until it is dismissed</string>
+  <string name="heads_up_time_out_title">Время показа</string>
+  <string name="heads_up_time_out_summary">Уведомления HeadsUp будут показываться <xliff:g id="number">%d</xliff:g> сек.</string>
+  <string name="heads_up_time_out_never_summary">Уведомление HeadsUp будут показаны, пока не будут отклоненны.</string>
   <string name="heads_up_time_out_4sec">4 секунды</string>
   <string name="heads_up_time_out_6sec">6 секунд</string>
   <string name="heads_up_time_out_8sec">8 секунд</string>
@@ -496,8 +496,8 @@
   <string name="heads_up_time_out_never">Никогда</string>
   
   <!-- Gesture Anywhere -->
-  <string name="gesture_anywhere_title">Gesture AnyWhere</string>
-  <string name="gesture_anywhere_enabled_title">Gesture AnyWhere</string>
+  <string name="gesture_anywhere_title">Жесты AnyWhere</string>
+  <string name="gesture_anywhere_enabled_title">Жесты AnyWhere</string>
   <string name="gesture_anywhere_enabled_summary">Включить жесты</string>
   <string name="gesture_anywhere_position_title">Расположение</string>
   <string name="gesture_anywhere_position_left">Левый край</string>
@@ -571,14 +571,14 @@
   <string name="listview_translate_right">Перенос (справа)</string>
   
   <!-- ListView interpolator -->
-  <string name="listview_interpolator_title">ListView interpolator</string>
-  <string name="listview_accelerate_interpolator">Accelerate</string>
-  <string name="listview_decelerate_interpolator">Decelerate</string>
-  <string name="listview_accelerate_decelerate_interpolator">Accelerate and decelerate</string>
-  <string name="listview_anticipate_interpolator">Anticipate</string>
-  <string name="listview_overshoot_interpolator">Overshoot</string>
-  <string name="listview_anticipate_overshoot_interpolator">Anticipate and overshoot</string>
-  <string name="listview_bounce_interpolator">Bounce</string>
+  <string name="listview_interpolator_title">Интерполяции ListView</string>
+  <string name="listview_accelerate_interpolator">Ускорение</string>
+  <string name="listview_decelerate_interpolator">Замедление</string>
+  <string name="listview_accelerate_decelerate_interpolator">Ускорение и замедление</string>
+  <string name="listview_anticipate_interpolator">Ожидание</string>
+  <string name="listview_overshoot_interpolator">Проскакивание</string>
+  <string name="listview_anticipate_overshoot_interpolator">Ожидание и проскакиевание</string>
+  <string name="listview_bounce_interpolator">Отскакивание</string>
   
   <!-- Battery saver -->
   <string name="battery_saver_title">Цвет предупреждения</string>
@@ -586,42 +586,42 @@
   
   <!-- Lock Gesture settings -->
   <!-- Security & location settings screen, setting option name -->
-  <string name="lockgesture_change_lock_pattern_label">Change unlock gesture</string>
+  <string name="lockgesture_change_lock_pattern_label">Изменить жест разблокировки</string>
   <!-- Security & location settings screen, change unlock gesture screen instruction when the user chooses "Change unlock gesture".  We first ask the user toe nter the current pattern, and this is the message seen -->
-  <string name="lockgesture_change_lock_pin_label">Change unlock PIN</string>
+  <string name="lockgesture_change_lock_pin_label">Изменить PIN-код разблокировки</string>
   <!-- Security & location settings screen, change unlock gesture screen instruction when the user chooses "Change unlock gesture".  We first ask the user toe nter the current pattern, and this is the message seen -->
-  <string name="lockgesture_need_to_unlock">Confirm saved gesture</string>
+  <string name="lockgesture_need_to_unlock">Подтвердить сохраненный жест</string>
   <!-- Do not translate. -->
   <string name="lockgesture_need_to_unlock_footer"/>
   <!-- Security & location settings screen, change unlock gesture screen instruction if user draws incorrect pattern -->
-  <string name="lockgesture_need_to_unlock_wrong">Try again:</string>
+  <string name="lockgesture_need_to_unlock_wrong">Попробуйте еще:</string>
   <!-- Do not translate. -->
   <string name="lockgesture_need_to_unlock_wrong_footer"/>
   <!-- Security & location settings screen, change unlock gesture screen instruction on top of screen.  This si when they are supposed to draw a new unlock pattern (for example, if they are changing their unlock patterns)..-->
-  <string name="lockgesture_recording_intro_header">Draw an unlock gesture:</string>
+  <string name="lockgesture_recording_intro_header">Нарисуйте жестк разблокировки:</string>
   <!-- Security & location settings screen, change unlock gesture screen hint on bottom of screen.  We are telling them to press the menu button to see more options or help. -->
-  <string name="lockgesture_recording_intro_footer">Press Menu for help.</string>
+  <string name="lockgesture_recording_intro_footer">Нажмите меню для справки.</string>
   <!-- Security & location settings screen, change unlock gesture screen instruction on top of screen while drawing pattern -->
-  <string name="lockgesture_recording_inprogress">Release finger when done.</string>
+  <string name="lockgesture_recording_inprogress">Отпустите палец когда закончите.</string>
   <!-- Security & location settings screen, change unlock gesture screen message on top of screen after drawing pattern -->
-  <string name="lockgesture_pattern_entered_header">Gesture recorded.</string>
+  <string name="lockgesture_pattern_entered_header">Жест записан.</string>
   <!-- Security & location settings screen, change unlock gesture screen instruction on top of screen to confirm pattern -->
-  <string name="lockgesture_need_to_confirm">Draw gesture again to confirm:</string>
-  <string name="lockgesture_pattern_confirmed_header">Your new unlock gesture:</string>
+  <string name="lockgesture_need_to_confirm">Нарисуйте жест снова и подтвердите:</string>
+  <string name="lockgesture_pattern_confirmed_header">Ваш жест разблокировки:</string>
   <!-- Security & location settings screen, change unlock gesture screen button, on bottom of screen.  After they draw a gesture and release their finger, we display the pattern so they remember.  When they are ready to draw it once again to confirm it, they press this button. -->
-  <string name="lockgesture_confirm_button_text">Confirm</string>
+  <string name="lockgesture_confirm_button_text">Подтвержден</string>
   <!-- Security & location settings screen, change unlock gesture screen button, on bottom of screen.  After they draw a gesture and release their finger, we display the pattern so they remember.  If they are nto satisfied with this pattern, they click this button to redraw the pattern. -->
-  <string name="lockgesture_restart_button_text">Redraw</string>
+  <string name="lockgesture_restart_button_text">Перерисуйте</string>
   <!-- Security & location settings screen, change unlock gesture screen button, on bottom of screen. If they are supposed to enter their current gesture before being able to draw another one, and they screw up, they hit this button to try again -->
-  <string name="lockgesture_retry_button_text">Retry</string>
+  <string name="lockgesture_retry_button_text">Повторить</string>
   <!-- Security & location settings screen, change unlock gesture screen button, on bottom of screen. Once they draw a new gesture and confirm it by drawing it again, they press this button to exit -->
-  <string name="lockgesture_continue_button_text">Continue</string>
+  <string name="lockgesture_continue_button_text">Продолжить</string>
   <!-- Security & location settings screen, unlock screen activity title -->
-  <string name="lockgesture_settings_title">Unlock gesture</string>
+  <string name="lockgesture_settings_title">Жестк разблокировки</string>
   <!-- Security & location settings screen, setting check box title if the unlock pattern MUST be drawn everytime they turn on the screen -->
   <string name="lockgesture_settings_enable_title">Require gesture</string>
   <!-- Security & location settings screen, setting summary for the checkbox "Require pattern" -->
-  <string name="lockgesture_settings_enable_summary">Must draw gesture to unlock screen</string>
+  <string name="lockgesture_settings_enable_summary">Требуется нарисовать жест, для разблокировки экрана</string>
   <!-- Security & location settings screen, setting check box title. This setting controls whether a visible gesture is drawn as the user moves his finger around while drawing the unlock pattern.  If checked, this line is drawn.  If unchecked, there is nothing drawn so the user does not reveal his pattern while he unlocks the phone.-->
   <string name="lockgesture_settings_enable_visible_pattern_title">Make gesture visible</string>
   <!-- Security & location settings screen, setting check box title. This controls whether the device locks immediately when the power button is pressed. [CHAR LIMIT=28]-->
@@ -651,16 +651,16 @@
   
   <!-- Circle app bar -->
   <string name="category_app_circle_bar_title">App launcher</string>
-  <string name="app_circle_bar_title">App circle bar</string>
-  <string name="app_circle_bar_summary">Show circle app launcher after touching right side of screen</string>
-  <string name="app_circle_bar_included_apps_title">Included apps</string>
-  <string name="app_circle_bar_included_apps_summary">Apps will show in app circle bar</string>
-  <string name="trigger_width_title">Trigger width</string>
-  <string name="trigger_width_summary">Adjust the width of the trigger area</string>
-  <string name="trigger_top_title">Trigger position</string>
-  <string name="trigger_top_summary">Adjust the vertical postion of the trigger area</string>
-  <string name="trigger_bottom_title">Trigger height</string>
-  <string name="trigger_bottom_summary">Adjust the height of the trigger area</string>
+  <string name="app_circle_bar_title">Круговая панель</string>
+  <string name="app_circle_bar_summary">Включить круговую панель после нажатия в правой части экрана</string>
+  <string name="app_circle_bar_included_apps_title">Включенные приложения</string>
+  <string name="app_circle_bar_included_apps_summary">Приложения будут показаны в круговой панели</string>
+  <string name="trigger_width_title">Ширина триггера</string>
+  <string name="trigger_width_summary">Отрегулируйте ширину области триггера</string>
+  <string name="trigger_top_title">Расположение триггера</string>
+  <string name="trigger_top_summary">Отрегулируйте вертикальное положение области триггера</string>
+  <string name="trigger_bottom_title">Высота триггера</string>
+  <string name="trigger_bottom_summary">Отрегулируйте ширину области триггера</string>
   
   <!-- Toast Animation -->
   <string name="toast_animation_title">Toast animation</string>
@@ -699,11 +699,11 @@
   
   <!-- Battery Bar -->
   <string name="battery_bar_title">Battery Bar</string>
-  <string name="battery_bar">Местоположение Battery bar</string>
-  <string name="battery_bar_color">Цвет Battery bar</string>
-  <string name="battery_bar_cat">Стиль Battery bar</string>
-  <string name="battery_bar_style_title">Выравнивание Battery bar</string>
-  <string name="battery_bar_thickness_title">Толщина Battery bar</string>
+  <string name="battery_bar">Местоположение Battery Bar</string>
+  <string name="battery_bar_color">Цвет Battery Bar</string>
+  <string name="battery_bar_cat">Стиль Battery Bar</string>
+  <string name="battery_bar_style_title">Выравнивание Battery Bar</string>
+  <string name="battery_bar_thickness_title">Толщина Battery Bar</string>
   <string name="battery_bar_animate_title">Анимация зарядки</string>
   <string name="battery_bar_animate_summary">Анимация зарядки может привести к плохому пользовательскому опыту использования. Включайте на свое усмотрение.</string>
   
