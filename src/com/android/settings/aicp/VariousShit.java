@@ -116,14 +116,6 @@ public class VariousShit extends SettingsPreferenceFragment
             prefSet.removePreference(mLockClock);
         }
 
-        // Navbar height
-        mNavigationBarHeight = (ListPreference) findPreference(KEY_NAVIGATION_BAR_HEIGHT);
-        mNavigationBarHeight.setOnPreferenceChangeListener(this);
-        int statusNavigationBarHeight = Settings.System.getInt(resolver,
-                Settings.System.NAVIGATION_BAR_HEIGHT, 48);
-        mNavigationBarHeight.setValue(String.valueOf(statusNavigationBarHeight));
-        mNavigationBarHeight.setSummary(mNavigationBarHeight.getEntry());
-
         // Hidden shit
         mHiddenShit = (Preference) findPreference(KEY_HIDDEN_SHIT);
         mHiddenImg = (PreferenceScreen) findPreference(KEY_HIDDEN_IMG);
@@ -227,13 +219,7 @@ public class VariousShit extends SettingsPreferenceFragment
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         ContentResolver resolver = getActivity().getContentResolver();
         final String key = preference.getKey();
-        if (preference == mNavigationBarHeight) {
-            int statusNavigationBarHeight = Integer.valueOf((String) objValue);
-            int index = mNavigationBarHeight.findIndexOfValue((String) objValue);
-            Settings.System.putInt(resolver, Settings.System.NAVIGATION_BAR_HEIGHT,
-                    statusNavigationBarHeight);
-            mNavigationBarHeight.setSummary(mNavigationBarHeight.getEntries()[index]);
-        } else if (preference == mHiddenShitUnlocked) {
+        if (preference == mHiddenShitUnlocked) {
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.HIDDEN_SHIT,
                     (Boolean) objValue ? 1 : 0);
