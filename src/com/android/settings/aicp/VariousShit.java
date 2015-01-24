@@ -57,8 +57,6 @@ public class VariousShit extends SettingsPreferenceFragment
     private static final String KEY_LOCKCLOCK = "lock_clock";
     private static final String KEY_NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
 
-    private static final String KEY_LOCKSCREEN_CAMERA_WIDGET_HIDE = "camera_widget_hide";
-    private static final String KEY_LOCKSCREEN_DIALER_WIDGET_HIDE = "dialer_widget_hide";
     private static final String KEY_LOCKSCREEN_WEATHER = "lockscreen_weather";
 
     private static final String KEY_HIDDEN_SHIT = "hidden_shit";
@@ -69,8 +67,6 @@ public class VariousShit extends SettingsPreferenceFragment
     public static final String LOCKCLOCK_PACKAGE_NAME = "com.cyanogenmod.lockclock";
 
     private ListPreference mNavigationBarHeight;
-    private SwitchPreference mCameraWidgetHide;
-    private SwitchPreference mDialerWidgetHide;
     private SwitchPreference mLockscreenWeather;
     private SwitchPreference mProximityWake;
     private PreferenceScreen mVariousShitScreen;
@@ -144,30 +140,6 @@ public class VariousShit extends SettingsPreferenceFragment
             mVariousShitScreen.removePreference(mHiddenImg);
         }
 
-        // Camera widget hide
-        mCameraWidgetHide = (SwitchPreference) findPreference(KEY_LOCKSCREEN_CAMERA_WIDGET_HIDE);
-        boolean mCameraDisabled = false;
-        DevicePolicyManager dpm =
-            (DevicePolicyManager) getActivity().getSystemService(Context.DEVICE_POLICY_SERVICE);
-        if (dpm != null) {
-            mCameraDisabled = dpm.getCameraDisabled(null);
-        }
-        if (mCameraDisabled){
-            mVariousShitScreen.removePreference(mCameraWidgetHide);
-        }
-
-        // Dialer widget hide
-        mDialerWidgetHide = (SwitchPreference) findPreference(KEY_LOCKSCREEN_DIALER_WIDGET_HIDE);
-        boolean IsVoiceCapable = res.getBoolean(
-                com.android.internal.R.bool.config_voice_capable);
-        if (!IsVoiceCapable) {
-            mVariousShitScreen.removePreference(mDialerWidgetHide);
-        } else {
-            mDialerWidgetHide.setChecked(Settings.System.getIntForUser(resolver,
-                    Settings.System.DIALER_WIDGET_HIDE, 0, UserHandle.USER_CURRENT) == 1);
-            mDialerWidgetHide.setOnPreferenceChangeListener(this);
-        }
-
         // Lockscreen weather
         mLockscreenWeather = (SwitchPreference) findPreference(KEY_LOCKSCREEN_WEATHER);
         mLockscreenWeather.setChecked(Settings.System.getIntForUser(resolver,
@@ -238,11 +210,6 @@ public class VariousShit extends SettingsPreferenceFragment
                     Settings.System.HIDDEN_SHIT,
                     (Boolean) objValue ? 1 : 0);
             return true;
-        } else if (preference == mDialerWidgetHide) {
-            boolean value = (Boolean) objValue;
-            Settings.System.putIntForUser(getActivity().getContentResolver(),
-                    Settings.System.DIALER_WIDGET_HIDE, value ? 1 : 0, UserHandle.USER_CURRENT);
-            Helpers.restartSystem();
         } else if (preference == mLockscreenWeather) {
             boolean value = (Boolean) objValue;
             Settings.System.putIntForUser(getActivity().getContentResolver(),
