@@ -132,7 +132,9 @@ public class LockscreenShortcuts extends Fragment implements View.OnClickListene
             int id = sIconIds[i];
             ImageView v = (ImageView) getView().findViewById(id);
             v.setColorFilter(item.colorFilter);
-            v.setImageDrawable(item.icon);
+            if (!LockscreenShortcutsHelper.EMPTY.equals(item.uri)) {
+                v.setImageDrawable(item.icon);
+            }
             v.setTag(item.uri);
             if (LockscreenShortcutsHelper.NONE.equals(item.uri)) {
                 v.setImageTintList(mDefaultTintList);
@@ -147,6 +149,8 @@ public class LockscreenShortcuts extends Fragment implements View.OnClickListene
         mActions.addAction(LockscreenShortcutsHelper.NONE, R.string.lockscreen_default_target);
 
         mActions.addAction(ACTION_APP, R.string.select_application);
+
+        mActions.addAction(LockscreenShortcutsHelper.EMPTY, R.string.no_application);
     }
 
     @Override
