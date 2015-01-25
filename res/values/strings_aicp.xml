@@ -747,4 +747,144 @@
     <string name="custom_density_dialog_summary">Changing your default LCD density can sometimes cause certain apps to not function properly and/or the playstore to show apps being incompatible with your device"</string>
     <string name="dpi">DPI</string>
 
+    <!-- Liquid actions and utilities -->
+    <string name="shortcut_label">Actions &amp; Utilities</string>
+    <string name="toggle_flushmemory">GC memory</string>
+    <string name="toggle_ring_vib">Ring/Vib</string>
+    <string name="toggle_ring_silent">Ring/Silent</string>
+    <string name="toggle_ring_vib_silent">Ring/Vib/Silent</string>
+    <string name="toggle_profile">Profiles</string>
+    <string name="toggle_profile_toast">Profiles are currently disabled</string>
+    <string name="toggle_dream">Screensaver</string>
+    <string name="toggle_dream_failed">Dreams are off or disabled</string>
+
+    <!-- Navigation -->
+    <string name="navigation_pref_title">Navigation</string>
+
+    <!-- Navigation bar -->
+    <string name="navigation_bar_category">Navigation bar</string>
+    <string name="navbar_force_enable_title">Turn on navigation bar</string>
+    <string name="navbar_force_enable_summary">May require a reboot</string>
+
+    <!-- Custom navigation bar targets -->
+    <string name="choose_action_double_tap_title">Choose double tap action</string>
+    <string name="choose_action_title">Choose action</string>
+    <string name="choose_action_short_title">Choose short action</string>
+    <string name="choose_action_long_title">Choose long action</string>
+    <string name="action_long_save">set as long action</string>
+    <string name="action_short">Short action</string>
+    <string name="action_long">Long action</string>
+    <string name="action_double">Double tap action</string>
+    <string name="action_icon">Custom icon</string>
+    <string name="custom_app_icon_successfully">"'s icon set successfully!"</string>
+    <string name="add_button">Add button</string>
+    <string name="category_navbar">Navigation bar</string>
+    <string name="navbar_tab_arrange">Editor</string>
+    <string name="navbar_tab_settings">Settings</string>
+    <string name="change_layouts_title"> Layout </string>
+    <string name="change_layouts_dialog_title">Select a layout to edit</string>
+    <string name="alternate_key_layouts">Number of enabled layouts</string>
+    <string name="alternate_key_layouts_summary">Enable the layout changer keys and set the number of enabled layouts</string>
+    <string name="alternate_key_layouts_enabled_summary">navigation bar layouts are currently enabled</string>
+    <string name="alternate_key_layouts_enabled_partial_summary">out of 5</string>
+    <string name="alternate_key_layouts_all_enabled_summary">All 5 navigation bar layouts are currently enabled</string>
+    <string name="alternate_menu_summary">Allow legacy menu key to replace layout switch when requested</string>
+    <string name="layouts_dialog_title">Number of enabled layouts</string>
+    <string name="enable_sidekeys">Allow legacy menu keys</string>
+    <string name="enable_sidekeys_summary">Add a space to allow the side menu keys in the navigation bar.</string>
+    <string name="navigation_bar_height_text">Bar height in portrait</string>
+    <string name="navigation_bar_height_landscape_text">Bar height in landscape</string>
+    <string name="navigation_bar_width_text">Bar width in landscape</string>
+    <string name="enable_ime_layout">Extra IME buttons</string>
+    <string name="enable_ime_layout_summary">Include a switch that changes the layout to keyboard arrows and the AOSP keyboard switcher</string>
+    <string name="enable_ime_layout_disabled">Not enough room in the layout: enable additional layouts or legacy menu keys</string>
+    <string name="customize_ime_layout_dialog_title">Customize IME key layout</string>
+    <string name="ime_layout_ime">IME switcher</string>
+    <string name="ime_layout_home">home button</string>
+    <string name="ime_layout_blank">blank space before dpad keys</string>
+    <string name="editor_instructions">Rearrange by dragging by the handle on the right. Remove by swiping.</string>
+    <string name="save">Save</string>
+    <string name="navigation_bar_longpress_timeout_text">Button longpress delay</string>
+    <string name="enable_navigation_ring_title">Navigation search assistant</string>
+    <string name="enable_navigation_ring_summary">Enable long-press on home for the google now search assistant</string>
+    <string name="navbar_use_gallary_warning">Info: please select Gallery to save image</string>
+
+    <!-- Pie control -->
+    <string name="pie_control_title">Pie control</string>
+    <string name="pie_control_summary">Enable pie on screen navigation</string>
+    <string name="pie_control_size">Navigation size</string>
+    <string name="pie_control_trigger_positions">Trigger options</string>
+    <string name="pie_control_trigger_left">Trigger left screen border</string>
+    <string name="pie_control_trigger_bottom">Trigger bottom screen border</string>
+    <string name="pie_control_trigger_right">Trigger right screen border</string>
+    <string name="pie_control_trigger_top">Trigger top screen border</string>
+    <string name="pie_control_trigger_top_summary">Top pie does not show status and clock information</string>
+    <string name="pie_button_style">Buttons style</string>
+    <string name="pie_button_color_title">Button color</string>
+    <string name="pie_button_alpha_title">Button transparency</string>
+    <string name="pie_button_outline_color_title">Button outline color</string>
+    <string name="pie_button_pressed_color_title">Button pressed color</string>
+    <string name="pie_button_long_pressed_color_title">Button long pressed color</string>
+    <string name="pie_button_pressed_alpha_title">Button pressed transparency</string>
+    <string name="pie_icon_style">Button icon style</string>
+    <string name="pie_icon_color_title">Button icon color</string>
+    <string name="pie_icon_color_mode_title">Button icon color mode</string>
+    <string name="pie_icon_color_mode_dialog_title">Colorize</string>
+    <string name="pie_icon_color_mode_summary">Change the button icon color mode</string>
+    <string name="pie_trigger_note_title">Note</string>
+    <string name="pie_trigger_note_summary">To avoid conflicts with status bar or navigation bar, the triggers on these edges are automatically turned off if one or both are available</string>
+    <string name="pie_background_color_title">Background color</string>
+    <string name="pie_snap_color_title">Snap point color</string>
+    <string name="pie_text_color_title">Text color</string>
+    <string name="pie_background_alpha_title">Background transparency</string>
+    <string name="pie_mirror_right_title">Mirror right pie</string>
+    <string name="pie_mirror_right_summary">Mirror right pie on the horizontal axis</string>
+    <string name="pie_style">Style and dimension</string>
+    <string name="pie_style_title">Style</string>
+    <string name="pie_dimens_title">Dimension</string>
+    <string name="pie_additional_options">Additional options</string>
+    <string name="pie_show_snap_title">Show snap points</string>
+    <string name="pie_show_snap_summary">Shows snap points to change the trigger edge dynamically</string>
+    <string name="pie_show_text_title">Show status and clock</string>
+    <string name="pie_show_text_summary">Shows phone status, time and date information</string>
+    <string name="pie_show_background_title">Show background</string>
+    <string name="pie_show_background_summary">Enable pie background screen</string>
+    <string name="pie_button">Buttons</string>
+    <string name="pie_button_second_layer">Buttons second layer</string>
+    <string name="pie_button_second_layer_summary">Change second layer buttons</string>
+    <string name="pie_button_style_summary">Change pie button style</string>
+    <string name="pie_style_reset_message">Reset style entries to default?</string>
+    <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Removing every %1$s in the list will disable the second pie layer entirely.</string>
+    <string name="icon_color_mode_all_icons">All icons</string>
+    <string name="icon_color_mode_system_icons">System icons</string>
+    <string name="icon_color_mode_system_custom_icons">System and custom icons</string>
+
+    <!-- Navigation bar visibility -->
+    <string name="navigation_menu_default_jb_behavior">Show on request (default)</string>
+    <string name="navigation_menu_never_show">Never show</string>
+    <string name="navigation_menu_always_show">Always show</string>
+    <string name="title_pref_menu_display">Menu visibility</string>
+    <string name="summary_pref_menu_display">How and when do you want the menu buttons to appear?</string>
+
+    <!-- Notification drawer -->
+    <string name="notification_drawer_title">Notification drawer</string>
+    <string name="qs_category_title">Quick Settings</string>
+    <string name="qs_order_title">Select and order tiles</string>
+    <string name="add_qs">Add new tile</string>
+    <string name="cast_screen">Cast screen</string>
+    <string name="hotspot">Hotspot</string>
+    <string name="qs_action_delete">Delete</string>
+    <string name="qs_action_add">Add</string>
+    <string name="qs_action_no_more_tiles">No more tiles available</string>
+    <string name="qs_main_tiles_title">Enlarge first row</string>
+    <string name="qs_main_tiles_summary_on">Two main tiles on the first row</string>
+    <string name="qs_main_tiles_summary_off">Three tiles on each row</string>
+
+    <!-- Shortcut picker -->
+    <string name="use_custom_app_title">Use custom application</string>
+    <string name="use_custom_app_summary">Use custom application instead of the recent applications dialog</string>
+    <string name="group_applications">Applications</string>
+    <string name="select_custom_app_title">Select custom application</string>
+    <string name="navigation_settings_title">Navigation</string>
+
 </resources>

@@ -28,4 +28,8 @@ limitations under the License.
     <color name="expanded_button_color_normal">#4CAF50</color>
     <color name="expanded_button_color_close">#F44336</color>
     <color name="qs_tile_tint_color">#FF009587</color>
+
+    <color name="setting_separator">#ff484848</color>
+    <color name="extension_list_item_color">#ff999999</color>
+
 </resources>

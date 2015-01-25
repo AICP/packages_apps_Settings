@@ -25,7 +25,6 @@ import android.os.SystemProperties;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
-import com.android.settings.ButtonSettings;
 import com.android.settings.DisplaySettings;
 import com.android.settings.R;
 import com.android.settings.Utils;
@@ -68,7 +67,6 @@ public class BootReceiver extends BroadcastReceiver {
 
         /* Restore the hardware tunable values */
         DisplaySettings.restore(ctx);
-        ButtonSettings.restoreKeyDisabler(ctx);
         DisplayColor.restore(ctx);
         DisplayGamma.restore(ctx);
         VibratorIntensity.restore(ctx);

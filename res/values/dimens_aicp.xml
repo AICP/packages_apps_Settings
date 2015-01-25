@@ -31,4 +31,21 @@
     <!-- Gesture Anywhere -->
     <dimen name="ga_gesture_thumbnail_inset">8dip</dimen>
     <dimen name="ga_gesture_thumbnail_size">64dip</dimen>
+
+    <!-- navbar height -->
+    <dimen name="navigation_bar_height_default">40dp</dimen>
+    <integer name="navigation_bar_height_min_percent">35</integer>
+    <integer name="navigation_bar_height_max_percent">135</integer>
+    <integer name="navigation_bar_width_min_percent">35</integer>
+    <integer name="navigation_bar_width_max_percent">135</integer>
+    <dimen name="drag_grip_ridge_size">4dp</dimen>
+    <dimen name="drag_grip_ridge_gap">2dp</dimen>
+    <dimen name="list_toggle_height">72dp</dimen>
+    <dimen name="list_toggle_width">320dp</dimen>
+    <dimen name="toggle_rearrange_dialog_title_height">68dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
 </resources>

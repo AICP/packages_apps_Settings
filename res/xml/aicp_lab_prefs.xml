@@ -23,6 +23,11 @@
         android:title="@string/various_shit_title"
         android:fragment="com.android.settings.aicp.VariousShit" />
 
+    <PreferenceScreen
+        android:id="@+id/navigation_settings"
+        android:title="@string/navigation_settings_title"
+        android:fragment="com.android.settings.liquid.NavigationSettings" />
+
     <!-- Display and Animations -->
     <PreferenceScreen
         android:id="@+id/disp_anim_settings"

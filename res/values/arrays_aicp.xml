@@ -65,7 +65,6 @@ limitations under the License.
         <item>@string/hardware_keys_action_in_app_search</item>
         <item>@string/hardware_keys_action_launch_camera</item>
         <item>@string/hardware_keys_action_sleep</item>
-        <item>@string/hardware_keys_action_last_app</item>
     </string-array>
 
     <string-array name="hardware_keys_action_values" translatable="false">
@@ -78,7 +77,6 @@ limitations under the License.
         <item>5</item>
         <item>6</item>
         <item>7</item>
-        <item>8</item>
     </string-array>
 
     <!-- Phone blacklist management -->
@@ -370,19 +368,6 @@ limitations under the License.
         <item>0</item>
         <item>1</item>
         <item>2</item>
-    </string-array>
-
-    <!--- Navigation bar height -->
-    <string-array name="navigation_bar_height_entries" translatable="false">
-        <item>@string/navigation_bar_height_48</item>
-        <item>@string/navigation_bar_height_44</item>
-        <item>@string/navigation_bar_height_40</item>
-        <item>@string/navigation_bar_height_36</item>
-        <item>@string/navigation_bar_height_32</item>
-        <item>@string/navigation_bar_height_28</item>
-        <item>@string/navigation_bar_height_24</item>
-        <item>@string/navigation_bar_height_20</item>
-        <item>@string/navigation_bar_height_0</item>
     </string-array>
 
     <string-array name="navigation_bar_height_values" translatable="false">
@@ -786,6 +771,48 @@ limitations under the License.
         <item>3</item>
         <item>4</item>
         <item>5</item>
+    </string-array>
+
+    <string-array name="navbar_dialog_entries" translatable="false">
+        <item>@string/action_short</item>
+        <item>@string/action_long</item>
+        <item>@string/action_double</item>
+        <item>@string/action_icon</item>
+    </string-array>
+
+    <string-array name="navbar_dialog_values" translatable="false">
+        <item>**short**</item>
+        <item>**long**</item>
+        <item>**double**</item>
+        <item>**icon**</item>
+    </string-array>
+
+    <!-- Pie control -->
+    <string-array name="icon_color_mode_entries">
+        <item>@string/icon_color_mode_all_icons</item>
+        <item>@string/icon_color_mode_system_icons</item>
+        <item>@string/icon_color_mode_system_custom_icons</item>
+        <item>@string/disabled</item>
+    </string-array>
+
+    <string-array name="icon_color_mode_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <!-- Navigation bar visibility -->
+    <string-array name="pref_menu_display_entries">
+        <item>@string/navigation_menu_always_show</item>
+        <item>@string/navigation_menu_never_show</item>
+        <item>@string/navigation_menu_default_jb_behavior</item>
+    </string-array>
+
+    <string-array name="pref_menu_display_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
     </string-array>
 
 </resources>
