@@ -52,6 +52,11 @@
         android:key="vpn_settings"
         android:title="@string/vpn_settings_title" />
 
+    <Preference
+        android:key="set_carrier_label"
+        android:title="@string/custom_carrier_label_title"
+        android:persistent="true" />
+
     <PreferenceScreen
         android:key="mobile_network_settings"
         android:title="@string/network_settings_title"
