@@ -18,10 +18,11 @@
         android:title="@string/various_shit_title"
         android:key="various_shit_screen">
 
-    <PreferenceCategory
-        android:key="lockscreen_category"
-        android:title="@string/lockscreen_category" >
-    </PreferenceCategory>
+    <!-- Custom bootanim -->
+    <Preference
+        android:key="custom_bootanimation"
+        android:title="@string/custom_bootanimation_title"
+        android:summary="@string/custom_bootanimation_summary" />
 
     <!-- Disable camera swipe -->
     <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
