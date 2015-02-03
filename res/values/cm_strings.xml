@@ -811,8 +811,6 @@
     <string name="sim_enabler_enabling">Activating <xliff:g id="name">%s</xliff:g>\u2026</string>
     <string name="sim_enabler_disabling">Deactivating <xliff:g id="name">%s</xliff:g>\u2026</string>
     <string name="sim_enabler_deactivate">Deactivate</string>
-    <string name="sub_activate_success">SIM activated.</string>
-    <string name="sub_deactivate_success">SIM deactivated.</string>
 
     <string name="primary_sub_select_title">Default 3G/LTE subscription</string>
 
@@ -998,7 +996,6 @@
     <string name="expanded_desktop_style_description">Choose a default expanded desktop style</string>
     <string name="expanded_desktop_title">Expanded desktop options</string>
 
-    <string name="lockscreen_settings_title">Lock screen</string>
     <string name="lockscreen_targets_message">Lock screen targets</string>
     <string name="lockscreen_default_target">Default</string>
     <string name="lockscreen_none_target">None</string>
