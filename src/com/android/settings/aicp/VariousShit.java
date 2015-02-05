@@ -99,7 +99,6 @@ public class VariousShit extends SettingsPreferenceFragment
     private static final int REQUEST_PICK_BOOT_ANIMATION = 201;
 
     private static final String KEY_LOCKSCREEN_CAMERA_WIDGET_HIDE = "camera_widget_hide";
-    private static final String KEY_LOCKSCREEN_DIALER_WIDGET_HIDE = "dialer_widget_hide";
     private static final String KEY_LOCKSCREEN_WEATHER = "lockscreen_weather";
     private static final String PREF_CUSTOM_BOOTANIM = "custom_bootanimation";
     private static final String BOOTANIMATION_SYSTEM_PATH = "/system/media/bootanimation.zip";
@@ -114,7 +113,6 @@ public class VariousShit extends SettingsPreferenceFragment
     public static final String LOCKCLOCK_PACKAGE_NAME = "com.cyanogenmod.lockclock";
 
     private SwitchPreference mCameraWidgetHide;
-    private SwitchPreference mDialerWidgetHide;
     private SwitchPreference mLockscreenWeather;
     private SwitchPreference mProximityWake;
     private PreferenceScreen mVariousShitScreen;
@@ -198,14 +196,6 @@ public class VariousShit extends SettingsPreferenceFragment
         }
         if (mCameraDisabled){
             mVariousShitScreen.removePreference(mCameraWidgetHide);
-        }
-
-        // Dialer widget hide
-        mDialerWidgetHide = (SwitchPreference) findPreference(KEY_LOCKSCREEN_DIALER_WIDGET_HIDE);
-        boolean IsVoiceCapable = res.getBoolean(
-                com.android.internal.R.bool.config_voice_capable);
-        if (!IsVoiceCapable) {
-            mVariousShitScreen.removePreference(mDialerWidgetHide);
         }
 
         // Lockscreen weather
@@ -570,3 +560,4 @@ public class VariousShit extends SettingsPreferenceFragment
     }
 
 }
+
