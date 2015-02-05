@@ -17,9 +17,7 @@
 
 package com.android.settings.aicp;
 
-import android.app.admin.DevicePolicyManager;
 import android.content.ContentResolver;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
@@ -55,8 +53,6 @@ public class VariousShit extends SettingsPreferenceFragment
     private static final String KEY_LOCKCLOCK = "lock_clock";
     private static final String KEY_NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
 
-    private static final String KEY_LOCKSCREEN_CAMERA_WIDGET_HIDE = "camera_widget_hide";
-
     private static final String KEY_HIDDEN_SHIT = "hidden_shit";
     private static final String KEY_HIDDEN_SHIT_UNLOCKED = "hidden_shit_unlocked";
     private static final String KEY_HIDDEN_IMG = "hidden_img";
@@ -65,7 +61,6 @@ public class VariousShit extends SettingsPreferenceFragment
     public static final String LOCKCLOCK_PACKAGE_NAME = "com.cyanogenmod.lockclock";
 
     private ListPreference mNavigationBarHeight;
-    private SwitchPreference mCameraWidgetHide;
     private SwitchPreference mProximityWake;
     private PreferenceScreen mVariousShitScreen;
 
@@ -133,18 +128,6 @@ public class VariousShit extends SettingsPreferenceFragment
         } else {
             mVariousShitScreen.removePreference(mHiddenShitUnlocked);
             mVariousShitScreen.removePreference(mHiddenImg);
-        }
-
-        // Camera widget hide
-        mCameraWidgetHide = (SwitchPreference) findPreference("camera_widget_hide");
-        boolean mCameraDisabled = false;
-        DevicePolicyManager dpm =
-            (DevicePolicyManager) getActivity().getSystemService(Context.DEVICE_POLICY_SERVICE);
-        if (dpm != null) {
-            mCameraDisabled = dpm.getCameraDisabled(null);
-        }
-        if (mCameraDisabled){
-            mVariousShitScreen.removePreference(mCameraWidgetHide);
         }
     }
 
