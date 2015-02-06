@@ -462,7 +462,10 @@
     <string name="heads_up_time_out_6sec">6 seconds</string>
     <string name="heads_up_time_out_8sec">8 seconds</string>
     <string name="heads_up_time_out_10sec">10 seconds</string>
-    <string name="heads_up_time_out_never">Never</string>
+    <string name="heads_up_switch">Heads up</string>
+    <string name="heads_up_switch_enabled">Heads up enabled.</string>
+    <string name="heads_up_switch_disabled">Heads up disabled.</string>
+
 
     <!-- Gesture Anywhere -->
     <string name="gesture_anywhere_title">Gesture Anywhere</string>
@@ -775,6 +778,7 @@
 
     <!-- QuickSettings tiles -->
     <string name="qs_screenshot_tile">Screenshot</string>
+    <string name="qs_screenrecord_tile">Screenrecord</string>
     <string name="qs_sync_tile">Sync</string>
 
 </resources>
