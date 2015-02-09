@@ -103,4 +103,10 @@
         android:enabled="true"
         android:layout="@layout/aicp_hidden_img" />
 
+    <Preference
+        android:key="hidden_anim"
+        android:title="@string/hidden_anim_title" >
+        <intent android:action=".aicp.HiddenAnimActivity" />
+    </Preference>
+
 </PreferenceScreen>
