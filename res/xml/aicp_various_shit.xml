@@ -99,6 +99,12 @@
         android:title="@string/hidden_shit_title"
         android:summary="@string/hidden_shit_summary" />
 
+    <Preference
+        android:key="hidden_anim"
+        android:title="@string/hidden_anim_title" >
+        <intent android:action=".aicp.HiddenAnimActivity" />
+    </Preference>
+
     <PreferenceScreen android:key="hidden_img"
         android:enabled="true"
         android:layout="@layout/aicp_hidden_img" />
