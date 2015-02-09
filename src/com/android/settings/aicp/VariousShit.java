@@ -104,6 +104,8 @@ public class VariousShit extends SettingsPreferenceFragment
     private static final String KEY_HIDDEN_SHIT = "hidden_shit";
     private static final String KEY_HIDDEN_SHIT_UNLOCKED = "hidden_shit_unlocked";
     private static final String KEY_HIDDEN_IMG = "hidden_img";
+    private static final String KEY_HIDDEN_YOGA = "hidden_anim";
+
     private static final String BACKUP_PATH = new File(Environment
             .getExternalStorageDirectory(), "/AICP_ota").getAbsolutePath();
 
@@ -126,6 +128,7 @@ public class VariousShit extends SettingsPreferenceFragment
 
     private Preference mHiddenShit;
     private PreferenceScreen mHiddenImg;
+    private PreferenceScreen mHiddenYoga;
     private CheckBoxPreference mHiddenShitUnlocked;
     long[] mHits = new long[3];
 
@@ -166,6 +169,7 @@ public class VariousShit extends SettingsPreferenceFragment
         // Hidden shit
         mHiddenShit = (Preference) findPreference(KEY_HIDDEN_SHIT);
         mHiddenImg = (PreferenceScreen) findPreference(KEY_HIDDEN_IMG);
+        mHiddenYoga = (PreferenceScreen) findPreference(KEY_HIDDEN_YOGA);
         mAllPrefs.add(mHiddenShit);
         mHiddenShitUnlocked =
                 findAndInitCheckboxPref(KEY_HIDDEN_SHIT_UNLOCKED);
@@ -181,6 +185,7 @@ public class VariousShit extends SettingsPreferenceFragment
         } else {
             mVariousShitScreen.removePreference(mHiddenShitUnlocked);
             mVariousShitScreen.removePreference(mHiddenImg);
+            mVariousShitScreen.removePreference(mHiddenYoga);
         }
 
         // Lockscreen weather
