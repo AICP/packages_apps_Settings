@@ -252,6 +252,9 @@
     <!--- Sweep To Sleep -->
     <string name="sweep_to_sleep_title">Sweep to sleep</string>
 
+    <!--- Short Sweep To Wake -->
+    <string name="short_sweep_title">Short sweep to wake</string>
+
     <!-- Privacy Settings Header item -->
     <string name="privacy_settings_cyanogenmod_title">Privacy</string>
 

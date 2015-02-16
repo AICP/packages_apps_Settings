@@ -77,6 +77,7 @@ import org.cyanogenmod.hardware.SunlightEnhancement;
 import org.cyanogenmod.hardware.TapToWake;
 import org.cyanogenmod.hardware.SweepToWake;
 import org.cyanogenmod.hardware.SweepToSleep;
+import org.cyanogenmod.hardware.ShortSweep;
 
 public class DisplaySettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, OnPreferenceClickListener, Indexable {
@@ -100,6 +101,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_TAP_TO_WAKE = "double_tap_wake_gesture";
     private static final String KEY_SWEEP_TO_WAKE = "sweep_wake_gesture";
     private static final String KEY_SWEEP_TO_SLEEP = "sweep_sleep_gesture";
+    private static final String KEY_SHORT_SWEEP = "short_sweep_gesture";
     private static final String KEY_SCREEN_OFF_GESTURE_SETTINGS = "screen_off_gesture_settings";
     private static final String KEY_DOZE_CATEGORY = "category_doze_options";
     private static final String KEY_DOZE = "doze";
@@ -135,6 +137,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private SwitchPreference mTapToWake;
     private SwitchPreference mSweepToWake;
     private SwitchPreference mSweepToSleep;
+    private SwitchPreference mShortSweep;
 
     private PreferenceCategory mDozeCategory;
     private SwitchPreference mDozePreference;
@@ -288,6 +291,12 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         if (!isSweepToSleepSupported()) {
             advancedPrefs.removePreference(mSweepToSleep);
             mSweepToSleep = null;
+        }
+
+        mShortSweep = (SwitchPreference) findPreference(KEY_SHORT_SWEEP);
+        if (!isShortSweepSupported()) {
+            advancedPrefs.removePreference(mShortSweep);
+            mShortSweep = null;
         }
 
         Utils.updatePreferenceToSpecificActivityFromMetaDataOrRemove(getActivity(),
@@ -472,6 +481,10 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             mSweepToSleep.setChecked(SweepToSleep.isEnabled());
         }
 
+        if (mShortSweep != null) {
+            mShortSweep.setChecked(ShortSweep.isEnabled());
+        }
+
 
         updateState();
         getContentResolver().registerContentObserver(
@@ -575,6 +588,15 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         }
     }
 
+    private static boolean isShortSweepSupported() {
+        try {
+            return ShortSweep.isSupported();
+        } catch (NoClassDefFoundError e) {
+            // Hardware abstraction framework not installed
+            return false;
+        }
+    }
+
     /**
      * Reads the current font size and sets the value in the summary text
      */
@@ -608,6 +630,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             return SweepToWake.setEnabled(mSweepToWake.isChecked());
         } else if (preference == mSweepToSleep) {
             return SweepToSleep.setEnabled(mSweepToSleep.isChecked());
+        } else if (preference == mShortSweep) {
+            return ShortSweep.setEnabled(mShortSweep.isChecked());
         } else if (preference == mAdaptiveBacklight) {
             if (mSunlightEnhancement != null &&
                     SunlightEnhancement.isAdaptiveBacklightRequired()) {
@@ -719,6 +743,17 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 Log.e(TAG, "Failed to restore sweep-to-sleep settings.");
             } else {
                 Log.d(TAG, "Sweep-to-sleep settings restored.");
+            }
+        }
+
+        if (isShortSweepSupported()) {
+            final boolean enabled = prefs.getBoolean(KEY_SHORT_SWEEP,
+                ShortSweep.isEnabled());
+
+            if (!ShortSweep.setEnabled(enabled)) {
+                Log.e(TAG, "Failed to restore short-sweep settings.");
+            } else {
+                Log.d(TAG, "Short-sweep settings restored.");
             }
         }
 
