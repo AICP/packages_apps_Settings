@@ -18,6 +18,12 @@
         android:title="@string/various_shit_title"
         android:key="various_shit_screen">
 
+    <!-- Status bar AICP logo -->
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+        android:key="status_bar_aicp_logo"
+        android:title="@string/status_bar_aicp_logo_title"
+        android:summary="@string/status_bar_aicp_logo_summary" />
+
     <!-- Proximity on wake -->
     <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
         android:key="proximity_on_wake"
