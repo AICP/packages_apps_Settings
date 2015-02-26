@@ -74,10 +74,4 @@
 
     </PreferenceCategory>
 
-    <com.android.settings.hardware.VibratorGestures
-            android:key="vibration_gestures"
-            android:title="@string/vibrator_gestures_title"
-            android:dialogTitle="@string/vibrator_gestures_title"
-            android:persistent="false" />
-
 </PreferenceScreen>
