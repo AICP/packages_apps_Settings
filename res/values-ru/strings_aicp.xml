@@ -776,5 +776,128 @@
   <string name="qs_screenrecord_tile">Запись с экрана</string>
   <string name="qs_sync_tile">Синхронизация</string>
   <string name="qs_tile_powermenu">Меню питания</string>
+  <string name="qs_battery_saver_tile">Режим энергосбережения</string>
+  <string name="qs_brightness_tile">Яркость</string>
+  <string name="qs_expanded_desktop_tile">Расширенный экран</string>
+  <string name="qs_notifications_tile">Уведомления</string>
+  <string name="qs_screen_off_tile">Выключение экрана</string>
   
+  <!-- QuickSettings collapse panel -->
+  <string name="quick_settings_collapse_title">Auto close panel</string>
+  <string name="quick_settings_collapse_summary">Close the Quick Settings panel upon toggle</string>
+  
+  <!-- QuickSettings 4 columns -->
+  <string name="qs_four_columns_title">Show four tiles per row</string>
+
+  <!-- Navigation bar button color -->
+  <string name="navbar_button_tint_title">Navigation button tint</string>
+
+  <!-- AOKP custom system animations -->
+  <string name="aokp_animation_title">System animations</string>
+  <string name="aokp_animation_summary">AOKP custom animation</string>
+  <string name="activity_open_title">Activity open animation</string>
+  <string name="activity_close_title">Activity close animation</string>
+  <string name="task_open_title">Task open animation</string>
+  <string name="task_close_title">Task close animation</string>
+  <string name="task_move_to_front_title">Move to front animation</string>
+  <string name="task_move_to_back_title">Move to back animation</string>
+  <string name="wallpaper_open_title">Wallpaper open animation</string>
+  <string name="wallpaper_close_title">Wallpaper close animation</string>
+  <string name="wallpaper_intra_open_title">Wallpaper intra open animation</string>
+  <string name="wallpaper_intra_close_title">Wallpaper intra close animation</string>
+  <string name="task_open_behind_title">Task open behind animation</string>
+  <string name="animation_duration_title">Animation duration</string>
+  <string name="animation_duration_default">Default</string>
+
+  <!-- The volume key answer -->
+  <string name="volume_answer_call_title">Volume key Answer</string>
+  <string name="volume_answer_call_summary">Volume up key Answer</string>
+
+  <!-- Doze pulse (ambient display) options -->
+  <string name="doze_overwrite_value_title">Overwrite value</string>
+  <string name="doze_overwrite_value_summary">Allow to overwrite default value with user config</string>
+
+  <string name="doze_list_mode_title">Doze mode</string>
+  <string name="doze_list_mode_summary">Option to configure doze mode</string>
+
+  <string name="doze_pulse_title">Time settings</string>
+  <string name="doze_pulse_duration_in_title">Fade in</string>
+  <string name="doze_pulse_duration_in_summary"></string>
+
+  <string name="doze_pulse_duration_visible_title">Visible duration</string>
+  <string name="doze_pulse_duration_visible_summary"></string>
+
+  <string name="doze_pulse_duration_out_title">Fade out</string>
+  <string name="doze_pulse_duration_out_summary"></string>
+
+  <string name="doze_pulse_on_notifications_title">Pulse doze</string>
+  <string name="doze_pulse_on_notifications_summary">Pulse display on pending notifications</string>
+
+  <string name="doze_shake_title">Shake settings</string>
+  <string name="doze_shake_mode_title">Shake mode</string>
+  <string name="doze_shake_mode_summary">Use shake sensor value to trigger activation</string>
+  <string name="doze_shake_mode_test_summary">Do you want to test shake sensor?</string>
+  <string name="doze_shake_mode_test_result">Apply current value?</string>
+  <string name="doze_shake_test">Shake your device now</string>
+  <string name="doze_shake_it">Shake detected!</string>
+
+  <string name="doze_shake_acc_threshold_title">Shake threshold</string>
+  <string name="doze_shake_acc_threshold_summary">Configure shake strength required to trigger activation</string>
+
+  <string name="doze_time_mode_title">Show clock and date</string>
+  <string name="doze_time_mode_summary">Force showing time when there is no notification</string>
+
+  <string name="twohundred_ms">200 ms</string>
+  <string name="fivehundred_ms">500 ms</string>
+  <string name="one_second">1 s</string>
+  <string name="one_second_default">1 s (default)</string>
+  <string name="onehalf_second">1.5 s</string>
+  <string name="two_second">2 s</string>
+  <string name="twohalf_second">2.5 s</string>
+  <string name="three_second">3 s</string>
+  <string name="three_second_default">3 s (default)</string>
+  <string name="threehalf_second">3.5 s</string>
+  <string name="four_second">4 s</string>
+  <string name="fourhalf_second">4.5 s</string>
+  <string name="five_second">5 s</string>
+
+  <string name="veryeasy_shake">Very easy</string>
+  <string name="easy_shake">Easy</string>
+  <string name="medium_shake">Default</string>
+  <string name="hard_shake">Hard</string>
+  <string name="veryhard_shake">Very hard</string>
+  <string name="strong_shake">Strong</string>
+
+  <string name="fully_mode">Full mode</string>
+  <string name="pocket_shake_mode">Pocket and shake</string>
+  <string name="pocket_pulse_mode">Pocket and pulse</string>
+  <string name="pocket_only_mode">Pocket</string>
+  <string name="shake_pulse_mode">Shake and pulse</string>
+  <string name="pulse_only_mode">Pulse (default)</string>
+
+  <!-- Show carrier label and custom -->
+  <string name="carrier_options">Carrier Label</string>
+  <string name="show_status_bar_carrier_title">Status bar carrier</string>
+  <string name="show_status_bar_carrier_summary">Show carrier in status bar</string>
+  <string name="custom_carrier_label_title">Custom carrier label</string>
+  <string name="custom_carrier_label_explain">Please enter a new label. Leave blank to revert to stock label.</string>
+  <string name="custom_carrier_label_notset">Custom label currently not set</string>
+  <string name="status_bar_carrier_color">Carrier label color</string>
+
+  <!-- Statusbar AICP logo -->
+  <string name="status_bar_aicp_logo_title">AICP logo</string>
+  <string name="status_bar_aicp_logo_summary">Enable to show AICP logo on the left side of statusbar</string>
+
+  <!-- Data activity icons -->
+  <string name="status_bar_show_network_activity_title">Network activity arrows</string>
+
+  <!-- Volume pane timeout -->
+  <string name="volume_panel_time_out_title">Volume panel timeout</string>
+  <string name="volume_panel_time_out_summary">Hide before <xliff:g id="number">%d</xliff:g> seconds. Auto hide on touch outside</string>
+  <string name="volume_panel_time_out_3sec">3 seconds (default)</string>
+  <string name="volume_panel_time_out_5sec">5 seconds</string>
+  <string name="volume_panel_time_out_8sec">8 seconds</string>
+  <string name="volume_panel_time_out_12sec">12 seconds</string>
+  <string name="volume_panel_time_out_15sec">15 seconds</string>
+
 </resources>
