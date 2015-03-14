@@ -334,6 +334,9 @@
   <string name="headset_connect_player_title">Εκκίνηση εφαρμογής μουσικής</string>
   <string name="headset_connect_player_summary">Εκκίνηση της προεπιλεγμένης εφαρμογής μουσικής κατά τη σύνδεση ακουστικών</string>
   <string name="ime_switcher_notify">Εικονίδιο επιλογέα</string>
+  <string name="status_bar_battery_style_dotted_circle">Διακεκομμένος κύκλος</string>
+  <string name="qs_wifi_detail_title">Λεπτομέρειες Ασύρμ. δικτύου</string>
+  <string name="qs_wifi_detail_summary">Ενεργές λεπτομέρειες Ασύρμ. δικτύου στις γρηγ.ρυθμίσεις</string>
   <string name="ime_switcher_notify_summary">Εμφάνιση εικονιδίου για τον επιλογέα μεθόδου εισαγωγής</string>
   <string name="app_notification_show_on_keyguard_title">Εμφάνιση στην οθόνη κλειδώματος</string>
   <string name="app_notification_show_on_keyguard_summary">Εμφάνιση ειδοποιήσεων από αυτήν την εφαρμογή στην οθόνη κλειδώματος</string>
