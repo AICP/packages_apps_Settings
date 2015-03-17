@@ -995,4 +995,12 @@
     <string name="heads_up_touch_outside_summary_enabled">Hide notification on touch outside and on home button press</string>
     <string name="heads_up_touch_outside_summary_disabled">Do not hide notification after touch outside or on home button press</string>
 
+    <!-- Backup/Restore -->
+    <string name="backup_restore_title">Backup/Restore</string>
+    <string name="backup_title">Backup</string>
+    <string name="backup_summary">File is saved under sdcard/AICP_ota folder</string>
+    <string name="restore_title">Restore</string>
+    <string name="restore_summary">SystemUI will be restarted on apply.\nNeeded for settings to take effect.</string>
+    <string name="choose_restore_file">Choose backup</string>
+
 </resources>
