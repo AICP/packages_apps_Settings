@@ -22,6 +22,7 @@ import android.content.pm.PackageManager;
 import android.database.ContentObserver;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteException;
+import android.hardware.CmHardwareManager;
 import android.media.AudioManager;
 import android.media.RingtoneManager;
 import android.net.Uri;
@@ -120,11 +121,6 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
         mVoiceCapable = Utils.isVoiceCapable(mContext);
         mSecure = new LockPatternUtils(getActivity()).isSecure();
 
-        mVibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
-        if (mVibrator != null && !mVibrator.hasVibrator()) {
-            mVibrator = null;
-        }
-
         addPreferencesFromResource(R.xml.notification_settings);
 
         final PreferenceCategory sound = (PreferenceCategory) findPreference(KEY_SOUND);
@@ -140,8 +136,15 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
         }
 
         initRingtones(sound);
-        initVibrateWhenRinging(sound);
         initIncreasingRing(sound);
+
+        mVibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
+        if (mVibrator == null || !mVibrator.hasVibrator()) {
+            mVibrator = null;
+            sound.removePreference(sound.findPreference(KEY_VIBRATE_WHEN_RINGING));
+        } else {
+            initVibrateWhenRinging(sound);
+        }
 
         final PreferenceCategory notification = (PreferenceCategory)
                 findPreference(KEY_NOTIFICATION);
