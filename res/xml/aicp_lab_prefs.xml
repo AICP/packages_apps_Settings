@@ -71,6 +71,12 @@
         android:fragment="com.android.settings.aicp.AppCircleBar"
         android:title="@string/app_circle_bar_title"/>
 
+    <!-- Ad blocker -->
+    <PreferenceScreen
+        android:key="hfm_settings"
+        android:title="@string/hfm_pref_screen_title"
+        android:fragment="com.android.settings.aicp.hfm.HfmSettings" />
+
     <!-- AICP OTA -->
     <PreferenceScreen
         android:id="@+id/aicp_ota"
