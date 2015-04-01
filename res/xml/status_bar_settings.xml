@@ -50,6 +50,11 @@
             android:defaultValue="0xffffffff"
             android:dependency="status_bar_aicp_logo" />
 
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="status_bar_ticker_enabled"
+            android:title="@string/status_bar_ticker_title"
+            android:summary="@string/status_bar_ticker_summary"
+            android:defaultValue="true" />
 
     <PreferenceScreen
             android:key="carrier_options"
