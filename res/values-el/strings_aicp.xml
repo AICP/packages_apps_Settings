@@ -850,7 +850,7 @@
     <string name="notification_force_expand_summary">Διευρυμένη Ειδοποιήση για όσες εφαρμογές την υποστηρίζουν</string>
 
     <!-- Slim Shortcuts -->
-    <string name="slim_shortcut_picker">Slim Ενέργειες</string>
+    <string name="slim_shortcut_picker">Ενέργειες Slim</string>
     <string name="qs_tile_slimaction">SlimActions</string>
     <string name="qs_slim_action_summary">Προσθέστε και ρυθμίστε τη σειρά του SlimActions</string>
     <string name="qs_slim_action_title">SlimActions</string>
@@ -858,6 +858,15 @@
     <!-- Long press on lock screen lock icon to sleep -->
     <string name="longpress_lock_icon_to_sleep_title">Πατήστε παρατεταμένα το εικονίδιο με την κλειδαριά για αναμονή</string>
     <string name="longpress_lock_icon_to_sleep_summary">Η επιλογή δεν λειτουργεί αν η έξυπνη κλειδαριά και προσβασιμότητα αφής είναι ενεργοποιημένες</string>
+
+    <!-- Wakelock blocker -->
+    <string name="wakelock_blocker_title">Μπλοκάρισμα Wakelock</string>
+    <string name="wakelock_blocker_summary">Αποκλεισμός wakelocks</string>
+    <string name="wakelock_blocker_save">Αποθήκευση</string>
+    <string name="wakelock_list_header">Διαθέσιμα wakelocks</string>
+    <string name="wakelock_blocker_reload">Επαναφόρτωση</string>
+    <string name="wakelock_blocker_warning_title">Ενεργήστε με προσοχή</string>
+    <string name="wakelock_blocker_warning">Φραγή wakelocks έχουν τη δυνατότητα να προκαλέσουν αστάθεια, κολλήματα ή απώλεια δεδομένων</string>
 
     <!-- Heads Up -->
     <string name="category_heads_up">Ειδοποιήσεις επικεφαλίδων</string>
