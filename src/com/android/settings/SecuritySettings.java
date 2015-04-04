@@ -503,7 +503,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
         return false;
     }
 
-    private static ArrayList<TrustAgentComponentInfo> getActiveTrustAgents(
+    public static ArrayList<TrustAgentComponentInfo> getActiveTrustAgents(
             PackageManager pm, LockPatternUtils utils) {
         ArrayList<TrustAgentComponentInfo> result = new ArrayList<TrustAgentComponentInfo>();
         List<ResolveInfo> resolveInfos = pm.queryIntentServices(TRUST_AGENT_INTENT,
