@@ -30,7 +30,9 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.PowerManager;
+import android.preference.Preference;
 import android.provider.Settings.Global;
+import android.provider.Settings;
 import android.util.Log;
 import android.widget.Switch;
 
@@ -41,12 +43,17 @@ import com.android.settings.Utils;
 import com.android.settings.notification.SettingPref;
 import com.android.settings.widget.SwitchBar;
 
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
+
 public class BatterySaverSettings extends SettingsPreferenceFragment
-        implements SwitchBar.OnSwitchChangeListener {
+        implements SwitchBar.OnSwitchChangeListener,
+        Preference.OnPreferenceChangeListener {
     private static final String TAG = "BatterySaverSettings";
     private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
     private static final String KEY_TURN_ON_AUTOMATICALLY = "turn_on_automatically";
     private static final long WAIT_FOR_SWITCH_ANIM = 500;
+
+    private static final String PREF_COLOR_PICKER = "battery_saver_color";
 
     private final Handler mHandler = new Handler();
     private final SettingsObserver mSettingsObserver = new SettingsObserver(mHandler);
@@ -59,6 +66,7 @@ public class BatterySaverSettings extends SettingsPreferenceFragment
     private Switch mSwitch;
     private boolean mValidListener;
     private PowerManager mPowerManager;
+    private ColorPickerPreference mColorPicker;
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -90,6 +98,10 @@ public class BatterySaverSettings extends SettingsPreferenceFragment
         };
         mTriggerPref.init(this);
 
+        mColorPicker = (ColorPickerPreference) findPreference(PREF_COLOR_PICKER);
+        mColorPicker.setOnPreferenceChangeListener(this);
+        initColorPicker();
+
         mPowerManager = (PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
     }
 
@@ -120,6 +132,20 @@ public class BatterySaverSettings extends SettingsPreferenceFragment
             mSwitchBar.removeOnSwitchChangeListener(this);
             mValidListener = false;
         }
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mColorPicker) {
+            String hex = ColorPickerPreference.convertToARGB(Integer.valueOf(String
+                    .valueOf(newValue)));
+            preference.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.BATTERY_SAVER_MODE_COLOR, intHex);
+            return true;
+        }
+        return false;
     }
 
     @Override
@@ -218,5 +244,19 @@ public class BatterySaverSettings extends SettingsPreferenceFragment
                 cr.unregisterContentObserver(this);
             }
         }
+    }
+
+    private void initColorPicker() {
+        int intColor = Settings.System.getInt(getActivity().getContentResolver(),
+                    Settings.System.BATTERY_SAVER_MODE_COLOR, -2);
+        if (intColor == -2) {
+            intColor = getResources().getColor(
+                    com.android.internal.R.color.battery_saver_mode_color);
+            mColorPicker.setSummary(getResources().getString(R.string.default_string));
+        } else {
+            String hexColor = String.format("#%08x", (0xffffffff & intColor));
+            mColorPicker.setSummary(hexColor);
+        }
+        mColorPicker.setNewPreviewColor(intColor);
     }
 }
