@@ -109,6 +109,7 @@ public final class HfmHelpers {
         Process P = Runtime.getRuntime().exec("su 0 setenforce 0");
         DataOutputStream os = new DataOutputStream(P.getOutputStream());
         os.writeBytes(string + "\n");
+        os.writeBytes("setenforce 1\n");
         os.writeBytes("exit\n");
         os.flush();
     }
