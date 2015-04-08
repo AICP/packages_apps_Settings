@@ -971,4 +971,12 @@
     <string name="calibration_control_title">Calibration Control</string>
     <string name="calibration_control_summary">Turn on touch calibration control</string>
 
+    <!-- Navigation bar -->
+    <string name="navbar_force_enable_title">Turn on navigation bar</string>
+    <string name="navbar_force_enable_summary">May require a reboot</string>
+
+    <!-- Ability to disable hardware keys via nav bar settings -->
+    <string name="hw_keys_title">Hardware keys</string>
+    <string name="hw_keys_summary">Enable hardware keys</string>
+
 </resources>
