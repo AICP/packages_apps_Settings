@@ -36,12 +36,6 @@
         android:key="navigation_bar"
         android:title="@string/navigation_bar_category" >
 
-        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-            android:key="navbar_force_enable"
-            android:title="@string/navbar_force_enable_title"
-            android:summary="@string/navbar_force_enable_summary"
-            android:defaultValue="false" />
-
         <PreferenceScreen
             android:key="navigation_bar"
             android:fragment="com.android.settings.cyanogenmod.NavBar"
@@ -120,6 +114,12 @@
     <PreferenceCategory
         android:key="hw_keys"
         android:title="@string/hw_keys_title">
+
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="navbar_force_enable"
+            android:title="@string/navbar_force_enable_title"
+            android:summary="@string/navbar_force_enable_summary"
+            android:defaultValue="false" />
 
 	<SwitchPreference
             android:key="enable_hw_keys"
