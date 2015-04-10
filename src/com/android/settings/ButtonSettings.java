@@ -73,7 +73,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private static final String KEY_APP_SWITCH_PRESS = "hardware_keys_app_switch_press";
     private static final String KEY_APP_SWITCH_LONG_PRESS = "hardware_keys_app_switch_long_press";
     private static final String KEY_SWAP_VOLUME_BUTTONS = "swap_volume_buttons";
-    private static final String CATEGORY_NAV_BAR_ENABLE = "navigation_bar_enable";
     private static final String KEY_ENABLE_HW_KEYS = "enable_hw_keys";
     private static final String KEY_NAVIGATION_BAR_LEFT = "navigation_bar_left";
     private static final String KEY_NAVIGATION_RECENTS_LONG_PRESS = "navigation_recents_long_press";
@@ -137,6 +136,8 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
 
     private PreferenceCategory mNavigationPreferencesCat;
 
+    private boolean mCheckPreferences;
+
     private Handler mHandler;
 
     @Override
@@ -161,8 +162,16 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
 
         mNavigationPreferencesCat = (PreferenceCategory) findPreference(CATEGORY_NAVBAR);
 
-        // Navigation bar left
-        mNavigationBarLeftPref = (SwitchPreference) findPreference(KEY_NAVIGATION_BAR_LEFT);
+        final boolean hasRealNavigationBar = getResources()
+                .getBoolean(com.android.internal.R.bool.config_showNavigationBar);
+        if (hasRealNavigationBar) { // only disable on devices with REAL navigation bars
+            final Preference pref = findPreference(CATEGORY_HW_KEYS);
+            if (pref != null) {
+                getPreferenceScreen().removePreference(pref);
+            }
+        // Attach final settings screen.
+        reloadSettings();
+        }
 
         // Enable/disable hw keys
         boolean enableHwKeys = Settings.System.getInt(getContentResolver(),
@@ -176,6 +185,9 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
                     getPreferenceScreen().findPreference(CATEGORY_HW_KEYS);
             getPreferenceScreen().removePreference(hwKeysPref);
         }
+
+        // Navigation bar left
+        mNavigationBarLeftPref = (SwitchPreference) findPreference(KEY_NAVIGATION_BAR_LEFT);
 
         // Navigation bar button color
         mNavbarButtonTint = (ColorPickerPreference) findPreference(NAVIGATION_BAR_TINT);
@@ -389,6 +401,26 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
             }
         } else {
             result.put(CATEGORY_VOLUME, null);
+        }
+
+        try {
+            // Only show the navigation bar category on devices that have a navigation bar
+            // unless we are forcing it via development settings
+            boolean forceNavbar = android.provider.Settings.System.getInt(resolver,
+                    android.provider.Settings.System.NAVBAR_FORCE_ENABLE, 0) == 1;
+            boolean hasNavBar = WindowManagerGlobal.getWindowManagerService().hasNavigationBar()
+                    || forceNavbar || WindowManagerGlobal.getWindowManagerService().needsNavigationBar();
+
+            if (!ScreenType.isPhone(context)) {
+                result.put(KEY_NAVIGATION_BAR_LEFT, CATEGORY_NAVBAR);
+            }
+
+            if (!hasNavBar &&
+                    !cmHardwareManager.isSupported(CmHardwareManager.FEATURE_KEY_DISABLE)) {
+                result.put(CATEGORY_NAVBAR, null);
+            }
+        } catch (RemoteException e) {
+            Log.e(TAG, "Error getting navigation bar status");
         }
 
         if (!ButtonBacklightBrightness.isButtonSupported(context) &&
@@ -696,6 +728,21 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
                 Settings.Secure.RING_HOME_BUTTON_BEHAVIOR, (mHomeAnswerCall.isChecked()
                         ? Settings.Secure.RING_HOME_BUTTON_BEHAVIOR_ANSWER
                         : Settings.Secure.RING_HOME_BUTTON_BEHAVIOR_DO_NOTHING));
+    }
+
+    private PreferenceScreen reloadSettings() {
+        mCheckPreferences = false;
+        PreferenceScreen prefs = getPreferenceScreen();
+        if (prefs != null) {
+            prefs.removeAll();
+        }
+
+        // Load the preferences from an XML resource
+        addPreferencesFromResource(R.xml.button_settings);
+        prefs = getPreferenceScreen();
+
+        mCheckPreferences = true;
+        return prefs;
     }
 
     public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
