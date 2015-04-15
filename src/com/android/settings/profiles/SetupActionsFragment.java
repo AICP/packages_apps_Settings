@@ -74,6 +74,7 @@ import com.android.settings.profiles.actions.item.AirplaneModeItem;
 import com.android.settings.profiles.actions.item.AppGroupItem;
 import com.android.settings.profiles.actions.item.BrightnessItem;
 import com.android.settings.profiles.actions.item.ConnectionOverrideItem;
+import com.android.settings.profiles.actions.item.DozeModeItem;
 import com.android.settings.profiles.actions.item.Header;
 import com.android.settings.profiles.actions.item.Item;
 import com.android.settings.profiles.actions.item.LockModeItem;
@@ -81,6 +82,7 @@ import com.android.settings.profiles.actions.item.ProfileNameItem;
 import com.android.settings.profiles.actions.item.RingModeItem;
 import com.android.settings.profiles.actions.item.TriggerItem;
 import com.android.settings.profiles.actions.item.VolumeStreamItem;
+import com.android.settings.Utils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -118,6 +120,11 @@ public class SetupActionsFragment extends SettingsPreferenceFragment
         Profile.ExpandedDesktopMode.DEFAULT,
         Profile.ExpandedDesktopMode.ENABLE,
         Profile.ExpandedDesktopMode.DISABLE
+    };
+    private static final int[] DOZE_MAPPING = new int[] {
+        Profile.DozeMode.DEFAULT,
+        Profile.DozeMode.ENABLE,
+        Profile.DozeMode.DISABLE
     };
     private List<Item> mItems = new ArrayList<Item>();
 
@@ -211,6 +218,11 @@ public class SetupActionsFragment extends SettingsPreferenceFragment
         mItems.add(new AirplaneModeItem(mProfile.getAirplaneMode()));
         mItems.add(new LockModeItem(mProfile));
         mItems.add(new BrightnessItem(mProfile.getBrightness()));
+
+        final Activity activity = getActivity();
+        if (Utils.isDozeAvailable(activity)) {
+            mItems.add(new DozeModeItem(mProfile));
+        }
 
         // app groups
         mItems.add(new Header(getString(R.string.profile_app_group_category_title)));
@@ -506,6 +518,35 @@ public class SetupActionsFragment extends SettingsPreferenceFragment
             @Override
             public void onClick(DialogInterface dialog, int item) {
                 mProfile.setScreenLockMode(LOCKMODE_MAPPING[item]);
+                updateProfile();
+                mAdapter.notifyDataSetChanged();
+                dialog.dismiss();
+            }
+        });
+
+        builder.setNegativeButton(android.R.string.cancel, null);
+        builder.show();
+    }
+
+    private void requestDozeModeDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        final String[] dozeEntries =
+                getResources().getStringArray(R.array.profile_doze_entries);
+
+        int defaultIndex = 0; // no action
+        for (int i = 0; i < DOZE_MAPPING.length; i++) {
+            if (DOZE_MAPPING[i] == mProfile.getDozeMode()) {
+                defaultIndex = i;
+                break;
+            }
+        }
+
+        builder.setTitle(R.string.doze_title);
+        builder.setSingleChoiceItems(dozeEntries, defaultIndex,
+                new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int item) {
+                mProfile.setDozeMode(DOZE_MAPPING[item]);
                 updateProfile();
                 mAdapter.notifyDataSetChanged();
                 dialog.dismiss();
@@ -918,6 +959,8 @@ public class SetupActionsFragment extends SettingsPreferenceFragment
             requestBrightnessDialog(item.getSettings());
         } else if (itemAtPosition instanceof LockModeItem) {
             requestLockscreenModeDialog();
+        } else if (itemAtPosition instanceof DozeModeItem) {
+            requestDozeModeDialog();
         } else if (itemAtPosition instanceof RingModeItem) {
             RingModeItem item = (RingModeItem) itemAtPosition;
             requestRingModeDialog(item.getSettings());
