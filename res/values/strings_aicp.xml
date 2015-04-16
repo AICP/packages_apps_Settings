@@ -971,4 +971,8 @@
     <string name="calibration_control_title">Calibration Control</string>
     <string name="calibration_control_summary">Turn on touch calibration control</string>
 
+    <!-- Screen security -->
+    <string name="unlock_quick_unlock_control_title">Quick unlock</string>
+    <string name="unlock_quick_unlock_control_summary">Unlock automatically when the correct PIN/password is entered</string>
+
 </resources>
