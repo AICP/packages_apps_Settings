@@ -75,7 +75,6 @@ public class SecuritySettings extends SettingsPreferenceFragment
             new Intent(TrustAgentService.SERVICE_INTERFACE);
 
     // Lock Settings
-    private static final String KEY_GENERAL_CATEGORY = "general_category";
     private static final String KEY_UNLOCK_SET_OR_CHANGE = "unlock_set_or_change";
     private static final String KEY_BIOMETRIC_WEAK_IMPROVE_MATCHING =
             "biometric_weak_improve_matching";
@@ -282,14 +281,12 @@ public class SecuritySettings extends SettingsPreferenceFragment
             }
         }
 
-        PreferenceGroup generalCategory = (PreferenceGroup)
-                root.findPreference(KEY_GENERAL_CATEGORY);
         // remove lockscreen visualizer option on low end gfx devices
-        if (!ActivityManager.isHighEndGfx() && generalCategory != null) {
+        if (!ActivityManager.isHighEndGfx() && securityCategory != null) {
             SwitchPreference displayVisualizer = (SwitchPreference)
-                    generalCategory.findPreference(KEY_SHOW_VISUALIZER);
+                    securityCategory.findPreference(KEY_SHOW_VISUALIZER);
             if (displayVisualizer != null) {
-                generalCategory.removePreference(displayVisualizer);
+                securityCategory.removePreference(displayVisualizer);
             }
         }
 
