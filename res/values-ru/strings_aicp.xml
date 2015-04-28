@@ -254,8 +254,8 @@
   <string name="block_on_secure_keyguard_summary">Отключить доступ к быстрым настройкам на защищённом экране блокировки.</string>
   
   <!-- LockClocK -->
-  <string name="lock_clock_title">Настройки cLock</string>
-  <string name="lock_clock_summary">Просмотр и настройка виджета \'cLock\'</string>
+  <string name="lock_clock_title">Настройки виджета часов и погоды</string>
+  <string name="lock_clock_summary">Просмотр и настройка виджета</string>
   
   <!-- QuickSettings: Smart Pulldown -->
   <string name="smart_pulldown_title">Умный доступ</string>
@@ -585,8 +585,8 @@
   <string name="weather_condition_icon_monochrome_title">Монохромные</string>
   <string name="weather_condition_icon_colored_title">Цветные</string>
   <string name="weather_condition_icon_vclouds_title">Реалистичные</string>
-  <string name="weather_colorize_all_icons_title">Раскрасить все иконки</string>
-  <string name="weather_colorize_all_icons_summary">Включить раскрашивание всех иконок, за исключением монохромных</string>
+  <string name="weather_colorize_all_icons_title">Изменить цвет</string>
+  <string name="weather_colorize_all_icons_summary">Включить изменение цвета иконок, за исключением монохромных</string>
   <string name="icons_title">Иконки</string>
   <string name="position_right_title">Справа</string>
   <string name="position_centered_title">По центру</string>
@@ -908,8 +908,8 @@
   <string name="show_cpu_info_summary">Информация о процессоре отображается на экране</string>	
   
   <!-- QuickSettings haptic feedback -->
-    <string name="quick_settings_vibrate_title">Vibrate on touch</string>
-    <string name="quick_settings_vibrate_summary">Vibrate when touching tiles</string>
+    <string name="quick_settings_vibrate_title">Вибрировать при нажатии</string>
+    <string name="quick_settings_vibrate_summary">Вибрировать при нажатии на плитку быстрых настроек</string>
 
   <!-- Nfc settings -->
   <string name="nfc_polling_mode_title">Настройки NFC</string>
