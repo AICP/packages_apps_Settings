@@ -969,4 +969,7 @@
     <string name="calibration_control_title">Calibration Control</string>
     <string name="calibration_control_summary">Turn on touch calibration control</string>
 
+    <!-- Enable power menu -->
+    <string name="lockscreen_enable_power_menu_title">Power menu in lockscreen</string>
+
 </resources>
