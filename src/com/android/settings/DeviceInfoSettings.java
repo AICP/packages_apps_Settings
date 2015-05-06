@@ -227,7 +227,8 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         super.onResume();
         mDevHitCountdown = getActivity().getSharedPreferences(DevelopmentSettings.PREF_FILE,
                 Context.MODE_PRIVATE).getBoolean(DevelopmentSettings.PREF_SHOW,
-                        android.os.Build.TYPE.equals("eng")) ? -1 : TAPS_TO_BE_A_DEVELOPER;
+                        android.os.Build.TYPE.equals("eng") || android.os.Build.TYPE.equals("userdebug")
+                        || android.os.Build.TYPE.equals("user")) ? -1 : TAPS_TO_BE_A_DEVELOPER;
         mDevHitToast = null;
         mDevIdCountdown = TAPS_TO_SHOW_DEVICEID;
         mDevIdToast = null;
@@ -349,7 +350,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
                 if (mDevHitToast != null) {
                     mDevHitToast.cancel();
                 }
-                mDevHitToast = Toast.makeText(getActivity(), R.string.show_dev_already_cm,
+                mDevHitToast = Toast.makeText(getActivity(), R.string.show_dev_already_enabled,
                         Toast.LENGTH_LONG);
                 mDevHitToast.show();
             }
