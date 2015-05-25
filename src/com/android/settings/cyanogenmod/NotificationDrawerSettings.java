@@ -36,6 +36,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.cyanogenmod.qs.QSTiles;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
+import com.android.settings.util.Helpers;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,12 +52,14 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
     private static final String PREF_SMART_PULLDOWN = "smart_pulldown";
     private static final String PREF_BLOCK_ON_SECURE_KEYGUARD = "block_on_secure_keyguard";
     private static final String PREF_QS_SHOW_BRIGHTNESS_SLIDER = "qs_show_brightness_slider";
+    private static final String PREF_ENABLE_TASK_MANAGER = "enable_task_manager";
 
     private Preference mQSTiles;
     private ListPreference mQuickPulldown;
     private ListPreference mSmartPulldown;
     private SwitchPreference mBlockOnSecureKeyguard;
     private SwitchPreference mBrightnessSlider;
+    private SwitchPreference mEnableTaskManager;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -103,6 +106,12 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
                 Settings.Secure.QS_SHOW_BRIGHTNESS_SLIDER, 1);
         updateBrightnessSliderSummary(brightnessSlider);
 
+        // Task manager
+        mEnableTaskManager = (SwitchPreference) prefs.findPreference(PREF_ENABLE_TASK_MANAGER);
+        mEnableTaskManager.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.ENABLE_TASK_MANAGER, 0) == 1));
+        mEnableTaskManager.setOnPreferenceChangeListener(this);
+
     }
 
     @Override
@@ -142,6 +151,11 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
                     Settings.Secure.QS_SHOW_BRIGHTNESS_SLIDER, 1);
             updateBrightnessSliderSummary(brightnessSlider);
             return true;
+        } else if  (preference == mEnableTaskManager) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.ENABLE_TASK_MANAGER,
+                    (Boolean) newValue ? 1 : 0);
+            Helpers.restartSystemUI();
         }
         return false;
     }
