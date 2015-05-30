@@ -19,7 +19,6 @@
   <string name="mod_version">Версия AICP</string>
   <!-- About phone screen, AICP unknown name-->
   <string name="mod_version_default">Неизвестно</string>
-  <string name="model_name">Модель</string>
   <!-- About phone screen, build date of ROM -->
   <string name="build_date">Дата сборки</string>
   <string name="build_date_default">2012-01-01-0000</string>
@@ -430,8 +429,10 @@
   <!-- Lockscreen Shortcuts -->
   <string name="lockscreen_shortcuts_title">Ярлыки</string>
   <string name="lockscreen_shortcuts_summary">Просмотр и изменения ярлыков экрана блокировки</string>
-  <string name="lockscreen_shorcuts_longpress_title">Длительное нажатие на ярлык</string>
-  <string name="lockscreen_shorcuts_longpress_summary">Открывать свой локскрин при длительном нажатии</string>
+  <string name="lockscreen_shorcuts_launch_type_title">Варианты нажатий</string>
+  <string name="lockscreen_shortcuts_single_tap">Нажатие</string>
+  <string name="lockscreen_shortcuts_double_tap">Двойное нажатие</string>
+  <string name="lockscreen_shortcuts_longpress">Длительное нажатие</string>
   
   <!-- Unaccounted and overcounted battery stats -->
   <string name="show_unac_and_overcounted_stats_title">Показывать неучтенную статистику</string>
@@ -522,6 +523,73 @@
   <string name="listview_anticipate_overshoot_interpolator">Приближение и выбрасывание</string>
   <string name="listview_bounce_interpolator">Отскакивание</string>
   
+  <!-- Lock Gesture settings -->
+  <!-- Security & location settings screen, setting option name -->
+  <string name="lockgesture_change_lock_pattern_label">Изменить жест разблокировки</string>
+  <!-- Security & location settings screen, change unlock gesture screen instruction when the user chooses "Change unlock gesture".  We first ask the user toe nter the current pattern, and this is the message seen -->
+  <string name="lockgesture_change_lock_pin_label">Изменить PIN разблокировки</string>
+  <!-- Security & location settings screen, change unlock gesture screen instruction when the user chooses "Change unlock gesture".  We first ask the user toe nter the current pattern, and this is the message seen -->
+  <string name="lockgesture_need_to_unlock">Подтвердить сохраненный жест</string>
+  <!-- Do not translate. -->
+  <string name="lockgesture_need_to_unlock_footer" />
+  <!-- Security & location settings screen, change unlock gesture screen instruction if user draws incorrect pattern -->
+  <string name="lockgesture_need_to_unlock_wrong">Попробуйте ещё:</string>
+  <!-- Do not translate. -->
+  <string name="lockgesture_need_to_unlock_wrong_footer" />
+  <!-- Security & location settings screen, change unlock gesture screen instruction on top of screen.  This si when they are supposed to draw a new unlock pattern (for example, if they are changing their unlock patterns)..-->
+  <string name="lockgesture_recording_intro_header">Нарисовать жест разблокировки:</string>
+  <!-- Security & location settings screen, change unlock gesture screen hint on bottom of screen.  We are telling them to press the menu button to see more options or help. -->
+  <string name="lockgesture_recording_intro_footer">Нажать меню для помощи.</string>
+  <!-- Security & location settings screen, change unlock gesture screen instruction on top of screen while drawing pattern -->
+  <string name="lockgesture_recording_inprogress">Отпустите палец, когда завершите.</string>
+  <!-- Security & location settings screen, change unlock gesture screen message on top of screen after drawing pattern -->
+  <string name="lockgesture_pattern_entered_header">Жест записан.</string>
+  <!-- Security & location settings screen, change unlock gesture screen instruction on top of screen to confirm pattern -->
+  <string name="lockgesture_need_to_confirm">нарисуйте жест снова для подтверждения:</string>
+  <string name="lockgesture_pattern_confirmed_header">Ваш новый жест разблокировки:</string>
+  <!-- Security & location settings screen, change unlock gesture screen button, on bottom of screen.  After they draw a gesture and release their finger, we display the pattern so they remember.  When they are ready to draw it once again to confirm it, they press this button. -->
+  <string name="lockgesture_confirm_button_text">Подтвердить</string>
+  <!-- Security & location settings screen, change unlock gesture screen button, on bottom of screen.  After they draw a gesture and release their finger, we display the pattern so they remember.  If they are nto satisfied with this pattern, they click this button to redraw the pattern. -->
+  <string name="lockgesture_restart_button_text">Изменить</string>
+  <!-- Security & location settings screen, change unlock gesture screen button, on bottom of screen. If they are supposed to enter their current gesture before being able to draw another one, and they screw up, they hit this button to try again -->
+  <string name="lockgesture_retry_button_text">Повторить</string>
+  <!-- Security & location settings screen, change unlock gesture screen button, on bottom of screen. Once they draw a new gesture and confirm it by drawing it again, they press this button to exit -->
+  <string name="lockgesture_continue_button_text">Продолжить</string>
+  <!-- Security & location settings screen, unlock screen activity title -->
+  <string name="lockgesture_settings_title">Жест разблокировки</string>
+  <!-- Security & location settings screen, setting check box title if the unlock pattern MUST be drawn everytime they turn on the screen -->
+  <string name="lockgesture_settings_enable_title">Затребовать жест</string>
+  <!-- Security & location settings screen, setting summary for the checkbox "Require pattern" -->
+  <string name="lockgesture_settings_enable_summary">Должен быть нарисован для разблокировки</string>
+  <!-- Security & location settings screen, setting check box title. This setting controls whether a visible gesture is drawn as the user moves his finger around while drawing the unlock pattern.  If checked, this line is drawn.  If unchecked, there is nothing drawn so the user does not reveal his pattern while he unlocks the phone.-->
+  <string name="lockgesture_settings_enable_visible_pattern_title">Сделать жест видимым</string>
+  <!-- Security & location settings screen, setting check box title. This controls whether the device locks immediately when the power button is pressed. [CHAR LIMIT=28]-->
+  <string name="lockgesture_settings_enable_power_button_instantly_locks">Меню выключения заблокируется</string>
+  <!-- Security & location settings screen, setting option name when user has never set an unlock gesture -->
+  <string name="lockgesture_settings_choose_lock_pattern">Установить жест разблокировки</string>
+  <!-- Security & location settings screen, setting option name when user has previously set an unlock gesture and wants to change to a new pattern -->
+  <string name="lockgesture_settings_change_lock_pattern">Изменить жест разблокировки</string>
+  <!-- Security & location settings screen, the help instructions (an animation) caption -->
+  <string name="lockgesture_settings_help_how_to_record">Как нарисовать жест разблокировки</string>
+  <!-- Security & location settings screen, change unlock gesture screen instruction on top of screen after too many incorrect attempts -->
+  <string name="lockgesture_too_many_failed_confirmation_attempts_header">Слишком много неверных попыток!</string>
+  <!-- Security & location settings screen, change unlock gesture screen countdown hint on bottom of screen after too many incorrect attempts -->
+  <string name="lockgesture_too_many_failed_confirmation_attempts_footer">Попробовать сново, через <xliff:g id="number">%d</xliff:g> секунд.</string>
+  <!-- Toast shown if setting gesture was successful -->
+  <string name="lockpassword_gesture_set_toast">Жест установлен</string>
+  <!-- Header on gesture confirm screen [CHAR LIMIT=30] -->
+  <string name="lockpassword_confirm_your_gesture_header">Подтвердить Ваш жест</string>
+  <!-- Header on first screen of choose gesture flow [CHAR LIMIT=30] -->
+  <string name="lockpassword_choose_your_gesture_header">Нарисуйте Ваш жест</string>
+
+  <!-- Title for preference that guides the user through creating an unlock gesture [CHAR LIMIT=22] -->
+  <string name="unlock_set_unlock_gesture_title">Жест</string>
+  <!-- Title for preference that guides the user through creating an unlock gesture [CHAR LIMIT=45] -->
+  <string name="unlock_set_unlock_gesture_summary">Небезопасно, экспериментально</string>
+
+  <!-- Summary for "Configure lockscreen" when security gesture is enabled [CHAR LIMIT=45] -->
+  <string name="unlock_set_unlock_mode_gesture">Жест</string> 
+  
   <!-- Circle app bar -->
   <string name="category_app_circle_bar_title">Панель приложений</string>
   <string name="app_circle_bar_title">Круговая панель приложений</string>
@@ -595,6 +663,16 @@
   <string name="dlg_reset_android">Android</string>
   <string name="dlg_reset_aicp">AICP</string>
   
+  <!-- Battery Bar -->
+  <string name="battery_bar_title">Полоса заряда</string>
+  <string name="battery_bar">Положение полосы заряда</string>
+  <string name="battery_bar_color">Цвет</string>
+  <string name="battery_bar_cat">Стиль</string>
+  <string name="battery_bar_style_title">Выравнивание</string>
+  <string name="battery_bar_thickness_title">Толщина</string>
+  <string name="battery_bar_animate_title">Анимация заряда</string>
+  <string name="battery_bar_animate_summary">Анимация заряда может снижать производительность. Включить по своему усмотрению.</string>
+  
   <!-- StatusBar Clock style -->
   <string name="clock_font_style_title">Стиль шрифта часов</string>
   <string name="clock_font_bold">Жирный</string>
@@ -645,6 +723,7 @@
   <string name="custom_density_dialog_title">ОСТОРОЖНО!</string>
   <string name="custom_density_dialog_summary">Изменение плотности экрана может повлиять на работу приложений, магазин приложений может показывать приложения как несовместимые с вашим устройством"</string>
   <string name="dpi">DPI</string>
+  <string name="restarting_ui">Перезапуск интерфейса\u2026</string>
   
   <!-- Privacy guard notification -->
   <string name="privacy_guard_notification_title">Уведомления</string>
@@ -968,5 +1047,17 @@
   <!-- Calibration Control under Display-Advanced -->
   <string name="calibration_control_title">Калибровка</string>
   <string name="calibration_control_summary">Нажмите для настройки калибровки</string>
+  
+  <!-- Clear button color -->
+  <string name="clear_all_color_title">Цвет кнопки очистки</string>
+  <string name="notification_drawer_clear_all_icon_color_title">Иконка</string>
+
+  <!-- Task Manager -->
+  <string name="enable_task_manager_title">Диспечер задач</string>
+  <string name="enable_task_manager_summary">Включить/Отключить диспечер задач в панели уведомлений.\nИзменение этой опции перезагрузит графический интерфейс!</string>
+
+  <!-- Status bar ticker -->
+  <string name="status_bar_ticker_title">Тикер уведомления</string>
+  <string name="status_bar_ticker_summary">Прокручивать текст уведомления в строке состояния.</string>
 
 </resources>
