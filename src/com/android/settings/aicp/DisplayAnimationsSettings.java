@@ -184,22 +184,43 @@ public class DisplayAnimationsSettings extends SettingsPreferenceFragment implem
         preference.setSummary(summary);
     }
 
-    public void writeLcdDensityPreference(int value) {
+    private void writeLcdDensityPreference(final Context context, final int density) {
         try {
             SystemProperties.set("persist.sys.lcd_density", Integer.toString(value));
+        } catch (RuntimeException e) {
+            Log.e(TAG, "Unable to save LCD density");
+            return;
         }
-        catch (Exception e) {
-            Log.w(TAG, "Unable to save LCD density");
-        }
-        try {
-            final IActivityManager am = ActivityManagerNative.asInterface(ServiceManager.checkService("activity"));
-            if (am != null) {
-                am.restart();
+        final IActivityManager am = ActivityManagerNative.asInterface(
+                ServiceManager.checkService("activity"));
+        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected void onPreExecute() {
+                ProgressDialog dialog = new ProgressDialog(context);
+                dialog.setMessage(getResources().getString(R.string.restarting_ui));
+                dialog.setCancelable(false);
+                dialog.setIndeterminate(true);
+                dialog.show();
             }
-        }
-        catch (RemoteException e) {
-            Log.e(TAG, "Failed to restart");
-        }
+            @Override
+            protected Void doInBackground(Void... params) {
+                // Give the user a second to see the dialog
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    // Ignore
+                }
+
+                // Restart the UI
+                try {
+                    am.restart();
+                } catch (RemoteException e) {
+                    Log.e(TAG, "Failed to restart");
+                }
+                return null;
+            }
+        };
+        task.execute();
     }
 
     public Dialog onCreateDialog(int dialogId) {
