@@ -46,6 +46,7 @@ import android.view.KeyEvent;
 import android.view.WindowManagerGlobal;
 
 import com.android.internal.util.cm.ScreenType;
+import com.android.internal.util.slim.DeviceUtils;
 
 import com.android.settings.cyanogenmod.ButtonBacklightBrightness;
 
@@ -75,6 +76,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private static final String KEY_SWAP_VOLUME_BUTTONS = "swap_volume_buttons";
     private static final String DISABLE_NAV_KEYS = "disable_nav_keys";
     private static final String KEY_NAVIGATION_BAR_LEFT = "navigation_bar_left";
+    private static final String PREF_NAVIGATION_BAR_CAN_MOVE = "navbar_can_move";
     private static final String KEY_NAVIGATION_RECENTS_LONG_PRESS = "navigation_recents_long_press";
     private static final String KEY_POWER_END_CALL = "power_end_call";
     private static final String KEY_HOME_ANSWER_CALL = "home_answer_call";
@@ -128,6 +130,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private SwitchPreference mSwapVolumeButtons;
     private SwitchPreference mDisableNavigationKeys;
     private SwitchPreference mNavigationBarLeftPref;
+    private SwitchPreference mNavigationBarCanMove;
     private ListPreference mNavigationRecentsLongPressAction;
     private SwitchPreference mPowerEndCall;
     private SwitchPreference mHomeAnswerCall;
@@ -164,6 +167,13 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
 
         // Navigation bar left
         mNavigationBarLeftPref = (SwitchPreference) findPreference(KEY_NAVIGATION_BAR_LEFT);
+
+        // True landscape mode
+        mNavigationBarCanMove = (SwitchPreference) findPreference(PREF_NAVIGATION_BAR_CAN_MOVE);
+        mNavigationBarCanMove.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.NAVIGATION_BAR_CAN_MOVE,
+                DeviceUtils.isPhone(getActivity()) ? 1 : 0) == 0);
+        mNavigationBarCanMove.setOnPreferenceChangeListener(this);
 
         // Navigation bar button color
         mNavbarButtonTint = (ColorPickerPreference) findPreference(NAVIGATION_BAR_TINT);
@@ -601,6 +611,11 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
             }
             Settings.Secure.putString(getContentResolver(),
                     Settings.Secure.RECENTS_LONG_PRESS_ACTIVITY, putString);
+            return true;
+        } else if (preference == mNavigationBarCanMove) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.NAVIGATION_BAR_CAN_MOVE,
+                    ((Boolean) newValue) ? 0 : 1);
             return true;
         }
         return false;
