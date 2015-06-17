@@ -12,7 +12,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
-import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -55,27 +54,18 @@ public class BreathingNotifications extends SettingsPreferenceFragment implement
         mVoicemailBreath = (SwitchPreference) findPreference(VOICEMAIL_BREATH);
 
         Context context = getActivity();
-        ConnectivityManager cm = (ConnectivityManager)
-                context.getSystemService(Context.CONNECTIVITY_SERVICE);
 
-        if(cm.isNetworkSupported(ConnectivityManager.TYPE_MOBILE)) {
+        mSMSBreath.setChecked(Settings.System.getInt(resolver,
+                Settings.System.KEY_SMS_BREATH, 0) == 1);
+        mSMSBreath.setOnPreferenceChangeListener(this);
 
-            mSMSBreath.setChecked(Settings.System.getInt(resolver,
-                    Settings.System.KEY_SMS_BREATH, 0) == 1);
-            mSMSBreath.setOnPreferenceChangeListener(this);
+        mMissedCallBreath.setChecked(Settings.System.getInt(resolver,
+                Settings.System.KEY_MISSED_CALL_BREATH, 0) == 1);
+        mMissedCallBreath.setOnPreferenceChangeListener(this);
 
-            mMissedCallBreath.setChecked(Settings.System.getInt(resolver,
-                    Settings.System.KEY_MISSED_CALL_BREATH, 0) == 1);
-            mMissedCallBreath.setOnPreferenceChangeListener(this);
-
-            mVoicemailBreath.setChecked(Settings.System.getInt(resolver,
-                    Settings.System.KEY_VOICEMAIL_BREATH, 0) == 1);
-            mVoicemailBreath.setOnPreferenceChangeListener(this);
-        } else {
-            prefSet.removePreference(mSMSBreath);
-            prefSet.removePreference(mMissedCallBreath);
-            prefSet.removePreference(mVoicemailBreath);
-        }
+        mVoicemailBreath.setChecked(Settings.System.getInt(resolver,
+                Settings.System.KEY_VOICEMAIL_BREATH, 0) == 1);
+        mVoicemailBreath.setOnPreferenceChangeListener(this);
     }
 
     @Override
