@@ -67,6 +67,7 @@ import com.android.settings.util.Helpers;
 import com.android.settings.Utils;
 
 import java.io.BufferedReader;
+import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -112,6 +113,8 @@ public class VariousShit extends SettingsPreferenceFragment
     private static final String DISABLE_TORCH_ON_SCREEN_OFF = "disable_torch_on_screen_off";
     private static final String DISABLE_TORCH_ON_SCREEN_OFF_DELAY = "disable_torch_on_screen_off_delay";
 
+    private static final String SELINUX = "selinux";
+
     // Package name of the yoga
     public static final String YOGA_PACKAGE_NAME = "com.android.settings";
     // Intent for launching the yoga actvity
@@ -138,6 +141,7 @@ public class VariousShit extends SettingsPreferenceFragment
     private ListPreference mTorchOffDelay;
     private PreferenceCategory mTorchCategory;
     private Preference mLockClock;
+    private SwitchPreference mSelinux;
 
     private Preference mHiddenShit;
     private PreferenceScreen mHiddenImg;
@@ -218,6 +222,16 @@ public class VariousShit extends SettingsPreferenceFragment
             prefSet.removePreference(mTorchCategory);
         }
 
+        //SELinux
+        mSelinux = (SwitchPreference) findPreference(SELINUX);
+        mSelinux.setOnPreferenceChangeListener(this);
+
+        if (getMode().equals("Enforcing")) {
+            mSelinux.setChecked(true);
+        } else {
+            mSelinux.setChecked(false);
+        }
+
     }
 
     @Override
@@ -284,6 +298,15 @@ public class VariousShit extends SettingsPreferenceFragment
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.DISABLE_TORCH_ON_SCREEN_OFF_DELAY, torchOffDelay);
             mTorchOffDelay.setSummary(mTorchOffDelay.getEntries()[index]);
+            return true;
+        } else if (preference == mSelinux) {
+            if (mSelinux.isChecked()) {
+                runSelinuxPermissive();
+                mSelinux.setSummary(R.string.selinux_permissive_title);
+            } else if (!mSelinux.isChecked()) {
+                runSelinuxEnforcing();
+                mSelinux.setSummary(R.string.selinux_enforcing_title);
+            }
             return true;
         }
         return false;
@@ -568,4 +591,63 @@ public class VariousShit extends SettingsPreferenceFragment
                 "mount -o ro,remount /system");
     }
 
+    public static String getMode() {
+        try {
+            Runtime rt = Runtime.getRuntime();
+            String[] cmds = {"getenforce"};
+            Process proc = null;
+            proc = rt.exec(cmds);
+            BufferedReader stdInput = new BufferedReader(new InputStreamReader(proc.getInputStream()));
+            BufferedReader stdError = new BufferedReader(new InputStreamReader(proc.getErrorStream()));
+
+            String s = null;
+            while ((s = stdInput.readLine()) != null) {
+                return s;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
+
+    public static void RunAsRoot(String[] cmds) throws IOException {
+        Process p = null;
+        try {
+            p = Runtime.getRuntime().exec("su");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        DataOutputStream os = null;
+        if (p !=null) {
+           os = new DataOutputStream(p.getOutputStream());
+        }
+        if  (os !=null) {
+             for (String tmpCmd : cmds) {
+                 os.writeBytes(tmpCmd + "\n");
+             }
+             os.writeBytes("exit\n");
+             os.flush();
+        }
+    }
+
+    public static void runSelinuxPermissive() {
+        String[] cmds = {"su 0 setenforce 0"};
+        try {
+                RunAsRoot(cmds);
+        } catch (IOException e) {
+                 // Hope blisspoop doesn't kang this
+                 // AICP: Left this on purpose :D
+                 e. printStackTrace();
+        }
+    }
+
+    public static void runSelinuxEnforcing() {
+        String[] cmds = {"su 0 setenforce 1"};
+        try {
+                RunAsRoot(cmds);
+        } catch (IOException e) {
+                 // Yeah they kang a lot of shit lol
+                 e. printStackTrace();
+        }
+    }
 }
