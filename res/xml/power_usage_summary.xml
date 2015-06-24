@@ -19,4 +19,11 @@
         android:title="@string/power_usage_summary_title"
         settings:keywords="@string/keywords_battery"
         android:key="app_list">
+
+    <com.android.settings.cyanogenmod.SecureSettingSwitchPreference
+            android:key="app_perf_profiles_enabled"
+            android:title="@string/autoperf_title"
+            android:summary="@string/autoperf_summary"
+            android:defaultValue="true" />
+
 </PreferenceScreen>
