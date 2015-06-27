@@ -24,6 +24,13 @@
         android:title="@string/proximity_on_wake_title"
         android:summary="@string/proximity_on_wake_summary" />
 
+    <!-- Slim  and Pie Actions Floating Switch -->
+	<com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+        android:key="slim_action_floats"
+        android:title="@string/slim_action_floats"
+        android:summary="@string/slim_action_floats_summary"
+        android:defaultValue="false" />
+
     <!-- Notifications -->
     <PreferenceCategory
         android:key="aicp_notifications_category"
