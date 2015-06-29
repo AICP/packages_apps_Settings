@@ -50,7 +50,6 @@
 
         <SwitchPreference
             android:dependency="use_slim_recents"
-            android:dependency="use_slim_recents"
             android:key="recent_panel_show_topmost"
             android:title="@string/recent_panel_show_topmost_title"
             android:summary="@string/recent_panel_show_topmost_summary"
