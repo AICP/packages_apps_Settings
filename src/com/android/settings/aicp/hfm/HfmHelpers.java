@@ -66,7 +66,7 @@ public final class HfmHelpers {
             Set<String> hfmWhitelistSet = sharedPreferences.getStringSet("hfm_whitelist", null);
             if (hfmWhitelistSet != null) {
                 ArrayList<String> hfmWhitelist = new ArrayList<String>(hfmWhitelistSet);
-                if ( ! hfmWhitelist.isEmpty() ) {
+                if ( !hfmWhitelist.isEmpty() ) {
                     HfmWhitelist.applyWhitelist(context, hfmWhitelist);
                 }
             }
@@ -75,8 +75,9 @@ public final class HfmHelpers {
             boolean adsDisabled = Settings.System.getInt(context.getContentResolver(), Settings.System.HFM_DISABLE_ADS, 0) == 1;
             if (adsDisabled && areFilesDifferent(hosts, altHosts)) {
                 copyFiles(altHosts, hosts);
-            } else if ( ! adsDisabled && areFilesDifferent(hosts, defHosts)) {
+            } else if ( !adsDisabled && areFilesDifferent(hosts, defHosts)) {
                 copyFiles(defHosts, hosts);
+                deleteFiles(defHosts, altHosts);
             }
         }
         catch(IOException e)
@@ -115,10 +116,21 @@ public final class HfmHelpers {
 
     public static void copyFiles(File srcFile, File dstFile) throws IOException {
         if (srcFile.exists() && dstFile.exists()) {
+        if (srcFile.exists() && dstFile.exists()) {
             String cmd = "mount -o rw,remount /system"
                        + " && rm -f " + dstFile.getAbsolutePath()
                        + " && cp -f " + srcFile.getAbsolutePath() + " " + dstFile.getAbsolutePath()
                        + " && chmod 644 " + dstFile.getAbsolutePath()
+                       + " ; mount -o ro,remount /system";
+            RunAsRoot(cmd);
+        }
+    }
+
+    public static void deleteFiles(File srcFile, File dstFile) throws IOException {
+        if (srcFile.exists() && dstFile.exists()) {
+            String cmd = "mount -o rw,remount /system"
+                       + " && rm -f " + srcFile.getAbsolutePath()
+                       + " && rm -f " + dstFile.getAbsolutePath()
                        + " ; mount -o ro,remount /system";
             RunAsRoot(cmd);
         }
