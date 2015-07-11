@@ -35,6 +35,12 @@
         android:title="@string/disable_fc_notifications_title"
         android:summary="@string/disable_fc_notifications_summary" />
 
+    <!-- Hide carrier on lock screen -->
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+        android:key="lock_screen_hide_carrier"
+        android:title="@string/lock_screen_hide_carrier_title"
+        android:summary="@string/lock_screen_hide_carrier_summary" />
+
     </PreferenceCategory>
 
     <!-- Weather -->
