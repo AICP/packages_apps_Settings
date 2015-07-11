@@ -170,6 +170,12 @@
         settings:controller="com.android.settings.accessibility.VibrationPreferenceController"
         settings:keywords="@string/keywords_vibration"/>
 
+    <!-- Live Volume Steps -->
+    <PreferenceScreen
+        android:key="volume_steps"
+        android:title="@string/volume_steps_title"
+        android:fragment="com.android.settings.aicp.VolumeSteps" />
+
     <com.android.settingslib.PrimarySwitchPreference
         android:key="gesture_prevent_ringing_sound"
         android:title="@string/gesture_prevent_ringing_sound_title"
