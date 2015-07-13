@@ -96,7 +96,7 @@
 
     <!-- This is used to determine whether to hide the
          preferred application install location settings-->
-    <bool name="config_hide_app_install_location" translatable="false">true</bool>
+    <bool name="config_hide_app_install_location" translatable="false">false</bool>
 
     <!-- Some vendors don't want to allow non slot 0 to be set to default for calls/sms -->
     <bool name="config_hardcodeDefaultMobileNetworks">false</bool>
