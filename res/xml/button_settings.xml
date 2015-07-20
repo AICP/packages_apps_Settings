@@ -84,7 +84,6 @@
         <SwitchPreference
             android:key="dim_nav_buttons"
             android:title="@string/dim_nav_buttons_title"
-            android:dependency="enable_nav_bar"
             android:summary="@string/dim_nav_buttons_summary" />
 
         <SwitchPreference
