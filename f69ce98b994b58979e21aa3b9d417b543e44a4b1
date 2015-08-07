@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9adffdf1_6edd6a14",
+        "filename": "src/com/android/settings/SettingsActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1102,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2015-08-07T13:55:21Z",
+      "side": 1,
+      "message": "Build fails with error here.",
+      "range": {
+        "startLine": 1102,
+        "startChar": 36,
+        "endLine": 1102,
+        "endChar": 78
+      },
+      "revId": "f69ce98b994b58979e21aa3b9d417b543e44a4b1",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": false
+    }
+  ]
+}
