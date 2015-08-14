@@ -1332,5 +1332,17 @@
     <!-- Doze notification color invert -->
     <string name="doze_notification_color_invert_title">Inversione Colore</string>
     <string name="doze_notification_color_invert_summary_off">Notifiche Ambient display non sono invertite.Usa su sfondo scuro</string>
-    <string name="doze_notification_color_invert_summary_on">Notifiche Ambient display sono invertire. Usa su sfondo chiaro</string>
+    <string name="doze_notification_color_invert_summary_on">Notifiche Ambient display sono invertite. Usa su sfondo chiaro</string>
+
+    <!-- Three-fingers-swipe to screenshot -->
+    <string name="three_finger_gesture">Gesture 3 Dita</string></string>
+    <string name="three_finger_gesture_summary">Swipe con 3 dita per screenshot</string>
+
+    <!-- Scrolling Cache -->
+    <string name="pref_scrollingcache_title">Scrolling cache</string>
+    <string name="pref_scrollingcache_summary">Scrolling cache migliora lo scrolling a discapito della RAM</string>
+    <string name="pref_scrollingcache_force_enable">Forza Attivo</string>
+    <string name="pref_scrollingcache_default_enable">Default Attivo</string>
+    <string name="pref_scrollingcache_default_disable">Default Disattivo</string>
+    <string name="pref_scrollingcache_force_disable">Forza Disattivo</string>
 </resources>
