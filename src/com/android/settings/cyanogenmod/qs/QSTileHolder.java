@@ -157,7 +157,7 @@ public class QSTileHolder {
                 stringId = R.string.qs_screenshot_tile;
                 break;
             case QSConstants.TILE_SCREENRECORD:
-                resourceName = "ic_qs_screenrecord";
+                resourceName = "ic_qs_screenrecord_on";
                 stringId = R.string.qs_screenrecord_tile;
                 break;
             case QSConstants.TILE_SYNC:
