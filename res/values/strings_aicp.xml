@@ -1348,5 +1348,7 @@
     <string name="pref_scrollingcache_force_disable">Force disable</string>
 
     <string name="shake_clear_recents">Shake to clear</string>
-    <string name="shake_clear_recents_summary">Clear recents by shaking your phone</string>
+    <string name="shake_clear_recents_summary">Clear recents by shaking your device</string>
+    <string name="shake_clear_notification">Shake to clear</string>
+    <string name="shake_clear_notification_summary">Clear notification by shaking your device</string>
 </resources>
