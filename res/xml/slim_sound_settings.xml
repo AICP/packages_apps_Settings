@@ -50,6 +50,13 @@
         android:entryValues="@array/less_notification_sounds_values"
         android:persistent="false" />
 
+    <!-- Shake to clear notifications -->
+    <SwitchPreference
+        android:key="shake_clean_notification"
+        android:title="@string/shake_clear_notification"
+        android:summary="@string/shake_clear_notification_summary"
+        android:defaultValue="false" />
+
     <SwitchPreference
         android:key="volume_keys_control_media_stream"
         android:title="@string/volume_keys_control_media_stream"
