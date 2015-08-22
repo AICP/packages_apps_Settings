@@ -1325,28 +1325,12 @@
     <!-- QS Tiles Columns -->
     <string name="qs_num_columns_title">Numero tile per riga</string>
     <string name="qs_num_columns_showing">Visualizza %1$s tile per riga</string>
+    <string name="qs_num_columns_three">3</string>
+    <string name="qs_num_columns_four">4</string>
+    <string name="qs_num_columns_five">5</string>
 
     <!-- Doze notification color invert -->
     <string name="doze_notification_color_invert_title">Inversione Colore</string>
     <string name="doze_notification_color_invert_summary_off">Notifiche Ambient display non sono invertite.Usa su sfondo scuro</string>
-    <string name="doze_notification_color_invert_summary_on">Notifiche Ambient display sono invertite. Usa su sfondo chiaro</string>
-
-    <!-- Three-fingers-swipe to screenshot -->
-    <string name="three_finger_gesture">Gesture 3 dita finger gesture</string>
-    <string name="three_finger_gesture_summary">Swipe con 3 dita per screenshot</string>
-
-    <!-- Scrolling Cache -->
-    <string name="pref_scrollingcache_title">Scrolling cache</string>
-    <string name="pref_scrollingcache_summary">Scrolling cache auementa le performance di scrolling a discapito della Memoria</string>
-    <string name="pref_scrollingcache_force_enable">Forza Attiva</string>
-    <string name="pref_scrollingcache_default_enable">Default Attiva</string>
-    <string name="pref_scrollingcache_default_disable">Default Disattiva</string>
-    <string name="pref_scrollingcache_force_disable">Forza Disattiva</string>
-
-    <string name="shake_clear_recents">Shake per cancella</string>
-    <string name="shake_clear_recents_summary">Cancella Recenti con uno shake del telefono</string>
-
-    <!-- Lock screen rotation -->
-    <string name="display_lockscreen_rotation_title">Rotazione Schermata Sblocco</string>
-
+    <string name="doze_notification_color_invert_summary_on">Notifiche Ambient display sono invertire. Usa su sfondo chiaro</string>
 </resources>
