@@ -325,7 +325,7 @@
     <string name="shortcut_action_torch">Torcia</string>
     <string name="shortcut_action_menu">Menu</string>
     <string name="shortcut_action_ime">Open IME Switcher</string>
-    <string name="shortcut_action_power_menu">Power menu</string>
+    <string name="shortcut_action_power_menu">Tasto Power</string>
     <string name="shortcut_action_recent">Recenti</string>
     <string name="shortcut_action_restartui">Riavvia SystemUI</string>
     <string name="shortcut_action_power">Spegni schermo</string>
@@ -564,7 +564,7 @@
     <!-- Security & location settings screen, setting check box title. This setting controls whether a visible gesture is drawn as the user moves his finger around while drawing the unlock pattern.  If checked, this line is drawn.  If unchecked, there is nothing drawn so the user does not reveal his pattern while he unlocks the phone.-->
     <string name="lockgesture_settings_enable_visible_pattern_title">Rendi visibile gesture</string>
     <!-- Security & location settings screen, setting check box title. This controls whether the device locks immediately when the power button is pressed. [CHAR LIMIT=28]-->
-    <string name="lockgesture_settings_enable_power_button_instantly_locks">Power button blocca immediatamente</string>
+    <string name="lockgesture_settings_enable_power_button_instantly_locks">Tasto Power blocca immediatamente</string>
     <!-- Security & location settings screen, setting option name when user has never set an unlock gesture -->
     <string name="lockgesture_settings_choose_lock_pattern">Set gesture sblocco</string>
     <!-- Security & location settings screen, setting option name when user has previously set an unlock gesture and wants to change to a new pattern -->
@@ -783,14 +783,14 @@
     <string name="qs_screenshot_tile">Screenshot</string>
     <string name="qs_screenrecord_tile">Screenrecord</string>
     <string name="qs_sync_tile">Sync</string>
-    <string name="qs_tile_powermenu">Power Menu</string>
+    <string name="qs_tile_powermenu">Tasto Power</string>
     <string name="qs_tile_slimpie">Pie Control</string>
-    <string name="qs_battery_saver_tile">Modalità Batteria</string>
+    <string name="qs_battery_saver_tile">Salva Batteria</string>
     <string name="qs_brightness_tile">Luminosità</string>
     <string name="qs_expanded_desktop_tile">Desktop Esteso</string>
     <string name="qs_Notification_tile">Notifiche</string>
     <string name="qs_screen_off_tile">Screen off</string>
-    <string name="qs_systemui_restart_tile">Restart SystemUI</string>
+    <string name="qs_systemui_restart_tile">Riavvia SystemUI</string>
     <string name="qs_tile_slim_floats">Slim Floats</string>
 
     <!-- QuickSettings collapse panel -->
@@ -1036,6 +1036,8 @@
     <string name="network_traffic_vector_title">Network traffic</string>
     <string name="network_traffic_vector_summary">Abilita traffico rete nella barra notifiche</string>
     <string name="show_network_traffic_disable">Disabilita</string>
+    <string name="network_traffic_hide_arrow">Nascondi Freccine</string>
+    <string name="network_traffic_hide_arrow_summary">Nasconde le freccine su/giu nel\'indicatore di traffico</string>
     <string name="show_network_traffic_meter">Meter</string>
     <string name="show_network_traffic_text">Testo</string>
     <string name="show_network_traffic_both">Entrambi</string>
@@ -1176,7 +1178,7 @@
     <string name="torch_screen_off_ten_Minuti">10 Minuti</string>
 
     <!-- Enable power menu -->
-    <string name="lockscreen_enable_power_menu_title">Power menu schermata di sblocco</string>
+    <string name="lockscreen_enable_power_menu_title">Tasto Power schermata di sblocco</string>
 
     <!-- Recent panel -->
     <string name="recent_panel_category">SlimRecents</string>
@@ -1219,8 +1221,8 @@
     <string name="status_bar_power_menu_title">Tasto Power nella barra di notifiche espansa</string>
     <string name="status_bar_power_menu_dialog_title">Selezionare azioni per tap e pressione</string>
     <string name="status_bar_power_menu_off">Disabilita</string>
-    <string name="status_bar_power_menu_action_screen_off">Screen off - Power menu</string>
-    <string name="status_bar_power_menu_action_dialog">Power menu - Screen off</string>
+    <string name="status_bar_power_menu_action_screen_off">Screen off - Tasto Power</string>
+    <string name="status_bar_power_menu_action_dialog">Tasto Power - Screen off</string>
 
     <!-- Heads Up Status Bar button -->
     <string name="show_headsup_button_title">Heads Up button</string>
@@ -1350,4 +1352,8 @@
     <!-- Lock screen rotation -->
     <string name="display_lockscreen_rotation_title">Rotazione Schermata Sblocco</string>
 
+    <!--Time Contexual Header -->
+    <string name="notification_title">Pannello Notifiche</string>
+    <string name="status_bar_custom_header_title">Immagine giornata solare</string>
+    <string name="status_bar_custom_header_summary">Abilita l'immagine della giornata solare nel pannello notifiche</string>
 </resources>
