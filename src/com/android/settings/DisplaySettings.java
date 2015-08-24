@@ -67,8 +67,6 @@ import com.android.settings.slim.DisplayRotation;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.android.settings.Utils;
-
 import cyanogenmod.hardware.CMHardwareManager;
 
 public class DisplaySettings extends SettingsPreferenceFragment implements
