@@ -265,35 +265,6 @@ public class VariousShit extends SettingsPreferenceFragment
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        if (preference == mHiddenShit) {
-            System.arraycopy(mHits, 1, mHits, 0, mHits.length-1);
-            mHits[mHits.length-1] = SystemClock.uptimeMillis();
-            if ((Settings.System.getInt(getActivity().getContentResolver(),
-                    Settings.System.HIDDEN_SHIT, 0) == 0) &&
-                    (mHits[0] >= (SystemClock.uptimeMillis()-500))) {
-                Settings.System.putInt(getActivity().getContentResolver(),
-                        Settings.System.HIDDEN_SHIT, 1);
-                Toast.makeText(getActivity(),
-                        R.string.hidden_shit_toast,
-                        Toast.LENGTH_LONG).show();
-                getPreferenceScreen().removePreference(mHiddenShit);
-                addPreference(mHiddenShitUnlocked);
-                mHiddenShitUnlocked.setChecked(true);
-                addPreference(mHiddenImg);
-            }
-        } else if (preference == mHiddenImg) {
-            System.arraycopy(mHits, 1, mHits, 0, mHits.length-1);
-            mHits[mHits.length-1] = SystemClock.uptimeMillis();
-            if  (mHits[0] >= (SystemClock.uptimeMillis()-500)) {
-                startActivity(INTENT_YOGA);
-            }
-        } else if (preference == mCustomBootAnimation) {
-            openBootAnimationDialog();
-            return true;
-        } else {
-            return super.onPreferenceTreeClick(preferenceScreen, preference);
-        }
-
         return false;
     }
 

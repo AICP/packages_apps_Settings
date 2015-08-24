@@ -1354,4 +1354,12 @@
 
     <!-- Lock screen rotation -->
     <string name="display_lockscreen_rotation_title">Lock screen</string>
+
+    
+    <!-- Aicp Settings Tabs -->
+    <string name="aicp_settings_tab1">Misc</string>
+    <string name="aicp_settings_tab2">Ui</string>
+    <string name="aicp_settings_tab3">Status Bar</string>
+    <string name="aicp_settings_tab4">System</string>
+    <string name="action_settings">Settings</string>
 </resources>
