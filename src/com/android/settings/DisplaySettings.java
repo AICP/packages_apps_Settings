@@ -220,7 +220,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         Utils.updatePreferenceToSpecificActivityFromMetaDataOrRemove(getActivity(),
                 getPreferenceScreen(), KEY_SCREEN_OFF_GESTURE_SETTINGS);
 
-        if (!mHardware.isSupported(FEATURE_TAP_TO_WAKE) {
+        if (!mHardware.isSupported(FEATURE_TAP_TO_WAKE)) {
                 prefSet.removePreference(advancedPrefs);
         }
 
