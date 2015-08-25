@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7ac40928_e33970d9",
+        "filename": "src/com/android/settings/aicp/AicpSettings.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2015-08-25T21:57:10Z",
+      "side": 0,
+      "message": "Needed to include aicp strings in search results",
+      "revId": "9ba08d399f22689a695af3a702df614a36f71b58",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ac40928_0337dce4",
+        "filename": "src/com/android/settings/aicp/AicpSettings.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2015-08-25T21:57:10Z",
+      "side": 0,
+      "message": "Needed to include aicp strings in search results",
+      "revId": "9ba08d399f22689a695af3a702df614a36f71b58",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ac40928_634d8072",
+        "filename": "src/com/android/settings/aicp/AicpSettings.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2015-08-25T21:57:10Z",
+      "side": 0,
+      "message": "Needed to include aicp strings in search results",
+      "revId": "9ba08d399f22689a695af3a702df614a36f71b58",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ac40928_a33368f5",
+        "filename": "src/com/android/settings/aicp/AicpSettings.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2015-08-25T21:57:10Z",
+      "side": 0,
+      "message": "Lines 38 and 39 needed to include aicp strings in search results",
+      "revId": "9ba08d399f22689a695af3a702df614a36f71b58",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ac40928_c330f4ea",
+        "filename": "src/com/android/settings/aicp/AicpSettings.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2015-08-25T21:57:10Z",
+      "side": 0,
+      "message": "Lines 116-136 needed to include aicp strings in search results",
+      "revId": "9ba08d399f22689a695af3a702df614a36f71b58",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": false
+    }
+  ]
+}
