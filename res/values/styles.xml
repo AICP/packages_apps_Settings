@@ -381,4 +381,10 @@
         <item name="android:layout_gravity">center</item>
         <item name="android:background">@android:color/transparent</item>
     </style>
+
+    <style name="Aicp_extras" parent="android:Theme.Material.Light">
+        <item name="android:colorPrimary">@color/aicp_extras_ColorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/aicp_extras_ColorPrimaryDark</item>
+        <item name="android:actionBarTabBarStyle">@color/aicp_extras_tabsScrollColor</item>
+    </style>
 </resources>
