@@ -24,9 +24,11 @@ import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.support.v13.app.FragmentPagerAdapter;
+import android.content.ActivityNotFoundException;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+import android.support.v13.app.FragmentPagerAdapter;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -38,7 +40,6 @@ import com.android.settings.aicp.tabs.Stuff;
 import com.android.settings.aicp.tabs.Ui;
 import com.android.settings.aicp.tabs.StatusBar;
 import com.android.settings.aicp.tabs.System;
-
 
 public class AicpSettings extends SettingsPreferenceFragment implements ActionBar.TabListener {
 
@@ -57,15 +58,12 @@ public class AicpSettings extends SettingsPreferenceFragment implements ActionBa
      */
     ViewPager mViewPager;
 
-  
-
     @Override
     public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         getActivity().setTitle("AICP Extras");
-        getActivity().setTheme(android.R.style.Theme_Material_Light);
+        getActivity().setTheme(android.R.style.Theme_DeviceDefault_Light);
 	View view = inflater.inflate(R.layout.activity_aicp_settings, container, false);
-
 
         // Set up the action bar.
         final ActionBar actionBar = getActivity().getActionBar();
@@ -197,6 +195,33 @@ public class AicpSettings extends SettingsPreferenceFragment implements ActionBa
         public PlaceholderFragment() {
         }
 
+    }
+
+    public void restart () {
+       try {
+            Intent intent = new Intent(Intent.ACTION_MAIN).setClassName(
+                    "com.android.settings", "com.android.settings.Settings$AicpSettingsActivity");
+            finish();
+            startActivity(intent);
+        } catch (ActivityNotFoundException ex) {
+            android.util.Log.e("AicpSettingsActivity", "Couldn't find aicp activity.");
+        }
+    }
+
+    @Override
+    public void onResume() {
+       super.onResume();
+       restart();
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle saveState) {
+        super.onSaveInstanceState(saveState);
     }
 
 }
