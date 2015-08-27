@@ -1,4 +1,4 @@
-package com.android.settings.aicp.utils;
+package com.android.settings.aicp.utils.OnBoot;
 
 import android.app.ActivityManager;
 import android.content.BroadcastReceiver;
