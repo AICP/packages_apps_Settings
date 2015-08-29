@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7ac40928_357c8f72",
+        "filename": "src/com/android/settings/slim/StatusBar.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 285
+      },
+      "writtenOn": "2015-08-29T05:24:34Z",
+      "side": 1,
+      "message": "Need underscore AICP_LOGO",
+      "range": {
+        "startLine": 62,
+        "startChar": 32,
+        "endLine": 62,
+        "endChar": 50
+      },
+      "revId": "1c826ad2c3099d49983b07ca7ffaed27ac0d232d",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": false
+    }
+  ]
+}
