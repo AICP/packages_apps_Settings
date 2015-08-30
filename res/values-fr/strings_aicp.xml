@@ -1198,7 +1198,7 @@
     <string name="status_bar_power_menu_action_screen_off">Veille - Menu d\'alimentation</string>
     <string name="status_bar_power_menu_action_dialog">Menu d\'alimentation - Veille</string>
     
-        <!-- Heads Up Status Bar button -->
+    <!-- Heads Up Status Bar button -->
     <string name="show_headsup_button_title">Bouton de notifications flottantes</string>
     <string name="show_headsup_button_summary">Afficher le bouton de notifications flottantes dans la barre d\'état</string>
 
