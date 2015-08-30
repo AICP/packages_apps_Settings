@@ -1253,7 +1253,7 @@
     
     <!-- Hide lock screen carrier -->
     <string name="lock_screen_hide_carrier_title">Cacher l'opérateur sur l\'écran de déverouillage</string>
-    <string name="lock_screen_hide_carrier_summary">Le SystemUI sera redémarrer lors de ce changement.</string>
+    <string name="lock_screen_hide_carrier_summary">Le SystemUI sera redémarré lors de ce changement.</string>
 
     <!-- Status bar temperature -->
     <string name="status_bar_temperature_title">Température de la météo</string>
