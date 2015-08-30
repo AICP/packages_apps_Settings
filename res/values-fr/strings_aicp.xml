@@ -1202,7 +1202,7 @@
     <string name="show_headsup_button_title">Bouton de notifications flottantes</string>
     <string name="show_headsup_button_summary">Afficher le bouton de notifications flottantes dans la barre d\'état</string>
 
-    <!-- Restart SystemUI -->
+   <!-- Restart SystemUI -->
     <string name="restart_systemui">Redémarrer SystemUI</string>
 
    <!-- Breathing Notifications -->
