@@ -1197,5 +1197,57 @@
     <string name="status_bar_power_menu_off">Désactivé</string>
     <string name="status_bar_power_menu_action_screen_off">Veille - Menu d\'alimentation</string>
     <string name="status_bar_power_menu_action_dialog">Menu d\'alimentation - Veille</string>
+    
+        <!-- Heads Up Status Bar button -->
+    <string name="show_headsup_button_title">Bouton de notifications flottantes</string>
+    <string name="show_headsup_button_summary">Afficher le bouton de notifications flottantes dans la barre d\'état</string>
 
+    <!-- Restart SystemUI -->
+    <string name="restart_systemui">Redémarrer SystemUI</string>
+
+   <!-- Breathing Notifications -->
+    <string name="breathing_notifications_title">Notifications clignotantes</string>
+    <string name="sms_breath_title">SMS clignotant</string>
+    <string name="sms_breath_summary">Faire clignoter la notification de réception de nouveau SMS, dans la barre d\'état</string>
+    <string name="missed_call_breath_title">Appel manqué cliognotant</string>
+    <string name="missed_call_breath_summary">Faire clignoter la notification d\'appel manqué, dans la barre d\'état</string>
+    <string name="voicemail_breath_title">Messagerie vocale</string>
+    <string name="voicemail_breath_summary">Faire clignoter la notification de la messagerie vocale, dans la barre d\'état</string>
+
+    <!-- App sidebar -->
+    <string name="app_sidebar_title">Barre latéral d\'applications</string>
+    <string name="app_sidebar_enable_title">Activer la barre d\'applications</string>
+    <string name="app_sidebar_enable_summaryOn">Barre d\'applications activé</string>
+    <string name="app_sidebar_enable_summaryOff">Barre d\'applications désactivé</string>
+    <string name="app_sidebar_setup_items_title">Régler le contenu de la barre d\'applications</string>
+    <string name="app_sidebar_setup_items_summary">Ajouter, supprimer, et positioner le contenu dans la barre d\'applications</string>
+    <string name="app_sidebar_transparency_title">Barre d\'application transparente</string>
+    <string name="app_sidebar_transparency_summary">Ajuster la transparance de la barre d\'applications</string>
+    <string name="app_sidebar_position_title">Position de la barre d\'applications</string>
+    <string name="app_sidebar_position_summary">Positioner la barre d\'applications sur la gauche ou sur la droite de l\'écrans</string>
+    <string name="app_sidebar_position_left">Gauche</string>
+    <string name="app_sidebar_position_right">Droite</string>
+    <string name="app_sidebar_hide_labels_title">Cacher le nom des applications</string>
+    <string name="app_sidebar_hide_labels_summary">Cacher les noms des applications de la barre d\'applications</string>
+    <string name="tab_category">Languette visible</string>
+    <string name="use_tab_title">Affichage de l\'onglet</string>
+    <string name="use_tab_summary">Afficher un onglet visible sur le côté qui permet d\'afficher la barre d\'applications au toucher</string>
+    <string name="tab_position_title">Position de l\'onglet</string>
+    <string name="tab_position_summary">Afficher l\'onglet au dessus, au centre, ou au-dessous sur le côté de l\'écran.</string>
+    <string name="tab_size_title">Taille de l\'onglet</string>
+    <string name="tab_size_summary">Changer la taille de l\'onglet visible.</string>
+    <string name="trigger_category">Zone de déclenchement</string>
+    <string name="trigger_width_title">Largeur de la zone de déclenchement</string>
+    <string name="trigger_width_summary">Régler la largeur de la zone de déclenchement</string>
+    <string name="trigger_top_title">Position de la zone de déclenchement</string>
+    <string name="trigger_top_summary">Ajuster la position verticale de la zone de déclenchement</string>
+    <string name="trigger_bottom_title">Hauteur de la zone de déclenchement</string>
+    <string name="trigger_bottom_summary">Réglez la hauteur de la zone de déclenchement</string>
+
+    <!-- Selinux Switch -->
+    <string name="selinux_switch_title">Option de changement d\'état de Selinux</string>
+    <string name="selinux_switch_summary">SElinux est un ensemble de modifications du noyau et des outils de l\'utilisateur. Les changements d\'état peuvent provoquer des effets indésirables. À utiliser à vos risques et périls.</string>
+    <string name="selinux_title">Etat SElinux</string>
+    <string name="selinux_permissive_title">Permissif</string>
+    <string name="selinux_enforcing_title">Application</string>
 </resources>
