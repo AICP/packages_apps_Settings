@@ -877,7 +877,7 @@
     <string name="advanced_reboot_summary">When unlocked, include options in the power menu for rebooting into recovery, bootloader or performing a soft reboot</string>
 
     <!-- Notification drawer -->
-    <string name="notification_drawer_title">Notification Drawer</string>
+    <string name="notification_drawer_title">Notification drawer</string>
     <string name="qs_category_title">Quick Settings</string>
 
     <!-- Quick Settings -->

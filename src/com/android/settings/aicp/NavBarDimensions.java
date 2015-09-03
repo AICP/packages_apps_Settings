@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 The Android Open Source Project
+ * Copyright (C) 2015 The crDroid Android Project
  *
  * Class based on SlimRoms (A big thanks to the Team)
  *
@@ -18,9 +18,6 @@
 
 package com.android.settings.aicp;
 
-import com.android.settings.search.BaseSearchIndexProvider;
-import com.android.settings.search.Indexable;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -33,7 +30,6 @@ import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
-import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -44,11 +40,8 @@ import com.android.internal.util.cm.ScreenType;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class NavBarDimensions extends SettingsPreferenceFragment implements
-        OnPreferenceChangeListener, Indexable {
+        OnPreferenceChangeListener {
 
     private static final String TAG = "NavBarStyleDimen";
 
@@ -68,7 +61,7 @@ public class NavBarDimensions extends SettingsPreferenceFragment implements
         super.onCreate(savedInstanceState);
 
         // Load the preferences from an XML resource
-        addPreferencesFromResource(R.xml.aicp_navbar_dimensions);
+        addPreferencesFromResource(R.xml.navbar_dimensions);
 
         PreferenceScreen prefSet = getPreferenceScreen();
 
@@ -203,29 +196,4 @@ public class NavBarDimensions extends SettingsPreferenceFragment implements
 
         }
     }
-
-    public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider() {
-                @Override
-                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
-                        boolean enabled) {
-                    ArrayList<SearchIndexableResource> result =
-                            new ArrayList<SearchIndexableResource>();
-
-                    SearchIndexableResource sir = new SearchIndexableResource(context);
-                    sir.xmlResId = R.xml.aicp_navbar_dimensions;
-                    result.add(sir);
-
-                    return result;
-                }
-
-                @Override
-                public List<String> getNonIndexableKeys(Context context) {
-                    ArrayList<String> result = new ArrayList<String>();
-                    if (ScreenType.isPhone(context)) {
-                        result.add(PREF_NAVIGATION_BAR_WIDTH);
-                    }
-                    return result;
-                }
-            };
 }
