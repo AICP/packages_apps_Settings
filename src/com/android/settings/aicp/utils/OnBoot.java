@@ -33,9 +33,19 @@ public class OnBoot extends BroadcastReceiver {
         if(!mSetupRunning) {
              SharedPreferences sharedpreferences = PreferenceManager.getDefaultSharedPreferences(context);
              if(sharedpreferences.getBoolean("selinux", true)) {
-                 CMDProcessor.runSuCommand("setenforce 1");
+                 String cmdPositive = "setenforce 1"
+                     + " && mount -o rw,remount /system"
+                     + " && echo '#!/system/bin/sh' > /system/etc/init.d/03setSelinux"
+                     + " && echo 'setenforce 1' >> /system/etc/init.d/03setSelinux"
+                     + " && mount -o ro,remount /system";
+                 CMDProcessor.runSuCommand(cmdPositive);
              } else if (!sharedpreferences.getBoolean("selinux", true)) {
-                 CMDProcessor.runSuCommand("setenforce 0");
+                 String cmdNegative = "setenforce 0"
+                     + " && mount -o rw,remount /system"
+                     + " && echo '#!/system/bin/sh' > /system/etc/init.d/03setSelinux"
+                     + " && echo 'setenforce 0' >> /system/etc/init.d/03setSelinux"
+                     + " && mount -o ro,remount /system";
+                 CMDProcessor.runSuCommand(cmdNegative);
              }
         }
     }
