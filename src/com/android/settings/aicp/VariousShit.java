@@ -315,10 +315,20 @@ public class VariousShit extends SettingsPreferenceFragment
             return true;
         } else if (preference == mSelinux) {
             if (objValue.toString().equals("true")) {
-                CMDProcessor.runSuCommand("setenforce 1");
+                 String cmdPositive = "setenforce 1"
+                     + " mount -o rw,remount /system"
+                     + " && echo '#!/system/bin/sh' > /system/etc/init.d/03setSelinux"
+                     + " && echo 'setenforce 1' >> /system/etc/init.d/03setSelinux"
+                     + " && mount -o ro,remount /system";
+                 CMDProcessor.runSuCommand(cmdPositive);
                 mSelinux.setSummary(R.string.selinux_enforcing_title);
             } else if (objValue.toString().equals("false")) {
-                CMDProcessor.runSuCommand("setenforce 0");
+                 String cmdNegative = "setenforce 0"
+                     + " mount -o rw,remount /system"
+                     + " && echo '#!/system/bin/sh' > /system/etc/init.d/03setSelinux"
+                     + " && echo 'setenforce 0' >> /system/etc/init.d/03setSelinux"
+                     + " && mount -o ro,remount /system";
+                 CMDProcessor.runSuCommand(cmdNegative);
                 mSelinux.setSummary(R.string.selinux_permissive_title);
             }
             return true;
