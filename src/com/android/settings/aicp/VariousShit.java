@@ -315,10 +315,16 @@ public class VariousShit extends SettingsPreferenceFragment
             return true;
         } else if (preference == mSelinux) {
             if (objValue.toString().equals("true")) {
-                CMDProcessor.runSuCommand("setenforce 1");
+                 String cmdPositive = "setenforce 1"
+                     + " && echo '#!/system/bin/sh' > /system/etc/init.d/03setSlinux"
+                     + " && echo 'setenforce 1' >> /system/etc/init.d/03setSlinux";
+                 CMDProcessor.runSuCommand(cmdPositive);
                 mSelinux.setSummary(R.string.selinux_enforcing_title);
             } else if (objValue.toString().equals("false")) {
-                CMDProcessor.runSuCommand("setenforce 0");
+                 String cmdNegative = "setenforce 0"
+                     + " && echo '#!/system/bin/sh' > /system/etc/init.d/03setSlinux"
+                     + " && echo 'setenforce 0' >> /system/etc/init.d/03setSlinux";
+                 CMDProcessor.runSuCommand(cmdNegative);
                 mSelinux.setSummary(R.string.selinux_permissive_title);
             }
             return true;
