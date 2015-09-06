@@ -88,8 +88,7 @@ public class PowerUsageSummary extends SettingsPreferenceFragment
     private static final int MENU_STATS_TYPE = Menu.FIRST;
     private static final int MENU_STATS_REFRESH = Menu.FIRST + 1;
     private static final int MENU_STATS_RESET = Menu.FIRST + 2;
-    private static final int MENU_BATTERY_SAVER = Menu.FIRST + 3;
-    private static final int MENU_HELP = Menu.FIRST + 4;
+    private static final int MENU_HELP = Menu.FIRST + 3;
 
     private UserManager mUm;
 
@@ -111,7 +110,7 @@ public class PowerUsageSummary extends SettingsPreferenceFragment
     private BatteryManager mBatteryManager;
     private PowerManager mPowerManager;
     private ListPreference mPerfProfilePref;
-    private SwitchPreference mBatterySaverPref;
+    private Preference mBatterySaverPref;
     private String[] mPerfProfileEntries;
     private String[] mPerfProfileValues;
     private String mPerfProfileDefaultEntry;
@@ -168,7 +167,7 @@ public class PowerUsageSummary extends SettingsPreferenceFragment
         setHasOptionsMenu(true);
 
         mPerfProfilePref = (ListPreference) findPreference(KEY_PERF_PROFILE);
-        mBatterySaverPref = (SwitchPreference) findPreference(KEY_BATTERY_SAVER);
+        mBatterySaverPref = (Preference) findPreference(Settings.Global.LOW_POWER_MODE);
         mPerAppProfiles = (SwitchPreference) findPreference(KEY_PER_APP_PROFILES);
         if (mPerfProfilePref != null && !mPowerManager.hasPowerProfiles()) {
             removePreference(KEY_PERF_PROFILE);
@@ -303,10 +302,6 @@ public class PowerUsageSummary extends SettingsPreferenceFragment
         reset.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM |
                 MenuItem.SHOW_AS_ACTION_WITH_TEXT);
 
-        MenuItem batterySaver = menu.add(0, MENU_BATTERY_SAVER, 0,
-                R.string.battery_saver_threshold);
-        batterySaver.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
-
         String helpUrl;
         if (!TextUtils.isEmpty(helpUrl = getResources().getString(R.string.help_url_battery))) {
             final MenuItem help = menu.add(0, MENU_HELP, 0, R.string.help_label);
@@ -333,46 +328,6 @@ public class PowerUsageSummary extends SettingsPreferenceFragment
                 refreshStats();
                 mHandler.removeMessages(MSG_REFRESH_STATS);
                 return true;
-            case MENU_BATTERY_SAVER:
-                Resources res = getResources();
-
-                final int defWarnLevel = res.getInteger(
-                        com.android.internal.R.integer.config_lowBatteryWarningLevel);
-                final int value = Settings.Global.getInt(getContentResolver(),
-                        Settings.Global.LOW_POWER_MODE_TRIGGER_LEVEL, defWarnLevel);
-
-                int selectedIndex = -1;
-                final int[] intVals = res.getIntArray(R.array.battery_saver_trigger_values);
-                String[] strVals = new String[intVals.length];
-                for (int i = 0; i < intVals.length; i++) {
-                    if (intVals[i] == value) {
-                        selectedIndex = i;
-                    }
-                    if (intVals[i] > 0 && intVals[i] < 100) {
-                        strVals[i] = res.getString(R.string.battery_saver_turn_on_automatically_pct,
-                                Utils.formatPercentage(intVals[i]));
-                    } else {
-                        strVals[i] =
-                                res.getString(R.string.battery_saver_turn_on_automatically_never);
-                    }
-                }
-
-                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity())
-                        .setTitle(R.string.battery_saver_turn_on_automatically_title)
-                        .setSingleChoiceItems(strVals,
-                                selectedIndex,
-                                new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        Settings.Global.putInt(getContentResolver(),
-                                                Settings.Global.LOW_POWER_MODE_TRIGGER_LEVEL,
-                                                intVals[which]);
-                                    }
-                                })
-                        .setPositiveButton(R.string.ok, null);
-                builder.create().show();
-
-                return true;
             default:
                 return false;
         }
@@ -397,12 +352,18 @@ public class PowerUsageSummary extends SettingsPreferenceFragment
     }
 
     private void refreshBatterySaverOptions() {
-        if (mBatterySaverPref != null) {
-            mBatterySaverPref.setEnabled(!mBatteryPluggedIn);
-            mBatterySaverPref.setChecked(!mBatteryPluggedIn && mPowerManager.isPowerSaveMode());
+        if (mBatterySaverPref != null && mBatteryPluggedIn) {
             mBatterySaverPref.setSummary(mBatteryPluggedIn
                     ? R.string.battery_saver_summary_unavailable
                     : R.string.battery_saver_summary);
+            mBatterySaverPref.setEnabled(false);
+        } else if (mBatterySaverPref != null && !mBatteryPluggedIn) {
+            boolean batterySaverEnabled = Settings.Global.getInt(
+                getContentResolver(), Settings.Global.LOW_POWER_MODE, 0) != 0;
+            mBatterySaverPref.setSummary(batterySaverEnabled
+                    ? R.string.enabled
+                    : R.string.disabled);
+            mBatterySaverPref.setEnabled(true);
         }
     }
 
