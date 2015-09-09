@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7ac40928_24653be1",
+        "filename": "res/xml/pie_trigger.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 289
+      },
+      "writtenOn": "2015-09-09T18:05:45Z",
+      "side": 1,
+      "message": "This attribute won\u0027t work for you guys.",
+      "range": {
+        "startLine": 67,
+        "startChar": 12,
+        "endLine": 67,
+        "endChar": 32
+      },
+      "revId": "0a06aeb4a12ac24e27ee7f190ef3fc2c770c847b",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ac40928_c461d7d4",
+        "filename": "res/xml/pie_trigger.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 289
+      },
+      "writtenOn": "2015-09-09T18:05:45Z",
+      "side": 1,
+      "message": "Same as this.",
+      "range": {
+        "startLine": 68,
+        "startChar": 12,
+        "endLine": 68,
+        "endChar": 37
+      },
+      "revId": "0a06aeb4a12ac24e27ee7f190ef3fc2c770c847b",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": false
+    }
+  ]
+}
