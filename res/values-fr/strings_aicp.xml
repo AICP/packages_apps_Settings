@@ -1335,4 +1335,8 @@
     <string name="aicp_settings_tab2">UI</string>
     <string name="aicp_settings_tab3">Barre de statut</string>
     <string name="aicp_settings_tab4">Système</string>
+    
+    <!-- Chamber of Secrets -->
+    <string name="chamber_title">Chambre des secrets</string>
+    <string name="chamber_toast">La chambre des secrets est ouvert</string>
 </resources>
