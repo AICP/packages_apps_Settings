@@ -62,7 +62,7 @@ public class StatusBarClockStyle extends SettingsPreferenceFragment
     private static final String PREF_CLOCK_DATE_FORMAT = "clock_date_format";
     private static final String STATUS_BAR_CLOCK = "status_bar_show_clock";
     private static final String PREF_FONT_STYLE = "font_style";
-    private static final String PREF_FONT_SIZE  = "font_size";
+    private static final String PREF_STATUS_BAR_CLOCK_FONT_SIZE  = "status_bar_clock_font_size";
 
     public static final int CLOCK_DATE_STYLE_LOWERCASE = 1;
     public static final int CLOCK_DATE_STYLE_UPPERCASE = 2;
@@ -80,7 +80,7 @@ public class StatusBarClockStyle extends SettingsPreferenceFragment
     private ListPreference mClockDateFormat;
     private SwitchPreference mStatusBarClock;
     private ListPreference mFontStyle;
-    private SeekBarPreferenceCham mStatusBarDateSize;
+    private SeekBarPreferenceCham mStatusBarClockFontSize;
 
     private boolean mCheckPreferences;
 
@@ -190,10 +190,10 @@ public class StatusBarClockStyle extends SettingsPreferenceFragment
         mCheckPreferences = true;
 
         // Clock font size
-        mStatusBarDateSize = (SeekBarPreferenceCham) prefSet.findPreference(PREF_FONT_SIZE);
-        mStatusBarDateSize.setValue(Settings.System.getInt(getActivity().getContentResolver(),
+        mStatusBarClockFontSize = (SeekBarPreferenceCham) prefSet.findPreference(PREF_STATUS_BAR_CLOCK_FONT_SIZE);
+        mStatusBarClockFontSize.setValue(Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.STATUSBAR_CLOCK_FONT_SIZE, 14));
-        mStatusBarDateSize.setOnPreferenceChangeListener(this);
+        mStatusBarClockFontSize.setOnPreferenceChangeListener(this);
 
         return prefSet;
     }
@@ -305,7 +305,7 @@ public class StatusBarClockStyle extends SettingsPreferenceFragment
                     Settings.System.STATUSBAR_CLOCK_FONT_STYLE, val);
             mFontStyle.setSummary(mFontStyle.getEntries()[index]);
             return true;
-        } else if (preference == mStatusBarDateSize) {
+        } else if (preference == mStatusBarClockFontSize) {
             int width = ((Integer)newValue).intValue();
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.STATUSBAR_CLOCK_FONT_SIZE, width);
