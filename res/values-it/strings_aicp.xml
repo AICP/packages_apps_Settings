@@ -701,10 +701,19 @@
     <!-- StatusBar Clock style -->
     <string name="clock_font_style_title">Stile Font Ora</string>
     <string name="clock_font_bold">Grossetto</string>
+    <string name="clock_font_italic">Corsivo</string>
+    <string name="clock_font_bold">Grossetto</string>
     <string name="clock_font_bold_italic">Grossetto corsivo</string>
-    <string name="clock_font_condensed">Condensato</string>
     <string name="clock_font_light">Fine</string>
     <string name="clock_font_light_italic">Fine corsivo</string>
+    <string name="clock_font_thin">Sottile</string>
+    <string name="clock_font_thin_italic">Sottile corsivo</string>
+    <string name="clock_font_condensed">Condensato</string>
+    <string name="clock_font_condensed_italic">Condensato corsivo</string>
+    <string name="clock_font_condensed_bold">Condensato grossetto</string>
+    <string name="clock_font_condensed_bold_italic">Condensato grossetto corsivo</string>
+    <string name="clock_font_medium">Medio</string>
+    <string name="clock_font_medium_italic">Medio corsivo</string>
     <string name="clock_font_normal">Normale</string>
 
     <!-- Recents panel settings -->
@@ -801,6 +810,7 @@
     <string name="qs_screen_off_tile">Spegni Schermo</string>
     <string name="qs_systemui_restart_tile">Riavvia SystemUI</string>
     <string name="qs_tile_slim_floats">Slim Floats</string>
+    <string name="qs_tile_themes">Temi</string>
 
     <!-- QuickSettings collapse panel -->
     <string name="quick_settings_collapse_title">Chiudi Automaticamente le impostazioni rapide</string>
@@ -1311,12 +1321,19 @@
     <string name="status_bar_weather_size_title">Dimensione Font</string>
     <string name="status_bar_weather_font_style_title">Carattere</string>
     <string name="status_bar_weather_font_normal">Normale</string>
+    <string name="status_bar_weather_font_italic">Corsivo</string>
     <string name="status_bar_weather_font_bold">Grossetto</string>
-    <string name="status_bar_weather_font_bold_italic">Grossetto corsivo</string>
-    <string name="status_bar_weather_font_condensed">Condensato</string>
+    <string name="status_bar_weather_font_bold_italic">Grosseto corsivo</string>
     <string name="status_bar_weather_font_light">Fine</string>
     <string name="status_bar_weather_font_light_italic">Fine corsivo</string>
-
+    <string name="status_bar_weather_font_thin">Sottile</string>
+    <string name="status_bar_weather_font_thin_italic">Sottile corsivo</string>
+    <string name="status_bar_weather_font_condensed">Condensato</string>
+    <string name="status_bar_weather_font_condensed_italic">Condensato corsivo</string>
+    <string name="status_bar_weather_font_condensed_bold">Condensato grossetto</string>
+    <string name="status_bar_weather_font_condensed_bold_italic">Condensato grossetto corsivo</string>
+    <string name="status_bar_weather_font_medium">Medio</string>
+    <string name="status_bar_weather_font_medium_italic">Medio corsivo</string>
 
     <!-- SlimDim -->
     <string name="dim_nav_buttons_category">SlimDim</string>
@@ -1384,11 +1401,14 @@
     <string name="aicp_settings_tab3">Notifiche</string>
     <string name="aicp_settings_tab4">Sistema</string>
 
-   <!-- Long press on lock screen lock icon to launch torch-->
-   <string name="longpress_lock_icon_torch_title">Pressione lucchetto attiva torcia</string>
-   <string name="longpress_lock_icon_torch_summary">Questa opzione non funziona con smart lock e con gesture attive in accessibilità</string>
+    <!-- Long press on lock screen lock icon to launch torch-->
+    <string name="longpress_lock_icon_torch_title">Pressione lucchetto attiva torcia</string>
+    <string name="longpress_lock_icon_torch_summary">Questa opzione non funziona con smart lock e con gesture attive in accessibilità</string>
 
     <string name="chamber_title">Camera dei Segreti</string>
     <string name="chamber_toast">La camera dei segreti è aperta</string>
 
+    <!-- Device policy override -->
+    <string name="device_policy_override_title">Riscrivi Policy dispositivo</string>
+    <string name="device_policy_override_summary">Permette alle app di forzare la sicurezza dello sblocco e settaggi profili</string>
 </resources>
