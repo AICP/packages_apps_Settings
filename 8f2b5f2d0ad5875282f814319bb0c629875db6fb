@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3ace114c_6c36db05",
+        "filename": "res/values-hu/arrays_aicp.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2015-09-16T07:40:16Z",
+      "side": 1,
+      "message": "These lines aren\u0027t translatable...\nPlease check flag.",
+      "range": {
+        "startLine": 64,
+        "startChar": 0,
+        "endLine": 64,
+        "endChar": 46
+      },
+      "revId": "8f2b5f2d0ad5875282f814319bb0c629875db6fb",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": false
+    }
+  ]
+}
