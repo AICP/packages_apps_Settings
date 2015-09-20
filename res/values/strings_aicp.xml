@@ -1380,10 +1380,9 @@
     <string name="status_bar_custom_header_summary">Enable notification panel header image</string>
     
     <!-- Aicp Settings Tabs -->
-    <string name="aicp_settings_tab1">Stuff</string>
-    <string name="aicp_settings_tab2">Ui</string>
-    <string name="aicp_settings_tab3">Status Bar</string>
-    <string name="aicp_settings_tab4">System</string>
+    <string name="aicp_settings_tab1">UI</string>
+    <string name="aicp_settings_tab2">Built-in</string>
+    <string name="aicp_settings_tab3">Add-ons</string>
 
     <!-- Chamber of Secrets -->
     <string name="chamber_title">Chamber of secrets</string>
