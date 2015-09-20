@@ -34,11 +34,9 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.aicp.tabs.Stuff;
+import com.android.settings.aicp.tabs.AddOns;
+import com.android.settings.aicp.tabs.BuiltIn;
 import com.android.settings.aicp.tabs.Ui;
-import com.android.settings.aicp.tabs.StatusBar;
-import com.android.settings.aicp.tabs.System;
-
 
 public class AicpSettings extends SettingsPreferenceFragment implements ActionBar.TabListener {
 
@@ -132,16 +130,13 @@ public class AicpSettings extends SettingsPreferenceFragment implements ActionBa
             Fragment fragment = null;
             switch (position) {
                 case 0:
-                    fragment = new Stuff();
-                    break;
-                case 1:
                     fragment = new Ui();
                     break;
-                case 2:
-                    fragment = new StatusBar();
+                case 1:
+                    fragment = new BuiltIn();
                     break;
-                case 3:
-                    fragment = new System();
+                case 2:
+                    fragment = new AddOns();
                     break;
             }
             return fragment;
@@ -150,7 +145,7 @@ public class AicpSettings extends SettingsPreferenceFragment implements ActionBa
         @Override
         public int getCount() {
             // Show 4 total pages.
-            return 4;
+            return 3;
         }
 
         @Override
@@ -163,8 +158,6 @@ public class AicpSettings extends SettingsPreferenceFragment implements ActionBa
                     return getString(R.string.aicp_settings_tab2).toUpperCase(l);
                 case 2:
                     return getString(R.string.aicp_settings_tab3).toUpperCase(l);
-                case 3:
-                    return getString(R.string.aicp_settings_tab4).toUpperCase(l);
             }
             return null;
         }
