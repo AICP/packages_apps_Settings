@@ -333,6 +333,7 @@
     <string name="shortcut_action_kill">Kill app</string>
     <string name="shortcut_action_lastapp">Last app</string>
     <string name="shortcut_action_assist">Search</string>
+    <string name="shortcut_action_smart">Smart pulldown</string>
     <string name="shortcut_action_screenshot">Screenshot</string>
     <string name="shortcut_action_torch">Torch</string>
     <string name="shortcut_action_menu">Menu</string>
