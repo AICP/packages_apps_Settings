@@ -52,7 +52,7 @@
     <com.android.settings.widget.SeekBarPreferenceCham
         android:key="heads_up_snooze_time"
         android:title="@string/heads_up_snooze_title"
-        android:max="30"
+        android:max="120"
         settings:minimum="0"
         settings:unitsLeft=""
         settings:unitsRight="min"
