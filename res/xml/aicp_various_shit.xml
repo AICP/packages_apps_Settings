@@ -90,6 +90,12 @@
         android:title="@string/selinux_title"
         android:defaultValue="true" />
 
+    <SwitchPreference
+        android:key="selinux_switch_onboot"
+        android:title="@string/selinux_switch_onboot_title"
+        android:summary="@string/selinux_switch_onboot_summary"
+        android:dependency="selinux_switch_state" />
+
     <!-- Custom bootanim -->
     <Preference
         android:key="custom_bootanimation"
