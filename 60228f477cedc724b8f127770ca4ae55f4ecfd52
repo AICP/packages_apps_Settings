@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1acb0d3e_df39abd9",
+        "filename": "res/values-it/strings_aicp.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2015-09-28T13:55:59Z",
+      "side": 1,
+      "message": "The lines with translatable\u003d\"false\" flag should\u0027n be translated.",
+      "range": {
+        "startLine": 178,
+        "startChar": 18,
+        "endLine": 178,
+        "endChar": 52
+      },
+      "revId": "60228f477cedc724b8f127770ca4ae55f4ecfd52",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": false
+    }
+  ]
+}
