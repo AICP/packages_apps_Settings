@@ -1412,4 +1412,14 @@
     <string name="media_art_title">Media cover art</string>
     <string name="media_art_summary">Enable media cover art on the lockscreen</string>
 
+    <!-- Installer -->
+    <string name="category_installer">Installer</string>
+    <string name="persist_options">Persistence</string>
+    <string name="persist_enable">Enable persistence</string>
+    <string name="persist_enable_summary">Enable data to persist across installs</string>
+    <string name="persist_file_hosts">Persist hosts</string>
+    <string name="persist_file_hosts_summary">Persist hosts file</string>
+    <string name="persist_file_xposed">Persist Xposed</string>
+    <string name="persist_file_xposed_summary">Persist file app_process for Xposed framework</string>
+
 </resources>
