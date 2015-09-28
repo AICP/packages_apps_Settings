@@ -31,4 +31,10 @@
         android:fragment="com.android.settings.aicp.WakeLockBlocker"
         android:title="@string/wakelock_blocker_title" />
 
+    <!-- Installer -->
+    <PreferenceScreen
+        android:key="persistance"
+        android:fragment="com.android.settings.aicp.Installer"
+        android:title="@string/persist_options"/>
+
 </PreferenceScreen>
