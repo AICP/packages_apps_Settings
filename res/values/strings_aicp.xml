@@ -1412,4 +1412,10 @@
     <string name="media_art_title">Media cover art</string>
     <string name="media_art_summary">Enable media cover art on the lockscreen</string>
 
+    <!-- Empty shade custom text -->
+    <string name="empty_shade_text_title">Emtpty shade text</string>
+    <string name="empty_shade_text_summary">Display a custom text in the empty shade.\nReboot is necessary.</string>
+    <string name="empty_shade_text_dialog">Set your empty shade text</string>
+    <string name="empty_shade_text_main">No notifications</string>
+
 </resources>
