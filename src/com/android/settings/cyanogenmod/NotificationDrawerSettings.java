@@ -16,7 +16,9 @@
  */
 package com.android.settings.cyanogenmod;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.UserHandle;
@@ -26,8 +28,10 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
+import android.text.Spannable;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.EditText;
 
 import android.provider.SearchIndexableResource;
 
@@ -55,6 +59,7 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
     private static final String PREF_QS_SHOW_BRIGHTNESS_SLIDER = "qs_show_brightness_slider";
     private static final String PREF_ENABLE_TASK_MANAGER = "enable_task_manager";
     private static final String STATUS_BAR_POWER_MENU = "status_bar_power_menu";
+    private static final String PREF_EMPTY_SHADE_TEXT = "empty_shade_text";
 
     private Preference mQSTiles;
     private ListPreference mNumColumns;
@@ -64,6 +69,9 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
     private SwitchPreference mBlockOnSecureKeyguard;
     private SwitchPreference mBrightnessSlider;
     private SwitchPreference mEnableTaskManager;
+    private SwitchPreference mEmptyShadeText;
+
+    private String mCustomEmptyShadeText = "";
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -131,6 +139,13 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
         updateNumColumnsSummary(numColumns);
         mNumColumns.setOnPreferenceChangeListener(this);
         DraggableGridView.setColumnCount(numColumns);
+
+        // Empty shade custom text
+        mEmptyShadeText = (SwitchPreference) prefs.findPreference(PREF_EMPTY_SHADE_TEXT);
+        mCustomEmptyShadeText = Settings.System.getStringForUser(getActivity().getContentResolver(),
+                Settings.System.EMPTY_SHADE_TEXT, UserHandle.USER_CURRENT);
+        boolean shadeText = mCustomEmptyShadeText != null && !TextUtils.isEmpty(mCustomEmptyShadeText);
+        mEmptyShadeText.setChecked(shadeText);
     }
 
     @Override
@@ -193,12 +208,48 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-       if  (preference == mEnableTaskManager) {
+        if  (preference == mEnableTaskManager) {
             boolean enabled = ((SwitchPreference)preference).isChecked();
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.ENABLE_TASK_MANAGER, enabled ? 1:0);
+        } else if (preference == mEmptyShadeText) {
+           boolean enabled = mEmptyShadeText.isChecked();
+           if (enabled) {
+                AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
+
+                alert.setTitle(R.string.empty_shade_text_title);
+                alert.setMessage(R.string.empty_shade_text_dialog);
+
+                // Set an EditText view to get user input
+                final EditText input = new EditText(getActivity());
+                input.setText(mCustomEmptyShadeText != null ? mCustomEmptyShadeText :
+                        getResources().getString(R.string.empty_shade_text_main));
+                alert.setView(input);
+                alert.setPositiveButton(getResources().getString(R.string.ok), new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        String value = ((Spannable) input.getText()).toString();
+                        Settings.System.putStringForUser(getActivity().getContentResolver(),
+                                Settings.System.EMPTY_SHADE_TEXT, value, UserHandle.USER_CURRENT);
+                        updateCheckState(value);
+                    }
+                });
+                alert.setNegativeButton(getResources().getString(R.string.cancel), new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        // Canceled.
+                    }
+                });
+
+                alert.show();
+            } else {
+                Settings.System.putStringForUser(getActivity().getContentResolver(),
+                        Settings.System.EMPTY_SHADE_TEXT, "", UserHandle.USER_CURRENT);
+            }
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
+    }
+
+    private void updateCheckState(String value) {
+        if (value == null || TextUtils.isEmpty(value)) mEmptyShadeText.setChecked(false);
     }
 
     private void updateSmartPulldownSummary(int value) {
