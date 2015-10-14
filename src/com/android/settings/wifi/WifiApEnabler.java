@@ -42,6 +42,7 @@ public class WifiApEnabler {
 
     private WifiManager mWifiManager;
     private final IntentFilter mIntentFilter;
+    private int mWifiSavedState = 0;
 
     ConnectivityManager mCm;
     private String[] mWifiRegexs;
@@ -74,6 +75,14 @@ public class WifiApEnabler {
                 updateTetherState(available.toArray(), active.toArray(), errored.toArray());
             } else if (Intent.ACTION_AIRPLANE_MODE_CHANGED.equals(action)) {
                 enableWifiSwitch();
+            } else if (WifiManager.WIFI_STATE_CHANGED_ACTION.equals(action)) {
+                if (intent.getIntExtra(WifiManager.EXTRA_WIFI_STATE,
+                WifiManager.WIFI_STATE_UNKNOWN) == WifiManager.WIFI_STATE_ENABLED) {
+                    if (mWifiSavedState == 1) {
+                        enableWifiSwitch();
+                        mWifiSavedState = 0;
+                    }
+                }
             }
         }
     };
@@ -95,6 +104,7 @@ public class WifiApEnabler {
         mIntentFilter = new IntentFilter(WifiManager.WIFI_AP_STATE_CHANGED_ACTION);
         mIntentFilter.addAction(ConnectivityManager.ACTION_TETHER_STATE_CHANGED);
         mIntentFilter.addAction(Intent.ACTION_AIRPLANE_MODE_CHANGED);
+        mIntentFilter.addAction(WifiManager.WIFI_STATE_CHANGED_ACTION);
     }
 
     public void resume() {
@@ -155,6 +165,7 @@ public class WifiApEnabler {
     }
 
     private void handleWifiApStateChanged(int state, int reason) {
+
         boolean enableWifiApSettingsExt = mContext.getResources().getBoolean(
                 R.bool.show_wifi_hotspot_settings);
         if (enableWifiApSettingsExt) {
@@ -237,7 +248,7 @@ public class WifiApEnabler {
             hotspot_postConfigure_intent.putExtra(ACTION_EXTRA, choice);
             ctx.startActivity(hotspot_postConfigure_intent);
             mEnabling = false;
-        }
+
         return true;
     }
 }
