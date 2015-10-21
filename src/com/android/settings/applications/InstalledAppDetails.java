@@ -1058,6 +1058,7 @@ public class InstalledAppDetails extends AppInfoBase
 
         ImageView iconView = (ImageView) appSnippet.findViewById(android.R.id.icon);
         iconView.setImageDrawable(icon);
+
         // Set application name.
         TextView labelView = (TextView) appSnippet.findViewById(android.R.id.title);
         labelView.setText(label);
@@ -1068,6 +1069,20 @@ public class InstalledAppDetails extends AppInfoBase
         if (packageName != null) {
             appPackage.setVisibility(View.VISIBLE);
             appPackage.setText(packageName);
+
+            // Clicking on application icon opens application.
+            final String finalPackageName = packageName;
+            iconView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    PackageManager pm = v.getContext().getPackageManager();
+                    Intent intent = pm.getLaunchIntentForPackage(finalPackageName);
+                    if (intent == null)
+                        return;
+
+                    v.getContext().startActivity(intent);
+                }
+            });
         } else {
             appPackage.setVisibility(View.GONE);
         }
