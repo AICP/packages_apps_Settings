@@ -24,4 +24,6 @@
     <color name="white">#FFF</color>
     <color name="aicp_logo_bg">@*android:color/primary_text_material_light</color>
     <color name="aicp_logo_fg">@color/icon_tint_color</color>
+        <!-- Storage Summary Title -->
+    <color name="storage_summary_title_color">#ff607d8b</color>
 </resources>
