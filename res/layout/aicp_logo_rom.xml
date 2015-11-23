@@ -14,7 +14,7 @@
      limitations under the License.
 -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center" >
@@ -22,6 +22,23 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="160dp"
-            android:src="@drawable/aicp_logo_rom" />
+            android:src="@drawable/aicp_logo_letters"
+	    android:tint="?android:attr/colorAccent"
+	    />
+	<ImageView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:src="@drawable/aicp_shadow"
+	    />
+	<ImageView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:src="@drawable/aicp_logo_outline"
+	    />
+	<ImageView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:src="@drawable/aicp_logo_bg"
+	    />
 
-</LinearLayout> 
+</FrameLayout>
