@@ -61,6 +61,11 @@
         android:entries="@array/screen_timeout_entries"
         android:entryValues="@array/screen_timeout_values" />
 
+    <Preference
+        android:key="expanded_desktop"
+        android:title="@string/power_menu_expanded_desktop"
+        android:fragment="com.android.settings.applications.ExpandedDesktopPreferenceFragment" />
+
     <!-- Disabled on Lineage
     <SwitchPreference
         android:key="auto_rotate"
