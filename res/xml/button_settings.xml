@@ -70,6 +70,11 @@
             android:title="@string/navigation_bar_recents_title"
             android:persistent="false" />
 
+        <PreferenceScreen
+            android:key="slim_dim"
+            android:fragment="com.android.settings.aicp.SlimDim"
+            android:title="@string/dim_nav_buttons_category" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
