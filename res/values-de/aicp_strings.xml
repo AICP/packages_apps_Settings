@@ -277,7 +277,7 @@
     <string name="status_bar_date_style_lowercase">Kleingeschrieben</string>
     <string name="status_bar_date_style_uppercase">Großgeschrieben</string>
     <string name="status_bar_date_format_custom">Eigenes Datumsformat</string>
-    <string name="status_bar_date_string_edittext_title">Muss ein spezielles Format haben, z.B. dd.mm.yy</string>
+    <string name="status_bar_date_string_edittext_title">Muss ein spezielles Format haben, z.B. MM/dd/yy</string>
     <string name="status_bar_date_string_edittext_summary">Eingabe</string>
 
     <!-- Status bar - Clock -->
