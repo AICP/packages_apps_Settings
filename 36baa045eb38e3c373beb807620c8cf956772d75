@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa2e39b8_53905895",
+        "filename": "src/com/android/settings/ChooseLockPatternSize.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2016-01-12T20:42:57Z",
+      "side": 1,
+      "message": "Don\u0027t get why Adnan left this line here.. By mistake??",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 53
+      },
+      "revId": "36baa045eb38e3c373beb807620c8cf956772d75",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": false
+    }
+  ]
+}
