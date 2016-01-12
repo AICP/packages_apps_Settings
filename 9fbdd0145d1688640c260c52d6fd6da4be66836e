@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa2e39b8_b3f8c4e6",
+        "filename": "src/com/android/settings/aicp/WakelockBlocker.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2016-01-12T20:53:16Z",
+      "side": 1,
+      "message": "Move to CMMetrics",
+      "range": {
+        "startLine": 49,
+        "startChar": 0,
+        "endLine": 49,
+        "endChar": 50
+      },
+      "revId": "9fbdd0145d1688640c260c52d6fd6da4be66836e",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": false
+    }
+  ]
+}
