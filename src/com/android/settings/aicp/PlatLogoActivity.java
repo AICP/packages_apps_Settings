@@ -27,10 +27,13 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.widget.ImageView;
-import android.widget.Toast;
+
+import com.android.settings.R;
+import com.android.settings.Utils;
+
+import com.nispok.snackbar.Snackbar;
 
 public class PlatLogoActivity extends Activity {
-    Toast mToast;
     ImageView mContent;
     Vibrator mZzz;
     int mCount;
@@ -65,8 +68,6 @@ public class PlatLogoActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mToast = Toast.makeText(this, "A. I. C. P.", Toast.LENGTH_SHORT);
-
         mZzz = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
         mContent = new ImageView(this);
@@ -86,7 +87,8 @@ public class PlatLogoActivity extends Activity {
                     if (mContent.isPressed()) {
                         mContent.setPressed(false);
                         mHandler.removeCallbacks(mSuperLongPress);
-                        mToast.show();
+                        Utils.showSnackbar(getString(R.string.easter_egg_snack),
+                                Snackbar.SnackbarDuration.LENGTH_LONG, null, null, PlatLogoActivity.this);
                     }
                 }
                 return true;
