@@ -82,6 +82,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private static final String KEY_SWAP_VOLUME_BUTTONS = "swap_volume_buttons";
     private static final String KEY_NAVIGATION_BAR_LEFT = "navigation_bar_left";
     private static final String KEY_ENABLE_NAVIGATION_BAR = "enable_nav_bar";
+    private static final String KEY_ENABLE_NAVIGATION_BAR_TINT_SWITCH = "navigation_bar_tint_switch";
     private static final String KEY_NAVIGATION_RECENTS_LONG_PRESS = "navigation_recents_long_press";
     private static final String KEY_POWER_END_CALL = "power_end_call";
     private static final String KEY_HOME_ANSWER_CALL = "home_answer_call";
@@ -147,6 +148,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private SwitchPreference mPowerEndCall;
     private SwitchPreference mHomeAnswerCall;
     private SwitchPreference mCameraDoubleTapPowerGesture;
+    private SwitchPreference mNavbarButtonTintSwitch;
 
     private PreferenceCategory mNavigationPreferencesCat;
     private SwitchPreference mDisableNavigationKeys;	
@@ -222,6 +224,10 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         // Navigation bar left
         mNavigationBarLeftPref = (SwitchPreference) findPreference(KEY_NAVIGATION_BAR_LEFT);
 
+        // Navigation bar button color Main Switch
+        mNavbarButtonTintSwitch = (SwitchPreference) findPreference(KEY_ENABLE_NAVIGATION_BAR_TINT_SWITCH);
+        mNavbarButtonTintSwitch.setOnPreferenceChangeListener(this);
+
         // Navigation bar button color
         mNavbarButtonTint = (ColorPickerPreference) findPreference(NAVIGATION_BAR_TINT);
         mNavbarButtonTint.setOnPreferenceChangeListener(this);
@@ -235,7 +241,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         mNavigationRecentsLongPressAction =
                 initRecentsLongPressAction(KEY_NAVIGATION_RECENTS_LONG_PRESS);
 
-       mDisableNavigationKeys = (SwitchPreference) findPreference(DISABLE_NAV_KEYS);
+        mDisableNavigationKeys = (SwitchPreference) findPreference(DISABLE_NAV_KEYS);
 
         final CMHardwareManager hardware = CMHardwareManager.getInstance(getActivity());
 
@@ -246,7 +252,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
                 needsNavigationBar = wm.needsNavigationBar();
             } catch (RemoteException e) {
            }
-      if (needsNavigationBar) {
+        if (needsNavigationBar) {
                 prefScreen.removePreference(mDisableNavigationKeys);
             } else {
                 // Remove keys that can be provided by the navbar
@@ -627,6 +633,11 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         } else if (preference == mVolumeKeyCursorControl) {
             handleSystemActionListChange(mVolumeKeyCursorControl, newValue,
                     Settings.System.VOLUME_KEY_CURSOR_CONTROL);
+            return true;
+        } else if (preference == mNavbarButtonTintSwitch) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.NAVIGATION_BAR_TINT_SWITCH,
+                        ((Boolean) newValue) ? 1 : 0);
             return true;
         } else if (preference == mNavbarButtonTint) {
             String hex = ColorPickerPreference.convertToARGB(
