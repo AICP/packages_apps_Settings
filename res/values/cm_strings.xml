@@ -730,6 +730,8 @@
     <string name="heads_up_blacklist_title">Blacklist</string>
     <string name="heads_up_whitelist_title">Whitelist</string>
     <string name="heads_up_contains_key">Already added this application to the list</string>
+    <string name="heads_up_snooze">Snooze</string>
+    <string name="heads_up_timeout">Timeout</string>
 
     <!-- High touch sensitivity -->
     <string name="high_touch_sensitivity_title">High touch sensitivity</string>
