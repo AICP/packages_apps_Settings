@@ -270,6 +270,10 @@ public final class BluetoothSettings extends DeviceListPreferenceFragment implem
         boolean isDiscovering = mLocalAdapter.isDiscovering();
         int textId = isDiscovering ? R.string.bluetooth_searching_for_devices :
             R.string.bluetooth_search_for_devices;
+
+        boolean isAcceptAllFilesEnabled = CMSettings.System.getInt(getContentResolver(),
+                CMSettings.System.BLUETOOTH_ACCEPT_ALL_FILES, 0) == 1;
+
         menu.add(Menu.NONE, MENU_ID_SCAN, 0, textId)
                 .setEnabled(bluetoothIsEnabled && !isDiscovering)
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
@@ -301,6 +305,13 @@ public final class BluetoothSettings extends DeviceListPreferenceFragment implem
                 MetricsLogger.action(getActivity(), MetricsLogger.ACTION_BLUETOOTH_FILES);
                 Intent intent = new Intent(BTOPP_ACTION_OPEN_RECEIVED_FILES);
                 getActivity().sendBroadcast(intent);
+                return true;
+
+            case MENU_ID_ACCEPT_ALL_FILES:
+                item.setChecked(!item.isChecked());
+                CMSettings.System.putInt(getContentResolver(),
+                        CMSettings.System.BLUETOOTH_ACCEPT_ALL_FILES,
+                        item.isChecked() ? 1 : 0);
                 return true;
         }
         return super.onOptionsItemSelected(item);
