@@ -24,6 +24,7 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceGroup;
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
@@ -34,6 +35,7 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.cyanogenmod.PackageListAdapter;
 import com.android.settings.cyanogenmod.PackageListAdapter.PackageItem;
+import com.android.settings.widget.SeekBarPreferenceCham;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -44,11 +46,15 @@ import cyanogenmod.providers.CMSettings;
 import org.cyanogenmod.internal.logging.CMMetricsLogger;
 
 public class HeadsUpSettings extends SettingsPreferenceFragment
-        implements AdapterView.OnItemLongClickListener, Preference.OnPreferenceClickListener {
+        implements AdapterView.OnItemLongClickListener, Preference.OnPreferenceClickListener,
+        Preference.OnPreferenceChangeListener {
 
     private static final int DIALOG_DND_APPS = 0;
     private static final int DIALOG_BLACKLIST_APPS = 1;
     private static final int DIALOG_WHITELIST_APPS = 2;
+
+    private static final String HEADS_UP_TIMEOUT = "heads_up_timeout";
+    private static final String HEADS_UP_SNOOZE_LENGTH_MS = "heads_up_snooze_length_ms";
 
     private PackageListAdapter mPackageAdapter;
     private PackageManager mPackageManager;
@@ -58,6 +64,8 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
     private Preference mAddDndPref;
     private Preference mAddBlacklistPref;
     private Preference mAddWhitelistPref;
+    private SeekBarPreferenceCham mHeadsUpTimeout;
+    private SeekBarPreferenceCham mHeadsUpSnooze;
 
     private String mDndPackageList;
     private String mBlacklistPackageList;
@@ -94,6 +102,16 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
         mAddDndPref.setOnPreferenceClickListener(this);
         mAddBlacklistPref.setOnPreferenceClickListener(this);
         mAddWhitelistPref.setOnPreferenceClickListener(this);
+
+        mHeadsUpTimeout = (SeekBarPreferenceCham) findPreference(HEADS_UP_TIMEOUT);
+        mHeadsUpTimeout.setValue(Settings.System.getInt(getContentResolver(),
+                Settings.System.HEADS_UP_TIMEOUT, 10000));
+        mHeadsUpTimeout.setOnPreferenceChangeListener(this);
+
+        mHeadsUpSnooze = (SeekBarPreferenceCham) findPreference(HEADS_UP_SNOOZE_LENGTH_MS);
+        mHeadsUpSnooze.setValue(Settings.System.getInt(getContentResolver(),
+                Settings.System.HEADS_UP_SNOOZE_LENGTH_MS, 60 / 1000));
+        mHeadsUpSnooze.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -255,6 +273,19 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
         mDndPrefList.addPreference(mAddDndPref);
         mBlacklistPrefList.addPreference(mAddBlacklistPref);
         mWhitelistPrefList.addPreference(mAddWhitelistPref);
+    }
+
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
+        if (preference == mHeadsUpTimeout) {
+            int length = ((Integer) objValue).intValue();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.HEADS_UP_TIMEOUT, length);
+        } else if (preference == mHeadsUpSnooze) {
+            int snooze = ((Integer) objValue).intValue();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.HEADS_UP_SNOOZE_LENGTH_MS, snooze);
+        }
+        return true;
     }
 
     @Override
