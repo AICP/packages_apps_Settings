@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_2a656345",
+        "filename": "res/values/cm_arrays.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 262,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2016-02-08T18:21:12Z",
+      "side": 1,
+      "message": "That was removed in http://gerrit.aicp-rom.com/#/c/22727/1/res/values/cm_arrays.xml",
+      "range": {
+        "startLine": 262,
+        "startChar": 1,
+        "endLine": 262,
+        "endChar": 28
+      },
+      "revId": "ae6c42d4b1b9f1b94ad15278add259e71ff7c21b",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": false
+    }
+  ]
+}
