@@ -152,6 +152,9 @@ public class DashboardSummary extends InstrumentedFragment {
 
             TextView categoryLabel = (TextView) categoryView.findViewById(R.id.category_title);
             categoryLabel.setText(category.getTitle(res));
+            categoryLabel.setTextSize(Settings.System.getIntForUser(context.getContentResolver(),
+                    Settings.System.SETTINGS_CATEGORY_TEXT_SIZE, 14,
+                    UserHandle.USER_CURRENT));
 
             ViewGroup categoryContent =
                     (ViewGroup) categoryView.findViewById(R.id.category_content);

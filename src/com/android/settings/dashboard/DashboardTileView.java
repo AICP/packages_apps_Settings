@@ -19,6 +19,7 @@ package com.android.settings.dashboard;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Typeface;
+import android.os.UserHandle;
 import android.provider.Settings;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -40,6 +41,8 @@ import java.lang.reflect.InvocationTargetException;
 public class DashboardTileView extends FrameLayout implements View.OnClickListener {
 
     private static final int DEFAULT_COL_SPAN = 1;
+    private static final int DASH_DEFAULT_TEXT_SIZE = 14;
+    private static final int DASH_DEFAULT_TITLE_SIZE = 18;
 
     private ImageView mImageView;
     private TextView mTitleTextView;
@@ -84,6 +87,13 @@ public class DashboardTileView extends FrameLayout implements View.OnClickListen
 
         setOnClickListener(this);
         setBackgroundResource(R.drawable.dashboard_tile_background);
+        mStatusTextView.setTextSize(Settings.System.getIntForUser(context.getContentResolver(),
+            Settings.System.SETTINGS_TITLE_TEXT_SIZE, DASH_DEFAULT_TEXT_SIZE,
+               UserHandle.USER_CURRENT));
+        mTitleTextView.setTextSize(Settings.System.getIntForUser(context.getContentResolver(),
+            Settings.System.SETTINGS_TITLE_TEXT_SIZE, DASH_DEFAULT_TITLE_SIZE,
+               UserHandle.USER_CURRENT));
+
         setFocusable(true);
         updateDashFont();
     }
