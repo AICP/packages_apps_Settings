@@ -41,6 +41,7 @@ public class BatteryLightSettings extends SettingsPreferenceFragment implements
 
     private static final String LOW_COLOR_PREF = "low_color";
     private static final String MEDIUM_COLOR_PREF = "medium_color";
+    private static final String MEDIUM_FAST_COLOR_PREF = "medium_fast_color";
     private static final String FULL_COLOR_PREF = "full_color";
     private static final String REALLY_FULL_COLOR_PREF = "really_full_color";
     private static final String LIGHT_ENABLED_PREF = "battery_light_enabled";
@@ -49,6 +50,7 @@ public class BatteryLightSettings extends SettingsPreferenceFragment implements
     private PreferenceGroup mColorPrefs;
     private ApplicationLightPreference mLowColorPref;
     private ApplicationLightPreference mMediumColorPref;
+    private ApplicationLightPreference mMediumFastColorPref;
     private ApplicationLightPreference mFullColorPref;
     private ApplicationLightPreference mReallyFullColorPref;
     private CMSystemSettingSwitchPreference mLightEnabledPref;
@@ -88,6 +90,9 @@ public class BatteryLightSettings extends SettingsPreferenceFragment implements
             mMediumColorPref = (ApplicationLightPreference) prefSet.findPreference(MEDIUM_COLOR_PREF);
             mMediumColorPref.setOnPreferenceChangeListener(this);
 
+            mMediumFastColorPref = (ApplicationLightPreference) prefSet.findPreference(MEDIUM_FAST_COLOR_PREF);
+            mMediumFastColorPref.setOnPreferenceChangeListener(this);
+
             mFullColorPref = (ApplicationLightPreference) prefSet.findPreference(FULL_COLOR_PREF);
             mFullColorPref.setOnPreferenceChangeListener(this);
 
@@ -121,6 +126,13 @@ public class BatteryLightSettings extends SettingsPreferenceFragment implements
             mMediumColorPref.setAllValues(mediumColor, 0, 0, false);
         }
 
+        if (mMediumFastColorPref != null) {
+            int mediumFastColor = Settings.System.getInt(resolver, 
+                    Settings.System.BATTERY_LIGHT_MEDIUM_FAST_COLOR,
+                    res.getInteger(com.android.internal.R.integer.config_notificationsBatteryMediumFastARGB));
+            mMediumFastColorPref.setAllValues(mediumFastColor, 0, 0, false);
+        }
+
         if (mFullColorPref != null) {
             int fullColor = CMSettings.System.getInt(resolver, CMSettings.System.BATTERY_LIGHT_FULL_COLOR,
                     res.getInteger(com.android.internal.R.integer.config_notificationsBatteryFullARGB));
@@ -147,6 +159,8 @@ public class BatteryLightSettings extends SettingsPreferenceFragment implements
             CMSettings.System.putInt(resolver, CMSettings.System.BATTERY_LIGHT_LOW_COLOR, color);
         } else if (key.equals(MEDIUM_COLOR_PREF)) {
             CMSettings.System.putInt(resolver, CMSettings.System.BATTERY_LIGHT_MEDIUM_COLOR, color);
+        } else if (key.equals(MEDIUM_FAST_COLOR_PREF)) {
+            Settings.System.putInt(resolver, Settings.System.BATTERY_LIGHT_MEDIUM_FAST_COLOR, color);
         } else if (key.equals(FULL_COLOR_PREF)) {
             CMSettings.System.putInt(resolver, CMSettings.System.BATTERY_LIGHT_FULL_COLOR, color);
         } else if (key.equals(REALLY_FULL_COLOR_PREF)) {
@@ -181,6 +195,8 @@ public class BatteryLightSettings extends SettingsPreferenceFragment implements
                 res.getInteger(com.android.internal.R.integer.config_notificationsBatteryLowARGB));
         CMSettings.System.putInt(resolver, CMSettings.System.BATTERY_LIGHT_MEDIUM_COLOR,
                 res.getInteger(com.android.internal.R.integer.config_notificationsBatteryMediumARGB));
+        Settings.System.putInt(resolver, Settings.System.BATTERY_LIGHT_MEDIUM_FAST_COLOR,
+                res.getInteger(com.android.internal.R.integer.config_notificationsBatteryMediumFastARGB));
         CMSettings.System.putInt(resolver, CMSettings.System.BATTERY_LIGHT_FULL_COLOR,
                 res.getInteger(com.android.internal.R.integer.config_notificationsBatteryFullARGB));
         Settings.System.putInt(resolver, Settings.System.BATTERY_LIGHT_REALLY_FULL_COLOR,

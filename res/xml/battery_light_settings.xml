@@ -50,6 +50,11 @@
             android:persistent="false" />
 
         <com.android.settings.notificationlight.ApplicationLightPreference
+            android:key="medium_fast_color"
+            android:title="@string/battery_light_medium_fast_color_title"
+            android:persistent="false" />
+
+        <com.android.settings.notificationlight.ApplicationLightPreference
             android:key="full_color"
             android:title="@string/battery_light_full_color_title"
             android:persistent="false" />
