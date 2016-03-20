@@ -200,8 +200,8 @@
 
     <!-- Battery Saver Settings -->
     <!-- Disable Battery Saver Warning Color -->
-    <string name="battery_saver_color_title">Оповещение цветовое</string>
-    <string name="battery_saver_color_summary">Изменить цвет панели навигации, когда активируется оповещение</string>
+    <string name="battery_saver_color_title">Цветовое оповещение</string>
+    <string name="battery_saver_color_summary">Изменить цвет панели навигации и строки состояния, когда активируется режим энергосбережения</string>
 
     <!-- Doze options -->
     <string name="display_category_doze_options_title">Захват дисплея</string>
