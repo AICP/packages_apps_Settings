@@ -266,10 +266,10 @@
     <string name="less_notification_sounds_5m">5 минут</string>
 
     <!-- Battery notifications -->
-    <string name="battery_saver_notif_title">Уведомление режима энэргосбережения</string>
-    <string name="battery_saver_notif_summary">Показывать уведомление режима энэргосбережения, когда включены</string>
-    <string name="battery_low_notif_title">Уведомление низкого уровня батареи</string>
-    <string name="battery_low_notif_summary">Показывать уведомление низкого уровня батареи, когда включены</string>
+    <string name="battery_saver_notif_title">Уведомление о режиме энергосбережения</string>
+    <string name="battery_saver_notif_summary">Показывать уведомление о режиме энергосбережения</string>
+    <string name="battery_low_notif_title">Уведомление о низком уровне заряда батареи</string>
+    <string name="battery_low_notif_summary">Показывать уведомление о низком уровне заряда батареи</string>
 
     <!--Status bar date -->
     <string name="status_bar_date_title">Дата</string>
