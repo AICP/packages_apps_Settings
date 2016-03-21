@@ -87,6 +87,8 @@ import com.android.settings.util.CMDProcessor;
 import com.android.settings.util.Helpers;
 import com.android.settings.widget.SwitchBar;
 import com.android.settings.widget.SeekBarPreferenceCham;
+
+import cyanogenmod.hardware.CMHardwareManager;
 import cyanogenmod.providers.CMSettings;
 
 import java.io.File;
@@ -475,10 +477,15 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         mKillAppLongpressBack = findAndInitSwitchPref(KILL_APP_LONGPRESS_BACK);
         mHoldBackToKillTimeout =
                     (SeekBarPreferenceCham) findPreference(HOLD_BACK_TO_KILL_TIMEOUT);
-        int holdBackToKillTimeout = Settings.System.getInt(getActivity().getContentResolver(),
-                Settings.System.HOLD_BACK_TO_KILL_TIMEOUT, 750);
-        mHoldBackToKillTimeout.setValue(holdBackToKillTimeout / 1);
-        mHoldBackToKillTimeout.setOnPreferenceChangeListener(this);
+        if (checkHardwareKeys(getActivity())) {
+             int holdBackToKillTimeout = Settings.System.getInt(getActivity().getContentResolver(),
+                     Settings.System.HOLD_BACK_TO_KILL_TIMEOUT, 750);
+             mHoldBackToKillTimeout.setValue(holdBackToKillTimeout / 1);
+             mHoldBackToKillTimeout.setOnPreferenceChangeListener(this);
+        } else {
+             removePreference(mKillAppLongpressBack);
+             removePreference(mHoldBackToKillTimeout);
+        }
 
         //SELinux
         mSelinux = (SwitchPreference) findPreference(SELINUX);
@@ -2304,6 +2311,11 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         } catch (NameNotFoundException e) {
             return false;
         }
+    }
+
+    public static boolean checkHardwareKeys(Context context) {
+        CMHardwareManager hardware = CMHardwareManager.getInstance(context);
+        return hardware.isSupported(CMHardwareManager.FEATURE_KEY_DISABLE);
     }
 
     /**
