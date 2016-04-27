@@ -69,6 +69,20 @@
     <string name="volume_steps_7">7</string>
     <string name="volume_steps_5">5</string>
 
+    <string name="pulse_custom_dimen">Pulse Bar Width</string>
+	<string name="pulse_dimen0">Default</string>
+ 	<string name="pulse_dimen1">15dp</string>
+ 	<string name="pulse_dimen2">16dp</string>
+	<string name="pulse_dimen3">17dp</string>
+	<string name="pulse_dimen4">18dp</string>
+ 	<string name="pulse_dimen5">19dp</string>
+ 	<string name="pulse_dimen6">20dp</string>
+ 	<string name="pulse_dimen7">21dp</string>
+ 	<string name="pulse_dimen8">22dp</string>
+ 	<string name="pulse_dimen9">23dp</string>
+ 	<string name="pulse_dimen10">24dp</string>
+	<string name="pulse_dimen11">25dp</string>
+
     <!-- Navigation Bar -->
     <string name="navigation_bar_dimensions_reset_message">Reset all dimensions entries to default?</string>
     <string name="navigation_bar_dimensions_title"><b>Nav bar dimensions</b></string>
