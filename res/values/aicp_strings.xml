@@ -664,4 +664,16 @@
     <!-- Hide apps from recents -->
     <string name="hide_from_recents_add_app">Add App</string>
 
+    <!-- Dashboard colors -->
+    <string name="db_custom_colors">Dashboard custom colors</string>
+    <string name="db_custom_colors_summary">Colorize elements of dashboard below. Your selections will override any theme settings.\nToggle off to go back to defaults.</string>
+    <string name="db_colors">Dashboard colors</string>
+    <string name="db_icon_color">Icon color</string>
+    <string name="db_text_color">Title text color</string>
+    <string name="db_sub_text_color">Text color</string>
+    <string name="db_switch_color">Switch accent color</string>
+    <string name="db_colors_reset_title">Dashboard colors reset</string>
+    <string name="db_colors_reset_message">Reset Dashboard colors back to default.\nRemember to toggle switch off.</string>
+    <string name="db_header_colors">Dashboard colors</string>
+
 </resources>
