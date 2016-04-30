@@ -143,6 +143,11 @@
                 android:summary="@string/dashboard_switches_summary"
                 android:persistent="false" />
 
+        <PreferenceScreen
+                android:key="dashboard_colors"
+                android:title="@string/db_colors"
+                android:fragment="com.android.settings.aicp.DashBoardColors"/>
+
     </PreferenceCategory>
 
     <PreferenceCategory
