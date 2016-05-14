@@ -288,6 +288,7 @@
     <!-- Status bar - Clock -->
     <string name="status_bar_clock_category">Clock</string>
     <string name="clock_color_title">Color</string>
+    <string name="clock_color_switch_title">Enable clock color</string>
     <string name="status_bar_clock_style_reset">Reset color</string>
     <string name="status_bar_clock_style_reset_message">Reset clock color?</string>
     <string name="clock_font_style_title">Font</string>
@@ -583,7 +584,7 @@
 
     <string name="default_fill">4dp(default)</string>
     <string name="pulse_bar_style">Pulse Bar Style</string>
-    <string name="default_pulse_empty">1dp(default)</string>	
+    <string name="default_pulse_empty">1dp(default)</string>
     <string name="pulse_filled_block_size">Block Size</string>
     <string name="pulse_empty_block_size">Block Spacing</string>
     <string name="pulse_fill1">5dp</string>
