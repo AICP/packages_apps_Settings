@@ -702,6 +702,12 @@
   <string name="status_bar_quick_qs_pulldown_off">Disattivato</string>
   <string name="status_bar_quick_qs_pulldown_left">Sinistra</string>
   <string name="status_bar_quick_qs_pulldown_right">Destra</string>
+  <string name="smart_pulldown_title">Menu a Tendina Smart</string>
+  <string name="smart_pulldown_summary">Apri impostazioni rapide quando presente %1$s </string>
+  <string name="smart_pulldown_off">Disattivato</string>
+  <string name="smart_pulldown_dismissable">nessuna notifica dismissibile</string>
+  <string name="smart_pulldown_persistent">nessuna notifica persistente</string>
+  <string name="smart_pulldown_all">nessuna notifica dismissibile o persistente</string>
   <!-- Status bar - Clock -->
   <string name="status_bar_clock_style_title">Posizione orologio</string>
   <string name="status_bar_clock_style_right">Destra</string>
