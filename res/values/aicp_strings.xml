@@ -128,4 +128,16 @@
     <string name="gesture_region">Height</string>
 
     <string name="back_height_message">Location is that part of the screen height used as touchable region for the back gesture.</string>
+
+    <!-- Format string for fingerprint location message -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="tablet">Locate the fingerprint sensor on the <xliff:g id="sensor_location">%1$s</xliff:g> of your tablet.</string>
+    <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="device">Locate the fingerprint sensor on the <xliff:g id="sensor_location">%1$s</xliff:g> of your device.</string>
+    <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="default">Locate the fingerprint sensor on the <xliff:g id="sensor_location">%1$s</xliff:g> of your phone.</string>
+
+    <!-- Fingerprint sensor locations -->
+    <string name="security_settings_fingerprint_sensor_location_back">back</string>
+    <string name="security_settings_fingerprint_sensor_location_front">front</string>
+    <string name="security_settings_fingerprint_sensor_location_left">left side</string>
+    <string name="security_settings_fingerprint_sensor_location_right">right side</string>
+
 </resources>
