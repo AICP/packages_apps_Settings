@@ -659,4 +659,9 @@
     <!-- Hide apps from recents -->
     <string name="hide_from_recents_add_app">Add App</string>
 
+    <!-- Three finger swipe gesture -->
+    <string name="three_finger_gesture_info">After selecting a target from below, swipe vertically with 3 fingers in a single motion from top to bottom to trigger the action you selected.</string>
+    <string name="three_finger_swipe_gesture_title">Three finger swipe gesture</string>
+    <string name="gestures_category">Three finger gestures</string>
+
 </resources>

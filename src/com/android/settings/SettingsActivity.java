@@ -77,6 +77,7 @@ import com.android.settings.accounts.AccountSyncSettings;
 import com.android.settings.aicp.AicpSettingsExternal;
 import com.android.settings.aicp.LockscreenShortcutFragment;
 import com.android.settings.aicp.RecentAppSidebarFragment;
+import com.android.settings.aicp.ThreeFingerGesture;
 import com.android.settings.aicp.WakelockBlocker;
 import com.android.settings.applications.DrawOverlayDetails;
 import com.android.settings.aicp.Navbar;
@@ -393,6 +394,7 @@ public class SettingsActivity extends Activity
             com.android.settings.aicp.LockscreenShortcutFragment.class.getName(),
             com.android.settings.aicp.RecentAppSidebarFragment.class.getName(),
             com.android.settings.aicp.WakelockBlocker.class.getName(),
+            com.android.settings.aicp.ThreeFingerGesture.class.getName(),
             Navbar.class.getName(),
             FlingSettings.class.getName(),
             SmartbarSettings.class.getName(),
