@@ -196,6 +196,16 @@
                 android:summary="@string/summary_font_size"
                 android:dialogTitle="@string/dialog_title_font_size" />
 
+        <Preference
+                style="?android:preferenceInformationStyle"
+                android:key="three_finger_gesture_info"
+                android:summary="@string/three_finger_gesture_info"
+                android:selectable="false" />
+
+        <com.android.settings.aicp.ActionPreference
+                android:key="three_finger_gesture_action"
+                android:title="@string/three_finger_swipe_gesture_title" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

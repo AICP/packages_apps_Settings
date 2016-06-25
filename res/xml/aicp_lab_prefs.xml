@@ -18,6 +18,11 @@
         android:title="@string/aicp_settings_external_title"
         android:key="aicp_settings_external">
 
+    <Preference
+         android:key="three_finger_gesture"
+         android:title="@string/gestures_category"
+         android:fragment="com.android.settings.aicp.ThreeFingerGesture" />
+
     <PreferenceScreen
             android:key="recent_app_sidebar_content"
             android:fragment="com.android.settings.aicp.dslv.ActionListViewSettings"
