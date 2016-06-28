@@ -1147,6 +1147,11 @@
     <string name="restrict_app_cellular_title">Disable app cellular usage</string>
     <string name="restrict_app_cellular_summary">Prevent app from using cellular data connection</string>
     <string name="privacy_guard_internet_category">Internet</string>
+	
+	<!-- Weather -->
+    <string name="weather_settings_title">Weather</string>
+    <string name="weather_settings_no_services_prompt">No weather provider services installed</string>
+    <string name="weather_settings_button">Provider settings</string>
 
     <string name="background_data_access">Background data access</string>
     <string name="allow_background_both">Over cellular data &amp; Wi\u2011Fi</string>
@@ -1195,5 +1200,5 @@
     <string name="cm_radio_info_diag_log_off_label">Turn on Diag log</string>
 
     <string name="not_available_with_app">Not available with %1$s</string>
-    <string name="blacklist_country_code_plus" translateable="false">+</string>
+
 </resources>

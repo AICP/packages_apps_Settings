@@ -1,0 +1,750 @@
+[33mcommit a67094213a7b49dcaddbf7aad6de9a50bb65a96f[m
+Author: leskal <alexakis1997@gmail.com>
+Date:   Tue Jun 28 21:58:53 2016 +0300
+
+    Revert "Add Weather Content Provider [2/5]"
+    
+    This reverts commit a808be429a686a99d2793a477387c9ab592a2172.
+
+[33mcommit 33806dd4c1401dc4053abb537f4c5c49ec7a3daa[m
+Author: Alex Kalles <alexakis1997@gmail.com>
+Date:   Tue Jun 28 21:44:32 2016 +0300
+
+    Add Weather Content Provider [2/5]
+    
+    Introduce a new entry in the settings menu to select the available
+    
+    weather provider services.
+    
+    This entry will be parked in the System category between Date&Time
+    
+    and Accessibility
+
+[33mcommit 36cb3f4ec43b6722364ff0cf84f4ea7d91e1a14e[m
+Author: Danesh M <danesh@cyngn.com>
+Date:   Mon Jun 20 14:23:39 2016 -0700
+
+    Settings : Add country code to blacklist entry dialog
+    
+    Enforce country code when adding an entry. If the user has regex enabled,
+    * is added to the list as a choice. This avoids the confusion users are currently
+    facing where blocking only the number + regex doesn't work, since country code is expected.
+    
+    Eg :
+    
+    206* won't work
+    +1206* works
+    
+    CYNGNOS-3049
+    BACON-4953
+    
+    Change-Id: I9236898f17fcef425e561aaa10e56c5e8c2171a7
+
+[33mcommit 3a50b633947d3b9830243a40fdf903735c9ea55f[m
+Author: Danny Baumann <dannybaumann@web.de>
+Date:   Sat Jun 25 13:43:54 2016 +0200
+
+    Make sure LiveDisplay toggle default values are correct.
+    
+    Change-Id: If04c3eca9d62d977c4ecd79bda52a88a3e07ce3b
+
+[33mcommit f0f2f371108b79c14fb00c3374d32846308884b9[m
+Author: lijun.xie <lijun.xie@ck-telecom.com>
+Date:   Thu Jun 16 13:35:21 2016 +0800
+
+    UI: Ensure "use for" options displayed when in landscape orientation
+    
+    Items under the "use for" section of the "Paired devices" dialog for
+    bluetooth connected headsets can be cut off on some devices when in
+    landscape mode.  This patch encloses those items in a ScrollView so
+    the user can scroll the off screen items into view and enable/disable
+    them.
+    
+    [Procedures]
+    1.Go to Settings -> bluetooth
+    2.Paired with a bluetooth headset
+    3.Click on the setting of bluetooth headset
+    4.check the menu list and rotate the phone
+    5.and can not sliding the list
+    
+    Change-Id: I52f4d494ca3c71a9ed88b2679868e77b092b4710
+
+[33mcommit 5f775ba6ccb7c108d74da30d3a81f4ffcaec51c1[m
+Merge: e5c03cd b20625a
+Author: Davor Bertovic <davor@losinj.com>
+Date:   Tue Jun 21 23:27:11 2016 +0200
+
+    Merge "Settings: Fix possible NPE" into mm6.0
+
+[33mcommit b20625ac3443841074295c143ea512603e7b8869[m
+Author: Michael W <baddaemon87@gmail.com>
+Date:   Sat Jun 18 21:50:37 2016 +0200
+
+    Settings: Fix possible NPE
+    
+    extras seems to be null sometimes so the call to
+    extras.get() causes an NPE
+    
+    Change-Id: I8a95da51aadda8fd6191131570a2f4b2bed762e7
+    Reference: BugDumps 13-20160610-16 L#64
+
+[33mcommit e5c03cd8898ca99e48d49e9af523798747f55a95[m
+Author: HashBang <hashbang173@gmail.com>
+Date:   Fri Jun 17 17:27:05 2016 -0400
+
+    Settings: allow displaying device name as ro.product.display
+    
+    This displays the device name of the value of ro.product.display
+    
+    This allows the display name for a unified device to be different via
+    the value set in the device specific init
+    
+    If the device does not set ro.product.display, fallback to
+    ro.product.name to set Device name
+    
+    Change-Id: I92f00ddfd0c7b154225ef87da4a187d4742ed364
+
+[33mcommit 2fa8a4065cd6351da5a5b74d8f2543aa576b9e6c[m
+Merge: 815509d 226e2d2
+Author: Davor Bertovic <davor@losinj.com>
+Date:   Tue Jun 21 17:22:43 2016 +0200
+
+    Merge "Settings: handle 'always ask' for SMS subscription on 3rd party apps" into mm6.0
+
+[33mcommit 226e2d2a9843a2fea323ae55b75ed81c12536567[m
+Author: Roman Birg <roman@cyngn.com>
+Date:   Tue Jun 21 17:09:03 2016 +0200
+
+    Settings: handle 'always ask' for SMS subscription on 3rd party apps
+    
+    We need to ensure that the SMS app has a valid subscription to use as
+    3rd party apps don't know how to use our custom "always ask" logic.
+    
+    Don't allow the user to choose "always ask" if a 3rd party SMS app is
+    currently the deafult.
+    
+    Ticket: CYNGNOS-3068
+    
+    Change-Id: I4aabf43adfb4fdc39e7656aa872abf73d9a5edbe
+    Signed-off-by: Roman Birg <roman@cyngn.com>
+
+[33mcommit 815509d16724cd38018769ba7b2745b080a25763[m
+Author: Alex Kalles <leskal@gerrit.aicp-rom.com>
+Date:   Tue Jun 21 16:42:15 2016 +0200
+
+    Fix typo
+    
+    Change-Id: Id5133772a46d48fb85edd5b51be6112f2b376036
+
+[33mcommit 5234fd79c953d538a0edf80c6a135be1dac75709[m
+Merge: 4176524 d5be85b
+Author: Davor Bertovic <davor@losinj.com>
+Date:   Tue Jun 21 15:19:49 2016 +0200
+
+    Merge "Settings : Move trust agent search index to LockscreenSettings" into mm6.0
+
+[33mcommit 41765249c358daa995d270bb0b522ced16c46a08[m
+Merge: f448495 e7a81b5
+Author: Davor Bertovic <davor@losinj.com>
+Date:   Tue Jun 21 15:19:32 2016 +0200
+
+    Merge "Automatic translation import" into mm6.0
+
+[33mcommit e7a81b5114e1edb0dae0a491b219b35370020503[m
+Author: blinky@build01 <jenkins@cyanogenmod.com>
+Date:   Mon Jun 20 13:29:59 2016 -0700
+
+    Automatic translation import
+    
+    Change-Id: I25897fe9a0ce867df8c7df0a6e3f232e23519a49
+
+[33mcommit f44849557d43e66a97105ebfeca18ce958669b6c[m
+Author: Alex Kalles <leskal@gerrit.aicp-rom.com>
+Date:   Tue Jun 21 09:09:57 2016 +0200
+
+    Missing greek translate in device info
+    
+    Change-Id: Ied0ca976041102d68474f02c9bcbff164193c45c
+
+[33mcommit d5be85b578cc5e55c44f91da6af5c858f1ca3ee2[m
+Author: Danesh M <danesh@cyngn.com>
+Date:   Fri Jun 17 14:15:00 2016 -0700
+
+    Settings : Move trust agent search index to LockscreenSettings
+    
+    Ensure smart lock takes you to LockscreenSettings instead of
+    SecuritySettings
+    CYNGNOS-3053
+    
+    Change-Id: I2d6f4b29cfad259cebfb3ee97b055f59a131d3de
+
+[33mcommit 0633c29a9829b554b5c6ba24d07625d7067dd21e[m
+Author: doc HD <doc.divxm@gmail.com>
+Date:   Mon Jun 20 23:09:30 2016 +0300
+
+    Settings: Updated NL translations by Eric van Bokhoven
+    
+    
+    Change-Id: Iaf1dd6cee112207a87fed6a6e3fdab68e8c5178e
+
+[33mcommit 68f628ba1057e242d639a5a9242296f0c80f1230[m
+Author: LorDClockaN <lordclockan@gmail.com>
+Date:   Sun Jun 19 09:03:15 2016 +0200
+
+    Settings: Add back Left navbar
+    
+    Change-Id: Iec2e301456bd0be311f09294d0bfbf5648cfde05
+
+[33mcommit b8e8e8c926919ebe7208cb6c52ed2054cbd9d3cc[m
+Author: inky@build01 <jenkins@cyanogenmod.com>
+Date:   Fri Jun 17 14:02:01 2016 -0700
+
+    Automatic translation import
+    
+    Change-Id: I553fea6885f7da29740630a236f986a6b1a135fe
+
+[33mcommit 6c714fe2fdced0b9f42aad76dd45d2d033c1d161[m
+Author: Scott Mertz <scott@cyngn.com>
+Date:   Fri Jun 17 17:26:21 2016 +0200
+
+    Settings: Apply decor padding in landscape storage wizard
+    
+    The header was appearing below the status bar when in landscape
+    mode.  Add a padding in landscape so the text appears below the
+    status bar.
+    
+    FEIJ-1157
+    Change-Id: I4d3c46958442b517186cc7d796bdd1552c0bdffe
+
+[33mcommit bd2185657a2ff1e0935b92ae380fb9a5614640f5[m
+Author: Adnan Begovic <adnan@cyngn.com>
+Date:   Fri May 20 12:28:25 2016 -0700
+
+    Settings: Dissallow privacy guarding system apps on overlay.
+    
+      Bandaid fix for google play services inundating the permission
+      dialog request queue within AppOps service and causing watchdog
+      to consistently kill the system server's activity manager service
+      which is deadlocked retrieving dialogs from the queue.
+    
+    Conflicts:
+    	res/values/config.xml
+    Change-Id: I10c432cebe6a4199517839598046eee7d19dcf72
+    TICKET: CYNGNOS-2869
+
+[33mcommit be7ba22b46743f09c7b79250a474614ae269634d[m
+Author: Keith Mok <kmok@cyngn.com>
+Date:   Tue Jun 14 09:44:34 2016 -0700
+
+    Settings: Remove hide navigation bar settings
+    
+    Remove hide navigation bar settings in Expanded
+    desktop if the device has no on-screen navigation
+    bar currently available.
+    
+    FEIJ-1194
+    
+    Change-Id: I4d0a5cc453a13140236f5e2e9f39e970fe759607
+
+[33mcommit 325d3d2425b166997d7b6b8cb363d6b92b1eb7bc[m
+Author: maxwen <max.weninger@gmail.com>
+Date:   Sat May 7 17:32:49 2016 +0200
+
+    Settings: display fstype for mounted volumes
+    
+    Change-Id: Ia3cc496fa851b9575fb3a43fe91f2f5544fe0393
+
+[33mcommit 9e39274303484bc5eb381f49f12158720e5496eb[m
+Author: Ankit Gupta <agupta@cyngn.com>
+Date:   Tue Jun 7 16:11:40 2016 -0700
+
+    Settings: fix crash when reset App preference
+    
+    1. mExtraInfoBridge is null when there is no change
+    made in any app. Calling reset app preference cause
+    crash in this state.
+    
+    2. move initialization of mApplication to onViewCreated
+    from onCreateView to make sure View has been created.
+    
+    Issue-id: OPO-760
+    
+    Change-Id: I7a26b27325b54694d2513e8365482c221a5c6b13
+
+[33mcommit 0500ed7520509ece50ddb50ba1d63ac388210727[m
+Author: Danesh M <danesh@cyngn.com>
+Date:   Thu May 19 15:59:09 2016 -0700
+
+    Settings : Rebuild app list after reset
+    
+    If the user resets app states, we need to rebuild the list
+    so the new app info is fetched
+    
+    FEIJ-706
+    FEIJ-511
+    
+    Change-Id: I5d6261d38dc2f06e37b29e6b7ba1f7a1e49a6ab8
+
+[33mcommit 92cf4b823638741e9f5aae325de0c64f2cf202c0[m
+Author: Alex Cruz <mazdarider23@gmail.com>
+Date:   Sun May 15 02:11:56 2016 -0400
+
+    Fix wrong label for Desktop backup password
+    
+    This was showing up as 'Settings' because it never had a label
+    
+    I suspect a AOSP derp since we rarely go into 'Developer options'
+    
+    Change-Id: I4451e711df90ec17a25969044ba278b542543299
+
+[33mcommit a5181ec4043dab944ae448f28a9b8a592efb7f78[m
+Author: Siavash Arya <siavash.arya@sonymobile.com>
+Date:   Fri Nov 14 14:04:30 2014 +0100
+
+    Show more accurate internal storage capacity
+    
+    Show real total space instead of total user space
+    and add item in storage to show size of the Android System.
+    
+    Bug: 28327846
+    
+    Change-Id: If177aa1ac63bcb584c3e50f6142976cabd390c94
+
+[33mcommit 994bfb94e75da76f50d7324806782cbfc0cdca11[m
+Author: Wechy77 <wechy77@gmail.com>
+Date:   Sat Apr 23 13:35:06 2016 +0200
+
+    Settings: replace 3 dots with horizontal ellipsis
+    
+    Change-Id: I9567d357fd07b6208aea80187cdb01173b6e3fa8
+
+[33mcommit 1ecc3180906b6e18a92a808c6b3a847e96770bce[m
+Author: Michael Bestas <mikeioannina@cyanogenmod.org>
+Date:   Fri Jun 10 17:44:26 2016 +0200
+
+    String improvements
+    
+    Change-Id: I36662b94a4f2f020c756446b7b2a039eb451fd62
+
+[33mcommit 7a261ba1735c7324df568eb05454e6412329f876[m
+Author: doc HD <doc.divxm@gmail.com>
+Date:   Fri Jun 10 14:17:01 2016 +0300
+
+    Settings: Initial Dutch translations by Eric van Bokhoven
+    
+    
+    
+    Change-Id: I9d1a9e0afd8b63ee0378504d2994ad1d760a2850
+
+[33mcommit f52a8e8197af23769b896477266b0ee517955134[m
+Author: pinky@build01 <jenkins@cyanogenmod.com>
+Date:   Thu Jun 9 14:50:57 2016 -0700
+
+    Automatic translation import
+    
+    Change-Id: I66b9ba2d1c8c4d52b55208b1e3042f52aa9173bb
+
+[33mcommit 4467713501992b15e834c75f9760a7ae297963af[m
+Author: Artem Shvadskiy <ashvadskiy@cyngn.com>
+Date:   Fri Jun 3 14:19:45 2016 -0700
+
+    Use child fragment manager for nested dialog fragment
+    
+    Change-Id: I7748b15f45c88b00bc1251121d6760cf16e25646
+    issue-id: CYNGNOS-2911
+
+[33mcommit 7afbe988c547a4e812936dbd8e1c56479cbdd826[m
+Author: LorDClockaN <lordclockan@gmail.com>
+Date:   Wed Jun 8 18:48:16 2016 +0200
+
+    LockPatternActivity: Fix FC
+    
+    Don't use snackbar, but toast
+    
+    Change-Id: I728449578b52b1102c6a65488fd17ce859432f70
+
+[33mcommit cf97364db87567eb4b5569460cfa29f0eb26ff01[m
+Author: Roman Birg <roman@cyngn.com>
+Date:   Wed Jun 1 10:39:30 2016 -0700
+
+    Settings: use subid & imsi for MSIM apn lookups
+    
+    Ticket: PAELLA-158
+    
+    Change-Id: Icca65a9a46533e1bbcfd4dd08e974d736ea1253b
+    Signed-off-by: Roman Birg <roman@cyngn.com>
+
+[33mcommit 5a11e6582f70ef885ad1b21f29308c2c4cef83b4[m
+Author: inky@build01 <jenkins@cyanogenmod.com>
+Date:   Mon Jun 6 17:44:22 2016 -0700
+
+    Automatic translation import
+    
+    Change-Id: Ie5bb0b8e6e1980a4e29cedea2820beb893fb7e23
+
+[33mcommit 8fa6ea70f65166843aa2709c2c542acf20d0c246[m
+Author: LorDClockaN <lordclockan@gmail.com>
+Date:   Tue Jun 7 17:47:40 2016 +0200
+
+    Don't exit Settings app from AICP activities if they are called externally
+    
+    Change-Id: Ia088de9e7ee0ffd793463456ac79f26606aa5028
+
+[33mcommit 4d4e97f0d68a8027dbf08d2857ca4df5563c41a2[m
+Author: LorDClockaN <lordclockan@gmail.com>
+Date:   Tue Jun 7 17:47:14 2016 +0200
+
+    RunningServices activity now points to Running services, not Manage apps
+    
+    Change-Id: Ic33311d3886dc0a0c45dc6143efac63d2e3c3ff3
+
+[33mcommit 0b33ae5fdbe53d09f56f4e3dbb06f82fd905f2ab[m
+Author: LorDClockaN <lordclockan@gmail.com>
+Date:   Tue Jun 7 17:12:45 2016 +0200
+
+    Point Amibent display tile longpress action to it's own settings [2/2]
+    
+    Change-Id: If96ccdbccf691a87280b0ddb71b26daf0f63a22b
+
+[33mcommit 03ce966dc48f57b66c8c898519aa63ce56104d5d[m
+Author: Deepak Kundra <deepakkundra@gmail.com>
+Date:   Fri May 27 20:18:17 2016 -0700
+
+    Radio info to control QC dbg prop's
+    
+    Issue-id:FEIJ-679
+    
+    Change-Id: Ia1c9e5d5899ae173d4fd7fa9b2339013b42f115b
+
+[33mcommit 6edcc36c0bed312172cbbdb8df401d0e39224d64[m
+Author: clyde@build01 <jenkins@cyanogenmod.com>
+Date:   Fri Jun 3 15:14:45 2016 -0700
+
+    Automatic translation import
+    
+    Change-Id: I75ed7f58e6fbc7a961b4fe10278393ffde4ef418
+
+[33mcommit 7dc7f9bfb049775b72214c73029ada0ab8cd1eda[m
+Author: Dan Pasanen <invisiblek@cyanogenmod.org>
+Date:   Mon May 2 09:34:44 2016 -0500
+
+    Settings: fix toggling lockscreen rotation toggle [2/3]
+    
+    Change-Id: I4339afcf7befb70f459b088be9e1fc62a0465b4f
+
+[33mcommit 83ac0c31df755e50f8bfd7f6c08a9a671c586e94[m
+Author: 宋凯伦 <songkailun@xiaomi.com>
+Date:   Mon May 23 12:02:52 2016 +0800
+
+    Fix the memory leak in DrawOverlayDetails
+    
+    https://code.google.com/p/android/issues/detail?id=210852
+    
+    we need to release the mOverlayBridge in onDestroy, or it will cause Memory Leak issue
+    
+    Change-Id: If0113ed72773c366596a2c915ec504c1c68fe3b7
+
+[33mcommit 39bef0ffa6ac228bf5a04d70b2f21fbb2a2e8256[m
+Author: 宋凯伦 <songkailun@xiaomi.com>
+Date:   Mon May 23 13:10:25 2016 +0800
+
+    Fix so you can go back in Time zone page
+    
+    https://code.google.com/p/android/issues/detail?id=210856
+    
+    This is because in the overload method onOptionsItemSelected, you return false at last, not return super.onOptionsItemSelected,
+    this will cause it can't handle menu item(back button click event) in the parent's class.
+    
+    Change-Id: If2c8228b20bacbecd3039b57932951fa59854227
+
+[33mcommit 7a71d9b3ede7d646cccda9b3d596a2eef1403e02[m
+Author: 宋凯伦 <songkailun@xiaomi.com>
+Date:   Mon May 23 14:22:27 2016 +0800
+
+    IP protocol shows wrong in ApnEditor
+    
+    https://code.google.com/p/android/issues/detail?id=210865
+    
+    this function will setSummary for mProtocol, mRoamingProtocol twice, so they will show wrong value.
+    
+    Change-Id: I6a17666d4658c7092b95cc19ec2d2f6b34d5d982
+
+[33mcommit bb3b03f37cc3cdec9847aa1573dd3063f2f65e39[m
+Merge: 4f2c6b3 170eca7
+Author: doc HD <doc.divxm@gmail.com>
+Date:   Thu Jun 2 23:20:42 2016 +0200
+
+    Merge "Settings: Another round of AICPfying" into mm6.0
+
+[33mcommit 170eca750f428ee4d46f266deaee245b765e31a0[m
+Author: pranav <cherukupallip@gmail.com>
+Date:   Thu Jun 2 20:24:24 2016 +0530
+
+    Settings: Another round of AICPfying
+    
+    Wutt?? I'm using CyanogenMod 11? But this is Android 6.0.1 ! It says
+    Marshmallow here, and I'm pretty sure I flashed AICP! What is this bug?
+    Such Kitkat.... Much wow....
+    
+    fix above such situations by adding the correct translation to mod_version
+    
+    Change-Id: If7ac75387cca660712a4e1aef5a730780679977a
+
+[33mcommit 4f2c6b31135324dfe80a3574c462578d9d47b915[m
+Merge: aab61b5 99faa4a
+Author: Davor Bertovic <davor@losinj.com>
+Date:   Thu Jun 2 16:24:38 2016 +0200
+
+    Merge "Automatic translation import" into mm6.0
+
+[33mcommit 99faa4a0110ad1d98fe8f638c4e33c4c1f870c6c[m
+Author: inky@build01 <jenkins@cyanogenmod.com>
+Date:   Wed Jun 1 12:02:41 2016 -0700
+
+    Automatic translation import
+    
+    Change-Id: Ida39cf15dc6a0a21286d0177a21437747b616775
+
+[33mcommit aab61b5ec8474b3417cb5d1996df9917d2b89b64[m
+Author: Michael Bestas <mikeioannina@cyanogenmod.org>
+Date:   Thu Jun 2 16:18:01 2016 +0200
+
+    Lockscreen -> lock screen
+    
+    AICPfy:
+    - Add one more same change
+    
+    Change-Id: I1653d92869f4cfd37f3758be178b856a1031cb9b
+
+[33mcommit 86c5ac088eedbbdb770c431abbfb8a2c45257a3c[m
+Author: Lars Greiss <kufikugel@googlemail.com>
+Date:   Mon Nov 24 23:50:07 2014 +0100
+
+    Settings: Add per app controls for LP keyguard notifications (2/2)
+    
+    Nice done by google but the UX is a problem especially for ppl who are using a lot apps and just want
+    to see from important apps the notifications on the lockscreen.
+    
+    This commit adds the ability to
+    
+    - enable/disable per app the keyguard notification at all
+    - enable/disable per app ongoing notifications on the keyguard
+    
+    We handle this over the app policy conf file like the other per app notification options
+    
+    TICKET: CRACKLING-1127
+    Change-Id: I12df484379621c3baba333d30a8b545b3a0ec0ae
+
+[33mcommit ec04afc4df01eed17bb39aa9b6c1a20f5b83df89[m
+Author: Ali B <abittin@gmail.com>
+Date:   Thu Jun 2 09:57:04 2016 +0300
+
+    Revert "[2/2] Settings: app notifications hide when locked"
+    
+    This reverts commit 232c71a26ad67dea2ebd2bcbab473936e8aa974a.
+    
+    Change-Id: I7b4fcd295de22101a4a6e0d6eabdb483784ff407
+
+[33mcommit 1686c599f174e813d316382c77c8afe83734dc96[m
+Merge: 0a91bbd 6e6995b
+Author: Davor Bertovic <davor@losinj.com>
+Date:   Tue May 31 21:48:49 2016 +0200
+
+    Merge "Revert "DUI: Use DocumentsProvider API for handling custom icons [1/2]"" into mm6.0
+
+[33mcommit 0a91bbd18acfb19fcb447c94b21e5c420965a910[m
+Merge: ae7526d af9f6de
+Author: Davor Bertovic <davor@losinj.com>
+Date:   Tue May 31 21:47:41 2016 +0200
+
+    Merge "Revert "DUI: Use DocumentsProvider API for handling custom icons [1/2]"" into mm6.0
+
+[33mcommit af9f6de1bfcafa2f0075d3ea94251d199c38aca2[m
+Author: Davor Bertovic <davor@losinj.com>
+Date:   Tue May 31 21:46:42 2016 +0200
+
+    Revert "DUI: Use DocumentsProvider API for handling custom icons [1/2]"
+    
+    This reverts commit a114415a61ad5123aa2a539a76ac2c08ab2b540c.
+    
+    Change-Id: I6197120e1647dfb57de61f8175a6145274ecc880
+
+[33mcommit 6e6995be6f2b631dd0555664a256e4462c440a64[m
+Author: Davor Bertovic <davor@losinj.com>
+Date:   Tue May 31 21:45:53 2016 +0200
+
+    Revert "DUI: Use DocumentsProvider API for handling custom icons [1/2]"
+    
+    This reverts commit a114415a61ad5123aa2a539a76ac2c08ab2b540c.
+    
+    Change-Id: Ie5ea495a398d2b7636896f36b7bdead117e68513
+
+[33mcommit ae7526dc9413db9cf07bb41f9c007bf297a73c60[m
+Merge: 82c6d8d 4df255d
+Author: doc HD <doc.divxm@gmail.com>
+Date:   Sun May 29 00:19:24 2016 +0200
+
+    Merge "Settings: Updated DE translations by Ralf Luther" into mm6.0
+
+[33mcommit 4df255db8a8cf9dcbe818e23fe39d43de406fd1f[m
+Author: doc HD <doc.divxm@gmail.com>
+Date:   Fri May 27 23:13:35 2016 +0300
+
+    Settings: Updated DE translations by Ralf Luther
+    
+    Change-Id: I19d97890f539d74ee83bf3b6e9b546adabf55e3f
+
+[33mcommit 82c6d8d59d99fae8ebbca901b8d7047202190bb4[m
+Author: Jimmy <elacuu@gmail.com>
+Date:   Fri May 27 18:42:20 2016 +0200
+
+    Add fastscroll to the Manage applications screen
+    
+    so you don't need to scroll so much if you have alot of apps
+    and want to go to the bottom of the list.
+    
+    Change-Id: I96d892abf53a9da784ae1df056558d4fd3cf64f6
+
+[33mcommit 53e010705d80892f064287aece5b751af1331bb1[m
+Author: Jessica Wagantall <jwagantall@cyngn.com>
+Date:   Thu May 26 18:57:52 2016 -0700
+
+    Automatic translation import
+    
+    Change-Id: I319222d474b4254d912be3ad8a29a2a5f578b1ac
+    Ticket: RM-214
+
+[33mcommit a114415a61ad5123aa2a539a76ac2c08ab2b540c[m
+Author: Randall Rushing <randall.rushing@gmail.com>
+Date:   Thu May 26 09:19:43 2016 +0200
+
+    DUI: Use DocumentsProvider API for handling custom icons [1/2]
+    
+    All images requested for DUI features will be copied and kept
+    in a folder in external storage. We can not rely on third party
+    content providers to deliver our icons to SystemUI. Either the provider
+    gets us a good icon and we copy it successfully or we toast an error
+    and let SystemUI know the request was canceled.
+    
+    In time, we may wish to consider a "IconProvider" type of solution
+    
+    AICPfy
+    
+    Change-Id: I395f5e617ef0f31b3b19de2dd8fd224ad398e214
+
+[33mcommit cb4e463e2800089e1e511a45cb59c194ce2be033[m
+Merge: a30eb35 be065b1
+Author: Davor Bertovic <davor@losinj.com>
+Date:   Wed May 25 14:24:57 2016 +0200
+
+    Merge changes Ibb866ba5,I9e022162,Ie9ee1dc6 into mm6.0
+    
+    * changes:
+      Fix the memory leak in TetherSettings
+      Settings: Allow sorting Applications by size
+      Settings: Fix possible NPE
+
+[33mcommit a30eb35433c33de107538d82f4b6e981d916cbbd[m
+Author: Keith Mok <kmok@cyngn.com>
+Date:   Tue May 24 15:30:28 2016 -0700
+
+    Settings: Disable cancelable with multi-windows confirm dialog
+    
+    When muliti-windows confirm dialog is dismissed by back button,
+    the status will become inconsistent.
+    
+    Change-Id: Ie00099dce395f08d9ad782482863f2120977d240
+
+[33mcommit b62ae9f94be308e3dbe5d0b5a577bbe395caee63[m
+Author: Keith Mok <kmok@cyngn.com>
+Date:   Tue May 24 15:25:09 2016 -0700
+
+    Settings: Update oem unlocking status with back button
+    
+    When oem unlocking confirm dialog dismiss by back button,
+    the enable oem lock status is not consistent.
+    
+    FEIJ-780
+    
+    Change-Id: I42a33896c8d844d965cfc706872903175ffbf1cc
+
+[33mcommit 774c086471088f7211efcbc3e4cf3a7e40116537[m
+Author: Keith Mok <kmok@cyngn.com>
+Date:   Tue May 24 08:46:20 2016 -0700
+
+    Settings: Update oem unlocking status when dismiss
+    
+    When oem unlocking confirm dialog dismiss, need
+    to update the checkbox status also.
+    
+    FEIJ-780
+    
+    Change-Id: I9b5c4446ecd9736051fb7b6c12ad22aa0d985a85
+
+[33mcommit be065b1265aa57bc33898b0a7cf6b4002a525c5d[m
+Author: 宋凯伦 <songkailun@xiaomi.com>
+Date:   Mon May 23 11:34:22 2016 +0800
+
+    Fix the memory leak in TetherSettings
+    
+    https://code.google.com/p/android/issues/detail?id=210848
+    
+    We need to close the bluetooth adapter's profile proxy in OnDestroy method, or it will cause our TetherSettings object to be held and won't release. And finally it will cause OOM issue.
+    Signed-off-by: 宋凯伦 <songkailun@xiaomi.com>
+    
+    Change-Id: Ibb866ba5f3772ed6f6200b2142d7b1c6399f7178
+
+[33mcommit 0adfcd30d662ac22c6e3c79b954321b603429abf[m
+Author: Roman Royer <romanroyer@yahoo.com>
+Date:   Wed May 4 19:04:36 2016 -0700
+
+    Settings: Allow sorting Applications by size
+    
+    Allow sorting applications by size in Settings->Apps just like in Settings->Storage/USB->Apps
+    
+    Change-Id: I9e022162110e1feff20f257992086e66735e0f5e
+
+[33mcommit 3a982c6e0301c65cb67362e12d11af326b816feb[m
+Author: Michael W <baddaemon87@gmail.com>
+Date:   Mon May 16 17:37:36 2016 +0200
+
+    Settings: Fix possible NPE
+    
+    From last bugdumps (L#93)
+    When startActivityForResult fails, the error assumes it didnt fail
+    because intent was null but for another reason.
+    As intent.toString() will fail  (NPE) for intent==null,
+    add an if-clause for that case
+    
+    Change-Id: Ie9ee1dc610876154c0afcad3e6ed95231e75c518
+
+[33mcommit b7e29f399805594263028d1749d3dcd94f4ef0ca[m
+Merge: 9074bb4 6422d4a
+Author: Davor Bertovic <davor@losinj.com>
+Date:   Mon May 23 20:04:09 2016 +0200
+
+    Merge "settings -> about phone : improve scroll performance" into mm6.0
+
+[33mcommit 9074bb43e8de321455beab7f72ca831036c21f18[m
+Author: Adnan Begovic <adnan@cyngn.com>
+Date:   Mon May 23 19:51:40 2016 +0200
+
+    Settings: Remove redundant definition of SoundSettingsActivity.
+    
+      Causes CTS cross-profile intent verification failure.
+    
+    Change-Id: Id1c92c45cb1fb89e34598d54b9eb45497d629eac
+    TICKET: FEIJ-104
+
+[33mcommit 6422d4a20d7b977789d4700b34c57a7cc6245c30[m
+Author: pranav <cherukupallip@gmail.com>
+Date:   Mon May 23 21:10:57 2016 +0530
+
+    settings -> about phone : improve scroll performance
+    
+    flatten AICP letters and their shadows into one image, thereby attempting
+    to decrease lag
+    
+    Change-Id: Ie40f93b03c823e8ddb0fcf62f7b3619eda55357f
+
+[33mcommit 5e4773429cb5dae32d999b
