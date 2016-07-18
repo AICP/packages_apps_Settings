@@ -79,7 +79,7 @@ public class PulseSettings extends SettingsPreferenceFragment implements
 
         mCustomDimen = (ListPreference) findPreference(CUSTOM_DIMEN);
         int customdimen = Settings.System.getIntForUser(getContentResolver(),
-                Settings.System.PULSE_CUSTOM_DIMEN, 0,
+                Settings.System.PULSE_CUSTOM_DIMEN, 14,
                 UserHandle.USER_CURRENT);
         mCustomDimen.setValue(String.valueOf(customdimen));
         mCustomDimen.setSummary(mCustomDimen.getEntry());
@@ -87,7 +87,7 @@ public class PulseSettings extends SettingsPreferenceFragment implements
 
         mCustomDiv = (ListPreference) findPreference(CUSTOM_DIV);
         int customdiv = Settings.System.getIntForUser(getContentResolver(),
-                    Settings.System.PULSE_CUSTOM_DIV, 0,
+                    Settings.System.PULSE_CUSTOM_DIV, 2,
                     UserHandle.USER_CURRENT);
         mCustomDiv.setValue(String.valueOf(customdiv));
         mCustomDiv.setSummary(mCustomDiv.getEntry());
