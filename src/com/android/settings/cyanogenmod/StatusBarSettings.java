@@ -31,6 +31,7 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
 import android.preference.Preference.OnPreferenceChangeListener;
+import android.preference.SwitchPreference;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
@@ -76,6 +77,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     private static final String STATUS_BAR_QUICK_QS_PULLDOWN = "qs_quick_pulldown";
     private static final String PREF_SMART_PULLDOWN = "smart_pulldown";
     private static final String PREF_CLOCK_DATE_POSITION = "clock_date_position";
+    private static final String PREF_CLOCK_COLOR_SWITCH = "statusbar_clock_color_switch";
 
     private static final int STATUS_BAR_BATTERY_STYLE_HIDDEN = 4;
     private static final int STATUS_BAR_BATTERY_STYLE_TEXT = 6;
@@ -94,6 +96,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     private ListPreference mStatusBarDateStyle;
     private ListPreference mStatusBarDateFormat;
     private ColorPickerPreference mColorPicker;
+    private SwitchPreference mClockColorSwitch;
     private ListPreference mFontStyle;
     private ListPreference mStatusBarClockFontSize;
     private ListPreference mClockDatePosition;
@@ -195,6 +198,11 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         enableStatusBarBatteryDependents(batteryStyle);
         mStatusBarBatteryShowPercent.setOnPreferenceChangeListener(this);
 
+        mClockColorSwitch =  (SwitchPreference) findPreference(PREF_CLOCK_COLOR_SWITCH);
+        mClockColorSwitch.setOnPreferenceChangeListener(this);
+        mClockColorSwitch.setChecked(Settings.System.getInt(resolver,
+                Settings.System.STATUSBAR_CLOCK_COLOR_SWITCH, 0) == 1);
+
         mColorPicker = (ColorPickerPreference) findPreference(PREF_COLOR_PICKER);
         mColorPicker.setOnPreferenceChangeListener(this);
         int intColor = Settings.System.getInt(getActivity().getContentResolver(),
@@ -209,6 +217,8 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         }
         mColorPicker.setNewPreviewColor(intColor);
 
+        updateColorVisibility();
+
         mFontStyle = (ListPreference) findPreference(PREF_FONT_STYLE);
         mFontStyle.setOnPreferenceChangeListener(this);
         mFontStyle.setValue(Integer.toString(Settings.System.getInt(getActivity()
@@ -219,7 +229,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         mStatusBarClockFontSize = (ListPreference) findPreference(PREF_STATUS_BAR_CLOCK_FONT_SIZE);
         mStatusBarClockFontSize.setOnPreferenceChangeListener(this);
         mStatusBarClockFontSize.setValue(Integer.toString(Settings.System.getInt(getActivity()
-                .getContentResolver(), Settings.System.STATUSBAR_CLOCK_FONT_SIZE, 
+                .getContentResolver(), Settings.System.STATUSBAR_CLOCK_FONT_SIZE,
                 14)));
         mStatusBarClockFontSize.setSummary(mStatusBarClockFontSize.getEntry());
 
@@ -374,6 +384,12 @@ public class StatusBarSettings extends SettingsPreferenceFragment
             mStatusBarBatteryShowPercent.setSummary(
                     mStatusBarBatteryShowPercent.getEntries()[index]);
             return true;
+        } else if (preference == mClockColorSwitch) {
+            Settings.System.putInt(resolver,
+                    Settings.System.STATUSBAR_CLOCK_COLOR_SWITCH,
+                    ((Boolean) newValue) ? 1 : 0);
+            updateColorVisibility();
+            return true;
         } else if (preference == mColorPicker) {
             String hex = ColorPickerPreference.convertToARGB(Integer.valueOf(String
                     .valueOf(newValue)));
@@ -513,6 +529,15 @@ public class StatusBarSettings extends SettingsPreferenceFragment
             // Remove title capitalized formatting
             type = type.toLowerCase();
             mSmartPulldown.setSummary(res.getString(R.string.smart_pulldown_summary, type));
+        }
+    }
+
+    private void updateColorVisibility() {
+        if (Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.STATUSBAR_CLOCK_COLOR_SWITCH, 0) == 1) {
+            mColorPicker.setEnabled(true);
+        } else {
+            mColorPicker.setEnabled(false);
         }
     }
 
