@@ -637,4 +637,7 @@
     <!-- App details: open play store link if app is user installed -->
     <string name="app_play_store">Google Play</string>
 
+    <!-- Navbar buttons transparency -->
+    <string name="navbar_buttons_alpha_title">Buttons transparency</string>
+
 </resources>
