@@ -22,4 +22,6 @@
 
     <string name="aicpextras_settings">AICP Extras</string>
     <string name="aicpextras_dashboard_summary">ROM Customization</string>
+
+    <string name="device_info_title">Phone info</string>
 </resources>

@@ -56,6 +56,7 @@ public class Status extends SettingsPreferenceFragment {
     private static final String KEY_WIMAX_MAC_ADDRESS = "wimax_mac_address";
     private static final String KEY_SIM_STATUS = "sim_status";
     private static final String KEY_IMEI_INFO = "imei_info";
+    private static final String KEY_RADIO_INFO = "radio_info";
 
     // Broadcasts to listen to for connectivity changes.
     private static final String[] CONNECTIVITY_INTENTS = {
@@ -195,6 +196,7 @@ public class Status extends SettingsPreferenceFragment {
                 || Utils.isWifiOnly(getContext())) {
             removePreferenceFromScreen(KEY_SIM_STATUS);
             removePreferenceFromScreen(KEY_IMEI_INFO);
+            removePreferenceFromScreen(KEY_RADIO_INFO);
         }
     }
 
