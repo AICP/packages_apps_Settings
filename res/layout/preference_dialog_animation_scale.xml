@@ -42,7 +42,7 @@
                 android:layout_below="@+id/container"
                 settings:isbMin="0"
                 settings:isbMax="10"
-                settings:isbDefaultValue="1.0"
+                settings:isbDefaultValue="0.5"
                 settings:isbDigits="1" />
 
 </RelativeLayout>
