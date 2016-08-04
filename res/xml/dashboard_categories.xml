@@ -117,6 +117,13 @@
                 android:icon="@drawable/aicp_navbar_icon"
                 />
 
+        <!-- Halo -->
+        <dashboard-tile
+               android:id="@+id/halo_settings"
+               android:title="@string/halo_settings_title"
+               android:fragment="com.android.settings.paranoid.Halo"
+               android:icon="@drawable/ic_settings_location" />
+
         <!-- Themes -->
         <!-- NOTE: Intent.parseIntent looks for "categories" tag and not "category" -->
         <dashboard-tile
