@@ -647,6 +647,9 @@
     <string name="toggle_package_install_overlay_check_title">Prüfung der Overlay-Berechtigung deaktivieren</string>
     <string name="toggle_package_install_overlay_check_summary">WARNUNG\u003A Dies deaktiviert eine Sicherheitsüberprüfung zur Verhinderung von \"Tapjacking\"! Nur benutzen, wenn man die Konsequenzen versteht.</string>
 
+    <!-- Phone info shortcut -->
+    <string name="device_info_title">Telefon Detailinformationen</string>
+
     <!-- Status bar -->
     <string name="smart_pulldown_title">Intelligentes Öffnen</string>
     <string name="smart_pulldown_summary">Öffnet die Schnelleinstellungen sofort, wenn %1$s Benachrichtigungen vorhanden sind</string>
