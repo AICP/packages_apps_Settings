@@ -229,4 +229,6 @@
         <item name="android:windowAnimationStyle">@style/Animation.SuwWindowAnimation</item>
     </style>
 
+    <style name="aicp_extras" parent="Theme.SettingsBase"></style>
+
 </resources>

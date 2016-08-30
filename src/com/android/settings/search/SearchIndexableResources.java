@@ -34,6 +34,10 @@ import com.android.settings.WallpaperTypeSettings;
 import com.android.settings.WifiCallingSettings;
 import com.android.settings.WirelessSettings;
 import com.android.settings.accessibility.AccessibilitySettings;
+import com.android.settings.aicp.AicpSettings;
+import com.android.settings.aicp.tabs.AddOns;
+import com.android.settings.aicp.tabs.BuiltIn;
+import com.android.settings.aicp.tabs.Ui;
 import com.android.settings.applications.AdvancedAppSettings;
 import com.android.settings.applications.ManageDefaultApps;
 import com.android.settings.bluetooth.BluetoothSettings;
@@ -345,6 +349,34 @@ public final class SearchIndexableResources {
                         NO_DATA_RES_ID,
                         com.android.settings.cyanogenmod.LockscreenSettingsAlias.class.getName(),
                         R.drawable.ic_settings_lockscreen));
+
+        sResMap.put(AicpSettings.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(AicpSettings.class.getName()),
+                        NO_DATA_RES_ID,
+                        AicpSettings.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
+        sResMap.put(AddOns.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(AddOns.class.getName()),
+                        NO_DATA_RES_ID,
+                        AddOns.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
+        sResMap.put(BuiltIn.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(BuiltIn.class.getName()),
+                        NO_DATA_RES_ID,
+                        BuiltIn.class.getName(),
+                        R.drawable.ic_settings_aicp));
+
+        sResMap.put(Ui.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(Ui.class.getName()),
+                        NO_DATA_RES_ID,
+                        Ui.class.getName(),
+                        R.drawable.ic_settings_aicp));
     }
 
     private SearchIndexableResources() {

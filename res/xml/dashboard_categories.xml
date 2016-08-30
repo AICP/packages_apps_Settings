@@ -109,6 +109,14 @@
                     android:targetClass="com.lordclockan.aicpextras.MainActivity" />
         </dashboard-tile>
 
+        <!-- AICP Settings -->
+        <dashboard-tile
+                android:id="@+id/aicp_settings_tab"
+                android:title="@string/aicp_settings_title"
+                android:fragment="com.android.settings.aicp.AicpSettings"
+                android:icon="@drawable/ic_settings_aicp"
+                />
+
         <!-- Data Usage -->
         <dashboard-tile
                 android:id="@+id/navbar"
