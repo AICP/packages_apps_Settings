@@ -78,4 +78,8 @@
     <string name="always_on_title">Always on</string>
     <string name="always_on_summary">Allows your device to always display information without unlocking the screen</string>
 
+    <!-- Reset battery stats -->
+    <string name="ok">Okay</string>
+    <string name="menu_stats_reset">Reset stats</string>
+    <string name="reset_stats_msg">Battery history stats are going to be reset</string>
 </resources>

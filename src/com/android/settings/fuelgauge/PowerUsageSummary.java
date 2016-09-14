@@ -17,9 +17,12 @@
 package com.android.settings.fuelgauge;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.graphics.drawable.Drawable;
 import android.os.BatteryStats;
 import android.os.Build;
@@ -91,13 +94,14 @@ public class PowerUsageSummary extends PowerUsageBase {
     private static final String KEY_BATTERY_SAVER_SUMMARY = "battery_saver_summary";
 
     private static final int MENU_STATS_TYPE = Menu.FIRST;
+    private static final int MENU_STATS_RESET = Menu.FIRST + 3;
     @VisibleForTesting
-    static final int MENU_HIGH_POWER_APPS = Menu.FIRST + 3;
+    static final int MENU_HIGH_POWER_APPS = Menu.FIRST + 4;
     @VisibleForTesting
-    static final int MENU_ADDITIONAL_BATTERY_INFO = Menu.FIRST + 4;
+    static final int MENU_ADDITIONAL_BATTERY_INFO = Menu.FIRST + 5;
     @VisibleForTesting
-    static final int MENU_TOGGLE_APPS = Menu.FIRST + 5;
-    private static final int MENU_HELP = Menu.FIRST + 6;
+    static final int MENU_TOGGLE_APPS = Menu.FIRST + 6;
+    private static final int MENU_HELP = Menu.FIRST + 7;
 
     private final FooterPreferenceMixin mFooterPreferenceMixin =
             new FooterPreferenceMixin(this, getLifecycle());
@@ -207,6 +211,11 @@ public class PowerUsageSummary extends PowerUsageBase {
                     .setAlphabeticShortcut('t');
         }
 
+        menu.add(Menu.NONE, MENU_STATS_RESET, Menu.NONE, R.string.menu_stats_reset)
+                .setIcon(R.drawable.ic_delete)
+                .setAlphabeticShortcut('d')
+                .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+
         menu.add(Menu.NONE, MENU_HIGH_POWER_APPS, Menu.NONE, R.string.high_power_apps);
 
         if (mPowerFeatureProvider.isAdditionalBatteryInfoEnabled()) {
@@ -219,6 +228,23 @@ public class PowerUsageSummary extends PowerUsageBase {
         }
 
         super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    private void resetStats() {
+        AlertDialog dialog = new AlertDialog.Builder(getActivity())
+            .setTitle(R.string.menu_stats_reset)
+            .setMessage(R.string.reset_stats_msg)
+            .setPositiveButton(R.string.ok, new OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    // Reset stats and request a refresh to initialize vars
+                    mStatsHelper.resetStatistics();
+                    refreshUi();
+                }
+            })
+            .setNegativeButton(R.string.cancel, null)
+            .create();
+        dialog.show();
     }
 
     @Override
@@ -234,6 +260,9 @@ public class PowerUsageSummary extends PowerUsageBase {
                 FeatureFactory.getFactory(context).getMetricsFeatureProvider();
 
         switch (item.getItemId()) {
+            case MENU_STATS_RESET:
+                resetStats();
+                return true;
             case MENU_STATS_TYPE:
                 if (mStatsType == BatteryStats.STATS_SINCE_CHARGED) {
                     mStatsType = BatteryStats.STATS_SINCE_UNPLUGGED;
