@@ -19,4 +19,31 @@
     <string name="device_maintainer">Device maintainer</string>
     <string name="device_maintainers">Device maintainers</string>
 
+    <!-- Aicp Extras -->
+    <string name="aicpextras_settings">Aicp Extras</string>
+    <string name="header_category_aicpextras">Personalization</string>
+
+    <!-- Aicp Settings Tabs -->
+    <string name="aicp_settings_tab1">UI</string>
+    <string name="aicp_settings_tab2">Built-in</string>
+    <string name="aicp_settings_tab3">Add-ons</string>
+
+    <!-- Aicp Settings -->
+    <string name="aicp_ota_settings_title">Aicp OTA</string>
+    <string name="battery_settings_title">Battery settings</string>
+    <string name="status_bar_battery_title">Battery icon</string>
+    <string name="kernel_adiutor_settings_title">Kernel Adiutor</string>
+    <string name="app_circle_bar_title">App circle bar</string>
+    <string name="app_sidebar_title">App sidebar</string>
+    <string name="gesture_anywhere_title">Gesture Anywhere</string>
+    <string name="wakelock_blocker_title">Wakelock blocker</string>
+    <string name="pie_control_title">SlimPIE</string>
+    <string name="disp_anim_settings_title">Display and animations</string>
+    <string name="category_heads_up">Heads up notifications</string>
+    <string name="notification_drawer_title">Notification drawer</string>
+    <string name="recents_panel_settings">Recents panel</string>
+    <string name="status_bar_title">Status bar</string>
+    <string name="various_shit_title">Various shit</string>
+    <string name="adaway_settings_title">AdAway</string>
+
 </resources>
