@@ -70,6 +70,8 @@ import static android.provider.Settings.System.SCREEN_OFF_TIMEOUT;
 
 import static com.android.settingslib.RestrictedLockUtils.EnforcedAdmin;
 
+import cyanogenmod.providers.CMSettings;
+
 public class DisplaySettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
     private static final String TAG = "DisplaySettings";
@@ -92,6 +94,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             = "camera_double_tap_power_gesture";
     private static final String KEY_WALLPAPER = "wallpaper";
     private static final String KEY_VR_DISPLAY_PREF = "vr_display_pref";
+    private static final String KEY_PROXIMITY_WAKE = "proximity_on_wake";
 
     private Preference mFontSizePref;
 
@@ -104,6 +107,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private SwitchPreference mAutoBrightnessPreference;
     private SwitchPreference mCameraGesturePreference;
     private SwitchPreference mCameraDoubleTapPowerGesturePreference;
+    private SwitchPreference mProximityCheckOnWakePreference;
 
     @Override
     protected int getMetricsCategory() {
@@ -264,6 +268,22 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 } else {
                     displayPrefs.removePreference(vrDisplayPref);
                 }
+            }
+
+            mProximityCheckOnWakePreference = (SwitchPreference) findPreference(KEY_PROXIMITY_WAKE);
+            boolean proximityCheckOnWake = getResources().getBoolean(
+                    org.cyanogenmod.platform.internal.R.bool.config_proximityCheckOnWake);
+            if (!proximityCheckOnWake) {
+                if (displayPrefs != null && mProximityCheckOnWakePreference != null) {
+                    displayPrefs.removePreference(mProximityCheckOnWakePreference);
+                }
+                CMSettings.System.putInt(getContentResolver(), CMSettings.System.PROXIMITY_ON_WAKE, 0);
+            } else {
+                boolean proximityCheckOnWakeDefault = getResources().getBoolean(
+                        org.cyanogenmod.platform.internal.R.bool.config_proximityCheckOnWakeEnabledByDefault);
+                mProximityCheckOnWakePreference.setChecked(CMSettings.System.getInt(getContentResolver(),
+                        CMSettings.System.PROXIMITY_ON_WAKE,
+                        (proximityCheckOnWakeDefault ? 1 : 0)) == 1);
             }
         }
 
@@ -582,6 +602,10 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     }
                     if (!isVrDisplayModeAvailable(context)) {
                         result.add(KEY_VR_DISPLAY_PREF);
+                    }
+                    if (!context.getResources().getBoolean(
+                            org.cyanogenmod.platform.internal.R.bool.config_proximityCheckOnWake)) {
+                        result.add(KEY_PROXIMITY_WAKE);
                     }
                     return result;
                 }
