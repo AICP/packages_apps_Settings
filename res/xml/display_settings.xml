@@ -105,6 +105,13 @@
                 android:title="@string/tap_to_wake"
                 android:summary="@string/tap_to_wake_summary" />
 
+        <!-- Wake on plug -->
+        <SwitchPreference
+                android:key="wake_when_plugged_or_unplugged"
+                android:title="@string/wake_when_plugged_or_unplugged_title"
+                android:summary="@string/wake_when_plugged_or_unplugged_summary"
+                android:defaultValue="false"/>
+
         <PreferenceScreen
                 android:key="font_size"
                 android:title="@string/title_font_size"
