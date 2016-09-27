@@ -273,20 +273,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             }
 
             mProximityCheckOnWakePreference = (SwitchPreference) findPreference(KEY_PROXIMITY_WAKE);
-            boolean proximityCheckOnWake = getResources().getBoolean(
-                    org.cyanogenmod.platform.internal.R.bool.config_proximityCheckOnWake);
-            if (!proximityCheckOnWake) {
-                if (displayPrefs != null && mProximityCheckOnWakePreference != null) {
-                    displayPrefs.removePreference(mProximityCheckOnWakePreference);
-                }
-                CMSettings.System.putInt(getContentResolver(), CMSettings.System.PROXIMITY_ON_WAKE, 0);
-            } else {
-                boolean proximityCheckOnWakeDefault = getResources().getBoolean(
-                        org.cyanogenmod.platform.internal.R.bool.config_proximityCheckOnWakeEnabledByDefault);
-                mProximityCheckOnWakePreference.setChecked(CMSettings.System.getInt(getContentResolver(),
-                        CMSettings.System.PROXIMITY_ON_WAKE,
-                        (proximityCheckOnWakeDefault ? 1 : 0)) == 1);
-            }
         }
 
         mNightModePreference = (ListPreference) findPreference(KEY_NIGHT_MODE);
@@ -398,9 +384,17 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 com.android.internal.R.bool.config_unplugTurnsOnScreen);
 
         if (mWakeWhenPluggedOrUnplugged != null) {
-        mWakeWhenPluggedOrUnplugged.setChecked(CMSettings.Global.getInt(getContentResolver(),
-                CMSettings.Global.WAKE_WHEN_PLUGGED_OR_UNPLUGGED,
-                (wakeUpWhenPluggedOrUnpluggedConfig ? 1 : 0)) == 1);
+            mWakeWhenPluggedOrUnplugged.setChecked(CMSettings.Global.getInt(getContentResolver(),
+                    CMSettings.Global.WAKE_WHEN_PLUGGED_OR_UNPLUGGED,
+                    (wakeUpWhenPluggedOrUnpluggedConfig ? 1 : 0)) == 1);
+        }
+
+        boolean proximityCheckOnWake = getResources().getBoolean(
+                org.cyanogenmod.platform.internal.R.bool.config_proximityCheckOnWake);
+        if (mProximityCheckOnWakePreference != null) {
+            mProximityCheckOnWakePreference.setChecked(CMSettings.System.getInt(getContentResolver(),
+                    CMSettings.System.PROXIMITY_ON_WAKE,
+                    (proximityCheckOnWake ? 1 : 0)) == 1);
         }
 
         disablePreferenceIfManaged(KEY_WALLPAPER, UserManager.DISALLOW_SET_WALLPAPER);
@@ -474,6 +468,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             CMSettings.Global.putInt(getContentResolver(),
                     CMSettings.Global.WAKE_WHEN_PLUGGED_OR_UNPLUGGED,
                     mWakeWhenPluggedOrUnplugged.isChecked() ? 1 : 0);
+            return true;
+        } else if (preference == mProximityCheckOnWakePreference) {
+            CMSettings.System.putInt(getContentResolver(),
+                    CMSettings.System.PROXIMITY_ON_WAKE,
+                    mProximityCheckOnWakePreference.isChecked() ? 1 : 0);
             return true;
         }
 
