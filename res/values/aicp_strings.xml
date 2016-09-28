@@ -19,6 +19,10 @@
     <string name="device_maintainer">Device maintainer</string>
     <string name="device_maintainers">Device maintainers</string>
 
+    <!-- Aicp Extras -->
+    <string name="aicpextras_settings">Aicp Extras</string>
+    <string name="header_category_aicpextras">Personalization</string>
+
     <!-- Proximity wake -->
     <string name="proximity_wake_title">Prevent accidental wake-up</string>
     <string name="proximity_wake_summary">Check the proximity sensor prior to waking up screen</string>
