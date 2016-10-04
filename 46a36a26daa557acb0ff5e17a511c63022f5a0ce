@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba1f61a0_8e22bfff",
+        "filename": "AndroidManifest.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1015,
+      "author": {
+        "id": 209
+      },
+      "writtenOn": "2016-10-04T18:02:42Z",
+      "side": 1,
+      "message": "Maybe we can add a theme here that\u0027s like\n\u003cstyle name\u003d\"TransparentTheme\" parent\u003d\"android:Theme\"\u003e\n        \u003citem name\u003d\"android:windowIsTranslucent\"\u003etrue\u003c/item\u003e\n\u003c/style\u003e\nso the activity is invisible to the user",
+      "revId": "46a36a26daa557acb0ff5e17a511c63022f5a0ce",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba1f61a0_ae25030c",
+        "filename": "src/com/android/settings/aicp/AEStartActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 209
+      },
+      "writtenOn": "2016-10-04T18:02:42Z",
+      "side": 1,
+      "message": "I\u0027d call finish() for AEStartActivity after starting real AE, so it\u0027s not in the recents history",
+      "revId": "46a36a26daa557acb0ff5e17a511c63022f5a0ce",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": false
+    }
+  ]
+}
