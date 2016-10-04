@@ -1009,22 +1009,29 @@
                 android:value="true" />
         </activity>
 
-        <activity android:name="Settings$AicpExtrasActivity"
-                android:label="@string/aicpextras_settings"
-                android:icon="@drawable/ic_settings_aicpextras"
-                android:taskAffinity="" >
+        <activity android:name="Settings$AEStartActivityActivity"
+            android:label="@string/aicpextras_settings"
+            android:icon="@drawable/ic_settings_aicpextras"
+            android:taskAffinity="">
+            <intent-filter android:priority="1">
+                <action android:name="com.android.settings.aicp.AEStartActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.VOICE_LAUNCH" />
                 <category android:name="com.android.settings.SHORTCUT" />
             </intent-filter>
-            <intent-filter android:priority="1">
+            <intent-filter android:priority="9">
                 <action android:name="com.android.settings.action.SETTINGS" />
             </intent-filter>
             <meta-data android:name="com.android.settings.category"
                 android:value="com.android.settings.category.aicpextras" />
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.AicpExtras" />
+                android:value="com.android.settings.aicp.AEStartActivity" />
+            <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
+                android:value="true" />
         </activity>
 
         <activity android:name="Settings$DisplaySettingsActivity"
