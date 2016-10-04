@@ -163,5 +163,5 @@ public class Settings extends SettingsActivity {
     public static class DeviceSettings extends SettingsActivity { /* empty */ }
     public static class PersonalSettings extends SettingsActivity { /* empty */ }
     public static class SystemSettings extends SettingsActivity { /* empty */ }
-    public static class AicpExtrasActivity extends SettingsActivity { /* empty */ }
+    public static class AEStartActivityActivity extends SettingsActivity { /* empty */ }
 }
