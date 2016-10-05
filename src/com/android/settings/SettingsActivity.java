@@ -63,6 +63,7 @@ import com.android.settings.accounts.AccountSettings;
 import com.android.settings.accounts.AccountSyncSettings;
 import com.android.settings.accounts.ChooseAccountActivity;
 import com.android.settings.accounts.ManagedProfileSettings;
+import com.android.settings.aicp.AEStartActivity;
 import com.android.settings.applications.AdvancedAppSettings;
 import com.android.settings.applications.DrawOverlayDetails;
 import com.android.settings.applications.InstalledAppDetails;
@@ -235,7 +236,6 @@ public class SettingsActivity extends SettingsDrawerActivity
     private static final String PROFILEMGR_MAIN_FRAGMENT = "com.android.settings.ProfileMgrMain";
     private static final String MOBILENETWORK_FRAGMENT = "com.android.settings.MobileNetworkMain";
     private static final String SYSTEM_UPDATE = "android.settings.SystemUpdateActivity";
-    private static final String AICPEXTRAS_FRAGMENT = "com.android.settings.AicpExtras";
     private String mFragmentClass;
     private String mActivityAction;
 
@@ -372,6 +372,7 @@ public class SettingsActivity extends SettingsDrawerActivity
             TestingSettings.class.getName(),
             WifiAPITest.class.getName(),
             WifiInfo.class.getName(),
+            AEStartActivity.class.getName(),
     };
 
 
@@ -1077,14 +1078,6 @@ public class SettingsActivity extends SettingsDrawerActivity
 
         if (SYSTEM_UPDATE.equals(fragmentName)) {
             SystemUpdateHandle ();
-            return null;
-        }
-
-        if (AICPEXTRAS_FRAGMENT.equals(fragmentName)) {
-            Intent AicpExtrasIntent = new Intent();
-            AicpExtrasIntent.setClassName("com.lordclockan", "com.lordclockan.aicpextras.MainActivity");
-            startActivity(AicpExtrasIntent);
-            finish();
             return null;
         }
 
