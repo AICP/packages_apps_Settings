@@ -7168,7 +7168,7 @@
     <string name="backup_disabled">Back up disabled</string>
 
     <!-- Summary of device info page [CHAR LIMIT=NONE] -->
-    <string name="about_summary">Android <xliff:g id="version" example="6.0">%1$s</xliff:g></string>
+    <string name="about_summary">AICP Android <xliff:g id="version" example="6.0">%1$s</xliff:g></string>
 
     <!-- TODO: Update these strings with the finalized ones. -->
     <!-- Title for dialog displayed when user clicks on a setting locked by an admin [CHAR LIMIT=30] -->
