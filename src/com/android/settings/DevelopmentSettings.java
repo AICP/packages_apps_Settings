@@ -1888,22 +1888,22 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
             intent.setClass(mActivity, AppOpsSummaryActivity.class);
             mActivity.startActivity(intent);
             return true;
-	}
+        }
         return false;
     }
 
     @Override
     public boolean onPreferenceClick(Preference preference) {
-	if (preference == mWindowAnimationScale ||
-	    preference == mTransitionAnimationScale ||
+        if (preference == mWindowAnimationScale ||
+        preference == mTransitionAnimationScale ||
             preference == mAnimatorDurationScale) {
             ((AnimationScalePreference) preference).click();
-	}
-	return false;
+        }
+        return false;
     }
 
     @Override
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+    public boolean onPreferenceTreeClick(Preference preference) {
         if (Utils.isMonkeyRunning()) {
             return false;
         }
