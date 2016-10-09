@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.text.TextUtils;
 
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.settings.R;
@@ -12,6 +14,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.Indexable;
 
 public class AEStartActivity extends SettingsPreferenceFragment {
+
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
@@ -45,8 +48,15 @@ public class AEStartActivity extends SettingsPreferenceFragment {
 
         @Override
         public void setListening(boolean listening) {
+            String mCustomSummary = Settings.System.getString(
+                    mContext.getContentResolver(), Settings.System.AE_SETTINGS_SUMMARY);
+
             if (listening) {
-                mSummaryLoader.setSummary(this, mContext.getString(R.string.summary_aicp));
+                if (TextUtils.isEmpty(mCustomSummary)) {
+                    mSummaryLoader.setSummary(this, mContext.getString(R.string.summary_aicp));
+                } else {
+                    mSummaryLoader.setSummary(this, mCustomSummary);
+                }
             }
         }
     }
