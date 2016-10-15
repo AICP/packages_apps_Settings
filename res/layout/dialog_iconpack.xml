@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--  Copyright (C) 2014-2015 AICP
+<!--
+  Copyright (C) 2014 The OmniROM Project
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
-  the Free Software Foundation, either version 3 of the License, or
+  the Free Software Foundation, either version 2 of the License, or
   (at your option) any later version.
 
   This program is distributed in the hope that it will be useful,
@@ -13,13 +14,15 @@
 
   You should have received a copy of the GNU General Public License
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
- -->
-
-<resources>
-    <drawable name="expanded_item_bg_activated">#ffEEEEEE</drawable>
-    <drawable name="expanded_item_bg">@android:color/background_light</drawable>
-    <color name="theme_accent">#ff009688</color>
-    <color name="action_picker_fab_background">@color/theme_accent</color>
-    <color name="icon_tint_color">@color/material_deep_teal_500</color>
-    <color name="white">#FFF</color>
-</resources>
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/alert_dialog_padding_material"
+    android:paddingEnd="@dimen/alert_dialog_padding_material" >
+    <ListView
+        android:id="@+id/iconpack_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
