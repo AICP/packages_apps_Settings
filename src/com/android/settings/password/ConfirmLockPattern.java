@@ -151,6 +151,9 @@ public class ConfirmLockPattern extends ConfirmDeviceCredentialBaseActivity {
                 // on first launch, if no lock pattern is set, then finish with
                 // success (don't want user to get stuck confirming something that
                 // doesn't exist).
+                if (!mLockPatternUtils.isLockPatternEnabled(mEffectiveUserId)) {
+                    getActivity().setResult(Activity.RESULT_OK, new Intent());
+
                 // Don't do this check for FRP though, because the pattern is not stored
                 // in a way that isLockPatternEnabled is aware of for that case.
                 // TODO(roosa): This block should no longer be needed since we removed the
