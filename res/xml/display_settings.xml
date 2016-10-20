@@ -120,12 +120,6 @@
                 android:defaultValue="false"
                 cm:requiresFeature="cmhardware:FEATURE_HIGH_TOUCH_SENSITIVITY" />
 
-        <PreferenceScreen
-                android:key="font_size"
-                android:title="@string/title_font_size"
-                android:fragment="com.android.settings.accessibility.ToggleFontSizePreferenceFragment"
-                settings:keywords="@string/keywords_display_font_size" />
-
         <!-- Wake on plug -->
         <SwitchPreference
                 android:key="wake_when_plugged_or_unplugged"
