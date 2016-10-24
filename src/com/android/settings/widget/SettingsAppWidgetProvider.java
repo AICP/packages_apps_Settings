@@ -24,6 +24,7 @@ import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.UserInfo;
 import android.database.ContentObserver;
 import android.location.LocationManager;
 import android.net.ConnectivityManager;
@@ -35,6 +36,7 @@ import android.os.IPowerManager;
 import android.os.PowerManager;
 import android.os.RemoteException;
 import android.os.ServiceManager;
+import android.os.UserHandle;
 import android.os.UserManager;
 import android.provider.Settings;
 import android.util.Log;
@@ -805,6 +807,10 @@ public class SettingsAppWidgetProvider extends AppWidgetProvider {
     @Override
     public void onReceive(Context context, Intent intent) {
         super.onReceive(context, intent);
+
+        final UserManager um = (UserManager) context.getSystemService(Context.USER_SERVICE);
+        UserInfo userInfo = um.getUserInfo(UserHandle.myUserId());
+
         String action = intent.getAction();
         if (WifiManager.WIFI_STATE_CHANGED_ACTION.equals(action)) {
             sWifiState.onActualStateChange(context, intent);
@@ -836,7 +842,9 @@ public class SettingsAppWidgetProvider extends AppWidgetProvider {
         }
 
         // State changes fall through
-        updateWidget(context);
+        if (userInfo != null) {
+            updateWidget(context);
+        }
     }
 
     /**
