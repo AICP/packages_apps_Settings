@@ -196,7 +196,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements Indexab
         updateNotificationPreferenceState();
         mSettingsObserver.register(true);
         mReceiver.register(true);
-        updateRingOrNotificationPreference();
+        updateRingPreference();
         updateEffectsSuppressor();
         for (VolumeSeekBarPreference volumePref : mVolumePrefs) {
             volumePref.onActivityResume();
@@ -288,13 +288,15 @@ public class SoundSettings extends SettingsPreferenceFragment implements Indexab
         }
     }
 
-    private void updateRingOrNotificationPreference() {
-        mRingPreference.showIcon(mSuppressor != null
-                ? com.android.internal.R.drawable.ic_audio_ring_notif_mute
-                : mRingerMode == AudioManager.RINGER_MODE_VIBRATE || wasRingerModeVibrate()
-                ? com.android.internal.R.drawable.ic_audio_ring_notif_vibrate
-                : com.android.internal.R.drawable.ic_audio_ring_notif);
-    }
+    private void updateRingPreference() {
+        if (mRingPreference != null) {
+            mRingPreference.showIcon(mSuppressor != null
+                    ? com.android.internal.R.drawable.ic_audio_ring_notif_mute
+                    : mRingerMode == AudioManager.RINGER_MODE_VIBRATE || wasRingerModeVibrate()
+                    ? com.android.internal.R.drawable.ic_audio_ring_notif_vibrate
+                    : com.android.internal.R.drawable.ic_audio_ring_notif);
+        }
+     }
 
     private boolean wasRingerModeVibrate() {
         return mVibrator != null && mRingerMode == AudioManager.RINGER_MODE_SILENT
@@ -305,7 +307,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements Indexab
         final int ringerMode = mAudioManager.getRingerModeInternal();
         if (mRingerMode == ringerMode) return;
         mRingerMode = ringerMode;
-        updateRingOrNotificationPreference();
+        updateRingPreference();
     }
 
     private void updateEffectsSuppressor() {
@@ -318,7 +320,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements Indexab
                             getSuppressorCaption(suppressor)) : null;
             mRingPreference.setSuppressionText(text);
         }
-        updateRingOrNotificationPreference();
+        updateRingPreference();
     }
 
     private String getSuppressorCaption(ComponentName suppressor) {
