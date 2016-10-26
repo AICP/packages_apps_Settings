@@ -188,7 +188,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 }
             }
 
-        if (RotationPolicy.isRotationLockToggleVisible(activity)) {
             DropDownPreference rotatePreference =
                     (DropDownPreference) findPreference(KEY_AUTO_ROTATE);
             if (rotatePreference != null) {
