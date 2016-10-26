@@ -149,4 +149,14 @@
         <attr name="units" format="string|reference" />
     </declare-styleable>
 
+    <!-- For GesturePreference -->
+    <declare-styleable name="GesturePreference">
+        <attr name="animation" format="reference" />
+    </declare-styleable>
+
+    <!-- For AspectRatioFrameLayout -->
+    <declare-styleable name="AspectRatioFrameLayout">
+        <attr name="aspectRatio" format="float" />
+    </declare-styleable>
+
 </resources>
