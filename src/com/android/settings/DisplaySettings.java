@@ -146,6 +146,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     displayPrefs.removePreference(mAutoBrightnessPreference);
                 }
             }
+        }
 
         if (!NightDisplayController.isAvailable(activity)) {
             removePreference(KEY_NIGHT_DISPLAY);
