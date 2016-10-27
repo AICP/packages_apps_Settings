@@ -60,6 +60,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
 
     private static final String KEY_MANUAL = "manual";
     private static final String KEY_REGULATORY_INFO = "regulatory_info";
+    private static final String KEY_SYSTEM_UPDATE_SETTINGS = "system_update_settings";
     private static final String PROPERTY_URL_SAFETYLEGAL = "ro.url.safetylegal";
     private static final String PROPERTY_SELINUX_STATUS = "ro.build.selinux";
     private static final String KEY_KERNEL_VERSION = "kernel_version";
@@ -69,6 +70,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_BASEBAND_VERSION = "baseband_version";
     private static final String KEY_FIRMWARE_VERSION = "firmware_version";
     private static final String KEY_SECURITY_PATCH = "security_patch";
+    private static final String KEY_UPDATE_SETTING = "additional_system_update_settings";
     private static final String KEY_EQUIPMENT_ID = "fcc_equipment_id";
     private static final String PROPERTY_EQUIPMENT_ID = "ro.ril.fccid";
     private static final String KEY_DEVICE_FEEDBACK = "device_feedback";
@@ -386,6 +388,28 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
             }
         }
         return super.onPreferenceTreeClick(preference);
+    }
+
+    /**
+     * Trigger client initiated action (send intent) on system update
+     */
+    private void ciActionOnSysUpdate(PersistableBundle b) {
+        String intentStr = b.getString(CarrierConfigManager.
+                KEY_CI_ACTION_ON_SYS_UPDATE_INTENT_STRING);
+        if (!TextUtils.isEmpty(intentStr)) {
+            String extra = b.getString(CarrierConfigManager.
+                    KEY_CI_ACTION_ON_SYS_UPDATE_EXTRA_STRING);
+            String extraVal = b.getString(CarrierConfigManager.
+                    KEY_CI_ACTION_ON_SYS_UPDATE_EXTRA_VAL_STRING);
+
+            Intent intent = new Intent(intentStr);
+            if (!TextUtils.isEmpty(extra)) {
+                intent.putExtra(extra, extraVal);
+            }
+            Log.d(LOG_TAG, "ciActionOnSysUpdate: broadcasting intent " + intentStr +
+                    " with extra " + extra + ", " + extraVal);
+            getActivity().getApplicationContext().sendBroadcast(intent);
+        }
     }
 
     private void removePreferenceIfPropertyMissing(PreferenceGroup preferenceGroup,
