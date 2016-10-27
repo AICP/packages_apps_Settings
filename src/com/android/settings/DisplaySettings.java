@@ -146,6 +146,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     displayPrefs.removePreference(mAutoBrightnessPreference);
                 }
             }
+        }
 
         if (!NightDisplayController.isAvailable(activity)) {
             removePreference(KEY_NIGHT_DISPLAY);
@@ -456,7 +457,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     CMSettings.System.PROXIMITY_ON_WAKE,
                     mProximityCheckOnWakePreference.isChecked() ? 1 : 0);
             return true;
+        } else if  (preference == mDozePreference) {
+            MetricsLogger.action(getActivity(), MetricsEvent.ACTION_AMBIENT_DISPLAY);
+            return true;
         }
+
 
         return super.onPreferenceTreeClick(preference);
     }
@@ -506,14 +511,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             }
         }
         return true;
-    }
-
-    @Override
-    public boolean onPreferenceTreeClick(Preference preference) {
-        if (preference == mDozePreference) {
-            MetricsLogger.action(getActivity(), MetricsEvent.ACTION_AMBIENT_DISPLAY);
-        }
-        return super.onPreferenceTreeClick(preference);
     }
 
     @Override
