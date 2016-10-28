@@ -18,8 +18,8 @@
 <resources>
     <drawable name="expanded_item_bg_activated">#ffEEEEEE</drawable>
     <drawable name="expanded_item_bg">@android:color/background_light</drawable>
-    <color name="theme_accent">#ff009688</color>
+    <color name="theme_accent">@android:color/white</color>
     <color name="action_picker_fab_background">@color/theme_accent</color>
-    <color name="icon_tint_color">@color/material_deep_teal_500</color>
+    <color name="icon_tint_color">@color/material_pixel_blue_bright</color>
     <color name="white">#FFF</color>
 </resources>
