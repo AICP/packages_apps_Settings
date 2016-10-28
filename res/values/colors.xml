@@ -66,7 +66,9 @@
     <color name="fingerprint_progress_ring_bg">#20000000</color>
     <color name="fingerprint_indicator_background_resting">#12000000</color>
 
-    <color name="running_processes_system_ram">#ff384248</color>
+    <color name="switch_accent_color">@android:color/material_pixel_blue_bright</color>
+
+    <color name="running_processes_system_ram">@android:color/material_pixel_blue_bright</color>
     <color name="running_processes_free_ram">#ffced7db</color>
 
     <color name="card_background">#fffafafa</color>
@@ -81,12 +83,15 @@
 
     <drawable name="fp_enrollment_header_landscape">#009688</drawable>
 
-    <color name="memory_normal">#ff009587</color>
+    <color name="memory_normal">@android:color/material_pixel_blue_bright</color>
     <color name="memory_moderate">#ffF3B300</color>
     <color name="memory_low">#ffff9700</color>
     <color name="memory_critical">#ffff5621</color>
 
+    <color name="memory_max_use">@android:color/material_pixel_blue_bright</color>
     <color name="memory_avg_use">#ff384248</color>
+
+    <color name="storage_summary_title_color">@android:color/material_pixel_blue_light</color>
 
     <color name="zen_rule_name_warning">@*android:color/system_error</color>
 
@@ -123,5 +128,18 @@
 
     <!-- Gestures settings -->
     <color name="gestures_setting_background_color">#f5f5f5</color>
+
+    <color name="theme_primary">@android:color/material_pixel_blue_light</color>
+    <color name="theme_primary_dark">@android:color/material_pixel_blue_dark</color>
+    <color name="theme_accent">@android:color/white</color>
+    <color name="material_deep_teal_200">@android:color/material_pixel_blue_light</color>
+    <color name="material_deep_teal_500">@android:color/material_pixel_blue_bright</color>
+    <color name="ic_settings_icons_exposed">@android:color/material_pixel_blue_light</color>
+    <color name="exposed_datachartfillcolor">@android:color/material_pixel_blue_light</color>
+    <color name="exposed_data_warning_chart_labelcolor">@android:color/material_pixel_blue_light</color>
+    <color name="text_color_black">#ffffffff</color>
+    <color name="ripple_material_dark">#804285f4</color>
+    <color name="ripple_material_light">#334285f4</color>
+    <color name="switchbar_background_color">@android:color/material_pixel_blue_dark</color>
 
 </resources>
