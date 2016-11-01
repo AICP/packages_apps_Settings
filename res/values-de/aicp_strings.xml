@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016 AICP
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+  <!-- About phone screen, AICP device maintainer name -->
+  <string name="device_maintainer">Geräte-Maintainer</string>
+  <string name="device_maintainers">Geräte-Maintainer</string>
+
+    <!-- Aicp Extras -->
+    <string name="aicpextras_settings">AICP Extras</string>
+    <string name="summary_aicp">Custom ROM Anpassungen</string>
+    <string name="header_category_aicpextras">Personalisierung</string>
+
+    <!-- Proximity wake -->
+    <string name="proximity_wake_title">Unbeabsichtigtes Aufwachen verhindern</string>
+    <string name="proximity_wake_summary">Schaltet das Display erst ein, wenn der Bewegungssensor überprüft wurde</string>
+
+    <!-- Turn on display when power connected; turn off display when power disconnected -->
+    <string name="wake_when_plugged_or_unplugged_title">Beim Anschließen aufwachen</string>
+    <string name="wake_when_plugged_or_unplugged_summary">Schaltet das Display bei Verbindung oder Trennung von einer Stromquelle ein</string>
+
+    <!-- Less Notification sounds -->
+    <string name="notifications_category_title">Benachrichtigungen</string>
+    <string name="less_notification_sounds_title">Weniger häufige Benachrichtigungstöne</string>
+    <string name="less_notification_sounds_summary">Begrenze Benachrichtigungstöne pro App, so dass diese nur einmal pro Zeitspanne ertönen</string>
+    <string name="less_notification_sounds_default">Standardverhalten</string>
+    <string name="less_notification_sounds_3s">3 Sekunden</string>
+    <string name="less_notification_sounds_5s">5 Sekunden</string>
+    <string name="less_notification_sounds_10s">10 Sekunden</string>
+    <string name="less_notification_sounds_15s">15 Sekunden</string>
+    <string name="less_notification_sounds_30s">30 Sekunden</string>
+    <string name="less_notification_sounds_45s">45 Sekunden</string>
+    <string name="less_notification_sounds_1m">1 Minute</string>
+    <string name="less_notification_sounds_2m">2 Minuten</string>
+    <string name="less_notification_sounds_5m">5 Minuten</string>
+
+    <!-- Development Settings -->
+    <!-- ADB always notify -->
+    <string name="adb_always_notify">Beim Debuggen immer benachrichtigen</string>
+    <string name="adb_always_notify_summary">Immer eine Benachrichtigung beim Debuggen zeigen, auch wenn das Gerät nicht verbunden ist</string>
+
+    <!-- Expanded desktop -->
+    <string name="power_menu_expanded_desktop">Erweiterte Oberfläche</string>
+    <string name="expanded_hide_nothing">Nichts verbergen</string>
+    <string name="expanded_hide_status">Statusleiste verbergen</string>
+    <string name="expanded_hide_navigation">Navigationsleiste verbergen</string>
+    <string name="expanded_hide_both">Beides verbergen</string>
+    <string name="expanded_nothing_to_show">\"Für alle aktiviert\" ausschalten, um den Status pro App setzen zu können</string>
+    <string name="expanded_desktop_state">Status der Erweiterung</string>
+    <string name="expanded_enabled_for_all">Für alle aktiviert</string>
+    <string name="expanded_user_configurable">Vom Nutzer konfigurierbar</string>
+    <string name="expanded_desktop_style">Stil der Erweiterung</string>
+    <string name="expanded_desktop_style_description">Standard-Stil der Erweiterten Oberfläche wählen</string>
+    <string name="expanded_desktop_title">Optionen für die Erweiterte Oberfläche</string>
+
+    <!-- Vendor version -->
+    <string name="vendor_version">Herstellerversion</string>
+    <string name="vendor_version_default">Unbekannt</string>
+
+    <!-- Density category -->
+    <string name="density_category">Displayauflösung</string>
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Farbwähler</string>
+    <string name="press_color_to_apply">Wähle unten eine Farbe, um diese anzuwenden</string>
+    <!-- <string name="arrow_right" translatable="false">→</string>
+    <string name="arrow_down" translatable="false">↓</string> -->
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#ff000000</string>
+    <string name="set">Setzen</string>
+    <string name="color_default">Standard</string>
+
+    <!-- Navigation Bar -->
+    <string name="navigation_category">DU Navigationsleiste</string>
+    <string name="navbar_interface_title">Schnittstelle</string>
+    <string name="navbar_size">Größe der Leiste</string>
+    <string name="navbar_mode">Navigationsmodus</string>
+    <string name="navbar_visibility">Navigationsleiste aktivieren</string>
+    <string name="navigationbar_settings_title">Navigation</string>
+    <string name="aosp_navigation_bar">Navigationsleiste</string>
+    <string name="aosp_navigation_bar_settings">Einstellungen der Navigationsleiste</string>
+    <string name="navigationbar_settings_summary">Stil und Verhalten für die Navigation anpassen</string>
+    <string name="navbar_general_title">Weitere Einstellungen</string>
+    <string name="navigation_bar_left_title">Linkshänder-Modus</string>
+    <string name="navigation_bar_left_summary">Platziert die Navigationsleiste auf der linken Bildschirmseite, wenn das Gerät waagerecht gehalten wird</string>
+    <string name="info_pref_note_title">Anmerkung</string>
+    <string name="smartbar_interface">SmartBar</string>
+    <string name="icon_pack_picker_dialog_title">Symbolpakete</string>
+    <string name="invalid_icon_from_uri">Kann den Bildinhalt im diesem Format nicht laden</string>
+    <string name="picker_activities">Aktivitäten</string>
+    <string name="select_custom_app_title">Eigene App wählen</string>
+    <string name="select_custom_activity_title">Eigene Aktivität wählen</string>
+    <string name="profile_applist_title">Anwendungen</string>
+    <string name="default_string">Standard</string>
+    <string name="reset">Zurücksetzen</string>
+    <string name="summary_navbar">SmartBar, Fling und Pulse</string>
+
+    <!-- Actions dialog and default task values set in ActionPreference xml-->
+    <string name="choose_action_title">Aktion wählen</string>
+    <string name="action_entry_default_action">Standard Einstellungen</string>
+    <string name="action_entry_select_app">Anwendung auswählen</string>
+    <string name="action_entry_custom_action">Eigene Aktion wählen</string>
+
+    <string name="action_value_default_action" translatable="false">default</string>
+    <string name="action_value_select_app" translatable="false">app</string>
+    <string name="action_value_custom_action" translatable="false">custom</string>
+    <string name="action_value_back" translatable="false">task_back</string>
+    <string name="action_value_home" translatable="false">task_home</string>
+    <string name="action_value_search_assist" translatable="false">task_assist</string>
+    <string name="action_value_recent_apps" translatable="false">task_recents</string>
+    <string name="action_value_voice_search" translatable="false">task_voice_search</string>
+    <string name="action_value_menu" translatable="false">task_menu</string>
+
+    <!-- Fling -->
+    <string name="fling_settings">Fling Einstellungen</string>
+    <string name="fling_interface">Fling Gesten-Schnittstelle</string>
+    <string name="fling_enable_title">Fling aktivieren</string>
+    <string name="fling_back_home_policy">Die Funktionen Zurück und \"Home\" werden immer benötigt. Um die Zuordnung von Zurück und \"Home\" zu ändern, bitte zuerst die gewünschte Zuordnung setzen</string>
+    <string name="fling_split_bar_policy">Wenn nur eine Aktion für Rechts oder Links zugeordnet wird, gilt die Aktion für die gesamte Leiste</string>
+    <string name="fling_def_summary">Keine Aktion gesetzt</string>
+    <string name="fling_swipe_actions">Wisch-Gesten</string>
+    <string name="fling_tap_actions">Tipp-Gesten</string>
+    <string name="fling_short_swipe_right">Kurzes Wischen nach rechts</string>
+    <string name="fling_short_swipe_left">Kurzes Wischen nach links</string>
+    <string name="fling_long_swipe_right">Langes Wischen nach rechts</string>
+    <string name="fling_long_swipe_left">Langes Wischen nach links</string>
+    <string name="fling_right_up_swipe">Nach oben-rechts wischen</string>
+    <string name="fling_left_up_swipe">Nach oben-links wischen</string>
+    <string name="fling_single_tap">Einmal rechts Tippen</string>
+    <string name="fling_double_tap">Zweimal rechts Tippen</string>
+    <string name="fling_long_press">Lange rechts Drücken</string>
+    <string name="fling_single_left_tap">Einmal links Tippen</string>
+    <string name="fling_double_left_tap">Zweimal links Tippen</string>
+    <string name="fling_long_left_press">Lange links Drücken</string>
+    <string name="long_swipe_portrait_title">Hochformat</string>
+    <string name="long_swipe_landscape_title">Querformat</string>
+    <string name="portrait_right_swipe_title">Nach rechts Wischen (Hochformat)</string>
+    <string name="portrait_left_swipe_title">Nach links Wischen (Hochformat)</string>
+    <string name="landscape_right_swipe_title">Nach rechts Wischen (Querformat)</string>
+    <string name="landscape_left_swipe_title">Nach links Wischen (Querformat)</string>
+    <string name="vertical_up_swipe_title">Vertikal nach oben Wischen</string>
+    <string name="vertical_down_swipe_title">Vertikal nach unten Wischen</string>
+    <string name="up_swipe_title">Nach oben Wischen</string>
+    <string name="down_swipe_title">Nach unten Wischen</string>
+    <string name="long_swipe_reset">Zurücksetzen</string>
+    <string name="fling_advanced">Weitere Einstellungen</string>
+    <string name="fling_long_swipe_title">Schwellenwert für Langes Wischen</string>
+    <string name="fling_long_swipe_summary">Feineinstellung für Langes Wischen basierend auf der prozentualen Breite und Höhe der Fling Schnittstelle</string>
+    <string name="fling_trails_enable_title">Spur für Gesten aktivieren</string>
+    <string name="fling_trails_enable_summary">Zeigt eine Spur bei Wisch-Gesten</string>
+    <string name="fling_trails_color_title">Farbe der Spur</string>
+    <string name="fling_trails_width_title">Breite der Spur</string>
+    <string name="fling_appearance">Darstellung</string>
+    <string name="fling_show_logo_title">Zeige Fling-Logo</string>
+    <string name="fling_animate_logo_title">Logo animieren</string>
+    <string name="fling_animate_logo_summary">Das Logo wird bei Berührung animiert</string>
+    <string name="fling_logo_color">Farbe des Logos</string>
+    <string name="fling_logo_custom_logo_pick_title">Eigenes Symbol als Logo</string>
+    <string name="fling_logo_custom_logo_image_pick_title">Eigenes Bild als Logo</string>
+    <string name="fling_logo_custom_logo_reset_title">Symbol des Logos zurücksetzen</string>
+    <string name="fling_show_ripple_title">Zeige Strudel-Effekt</string>
+    <string name="fling_show_ripple_summary">Strudel-Effekt bei Berührung</string>
+    <string name="fling_ripple_color">Farbe des Strudels</string>
+    <string name="fling_longpress_timeout_label_left">Weniger Verzögerung</string>
+    <string name="fling_longpress_timeout_label_right">Mehr Verzögerung</string>
+    <string name="fling_longpress_title">Verzögerung für Langes Drücken</string>
+    <string name="fling_longpress_summary">Verzögerung bis zur Ausführung eines \"langen Drucks\" verlängern oder verkürzen</string>
+
+    <!-- Pulse navigation bar music visualizer -->
+    <string name="pulse_help_policy_notice_title">Über Pulse</string>
+    <string name="pulse_help_policy_notice_summary">\"Pulse\" ist eine brilliante Grafik-Visualisierung für Audio in der Navigationsleiste, wenn Musik abgespielt wird. \"Pulse\" arbeitet leider nicht mit allen Audioquellen zusammen, wenn über die Lautsprecher Musik abgespielt wird</string>
+    <string name="pulse_settings">Pulse</string>
+    <string name="pulse_settings_summary">Grafik-Equalizer in der Navigationsleiste</string>
+    <string name="fling_show_pulse_title">Pulse zeigen</string>
+    <string name="fling_show_pulse_summary">Zeigt die Visualisierung in der Navigationsleiste an</string>
+    <string name="pulse_render_mode_title">Darstellungsmodus</string>
+    <string name="pulse_render_mode_fading_bars">Verblassende Blöcke</string>
+    <string name="pulse_render_mode_solid_lines">Durchgehende Balken</string>
+    <string name="fling_pulse_color">Farbe für Pulse</string>
+    <string name="eos_fling_lavalamp_title">Lavalampe einschalten</string>
+    <string name="eos_fling_lavalamp_summary">\"Pulse\" nutzt eine Lavalampen-artige Farbmischung bei der Darstellung</string>
+    <string name="pulse_advanced_category">Erweitert</string>
+    <string name="pulse_legacy_mode_advanced_category">Einstellungen für verblassende Blöcke</string>
+    <string name="pulse_custom_fudge_factor">Reaktionsgeschwindigkeit</string>
+    <string name="lavamp_solid_speed_title">Geschwindigkeit der Lavalampe</string>
+    <string name="pulse_solid_dimen_category">Einstellungen für durchgehende Balken</string>
+
+    <!-- Pulse config -->
+    <string name="pulse_custom_dimen">Breite der Balken</string>
+    <string name="pulse_custom_div">Abstand der Balken</string>
+    <string name="pulse_filled_block_size">Größe der Blöcke</string>
+    <string name="pulse_empty_block_size">Abstand der Blöcke</string>
+
+    <!-- Navbar height -->
+    <string name="navigation_bar_size_title">Größe der Leiste</string>
+    <string name="portrait_title">Höhe im Hochformat</string>
+    <string name="land_vert_title">Breite im Querformat</string>
+    <string name="land_hor_title">Höhe im Querformat</string>
+    <string name="positive_done">Fertig</string>
+
+    <!-- SmartBar -->
+    <string name="smartbar_category">SmartBar</string>
+    <string name="smartbar_settings_title">SmartBar Einstellungen</string>
+    <string name="smartbar_editor_title">Tasten-Editor ein-/ausschalten</string>
+    <string name="smartbar_editor_summary">Mittellang Drücken und Ziehen, um die Position zu ändern. Lange Drücken, um das Menü des Editors anzuzeigen. Die Tastenpositionen können verändert werden, während das Menü angezeigt wird.</string>
+    <string name="smartbar_context_menu_position_title">Position von Kontexttasten</string>
+    <string name="smartbar_context_menu_position_summary">Die Position von Kontexttasten, wie die Menü-Taste oder der Eingabemethoden-Auswahl, festlegen.</string>
+    <string name="smartbar_right">Rechts</string>
+    <string name="smartbar_left">Links</string>
+    <string name="smartbar_button_animation_title">Tasten-Animation bei Berührung</string>
+    <string name="smartbar_button_animation_summary">Animationstyp für die primären Tasten festlegen, wenn diese gedrückt werden</string>
+    <string name="smartbar_button_animation_ripple">Strudel</string>
+    <string name="smartbar_button_animation_spring">Hüpfen</string>
+
+    <string name="qs_tile_animation_style_flip">Umdrehen</string>
+
+    <string name="smartbar_factory_reset_title">Auf Grundeinstellung zurücksetzen</string>
+    <string name="smartbar_factory_reset_confirm">Sind Sie sicher, dass die SmartBar auf Standardwerte zurückgesetzt werden soll?</string>
+    <string name="smartbar_ime_action_title">Aktionen zur Eingabemethode</string>
+    <string name="smartbar_ime_action_summary">Festlegen, welche Tasten in der Leiste angezeigt werden, wenn die Tastatur aktiv ist</string>
+    <string name="smartbar_ime_action_none">Nichts</string>
+    <string name="smartbar_ime_action_arrows">Eingabe-Pfeile</string>
+    <string name="smartbar_ime_action_switcher">Tastatur-Umschalter</string>
+    <string name="smartbar_backup_current_config_title">Profil speichern</string>
+    <string name="smartbar_restore_config_title">Profil wiederherstellen</string>
+    <string name="smartbar_config_name_edit_dialog_title">SmartBar-Profilname</string>
+    <string name="smartbar_config_name_edit_dialog_message">Namen eingeben oder leer lassen</string>
+    <string name="smartbar_config_dialog_title">SmartBar-Profile</string>
+    <string name="smartbar_config_backup_success_toast">SmartBar-Profil erfolgreich gespeichert</string>
+    <string name="smartbar_config_restore_success_toast">SmartBar-Profil erfolgreich wiederhergestellt</string>
+    <string name="smartbar_config_backup_error_toast">Fehler beim Speichern des SmartBar-Profils</string>
+    <string name="smartbar_config_restore_error_toast">Fehler beim Wiederherstellen des SmartBar-Profils</string>
+
+    <!-- Navbar buttons transparency -->
+    <string name="navbar_buttons_alpha_title">Transparenz der Tasten</string>
+
+    <!-- Sound & Notification Settings -->
+    <!-- Linked / unlinked notification volume -->
+    <string name="link_volume_option_title">Verbinde Lautstärke für Klingelton und Benachrichtigungen</string>
+    <string name="notification_volume_option_title">Lautstärke für Benachrichtigung</string>
+    <string name="ring_notification_volume_option_title">Lautstärke für Klingelton und Benachrichtigung</string>
+
+    <!-- Volume Steps -->
+    <string name="volume_steps_title">Lautstärke-Schritte</string>
+    <string name="volume_steps_alarm_title">Lautstärke-Schritte: Wecker</string>
+    <string name="volume_steps_dtmf_title">Lautstärke-Schritte: MFV-Töne</string>
+    <string name="volume_steps_music_title">Lautstärke-Schritte: Musik</string>
+    <string name="volume_steps_notification_title">Lautstärke-Schritte: Benachrichtigung</string>
+    <string name="volume_steps_ring_title">Lautstärke-Schritte: Klingelton</string>
+    <string name="volume_steps_system_title">Lautstärke-Schritte: System</string>
+    <string name="volume_steps_voice_call_title">Lautstärke-Schritte: Sprachanruf</string>
+    <string name="volume_steps_reset">Zurücksetzen</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
+
+    <!-- Status bar -->
+    <string name="smart_pulldown_title">Intelligentes Öffnen</string>
+    <string name="smart_pulldown_summary">Öffnet die Schnelleinstellungen sofort, wenn %1$s Benachrichtigungen vorhanden sind</string>
+    <string name="smart_pulldown_off">Aus</string>
+    <string name="smart_pulldown_dismissable">keine löschbaren</string>
+    <string name="smart_pulldown_persistent">keine andauernden</string>
+    <string name="smart_pulldown_all">keine löschbaren oder andauernden</string>
+
+    <!-- Heads up -->
+    <string name="add_heads_up_package">App hinzufügen</string>
+    <string name="add_heads_up_dnd_summary">Zeige keine Pop-up-Benachrichtigungen in diesen Anwendungen</string>
+    <string name="add_heads_up_blacklist_summary">Zeige keine Pop-up-Benachrichtigungen von diesen Anwendungen</string>
+    <string name="add_heads_up_whitelist_summary">Zeige alle Benachrichtigungen von diesen Anwendungen als Pop-up</string>
+    <string name="heads_up_dnd_title">\"Nicht stören\"</string>
+    <string name="heads_up_blacklist_title">Schwarze Liste</string>
+    <string name="heads_up_whitelist_title">Weiße Liste</string>
+    <string name="heads_up_contains_key">Die Anwendung wurde bereits zur Liste hinzugefügt</string>
+
+</resources>
