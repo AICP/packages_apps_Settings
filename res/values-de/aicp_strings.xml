@@ -16,9 +16,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-  <!-- About phone screen, AICP device maintainer name -->
-  <string name="device_maintainer">Geräte-Maintainer</string>
-  <string name="device_maintainers">Geräte-Maintainer</string>
+    <!-- About phone screen, AICP device maintainer name -->
+    <string name="device_maintainer">Geräte-Maintainer</string>
+    <string name="device_maintainers">Geräte-Maintainer</string>
 
     <!-- Aicp Extras -->
     <string name="aicpextras_settings">AICP Extras</string>
@@ -115,7 +115,7 @@
     <string name="action_entry_select_app">Anwendung auswählen</string>
     <string name="action_entry_custom_action">Eigene Aktion wählen</string>
 
-    <string name="action_value_default_action" translatable="false">default</string>
+    <!-- <string name="action_value_default_action" translatable="false">default</string>
     <string name="action_value_select_app" translatable="false">app</string>
     <string name="action_value_custom_action" translatable="false">custom</string>
     <string name="action_value_back" translatable="false">task_back</string>
@@ -123,7 +123,7 @@
     <string name="action_value_search_assist" translatable="false">task_assist</string>
     <string name="action_value_recent_apps" translatable="false">task_recents</string>
     <string name="action_value_voice_search" translatable="false">task_voice_search</string>
-    <string name="action_value_menu" translatable="false">task_menu</string>
+    <string name="action_value_menu" translatable="false">task_menu</string> -->
 
     <!-- Fling -->
     <string name="fling_settings">Fling Einstellungen</string>
