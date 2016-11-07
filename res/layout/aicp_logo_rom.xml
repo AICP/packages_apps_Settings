@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/aicp_logo_bg"
-        android:tint="?android:attr/textColorPrimary"
+        android:tint="@color/aicp_logo_bg"
         android:layout_gravity="bottom"
         android:scaleType="centerCrop"
            />
@@ -31,7 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/aicp_logo_letters"
-        android:tint="?android:attr/colorAccent"
+        android:tint="@color/aicp_logo_fg"
         android:layout_gravity="center_horizontal"
             />
 </FrameLayout>

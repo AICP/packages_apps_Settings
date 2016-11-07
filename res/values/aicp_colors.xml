@@ -22,4 +22,6 @@
     <color name="action_picker_fab_background">@color/theme_accent</color>
     <color name="icon_tint_color">@*android:color/material_pixel_blue_bright</color>
     <color name="white">#FFF</color>
+    <color name="aicp_logo_bg">@*android:color/primary_text_material_light</color>
+    <color name="aicp_logo_fg">@color/icon_tint_color</color>
 </resources>
