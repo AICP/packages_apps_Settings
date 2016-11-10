@@ -50,6 +50,7 @@ import com.android.settings.SettingsActivity;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.widget.SwitchBar;
 import com.android.settingslib.applications.ApplicationsState;
+import com.android.settingslib.applications.ApplicationsState.AppEntry;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -106,6 +107,8 @@ public class ExpandedDesktopPreferenceFragment extends SettingsPreferenceFragmen
                     Settings.Global.POLICY_CONTROL);
         }
         mAllPackagesAdapter = new AllPackagesAdapter(getActivity());
+
+        mAllPackagesAdapter.notifyDataSetChanged();
 
         setHasOptionsMenu(true);
     }
@@ -259,7 +262,7 @@ public class ExpandedDesktopPreferenceFragment extends SettingsPreferenceFragmen
 
     @Override
     public void onRebuildComplete(ArrayList<ApplicationsState.AppEntry> entries) {
-        rebuild();
+        handleAppEntries(entries);
     }
 
     @Override
@@ -601,7 +604,7 @@ public class ExpandedDesktopPreferenceFragment extends SettingsPreferenceFragmen
         }
 
         @Override
-        public boolean filterApp(ApplicationsState.AppEntry info) {
+        public boolean filterApp(AppEntry info) {
             boolean show = !mAllPackagesAdapter.entries.contains(info.info.packageName);
             if (show && onlyLauncher) {
                 synchronized (launcherResolveInfoList) {
