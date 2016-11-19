@@ -133,6 +133,8 @@
             </intent-filter>
         </activity>
 
+        <activity android:name="org.aospextended.extensions.HAFRAppListActivity" />
+
         <activity android:name=".Settings$AicpExtras"
             android:label="@string/header_category_aicpextras">
             <intent-filter android:priority="4">
