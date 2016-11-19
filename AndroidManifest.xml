@@ -135,6 +135,11 @@
 
         <activity android:name=".Settings$AicpExtras"
             android:label="@string/header_category_aicpextras">
+
+        <activity android:name="org.aicp.extras.HAFRAppListActivity" />
+
+        <activity android:name="Settings$CustomSettings"
+            android:label="@string/header_category_custom">
             <intent-filter android:priority="4">
                 <action android:name="com.android.settings.category.aicpextras" />
                 <category android:name="android.intent.category.DEFAULT" />
