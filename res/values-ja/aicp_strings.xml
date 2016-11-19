@@ -21,7 +21,7 @@
 
     <!-- Aicp Extras -->
     <string name="aicpextras_settings">AICP Extras</string>
-    <string name="summary_aicp">Custom rom personalizations</string>
+    <string name="summary_aicp">カスタムROM固有の設定を行います</string>
     <string name="header_category_aicpextras">個人設定</string>
 
     <!-- Proximity wake -->
@@ -58,24 +58,12 @@
     <string name="expanded_hide_status">ステータスバーを非表示</string>
     <string name="expanded_hide_navigation">ナビゲーションバーを非表示</string>
     <string name="expanded_hide_both">両方を非表示</string>
-    <string name="expanded_nothing_to_show">To add a custom per-app configuration for expanded state, set "Enabled for all" to the off position</string>
-    <string name="expanded_desktop_state">Expanded state</string>
-    <string name="expanded_enabled_for_all">Enabled for all</string>
-    <string name="expanded_user_configurable">User configurable</string>
-    <string name="expanded_desktop_style">Expanded desktop style</string>
-    <string name="expanded_desktop_style_description">Choose a default expanded desktop style</string>
     <string name="expanded_desktop_title">拡張デスクトップの設定</string>
 
     <!-- Vendor version -->
     <string name="vendor_version">Vendor バージョン</string>
     <string name="vendor_version_default">不明</string>
 
-    <!-- Density category -->
-    <string name="density_category">Density options</string>
-
-    <!-- Color Picker -->
-    <string name="dialog_color_picker">Color Picker</string>
-    <string name="press_color_to_apply">Press on color below to apply</string>
     <string name="arrow_right">→</string>
     <string name="arrow_down">↓</string>
     <string name="hex">Hex:</string>
@@ -90,21 +78,15 @@
     <string name="navbar_mode">ナビゲーションモード</string>
     <string name="navbar_visibility">ナビゲーションバーを有効にする</string>
     <string name="navigationbar_settings_title">ナビゲーションバー</string>
-    <string name="navigationbar_settings_summary">Customize navigation style and behavior</string>
     <string name="navbar_general_title">高度な設定</string>
     <string name="navigation_bar_left_title">左利きモード</string>
     <string name="navigation_bar_left_summary">画面が横向きの際にナビゲーションバーを画面の左側に配置する</string>
     <string name="info_pref_note_title">注意事項</string>
     <string name="smartbar_interface">ナビゲーションバー</string>
     <string name="icon_pack_picker_dialog_title">アイコンパック</string>
-    <string name="invalid_icon_from_uri">Unable to load image from content provider</string>
-    <string name="picker_activities">Activities</string>
-    <string name="select_custom_app_title">Select custom app</string>
-    <string name="select_custom_activity_title">Select custom activity</string>
-    <string name="profile_applist_title">Applications</string>
     <string name="default_string">デフォルト</string>
     <string name="reset">リセット</string>
-    <string name="summary_navbar">Smartbar/fling and pulse</string>
+    <string name="summary_navbar">ナビゲーションバー、Fling、Pulseの設定</string>
 
     <!-- Actions dialog and default task values set in ActionPreference xml-->
     <string name="choose_action_title">アクションを選択...</string>
@@ -133,20 +115,9 @@
     <string name="fling_single_left_tap">左をタップ</string>
     <string name="fling_double_left_tap">左を2回タップ</string>
     <string name="fling_long_left_press">左を長押し</string>
-    <string name="long_swipe_portrait_title">Portrait</string>
-    <string name="long_swipe_landscape_title">Landscape</string>
-    <string name="portrait_right_swipe_title">Portrait right swipe</string>
-    <string name="portrait_left_swipe_title">Portrait left swipe</string>
-    <string name="landscape_right_swipe_title">Landscape right swipe</string>
-    <string name="landscape_left_swipe_title">Landscape left swipe</string>
-    <string name="vertical_up_swipe_title">Vertical up swipe</string>
-    <string name="vertical_down_swipe_title">Vertical down swipe</string>
-    <string name="up_swipe_title">Up swipe</string>
-    <string name="down_swipe_title">Down swipe</string>
     <string name="long_swipe_reset">リセット</string>
     <string name="fling_advanced">より高度な設定</string>
     <string name="fling_long_swipe_title">長いスワイプのしきい値</string>
-    <string name="fling_long_swipe_summary">Fine tune long swipe thresholds based on a percentage of Fling interface width or height</string>
     <string name="fling_trails_enable_title">ジェスチャーの軌跡を有効化</string>
     <string name="fling_trails_enable_summary">スワイプするジェスチャーの軌跡を表示する</string>
     <string name="fling_trails_color_title">軌跡の色</string>
@@ -159,14 +130,6 @@
     <string name="fling_logo_custom_logo_pick_title">カスタムロゴアイコン</string>
     <string name="fling_logo_custom_logo_image_pick_title">カスタムアイコンの画像</string>
     <string name="fling_logo_custom_logo_reset_title">ロゴアイコンのリセット</string>
-    <string name="fling_show_ripple_title">Show ripple</string>
-    <string name="fling_show_ripple_summary">Ripple effect on touch events</string>
-    <string name="fling_ripple_color">Ripple color</string>
-    <string name="fling_longpress_timeout_label_left">Less delay</string>
-    <string name="fling_longpress_timeout_label_right">More delay</string>
-    <string name="fling_longpress_title">Long press delay</string>
-    <string name="fling_longpress_summary">Increase or decrease the time it takes to execute a long press</string>
-
     <!-- Pulse navigation bar music visualizer -->
     <string name="pulse_help_policy_notice_title">Pulseについて</string>
     <string name="pulse_help_policy_notice_summary">Pulseは音楽の再生中にナビゲーションバー上に表示される華やかなイコライザ型の視覚効果です。Pulseは端末のスピーカーから再生する際、一部の音源では動作しないことがあります。</string>
@@ -210,8 +173,6 @@
     <string name="smartbar_left">左</string>
     <string name="smartbar_button_animation_title">ボタンタッチ時のアニメーション</string>
     <string name="smartbar_button_animation_summary">ボタンが押された際のアニメーションを設定します</string>
-    <string name="smartbar_button_animation_ripple">Ripple</string>
-    <string name="smartbar_button_animation_spring">Spring</string>
     <string name="smartbar_factory_reset_title">初期設定に戻す</string>
     <string name="smartbar_factory_reset_confirm">本当にナビゲーションバーを初期設定に戻しても良いですか？</string>
     <string name="smartbar_ime_action_title">インプットメソッドのアクション</string>
@@ -229,5 +190,24 @@
     <string name="smartbar_config_backup_error_toast">プロファイルの保存中にエラーが発生しました</string>
     <string name="smartbar_config_restore_error_toast">プロファイルのリストア中にエラーが発生しました</string>
     <string name="navbar_buttons_alpha_title">ボタンの透過度</string>
+
+    <string name="link_volume_option_title">着信、通知音の同期</string>
+
+    <!-- Volume Steps -->
+    <string name="volume_steps_title">音量レベル</string>
+    <string name="volume_steps_alarm_title">音量レベル: アラーム</string>
+    <string name="volume_steps_dtmf_title">音量レベル: DTMF</string>
+    <string name="volume_steps_music_title">音量レベル: メディア</string>
+    <string name="volume_steps_notification_title">音量レベル: 通知</string>
+    <string name="volume_steps_ring_title">音量レベル: 着信音</string>
+    <string name="volume_steps_system_title">音量レベル: システム</string>
+    <string name="volume_steps_voice_call_title">音量レベル: 音声通話</string>
+    <string name="volume_steps_reset">リセット</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
 
 </resources>
