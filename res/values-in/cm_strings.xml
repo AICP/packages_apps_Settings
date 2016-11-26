@@ -37,8 +37,8 @@
   <!-- Preference link for root appops -->
   <string name="root_appops_title">Kelola akses root</string>
   <string name="root_appops_summary">Lihat dan kontrol aturan root</string>
-  <!-- About phone screen, CyanogenMod version -->
-  <string name="mod_version">Versi CyanogenMod</string>
+  <!-- About phone screen, AICP version -->
+  <string name="mod_version">Versi AICP</string>
   <string name="mod_version_default">Tidak diketahui</string>
   <!-- About phone screen, Device model -->
   <string name="device_model">Model perangkat</string>

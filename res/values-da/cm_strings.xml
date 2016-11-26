@@ -37,8 +37,8 @@
   <string name="root_access_all">Apps og ADB</string>
   <!-- Preference link for root appops -->
   <string name="root_appops_title">Administrer root adgang</string>
-  <!-- About phone screen, CyanogenMod version -->
-  <string name="mod_version">CyanogenMod-version</string>
+  <!-- About phone screen, AICP version -->
+  <string name="mod_version">AICP-version</string>
   <string name="mod_version_default">Ukendt</string>
   <!-- About phone screen, Device model -->
   <string name="device_model">Enhedsmodel</string>
