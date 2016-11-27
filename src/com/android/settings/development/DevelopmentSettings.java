@@ -569,6 +569,10 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         }
 
         mOtaDisableAutomaticUpdate = findAndInitSwitchPref(OTA_DISABLE_AUTOMATIC_UPDATE_KEY);
+        if (!SystemProperties.getBoolean("ro.build.ab_update", false)) {
+            removePreference(mOtaDisableAutomaticUpdate);
+            mOtaDisableAutomaticUpdate = null;
+        }
 
         mColorModePreference = (ColorModePreference) findPreference(KEY_COLOR_MODE);
         mColorModePreference.updateCurrentAndSupported();
@@ -821,7 +825,9 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         updateShowAllANRsOptions();
         updateShowNotificationChannelWarningsOptions();
         mVerifyAppsOverUsbController.updatePreference();
-        updateOtaDisableAutomaticUpdateOptions();
+        if (mOtaDisableAutomaticUpdate != null) {
+            updateOtaDisableAutomaticUpdateOptions();
+        }
         updateBugreportOptions();
         updateForceRtlOptions();
         updateLogdSizeValues();
