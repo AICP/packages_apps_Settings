@@ -15,7 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
     <!-- About phone screen, AICP device maintainer name -->
     <string name="device_maintainer">Geräte-Maintainer</string>
     <string name="device_maintainers">Geräte-Maintainer</string>
@@ -91,8 +90,6 @@
     <string name="navbar_mode">Navigationsmodus</string>
     <string name="navbar_visibility">Navigationsleiste aktivieren</string>
     <string name="navigationbar_settings_title">Navigation</string>
-    <string name="aosp_navigation_bar">Navigationsleiste</string>
-    <string name="aosp_navigation_bar_settings">Einstellungen der Navigationsleiste</string>
     <string name="navigationbar_settings_summary">Stil und Verhalten für die Navigation anpassen</string>
     <string name="navbar_general_title">Weitere Einstellungen</string>
     <string name="navigation_bar_left_title">Linkshänder-Modus</string>
@@ -225,9 +222,7 @@
     <string name="smartbar_button_animation_summary">Animationstyp für die primären Tasten festlegen, wenn diese gedrückt werden</string>
     <string name="smartbar_button_animation_ripple">Strudel</string>
     <string name="smartbar_button_animation_spring">Hüpfen</string>
-
     <string name="qs_tile_animation_style_flip">Umdrehen</string>
-
     <string name="smartbar_factory_reset_title">Auf Grundeinstellung zurücksetzen</string>
     <string name="smartbar_factory_reset_confirm">Sind Sie sicher, dass die SmartBar auf Standardwerte zurückgesetzt werden soll?</string>
     <string name="smartbar_ime_action_title">Aktionen zur Eingabemethode</string>
@@ -244,15 +239,10 @@
     <string name="smartbar_config_restore_success_toast">SmartBar-Profil erfolgreich wiederhergestellt</string>
     <string name="smartbar_config_backup_error_toast">Fehler beim Speichern des SmartBar-Profils</string>
     <string name="smartbar_config_restore_error_toast">Fehler beim Wiederherstellen des SmartBar-Profils</string>
-
-    <!-- Navbar buttons transparency -->
     <string name="navbar_buttons_alpha_title">Transparenz der Tasten</string>
 
-    <!-- Sound & Notification Settings -->
     <!-- Linked / unlinked notification volume -->
-    <string name="link_volume_option_title">Verbinde Lautstärke für Klingelton und Benachrichtigungen</string>
-    <string name="notification_volume_option_title">Lautstärke für Benachrichtigung</string>
-    <string name="ring_notification_volume_option_title">Lautstärke für Klingelton und Benachrichtigung</string>
+    <string name="link_volume_option_title">Klingelton- und Benachrichtigungslautstärke verbinden</string>
 
     <!-- Volume Steps -->
     <string name="volume_steps_title">Lautstärke-Schritte</string>
