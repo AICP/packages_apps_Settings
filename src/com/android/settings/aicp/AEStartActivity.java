@@ -54,6 +54,10 @@ public class AEStartActivity extends SettingsPreferenceFragment {
             if (listening) {
                 if (TextUtils.isEmpty(mCustomSummary)) {
                     mSummaryLoader.setSummary(this, mContext.getString(R.string.summary_aicp));
+                } else if (mCustomSummary.contains("\n")) {
+                    String[] summaries = mCustomSummary.split("\n");
+                    int selection = (int) (Math.random() * summaries.length);
+                    mSummaryLoader.setSummary(this, summaries[selection]);
                 } else {
                     mSummaryLoader.setSummary(this, mCustomSummary);
                 }
