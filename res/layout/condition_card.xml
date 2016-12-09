@@ -60,10 +60,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:padding="16dp"
-                android:tint="@color/condition_card_expander_color"
-                android:clickable="true"
-                android:focusable="true"
-                android:background="?android:attr/selectableItemBackground" />
+                android:tint="@color/condition_card_expander_color" />
 
         </LinearLayout>
 
