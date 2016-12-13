@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2016 AICP
 
@@ -21,7 +21,7 @@
 
     <!-- Aicp Extras -->
     <string name="aicpextras_settings">AICP Extras</string>
-    <string name="summary_aicp">Custom rom personalizations</string>
+    <string name="summary_aicp">Custom ROM personalizations</string>
     <string name="header_category_aicpextras">Personalization</string>
 
     <!-- Turn on display when power connected; turn off display when power disconnected -->
@@ -100,7 +100,7 @@
     <string name="profile_applist_title">Applications</string>
     <string name="default_string">Default</string>
     <string name="reset">Reset</string>
-    <string name="summary_navbar">Smartbar/fling and pulse</string>
+    <string name="summary_navbar">Smartbar/Fling and Pulse</string>
 
     <!-- Actions dialog and default task values set in ActionPreference xml-->
     <string name="choose_action_title">Choose action</string>
