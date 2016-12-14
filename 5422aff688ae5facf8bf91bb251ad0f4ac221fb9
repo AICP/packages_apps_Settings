@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa98f980_bbf43b88",
+        "filename": "res/values/aicp_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2016-12-14T07:20:31Z",
+      "side": 1,
+      "message": "http://hastebin.com/ehidacecut.vbs",
+      "range": {
+        "startLine": 178,
+        "startChar": 210,
+        "endLine": 178,
+        "endChar": 211
+      },
+      "revId": "5422aff688ae5facf8bf91bb251ad0f4ac221fb9",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": false
+    }
+  ]
+}
