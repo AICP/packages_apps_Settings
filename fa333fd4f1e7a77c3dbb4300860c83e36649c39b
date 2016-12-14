@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa98f980_9b7697d7",
+        "filename": "res/values/aicp_strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 343
+      },
+      "writtenOn": "2016-12-14T16:06:35Z",
+      "side": 1,
+      "message": "please remove this space",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 1
+      },
+      "revId": "fa333fd4f1e7a77c3dbb4300860c83e36649c39b",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": false
+    }
+  ]
+}
