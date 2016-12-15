@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2016 AICP
 
@@ -100,7 +100,7 @@
     <string name="profile_applist_title">Applications</string>
     <string name="default_string">Default</string>
     <string name="reset">Reset</string>
-    <string name="summary_navbar">Smartbar/Fling and Pulse</string>
+    <string name="summary_navbar">Smartbar/Fling and the Pulse visualizer</string>
 
     <!-- Actions dialog and default task values set in ActionPreference xml-->
     <string name="choose_action_title">Choose action</string>
@@ -175,7 +175,7 @@
 
     <!-- Pulse navigation bar music visualizer -->
     <string name="pulse_help_policy_notice_title">About Pulse</string>
-    <string name="pulse_help_policy_notice_summary">Pulse is a brilliant audio graphic equalizer on the navigation bar while music is playing. Pulse does not work with some audio sources while listening on the device\'s speaker.</string>
+    <string name="pulse_help_policy_notice_summary">Pulse is a brilliant audio graphic visualizer on the navigation bar while music is playing. Pulse does not work with some audio sources while listening via the device\'s speaker.</string>
     <string name="pulse_settings">Pulse</string>
     <string name="pulse_settings_summary">Navigation bar audio graphic equalizer</string>
     <string name="fling_show_pulse_title">Show Pulse</string>
