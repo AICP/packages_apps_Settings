@@ -256,4 +256,8 @@
    <string name="menu_show_substratum_icons">Mostrar capas de iconos</string>
    <string name="menu_hide_substratum_icons">Ocultar capas de iconos</string>
 
+   <!-- Navbar dynamic color -->
+   <string name="nav_bar_dynamic_title">Colores dinámicos en navbar</string>
+   <string name="nav_bar_dynamic_summary">La brra de navegación se adaptará al color principal de cada aplicación. Reinicia la aplicación deseada para ver el efecto resultante.</string>
+
 </resources>
