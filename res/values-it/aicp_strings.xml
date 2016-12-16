@@ -19,7 +19,7 @@
   <!-- Aicp Extras -->
   <string name="aicpextras_settings">AICP Extras</string>
   <string name="summary_aicp">Personalizzazione rom personalizzate</string>
-  <string name="header_category_aicpextras">Personalization</string>
+  <string name="header_category_aicpextras">Personalizzazione</string>
 
   <!-- Turn on display when power connected; turn off display when power disconnected -->
   <string name="wake_when_plugged_or_unplugged_title">Risveglia al collegamento</string>
@@ -48,10 +48,10 @@
   <!-- Expanded desktop -->
   <string name="power_menu_expanded_desktop">Desktop esteso</string>
   <string name="expanded_hide_nothing">Non nascondere nulla</string>
-  <string name="expanded_hide_status">Nascondi la barra di stato</string>
-  <string name="expanded_hide_navigation">Nascondi la barra di navigazione</string>
+  <string name="expanded_hide_status">Barra di stato nascosta</string>
+  <string name="expanded_hide_navigation">Barra di navigazione nascosta</string>
   <string name="expanded_hide_both">Nascondi entrambi</string>
-  <string name="expanded_nothing_to_show">Per aggiungere una configurazione personalizzata di schermo esteso per ogni app, disattiva \"Attivo per tutti\"</string>
+  <string name="expanded_nothing_to_show">Per aggiungere una configurazione personalizzata dello schermo esteso su ogni app, impostato \"Abilitato per tutti\" in posizione spento</string>
   <string name="expanded_desktop_state">Stato del desktop esteso</string>
   <string name="expanded_enabled_for_all">Abilitato per tutti</string>
   <string name="expanded_user_configurable">Configurabile dall\'utente</string>
@@ -108,7 +108,7 @@
   <string name="fling_interface">Fling</string>
   <string name="fling_enable_title">Abilita Fling</string>
   <string name="fling_back_home_policy">Indietro e Home devono essere impostati in ogni momento. Per modificare l\'assegnazione di indietro o home, imposta prima l\'assegnazione desiderata</string>
-  <string name="fling_split_bar_policy">Quando è assegnata solamente un\'azione a destra o a sinistra, l\'azione viene applicata a tutta la barra</string>
+  <string name="fling_split_bar_policy">Quando è assegnata solamente un\'azione a destra o a sinistra, l\'azione viene applicata su tutta la barra</string>
   <string name="fling_def_summary">Nessuna azione impostata</string>
   <string name="fling_swipe_actions">Gesto di scorrimento</string>
   <string name="fling_tap_actions">Gesto al tocco</string>
@@ -250,5 +250,9 @@
   <string name="filter_substratum_icons">Icona substratum overlays</string>
   <string name="menu_show_substratum_icons">Mostra l\'icona overlays</string>
   <string name="menu_hide_substratum_icons">Nascondi l\'icona overlays</string>
+
+  <!-- Navabar dynamic color -->
+  <string name="nav_bar_dynamic_title">Colore barra di navigazione dinamica</string>
+  <string name="nav_bar_dynamic_summary">Attiva la barra di navigazione per adattare il colore primario delle applicazioni. Riavviare l\'applicazione desiderata per vedere l\'effetto.</string>
 
 </resources>
