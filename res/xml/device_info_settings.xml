@@ -79,6 +79,24 @@
                 settings:allowDividerAbove="true"
                 settings:allowDividerBelow="true"/>
 
+        <!-- Device memory information -->
+        <Preference android:key="device_memory"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/memory_info"
+                android:summary="@string/device_info_default"/>
+
+        <!-- Device processor information -->
+        <Preference android:key="device_processor"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/processor_info"
+                android:summary="@string/device_info_default"/>
+
+        <!-- Device Maintainer -->
+        <Preference android:key="device_maintainer"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/device_maintainer"
+                android:summary="@string/device_info_default" />
+
         <!-- Device firmware version -->
         <Preference android:key="firmware_version"
                 android:enabled="false"
@@ -92,12 +110,6 @@
                 android:shouldDisableView="false"
                 android:title="@string/mod_version"
                 android:summary="@string/mod_version_default" />
-
-        <!-- Device Maintainer -->
-        <Preference android:key="device_maintainer"
-                style="?android:preferenceInformationStyle"
-                android:title="@string/device_maintainer"
-                android:summary="@string/device_info_default" />
 
         <!-- Security patch level -->
         <PreferenceScreen android:key="security_patch"
