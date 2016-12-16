@@ -70,6 +70,12 @@
     <string name="build_date">Build date</string>
     <string name="build_date_default">2015-01-01-0000</string>
 
+    <!-- About phone screen, processor info -->
+    <string name="processor_info">Processor</string>
+
+    <!-- About phone screen, memory info -->
+    <string name="memory_info">Memory</string>
+
     <!-- CM Updater -->
     <string name="cmupdate_settings_title">CyanogenMod updates</string>
 
