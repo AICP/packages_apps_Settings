@@ -260,4 +260,8 @@
    <string name="nav_bar_dynamic_title">Colores dinámicos en navbar</string>
    <string name="nav_bar_dynamic_summary">La brra de navegación se adaptará al color principal de cada aplicación. Reinicia la aplicación deseada para ver el efecto resultante.</string>
 
+   <!-- setting: show CPU info-->
+   <string name="show_cpu_info">Información de CPU</string>
+   <string name="show_cpu_info_summary">Muestra la información actual de la CPU en pantalla</string>
+
 </resources>
