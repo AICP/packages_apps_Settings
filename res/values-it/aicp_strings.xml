@@ -254,5 +254,8 @@
   <!-- Navabar dynamic color -->
   <string name="nav_bar_dynamic_title">Colore barra di navigazione dinamica</string>
   <string name="nav_bar_dynamic_summary">Attiva la barra di navigazione per adattare il colore primario delle applicazioni. Riavviare l\'applicazione desiderata per vedere l\'effetto.</string>
-
+  
+  <!-- setting: show CPU info-->
+  <string name="show_cpu_info">Mostra informazioni CPU</string>
+  <string name="show_cpu_info_summary">Sovrapponi sullo schermo le informazioni attuali della CPU</string>
 </resources>
