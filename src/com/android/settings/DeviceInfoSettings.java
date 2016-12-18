@@ -50,13 +50,21 @@ import cyanogenmod.hardware.CMHardwareManager;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.List;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
 
 import static com.android.settingslib.RestrictedLockUtils.EnforcedAdmin;
 
 public class DeviceInfoSettings extends SettingsPreferenceFragment implements Indexable {
 
     private static final String LOG_TAG = "DeviceInfoSettings";
+    private static final String FILENAME_PROC_MEMINFO = "/proc/meminfo";
+    private static final String FILENAME_PROC_CPUINFO = "/proc/cpuinfo";
 
     private static final String KEY_MANUAL = "manual";
     private static final String KEY_REGULATORY_INFO = "regulatory_info";
@@ -84,6 +92,8 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_QGP_VERSION = "qgp_version";
     private static final String PROPERTY_QGP_VERSION = "persist.qgp.version";
     private static final String KEY_VENDOR_VERSION = "vendor_version";
+    private static final String KEY_DEVICE_MEMORY = "device_memory";
+    private static final String KEY_DEVICE_PROCESSOR = "device_processor";
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
     static final int TAPS_TO_SHOW_DEVICEID = 7;
@@ -155,6 +165,8 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         findPreference(KEY_MOD_VERSION).setEnabled(true);
         setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
         setMaintainerSummary(KEY_DEVICE_MAINTAINER, "ro.aicp.maintainer");
+        setStringSummary(KEY_DEVICE_MEMORY, getDeviceMemoryInfo());
+        setStringSummary(KEY_DEVICE_PROCESSOR, getDeviceProcessorInfo());
 
         if (!SELinux.isSELinuxEnabled()) {
             String status = getResources().getString(R.string.selinux_status_disabled);
@@ -227,7 +239,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         super.onResume();
         mDevHitCountdown = getActivity().getSharedPreferences(DevelopmentSettings.PREF_FILE,
                 Context.MODE_PRIVATE).getBoolean(DevelopmentSettings.PREF_SHOW,
-                        android.os.Build.TYPE.equals("eng")) ? -1 : TAPS_TO_BE_A_DEVELOPER;
+                android.os.Build.TYPE.equals("eng")) ? -1 : TAPS_TO_BE_A_DEVELOPER;
         mDevHitToast = null;
         mDevIdCountdown = TAPS_TO_SHOW_DEVICEID;
         mDevIdToast = null;
@@ -323,7 +335,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
                 if (mDevHitCountdown == 0) {
                     getActivity().getSharedPreferences(DevelopmentSettings.PREF_FILE,
                             Context.MODE_PRIVATE).edit().putBoolean(
-                                    DevelopmentSettings.PREF_SHOW, true).apply();
+                            DevelopmentSettings.PREF_SHOW, true).apply();
                     if (mDevHitToast != null) {
                         mDevHitToast.cancel();
                     }
@@ -333,7 +345,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
                     // This is good time to index the Developer Options
                     Index.getInstance(
                             getActivity().getApplicationContext()).updateFromClassNameResource(
-                                    DevelopmentSettings.class.getName(), true, true);
+                            DevelopmentSettings.class.getName(), true, true);
 
                 } else if (mDevHitCountdown > 0
                         && mDevHitCountdown < (TAPS_TO_BE_A_DEVELOPER-2)) {
@@ -365,14 +377,14 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
                 } catch (Exception e) {
                     Log.e(LOG_TAG, "Unable to start activity " + intent.toString());
                 }
-        } else if (preference.getKey().equals(KEY_SECURITY_PATCH)) {
-            if (getPackageManager().queryIntentActivities(preference.getIntent(), 0).isEmpty()) {
-                // Don't send out the intent to stop crash
-                Log.w(LOG_TAG, "Stop click action on " + KEY_SECURITY_PATCH + ": "
-                        + "queryIntentActivities() returns empty" );
-                return true;
+            } else if (preference.getKey().equals(KEY_SECURITY_PATCH)) {
+                if (getPackageManager().queryIntentActivities(preference.getIntent(), 0).isEmpty()) {
+                    // Don't send out the intent to stop crash
+                    Log.w(LOG_TAG, "Stop click action on " + KEY_SECURITY_PATCH + ": "
+                            + "queryIntentActivities() returns empty" );
+                    return true;
+                }
             }
-          }
         } else if (preference.getKey().equals(KEY_DEVICE_FEEDBACK)) {
             sendFeedback();
         } else if(preference.getKey().equals(KEY_SYSTEM_UPDATE_SETTINGS)) {
@@ -423,7 +435,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     }
 
     private void removePreferenceIfPropertyMissing(PreferenceGroup preferenceGroup,
-            String preference, String property ) {
+                                                   String preference, String property ) {
         if (SystemProperties.get(property).equals("")) {
             // Property is missing so remove preference from group
             try {
@@ -459,7 +471,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
             findPreference(preference).setSummary(value);
         } catch (RuntimeException e) {
             findPreference(preference).setSummary(
-                getResources().getString(R.string.device_info_default));
+                    getResources().getString(R.string.device_info_default));
         }
     }
 
@@ -537,42 +549,114 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
      * For Search.
      */
     public static final SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-        new BaseSearchIndexProvider() {
+            new BaseSearchIndexProvider() {
 
-            @Override
-            public List<SearchIndexableResource> getXmlResourcesToIndex(
-                    Context context, boolean enabled) {
-                final SearchIndexableResource sir = new SearchIndexableResource(context);
-                sir.xmlResId = R.xml.device_info_settings;
-                return Arrays.asList(sir);
-            }
+                @Override
+                public List<SearchIndexableResource> getXmlResourcesToIndex(
+                        Context context, boolean enabled) {
+                    final SearchIndexableResource sir = new SearchIndexableResource(context);
+                    sir.xmlResId = R.xml.device_info_settings;
+                    return Arrays.asList(sir);
+                }
 
-            @Override
-            public List<String> getNonIndexableKeys(Context context) {
-                final List<String> keys = new ArrayList<String>();
-                if (isPropertyMissing(PROPERTY_SELINUX_STATUS)) {
-                    keys.add(KEY_SELINUX_STATUS);
+                @Override
+                public List<String> getNonIndexableKeys(Context context) {
+                    final List<String> keys = new ArrayList<String>();
+                    if (isPropertyMissing(PROPERTY_SELINUX_STATUS)) {
+                        keys.add(KEY_SELINUX_STATUS);
+                    }
+                    if (isPropertyMissing(PROPERTY_URL_SAFETYLEGAL)) {
+                        keys.add(KEY_SAFETY_LEGAL);
+                    }
+                    if (isPropertyMissing(PROPERTY_EQUIPMENT_ID)) {
+                        keys.add(KEY_EQUIPMENT_ID);
+                    }
+                    // Remove Baseband version if wifi-only device
+                    if (Utils.isWifiOnly(context)) {
+                        keys.add((KEY_BASEBAND_VERSION));
+                    }
+                    // Dont show feedback option if there is no reporter.
+                    if (TextUtils.isEmpty(DeviceInfoUtils.getFeedbackReporterPackage(context))) {
+                        keys.add(KEY_DEVICE_FEEDBACK);
+                    }
+                    return keys;
                 }
-                if (isPropertyMissing(PROPERTY_URL_SAFETYLEGAL)) {
-                    keys.add(KEY_SAFETY_LEGAL);
-                }
-                if (isPropertyMissing(PROPERTY_EQUIPMENT_ID)) {
-                    keys.add(KEY_EQUIPMENT_ID);
-                }
-                // Remove Baseband version if wifi-only device
-                if (Utils.isWifiOnly(context)) {
-                    keys.add((KEY_BASEBAND_VERSION));
-                }
-                // Dont show feedback option if there is no reporter.
-                if (TextUtils.isEmpty(DeviceInfoUtils.getFeedbackReporterPackage(context))) {
-                    keys.add(KEY_DEVICE_FEEDBACK);
-                }
-                return keys;
-            }
 
-            private boolean isPropertyMissing(String property) {
-                return SystemProperties.get(property).equals("");
+                private boolean isPropertyMissing(String property) {
+                    return SystemProperties.get(property).equals("");
+                }
+            };
+
+    /**
+     * Reads a line from the specified file.
+     * @param filename the file to read from
+     * @return the first line, if any.
+     * @throws IOException if the file couldn't be read
+     */
+    private static String readLine(String filename) throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader(filename), 256);
+        try {
+            return reader.readLine();
+        } finally {
+            reader.close();
+        }
+    }
+
+
+    /**
+     * Returns the Hardware value in /proc/cpuinfo, else returns "Unknown".
+     * @return a string that describes the processor
+     */
+    private static String getDeviceProcessorInfo() {
+        // SoC : XYZ
+        final String PROC_HARDWARE_SOC = "Hardware\\s*:\\s*(.*?)(?:\\(.*)?$"; /* SoC string */
+
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(FILENAME_PROC_CPUINFO));
+            String cpuinfo;
+
+            try {
+                while (null != (cpuinfo = reader.readLine())) {
+                    if (cpuinfo.startsWith("Hardware")) {
+                        Matcher m = Pattern.compile(PROC_HARDWARE_SOC).matcher(cpuinfo);
+                        if (m.matches()) {
+                            return m.group(1);
+                        }
+                    }
+                }
+                return "Unknown";
+            } finally {
+                reader.close();
             }
-        };
+        } catch (IOException e) {
+            Log.e(LOG_TAG,
+                    "IO Exception when getting cpuinfo for Device Info screen",
+                    e);
+
+            return "Unknown";
+        }
+    };
+
+    private String getDeviceMemoryInfo() {
+        String result = null;
+
+        try {
+            /* /proc/meminfo entries follow this format:
+             * MemTotal:         362096 kB
+             * MemFree:           29144 kB
+             * Buffers:            5236 kB
+             * Cached:            81652 kB
+             */
+            String firstLine = readLine(FILENAME_PROC_MEMINFO);
+            if (firstLine != null) {
+                String parts[] = firstLine.split("\\s+");
+                if (parts.length == 3) {
+                    result = Long.parseLong(parts[1])/1024 + " MB";
+                }
+            }
+        } catch (IOException e) {}
+
+        return result;
+    };
 
 }
