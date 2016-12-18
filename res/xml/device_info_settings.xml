@@ -79,6 +79,12 @@
                 settings:allowDividerAbove="true"
                 settings:allowDividerBelow="true"/>
 
+        <!-- Hardware info - launches activity -->
+        <PreferenceScreen android:key="hwinfo"
+                android:title="@string/aicp_hwinfo_title"
+                android:fragment="com.android.settings.aicp.HwInfo">
+        </PreferenceScreen>
+
         <!-- Device firmware version -->
         <Preference android:key="firmware_version"
                 android:enabled="false"
