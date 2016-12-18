@@ -276,5 +276,12 @@
 
     <!-- setting: show CPU info-->
     <string name="aicp_hwinfo_title">Hardware info</string>
+    <string name="chipset_info">Chipset</string>
+    <string name="device_rear_camera">Rear camera</string>
+    <string name="device_front_camera">Front facing camera</string>
+    <string name="device_screen_resolution">Screen resolution</string>
+    <string name="gpu_info">GPU</string>
+    <string name="cpu_info">CPU</string>
+    <string name="mem_info">Memory</string>
 
 </resources>
