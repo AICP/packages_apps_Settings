@@ -55,6 +55,10 @@
   <string name="mod_api_level_default">Desconocida</string>
   <!-- About phone screen, build date -->
   <string name="build_date">Fecha de compilación</string>
+  <!-- About phone screen, processor info -->
+  <string name="processor_info">Procesador</string>
+  <!-- About phone screen, memory info -->
+  <string name="memory_info">Memoria</string>
   <!-- CM Updater -->
   <string name="cmupdate_settings_title">Actualizaciones de CyanogenMod</string>
   <!-- Names of categories of app ops tabs - extension of AOSP -->
