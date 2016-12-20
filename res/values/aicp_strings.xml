@@ -276,6 +276,7 @@
 
     <!-- setting: show CPU info-->
     <string name="aicp_hwinfo_title">Hardware info</string>
+    <string name="aicp_hwinfo_summary">Information about the device's hardware.</string>
     <string name="chipset_info">Chipset</string>
     <string name="device_rear_camera">Rear camera</string>
     <string name="device_front_camera">Front facing camera</string>
