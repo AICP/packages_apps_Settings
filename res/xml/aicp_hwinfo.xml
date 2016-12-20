@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
                   xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-        android:title="@string/aicp_hwinfo_title" >
+        android:title="@string/aicp_hwinfo_title"
+	android:summary="@string/aicp_hwinfo_summary" >
 
     <!-- Device Chipset info -->
     <Preference android:key="device_chipset"
