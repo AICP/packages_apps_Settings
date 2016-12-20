@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa98f980_87aab4d2",
+        "filename": "res/values/aicp_strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 279,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2016-12-20T18:26:18Z",
+      "side": 1,
+      "message": "also bwfore apostrohe, you need to add backslash so it\u0027s \"device\\\u0027s\"\n\nBut I\u0027m running this in my head and I would juist write device, not device\u0027s",
+      "revId": "47f823cdc717cfea2618e569f252ef2a57400654",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": false
+    }
+  ]
+}
