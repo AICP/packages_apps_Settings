@@ -82,6 +82,7 @@
         <!-- Hardware info - launches activity -->
         <PreferenceScreen android:key="hwinfo"
                 android:title="@string/aicp_hwinfo_title"
+                android:summary="@string/aicp_hwinfo_summary"
                 android:fragment="com.android.settings.aicp.HwInfo">
         </PreferenceScreen>
 
