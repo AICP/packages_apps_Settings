@@ -427,4 +427,16 @@
             android:title="@string/reset_shortcut_manager_throttling" />
      </PreferenceCategory>
 
+    <!-- SELinux -->
+    <Preference
+        android:key="selinux_switch"
+        android:title="@string/selinux_switch_title"
+        android:summary="@string/selinux_switch_summary"
+        android:selectable="false"/>
+
+    <SwitchPreference
+        android:key="selinux"
+        android:title="@string/selinux_title"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
