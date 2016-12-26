@@ -267,6 +267,53 @@
     <string name="menu_show_substratum_icons">Zeige Symbol-Überlagerungen</string>
     <string name="menu_hide_substratum_icons">Verstecke Symbol-Überlagerungen</string>
 
+    <!-- Navbar dynamic color -->
+    <string name="nav_bar_dynamic_title">Dynamische Nav.-leistenfarbe</string>
+    <string name="nav_bar_dynamic_summary">Aktiviert die Anpassung der Farbe der Navigationsleiste an die dunkle Hauptfarbe der jeweiligen App. Bitte die App neustarten, um den Effekt zu sehen.</string>
+
+    <!-- setting: show CPU info-->
+    <string name="show_cpu_info">Zeige CPU-Info</string>
+    <string name="show_cpu_info_summary">Bildschirmeinblendung mit aktuellem CPU-Infos</string>
+
+    <!-- setting: show CPU info-->
+    <string name="aicp_hwinfo_title">Hardware-Informationen</string>
+    <string name="aicp_hwinfo_summary">Informationen zur Geräte-Hardware.</string>
+    <!--  About device Screen, hardware info, chipset -->
+    <string name="chipset_info">Chipsatz</string>
+    <!--  About device Screen, hardware info, rear camera -->
+    <string name="device_rear_camera">Hauptkamera (Rückseite)</string>
+    <!--  About device Screen, hardware info, front camera -->
+    <string name="device_front_camera">Frontkamera</string>
+    <!--  About device Screen, hardware info, screen res -->
+    <string name="device_screen_resolution">Bildschirmauflösung</string>
+    <!--  About device Screen, hardware info, GPU info -->
+    <string name="gpu_info">Graphik-Prozessor</string>
+    <!-- About device screen, Cpu info. -->
+    <string name="cpu_info">Haupt-Prozessor(en)</string>
+    <!-- About phone screen, Free memory info -->
+    <string name="mem_info">Arbeitsspeicher</string>
+
+    <!-- Keyboard and Input ASS methods  -->
+    <string name="attention">Achtung</string>
+    <string name="title_keyboard_input">Erweiterte Optionen</string>
+    <string name="disable_fullscreen_keyboard_title">Deaktiviere Vollbild-Tastatur</string>
+    <string name="disable_fullscreen_keyboard_summary">Im Querformat wird die Tastatur niemals das ganze Display einnehmen</string>
+    <string name="keyboard_rotation_toggle_title">Automatische Tastatur-Rotation</string>
+    <string name="keyboard_rotation_toggle_summary">Erzwinge die Auto-Rotation, wenn die Tastatur dargestellt wird</string>
+    <string name="keyboard_rotation_timeout_title">Timeout der Auto-Rotation</string>
+    <string name="keyboard_rotation_timeout_summary">Deaktiviert den Sensor für die Auto-Rotation <xliff:g id="rotate_timeout">%1$s</xliff:g> Sekunden nachdem die Tastatur nicht mehr angezeigt wird</string>
+    <string name="keyboard_rotation_dialog">Diese Option erzwingt temporär die Auto-Rotation, wenn die Tastatur angezeigt wird. Sie funktioniert nicht, wenn die Auto-Rotation bereits aktiviert ist.</string>
+    <string name="show_enter_key_title">Zeige Eingabe-Taste</string>
+    <string name="show_enter_key_summary">Erzwingt die Anzeige der Eingabe-Taste an Stelle der Emoji-Taste</string>
+
+    <!-- Selinux Switch -->
+    <string name="selinux_switch_title">SELinux-Schalter Optionen</string>
+    <string name="selinux_switch_summary">SELinux sind verschiedene Kernel-Modifikationen und \"user-space\" Werkzeuge. Eine Änderung des Modus kann unerwartetes Telefonverhalten auslösen. Benutzung auf eigenes Risiko!</string>
+    <string name="selinux_title">SELinux-Modus</string>
+    <string name="selinux_permissive_title">Moderat</string>
+    <string name="selinux_enforcing_title">Strikt</string>
+    <string name="selinux_permissive_toast_title">SELinux-Modus auf \"Moderat\" gesetzt!</string>
+
     <!-- Status bar -->
     <string name="smart_pulldown_title">Intelligentes Öffnen</string>
     <string name="smart_pulldown_summary">Öffnet die Schnelleinstellungen sofort, wenn %1$s Benachrichtigungen vorhanden sind</string>
@@ -277,9 +324,9 @@
 
     <!-- Heads up -->
     <string name="add_heads_up_package">App hinzufügen</string>
-    <string name="add_heads_up_dnd_summary">Zeige keine Pop-up-Benachrichtigungen in diesen Anwendungen</string>
-    <string name="add_heads_up_blacklist_summary">Zeige keine Pop-up-Benachrichtigungen von diesen Anwendungen</string>
-    <string name="add_heads_up_whitelist_summary">Zeige alle Benachrichtigungen von diesen Anwendungen als Pop-up</string>
+    <string name="add_heads_up_dnd_summary">Zeige keine Pop-Up Benachrichtigungen in diesen Anwendungen</string>
+    <string name="add_heads_up_blacklist_summary">Zeige keine Pop-Up Benachrichtigungen von diesen Anwendungen</string>
+    <string name="add_heads_up_whitelist_summary">Zeige alle Benachrichtigungen von diesen Anwendungen als Pop-Up</string>
     <string name="heads_up_dnd_title">\"Nicht stören\"</string>
     <string name="heads_up_blacklist_title">Schwarze Liste</string>
     <string name="heads_up_whitelist_title">Weiße Liste</string>
