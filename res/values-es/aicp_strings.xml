@@ -274,4 +274,25 @@
    <string name="cpu_info">CPU</string>
    <string name="mem_info">Memoria</string>
 
+   <!-- Keyboard and Input ASS methods  -->
+   <string name="attention">Atención</string>
+   <string name="title_keyboard_input">Opciones avanzadas</string>
+   <string name="disable_fullscreen_keyboard_title">Deshabilitar teclado en pantalla completa</string>
+   <string name="disable_fullscreen_keyboard_summary">El teclado no ocupará la pantalla completa en modo horizontal</string>
+   <string name="keyboard_rotation_toggle_title">Reorientar teclado automáticamente</string>
+   <string name="keyboard_rotation_toggle_summary">Fuerza que la pantalla se reoriente al mostrar el teclado</string>
+   <string name="keyboard_rotation_timeout_title">Tiempo de espera de auto-orientación</string>
+   <string name="keyboard_rotation_timeout_summary">Deshabilita el sensor de orientación tras <xliff:g id="rotate_timeout">%1$s</xliff:g> segundos después de que el teclado se oculte</string>
+   <string name="keyboard_rotation_dialog">Esta característica fuerza que la reorientación del teclado se active temporalmente mientras el teclado se está mostrando. No tiene efecto cuando la reorientación está deshabilitada.</string>
+   <string name="show_enter_key_title">Mostrar tecla Intro</string>
+   <string name="show_enter_key_summary">Fuerza que se muestre la tecla Intro en lugar de la de emoticonos</string>
+
+   <!-- Selinux Switch -->
+   <string name="selinux_switch_title">Opciones de Selinux</string>
+   <string name="selinux_switch_summary">SELinux es un conjunto de modificaciones del kernel y utilidades a nivel de usuario. Cambiando el modo puede ocasionar efectos no deseados. Usar bajo su responsabilidad.</string>
+   <string name="selinux_title">Modo Selinux</string>
+   <string name="selinux_permissive_title">Permisivo</string>
+   <string name="selinux_enforcing_title">Obligatorio</string>
+   <string name="selinux_permissive_toast_title">¡Selinux establecido a Permisivo!</string>
+
 </resources>
