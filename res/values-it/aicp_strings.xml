@@ -258,4 +258,37 @@
   <!-- setting: show CPU info-->
   <string name="show_cpu_info">Mostra informazioni CPU</string>
   <string name="show_cpu_info_summary">Sovrapponi sullo schermo le informazioni attuali della CPU</string>
+  
+  <!-- setting: show CPU info-->
+  <string name="aicp_hwinfo_title">Informazioni Hardware</string>
+  <string name="aicp_hwinfo_summary">Informazioni sull\'hardware.</string>
+  <string name="chipset_info">Chipset</string>
+  <string name="device_rear_camera">Fotocamera posteriore</string>
+  <string name="device_front_camera">Fotocamera frontale</string>
+  <string name="device_screen_resolution">Risoluzione dello schermo</string>
+  <string name="gpu_info">GPU</string>
+  <string name="cpu_info">CPU</string>
+  <string name="mem_info">Memoria</string>
+  
+  <!-- Keyboard and Input ASS methods  -->
+  <string name="attention">Attenzione</string>
+  <string name="title_keyboard_input">Opzioni avanzate</string>
+  <string name="disable_fullscreen_keyboard_title">Disabilita tastiera a schermo intero</string>
+  <string name="disable_fullscreen_keyboard_summary">La tastiera in modalità orizzontale non occuperà mai tutto lo schermo</string>
+  <string name="keyboard_rotation_toggle_title">Rotazione automatica della tastiera</string>
+  <string name="keyboard_rotation_toggle_summary">Forza la rotazione automatica quando la tastiera è visualizzata</string>
+  <string name="keyboard_rotation_timeout_title">Tempo della rotazione automatica</string>
+  <string name="keyboard_rotation_timeout_summary">Disabilità il sensore di rotazione automatica <xliff:g id="rotate_timeout">%1$s</xliff:g> secondi dopo che la tastiera viene nascosta</string>
+  <string name="keyboard_rotation_dialog">Questa funzione forza temporaneamente la rotazione automatica durante la visualizzazione della tastiera. Non ha effetti quando la rotazione automatica è già attivata.</string>
+  <string name="show_enter_key_title">Mostra tasto invio</string>
+  <string name="show_enter_key_summary">Forza la tastiera a mostrare il tasto invio invece che il tasto delle emoticon</string>
+  
+  <!-- Selinux Switch -->
+  <string name="selinux_switch_title">Opzioni interrittore Selinux</string>
+  <string name="selinux_switch_summary">SELinux è un insieme di modifiche del kernel. La modifica della modalità può causare effetti indesiderati. Utilizzare a proprio rischio.</string>
+  <string name="selinux_title">Modalità Selinux</string>
+  <string name="selinux_permissive_title">Permissivo</string>
+  <string name="selinux_enforcing_title">Applicazione</string>
+  <string name="selinux_permissive_toast_title">SELinux impostato su permissivo!</string>
+  
 </resources>
