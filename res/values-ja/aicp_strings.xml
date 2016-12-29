@@ -21,12 +21,8 @@
 
     <!-- Aicp Extras -->
     <string name="aicpextras_settings">AICP Extras</string>
-    <string name="summary_aicp">カスタムROM固有の設定を行います</string>
+    <string name="summary_aicp">ROMの詳細設定を開きます</string>
     <string name="header_category_aicpextras">個人設定</string>
-
-    <!-- Proximity wake -->
-    <string name="proximity_wake_title">誤作動を防止</string>
-    <string name="proximity_wake_summary">画面を点灯する前に近接センサーを確認する</string>
 
     <!-- Turn on display when power connected; turn off display when power disconnected -->
     <string name="wake_when_plugged_or_unplugged_title">接続時にスリープ解除</string>
@@ -64,6 +60,11 @@
     <string name="vendor_version">Vendor バージョン</string>
     <string name="vendor_version_default">不明</string>
 
+    <!-- Density category -->
+    <string name="density_category">解像度オプション</string>
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">カラーピッカー</string>
     <string name="arrow_right">→</string>
     <string name="arrow_down">↓</string>
     <string name="hex">Hex:</string>
@@ -130,13 +131,14 @@
     <string name="fling_logo_custom_logo_pick_title">カスタムロゴアイコン</string>
     <string name="fling_logo_custom_logo_image_pick_title">カスタムアイコンの画像</string>
     <string name="fling_logo_custom_logo_reset_title">ロゴアイコンのリセット</string>
+
     <!-- Pulse navigation bar music visualizer -->
     <string name="pulse_help_policy_notice_title">Pulseについて</string>
-    <string name="pulse_help_policy_notice_summary">Pulseは音楽の再生中にナビゲーションバー上に表示される華やかなイコライザ型の視覚効果です。Pulseは端末のスピーカーから再生する際、一部の音源では動作しないことがあります。</string>
+    <string name="pulse_help_policy_notice_summary">Pulseは音楽の再生中にナビゲーションバー上に表示される華やかなオーディオビジュアライザです。Pulseは端末のスピーカーから再生する際、一部の音源では動作しないことがあります。</string>
     <string name="pulse_settings">Pulse</string>
-    <string name="pulse_settings_summary">ナビゲーションバー上のオーディオグラフィックイコライザ</string>
+    <string name="pulse_settings_summary">ナビゲーションバー上のオーディオビジュアライザ</string>
     <string name="fling_show_pulse_title">Pulseを表示</string>
-    <string name="fling_show_pulse_summary">ナビゲーションバー上のオーディオグラフィックイコライザ</string>
+    <string name="fling_show_pulse_summary">ナビゲーションバー上のオーディオビジュアライザ</string>
     <string name="pulse_render_mode_title">レンダリングモード</string>
     <string name="pulse_render_mode_fading_bars">フェーディングブロック</string>
     <string name="pulse_render_mode_solid_lines">ソリッドライン</string>
@@ -209,5 +211,30 @@
     <string name="volume_steps_15">15</string>
     <string name="volume_steps_7">7</string>
     <string name="volume_steps_5">5</string>
+
+    <!-- Manage applications: show substratum overlays -->
+    <!-- Manage applications: show substratum icon overlays -->
+    <!-- Navbar dynamic color -->
+    <!-- setting: show CPU info-->
+
+    <!-- setting: show CPU info-->
+    <string name="aicp_hwinfo_title">ハードウェア情報</string>
+    <string name="aicp_hwinfo_summary">ハードウェア情報を表示します</string>
+    <string name="chipset_info">チップセット</string>
+    <string name="device_rear_camera">リアカメラ</string>
+    <string name="device_front_camera">フロントカメラ</string>
+    <string name="device_screen_resolution">画面の解像度</string>
+    <string name="gpu_info">GPU</string>
+    <string name="cpu_info">CPU</string>
+    <string name="mem_info">メモリ</string>
+
+    <!-- Keyboard and Input ASS methods  -->
+    <string name="title_keyboard_input">高度な設定</string>
+
+    <!-- Selinux Switch -->
+    <string name="selinux_switch_title">SELinux スイッチオプション</string>
+    <string name="selinux_switch_summary">SELinuxはカーネルの変更とユーザー空間ツールの組み合わせから成ります。モードの変更は望まない影響を及ぼすことがあります。あなたの責任の下で実施してください！</string>
+    <string name="selinux_title">SELinux モード</string>
+    <string name="selinux_permissive_toast_title">SELinuxは permissive に設定されました！</string>
 
 </resources>
