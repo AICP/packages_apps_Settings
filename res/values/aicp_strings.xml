@@ -389,4 +389,12 @@
     <string name="double_tap_wake_doze_title">Double-tap to wake on doze</string>
     <string name="double_tap_wake_doze_summary">Require a double-tap to wake the device on a doze pulse screen</string>
 
+    <!-- Advanced night mode brightness -->
+    <string name="night_brightness_category">Brightness</string>
+    <string name="night_brightness_value_title">Night Light brightness</string>
+    <string name="night_brightness_text">When Night Light is enabled, automatically set the desired brightness.</string>
+    <string name="night_bright_disabled">Disabled</string>
+    <string name="night_bright_min">Minimum brightness</string>
+    <string name="night_bright_low">Low brightness</string>
+    <string name="night_bright_medium">Medium brightness</string>
 </resources>
