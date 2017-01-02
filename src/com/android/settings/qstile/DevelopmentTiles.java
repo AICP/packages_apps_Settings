@@ -19,6 +19,10 @@ package com.android.settings.qstile;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.os.IBinder;
+import android.os.Parcel;
+import android.os.RemoteException;
+import android.os.ServiceManager;
 import android.os.SystemProperties;
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
@@ -31,6 +35,7 @@ public class DevelopmentTiles {
     static final Class[] TILE_CLASSES = new Class[] {
             ShowLayout.class,
             GPUProfiling.class,
+            com.android.settings.aicp.qstile.DevelopmentTiles.DisableHwOverlays.class,
     };
     public static void setTilesEnabled(Context context, boolean enable) {
         final PackageManager pm = context.getPackageManager();

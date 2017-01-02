@@ -306,4 +306,6 @@
     <string name="selinux_enforcing_title">Enforcing</string>
     <string name="selinux_permissive_toast_title">Selinux set to permissive!</string>
 
+    <!-- Development QS -->
+    <string name="qs_disable_hw_overlays">@string/disable_overlays</string>
 </resources>

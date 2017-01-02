@@ -3304,6 +3304,16 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
         </service>
+        <service
+                android:name=".aicp.qstile.DevelopmentTiles$DisableHwOverlays"
+                android:label="@string/qs_disable_hw_overlays"
+                android:icon="@drawable/tile_disable_overlays"
+                android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+                android:enabled="false">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
 
         <activity android:name=".HelpTrampoline"
             android:exported="true"
