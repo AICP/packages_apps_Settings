@@ -32,6 +32,7 @@ public class DevelopmentTiles {
             ShowLayout.class,
             GPUProfiling.class,
             com.android.settings.aicp.qstile.DevelopmentTiles.DisableHwOverlays.class,
+            com.android.settings.aicp.qstile.DevelopmentTiles.ShowTouches.class,
     };
     public static void setTilesEnabled(Context context, boolean enable) {
         final PackageManager pm = context.getPackageManager();

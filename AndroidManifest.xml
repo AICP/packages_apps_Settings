@@ -3314,6 +3314,16 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
         </service>
+        <service
+                android:name=".aicp.qstile.DevelopmentTiles$ShowTouches"
+                android:label="@string/qs_show_touches"
+                android:icon="@drawable/tile_show_touches"
+                android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+                android:enabled="false">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
 
         <activity android:name=".HelpTrampoline"
             android:exported="true"

@@ -21,6 +21,7 @@ import android.os.IBinder;
 import android.os.Parcel;
 import android.os.RemoteException;
 import android.os.ServiceManager;
+import android.provider.Settings;
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
 
@@ -82,6 +83,32 @@ public class DevelopmentTiles {
                 }
             } catch (RemoteException ex) {
             }
+        }
+    }
+
+    /**
+     * Tile to control the "Show touches" developer setting
+     */
+    public static class ShowTouches extends TileService {
+        @Override
+        public void onStartListening() {
+            super.onStartListening();
+            refresh();
+        }
+
+        public void refresh() {
+            getQsTile().setState(Settings.System.getInt(getContentResolver(),
+                        Settings.System.SHOW_TOUCHES, 0) != 0 ?
+                                Tile.STATE_ACTIVE :Tile.STATE_INACTIVE);
+            getQsTile().updateTile();
+        }
+
+        @Override
+        public void onClick() {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.SHOW_TOUCHES,
+                    getQsTile().getState() == Tile.STATE_INACTIVE ? 1 : 0);
+            refresh();
         }
     }
 }
