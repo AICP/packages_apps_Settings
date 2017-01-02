@@ -108,4 +108,7 @@
 
     <!-- Running services -->
     <string name="background_processes_settings_title">Background processes</string>
+
+    <!-- Development QS -->
+    <string name="qs_show_touches">@string/show_touches</string>
 </resources>
