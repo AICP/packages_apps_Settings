@@ -78,7 +78,7 @@ public class ColorPickerDialog
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(
                 Context.LAYOUT_INFLATER_SERVICE);
 
-        View layout = inflater.inflate(R.layout.dui_dialog_color_picker, null);
+        View layout = inflater.inflate(R.layout.dialog_color_picker, null);
 
         setContentView(layout);
 
