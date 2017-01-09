@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa98f980_a69fb002",
+        "filename": "res/values-it/aicp_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 287,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2017-01-09T21:54:07Z",
+      "side": 1,
+      "message": "clean up please.",
+      "range": {
+        "startLine": 287,
+        "startChar": 0,
+        "endLine": 287,
+        "endChar": 2
+      },
+      "revId": "7b3bcbb30242e576243115cc7401545fae3221c5",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa98f980_c6a4b459",
+        "filename": "res/values-it/aicp_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 295,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2017-01-09T21:54:07Z",
+      "side": 1,
+      "message": "clean up please",
+      "range": {
+        "startLine": 295,
+        "startChar": 0,
+        "endLine": 295,
+        "endChar": 2
+      },
+      "revId": "7b3bcbb30242e576243115cc7401545fae3221c5",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": false
+    }
+  ]
+}
