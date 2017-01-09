@@ -83,6 +83,8 @@
   <string name="navigationbar_settings_title">Barra di navigazione</string>
   <string name="navigationbar_settings_summary">Personalizza stile e comportamento navigazione</string>
   <string name="navbar_general_title">Avanzate</string>
+  <string name="navigation_bar_left_title">Modalità mancino</string>
+   <string name="navigation_bar_left_summary">Posizionare la barra di navigazione sul lato sinistro dello schermo in modalità orizzontale</string>
   <string name="info_pref_note_title">Note</string>
   <string name="smartbar_interface">SmartBar</string>
   <string name="navbar_tint_switch">Colora i pulsanti di navigazione</string>
@@ -284,11 +286,14 @@
   <string name="show_enter_key_summary">Forza la tastiera a mostrare il tasto invio invece che il tasto delle emoticon</string>
   
   <!-- Selinux Switch -->
-  <string name="selinux_switch_title">Opzioni interrittore Selinux</string>
+  <string name="selinux_switch_title">Opzioni interruttore Selinux</string>
   <string name="selinux_switch_summary">SELinux è un insieme di modifiche del kernel. La modifica della modalità può causare effetti indesiderati. Utilizzare a proprio rischio.</string>
   <string name="selinux_title">Modalità Selinux</string>
   <string name="selinux_permissive_title">Permissivo</string>
   <string name="selinux_enforcing_title">Applicazione</string>
   <string name="selinux_permissive_toast_title">SELinux impostato su permissivo!</string>
   
+  <!-- EdgeGesture service -->
+  <string name="edge_gesture_service_title">Blocco gesto eventi</string>
+  <string name="edge_gesture_service_summary">Non inviare gli eventi di tocco per la navigazione e i gesti della barra di stato per le applicazioni</string>
 </resources>
