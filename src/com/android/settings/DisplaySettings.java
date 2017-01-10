@@ -23,6 +23,7 @@ import android.app.WallpaperManager;
 import android.app.admin.DevicePolicyManager;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.Intent;
 import android.content.ComponentName;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
@@ -42,6 +43,7 @@ import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.support.v7.preference.PreferenceCategory;
+import android.support.v7.preference.PreferenceScreen;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -52,6 +54,7 @@ import com.android.internal.view.RotationPolicy;
 import com.android.settings.accessibility.ToggleFontSizePreferenceFragment;
 import com.android.settings.dashboard.DashboardSummary;
 import com.android.settings.dashboard.SummaryLoader;
+import com.android.settings.DevelopmentSettings;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 import com.android.settingslib.RestrictedLockUtils;
@@ -101,6 +104,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_WAKE_WHEN_PLUGGED_OR_UNPLUGGED = "wake_when_plugged_or_unplugged";
     private static final String KEY_DASHBOARD_PORTRAIT_COLUMNS = "dashboard_portrait_columns";
     private static final String KEY_DASHBOARD_LANDSCAPE_COLUMNS = "dashboard_landscape_columns";
+    private static final String KEY_DOZE_FRAGMENT = "doze_fragment";
 
     private CustomSeekBarPreference mDashboardPortraitColumns;
     private CustomSeekBarPreference mDashboardLandscapeColumns;
@@ -110,8 +114,9 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private Preference mFontSizePref;
     private Preference mScreenSaverPreference;
 
+    private PreferenceScreen mDozeFragment;
+
     private SwitchPreference mLiftToWakePreference;
-    private SwitchPreference mDozePreference;
     private SwitchPreference mTapToWakePreference;
     private SwitchPreference mAutoBrightnessPreference;
     private SwitchPreference mCameraGesturePreference;
@@ -170,13 +175,10 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 }
             }
 
-            mDozePreference = (SwitchPreference) findPreference(KEY_DOZE);
-            if (mDozePreference != null) {
-                if (isDozeAvailable(activity)) {
-                    mDozePreference.setOnPreferenceChangeListener(this);
-                } else {
-                    displayPrefs.removePreference(mDozePreference);
-                }
+            mDozeFragment = (PreferenceScreen) findPreference(KEY_DOZE_FRAGMENT);
+            if (mDozeFragment != null
+                && (!isDozeAvailable(activity))) {
+                    displayPrefs.removePreference(mDozeFragment);
             }
 
             mTapToWakePreference = (SwitchPreference) findPreference(KEY_TAP_TO_WAKE);
@@ -407,6 +409,15 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     (proximityCheckOnWake ? 1 : 0)) == 1);
         }
 
+        boolean dozeEnabled = Settings.Secure.getInt(
+                getContentResolver(), Settings.Secure.DOZE_ENABLED,
+                getActivity().getResources().getBoolean(
+                com.android.internal.R.bool.config_doze_enabled_by_default) ? 1 : 0) != 0;
+        if (mDozeFragment != null) {
+            mDozeFragment.setSummary(dozeEnabled
+                    ? R.string.summary_doze_enabled : R.string.summary_doze_disabled);
+        }
+
         disablePreferenceIfManaged(KEY_WALLPAPER, UserManager.DISALLOW_SET_WALLPAPER);
     }
 
@@ -431,12 +442,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         if (mTapToWakePreference != null) {
             int value = Settings.Secure.getInt(getContentResolver(), DOUBLE_TAP_TO_WAKE, 0);
             mTapToWakePreference.setChecked(value != 0);
-        }
-
-        // Update doze if it is available.
-        if (mDozePreference != null) {
-            int value = Settings.Secure.getInt(getContentResolver(), DOZE_ENABLED, 1);
-            mDozePreference.setChecked(value != 0);
         }
 
         // Update camera gesture #1 if it is available.
@@ -477,11 +482,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     CMSettings.System.PROXIMITY_ON_WAKE,
                     mProximityCheckOnWakePreference.isChecked() ? 1 : 0);
             return true;
-        } else if  (preference == mDozePreference) {
-            MetricsLogger.action(getActivity(), MetricsEvent.ACTION_AMBIENT_DISPLAY);
-            return true;
         }
-
 
         return super.onPreferenceTreeClick(preference);
     }
@@ -506,10 +507,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         if (preference == mLiftToWakePreference) {
             boolean value = (Boolean) objValue;
             Settings.Secure.putInt(getContentResolver(), WAKE_GESTURE_ENABLED, value ? 1 : 0);
-        }
-        if (preference == mDozePreference) {
-            boolean value = (Boolean) objValue;
-            Settings.Secure.putInt(getContentResolver(), DOZE_ENABLED, value ? 1 : 0);
         }
         if (preference == mTapToWakePreference) {
             boolean value = (Boolean) objValue;

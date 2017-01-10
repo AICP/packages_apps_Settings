@@ -63,6 +63,7 @@ import com.android.settings.accounts.AccountSyncSettings;
 import com.android.settings.accounts.ChooseAccountActivity;
 import com.android.settings.accounts.ManagedProfileSettings;
 import com.android.settings.aicp.AEStartActivity;
+import com.android.settings.aicp.AmbientSettings;
 import com.android.settings.aicp.FlingSettings;
 import com.android.settings.aicp.NavbarSettings;
 import com.android.settings.aicp.SmartbarSettings;
@@ -372,6 +373,7 @@ public class SettingsActivity extends SettingsDrawerActivity
             WifiAPITest.class.getName(),
             WifiInfo.class.getName(),
             AEStartActivity.class.getName(),
+            AmbientSettings.class.getName(),
             NavbarSettings.class.getName(),
             FlingSettings.class.getName(),
             SmartbarSettings.class.getName(),
