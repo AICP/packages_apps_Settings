@@ -24,7 +24,7 @@
   <!-- Turn on display when power connected; turn off display when power disconnected -->
   <string name="wake_when_plugged_or_unplugged_title">Risveglia al collegamento</string>
   <string name="wake_when_plugged_or_unplugged_summary">Accendi lo schermo quando si collega o si scollega l\'alimentazione</string>
-  
+
   <!-- Less Notification sounds -->
   <string name="notifications_category_title">Notifiche</string>
   <string name="less_notification_sounds_title">Suoni di notifica meno frequenti</string>
@@ -83,6 +83,8 @@
   <string name="navigationbar_settings_title">Barra di navigazione</string>
   <string name="navigationbar_settings_summary">Personalizza stile e comportamento navigazione</string>
   <string name="navbar_general_title">Avanzate</string>
+  <string name="navigation_bar_left_title">Modalità mancino</string>
+  <string name="navigation_bar_left_summary">Posizionare la barra di navigazione sul lato sinistro dello schermo in modalità orizzontale</string>
   <string name="info_pref_note_title">Note</string>
   <string name="smartbar_interface">SmartBar</string>
   <string name="navbar_tint_switch">Colora i pulsanti di navigazione</string>
@@ -254,11 +256,11 @@
   <!-- Navabar dynamic color -->
   <string name="nav_bar_dynamic_title">Colore barra di navigazione dinamica</string>
   <string name="nav_bar_dynamic_summary">Attiva la barra di navigazione per adattare il colore primario delle applicazioni. Riavviare l\'applicazione desiderata per vedere l\'effetto.</string>
-  
+
   <!-- setting: show CPU info-->
   <string name="show_cpu_info">Mostra informazioni CPU</string>
   <string name="show_cpu_info_summary">Sovrapponi sullo schermo le informazioni attuali della CPU</string>
-  
+
   <!-- setting: show CPU info-->
   <string name="aicp_hwinfo_title">Informazioni Hardware</string>
   <string name="aicp_hwinfo_summary">Informazioni sull\'hardware.</string>
@@ -269,7 +271,7 @@
   <string name="gpu_info">GPU</string>
   <string name="cpu_info">CPU</string>
   <string name="mem_info">Memoria</string>
-  
+
   <!-- Keyboard and Input ASS methods  -->
   <string name="attention">Attenzione</string>
   <string name="title_keyboard_input">Opzioni avanzate</string>
@@ -282,13 +284,16 @@
   <string name="keyboard_rotation_dialog">Questa funzione forza temporaneamente la rotazione automatica durante la visualizzazione della tastiera. Non ha effetti quando la rotazione automatica è già attivata.</string>
   <string name="show_enter_key_title">Mostra tasto invio</string>
   <string name="show_enter_key_summary">Forza la tastiera a mostrare il tasto invio invece che il tasto delle emoticon</string>
-  
+
   <!-- Selinux Switch -->
-  <string name="selinux_switch_title">Opzioni interrittore Selinux</string>
+  <string name="selinux_switch_title">Opzioni interruttore Selinux</string>
   <string name="selinux_switch_summary">SELinux è un insieme di modifiche del kernel. La modifica della modalità può causare effetti indesiderati. Utilizzare a proprio rischio.</string>
   <string name="selinux_title">Modalità Selinux</string>
   <string name="selinux_permissive_title">Permissivo</string>
   <string name="selinux_enforcing_title">Applicazione</string>
   <string name="selinux_permissive_toast_title">SELinux impostato su permissivo!</string>
-  
+
+  <!-- EdgeGesture service -->
+  <string name="edge_gesture_service_title">Blocco gesto eventi</string>
+  <string name="edge_gesture_service_summary">Non inviare gli eventi di tocco per la navigazione e i gesti della barra di stato per le applicazioni</string>
 </resources>
