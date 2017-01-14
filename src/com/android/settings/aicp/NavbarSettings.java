@@ -58,6 +58,7 @@ public class NavbarSettings extends SettingsPreferenceFragment implements OnPref
     private static final String KEY_NAVIGATION_HEIGHT_PORT = "navbar_height_portrait";
     private static final String KEY_NAVIGATION_HEIGHT_LAND = "navbar_height_landscape";
     private static final String KEY_NAVIGATION_WIDTH = "navbar_width";
+    private static final String KEY_FORCE_NAVBAR_WITH_HW_KEYS = "force_navbar_with_hw_keys";
 
     private SwitchPreference mNavbarVisibility;
     private ListPreference mNavbarMode;
@@ -68,11 +69,14 @@ public class NavbarSettings extends SettingsPreferenceFragment implements OnPref
     private CustomSeekBarPreference mBarHeightPort;
     private CustomSeekBarPreference mBarHeightLand;
     private CustomSeekBarPreference mBarWidth;
+    private SwitchPreference mForceNavbarWithHwKeys;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.navbar_settings);
+
+        PreferenceScreen prefSet = getPreferenceScreen();
 
         mNavInterface = (PreferenceCategory) findPreference(KEY_CATEGORY_NAVIGATION_INTERFACE);
         mNavGeneral = (PreferenceCategory) findPreference(KEY_CATEGORY_NAVIGATION_GENERAL);
@@ -80,6 +84,7 @@ public class NavbarSettings extends SettingsPreferenceFragment implements OnPref
         mNavbarMode = (ListPreference) findPreference(KEY_NAVBAR_MODE);
         mFlingSettings = (PreferenceScreen) findPreference(KEY_FLING_NAVBAR_SETTINGS);
         mSmartbarSettings = (PreferenceScreen) findPreference(KEY_SMARTBAR_SETTINGS);
+        mForceNavbarWithHwKeys = (SwitchPreference) findPreference(KEY_FORCE_NAVBAR_WITH_HW_KEYS);
 
         boolean showing = Settings.Secure.getInt(getContentResolver(),
                 Settings.Secure.NAVIGATION_BAR_VISIBLE,
@@ -98,6 +103,17 @@ public class NavbarSettings extends SettingsPreferenceFragment implements OnPref
         mBarHeightPort = (CustomSeekBarPreference) findPreference(KEY_NAVIGATION_HEIGHT_PORT);
         mBarHeightPort.setValue(size);
         mBarHeightPort.setOnPreferenceChangeListener(this);
+
+        if (((getActivity().getResources().getInteger(
+                com.android.internal.R.integer.config_deviceHardwareKeys)) != 64) ||
+                ((getActivity().getResources().getInteger(
+                com.android.internal.R.integer.config_deviceHardwareKeys)) != 96)) {
+            mForceNavbarWithHwKeys.setChecked(Settings.System.getInt(getContentResolver(),
+                    Settings.System.FORCE_NAVBAR_WITH_HW_KEYS, 0) == 1);
+            mForceNavbarWithHwKeys.setOnPreferenceChangeListener(this);
+        } else {
+            prefSet.removePreference(mForceNavbarWithHwKeys);
+        }
 
         final boolean canMove = DUActionUtils.navigationBarCanMove();
         if (canMove) {
@@ -129,6 +145,7 @@ public class NavbarSettings extends SettingsPreferenceFragment implements OnPref
         mNavbarVisibility.setChecked(showing);
         mNavInterface.setEnabled(mNavbarVisibility.isChecked());
         mNavGeneral.setEnabled(mNavbarVisibility.isChecked());
+        mForceNavbarWithHwKeys.setEnabled(mNavbarVisibility.isChecked());
     }
 
     @Override
@@ -159,6 +176,10 @@ public class NavbarSettings extends SettingsPreferenceFragment implements OnPref
             int val = (Integer) newValue;
             Settings.Secure.putIntForUser(getContentResolver(),
                     Settings.Secure.NAVIGATION_BAR_WIDTH, val, UserHandle.USER_CURRENT);
+            return true;
+        } else if (preference.equals(mForceNavbarWithHwKeys)) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.FORCE_NAVBAR_WITH_HW_KEYS,  (Boolean) newValue ? 1 : 0);
             return true;
         }
         return false;

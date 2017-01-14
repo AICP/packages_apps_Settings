@@ -22,6 +22,10 @@
         android:key="navbar_visibility"
         android:title="@string/navbar_visibility" />
 
+    <SwitchPreference
+        android:key="force_navbar_with_hw_keys"
+        android:title="@string/force_navbar_with_hw_keys_title" />
+
     <PreferenceCategory
         android:key="category_navbar_interface"
         android:title="@string/navbar_interface_title" >
