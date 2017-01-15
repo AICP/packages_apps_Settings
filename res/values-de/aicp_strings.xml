@@ -236,7 +236,6 @@
     <string name="smartbar_config_backup_error_toast">Fehler beim Speichern des SmartBar-Profils</string>
     <string name="smartbar_config_restore_error_toast">Fehler beim Wiederherstellen des SmartBar-Profils</string>
     <string name="navbar_buttons_alpha_title">Transparenz der Tasten</string>
-
     <!-- Linked / unlinked notification volume -->
     <string name="link_volume_option_title">Klingelton- und Benachrichtigungslautstärke verbinden</string>
 
@@ -278,19 +277,12 @@
     <!-- setting: show CPU info-->
     <string name="aicp_hwinfo_title">Hardware-Informationen</string>
     <string name="aicp_hwinfo_summary">Informationen zur Geräte-Hardware.</string>
-    <!--  About device Screen, hardware info, chipset -->
     <string name="chipset_info">Chipsatz</string>
-    <!--  About device Screen, hardware info, rear camera -->
     <string name="device_rear_camera">Hauptkamera (Rückseite)</string>
-    <!--  About device Screen, hardware info, front camera -->
     <string name="device_front_camera">Frontkamera</string>
-    <!--  About device Screen, hardware info, screen res -->
     <string name="device_screen_resolution">Bildschirmauflösung</string>
-    <!--  About device Screen, hardware info, GPU info -->
     <string name="gpu_info">Graphik-Prozessor</string>
-    <!-- About device screen, Cpu info. -->
     <string name="cpu_info">Haupt-Prozessor(en)</string>
-    <!-- About phone screen, Free memory info -->
     <string name="mem_info">Arbeitsspeicher</string>
 
     <!-- Keyboard and Input ASS methods  -->
@@ -313,6 +305,14 @@
     <string name="selinux_permissive_title">Moderat</string>
     <string name="selinux_enforcing_title">Strikt</string>
     <string name="selinux_permissive_toast_title">SELinux-Modus auf \"Moderat\" gesetzt!</string>
+
+    <!-- Development QS -->
+    <!-- <string name="qs_disable_hw_overlays">@string/disable_overlays</string>
+    <string name="qs_show_touches">@string/show_touches</string> -->
+
+    <!-- EdgeGesture service -->
+    <string name="edge_gesture_service_title">Blockiere Gesten als Berührungseingabe</string>
+    <string name="edge_gesture_service_summary">Sendet keine Berührungseingaben für die Navigations- und Statusleiste an Apps</string>
 
     <!-- Status bar -->
     <string name="smart_pulldown_title">Intelligentes Öffnen</string>
