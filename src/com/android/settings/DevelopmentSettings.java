@@ -78,6 +78,7 @@ import android.view.LayoutInflater;
 import android.view.ThreadedRenderer;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManagerGlobal;
 import android.view.accessibility.AccessibilityManager;
 import android.webkit.IWebViewUpdateService;
 import android.webkit.WebViewProviderInfo;
@@ -522,6 +523,15 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         mResetSwitchPrefs.add(mShowAllANRs);
 
         mKillAppLongpressBack = findAndInitSwitchPref(KILL_APP_LONGPRESS_BACK);
+        boolean hasNavigationBar = true;
+        try {
+            hasNavigationBar = WindowManagerGlobal.getWindowManagerService().hasNavigationBar();
+        } catch (RemoteException e) {
+            // Do nothing
+        }
+        if (hasNavigationBar) {
+            removePreference(KILL_APP_LONGPRESS_BACK);
+        }
 
         //SELinux
         mSelinux = (SwitchPreference) findPreference(SELINUX);
