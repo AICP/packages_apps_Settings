@@ -390,4 +390,16 @@
   <string name="wake_when_plugged_or_unplugged_title">Encender al conectar el cargador</string>
   <string name="wake_when_plugged_or_unplugged_summary">Enciende la pantalla cuando se conecta o desconecta un cargador</string>
 
+  <!-- Per-app data restrictions -->
+    <string name="data_usage_app_restrict_data_category_title">Acceso a datos móviles</string>
+    <string name="data_usage_app_restrict_wifi_category_title">Acceso a datos Wi\u2011Fi</string>
+    <!-- Title for switch to block app data usage [CHAR LIMIT=30] -->
+    <string name="data_usage_app_restrict_all_data_title">Deshabilitar todo los accesos a datos móviles</string>
+    <!-- Summary for switch to block app data usage [CHAR LIMIT=NONE] -->
+    <string name="data_usage_app_restrict_all_data_summary">Previene cualquier uso de datos a través de redes móviles</string>
+    <!-- Title for switch to block app data usage [CHAR LIMIT=30] -->
+    <string name="data_usage_app_restrict_all_wifi_title">Deshabilita el acceso a datos  a través de Wi\u2011Fi</string>
+    <!-- Summary for switch to block app data usage [CHAR LIMIT=NONE] -->
+    <string name="data_usage_app_restrict_all_wifi_summary">Previene cualquier uso de datos a través de redes Wi\u2011Fi</string>
+
 </resources>
