@@ -335,6 +335,8 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
 
     private SwitchPreference mShowAllANRs;
 
+    private SwitchPreference mKillAppLongpressBack;
+
     private ColorModePreference mColorModePreference;
 
     private Preference mRootAppops;
@@ -518,6 +520,8 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
                 SHOW_ALL_ANRS_KEY);
         mAllPrefs.add(mShowAllANRs);
         mResetSwitchPrefs.add(mShowAllANRs);
+
+        mKillAppLongpressBack = findAndInitSwitchPref(KILL_APP_LONGPRESS_BACK);
 
         //SELinux
         mSelinux = (SwitchPreference) findPreference(SELINUX);
@@ -714,6 +718,8 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
             mColorModePreference.startListening();
             mColorModePreference.updateCurrentAndSupported();
         }
+
+        updateKillAppLongpressBackOptions();
     }
 
     @Override
@@ -1000,6 +1006,17 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
             hdcpChecking.setSummary(summaries[index]);
             hdcpChecking.setOnPreferenceChangeListener(this);
         }
+    }
+
+    private void writeKillAppLongpressBackOptions() {
+        CMSettings.Secure.putInt(getActivity().getContentResolver(),
+                CMSettings.Secure.KILL_APP_LONGPRESS_BACK,
+                mKillAppLongpressBack.isChecked() ? 1 : 0);
+    }
+
+    private void updateKillAppLongpressBackOptions() {
+        mKillAppLongpressBack.setChecked(CMSettings.Secure.getInt(
+            getActivity().getContentResolver(), CMSettings.Secure.KILL_APP_LONGPRESS_BACK, 0) != 0);
     }
 
     private void updatePasswordSummary() {
@@ -2283,6 +2300,8 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
             writeWebViewMultiprocessOptions();
         } else if (SHORTCUT_MANAGER_RESET_KEY.equals(preference.getKey())) {
             resetShortcutManagerThrottling();
+        } else if (preference == mKillAppLongpressBack) {
+            writeKillAppLongpressBackOptions();
         } else {
             return super.onPreferenceTreeClick(preference);
         }

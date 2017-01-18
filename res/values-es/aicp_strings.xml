@@ -295,4 +295,8 @@
    <string name="selinux_enforcing_title">Obligatorio</string>
    <string name="selinux_permissive_toast_title">¡Selinux establecido a Permisivo!</string>
 
+   <!-- Kill app long-press back -->
+   <string name="kill_app_longpress_back">Botón atrás cierra aplicación</string>
+   <string name="kill_app_longpress_back_summary">Pulsación larga sobre el botón atrás cierra la aplicación en primer plano</string>
+
 </resources>
