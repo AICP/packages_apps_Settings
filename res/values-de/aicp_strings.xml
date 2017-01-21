@@ -314,6 +314,10 @@
     <string name="edge_gesture_service_title">Blockiere Gesten als Berührungseingabe</string>
     <string name="edge_gesture_service_summary">Sendet keine Berührungseingaben für die Navigations- und Statusleiste an Apps</string>
 
+    <!-- Kill app long-press back -->
+    <string name="kill_app_longpress_back">App beenden mit Zurück-Taste</string>
+    <string name="kill_app_longpress_back_summary">Beenden der Vordergrund-App durch Gedrückthalten der Zurück-Taste</string>
+
     <!-- Status bar -->
     <string name="smart_pulldown_title">Intelligentes Öffnen</string>
     <string name="smart_pulldown_summary">Öffnet die Schnelleinstellungen sofort, wenn %1$s Benachrichtigungen vorhanden sind</string>
