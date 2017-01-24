@@ -288,6 +288,9 @@
   <!-- title for lock screen weather preference -->
   <string name="lockscreen_weather_enabled_title">Mostrar el clima</string>
 
+  <!-- title for lock screen blur preference -->
+   <string name="lockscreen_blur_enabled_title">Fondo difuminado</string>
+
   <!-- Proximity wake -->
   <string name="proximity_wake_title">Prevenir encendido accidental</string>
   <string name="proximity_wake_summary">Comprobar el sensor de proximidad antes de despertar el dispositivo con gestos</string>
