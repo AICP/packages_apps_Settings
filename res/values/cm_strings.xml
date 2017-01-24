@@ -431,4 +431,16 @@
     <string name="data_usage_app_restrict_all_wifi_title">Disable all Wi\u2011Fi data access</string>
     <!-- Summary for switch to block app data usage [CHAR LIMIT=NONE] -->
     <string name="data_usage_app_restrict_all_wifi_summary">Prevent any use of data access via Wi\u2011Fi networks</string>
+
+    <!-- Volume link notification -->
+    <string name="volume_link_notification_title">Link ringtone &amp; notification volumes</string>
+
+    <!-- Launch music player when headset is connected -->
+    <string name="headset_connect_player_title">Launch music player</string>
+    <string name="headset_connect_player_summary">Launch the default music player when a headset is connected</string>
+
+    <!-- Status bar - double tap to sleep -->
+    <string name="status_bar_double_tap_to_sleep_title">Double-tap to sleep</string>
+    <string name="status_bar_double_tap_to_sleep_summary">Double-tap on the status bar to turn off the display</string>
+
 </resources>
