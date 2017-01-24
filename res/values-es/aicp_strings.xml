@@ -266,6 +266,7 @@
 
    <!-- setting: show CPU info-->
    <string name="aicp_hwinfo_title">Información de Hardware</string>
+   <string name="aicp_hwinfo_summary">Información del hardware del dispositivo.</string>
    <string name="chipset_info">Chipset</string>
    <string name="device_rear_camera">Cámara trasera</string>
    <string name="device_front_camera">Cámara frontal</string>
@@ -298,5 +299,30 @@
    <!-- Kill app long-press back -->
    <string name="kill_app_longpress_back">Botón atrás cierra aplicación</string>
    <string name="kill_app_longpress_back_summary">Pulsación larga sobre el botón atrás cierra la aplicación en primer plano</string>
+
+   <!-- Dashboard options -->
+    <string name="dashboard_category">Opciones de la pantalla de ajustes</string>
+    <string name="dashboard_suggestions_title">Sugerencias</string>
+    <string name="summary_dashboard_suggestions_enabled">Sugerencias habilitadas en la pantalla de ajustes</string>
+    <string name="summary_dashboard_suggestions_disabled">Sugerencias deshabilitadas en la pantalla de ajustes</string>
+    <string name="remove_tile_summaries_title">Resúmenes</string>
+    <string name="remove_tile_summaries_summary_enabled">Resúmenes habilitados en la pantalla de ajustes</string>
+    <string name="remove_tile_summaries_summary_disabled">Resúmenes deshabilitados en la pantalla de ajustes</string>
+    <string name="dashboard_conditions_title">Condiciones</string>
+    <string name="summary_dashboard_conditions_enabled">Condiciones habilitadas en la pantalla de ajustes</string>
+    <string name="summary_dashboard_conditions_disabled">Condiciones deshabilitadas en la pantalla de ajustes</string>
+    <string name="dashboard_columns_portrait_title">Columnas (vertical)</string>
+    <string name="dashboard_columns_landscape_title">Columnas (apaisado)</string>
+
+    <!-- Dashboard columns -->
+    <string name="dashboard_columns_title">Columnas en ajustes</string>
+    <string name="dashboard_columns_summary">Cambia el número de columnas que se muestran en la pantalla de ajustes</string>
+    <string name="dashboard_columns_dialog_title">Seleccionar columnas en ajustes</string>
+    <string name="dashboard_columns_default">Una (dos en apaisado)</string>
+    <string name="dashboard_columns_two">Dos (tres en apaisado)</string>
+    <string name="dashboard_columns_three">Tres (cuatro en apaisado)</string>
+    <string name="dashboard_summary_double_lines_title">Líneas de resumen</string>
+    <string name="dashboard_summary_double_lines_summary_on">Muestra el resumen en más líneas en la pantalla de ajustes</string>
+    <string name="dashboard_summary_double_lines_summary_off">Muestra el resumen en una sola línea en la pantalla de ajustes</string>
 
 </resources>
