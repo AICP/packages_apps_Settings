@@ -191,6 +191,8 @@
     <string name="pulse_custom_fudge_factor">Reaktionsgeschwindigkeit</string>
     <string name="lavamp_solid_speed_title">Geschwindigkeit der Lavalampe</string>
     <string name="pulse_solid_dimen_category">Einstellungen für durchgehende Balken</string>
+    <string name="fling_lavalamp_color_from">Anfangsfarbe der Lavalampe</string>
+    <string name="fling_lavalamp_color_to">Endfarbe der Lavalampe</string>
 
     <!-- Pulse config -->
     <string name="pulse_custom_dimen">Breite der Balken</string>
@@ -236,6 +238,10 @@
     <string name="smartbar_config_backup_error_toast">Fehler beim Speichern des SmartBar-Profils</string>
     <string name="smartbar_config_restore_error_toast">Fehler beim Wiederherstellen des SmartBar-Profils</string>
     <string name="navbar_buttons_alpha_title">Transparenz der Tasten</string>
+    <string name="smartbar_doubletap_sleep_title">Zum Schlafen zweimal Tippen (DT2S)</string>
+    <string name="smartbar_doubletap_sleep_summary">Zweimal auf den leeren Bereich der Navigationsleiste tippen, um das Display auszuschalten</string>
+    <string name="one_handed_mode_title">Einhändiger Modus</string>
+    <string name="one_handed_mode_summary">Aktiviert die Bedienung mit einer Hand, wenn über die Navigationsleiste gewischt wird</string>
     <!-- Linked / unlinked notification volume -->
     <string name="link_volume_option_title">Klingelton- und Benachrichtigungslautstärke verbinden</string>
 
@@ -317,6 +323,31 @@
     <!-- Kill app long-press back -->
     <string name="kill_app_longpress_back">App beenden mit Zurück-Taste</string>
     <string name="kill_app_longpress_back_summary">Beenden der Vordergrund-App durch Gedrückthalten der Zurück-Taste</string>
+
+    <!-- Dashboard options -->
+    <string name="dashboard_category">Anpassung der Einstellungsübersicht</string>
+    <string name="dashboard_suggestions_title">Vorschläge</string>
+    <string name="summary_dashboard_suggestions_enabled">Einstellungsvorschläge werden angezeigt</string>
+    <string name="summary_dashboard_suggestions_disabled">Einstellungsvorschläge werden nicht angezeigt</string>
+    <string name="remove_tile_summaries_title">Zusammenfassungen</string>
+    <string name="remove_tile_summaries_summary_enabled">Zusammenfassungen werden angezeigt</string>
+    <string name="remove_tile_summaries_summary_disabled">Zusammenfassungen werden nicht angezeigt</string>
+    <string name="dashboard_conditions_title">Zustandsanzeigen</string>
+    <string name="summary_dashboard_conditions_enabled">Zustandsanzeigen werden angezeigt</string>
+    <string name="summary_dashboard_conditions_disabled">Zustandsanzeigen werden nicht angezeigt</string>
+    <string name="dashboard_columns_portrait_title">Spalten (Hochformat)</string>
+    <string name="dashboard_columns_landscape_title">Spalten (Querformat)</string>
+
+    <!-- Dashboard columns -->
+    <string name="dashboard_columns_title">Spaltenanzeige der Einstellungsübersicht</string>
+    <string name="dashboard_columns_summary">Ändert die Spaltenanzahl der Einstellungsübersicht</string>
+    <string name="dashboard_columns_dialog_title">Spaltenanzahl der Übersicht wählen</string>
+    <string name="dashboard_columns_default">1 (2 im Querformat)</string>
+    <string name="dashboard_columns_two">2 (3 im Querformat)</string>
+    <string name="dashboard_columns_three">3 (4 im Querformat)</string>
+    <string name="dashboard_summary_double_lines_title">Zeilenanzahl der Zusammenfassungen</string>
+    <string name="dashboard_summary_double_lines_summary_on">Zeige Einstellungszusammenfassungen in mehreren Zeilen</string>
+    <string name="dashboard_summary_double_lines_summary_off">Zeige Einstellungszusammenfassungen in einer Zeile</string>
 
     <!-- Status bar -->
     <string name="smart_pulldown_title">Intelligentes Öffnen</string>
