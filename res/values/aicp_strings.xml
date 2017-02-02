@@ -24,6 +24,10 @@
     <string name="summary_aicp">Custom ROM personalizations</string>
     <string name="header_category_aicpextras">Personalization</string>
 
+    <!-- SuperSU header name - the app hides itself from launcher based on this resource name being present in com.android.settings -->
+    <string name="supersu_title">SuperSU</string>
+    <string name="supersu_dashboard_summary">Manage root access</string>
+
     <!-- Turn on display when power connected; turn off display when power disconnected -->
     <string name="wake_when_plugged_or_unplugged_title">Wake on plug</string>
     <string name="wake_when_plugged_or_unplugged_summary">Turn the screen on when connecting or disconnecting a power source</string>
