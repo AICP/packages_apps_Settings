@@ -180,4 +180,5 @@ public class Settings extends SettingsActivity {
     public static class StartAeActivity extends SettingsActivity {}
     public static class AmbientDisplaySettingsActivity extends SettingsActivity { /* empty */ }
 
+    public static class DevRunningServicesActivity extends SettingsActivity { /* empty */ }
 }
