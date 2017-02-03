@@ -195,4 +195,6 @@ public class Settings extends SettingsActivity {
     public static class SystemDashboardActivity extends SettingsActivity {}
     public static class StartAeActivity extends SettingsActivity {}
 
+    // Aicp Additions.
+    public static class DevRunningServicesActivity extends SettingsActivity { /* empty */ }
 }
