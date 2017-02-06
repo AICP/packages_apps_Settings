@@ -958,17 +958,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         }
     }
 
-   private void updateRootAccessOptions() {
-        String value = SystemProperties.get(ROOT_ACCESS_PROPERTY, "0");
-        mRootAccess.setValue(value);
-        mRootAccess.setSummary(getResources()
-                .getStringArray(R.array.root_access_entries)[Integer.valueOf(value)]);
-
-        if (mRootAppops != null) {
-            mRootAppops.setEnabled(isRootForAppsEnabled());
-        }
-    }
-
     public static boolean isRootForAppsEnabled() {
         int value = SystemProperties.getInt(ROOT_ACCESS_PROPERTY, 0);
         boolean daemonState =
@@ -2397,24 +2386,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
             return true;
         } else if (preference == mSimulateColorSpace) {
             writeSimulateColorSpace(newValue);
-            return true;
-        } else if (preference == mRootAccess) {
-            if ("0".equals(SystemProperties.get(ROOT_ACCESS_PROPERTY, "0"))
-                    && !"0".equals(newValue)) {
-                mSelectedRootValue = newValue;
-                mDialogClicked = false;
-                if (mRootDialog != null) {
-                    dismissDialogs();
-                }
-                mRootDialog = new AlertDialog.Builder(getActivity())
-                        .setMessage(getResources().getString(R.string.root_access_warning_message))
-                        .setTitle(R.string.root_access_warning_title)
-                        .setPositiveButton(android.R.string.yes, this)
-                        .setNegativeButton(android.R.string.no, this).show();
-                mRootDialog.setOnDismissListener(this);
-            } else {
-                writeRootAccessOptions(newValue);
-            }
             return true;
         } else if (preference == mSelinux) {
             if (newValue.toString().equals("true")) {
