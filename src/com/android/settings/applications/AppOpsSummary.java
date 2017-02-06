@@ -180,13 +180,6 @@ public class AppOpsSummary extends InstrumentedFragment {
             Pair<CharSequence, AppOpsState.OpsTemplate> item = data.get(tab);
             data.clear();
             data.add(item);
-        } else if (!DevelopmentSettings.isRootForAppsEnabled()) {
-            for (Pair<CharSequence, AppOpsState.OpsTemplate> item : data) {
-                if (item.second == AppOpsState.SU_TEMPLATE) {
-                    data.remove(item);
-                    return;
-                }
-            }
         }
     }
 
