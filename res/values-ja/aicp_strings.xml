@@ -54,6 +54,12 @@
     <string name="expanded_hide_status">ステータスバーを非表示</string>
     <string name="expanded_hide_navigation">ナビゲーションバーを非表示</string>
     <string name="expanded_hide_both">両方を非表示</string>
+    <string name="expanded_nothing_to_show">拡張デスクトップをアプリごとに設定するには、OFF にしてください</string>
+    <string name="expanded_desktop_state">拡張デスクトップの状態</string>
+    <string name="expanded_enabled_for_all">すべてで有効化</string>
+    <string name="expanded_user_configurable">ユーザー設定</string>
+    <string name="expanded_desktop_style">拡張デスクトップのスタイル</string>
+    <string name="expanded_desktop_style_description">デフォルトの拡張デスクトップのスタイルを選択してください</string>
     <string name="expanded_desktop_title">拡張デスクトップの設定</string>
 
     <!-- Vendor version -->
@@ -65,6 +71,7 @@
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">カラーピッカー</string>
+    <string name="press_color_to_apply">下の表示色をタップすると設定します</string>
     <string name="arrow_right">→</string>
     <string name="arrow_down">↓</string>
     <string name="hex">Hex:</string>
@@ -79,12 +86,18 @@
     <string name="navbar_mode">ナビゲーションモード</string>
     <string name="navbar_visibility">ナビゲーションバーを有効にする</string>
     <string name="navigationbar_settings_title">ナビゲーションバー</string>
+    <string name="navigationbar_settings_summary">ナビゲーションバーのスタイルや動作を設定します</string>
     <string name="navbar_general_title">高度な設定</string>
     <string name="navigation_bar_left_title">左利きモード</string>
     <string name="navigation_bar_left_summary">画面が横向きの際にナビゲーションバーを画面の左側に配置する</string>
     <string name="info_pref_note_title">注意事項</string>
     <string name="smartbar_interface">ナビゲーションバー</string>
     <string name="icon_pack_picker_dialog_title">アイコンパック</string>
+    <string name="invalid_icon_from_uri">コンテンツプロバイダから画像を読み込めません</string>
+    <string name="picker_activities">アクティビティ</string>
+    <string name="select_custom_app_title">カスタムアプリを選択</string>
+    <string name="select_custom_activity_title">カスタムアクティビティを選択</string>
+    <string name="profile_applist_title">アプリ</string>
     <string name="default_string">デフォルト</string>
     <string name="reset">リセット</string>
     <string name="summary_navbar">ナビゲーションバー、Fling、Pulseの設定</string>
@@ -116,9 +129,20 @@
     <string name="fling_single_left_tap">左をタップ</string>
     <string name="fling_double_left_tap">左を2回タップ</string>
     <string name="fling_long_left_press">左を長押し</string>
+    <string name="long_swipe_portrait_title">縦向き</string>
+    <string name="long_swipe_landscape_title">横向き</string>
+    <string name="portrait_right_swipe_title">縦向き時の右スワイプ</string>
+    <string name="portrait_left_swipe_title">縦向き時の左スワイプ</string>
+    <string name="landscape_right_swipe_title">横向き時の右スワイプ</string>
+    <string name="landscape_left_swipe_title">横向き時の左スワイプ</string>
+    <string name="vertical_up_swipe_title">垂直方向の上スワイプ</string>
+    <string name="vertical_down_swipe_title">垂直方向の下スワイプ</string>
+    <string name="up_swipe_title">上スワイプ</string>
+    <string name="down_swipe_title">下スワイプ</string>
     <string name="long_swipe_reset">リセット</string>
     <string name="fling_advanced">より高度な設定</string>
     <string name="fling_long_swipe_title">長いスワイプのしきい値</string>
+    <string name="fling_long_swipe_summary">長いスワイプのしきい値を Fling インターフェースの幅か高さのパーセンテージを元に微調整します</string>
     <string name="fling_trails_enable_title">ジェスチャーの軌跡を有効化</string>
     <string name="fling_trails_enable_summary">スワイプするジェスチャーの軌跡を表示する</string>
     <string name="fling_trails_color_title">軌跡の色</string>
@@ -131,6 +155,13 @@
     <string name="fling_logo_custom_logo_pick_title">カスタムロゴアイコン</string>
     <string name="fling_logo_custom_logo_image_pick_title">カスタムアイコンの画像</string>
     <string name="fling_logo_custom_logo_reset_title">ロゴアイコンのリセット</string>
+    <string name="fling_show_ripple_title">リップルを表示</string>
+    <string name="fling_show_ripple_summary">タッチイベント時にリップル（波紋）効果をかける</string>
+    <string name="fling_ripple_color">リップルの色</string>
+    <string name="fling_longpress_timeout_label_left">短い待ち時間</string>
+    <string name="fling_longpress_timeout_label_right">長い待ち時間</string>
+    <string name="fling_longpress_title">長押しの待ち時間</string>
+    <string name="fling_longpress_summary">長押しを実行するまでの待ち時間を短く/長くします</string>
 
     <!-- Pulse navigation bar music visualizer -->
     <string name="pulse_help_policy_notice_title">Pulseについて</string>
@@ -175,6 +206,9 @@
     <string name="smartbar_left">左</string>
     <string name="smartbar_button_animation_title">ボタンタッチ時のアニメーション</string>
     <string name="smartbar_button_animation_summary">ボタンが押された際のアニメーションを設定します</string>
+    <string name="smartbar_button_animation_ripple">リップル</string>
+    <string name="smartbar_button_animation_spring">はねる</string>
+    <string name="qs_tile_animation_style_flip">左右に回転</string>
     <string name="smartbar_factory_reset_title">初期設定に戻す</string>
     <string name="smartbar_factory_reset_confirm">本当にナビゲーションバーを初期設定に戻しても良いですか？</string>
     <string name="smartbar_ime_action_title">インプットメソッドのアクション</string>
@@ -192,11 +226,15 @@
     <string name="smartbar_config_backup_error_toast">プロファイルの保存中にエラーが発生しました</string>
     <string name="smartbar_config_restore_error_toast">プロファイルのリストア中にエラーが発生しました</string>
     <string name="navbar_buttons_alpha_title">ボタンの透過度</string>
+    <string name="smartbar_doubletap_sleep_title">ダブルタップしてスリープ</string>
+    <string name="smartbar_doubletap_sleep_summary">ナビバーの空きエリアをダブルタップしてディスプレイを消灯する</string>
+    <string name="one_handed_mode_title">片手モード</string>
+    <string name="one_handed_mode_summary">ナビゲーションバーをスワイプして片手モードを有効化できるようにします</string>
 
     <string name="link_volume_option_title">着信、通知音の同期</string>
 
     <!-- Volume Steps -->
-    <string name="volume_steps_title">音量レベル</string>
+    <string name="volume_steps_title">音量レベルの変更</string>
     <string name="volume_steps_alarm_title">音量レベル: アラーム</string>
     <string name="volume_steps_dtmf_title">音量レベル: DTMF</string>
     <string name="volume_steps_music_title">音量レベル: メディア</string>
@@ -213,9 +251,22 @@
     <string name="volume_steps_5">5</string>
 
     <!-- Manage applications: show substratum overlays -->
+    <string name="filter_substratum_apps">Substratum オーバーレイ</string>
+    <string name="menu_show_substratum">オーバーレイを表示する</string>
+    <string name="menu_hide_substratum">オーバーレイを非表示にする</string>
+
     <!-- Manage applications: show substratum icon overlays -->
+    <string name="filter_substratum_icons">Substratum アイコンオーバーレイ</string>
+    <string name="menu_show_substratum_icons">アイコンオーバーレイを表示する</string>
+    <string name="menu_hide_substratum_icons">アイコンオーバーレイを非表示にする</string>
+
     <!-- Navbar dynamic color -->
+    <string name="nav_bar_dynamic_title">ダイナミックナビバーカラー</string>
+    <string name="nav_bar_dynamic_summary">ナビゲーションバーの色をアプリのプライマリダークカラーに合わせるようにします。効果を確認するにはアプリを再起動してください</string>
+
     <!-- setting: show CPU info-->
+    <string name="show_cpu_info">CPU 情報の表示</string>
+    <string name="show_cpu_info_summary">現在の CPU 情報をオーバーレイ表示する</string>
 
     <!-- setting: show CPU info-->
     <string name="aicp_hwinfo_title">ハードウェア情報</string>
@@ -229,12 +280,93 @@
     <string name="mem_info">メモリ</string>
 
     <!-- Keyboard and Input ASS methods  -->
+    <string name="attention">注意</string>
     <string name="title_keyboard_input">高度な設定</string>
+    <string name="disable_fullscreen_keyboard_title">全画面キーボードを無効にする</string>
+    <string name="disable_fullscreen_keyboard_summary">横向きの時にキーボードが全画面にならないようにする</string>
+    <string name="keyboard_rotation_toggle_title">キーボードの自動回転</string>
+    <string name="keyboard_rotation_toggle_summary">キーボードが表示されている時に自動回転を強制する</string>
+    <string name="keyboard_rotation_timeout_title">自動回転のタイムアウト</string>
+    <string name="keyboard_rotation_timeout_summary">自動回転センサーをキーボードが非表示になった<xliff:g id="rotate_timeout">%1$s</xliff:g>秒後に無効にする</string>
+    <string name="keyboard_rotation_dialog">キーボードが表示されている間だけ自動回転を強制的に ON にします。自動回転がすでに有効であれば何も起こりません。</string>
+    <string name="show_enter_key_title">Enter キーを表示する</string>
+    <string name="show_enter_key_summary">キーボードで絵文字キーの代わりに Enter キーを表示させる</string>
 
     <!-- Selinux Switch -->
     <string name="selinux_switch_title">SELinux スイッチオプション</string>
     <string name="selinux_switch_summary">SELinuxはカーネルの変更とユーザー空間ツールの組み合わせから成ります。モードの変更は望まない影響を及ぼすことがあります。あなたの責任の下で実施してください！</string>
     <string name="selinux_title">SELinux モード</string>
     <string name="selinux_permissive_toast_title">SELinuxは permissive に設定されました！</string>
+
+    <!-- EdgeGesture service -->
+    <string name="edge_gesture_service_title">ジェスチャーのタッチイベントをブロックする</string>
+    <string name="edge_gesture_service_summary">アプリにナビゲーションバーとステータスバージェスチャーのタッチイベントを送らないようにする</string>
+
+    <!-- Kill app long-press back -->
+    <string name="kill_app_longpress_back">戻るボタンでアプリを終了する</string>
+    <string name="kill_app_longpress_back_summary">戻るボタンの長押しで前面のアプリを終了します</string>
+
+    <!-- Dashboard options -->
+    <string name="dashboard_category">ダッシュボードオプション</string>
+    <string name="dashboard_suggestions_title">候補の表示</string>
+    <string name="summary_dashboard_suggestions_enabled">設定の候補を表示します</string>
+    <string name="summary_dashboard_suggestions_disabled">設定の候補を表示しません</string>
+    <string name="remove_tile_summaries_title">サマリー</string>
+    <string name="remove_tile_summaries_summary_enabled">設定のサマリーを表示します</string>
+    <string name="remove_tile_summaries_summary_disabled">設定のサマリーを表示しません</string>
+    <string name="dashboard_conditions_title">状態</string>
+    <string name="summary_dashboard_conditions_enabled">設定の状態を表示します</string>
+    <string name="summary_dashboard_conditions_disabled">設定の状態を表示しません</string>
+    <string name="dashboard_columns_portrait_title">列数（縦向き）</string>
+    <string name="dashboard_columns_landscape_title">列数（横向き）</string>
+
+    <!-- Dashboard columns -->
+    <string name="dashboard_columns_title">ダッシュボードの列数</string>
+    <string name="dashboard_columns_summary">ダッシュボードで表示される列数を変更します</string>
+    <string name="dashboard_columns_dialog_title">ダッシュボードの列数の選択</string>
+    <string name="dashboard_columns_default">1列（横向き時2列）</string>
+    <string name="dashboard_columns_two">2列（横向き時3列）</string>
+    <string name="dashboard_columns_three">3列（横向き時4列）</string>
+    <string name="dashboard_summary_double_lines_title">ダッシュボードサマリーの行数</string>
+    <string name="dashboard_summary_double_lines_summary_on">ダッシュボードのサマリーを複数行で表示します</string>
+    <string name="dashboard_summary_double_lines_summary_off">ダッシュボードのサマリーを1行で表示します</string>
+
+    <!-- Doze pulse options -->
+    <string name="doze_settings">Doze の設定</string>
+    <string name="summary_doze_enabled">有効</string>
+    <string name="summary_doze_disabled">無効</string>
+    <string name="doze_overwrite_value_title">デフォルトを上書きする</string>
+    <string name="doze_overwrite_value_summary">デフォルトの値よりユーザー設定値を優先するようにします</string>
+    <string name="doze_pulse_title">ユーザー設定</string>
+    <string name="doze_pulse_duration_in_title">フェードイン</string>
+    <string name="doze_pulse_duration_in_summary"></string>
+    <string name="doze_pulse_duration_visible_title">表示間隔</string>
+    <string name="doze_pulse_duration_visible_summary"></string>
+    <string name="doze_pulse_duration_out_title">フェードアウト</string>
+    <string name="doze_pulse_duration_out_summary"></string>
+    <string name="doze_trigger_pickup_title">傾きセンサートリガー</string>
+    <string name="doze_trigger_pickup_summary_on">傾きセンサーをトリガーとして点滅表示を実行します</string>
+    <string name="doze_trigger_pickup_summary_off">傾きセンサーをトリガーにしません</string>
+    <string name="doze_trigger_notification_title">通知トリガー</string>
+    <string name="doze_trigger_notification_summary_on">通知をトリガーとして点滅表示を実行します</string>
+    <string name="doze_trigger_notification_summary_off">通知をトリガーにしません</string>
+    <string name="doze_brightness_level_title">明るさレベル</string>
+    <string name="fivehundred_ms_default">500 ms（デフォルト）</string>
+    <string name="three_second_default">3 s（デフォルト）</string>
+    <string name="doze_notification_color_invert_title">通知の反転</string>
+    <string name="doze_notification_color_invert_summary_off">通知を反転させません。ダークテーマで使用してください。</string>
+    <string name="doze_notification_color_invert_summary_on">通知を反転させます。デフォルト/ライトテーマで使用してください。</string>
+
+    <string name="double_tap_wake_doze_title">Doze 時にダブルタップして復帰</string>
+    <string name="double_tap_wake_doze_summary">Doze 点滅表示画面でダブルタップで復帰するようにします</string>
+
+    <!-- Advanced night mode brightness -->
+    <string name="night_brightness_category">明るさ</string>
+    <string name="night_brightness_value_title">夜間の明るさ</string>
+    <string name="night_brightness_text">有効にすると設定した明るさに自動で調整します</string>
+    <string name="night_bright_disabled">無効</string>
+    <string name="night_bright_min">最低の明るさ</string>
+    <string name="night_bright_low">低い明るさ</string>
+    <string name="night_bright_medium">通常の明るさ</string>
 
 </resources>
