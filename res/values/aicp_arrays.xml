@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--  Copyright (C) 2015 Another IceCold Project
+<!--  Copyright (C) 2015-2017 AICP
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -101,7 +101,7 @@
     <string-array name="smartbar_button_animation_entries">
         <item>@string/smartbar_button_animation_ripple</item>
         <item>@string/smartbar_button_animation_spring</item>
-        <item>@string/qs_tile_animation_style_flip</item>
+        <item>@string/smartbar_button_animation_flip</item>
         <item>@string/smartbar_button_animation_pixel</item>
         <item>@string/smartbar_button_animation_pixel_home</item>
         <item>@string/smartbar_button_animation_pixel_home_ripple</item>
