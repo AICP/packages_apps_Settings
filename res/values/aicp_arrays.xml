@@ -101,7 +101,7 @@
     <string-array name="smartbar_button_animation_entries">
         <item>@string/smartbar_button_animation_ripple</item>
         <item>@string/smartbar_button_animation_spring</item>
-        <item>@string/qs_tile_animation_style_flip</item>
+        <item>@string/smartbar_button_animation_flip</item>
         <item>@string/smartbar_button_animation_pixel</item>
         <item>@string/smartbar_button_animation_pixel_home</item>
         <item>@string/smartbar_button_animation_pixel_home_ripple</item>
