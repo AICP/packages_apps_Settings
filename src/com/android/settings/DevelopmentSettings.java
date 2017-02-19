@@ -555,20 +555,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         PreferenceScreen convertFbePreference =
             (PreferenceScreen) findPreference(KEY_CONVERT_FBE);
 
-        try {
-            IBinder service = ServiceManager.getService("mount");
-            IMountService mountService = IMountService.Stub.asInterface(service);
-            if (!mountService.isConvertibleToFBE()) {
-                removePreference(KEY_CONVERT_FBE);
-            } else if ("file".equals(SystemProperties.get("ro.crypto.type", "none"))) {
-                convertFbePreference.setEnabled(false);
-                convertFbePreference.setSummary(getResources()
-                                   .getString(R.string.convert_to_file_encryption_done));
-            }
-        } catch(RemoteException e) {
-            removePreference(KEY_CONVERT_FBE);
-        }
-
         mOtaDisableAutomaticUpdate = findAndInitSwitchPref(OTA_DISABLE_AUTOMATIC_UPDATE_KEY);
         if (!SystemProperties.getBoolean("ro.build.ab_update", false)) {
             removePreference(mOtaDisableAutomaticUpdate);
