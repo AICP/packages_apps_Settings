@@ -29,6 +29,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
@@ -1167,13 +1168,16 @@ public class SettingsActivity extends SettingsDrawerActivity
 
         // Magisk Manager
         boolean magiskSupported = false;
+        boolean magiskEnabled = false;
         try {
             magiskSupported = (getPackageManager().getPackageInfo("com.topjohnwu.magisk", 0).versionCode > 0);
+            ApplicationInfo magiskAi = getPackageManager().getApplicationInfo("com.topjohnwu.magisk",0);
+            magiskEnabled = magiskAi.enabled;
         } catch (PackageManager.NameNotFoundException e) {
         }
         setTileEnabled(new ComponentName(packageName,
                         Settings.MagiskActivity.class.getName()),
-                magiskSupported, isAdmin, pm);
+                magiskSupported & magiskEnabled, isAdmin, pm);
 
         // Show scheduled power on and off if support
         boolean showTimerSwitch = false;
