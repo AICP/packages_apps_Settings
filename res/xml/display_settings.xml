@@ -204,6 +204,11 @@
             android:title="@string/tap_to_wake"
             android:summary="@string/tap_to_wake_summary"/>
 
+        <SwitchPreference
+            android:key="pocket_judge"
+            android:title="@string/pocket_judge_title"
+            android:summary="@string/pocket_judge_summary" />
+
         <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="high_touch_polling_rate_enable"
             android:title="@string/high_touch_polling_rate_title"
