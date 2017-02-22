@@ -120,21 +120,29 @@
         android:key="pulse_2"
         android:title="@string/pulse_solid_dimen_category" >
 
-        <com.android.settings.aicp.preference.CustomSeekBarPreference
-            android:key="pulse_solid_fudge_factor"
-            android:title="@string/pulse_custom_fudge_factor"
-            settings:max="7"
-            settings:min="2"
-            android:dependency="pulse_2"/>
+           <com.android.settings.aicp.preference.CustomSeekBarPreference
+                android:key="pulse_solid_units_count"
+                android:title="@string/pulse_solid_units_count"
+                settings:max="128"
+                settings:interval="16"
+                settings:min="32"
+                android:dependency="pulse_2"/>
 
-        <com.android.settings.aicp.preference.CustomSeekBarPreference
-            android:key="lavamp_solid_speed"
-            android:title="@string/lavamp_solid_speed_title"
-            settings:max="30000"
-            settings:min="200"
-            settings:interval="200"
-            settings:units="ms"
-            android:dependency="pulse_2"/>
+           <com.android.settings.aicp.preference.CustomSeekBarPreference
+                android:key="pulse_solid_fudge_factor"
+                android:title="@string/pulse_custom_fudge_factor"
+                settings:max="7"
+                settings:min="2"
+                android:dependency="pulse_2"/>
+
+           <com.android.settings.aicp.preference.CustomSeekBarPreference
+                android:key="lavamp_solid_speed"
+                android:title="@string/lavamp_solid_speed_title"
+                settings:max="30000"
+                settings:min="200"
+                settings:interval="200"
+                settings:units="ms"
+                android:dependency="pulse_2"/>
 	</PreferenceCategory>
 
 </PreferenceScreen>
