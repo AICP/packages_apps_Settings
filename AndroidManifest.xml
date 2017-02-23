@@ -3259,6 +3259,18 @@
                        android:resource="@string/gesture_preference_summary" />
         </activity>
 
+        <!-- Expanded desktop settings activity. -->
+        <activity android:name="Settings$ExpandedDesktopSettingsActivity"
+                android:label="@string/expanded_desktop_title"
+                android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.applications.ExpandedDesktopPreferenceFragment" />
+        </activity>
+
         <activity android:name="BackupSettingsActivity"
                   android:label="@string/privacy_settings_title"
                   android:icon="@drawable/ic_settings_backup"
