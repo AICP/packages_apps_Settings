@@ -1507,7 +1507,7 @@
                 <action android:name="com.android.settings.action.SETTINGS" />
             </intent-filter>
             <meta-data android:name="com.android.settings.category"
-                android:value="com.android.settings.category.personal" />
+                android:value="com.android.settings.category.aicpextras" />
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.PrivacySettings" />
             <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
@@ -3272,7 +3272,7 @@
                 <action android:name="com.android.settings.action.SETTINGS" />
             </intent-filter>
             <meta-data android:name="com.android.settings.category"
-                       android:value="com.android.settings.category.device" />
+                       android:value="com.android.settings.category.aicpextras" />
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                        android:value="com.android.settings.gestures.GestureSettings" />
             <meta-data android:name="com.android.settings.summary"
