@@ -44,6 +44,8 @@
     <string name="less_notification_sounds_5m">5 Minuten</string>
 
     <!-- Development Settings -->
+    <!-- Dev Options Enabled by Default -->
+    <string name="show_dev_already_enabled">Nicht nötig, Entwickleroptionen sind standardmäßig aktiviert.</string>
     <!-- ADB always notify -->
     <string name="adb_always_notify">Beim Debuggen immer benachrichtigen</string>
     <string name="adb_always_notify_summary">Immer eine Benachrichtigung beim Debuggen zeigen, auch wenn das Gerät nicht verbunden ist</string>
@@ -220,6 +222,9 @@
     <string name="smartbar_button_animation_summary">Animationstyp für die primären Tasten festlegen, wenn diese gedrückt werden</string>
     <string name="smartbar_button_animation_ripple">Strudel</string>
     <string name="smartbar_button_animation_spring">Hüpfen</string>
+    <string name="smartbar_button_animation_pixel">Pixel (alle Tasten)</string>
+    <string name="smartbar_button_animation_pixel_home">Pixel (nur Starttaste)</string>
+    <string name="smartbar_button_animation_pixel_home_ripple">Pixel (nur Starttaste) und Strudel</string>
     <string name="qs_tile_animation_style_flip">Umdrehen</string>
     <string name="smartbar_factory_reset_title">Auf Grundeinstellung zurücksetzen</string>
     <string name="smartbar_factory_reset_confirm">Sind Sie sicher, dass die SmartBar auf Standardwerte zurückgesetzt werden soll?</string>
@@ -240,7 +245,7 @@
     <string name="navbar_buttons_alpha_title">Transparenz der Tasten</string>
     <string name="smartbar_doubletap_sleep_title">Zum Schlafen zweimal Tippen (DT2S)</string>
     <string name="smartbar_doubletap_sleep_summary">Zweimal auf den leeren Bereich der Navigationsleiste tippen, um das Display auszuschalten</string>
-    <string name="one_handed_mode_title">Einhändiger Modus</string>
+    <string name="one_handed_mode_title">Ein-Hand-Modus</string>
     <string name="one_handed_mode_summary">Aktiviert die Bedienung mit einer Hand, wenn über die Navigationsleiste gewischt wird</string>
     <!-- Linked / unlinked notification volume -->
     <string name="link_volume_option_title">Klingelton- und Benachrichtigungslautstärke verbinden</string>
@@ -349,6 +354,62 @@
     <string name="dashboard_summary_double_lines_summary_on">Zeige Einstellungszusammenfassungen in mehreren Zeilen</string>
     <string name="dashboard_summary_double_lines_summary_off">Zeige Einstellungszusammenfassungen in einer Zeile</string>
 
+    <!-- Doze pulse options -->
+    <string name="doze_settings">Inaktivitätseinstellungen</string>
+    <string name="summary_doze_enabled">Aktiviert</string>
+    <string name="summary_doze_disabled">Deaktiviert</string>
+    <string name="doze_overwrite_value_title">Standardwerte überschreiben</string>
+    <string name="doze_overwrite_value_summary">Erlaubt das Überschreiben der Standardwerte mit Benutzereinstellungen</string>
+    <string name="doze_pulse_title">Benutzereinstellungen</string>
+    <string name="doze_pulse_duration_in_title">Einblenden</string>
+    <string name="doze_pulse_duration_in_summary"></string>
+    <string name="doze_pulse_duration_visible_title">Sichtbarkeitsdauer</string>
+    <string name="doze_pulse_duration_visible_summary"></string>
+    <string name="doze_pulse_duration_out_title">Ausblenden</string>
+    <string name="doze_pulse_duration_out_summary"></string>
+    <string name="doze_trigger_pickup_title">Auslösung durch Bewegung</string>
+    <string name="doze_trigger_pickup_summary_on">Das Pulsieren wird durch den Bewegungssensor ausgelöst</string>
+    <string name="doze_trigger_pickup_summary_off">Der Bewegungsensor wird nicht als Auslöser benutzt</string>
+    <string name="doze_trigger_notification_title">Auslösung durch Benachrichtigung</string>
+    <string name="doze_trigger_notification_summary_on">Das Pulsieren wird durch Benachrichtigungen ausgelöst</string>
+    <string name="doze_trigger_notification_summary_off">Benachrichtigungen werden nicht als Auslöser benutzt</string>
+    <string name="doze_brightness_level_title">Helligkeitsstufe</string>
+    <string name="onehundred_ms">100 ms</string>
+    <string name="twofifty_ms">250 ms</string>
+    <string name="fivehundred_ms_default">500 ms (Standard)</string>
+    <string name="sevenfifty_ms">750 ms</string>
+    <string name="one_second">1 s</string>
+    <string name="onehalf_second">1.5 s</string>
+    <string name="two_second">2 s</string>
+    <string name="twohalf_second">2.5 s</string>
+    <string name="three_second_default">3 s (Standard)</string>
+    <string name="threehalf_second">3.5 s</string>
+    <string name="four_second">4 s</string>
+    <string name="fourhalf_second">4.5 s</string>
+    <string name="five_second">5 s</string>
+    <string name="doze_notification_color_invert_title">Benachrichtigungen invertieren</string>
+    <string name="doze_notification_color_invert_summary_off">Benachrichtigungen werden nicht invertiert. Für dunkle Designs verwenden.</string>
+    <string name="doze_notification_color_invert_summary_on">Benachrichtigungen werden invertiert. Für Standard/helle Designs verwenden.</string>
+
+    <string name="double_tap_wake_doze_title">Double-tap to wake on doze</string>
+    <string name="double_tap_wake_doze_summary">Require a double-tap to wake the device on a doze pulse screen</string>
+
+    <!-- Advanced night mode brightness -->
+    <string name="night_brightness_category">Helligkeit</string>
+    <string name="night_brightness_value_title">Nachtlicht-Helligkeit</string>
+    <string name="night_brightness_text">Wenn das Nachtlicht aktiviert ist, automatisch die gewünschte Helligkeitsstufe einstellen.</string>
+    <string name="night_bright_disabled">Deaktiviert</string>
+    <string name="night_bright_min">Minimale Helligkeit</string>
+    <string name="night_bright_low">Niedrige Helligkeit</string>
+    <string name="night_bright_medium">Mittlere Helligkeit</string>
+
+    <string name="magisk_title">Magisk Manager</string>
+    <string name="magisk_summary">SU/Root Einstellungen</string>
+
+    <!-- Top Level Substratum settings -->
+    <string name="substratum_title">Substratum</string>
+    <string name="substratum_summary">Design-Anpassungen</string>
+
     <!-- Status bar -->
     <string name="smart_pulldown_title">Intelligentes Öffnen</string>
     <string name="smart_pulldown_summary">Öffnet die Schnelleinstellungen sofort, wenn %1$s Benachrichtigungen vorhanden sind</string>
@@ -357,14 +418,8 @@
     <string name="smart_pulldown_persistent">keine andauernden</string>
     <string name="smart_pulldown_all">keine löschbaren oder andauernden</string>
 
-    <!-- Heads up -->
-    <string name="add_heads_up_package">App hinzufügen</string>
-    <string name="add_heads_up_dnd_summary">Zeige keine Pop-Up Benachrichtigungen in diesen Anwendungen</string>
-    <string name="add_heads_up_blacklist_summary">Zeige keine Pop-Up Benachrichtigungen von diesen Anwendungen</string>
-    <string name="add_heads_up_whitelist_summary">Zeige alle Benachrichtigungen von diesen Anwendungen als Pop-Up</string>
-    <string name="heads_up_dnd_title">\"Nicht stören\"</string>
-    <string name="heads_up_blacklist_title">Schwarze Liste</string>
-    <string name="heads_up_whitelist_title">Weiße Liste</string>
-    <string name="heads_up_contains_key">Die Anwendung wurde bereits zur Liste hinzugefügt</string>
+   <string name="interruptions_ignore_while_media_title">Audio-Unterdrückung verhindern</string>
+   <string name="interruptions_ignore_while_media_summary">Senkt die Medien-Lautstärke nicht, wenn eine Benachrichtigung eingeht</string>
+
 
 </resources>
