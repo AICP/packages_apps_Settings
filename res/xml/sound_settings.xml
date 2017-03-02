@@ -101,6 +101,10 @@
                 android:persistent="false"
                 android:ringtoneType="alarm" />
 
+        <SlimSeekBarPreference
+                android:key="volume_dialog_timeout"
+                android:title="@string/volume_dialog_timeout_title" />
+
         <!-- Other sounds -->
         <Preference
                 android:key="other_sounds"
