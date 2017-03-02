@@ -24,7 +24,7 @@
     <color name="white">#FFF</color>
     <color name="aicp_logo_bg">@*android:color/primary_text_material_light</color>
     <color name="aicp_logo_fg">@color/icon_tint_color</color>
-    
+
     <!-- Storage Summary Title -->
     <color name="storage_summary_title_color">#ff607d8b</color>
 
@@ -65,4 +65,6 @@
     <color name="bluetooth_pairing_caption">@*android:color/secondary_text_material_light</color>
     <color name="bluetooth_pairing_code_message">@*android:color/secondary_text_material_light</color>
     <color name="bluetooth_phonebook_sharing_message_confirm_pin">@*android:color/secondary_text_material_light</color>
+
+    <color name="seekbar_dot_color">@color/theme_accent</color>
 </resources>

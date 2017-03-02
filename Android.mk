@@ -21,7 +21,8 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
     android-support-v7-appcompat \
     android-support-v14-preference \
     jsr305 \
-    settings-logtags
+    settings-logtags \
+	android-support-design \
 
 LOCAL_STATIC_JAVA_LIBRARIES += \
     org.cyanogenmod.platform.internal
@@ -35,7 +36,8 @@ LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res \
     frameworks/support/v7/preference/res \
     frameworks/support/v14/preference/res \
     frameworks/support/v7/appcompat/res \
-    frameworks/support/v7/recyclerview/res
+    frameworks/support/v7/recyclerview/res \
+	frameworks/support/design/res
 
 LOCAL_PACKAGE_NAME := Settings
 LOCAL_CERTIFICATE := platform
@@ -44,7 +46,7 @@ LOCAL_PRIVILEGED_MODULE := true
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 
 LOCAL_AAPT_FLAGS := --auto-add-overlay \
-    --extra-packages android.support.v7.preference:android.support.v14.preference:android.support.v17.preference:android.support.v7.appcompat:android.support.v7.recyclerview
+    --extra-packages android.support.v7.preference:android.support.v14.preference:android.support.v17.preference:android.support.v7.appcompat:android.support.v7.recyclerview:android.support.design
 
 ifneq ($(INCREMENTAL_BUILDS),)
     LOCAL_PROGUARD_ENABLED := disabled

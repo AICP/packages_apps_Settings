@@ -160,4 +160,13 @@
         <attr name="aspectRatio" format="float" />
     </declare-styleable>
 
+    <declare-styleable name="SeekBarPreference">
+        <attr name="defaultVal" format="integer" />
+        <attr name="maximum" format="integer" />
+        <attr name="minimum" format="integer" />
+        <attr name="unitsLeft" format="string|reference" />
+        <attr name="unitsRight" format="string|reference" />
+        <attr name="interval" format="integer" />
+    </declare-styleable>
+
 </resources>

@@ -413,4 +413,9 @@
     <string name="substratum_title">Substratum</string>
     <string name="substratum_summary">Customize device theme</string>
 
+    <!-- Seekbar strings -->
+    <string name="seekbar_no_default_value">No default value set</string>
+    <string name="seekbar_default_value_set">Value set to default of <xliff:g id="number">%d</xliff:g></string>
+    <string name="seekbar_default_value_already_set">Default value is already set</string>
+
 </resources>
