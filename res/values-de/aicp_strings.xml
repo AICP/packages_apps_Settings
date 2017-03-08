@@ -410,6 +410,10 @@
     <string name="substratum_title">Substratum</string>
     <string name="substratum_summary">Design-Anpassungen</string>
 
+   <!-- Force authorize substratum packages -->
+   <string name="force_authorize_substratum_packages_title">Design-Apps aus unbekannten Quellen erlauben</string>
+   <string name="force_authorize_substratum_packages_summary">Erzwingt die Genehmigung für alle Design Anwendungen</string>
+
     <!-- Status bar -->
     <string name="smart_pulldown_title">Intelligentes Öffnen</string>
     <string name="smart_pulldown_summary">Öffnet die Schnelleinstellungen sofort, wenn %1$s Benachrichtigungen vorhanden sind</string>
