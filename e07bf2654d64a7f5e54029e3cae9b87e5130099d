@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "baa201ad_ebac2a38",
+        "filename": "src/com/android/settings/notification/SoundSettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 303,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2017-03-09T22:42:18Z",
+      "side": 1,
+      "message": "ERROR: /home/doc/aicpN7/packages/apps/Settings/src/com/android/settings/notification/SoundSettings.java:303: mRingOrNotificationPreference cannot be resolved",
+      "range": {
+        "startLine": 303,
+        "startChar": 16,
+        "endLine": 303,
+        "endChar": 48
+      },
+      "revId": "e07bf2654d64a7f5e54029e3cae9b87e5130099d",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": false
+    }
+  ]
+}
