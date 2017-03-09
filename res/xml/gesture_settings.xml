@@ -24,6 +24,17 @@
         android:key="touchscreen_gesture_settings"
         lineage:requiresFeature="cmhardware:FEATURE_TOUCHSCREEN_GESTURES" />
 
+        <cyanogenmod.preference.SelfRemovingPreference
+        android:key="htc_gesture_settings"
+        android:title="@string/htc_gesture_preference_title"
+        android:summary="@string/htc_gesture_preference_summary"
+        lineage:requiresPackage="com.cyanogenmod.settings.htc">
+        <intent
+            android:action="com.cyanogenmod.settings.htc.GESTURE_SETTINGS"
+            android:targetPackage="com.cyanogenmod.settings.htc"
+            android:targetClass="com.cyanogenmod.settings.htc.TouchscreenGestureSettings" />
+    </cyanogenmod.preference.SelfRemovingPreference>
+
     <com.android.settings.gestures.GesturePreference
         android:key="gesture_swipe_down_fingerprint"
         android:title="@string/fingerprint_swipe_for_notifications_title"
