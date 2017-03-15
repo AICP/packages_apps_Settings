@@ -29,7 +29,7 @@ public class AnimationScalePreference extends CustomDialogPreference
     private TextView mScaleText;
     private IntervalSeekBar mSeekBar;
 
-    private float mScale = 1.0f;
+    private float mScale = 0.8f;
 
     public AnimationScalePreference(Context context, AttributeSet attrs) {
         super(context, attrs);
