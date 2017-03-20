@@ -37,6 +37,12 @@
             android:title="@string/zen_mode_visual_interruptions_settings_title"
             android:fragment="com.android.settings.notification.ZenModeVisualInterruptionSettings" />
 
+    <!-- In-Call DND -->
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="dnd_when_call"
+            android:title="@string/dnd_when_call_title"
+            android:summary="@string/dnd_when_call_summary" />
+
     <!-- Prevent audio ducking -->
     <com.android.settings.cyanogenmod.CMGlobalSettingSwitchPreference
             android:key="zen_disable_ducking_during_media_playback"
