@@ -294,6 +294,22 @@
   <string name="increasing_ring_min_volume_title">Başlangıç sesi</string>
   <string name="increasing_ring_ramp_up_time_title">Yükselme zamanı</string>
   <!-- Allow vibration in zen mode -->
+  <string name="zen_mode_vibration">Titreşim</string>
+  <string name="zen_mode_vibration_never">Titreşim yok</string>
+  <string name="zen_mode_vibration_calls_only">Sadece çağrılarda titret</string>
+  <string name="zen_mode_vibration_calls_and_notifications">Arama ve bildirimlerde titret</string>
+  <!-- Zen mode allowed event setting summary items -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_reminders, but part of a list, so lower case if needed-->
+  <string name="zen_mode_summary_reminders">hatırlatıcılar</string>
+  <!-- [CHAR LIMIT=50] Like zen_mode_events, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_events">etkinlikler</string>
+  <!-- [CHAR LIMIT=50] Like zen_mode_all_callers, but part of a list, so lower case if needed -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_selected_callers, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_selected_callers">seçili arayanlar</string>
+  <!-- [CHAR LIMIT=50] Like zen_mode_repeat_callers, but part of a list, so lower case if needed -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_all_messages, but part of a list, so lower case if needed -->
+  <!-- [CHAR LIMIT=50] Like zen_mode_selected_messages, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_selected_messages">seçili mesajlar</string>
   <!-- Notification sound timeout -->
   <!-- MSIM SIM status -->
   <string name="sim_card_status_title">SIM %d durumu</string>
