@@ -173,4 +173,5 @@ public class Settings extends SettingsActivity {
     public static class ExpandedDesktopSettingsActivity extends SettingsActivity { /* empty */ }
     public static class SubstratumActivity extends SettingsActivity { /* empty */ }
     public static class SuperSUActivity extends SettingsActivity { /* empty */ }
+    public static class KActivity extends SettingsActivity { /* empty */ }
 }
