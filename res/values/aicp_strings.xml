@@ -404,6 +404,10 @@
     <string name="supersu_title">SuperSU</string>
     <string name="supersu_summary">Root management</string>
 
+    <!-- Top Level Kernel Adiutor settings -->
+    <string name="ka_title">Kernel Adiutor</string>
+    <string name="ka_summary">Fine tune your device</string>
+
     <!-- Top Level Substratum settings -->
     <string name="substratum_title">Substratum</string>
     <string name="substratum_summary">Customize device theme</string>
