@@ -3145,7 +3145,7 @@
 
        <!-- System action picker -->
         <activity android:name="com.android.settings.aicp.utils.ActionPickerDialogActivity"
-                android:theme="@*android:style/Theme.Material.Light.Dialog.Alert"
+                android:theme="@style/Theme.SmartBar.Dialog"
                 android:label="@string/choose_action_title"
                 android:excludeFromRecents="true">
             <intent-filter>
@@ -3155,7 +3155,7 @@
 
        <!-- Icon pack picker -->
         <activity android:name="com.android.settings.aicp.utils.IconPickerActivity"
-                android:theme="@*android:style/Theme.Material.Light.Dialog.Alert"
+                android:theme="@style/Theme.SmartBar.Dialog"
                 android:label="@string/icon_pack_picker_dialog_title"
                 android:excludeFromRecents="true">
             <intent-filter>
@@ -3166,7 +3166,7 @@
 
         <!-- Icon picker proxy for gallery -->
         <activity android:name="com.android.settings.aicp.utils.IconPickerGallery"
-            android:theme="@*android:style/Theme.Material.Light.Dialog.Alert"
+            android:theme="@style/Theme.SmartBar.Dialog"
             android:label="@string/icon_pack_picker_dialog_title"
             android:excludeFromRecents="true">
             <intent-filter>
