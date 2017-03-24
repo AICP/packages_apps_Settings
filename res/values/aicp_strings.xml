@@ -424,4 +424,9 @@
     <!-- In-call DND -->
     <string name="dnd_when_call_title">In-call do not disturb</string>
     <string name="dnd_when_call_summary">Auto enable DND during calls</string>
+
+    <!-- Navigation bar button color -->
+    <string name="navbar_button_tint_title">Navigation button tint</string>
+    <string name="navbar_button_tint_switch_title">Navigation button tinting</string>
+
 </resources>
