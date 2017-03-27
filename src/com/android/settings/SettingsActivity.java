@@ -66,6 +66,7 @@ import com.android.settings.accounts.ManagedProfileSettings;
 import com.android.settings.aicp.AEStartActivity;
 import com.android.settings.aicp.AmbientSettings;
 import com.android.settings.aicp.FlingSettings;
+import com.android.settings.aicp.LockscreenShortcutFragment;
 import com.android.settings.aicp.NavbarSettings;
 import com.android.settings.aicp.SmartbarSettings;
 import com.android.settings.aicp.PulseSettings;
@@ -392,6 +393,7 @@ public class SettingsActivity extends SettingsDrawerActivity
             AutomaticStorageManagerSettings.class.getName(),
             RunningServices.class.getName(),
             ExpandedDesktopPreferenceFragment.class.getName(),
+            com.android.settings.aicp.LockscreenShortcutFragment.class.getName(),
     };
 
 
