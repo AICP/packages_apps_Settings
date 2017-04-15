@@ -26,10 +26,8 @@ import android.os.storage.VolumeInfo;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceViewHolder;
 import android.text.format.Formatter;
-import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.util.TypedValue;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
@@ -47,7 +45,6 @@ public class StorageVolumePreference extends Preference {
     private final VolumeInfo mVolume;
 
     private int mColor;
-    private int mSecondaryColor;
     private int mUsedPercent = -1;
 
     // TODO: ideally, VolumeInfo should have a total physical size.
@@ -58,15 +55,10 @@ public class StorageVolumePreference extends Preference {
         mVolume = volume;
         mColor = color;
 
-        TypedValue typedValue = new TypedValue();
-        context.getTheme().resolveAttribute(android.R.attr.textColorSecondary, typedValue, true);
-        mSecondaryColor = context.getResources().getColor(typedValue.resourceId);
-
         setLayoutResource(R.layout.storage_volume);
 
         setKey(volume.getId());
-        final String fsType = volume.fsType;
-        setTitle(mStorageManager.getBestVolumeDescription(volume) + (TextUtils.isEmpty(fsType) ? "" : " / " + fsType));
+        setTitle(mStorageManager.getBestVolumeDescription(volume));
 
         Drawable icon;
         if (VolumeInfo.ID_PRIVATE_INTERNAL.equals(volume.getId())) {
@@ -92,7 +84,7 @@ public class StorageVolumePreference extends Preference {
             }
 
             if (freeBytes < mStorageManager.getStorageLowBytes(path)) {
-                mColor = StorageSettings.getColorWarning(context.getResources());
+                mColor = StorageSettings.COLOR_WARNING;
                 icon = context.getDrawable(R.drawable.ic_warning_24dp);
             }
 
@@ -117,7 +109,7 @@ public class StorageVolumePreference extends Preference {
     public void onBindViewHolder(PreferenceViewHolder view) {
         final ImageView unmount = (ImageView) view.findViewById(R.id.unmount);
         if (unmount != null) {
-            unmount.setImageTintList(ColorStateList.valueOf(mSecondaryColor));
+            unmount.setImageTintList(ColorStateList.valueOf(Color.parseColor("#8a000000")));
             unmount.setOnClickListener(mUnmountListener);
         }
 
