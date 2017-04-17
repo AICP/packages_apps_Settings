@@ -15,10 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- About phone screen, AICP device maintainer name -->
-    <string name="device_maintainer">Responsable del dispositivo</string>
-    <string name="device_maintainers">Responsables del dispositivo</string>
-
     <!-- Aicp Extras -->
     <string name="aicpextras_settings">AICP Extras</string>
     <string name="summary_aicp">Personalización de la rom</string>
