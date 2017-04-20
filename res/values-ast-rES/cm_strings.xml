@@ -30,9 +30,10 @@
   <string name="root_access_adb">Namái ADB</string>
   <string name="root_access_all">Aplicaciones y ADB</string>
   <!-- Preference link for root appops -->
-  <!-- About phone screen, AICP version -->
-  <string name="mod_version">Versión AICP</string>
-  <string name="mod_version_default">Desconocida</string>
+  <string name="root_appops_title">Xestionar accesos root</string>
+  <string name="root_appops_summary">Mira y controla les regles root</string>
+  <!-- About phone screen, LineageOS version -->
+  <string name="mod_version">Versión de AICP</string>
   <!-- About phone screen, Device model -->
   <string name="device_model">Modelu del preséu</string>
   <!-- About phone screen, Device name -->
@@ -210,8 +211,11 @@
   <string name="hotstpot_inactivity_timeout_never_summary_text">El puntu d\'accesu portable Wi\u2011Fi nun va apagase enxamás</string>
   <string name="hotstpot_inactivity_timeout_summary_text">El puntu d\'accesu portable Wi\u2011Fi va apagase dempués de <xliff:g id="timeout">%1$s</xliff:g></string>
   <!-- Wi-Fi region code -->
+  <string name="wifi_setting_countrycode_title">Códigu de rexón Wi\u2011Fi</string>
   <!-- Wi-Fi settings screen, setting summary for setting the wifi frequency band [CHAR LIMIT=50]-->
+  <string name="wifi_setting_countrycode_summary">Especifica\'l códigu de rexón pa Wi\u2011Fi</string>
   <!-- Wi-Fi settings screen, error message when the frequency band could not be set [CHAR LIMIT=50]. -->
+  <string name="wifi_setting_countrycode_error">Hebo un problema al afitar el códigu de rexón.</string>
   <!-- Wake on plug -->
   <!-- Heads-up -->
   <string name="heads_up_notifications_enabled_title">Avisos emerxentes</string>
