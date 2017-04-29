@@ -103,4 +103,8 @@
     <bool name="config_enableManualSubProvisioning">true</bool>
 
     <bool name="config_regional_security_show_password_enable">false</bool>
+
+    <!-- Control whether Night display is available. This should only be enabled on devices
+         with HWC 2.0 or higher. -->
+    <bool name="config_nightDisplayAvailable">false</bool>
 </resources>
