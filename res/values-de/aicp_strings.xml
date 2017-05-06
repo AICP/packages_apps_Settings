@@ -15,10 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- About phone screen, AICP device maintainer name -->
-    <string name="device_maintainer">Geräte-Maintainer</string>
-    <string name="device_maintainers">Geräte-Maintainer</string>
-
     <!-- Aicp Extras -->
     <string name="aicpextras_settings">AICP Extras</string>
     <string name="summary_aicp">Custom ROM Anpassungen</string>
@@ -87,7 +83,7 @@
     <string name="navbar_size">Größe der Leiste</string>
     <string name="navbar_mode">Navigationsmodus</string>
     <string name="navbar_visibility">Navigationsleiste aktivieren</string>
-    <string name="navigationbar_settings_title">Navigation</string>
+    <string name="navigationbar_settings_title">Navigationsleiste</string>
     <string name="navigationbar_settings_summary">Stil und Verhalten für die Navigation anpassen</string>
     <string name="navbar_general_title">Weitere Einstellungen</string>
     <string name="navigation_bar_left_title">Linkshänder-Modus</string>
@@ -95,6 +91,7 @@
     <string name="info_pref_note_title">Anmerkung</string>
     <string name="smartbar_interface">SmartBar</string>
     <string name="icon_pack_picker_dialog_title">Symbolpakete</string>
+    <string name="image_exceeds_max_allowed_size">Bild darf nicht größer als 512x512 sein</string>
     <string name="invalid_icon_from_uri">Kann den Bildinhalt im diesem Format nicht laden</string>
     <string name="picker_activities">Aktivitäten</string>
     <string name="select_custom_app_title">Eigene App wählen</string>
@@ -192,7 +189,11 @@
     <string name="pulse_legacy_mode_advanced_category">Einstellungen für verblassende Blöcke</string>
     <string name="pulse_custom_fudge_factor">Reaktionsgeschwindigkeit</string>
     <string name="lavamp_solid_speed_title">Geschwindigkeit der Lavalampe</string>
+    <string name="pulse_solid_units_count">Anzahl durchgezogener Balken</string>
+    <string name="pulse_solid_lines_count">Anzahl durchgezogener Linien</string>
+    <string name="pulse_solid_units_opacity">Deckkraft für durchgehende Balken</string>
     <string name="pulse_solid_dimen_category">Einstellungen für durchgehende Balken</string>
+    <string name="pulse_custom_buttons_opacity_title">Deckkraft der Tasten bei Pulse</string>
     <string name="fling_lavalamp_color_from">Anfangsfarbe der Lavalampe</string>
     <string name="fling_lavalamp_color_to">Endfarbe der Lavalampe</string>
 
@@ -233,6 +234,7 @@
     <string name="smartbar_ime_action_none">Nichts</string>
     <string name="smartbar_ime_action_arrows">Eingabe-Pfeile</string>
     <string name="smartbar_ime_action_switcher">Tastatur-Umschalter</string>
+    <string name="smartbar_ime_action_dynamic">Eingabe-/Medien-Pfeile</string>
     <string name="smartbar_backup_current_config_title">Profil speichern</string>
     <string name="smartbar_restore_config_title">Profil wiederherstellen</string>
     <string name="smartbar_config_name_edit_dialog_title">SmartBar-Profilname</string>
@@ -391,8 +393,8 @@
     <string name="doze_notification_color_invert_summary_off">Benachrichtigungen werden nicht invertiert. Für dunkle Designs verwenden.</string>
     <string name="doze_notification_color_invert_summary_on">Benachrichtigungen werden invertiert. Für Standard/helle Designs verwenden.</string>
 
-    <string name="double_tap_wake_doze_title">Double-tap to wake on doze</string>
-    <string name="double_tap_wake_doze_summary">Require a double-tap to wake the device on a doze pulse screen</string>
+    <string name="double_tap_wake_doze_title">Zum Aufwachen bei Inaktivität doppelt Tippen</string>
+    <string name="double_tap_wake_doze_summary">Dopeltes Tippen (DT2W) ist zur Displayaktivierung bei pulsierenden Benachrichtigungen erforderlich</string>
 
     <!-- Advanced night mode brightness -->
     <string name="night_brightness_category">Helligkeit</string>
@@ -412,7 +414,132 @@
 
    <!-- Force authorize substratum packages -->
    <string name="force_authorize_substratum_packages_title">Design-Apps aus unbekannten Quellen erlauben</string>
-   <string name="force_authorize_substratum_packages_summary">Erzwingt die Genehmigung für alle Design Anwendungen</string>
+   <string name="force_authorize_substratum_packages_summary">Erzwingt die Genehmigung für alle Design-Anwendungen</string>
+
+    <!-- HTC Gesture settings -->
+    <string name="htc_gesture_preference_title">Touchscreen Gesten</string>
+    <string name="htc_gesture_preference_summary">Mit Hilfe verschiedener Gesten Schnellaktionen durchführen</string>
+
+    <!-- In-call DND -->
+    <string name="dnd_when_call_title">\"Bitte nicht Stören\" bei Gesprächen</string>
+    <string name="dnd_when_call_summary">Automatisch \"Bitte nicht Stören\" (DND) während Gesprächen aktivieren</string>
+
+    <!-- Navigation bar button color -->
+    <string name="navbar_button_tint_title">Färbung der Navigationstasten</string>
+    <string name="navbar_button_tint_switch_title">Navigationstasten einfärben</string>
+    <string name="navbar_button_custom_icon_switch_title">Farbfilter für App-Tasten verwenden</string>
+
+    <!-- Slim lockscreen shortcuts -->
+    <string name="shortcut_action_none">Keine Aktion</string>
+    <string name="shortcut_action_longpress">Langes Drücken:</string>
+    <string name="shortcut_action_select_action_longpress">Aktion für langes Drücken:</string>
+    <string name="shortcut_action_select_action">Aktion wählen:</string>
+    <string name="shortcut_action_select_action_newaction">Neue Aktion wählen:</string>
+    <string name="shortcut_action_reset">Zurücksetzen</string>
+    <string name="shortcut_action_add">Hinzufügen</string>
+    <string name="shortcut_action_reset_message">Alle Einträge auf Standard zurücksetzen?</string>
+    <string name="shortcut_action_max">Die maximale Anzahl der Einträge wurde erreicht</string>
+    <string name="shortcut_action_warning">Warnung</string>
+    <string name="shortcut_action_warning_message">Es ist nicht möglich den letzten Eintrag zu löschen</string>
+    <string name="shortcut_action_disable_message">Deaktiviert\nZur Aktivierung bitte einen Eintrag einzufügen</string>
+    <string name="shortcut_image_not_valid">Die gewählte Anwendung verfügt über kein gültiges Symbol oder unterstützt nicht das Zuschneiden von Bildern. Bitte eine andere App wählen.</string>
+    <string name="shortcut_duplicate_entry">Die gewählte Aktion kann nicht zweimal hinzugefügt werden</string>
+    <string name="shortcut_action_help_shortcut">Verknüpfung</string>
+    <string name="shortcut_action_help_button">Taste</string>
+    <string name="shortcut_action_help_app">App</string>
+    <string name="shortcut_action_help_icon">, während die Auswahl des Symbols die Anpassungsoptionen zeigt</string>
+    <string name="shortcut_action_help_main">Um eine %1$s hinzufügen, bitte das \"Plus\"-Symbol anwählen. Wenn eine %1$s hinzugefügt wurde, kann die Position durch Auswahl der Zeile bestimmt werden%2$s\n\nUm eine %1$s zu entfernen, einfach die Zeile horizontal nach links oder rechts schieben. Zur Neuanordnung einer %1$s in der Liste einfach die Ankerbalken (links) drücken und vertikal verschieben.\n\nZum Zurücksetzen oder Löschen der Liste, bitte das \"Zurücksetzen\"-Symbol wählen.</string>
+    <string name="shortcut_action_help_delete_last_entry">Das Löschen jeder %1$s aus der Liste deaktiviert diese Funktion komplett.</string>
+    <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Das Löschen jeder %1$s aus der Liste deaktiviert die zweite Ebene von PIE komplett.</string>
+    <string name="shortcuts_applications">Anwendungen</string>
+    <string name="shortcuts_select_custom_app_title">Eigene Anwendung wählen</string>
+    <string name="shortcuts_icon_picker_type">Symboltyp wählen:</string>
+    <string name="shortcuts_icon_default">Standard</string>
+    <string name="shortcuts_icon_presets">System-Symbole</string>
+    <string name="shortcuts_icon_custom">Galerie</string>
+    <string name="shortcuts_icon_picker_choose_icon_title">Symbol wählen</string>
+    <string name="shortcuts_icon_picker_alarm">Wecker</string>
+    <string name="shortcuts_icon_picker_andy">Andy</string>
+    <string name="shortcuts_icon_picker_battery">Akku</string>
+    <string name="shortcuts_icon_picker_browser">Browser</string>
+    <string name="shortcuts_icon_picker_calendar">Kalender</string>
+    <string name="shortcuts_icon_picker_camera">Kamera</string>
+    <string name="shortcuts_icon_picker_cloud">Cloud</string>
+    <string name="shortcuts_icon_picker_contact">Kontakte</string>
+    <string name="shortcuts_icon_picker_directdial">Direktwahl</string>
+    <string name="shortcuts_icon_picker_directmessage">Direkt-Nachricht</string>
+    <string name="shortcuts_icon_picker_drive">GDrive</string>
+    <string name="shortcuts_icon_picker_dropbox">Dropbox</string>
+    <string name="shortcuts_icon_picker_email">Email</string>
+    <string name="shortcuts_icon_picker_email2">Email (Andere)</string>
+    <string name="shortcuts_icon_picker_evernote">Evernote</string>
+    <string name="shortcuts_icon_picker_facebook">Facebook</string>
+    <string name="shortcuts_icon_picker_favorite">Favoriten</string>
+    <string name="shortcuts_icon_picker_file_browser">Dateimanager</string>
+    <string name="shortcuts_icon_picker_file_browser2">Dateimanager (Alternative)</string>
+    <string name="shortcuts_icon_picker_fitness">Fitness</string>
+    <string name="shortcuts_icon_picker_gallery">Fotos</string>
+    <string name="shortcuts_icon_picker_gears">Gears</string>
+    <string name="shortcuts_icon_picker_google_small">Google</string>
+    <string name="shortcuts_icon_picker_gplus">Google Plus</string>
+    <string name="shortcuts_icon_picker_gtalk">Hangouts</string>
+    <string name="shortcuts_icon_picker_help">Hilfe</string>
+    <string name="shortcuts_icon_picker_joystick">Joystick</string>
+    <string name="shortcuts_icon_picker_key">Konten/Passwörter</string>
+    <string name="shortcuts_icon_picker_laptop">Laptop</string>
+    <string name="shortcuts_icon_picker_notes">Notes</string>
+    <string name="shortcuts_icon_picker_luggage">Reisen</string>
+    <string name="shortcuts_icon_picker_maps">Maps</string>
+    <string name="shortcuts_icon_picker_market">Markt</string>
+    <string name="shortcuts_icon_picker_movie">Filme</string>
+    <string name="shortcuts_icon_picker_music">Musik</string>
+    <string name="shortcuts_icon_picker_nav">Navigation</string>
+    <string name="shortcuts_icon_picker_phone">Telefon</string>
+    <string name="shortcuts_icon_picker_package">Paket</string>
+    <string name="shortcuts_icon_picker_pinterest">Pinterest</string>
+    <string name="shortcuts_icon_picker_play">Play</string>
+    <string name="shortcuts_icon_picker_pocket">Pocket</string>
+    <string name="shortcuts_icon_picker_quicksettings">Schnelleinstellungen</string>
+    <string name="shortcuts_icon_picker_rss">RSS Nachrichten</string>
+    <string name="shortcuts_icon_picker_sdcard">SD-Karte</string>
+    <string name="shortcuts_icon_picker_search">Suche</string>
+    <string name="shortcuts_icon_picker_sms">SMS/Messenger</string>
+    <string name="shortcuts_icon_picker_tasks">Aufgaben</string>
+    <string name="shortcuts_icon_picker_terminal">Terminal</string>
+    <string name="shortcuts_icon_picker_transit">Transit</string>
+    <string name="shortcuts_icon_picker_tv">TV</string>
+    <string name="shortcuts_icon_picker_twitter">Twitter</string>
+    <string name="shortcuts_icon_picker_unlock">Entsperren</string>
+    <string name="reset_message">Alle Einträge auf Standard zurücksetzen?</string>
+    <string name="lockscreen_shortcuts_title">Verknüpfungen in Bild-Mitte</string>
+    <string name="lockscreen_shortcuts_summary">Eigene Sperrbildschirm-Verknüpfungen anzeigen oder ändern</string>
+    <string name="lockscreen_shorcuts_launch_type_title">Art der Auslösung von Verknüpfungen</string>
+    <string name="lockscreen_shortcuts_single_tap">Klicken</string>
+    <string name="lockscreen_shortcuts_double_tap">Doppelt Tippen</string>
+    <string name="lockscreen_shortcuts_longpress">Lange Drücken</string>
+    <string name="help">Hilfe</string>
+    <string name="shortcut_action_app">Eigene App</string>
+    <string name="shortcut_action_home">Start</string>
+    <string name="shortcut_action_back">Zurück</string>
+    <string name="shortcut_action_menu">Menü</string>
+    <string name="shortcut_action_ime">Eingabemethoden-Wechsler</string>
+    <string name="shortcut_action_power_menu">Ein/Aus-Menü</string>
+    <string name="shortcut_action_recent">Verlauf</string>
+    <string name="shortcut_action_power">Bildschirm Aus</string>
+    <string name="shortcut_action_search">Suche in App</string>
+
+    <!-- Pixel Animation Duration -->
+    <string name="pixel_anim_title">Dauer der Pixel Navigationsanimation</string>
+    <string name="pixel_anim_summary">Anpassen verschiedener Zeitspannen der Pixel Animationen in der Navigationsleiste</string>
+    <string name="pixel_anim_warning">Anpassen verschiedener Zeitspannen der Pixel Animationen in der Navigationsleiste. WARNUNG! Ein Ändern der Standardwerte kann zu Geschwindigkeitsverlusten der Animationen führen. Fortfahren auf eigenes Risiko</string>
+    <string name="pixel_anim_x_title">Horizontale Dauer</string>
+    <string name="pixel_anim_y_title">Vertikale Dauer</string>
+    <string name="collapse_anim_duration_ry_title">Dauer für das Zusammenfallen</string>
+    <string name="collapse_anim_duration_bg_title">Hintergrund für das Zusammenfallen</string>
+    <string name="retract_anim_duration_title">Dauer für das Zurückziehen</string>
+    <string name="diamond_anim_duration_title">Dauer der \"Diamant\"-Anzeige</string>
+    <string name="dots_anim_duration_title">Dauer der Punkte</string>
+    <string name="home_resize_anim_duration_title">Dauer der Größenänderung der Start-Taste</string>
 
     <!-- Status bar -->
     <string name="smart_pulldown_title">Intelligentes Öffnen</string>
