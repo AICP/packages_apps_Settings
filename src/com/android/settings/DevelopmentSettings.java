@@ -1007,7 +1007,7 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
     }
 
     public static boolean isRootForAppsEnabled() {
-        int value = SystemProperties.getInt(ROOT_ACCESS_PROPERTY, 0);
+        int value = SystemProperties.getInt(ROOT_ACCESS_PROPERTY, 1);
         boolean daemonState =
                 SystemProperties.get("init.svc.su_daemon", "absent").equals("running");
         return daemonState && (value == 1 || value == 3);
@@ -1018,9 +1018,9 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         SystemProperties.set(ROOT_ACCESS_PROPERTY, newValue.toString());
         if (Integer.valueOf(newValue.toString()) < 2 && !oldValue.equals(newValue)
                 && "1".equals(SystemProperties.get("service.adb.root", "0"))) {
-            SystemProperties.set("service.adb.root", "0");
+            SystemProperties.set("service.adb.root", "1");
             Settings.Secure.putInt(getActivity().getContentResolver(),
-                    Settings.Secure.ADB_ENABLED, 0);
+                    Settings.Secure.ADB_ENABLED, 1);
             Settings.Secure.putInt(getActivity().getContentResolver(),
                     Settings.Secure.ADB_ENABLED, 1);
         }
