@@ -223,10 +223,10 @@
     <string name="smartbar_button_animation_summary">Animationstyp für die primären Tasten festlegen, wenn diese gedrückt werden</string>
     <string name="smartbar_button_animation_ripple">Strudel</string>
     <string name="smartbar_button_animation_spring">Hüpfen</string>
+    <string name="smartbar_button_animation_flip">Umdrehen</string>
     <string name="smartbar_button_animation_pixel">Pixel (alle Tasten)</string>
-    <string name="smartbar_button_animation_pixel_home">Pixel (nur Starttaste)</string>
-    <string name="smartbar_button_animation_pixel_home_ripple">Pixel (nur Starttaste) und Strudel</string>
-    <string name="qs_tile_animation_style_flip">Umdrehen</string>
+    <string name="smartbar_button_animation_pixel_home">Pixel (nur Starttaste - Hüpfen)</string>
+    <string name="smartbar_button_animation_pixel_home_ripple">Pixel (nur Starttaste - Strudel)</string>
     <string name="smartbar_factory_reset_title">Auf Grundeinstellung zurücksetzen</string>
     <string name="smartbar_factory_reset_confirm">Sind Sie sicher, dass die SmartBar auf Standardwerte zurückgesetzt werden soll?</string>
     <string name="smartbar_ime_action_title">Aktionen zur Eingabemethode</string>
@@ -551,6 +551,4 @@
 
    <string name="interruptions_ignore_while_media_title">Audio-Unterdrückung verhindern</string>
    <string name="interruptions_ignore_while_media_summary">Senkt die Medien-Lautstärke nicht, wenn eine Benachrichtigung eingeht</string>
-
-
 </resources>
