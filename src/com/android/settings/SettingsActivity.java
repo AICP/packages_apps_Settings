@@ -245,8 +245,6 @@ public class SettingsActivity extends SettingsDrawerActivity
 
     private static final String ACTION_TIMER_SWITCH = "qualcomm.intent.action.TIMER_SWITCH";
 
-    private static final String MAGISK_FRAGMENT = "com.android.settings.MagiskManager";
-
     private static final String SUBSTRATUM_FRAGMENT = "com.android.settings.Substratum";
 
     private String mFragmentClass;
@@ -1068,13 +1066,8 @@ public class SettingsActivity extends SettingsDrawerActivity
      */
     private Fragment switchToFragment(String fragmentName, Bundle args, boolean validate,
             boolean addToBackStack, int titleResId, CharSequence title, boolean withTransition) {
-        if (MAGISK_FRAGMENT.equals(fragmentName)) {
-            Intent magiskIntent = new Intent();
-            magiskIntent.setClassName("com.topjohnwu.magisk", "com.topjohnwu.magisk.SplashActivity");
-            startActivity(magiskIntent);
-            finish();
-            return null;
-        } else if (SUBSTRATUM_FRAGMENT.equals(fragmentName)) {
+
+        } if (SUBSTRATUM_FRAGMENT.equals(fragmentName)) {
             Intent subIntent = new Intent();
             subIntent.setClassName("projekt.substratum", "projekt.substratum.LaunchActivity");
             startActivity(subIntent);
@@ -1189,19 +1182,6 @@ public class SettingsActivity extends SettingsDrawerActivity
         setTileEnabled(new ComponentName(packageName,
                         Settings.SubstratumActivity.class.getName()),
                 subSupported, isAdmin, pm);
-
-        // Magisk Manager
-        boolean magiskSupported = false;
-        boolean magiskEnabled = false;
-        try {
-            magiskSupported = (getPackageManager().getPackageInfo("com.topjohnwu.magisk", 0).versionCode > 0);
-            ApplicationInfo magiskAi = getPackageManager().getApplicationInfo("com.topjohnwu.magisk",0);
-            magiskEnabled = magiskAi.enabled;
-        } catch (PackageManager.NameNotFoundException e) {
-        }
-        setTileEnabled(new ComponentName(packageName,
-                        Settings.MagiskActivity.class.getName()),
-                magiskSupported & magiskEnabled, isAdmin, pm);
 
         // Show scheduled power on and off if support
         boolean showTimerSwitch = false;
