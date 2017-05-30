@@ -42,6 +42,11 @@
         settings:animation="@raw/gesture_fingerprint_swipe"
         settings:preview="@drawable/gesture_fingerprint_swipe"/>
 
+    <SwitchPreference
+        android:key="quick_pulldown_fp"
+        android:title="@string/quick_pulldown_fp_title"
+        android:summary="@string/quick_pulldown_fp_summary" />
+
     <com.android.settings.gestures.GesturePreference
         android:key="gesture_double_tap_power"
         android:title="@string/double_tap_power_for_camera_title"

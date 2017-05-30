@@ -540,4 +540,8 @@
     <string name="diamond_anim_duration_title">Diamond duration</string>
     <string name="dots_anim_duration_title">Dots duration</string>
     <string name="home_resize_anim_duration_title">Home button resize duration</string>
+
+    <!-- Fingerprint Quick Pulldown -->
+    <string name="quick_pulldown_fp_title">Fingerprint quick pulldown</string>
+    <string name="quick_pulldown_fp_summary">Enable expanding the Quick Settings with only one swipe on the fingerprint sensor</string>
 </resources>
