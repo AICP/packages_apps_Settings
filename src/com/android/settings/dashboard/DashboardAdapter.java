@@ -116,7 +116,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
 
     public List<Tile> getSuggestions() {
         if ((Settings.System.getInt(mContext.getContentResolver(),
-                    Settings.System.DISABLE_SUGGESTIONS, 0) == 1)) {
+                    Settings.System.DISABLE_SUGGESTIONS, 0) == 0)) {
              return null;
         } else {
              return mSuggestions;
@@ -127,7 +127,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
             List<Tile> suggestions) {
         mCategories = categories;
         if ((Settings.System.getInt(mContext.getContentResolver(),
-                    Settings.System.DISABLE_SUGGESTIONS, 0) == 1)) {
+                    Settings.System.DISABLE_SUGGESTIONS, 0) == 0)) {
              mSuggestions = null;
         } else {
              mSuggestions = suggestions;
