@@ -541,6 +541,10 @@
     <string name="dots_anim_duration_title">Dauer der Punkte</string>
     <string name="home_resize_anim_duration_title">Dauer der Größenänderung der Start-Taste</string>
 
+    <!-- Fingerprint Quick Pulldown -->
+    <string name="quick_pulldown_fp_title">Schnell Öffnen mit Fingerabdrucksensor</string>
+    <string name="quick_pulldown_fp_summary">Aktiviert das Öffnen der Schnelleinstellungen indem einmal über den Fingerabdrucksensor gestrichen wird</string>
+
     <!-- Status bar -->
     <string name="smart_pulldown_title">Intelligentes Öffnen</string>
     <string name="smart_pulldown_summary">Öffnet die Schnelleinstellungen sofort, wenn %1$s Benachrichtigungen vorhanden sind</string>
