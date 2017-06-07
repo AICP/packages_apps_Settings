@@ -40,7 +40,6 @@ import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
-import android.content.SharedPreferences;
 import android.net.NetworkUtils;
 import android.net.wifi.IWifiManager;
 import android.net.wifi.WifiInfo;
@@ -92,9 +91,6 @@ import com.android.settings.applications.BackgroundCheckSummary;
 import com.android.settings.fuelgauge.InactiveApps;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
-import com.android.settings.util.AbstractAsyncSuCMDProcessor;
-import com.android.settings.util.CMDProcessor;
-import com.android.settings.util.Helpers;
 import com.android.settings.widget.SwitchBar;
 import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.RestrictedLockUtils.EnforcedAdmin;
@@ -102,9 +98,6 @@ import com.android.settingslib.RestrictedSwitchPreference;
 
 import cyanogenmod.providers.CMSettings;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.DataOutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -243,8 +236,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
 
     private static final String DEVELOPMENT_TOOLS = "development_tools";
 
-    private static final String SELINUX = "selinux";
-
     private static final String FORCE_AUTHORIZE_SUBSTRATUM_PACKAGES = "force_authorize_substratum_packages";
 
     private static final int RESULT_DEBUG_APP = 1000;
@@ -353,8 +344,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
     private ListPreference mRootAccess;
     private Object mSelectedRootValue;
     private PreferenceScreen mDevelopmentTools;
-
-    private SwitchPreference mSelinux;
 
     private final ArrayList<Preference> mAllPrefs = new ArrayList<Preference>();
 
@@ -538,18 +527,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         }
         if (hasNavigationBar) {
             removePreference(mKillAppLongpressBack);
-        }
-
-        //SELinux
-        mSelinux = (SwitchPreference) findPreference(SELINUX);
-        mSelinux.setOnPreferenceChangeListener(this);
-
-        if (CMDProcessor.runShellCommand("getenforce").getStdout().contains("Enforcing")) {
-            mSelinux.setChecked(true);
-            mSelinux.setSummary(R.string.selinux_enforcing_title);
-        } else {
-            mSelinux.setChecked(false);
-            mSelinux.setSummary(R.string.selinux_permissive_title);
         }
 
         Preference hdcpChecking = findPreference(HDCP_CHECKING_KEY);
@@ -2454,17 +2431,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
                 writeRootAccessOptions(newValue);
             }
             return true;
-        } else if (preference == mSelinux) {
-            if (newValue.toString().equals("true")) {
-                CMDProcessor.runSuCommand("setenforce 1");
-                setSelinuxEnabled("true");
-                mSelinux.setSummary(R.string.selinux_enforcing_title);
-            } else if (newValue.toString().equals("false")) {
-                CMDProcessor.runSuCommand("setenforce 0");
-                setSelinuxEnabled("false");
-                mSelinux.setSummary(R.string.selinux_permissive_title);
-            }
-            return true;
         }
         return false;
     }
@@ -2739,11 +2705,5 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         UserHandle userHandle = UserHandle.of(UserHandle.myUserId());
         return !(mUm.hasBaseUserRestriction(UserManager.DISALLOW_OEM_UNLOCK, userHandle)
                 || mUm.hasBaseUserRestriction(UserManager.DISALLOW_FACTORY_RESET, userHandle));
-    }
-
-    private void setSelinuxEnabled(String status) {
-        SharedPreferences.Editor editor = getContext().getSharedPreferences("selinux_pref", Context.MODE_PRIVATE).edit();
-        editor.putString("selinux", status);
-        editor.apply();
     }
 }
