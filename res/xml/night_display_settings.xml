@@ -55,7 +55,7 @@
             android:title="@string/night_brightness_category">
 
         <DropDownPreference
-                android:key="qs_night_brightness_value"
+                android:key="night_brightness_value"
                 android:title="@string/night_brightness_value_title"
                 android:entries="@array/night_brightness_value_entries"
                 android:entryValues="@array/night_brightness_value_values"

@@ -45,7 +45,7 @@ public class NightDisplaySettings extends SettingsPreferenceFragment
     private static final String KEY_NIGHT_DISPLAY_START_TIME = "night_display_start_time";
     private static final String KEY_NIGHT_DISPLAY_END_TIME = "night_display_end_time";
     private static final String KEY_NIGHT_DISPLAY_ACTIVATED = "night_display_activated";
-    private static final String QS_NIGHT_BRIGHTNESS_VALUE = "qs_night_brightness_value";
+    private static final String NIGHT_BRIGHTNESS_VALUE = "night_brightness_value";
 
     private static final int DIALOG_START_TIME = 0;
     private static final int DIALOG_END_TIME = 1;
@@ -69,9 +69,9 @@ public class NightDisplaySettings extends SettingsPreferenceFragment
         mTimeFormatter = android.text.format.DateFormat.getTimeFormat(context);
         mTimeFormatter.setTimeZone(TimeZone.getTimeZone("UTC"));
 
-        mNightBrightValue = (DropDownPreference) findPreference(QS_NIGHT_BRIGHTNESS_VALUE);
+        mNightBrightValue = (DropDownPreference) findPreference(NIGHT_BRIGHTNESS_VALUE);
         int nightBrightValue = Settings.Secure.getInt(getContentResolver(),
-                Settings.Secure.QS_NIGHT_BRIGHTNESS_VALUE, 0);
+                Settings.Secure.NIGHT_BRIGHTNESS_VALUE, 0);
         mNightBrightValue.setValue(Integer.toString(nightBrightValue));
         mNightBrightValue.setSummary(mNightBrightValue.getEntry());
         mNightBrightValue.setOnPreferenceChangeListener(this);
@@ -210,7 +210,7 @@ public class NightDisplaySettings extends SettingsPreferenceFragment
             int index = mNightBrightValue.findIndexOfValue((String) newValue);
             mNightBrightValue.setSummary(mNightBrightValue.getEntries()[index]);
             Settings.Secure.putInt(getActivity().getContentResolver(),
-                    Settings.Secure.QS_NIGHT_BRIGHTNESS_VALUE, nightBrightValue);
+                    Settings.Secure.NIGHT_BRIGHTNESS_VALUE, nightBrightValue);
             return true;
         }
         return false;
