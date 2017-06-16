@@ -26,12 +26,6 @@
         android:key="category_navbar_interface"
         android:title="@string/navbar_interface_title" >
 
-        <cyanogenmod.preference.CMSystemSettingSwitchPreference
-            android:key="navigation_bar_left"
-            android:title="@string/navigation_bar_left_title"
-            android:summary="@string/navigation_bar_left_summary"
-            android:defaultValue="false" />
-
         <ListPreference
             android:entries="@array/systemui_navbar_mode_entries"
             android:entryValues="@array/systemui_navbar_mode_values"
