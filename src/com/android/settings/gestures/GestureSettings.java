@@ -26,6 +26,7 @@ import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.provider.Settings.Secure;
 import android.support.v14.preference.SwitchPreference;
+import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
@@ -58,11 +59,14 @@ public class GestureSettings extends SettingsPreferenceFragment implements
     private static final String PREF_KEY_SWIPE_DOWN_FINGERPRINT = "gesture_swipe_down_fingerprint";
     private static final String PREF_KEY_DOUBLE_TAP_SCREEN = "gesture_double_tap_screen";
     private static final String PREF_QUICK_PULLDOWN_FP = "quick_pulldown_fp";
+    private static final String FP_SWIPE_CALL_ACTIONS = "fp_swipe_call_actions";
     private static final String DEBUG_DOZE_COMPONENT = "debug.doze.component";
 
     private List<GesturePreference> mPreferences;
 
+    private int mFpSwipeCallActionsValue;
     private AmbientDisplayConfiguration mAmbientConfig;
+    private ListPreference mFpSwipeCallActions;
     private SwitchPreference mQuickPulldownFp;
 
     @Override
@@ -105,9 +109,17 @@ public class GestureSettings extends SettingsPreferenceFragment implements
                     Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN_FP, 0, UserHandle.USER_CURRENT) == 1);
             mQuickPulldownFp.setOnPreferenceChangeListener(this);
             mQuickPulldownFp.setEnabled(isSystemUINavigationEnabled(context));
+
+            mFpSwipeCallActions = (ListPreference) findPreference(FP_SWIPE_CALL_ACTIONS);
+            mFpSwipeCallActionsValue = Settings.System.getIntForUser(getContentResolver(),
+                    Settings.System.FP_SWIPE_CALL_ACTIONS, 0, UserHandle.USER_CURRENT);
+            mFpSwipeCallActions.setValue(Integer.toString(mFpSwipeCallActionsValue));
+            mFpSwipeCallActions.setSummary(mFpSwipeCallActions.getEntry());
+            mFpSwipeCallActions.setOnPreferenceChangeListener(this);
         } else {
             removePreference(PREF_KEY_SWIPE_DOWN_FINGERPRINT);
             removePreference(PREF_QUICK_PULLDOWN_FP);
+            removePreference(FP_SWIPE_CALL_ACTIONS);
         }
 
         // Double twist for camera mode
@@ -165,25 +177,38 @@ public class GestureSettings extends SettingsPreferenceFragment implements
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        boolean enabled = (boolean) newValue;
         String key = preference.getKey();
         if (PREF_KEY_DOUBLE_TAP_POWER.equals(key)) {
+            boolean enabled = (boolean) newValue;
             Secure.putInt(getContentResolver(),
                     Secure.CAMERA_DOUBLE_TAP_POWER_GESTURE_DISABLED, enabled ? 0 : 1);
         } else if (PREF_KEY_PICK_UP.equals(key)) {
+            boolean enabled = (boolean) newValue;
             Secure.putInt(getContentResolver(), Secure.DOZE_PULSE_ON_PICK_UP, enabled ? 1 : 0);
         } else if (PREF_KEY_DOUBLE_TAP_SCREEN.equals(key)) {
+            boolean enabled = (boolean) newValue;
             Secure.putInt(getContentResolver(), Secure.DOZE_PULSE_ON_DOUBLE_TAP, enabled ? 1 : 0);
         } else if (PREF_KEY_SWIPE_DOWN_FINGERPRINT.equals(key)) {
+            boolean enabled = (boolean) newValue;
             Secure.putInt(getContentResolver(),
                     Secure.SYSTEM_NAVIGATION_KEYS_ENABLED, enabled ? 1 : 0);
             mQuickPulldownFp.setEnabled(enabled);
         } else if (PREF_KEY_DOUBLE_TWIST.equals(key)) {
+            boolean enabled = (boolean) newValue;
             Secure.putInt(getContentResolver(),
                     Secure.CAMERA_DOUBLE_TWIST_TO_FLIP_ENABLED, enabled ? 1 : 0);
         } else if (PREF_QUICK_PULLDOWN_FP.equals(key)) {
+            boolean enabled = (boolean) newValue;
             Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN_FP, enabled ? 1 : 0,
+                    UserHandle.USER_CURRENT);
+        } else if (FP_SWIPE_CALL_ACTIONS.equals(key)) {
+            mFpSwipeCallActionsValue = Integer.valueOf((String) newValue);
+            int index = mFpSwipeCallActions.findIndexOfValue((String) newValue);
+            mFpSwipeCallActions.setSummary(
+                    mFpSwipeCallActions.getEntries()[index]);
+            Settings.System.putIntForUser(getContentResolver(),
+                    Settings.System.FP_SWIPE_CALL_ACTIONS, mFpSwipeCallActionsValue,
                     UserHandle.USER_CURRENT);
         }
         return true;
