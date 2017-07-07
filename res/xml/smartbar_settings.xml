@@ -50,6 +50,13 @@
         android:title="@string/pixel_anim_title"
         android:summary="@string/pixel_anim_summary"/>
 
+    <ListPreference
+        android:key="smartbar_longpress_delay"
+        android:title="@string/smartbar_longpress_delay_title"
+        android:entries="@array/smartbar_longpress_delay_entries"
+        android:entryValues="@array/smartbar_longpress_delay_values"
+        android:summary="@string/smartbar_longpress_delay_summary" />
+
     <com.android.settings.preference.SystemSettingSwitchPreference
         android:key="smartbar_doubletap_sleep"
         android:title="@string/smartbar_doubletap_sleep_title"

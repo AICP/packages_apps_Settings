@@ -249,6 +249,11 @@
     <string name="smartbar_doubletap_sleep_summary">Double tap on navbar empty areas to switch off the screen</string>
     <string name="one_handed_mode_title">One handed mode</string>
     <string name="one_handed_mode_summary">Allows swiping on the navigation bar to enable one handed mode</string>
+    <string name="smartbar_longpress_delay_title">Button longpress delay</string>
+    <string name="smartbar_longpress_delay_summary">Set how long the system will wait before triggering a longpress action</string>
+    <string name="smartbar_longpress_delay_default">Default delay (fast)</string>
+    <string name="smartbar_longpress_delay_normal">Normal delay</string>
+    <string name="smartbar_longpress_delay_long">Long delay</string>
 
     <string name="link_volume_option_title">Link ringtone &amp; notification volumes</string>
 
