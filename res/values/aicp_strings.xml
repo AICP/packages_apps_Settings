@@ -554,4 +554,6 @@
     <string name="ok">Okay</string>
     <string name="menu_stats_reset">Reset stats</string>
     <string name="reset_stats_msg">Battery history stats are going to be reset</string>
+
+    <string name="background_processes_settings_title">Background processes</string>
 </resources>
