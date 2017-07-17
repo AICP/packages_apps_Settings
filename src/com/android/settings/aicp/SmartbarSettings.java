@@ -73,6 +73,7 @@ public class SmartbarSettings extends SettingsPreferenceFragment implements
     private PreferenceScreen mPixel;
     private ColorPickerPreference mNavbuttoncolor;
     private CustomSeekBarPreference mButtonsAlpha;
+    private CustomSeekBarPreference mCustomButtonScaling;
 
     private static final int MENU_RESET = Menu.FIRST;
     private static final int MENU_SAVE = Menu.FIRST + 1;
@@ -89,6 +90,7 @@ public class SmartbarSettings extends SettingsPreferenceFragment implements
     private static final String KEY_SMARTBAR_BACKUP = "smartbar_profile_save";
     private static final String KEY_SMARTBAR_RESTORE = "smartbar_profile_restore";
     private static final String PREF_NAVBAR_BUTTONS_ALPHA = "navbar_buttons_alpha";
+    private static final String PREF_SMARTBAR_CUSTOM_ICON_SIZE = "smartbar_custom_icon_size";
     private static final String NAVBAR_COLOR = "navbar_button_color";
     private static final String PIXEL = "pixel_anim";
 
@@ -140,6 +142,13 @@ public class SmartbarSettings extends SettingsPreferenceFragment implements
         mButtonLongpressDelay = (ListPreference) findPreference("smartbar_longpress_delay");
         mButtonLongpressDelay.setValue(String.valueOf(longpressDelayVal));
         mButtonLongpressDelay.setOnPreferenceChangeListener(this);
+
+        mCustomButtonScaling =
+                (CustomSeekBarPreference) findPreference(PREF_SMARTBAR_CUSTOM_ICON_SIZE);
+        int size = Settings.Secure.getIntForUser(getContentResolver(),
+                "smartbar_custom_icon_size", 60, UserHandle.USER_CURRENT);
+        mCustomButtonScaling.setValue(size);
+        mCustomButtonScaling.setOnPreferenceChangeListener(this);
 
         setHasOptionsMenu(true);
     }
@@ -291,6 +300,11 @@ public class SmartbarSettings extends SettingsPreferenceFragment implements
             Settings.Secure.putIntForUser(getContentResolver(),
                     "smartbar_longpress_delay", val, UserHandle.USER_CURRENT);
             return true;
+        } else if (preference == mCustomButtonScaling) {
+            int val = (Integer) newValue;
+            Settings.Secure.putIntForUser(getContentResolver(),
+                    "smartbar_custom_icon_size", val, UserHandle.USER_CURRENT);
+            return true;
         }
         return false;
     }
@@ -338,6 +352,11 @@ public class SmartbarSettings extends SettingsPreferenceFragment implements
                 "smartbar_longpress_delay", 0);
         mButtonLongpressDelay.setValue(String.valueOf(0));
         mButtonLongpressDelay.setOnPreferenceChangeListener(this);
+
+        Settings.Secure.putInt(getContentResolver(),
+                "smartbar_custom_icon_size", 60);
+        mButtonsAlpha.setValue(60);
+        mButtonsAlpha.setOnPreferenceChangeListener(this);
     }
 
     static class ConfigAdapter extends ArrayAdapter<File> {

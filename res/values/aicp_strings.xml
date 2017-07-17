@@ -254,6 +254,7 @@
     <string name="smartbar_longpress_delay_default">Default delay (fast)</string>
     <string name="smartbar_longpress_delay_normal">Normal delay</string>
     <string name="smartbar_longpress_delay_long">Long delay</string>
+    <string name="smartbar_custom_icon_size_title">Custom icon scaling</string>
 
     <string name="link_volume_option_title">Link ringtone &amp; notification volumes</string>
 
