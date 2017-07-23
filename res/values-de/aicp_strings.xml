@@ -249,6 +249,12 @@
     <string name="smartbar_doubletap_sleep_summary">Zweimal auf den leeren Bereich der Navigationsleiste tippen, um das Display auszuschalten</string>
     <string name="one_handed_mode_title">Ein-Hand-Modus</string>
     <string name="one_handed_mode_summary">Aktiviert die Bedienung mit einer Hand, wenn über die Navigationsleiste gewischt wird</string>
+    <string name="smartbar_longpress_delay_title">Tastenverzögerung bei Langem Druck</string>
+    <string name="smartbar_longpress_delay_summary">Einstellen, wie lange das System wartet, bevor die Aktion als \"langer Druck\" erkannt wird</string>
+    <string name="smartbar_longpress_delay_default">Kurze Verzögerung (Standard)</string>
+    <string name="smartbar_longpress_delay_normal">Normale Verzögerung</string>
+    <string name="smartbar_longpress_delay_long">Lange Verzögerung</string>
+    <string name="smartbar_custom_icon_size_title">Eigene Symbol-Skalierung</string>
     <!-- Linked / unlinked notification volume -->
     <string name="link_volume_option_title">Klingelton- und Benachrichtigungslautstärke verbinden</string>
 
@@ -310,14 +316,6 @@
     <string name="keyboard_rotation_dialog">Diese Option erzwingt temporär die Auto-Rotation, wenn die Tastatur angezeigt wird. Sie funktioniert nicht, wenn die Auto-Rotation bereits aktiviert ist.</string>
     <string name="show_enter_key_title">Zeige Eingabe-Taste</string>
     <string name="show_enter_key_summary">Erzwingt die Anzeige der Eingabe-Taste an Stelle der Emoji-Taste</string>
-
-    <!-- Selinux Switch -->
-    <string name="selinux_switch_title">SELinux-Schalter Optionen</string>
-    <string name="selinux_switch_summary">SELinux sind verschiedene Kernel-Modifikationen und \"user-space\" Werkzeuge. Eine Änderung des Modus kann unerwartetes Telefonverhalten auslösen. Benutzung auf eigenes Risiko!</string>
-    <string name="selinux_title">SELinux-Modus</string>
-    <string name="selinux_permissive_title">Moderat</string>
-    <string name="selinux_enforcing_title">Strikt</string>
-    <string name="selinux_permissive_toast_title">SELinux-Modus auf \"Moderat\" gesetzt!</string>
 
     <!-- Development QS -->
     <!-- <string name="qs_disable_hw_overlays">@string/disable_overlays</string>
@@ -407,6 +405,10 @@
 
     <string name="magisk_title">Magisk Manager</string>
     <string name="magisk_summary">SU/Root Einstellungen</string>
+
+     <!-- Top Level SuperSU settings -->
+    <string name="supersu_title">SuperSU</string>
+    <string name="supersu_summary">SU/Root Einstellungen</string>
 
     <!-- Top Level Substratum settings -->
     <string name="substratum_title">Substratum</string>
@@ -541,9 +543,18 @@
     <string name="dots_anim_duration_title">Dauer der Punkte</string>
     <string name="home_resize_anim_duration_title">Dauer der Größenänderung der Start-Taste</string>
 
-    <!-- Fingerprint Quick Pulldown -->
+    <!-- Fingerprint Gestures -->
     <string name="quick_pulldown_fp_title">Schnell Öffnen mit Fingerabdrucksensor</string>
     <string name="quick_pulldown_fp_summary">Aktiviert das Öffnen der Schnelleinstellungen indem einmal über den Fingerabdrucksensor gestrichen wird</string>
+    <string name="fp_swipe_call_actions_title">Fingerabdruckgesten für Anrufe</string>
+    <string name="fp_swipe_call_actions_disabled">Deaktiviert</string>
+    <string name="fp_swipe_call_actions_updown_answer_call">Nach oben oder unten streichen, um eingehende Anrufe anzunehmen</string>
+    <string name="fp_swipe_call_actions_up_answer_down_silence">Nach oben streifen um eingehende Anrufe anzunehmen und nach unten streifen zum Stummschalten</string>
+
+    <!-- Reset battery stats -->
+    <string name="ok">Okay</string>
+    <string name="menu_stats_reset">Statistik zurücksetzen</string>
+    <string name="reset_stats_msg">Akkuverbrauch-Statistiken werden zurückgesetzt werden</string>
 
     <!-- Status bar -->
     <string name="smart_pulldown_title">Intelligentes Öffnen</string>
