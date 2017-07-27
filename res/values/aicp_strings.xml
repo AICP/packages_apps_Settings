@@ -557,4 +557,9 @@
     <string name="reset_stats_msg">Battery history stats are going to be reset</string>
 
     <string name="background_processes_settings_title">Background processes</string>
+
+    <!-- Disable battery saver warning color -->
+    <string name="battery_saver_color_title">Warning color</string>
+    <string name="battery_saver_color_summary">Enable orange status and navigation bars when battery saver is activated</string>
+
 </resources>
