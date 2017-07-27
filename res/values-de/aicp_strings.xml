@@ -68,7 +68,6 @@
     <string name="density_category">Displayauflösung</string>
 
     <!-- Color Picker -->
-    <string name="dialog_color_picker">Farbwähler</string>
     <string name="press_color_to_apply">Wähle unten eine Farbe, um diese anzuwenden</string>
     <!-- <string name="arrow_right" translatable="false">→</string>
     <string name="arrow_down" translatable="false">↓</string> -->

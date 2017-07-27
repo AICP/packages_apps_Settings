@@ -72,7 +72,6 @@
     <string name="density_category">解像度オプション</string>
 
     <!-- Color Picker -->
-    <string name="dialog_color_picker">カラーピッカー</string>
     <string name="press_color_to_apply">下の表示色をタップすると設定します</string>
     <string name="arrow_right">→</string>
     <string name="arrow_down">↓</string>
