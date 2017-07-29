@@ -67,7 +67,6 @@
   <string name="density_category">Opzioni di densità</string>
 
   <!-- Color Picker -->
-  <string name="dialog_color_picker">Selettore del colore</string>
   <string name="press_color_to_apply">Premere sul colore qui sotto per applicare</string>
   <string name="hex">Esadecimale:</string>
   <string name="hex_hint">#ff000000</string>

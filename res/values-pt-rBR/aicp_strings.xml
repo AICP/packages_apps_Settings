@@ -72,7 +72,6 @@
     <string name="density_category">Opções de densidade</string>
 
     <!-- Color Picker -->
-    <string name="dialog_color_picker">Seletor de cores</string>
     <string name="press_color_to_apply">Selecione a cor abaixo para aplicar</string>
     <string name="arrow_right">→</string>
     <string name="arrow_down">↓</string>

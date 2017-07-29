@@ -70,7 +70,6 @@
     <string name="density_category">密度选项</string>
 
     <!-- Color Picker -->
-    <string name="dialog_color_picker">颜色选择器</string>
     <string name="press_color_to_apply">选择下面的颜色应用</string>
     <string name="arrow_right">→</string>
     <string name="arrow_down">↓</string>
