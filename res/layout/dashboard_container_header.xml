@@ -22,4 +22,4 @@
     android:layout_height="wrap_content"
     android:layout_marginStart="@dimen/dashboard_header_margin_start"
     android:layout_marginEnd="@dimen/dashboard_header_margin_end"
-    android:background="?android:attr/colorPrimary"/>
+    android:src="@drawable/ic_nav_header_logo"/>
