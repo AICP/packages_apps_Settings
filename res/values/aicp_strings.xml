@@ -556,4 +556,6 @@
     <string name="reset_stats_msg">Battery history stats are going to be reset</string>
 
     <string name="background_processes_settings_title">Background processes</string>
+
+    <string name="vibration_mode_indication_title">Indicate vibration mode by vibrating</string>
 </resources>
