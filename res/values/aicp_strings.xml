@@ -567,17 +567,17 @@
     <string name="theme_primary_color">Primary color</string>
     <string name="theme">Theme</string>
     <string name="oms_enabled">Theme modes unavailable because a Substratum theme is currently applied</string>
-    <string name="red">Torch Red</string>
-    <string name="orange">Vermilion</string>
-    <string name="blue">Pixel Blue</string>
-    <string name="green">Lima</string>
-    <string name="yellow">Supernova</string>
-    <string name="purple">Purple Heat</string>
-    <string name="pink">Rose</string>
+    <string name="red">Red</string>
+    <string name="orange">Amber</string>
+    <string name="blue">Blue</string>
+    <string name="green">Green</string>
+    <string name="yellow">Yellow</string>
+    <string name="purple">Purple</string>
+    <string name="pink">Pink</string>
     <string name="dark">Dark</string>
     <string name="pixel">Pixel</string>
     <string name="teal">Default</string>
-    <string name="cyan">Scooter</string>
+    <string name="cyan">Cyan</string>
     <string name="grey">Grey</string>
     <string name="default_string">Default</string>
 </resources>
