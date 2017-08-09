@@ -585,7 +585,7 @@ public class SettingsActivity extends SettingsDrawerActivity
     @Override
     protected void onCreate(Bundle savedState) {
         final int themeMode = Secure.getInt(getContentResolver(),
-                Secure.THEME_PRIMARY_COLOR, 2);
+                Secure.THEME_PRIMARY_COLOR, 0);
         final int accentColor = Secure.getInt(getContentResolver(),
                 Secure.THEME_ACCENT_COLOR, 4);
         mThemeManager = (ThemeManager) getSystemService(Context.THEME_SERVICE);
