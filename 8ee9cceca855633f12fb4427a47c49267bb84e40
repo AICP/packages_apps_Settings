@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aa5700d0_e3edc603",
+        "filename": "res/xml/display_settings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 683
+      },
+      "writtenOn": "2017-08-10T17:46:23Z",
+      "side": 1,
+      "message": "indentation :(",
+      "range": {
+        "startLine": 217,
+        "startChar": 12,
+        "endLine": 222,
+        "endChar": 29
+      },
+      "revId": "8ee9cceca855633f12fb4427a47c49267bb84e40",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": false
+    }
+  ]
+}
