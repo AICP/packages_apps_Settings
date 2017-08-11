@@ -75,7 +75,6 @@ import static android.provider.Settings.System.SCREEN_OFF_TIMEOUT;
 import static com.android.settingslib.RestrictedLockUtils.EnforcedAdmin;
 
 import cyanogenmod.hardware.CMHardwareManager;
-import cyanogenmod.providers.CMSettings;
 
 public class DisplaySettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
@@ -96,30 +95,23 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_NIGHT_DISPLAY = "night_display";
     private static final String KEY_NIGHT_MODE = "night_mode";
     private static final String KEY_CAMERA_GESTURE = "camera_gesture";
+
     private static final String KEY_WALLPAPER = "wallpaper";
     private static final String KEY_VR_DISPLAY_PREF = "vr_display_pref";
-    private static final String KEY_PROXIMITY_WAKE = "proximity_on_wake";
-    private static final String KEY_WAKE_WHEN_PLUGGED_OR_UNPLUGGED = "wake_when_plugged_or_unplugged";
     private static final String KEY_DASHBOARD_PORTRAIT_COLUMNS = "dashboard_portrait_columns";
     private static final String KEY_DASHBOARD_LANDSCAPE_COLUMNS = "dashboard_landscape_columns";
     private static final String KEY_DOZE_FRAGMENT = "doze_fragment";
 
     private CustomSeekBarPreference mDashboardPortraitColumns;
     private CustomSeekBarPreference mDashboardLandscapeColumns;
-
     private ListPreference mNightModePreference;
-
     private Preference mFontSizePref;
     private Preference mScreenSaverPreference;
-
     private PreferenceScreen mDozeFragment;
-
     private SwitchPreference mLiftToWakePreference;
     private SwitchPreference mTapToWakePreference;
     private SwitchPreference mAutoBrightnessPreference;
     private SwitchPreference mCameraGesturePreference;
-    private SwitchPreference mProximityCheckOnWakePreference;
-    private SwitchPreference mWakeWhenPluggedOrUnplugged;
 
     private TimeoutListPreference mScreenTimeoutPreference;
 
@@ -150,10 +142,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
 
         mFontSizePref = findPreference(KEY_FONT_SIZE);
 
-        if (!NightDisplayController.isAvailable(activity)) {
-            removePreference(KEY_NIGHT_DISPLAY);
-        }
-
         if (displayPrefs != null) {
             mAutoBrightnessPreference = (SwitchPreference) findPreference(KEY_AUTO_BRIGHTNESS);
             if (mAutoBrightnessPreference != null) {
@@ -162,6 +150,10 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 } else {
                     displayPrefs.removePreference(mAutoBrightnessPreference);
                 }
+            }
+
+            if (!NightDisplayController.isAvailable(activity)) {
+                removePreference(KEY_NIGHT_DISPLAY);
             }
 
             mLiftToWakePreference = (SwitchPreference) findPreference(KEY_LIFT_TO_WAKE);
@@ -274,8 +266,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     displayPrefs.removePreference(vrDisplayPref);
                 }
             }
-
-            mProximityCheckOnWakePreference = (SwitchPreference) findPreference(KEY_PROXIMITY_WAKE);
         }
 
         mNightModePreference = (ListPreference) findPreference(KEY_NIGHT_MODE);
@@ -298,9 +288,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 Settings.System.DASHBOARD_LANDSCAPE_COLUMNS, 2);
         mDashboardLandscapeColumns.setValue(columnsLandscape / 1);
         mDashboardLandscapeColumns.setOnPreferenceChangeListener(this);
-
-        mWakeWhenPluggedOrUnplugged =
-                (SwitchPreference) findPreference(KEY_WAKE_WHEN_PLUGGED_OR_UNPLUGGED);
     }
 
     private static boolean allowAllRotations(Context context) {
@@ -389,24 +376,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         }
         updateTimeoutPreferenceDescription(currentTimeout);
 
-        // Default value for wake-on-plug behavior from config.xml
-        boolean wakeUpWhenPluggedOrUnpluggedConfig = getResources().getBoolean(
-                com.android.internal.R.bool.config_unplugTurnsOnScreen);
-
-        if (mWakeWhenPluggedOrUnplugged != null) {
-            mWakeWhenPluggedOrUnplugged.setChecked(CMSettings.Global.getInt(getContentResolver(),
-                    CMSettings.Global.WAKE_WHEN_PLUGGED_OR_UNPLUGGED,
-                    (wakeUpWhenPluggedOrUnpluggedConfig ? 1 : 0)) == 1);
-        }
-
-        boolean proximityCheckOnWake = getResources().getBoolean(
-                org.cyanogenmod.platform.internal.R.bool.config_proximityCheckOnWake);
-        if (mProximityCheckOnWakePreference != null) {
-            mProximityCheckOnWakePreference.setChecked(CMSettings.System.getInt(getContentResolver(),
-                    CMSettings.System.PROXIMITY_ON_WAKE,
-                    (proximityCheckOnWake ? 1 : 0)) == 1);
-        }
-
         disablePreferenceIfManaged(KEY_WALLPAPER, UserManager.DISALLOW_SET_WALLPAPER);
     }
 
@@ -470,23 +439,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         final int index = ToggleFontSizePreferenceFragment.fontSizeValueToIndex(currentScale,
                 strEntryValues);
         mFontSizePref.setSummary(entries[index]);
-    }
-
-    @Override
-    public boolean onPreferenceTreeClick(Preference preference) {
-        if (preference == mWakeWhenPluggedOrUnplugged) {
-            CMSettings.Global.putInt(getContentResolver(),
-                    CMSettings.Global.WAKE_WHEN_PLUGGED_OR_UNPLUGGED,
-                    mWakeWhenPluggedOrUnplugged.isChecked() ? 1 : 0);
-            return true;
-        } else if (preference == mProximityCheckOnWakePreference) {
-            CMSettings.System.putInt(getContentResolver(),
-                    CMSettings.System.PROXIMITY_ON_WAKE,
-                    mProximityCheckOnWakePreference.isChecked() ? 1 : 0);
-            return true;
-        }
-
-        return super.onPreferenceTreeClick(preference);
     }
 
     @Override
@@ -644,7 +596,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     }
                     if (!context.getResources().getBoolean(
                             org.cyanogenmod.platform.internal.R.bool.config_proximityCheckOnWake)) {
-                        result.add(KEY_PROXIMITY_WAKE);
+                        result.add("proximity_on_wake");
                     }
                     if (!CMHardwareManager.getInstance(context).
                             isSupported(CMHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY)) {
