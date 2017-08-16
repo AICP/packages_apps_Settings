@@ -19,6 +19,7 @@ package com.android.settings.aicp.utils;
 
 import java.io.File;
 
+import com.android.internal.utils.du.ActionHandler;
 import com.android.internal.utils.du.DUActionUtils;
 import com.android.internal.utils.du.ImageHelper;
 
@@ -78,7 +79,7 @@ public class IconPickerGallery extends Activity {
                             resultIntent.setAction(INTENT_GALLERY_PICKER);
                             resultIntent.putExtra("result", Activity.RESULT_OK);
                             resultIntent.putExtra("uri", newUri.toString());
-                            sendBroadcastAsUser(resultIntent, UserHandle.CURRENT);
+                            ActionHandler.dispatchNavigationEditorResult(resultIntent);
                             setResult(RESULT_OK, resultIntent);
                             finish();
                         }
@@ -106,7 +107,7 @@ public class IconPickerGallery extends Activity {
     private void sendCancelResultAndFinish() {
         Intent intent = new Intent(INTENT_GALLERY_PICKER);
         intent.putExtra("result", Activity.RESULT_CANCELED);
-        sendBroadcastAsUser(intent, UserHandle.CURRENT);
+        ActionHandler.dispatchNavigationEditorResult(intent);
         setResult(Activity.RESULT_CANCELED);
         finish();
     }

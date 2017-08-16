@@ -26,6 +26,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import com.android.internal.utils.du.ActionHandler;
 import com.android.settings.R;
 
 import android.app.Activity;
@@ -127,7 +128,7 @@ public class IconPickerActivity extends Activity implements DialogInterface.OnCa
     private void sendCancelResultAndFinish() {
         Intent intent = new Intent(INTENT_ICON_PICKER);
         intent.putExtra("result", Activity.RESULT_CANCELED);
-        sendBroadcastAsUser(intent, UserHandle.CURRENT);
+        ActionHandler.dispatchNavigationEditorResult(intent);
         setResult(Activity.RESULT_CANCELED);
         finish();
     }
@@ -145,7 +146,7 @@ public class IconPickerActivity extends Activity implements DialogInterface.OnCa
                 resultIntent.putExtra("icon_data_type", iconType);
                 resultIntent.putExtra("icon_data_package", iconPackage);
                 resultIntent.putExtra("icon_data_name", iconName);
-                sendBroadcastAsUser(resultIntent, UserHandle.CURRENT);
+                ActionHandler.dispatchNavigationEditorResult(resultIntent);
                 setResult(RESULT_OK, resultIntent);
                 finish();
             } else {
