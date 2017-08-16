@@ -56,6 +56,7 @@ import android.widget.Toast;
 import com.android.internal.logging.MetricsLogger;
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.internal.utils.du.ActionConstants;
+import com.android.internal.utils.du.ActionHandler;
 import com.android.internal.utils.du.Config;
 import com.android.internal.utils.du.Config.ButtonConfig;
 import com.android.settings.R;
@@ -228,7 +229,7 @@ public class SmartbarSettings extends SettingsPreferenceFragment implements
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
         if (preference == findPreference("smartbar_editor_mode")) {
-            getActivity().sendBroadcastAsUser(new Intent("intent_navbar_edit"), UserHandle.CURRENT);
+            ActionHandler.performTask(getActivity(), ActionHandler.SYSTEMUI_TASK_EDITING_SMARTBAR);
             return true;
         }
         return super.onPreferenceTreeClick(preference);
@@ -324,9 +325,8 @@ public class SmartbarSettings extends SettingsPreferenceFragment implements
                Config.setConfig(getActivity(),
         ActionConstants.getDefaults(ActionConstants.SMARTBAR),
                buttonConfigs);
-        Intent intent = new Intent("intent_navbar_edit");
-        intent.putExtra("extra_navbar_edit_reset_layout", "resetMePlox");
-        getActivity().sendBroadcastAsUser(intent, UserHandle.CURRENT);
+        Intent intent = new Intent("intent_navbar_edit_reset_layout");
+        ActionHandler.dispatchNavigationEditorResult(intent);
 
         Settings.Secure.putInt(getContentResolver(),
                 "smartbar_context_menu_mode", 0);
@@ -418,9 +418,8 @@ public class SmartbarSettings extends SettingsPreferenceFragment implements
                 ActionConstants.getDefaults(ActionConstants.SMARTBAR)
                         .getUri(), config,
                 UserHandle.USER_CURRENT);
-        Intent intent = new Intent("intent_navbar_edit");
-        intent.putExtra("extra_navbar_edit_reset_layout", "resetMePlox");
-        context.sendBroadcastAsUser(intent, UserHandle.CURRENT);
+        Intent intent = new Intent("intent_navbar_edit_reset_layout");
+        ActionHandler.dispatchNavigationEditorResult(intent);
     }
 
     static void backupSmartbarConfig(String config, String suffix) {
