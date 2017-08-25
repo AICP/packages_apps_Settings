@@ -347,11 +347,14 @@ public class FingerprintSettings extends SubSettings {
                     activity, getString(getHelpResource()), activity.getClass().getName());
             final AnnotationSpan.LinkInfo linkInfo = new AnnotationSpan.LinkInfo(
                     activity, ANNOTATION_URL, helpIntent);
-            pref.setTitle(AnnotationSpan.linkify(getText(admin != null
-                            ? R.string
-                            .security_settings_fingerprint_enroll_disclaimer_lockscreen_disabled
-                            : R.string.security_settings_fingerprint_enroll_disclaimer),
-                    linkInfo, adminLinkInfo));
+            final CharSequence msg = getText(admin != null
+                    ? R.string.security_settings_fingerprint_enroll_disclaimer_lockscreen_disabled
+                    : R.string.security_settings_fingerprint_enroll_disclaimer);
+            if (TextUtils.isEmpty(getString(getHelpResource()))) {
+                pref.setTitle(msg);
+            } else {
+                pref.setTitle(AnnotationSpan.linkify(msg, linkInfo, adminLinkInfo));
+            }
         }
 
         protected void removeFingerprintPreference(int fingerprintId) {
