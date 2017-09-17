@@ -17,6 +17,12 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         android:title="@string/about_settings">
 
+        <!-- AICP logo -->
+        <Preference android:key="aicp_logo"
+                android:title="@string/aicp_name_title"
+                android:summary="@string/aicp_name_summary"
+                android:icon="@drawable/ic_aicp" />
+
         <!-- System update settings - launches activity -->
         <Preference android:key="additional_system_update_settings"
                     android:title="@string/additional_system_update_settings_list_item_title">
