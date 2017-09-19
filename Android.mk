@@ -63,6 +63,8 @@ ifneq ($(INCREMENTAL_BUILDS),)
     LOCAL_JACK_FLAGS := --multi-dex native
 endif
 
+LOCAL_FULL_LIBS_MANIFEST_FILES := $(LOCAL_PATH)/AndroidManifest-aicp.xml
+
 include frameworks/base/packages/SettingsLib/common.mk
 include frameworks/base/packages/SettingsLib/search/common.mk
 
