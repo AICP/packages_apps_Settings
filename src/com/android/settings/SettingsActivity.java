@@ -848,6 +848,16 @@ public class SettingsActivity extends SettingsDrawerActivity
                         Settings.WifiDisplaySettingsActivity.class.getName()),
                 WifiDisplaySettings.isAvailable(this), isAdmin);
 
+        // AicpExtras
+        boolean aicpExtrasSupported = false;
+        try {
+            aicpExtrasSupported = (getPackageManager().getPackageInfo("com.aicp.extras", 0).versionCode >= 1);
+        } catch (PackageManager.NameNotFoundException e) {
+        }
+        setTileEnabled(new ComponentName(packageName,
+                        Settings.StartAeActivity.class.getName()),
+                aicpExtrasSupported, isAdmin);
+
         if (UserHandle.MU_ENABLED && !isAdmin) {
 
             // When on restricted users, disable all extra categories (but only the settings ones).
