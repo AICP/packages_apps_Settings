@@ -39,6 +39,14 @@
         settings:controller="com.android.settings.connecteddevice.TopLevelConnectedDevicesPreferenceController"/>
 
     <Preference
+        android:key="top_level_ae"
+        android:title="@string/aicpextras_title"
+        android:summary="@string/aicpextras_summary"
+        android:icon="@drawable/ic_homepage_aicpextras"
+        android:fragment="com.android.settings.aicp.StartAe"
+        android:order="-105"/>
+
+    <Preference
         android:key="top_level_apps_and_notifs"
         android:title="@string/app_and_notification_dashboard_title"
         android:summary="@string/app_and_notification_dashboard_summary"
@@ -69,6 +77,7 @@
         android:title="@string/sound_settings"
         android:summary="@string/sound_dashboard_summary"
         android:icon="@drawable/ic_homepage_sound"
+
         android:order="-70"
         android:fragment="com.android.settings.notification.SoundSettings"/>
 
