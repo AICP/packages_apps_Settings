@@ -14,7 +14,12 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-        <string name="aicp_name_title">AICP Experience</string>
-        <string name="aicp_name_summary">Aicp Oreo Edition - 13.0</string>
+
+    <string name="aicp_name_title">AICP Experience</string>
+    <string name="aicp_name_summary">Aicp Oreo Edition - 13.0</string>
+
+    <string name="aicpextras_settings">AICP Extras</string>
+    <string name="aicpextras_dashboard_summary">ROM Customization</string>
 </resources>
