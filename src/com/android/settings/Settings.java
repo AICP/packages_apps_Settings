@@ -177,4 +177,7 @@ public class Settings extends SettingsActivity {
     public static class AccountDashboardActivity extends SettingsActivity {}
     public static class SystemDashboardActivity extends SettingsActivity {}
 
+    // AICP Activities
+    public static class StartAeActivity extends SettingsActivity {}
+
 }
