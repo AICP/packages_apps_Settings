@@ -50,6 +50,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toolbar;
 import com.android.internal.util.ArrayUtils;
+import com.android.internal.util.aicp.AicpUtils;
 import com.android.settings.Settings.WifiSettingsActivity;
 import com.android.settings.backup.BackupSettingsActivity;
 import com.android.settings.core.gateway.SettingsGateway;
@@ -844,6 +845,13 @@ public class SettingsActivity extends SettingsDrawerActivity
                         Settings.WifiDisplaySettingsActivity.class.getName()),
                 WifiDisplaySettings.isAvailable(this), isAdmin)
                 || somethingChanged;
+
+        // AicpExtras
+        boolean aicpExtrasSupported = false;
+        aicpExtrasSupported = AicpUtils.isPackageEnabled("com.aicp.extras", pm);
+        setTileEnabled(new ComponentName(packageName,
+                        Settings.StartAeActivity.class.getName()),
+                aicpExtrasSupported, isAdmin);
 
         if (UserHandle.MU_ENABLED && !isAdmin) {
 

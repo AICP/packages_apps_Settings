@@ -41,6 +41,7 @@ import com.android.settings.accounts.ChooseAccountActivity;
 import com.android.settings.accounts.ManagedProfileSettings;
 import com.android.settings.accounts.UserAndAccountDashboardFragment;
 import com.android.settings.applications.DefaultAppSettings;
+import com.android.settings.aicp.StartAe;
 import com.android.settings.applications.AppAndNotificationDashboardFragment;
 import com.android.settings.applications.DrawOverlayDetails;
 import com.android.settings.applications.ExternalSourcesDetails;
@@ -253,6 +254,7 @@ public class SettingsGateway {
             LockscreenDashboardFragment.class.getName(),
             BluetoothDeviceDetailsFragment.class.getName(),
             DataUsageList.class.getName()
+            StartAe.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
