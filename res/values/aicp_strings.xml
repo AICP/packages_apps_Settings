@@ -30,4 +30,7 @@
     <string name="supersu_title">SuperSU</string>
 
     <string name="device_info_title">Phone info</string>
+
+    <!-- Local (desktop) backup password menu title [CHAR LIMIT=25] -->
+    <string name="local_backup_password_title">Desktop backup password</string>
 </resources>
