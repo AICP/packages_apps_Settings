@@ -70,8 +70,8 @@
         </Preference>
 
         <!-- Feedback on the device -->
-        <Preference android:key="device_feedback"
-                android:title="@string/device_feedback" />
+        <!--Preference android:key="device_feedback"
+                android:title="@string/device_feedback" /-->
 
         <!-- Contributors cloud -->
         <org.lineageos.internal.lineageparts.LineagePartsPreference
