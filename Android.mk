@@ -32,6 +32,7 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
     android-support-v7-preference \
     android-support-v7-recyclerview \
     android-support-v14-preference \
+    AicpGear-util
 
 LOCAL_JAVA_LIBRARIES := \
     bouncycastle \
@@ -53,6 +54,8 @@ ifneq ($(INCREMENTAL_BUILDS),)
     LOCAL_JACK_ENABLED := incremental
     LOCAL_JACK_FLAGS := --multi-dex native
 endif
+
+LOCAL_FULL_LIBS_MANIFEST_FILES := $(LOCAL_PATH)/AndroidManifest-aicp.xml
 
 include frameworks/opt/setupwizard/library/common-gingerbread.mk
 include frameworks/base/packages/SettingsLib/common.mk
