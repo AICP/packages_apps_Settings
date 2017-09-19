@@ -44,8 +44,8 @@ import android.view.accessibility.AccessibilityManager;
 
 import com.android.internal.content.PackageMonitor;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
-import com.android.internal.view.RotationPolicy;
-import com.android.internal.view.RotationPolicy.RotationPolicyListener;
+//import com.android.internal.view.RotationPolicy;
+//import com.android.internal.view.RotationPolicy.RotationPolicyListener;
 import com.android.settings.DisplaySettings;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -93,8 +93,8 @@ public class AccessibilitySettings extends SettingsPreferenceFragment implements
             "toggle_inversion_preference";
     private static final String TOGGLE_POWER_BUTTON_ENDS_CALL_PREFERENCE =
             "toggle_power_button_ends_call_preference";
-    private static final String TOGGLE_LOCK_SCREEN_ROTATION_PREFERENCE =
-            "toggle_lock_screen_rotation_preference";
+    //private static final String TOGGLE_LOCK_SCREEN_ROTATION_PREFERENCE =
+    //        "toggle_lock_screen_rotation_preference";
     private static final String TOGGLE_LARGE_POINTER_ICON =
             "toggle_large_pointer_icon";
     private static final String TOGGLE_MASTER_MONO =
@@ -107,8 +107,8 @@ public class AccessibilitySettings extends SettingsPreferenceFragment implements
             "captioning_preference_screen";
     private static final String DISPLAY_MAGNIFICATION_PREFERENCE_SCREEN =
             "magnification_preference_screen";
-    private static final String FONT_SIZE_PREFERENCE_SCREEN =
-            "font_size_preference_screen";
+    //private static final String FONT_SIZE_PREFERENCE_SCREEN =
+    //        "font_size_preference_screen";
     private static final String AUTOCLICK_PREFERENCE_SCREEN =
             "autoclick_preference_screen";
     private static final String DISPLAY_DALTONIZER_PREFERENCE_SCREEN =
@@ -178,12 +178,12 @@ public class AccessibilitySettings extends SettingsPreferenceFragment implements
                 }
             };
 
-    private final RotationPolicyListener mRotationPolicyListener = new RotationPolicyListener() {
-        @Override
-        public void onChange() {
-            updateLockScreenRotationCheckbox();
-        }
-    };
+    //private final RotationPolicyListener mRotationPolicyListener = new RotationPolicyListener() {
+    //    @Override
+    //    public void onChange() {
+    //        updateLockScreenRotationCheckbox();
+    //    }
+    //};
 
     private final Map<String, PreferenceCategory> mCategoryToPrefCategoryMap =
             new ArrayMap<>();
@@ -194,14 +194,14 @@ public class AccessibilitySettings extends SettingsPreferenceFragment implements
 
     private SwitchPreference mToggleHighTextContrastPreference;
     private SwitchPreference mTogglePowerButtonEndsCallPreference;
-    private SwitchPreference mToggleLockScreenRotationPreference;
+    //private SwitchPreference mToggleLockScreenRotationPreference;
     private SwitchPreference mToggleLargePointerIconPreference;
     private SwitchPreference mToggleMasterMonoPreference;
     private ListPreference mSelectLongPressTimeoutPreference;
     private Preference mNoServicesMessagePreference;
     private Preference mCaptioningPreferenceScreen;
     private Preference mDisplayMagnificationPreferenceScreen;
-    private Preference mFontSizePreferenceScreen;
+    //private Preference mFontSizePreferenceScreen;
     private Preference mAutoclickPreferenceScreen;
     private Preference mAccessibilityShortcutPreferenceScreen;
     private Preference mDisplayDaltonizerPreferenceScreen;
@@ -237,20 +237,20 @@ public class AccessibilitySettings extends SettingsPreferenceFragment implements
 
         mSettingsPackageMonitor.register(getActivity(), getActivity().getMainLooper(), false);
         mSettingsContentObserver.register(getContentResolver());
-        if (RotationPolicy.isRotationSupported(getActivity())) {
-            RotationPolicy.registerRotationPolicyListener(getActivity(),
-                    mRotationPolicyListener);
-        }
+        //if (RotationPolicy.isRotationSupported(getActivity())) {
+        //    RotationPolicy.registerRotationPolicyListener(getActivity(),
+        //            mRotationPolicyListener);
+        //}
     }
 
     @Override
     public void onPause() {
         mSettingsPackageMonitor.unregister();
         mSettingsContentObserver.unregister(getContentResolver());
-        if (RotationPolicy.isRotationSupported(getActivity())) {
-            RotationPolicy.unregisterRotationPolicyListener(getActivity(),
-                    mRotationPolicyListener);
-        }
+        //if (RotationPolicy.isRotationSupported(getActivity())) {
+        //    RotationPolicy.unregisterRotationPolicyListener(getActivity(),
+        //            mRotationPolicyListener);
+        //}
         super.onPause();
     }
 
@@ -286,9 +286,9 @@ public class AccessibilitySettings extends SettingsPreferenceFragment implements
         } else if (mTogglePowerButtonEndsCallPreference == preference) {
             handleTogglePowerButtonEndsCallPreferenceClick();
             return true;
-        } else if (mToggleLockScreenRotationPreference == preference) {
-            handleLockScreenRotationPreferenceClick();
-            return true;
+        //} else if (mToggleLockScreenRotationPreference == preference) {
+        //    handleLockScreenRotationPreferenceClick();
+        //    return true;
         } else if (mToggleLargePointerIconPreference == preference) {
             handleToggleLargePointerIconPreferenceClick();
             return true;
@@ -313,10 +313,10 @@ public class AccessibilitySettings extends SettingsPreferenceFragment implements
                         : Settings.Secure.INCALL_POWER_BUTTON_BEHAVIOR_SCREEN_OFF));
     }
 
-    private void handleLockScreenRotationPreferenceClick() {
-        RotationPolicy.setRotationLockForAccessibility(getActivity(),
-                !mToggleLockScreenRotationPreference.isChecked());
-    }
+    //private void handleLockScreenRotationPreferenceClick() {
+    //    RotationPolicy.setRotationLockForAccessibility(getActivity(),
+    //            !mToggleLockScreenRotationPreference.isChecked());
+    //}
 
     private void handleToggleLargePointerIconPreferenceClick() {
         Settings.Secure.putInt(getContentResolver(),
@@ -353,12 +353,12 @@ public class AccessibilitySettings extends SettingsPreferenceFragment implements
         }
 
         // Lock screen rotation.
-        mToggleLockScreenRotationPreference =
-                (SwitchPreference) findPreference(TOGGLE_LOCK_SCREEN_ROTATION_PREFERENCE);
-        if (!RotationPolicy.isRotationSupported(getActivity())) {
-            mCategoryToPrefCategoryMap.get(CATEGORY_INTERACTION_CONTROL)
-                    .removePreference(mToggleLockScreenRotationPreference);
-        }
+        //mToggleLockScreenRotationPreference =
+        //        (SwitchPreference) findPreference(TOGGLE_LOCK_SCREEN_ROTATION_PREFERENCE);
+        //if (!RotationPolicy.isRotationSupported(getActivity())) {
+        //    mCategoryToPrefCategoryMap.get(CATEGORY_INTERACTION_CONTROL)
+        //            .removePreference(mToggleLockScreenRotationPreference);
+        //}
 
         // Large pointer icon.
         mToggleLargePointerIconPreference =
@@ -393,7 +393,7 @@ public class AccessibilitySettings extends SettingsPreferenceFragment implements
         configureMagnificationPreferenceIfNeeded(mDisplayMagnificationPreferenceScreen);
 
         // Font size.
-        mFontSizePreferenceScreen = findPreference(FONT_SIZE_PREFERENCE_SCREEN);
+        //mFontSizePreferenceScreen = findPreference(FONT_SIZE_PREFERENCE_SCREEN);
 
         // Autoclick after pointer stops.
         mAutoclickPreferenceScreen = findPreference(AUTOCLICK_PREFERENCE_SCREEN);
@@ -588,7 +588,7 @@ public class AccessibilitySettings extends SettingsPreferenceFragment implements
         }
 
         // Auto-rotate screen
-        updateLockScreenRotationCheckbox();
+        //updateLockScreenRotationCheckbox();
 
         // Large pointer icon.
         mToggleLargePointerIconPreference.setChecked(Settings.Secure.getInt(getContentResolver(),
@@ -611,7 +611,7 @@ public class AccessibilitySettings extends SettingsPreferenceFragment implements
 
         updateMagnificationSummary(mDisplayMagnificationPreferenceScreen);
 
-        updateFontSizeSummary(mFontSizePreferenceScreen);
+        //updateFontSizeSummary(mFontSizePreferenceScreen);
 
         updateAutoclickSummary(mAutoclickPreferenceScreen);
 
@@ -662,24 +662,24 @@ public class AccessibilitySettings extends SettingsPreferenceFragment implements
                 getResources(), delay));
     }
 
-    private void updateFontSizeSummary(Preference pref) {
-        final float currentScale = Settings.System.getFloat(getContext().getContentResolver(),
-                Settings.System.FONT_SCALE, 1.0f);
-        final Resources res = getContext().getResources();
-        final String[] entries = res.getStringArray(R.array.entries_font_size_percent_custom);
-        final String[] strEntryValues = res.getStringArray(R.array.entryvalues_font_size_custom);
-        final int index = ToggleFontSizePreferenceFragment.fontSizeValueToIndex(currentScale,
-                strEntryValues);
-        pref.setSummary(entries[index]);
-    }
+    //private void updateFontSizeSummary(Preference pref) {
+    //    final float currentScale = Settings.System.getFloat(getContext().getContentResolver(),
+    //            Settings.System.FONT_SCALE, 1.0f);
+    //    final Resources res = getContext().getResources();
+    //    final String[] entries = res.getStringArray(R.array.entries_font_size);
+    //    final String[] strEntryValues = res.getStringArray(R.array.entryvalues_font_size);
+    //    final int index = ToggleFontSizePreferenceFragment.fontSizeValueToIndex(currentScale,
+    //            strEntryValues);
+    //    pref.setSummary(entries[index]);
+    //}
 
-    private void updateLockScreenRotationCheckbox() {
-        Context context = getActivity();
-        if (context != null) {
-            mToggleLockScreenRotationPreference.setChecked(
-                    !RotationPolicy.isRotationLocked(context));
-        }
-    }
+    //private void updateLockScreenRotationCheckbox() {
+    //    Context context = getActivity();
+    //    if (context != null) {
+    //        mToggleLockScreenRotationPreference.setChecked(
+    //                !RotationPolicy.isRotationLocked(context));
+    //    }
+    //}
 
     private void updateMasterMono() {
         final boolean masterMono = Settings.System.getIntForUser(
@@ -769,7 +769,7 @@ public class AccessibilitySettings extends SettingsPreferenceFragment implements
         public List<String> getNonIndexableKeys(Context context) {
             List<String> keys = new ArrayList<>();
             // Duplicates in Display
-            keys.add(FONT_SIZE_PREFERENCE_SCREEN);
+            //keys.add(FONT_SIZE_PREFERENCE_SCREEN);
             // TODO (b/37741509) Remove this non-indexble key when bug is resolved.
             keys.add(DisplaySettings.KEY_DISPLAY_SIZE);
 
