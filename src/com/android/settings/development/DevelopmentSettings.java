@@ -383,8 +383,10 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         mBackupManager = IBackupManager.Stub.asInterface(
                 ServiceManager.getService(Context.BACKUP_SERVICE));
         mWebViewUpdateService = WebViewFactory.getUpdateService();
-        mOemUnlockManager = (PersistentDataBlockManager) getActivity()
-                .getSystemService(Context.PERSISTENT_DATA_BLOCK_SERVICE);
+        if (showEnableOemUnlockPreference()) {
+            mOemUnlockManager = (PersistentDataBlockManager) getActivity()
+                    .getSystemService(Context.PERSISTENT_DATA_BLOCK_SERVICE);
+        }
         mTelephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
 
         mUm = (UserManager) getSystemService(Context.USER_SERVICE);
