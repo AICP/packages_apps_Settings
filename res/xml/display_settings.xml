@@ -64,21 +64,6 @@
         android:title="@string/display_auto_rotate_title" />
 
     <Preference
-        android:key="font_size"
-        android:title="@string/title_font_size"
-        android:fragment="com.android.settings.accessibility.ToggleFontSizePreferenceFragment"
-        settings:keywords="@string/keywords_display_font_size" />
-
-    <com.android.settings.display.ScreenZoomPreference
-        android:key="screen_zoom"
-        android:title="@string/screen_zoom_title"
-        settings:keywords="@string/screen_zoom_keywords" />
-
-    <com.android.settings.display.DensityPreference
-        android:key="density"
-        android:title="@string/developer_smallest_width" />
-
-    <Preference
         android:key="screensaver"
         android:title="@string/screensaver_settings_title"
         android:fragment="com.android.settings.DreamSettings" />
@@ -139,5 +124,26 @@
         android:key="vr_display_pref"
         android:title="@string/display_vr_pref_title"
         android:fragment="com.android.settings.display.VrDisplayPreferencePicker" />
+
+    <PreferenceCategory
+        android:key="density_category"
+        android:title="@string/density_category">
+
+        <Preference
+            android:key="font_size"
+            android:title="@string/title_font_size"
+            android:fragment="com.android.settings.accessibility.ToggleFontSizePreferenceFragment"
+            settings:keywords="@string/keywords_display_font_size" />
+
+        <com.android.settings.display.ScreenZoomPreference
+            android:key="screen_zoom"
+            android:title="@string/screen_zoom_title"
+            settings:keywords="@string/screen_zoom_keywords" />
+
+        <com.android.settings.display.DensityPreference
+            android:key="density"
+            android:title="@string/developer_smallest_width" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
