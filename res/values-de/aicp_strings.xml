@@ -555,6 +555,31 @@
     <string name="menu_stats_reset">Statistik zurücksetzen</string>
     <string name="reset_stats_msg">Akkuverbrauch-Statistiken werden zurückgesetzt werden</string>
 
+    <string name="background_processes_settings_title">Hintergrundprozesse</string>
+
+    <string name="vibration_mode_indication_title">Anzeige des Vibrationsmodus durch vibrieren</string>
+
+    <!-- Color engine -->
+    <string name="theme_switch_palette">Wechsle zwischen Haupt- und Akzentfarben</string>
+    <string name="theme_title">Designanpassung</string>
+    <string name="theme_summary">Wähle verschiedene Farben für das UI Design</string>
+    <string name="theme_accent_color">Akzentfarbe</string>
+    <string name="theme_primary_color">Haupt-/Hintergrundfarbe</string>
+    <string name="theme">Design</string>
+    <string name="oms_enabled">Design-Modus ist verfügbar, da ein Substratum Design-Overlay momentan installiert ist</string>
+    <string name="red">Rot</string>
+    <string name="orange">Bernstein</string>
+    <string name="blue">Blau</string>
+    <string name="green">Grün</string>
+    <string name="yellow">Gelb</string>
+    <string name="purple">Lila</string>
+    <string name="pink">Pink</string>
+    <string name="dark">Dunkel</string>
+    <string name="pixel">Pixel</string>
+    <string name="teal">Standard</string>
+    <string name="cyan">Cyan</string>
+    <string name="grey">Grau</string>
+
     <!-- Status bar -->
     <string name="smart_pulldown_title">Intelligentes Öffnen</string>
     <string name="smart_pulldown_summary">Öffnet die Schnelleinstellungen sofort, wenn %1$s Benachrichtigungen vorhanden sind</string>
