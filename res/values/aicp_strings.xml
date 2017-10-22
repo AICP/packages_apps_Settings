@@ -43,4 +43,7 @@
     <string name="selinux_status_permissive">Permissive</string>
     <string name="selinux_status_enforcing">Enforcing</string>
 
+    <!-- Charging vibration -->
+    <string name="charging_vibro_title">Charging vibration</string>
+
 </resources>
