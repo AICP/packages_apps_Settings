@@ -35,9 +35,6 @@
     <string name="custom_encryption_and_credential_settings_summary_on">Device is encrypted</string>
     <string name="custom_encryption_and_credential_settings_summary_off">Device is decrypted</string>
 
-    <!-- Local (desktop) backup password menu title [CHAR LIMIT=25] -->
-    <string name="local_backup_password_title">Desktop backup password</string>
-
     <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
     <plurals name="show_dev_countdown_custom">
         <item quantity="one">You are now <xliff:g id="step_count">%1$d</xliff:g> step away from enabling developer options.</item>
