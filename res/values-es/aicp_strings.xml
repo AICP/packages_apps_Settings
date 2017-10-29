@@ -360,4 +360,6 @@
     <string name="double_tap_wake_doze_title">Doble toque para despertar en doze</string>
     <string name="double_tap_wake_doze_summary">Requiere un doble toque para despertar el dispositivo cuando doze mantiene la pantalla encendida</string>
 
+  <string name="interruptions_ignore_while_media_title">Prevenir interrupción de audio</string>
+  <string name="interruptions_ignore_while_media_summary">No disminuye el volumen de la música en reproducción cuando llega una notificación</string>
 </resources>

@@ -342,9 +342,6 @@
     <string name="stylus_icon_enabled_title">Show icon when using stylus</string>
     <string name="stylus_icon_enabled_summary">Show the pointer icon when hovering or drawing with the stylus</string>
 
-   <string name="interruptions_ignore_while_media_title">Prevent audio ducking</string>
-   <string name="interruptions_ignore_while_media_summary">Do not reduce media playback volume when a notification arrives</string>
-
     <!-- Android debugging -->
     <string name="enable_adb_cm">Android debugging</string>
     <string name="enable_adb_summary_cm">Enable the Android Debug Bridge (ADB) interface</string>

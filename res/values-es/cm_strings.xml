@@ -317,9 +317,6 @@
   <string name="stylus_icon_enabled_title">Mostrar el icono al usar el Stylus</string>
   <string name="stylus_icon_enabled_summary">Mostrar el cursor cuando se arrastra o dibuja con el Stylus</string>
 
-  <string name="interruptions_ignore_while_media_title">Prevenir interrupción de audio</string>
-  <string name="interruptions_ignore_while_media_summary">No disminuye el volumen de la música en reproducción cuando llega una notificación</string>
-
   <!-- Kill app long-press back -->
   <string name="kill_app_longpress_back">Botón atrás para cerrar la aplicación</string>
   <string name="kill_app_longpress_back_summary">Finalizar la aplicación actual al mantener pulsado el botón atrás</string>
