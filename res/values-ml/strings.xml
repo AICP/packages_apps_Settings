@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (WPS ലഭ്യമാണ്)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"നിങ്ങളുടെ നെറ്റ്‌വർക്ക് പാസ്‌വേഡ് നൽകുക"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"കാരിയർ വൈഫൈ നെറ്റ്‌വർക്ക്"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"<xliff:g id="NAME">%1%s</xliff:g> എന്നയാൾ വഴി കണക്‌റ്റുചെയ്യുക"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"<xliff:g id="NAME">%1$s</xliff:g> എന്നയാൾ വഴി കണക്‌റ്റുചെയ്യുക"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"ലൊക്കേഷൻ കൃത്യത മെച്ചപ്പെടുത്തുന്നതിനും മറ്റ് ആവശ്യകതകൾക്കായും, വൈഫൈ ഓഫായിരിക്കുമ്പോൾപ്പോലും നെറ്റ്‌വർക്ക് സ്‌കാൻ ചെയ്യാൻ <xliff:g id="APP_NAME">%1$s</xliff:g> താൽപ്പര്യപ്പെടുന്നു.\n\nസ്‌കാൻ ചെയ്യാൻ താൽപ്പര്യപ്പെടുന്ന എല്ലാ അപ്ലിക്കേഷനുകൾക്കായും ഇത് അനുവദിക്കണോ?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"ഇത് ഓഫുചെയ്യുന്നതിന്, ഓവർഫ്ലോ മെനുവിലെ വിപുലമായത് എന്നതിലേക്ക് പോകുക."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"അനുവദിക്കുക"</string>

@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" WPS አለ"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"የአውታረ መረብ ይለፍ ቃልዎን ያስገቡ"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"የአገልግሎት አቅራቢ የWi‑Fi አውታረ መረብ"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"በ<xliff:g id="NAME">%1%s</xliff:g> በኩል አገናኝ"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"በ<xliff:g id="NAME">%1$s</xliff:g> በኩል አገናኝ"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"<xliff:g id="APP_NAME">%1$s</xliff:g> የአካባቢ ትክክለኛነትን ለማሻሻል እና ለሌሎች ዓላማዎች የአውታረ መረብ መቃኘትን ማብራት ይፈልጋል፣ Wi-Fi ጠፍቶ ቢሆንም እንኳ።\n\nይሄ ለሁሉም መቃኘት ለሚፈልጉ መተግበሪያዎች ይፈቀድ?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"ይህንን ለማጥፋት በትርፍ ፍሰት ምናሌው ውስጥ ወደ የላቁ ይሂዱ።"</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"ፍቀድ"</string>

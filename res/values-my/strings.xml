@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (WPSရရှိုနိုင်သည်)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"သင်၏ ကွန်ရက် စကားဝှက်ကို ထည့်သွင်းရန်"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"ဖုန်းကုမ္ပဏီ Wi‑Fi ကွန်ရက်"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"<xliff:g id="NAME">%1%s</xliff:g> မှတစ်ဆင့် ချိတ်ဆက်ရန်"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"<xliff:g id="NAME">%1$s</xliff:g> မှတစ်ဆင့် ချိတ်ဆက်ရန်"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"တည်နေရာ တိကျမှုနှင့် တခြားရည်ရွယ်ချက်များအတွက် ပိုကောင်းစေရန် <xliff:g id="APP_NAME">%1$s</xliff:g> သည် ဝိုင်ဖိုင်ပိတ်ထားချိန်မှာပင်လျှင် ကွန်ရက်ရှာဖွေမှုကို ဖွင့်လိုသည်။\n\n အခြား ရှာဖွေလိုသော အပလီကေးရှင်းအားလုံးကို ခွင့်ပြုရမည်လား?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"ဒါကို ပိတ်ရန်၊ လျှံစီး မီနူးထဲက အဆင့်မြင့် ဆီကို သွားပါ။"</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"ခွင့်ပြုရန်"</string>

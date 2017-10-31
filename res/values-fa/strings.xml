@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" ‏ (WPS در دسترس است)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"گذرواژه شبکه‌تان را وارد کنید"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"‏شبکه Wi‑Fi شرکت مخابراتی"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"اتصال ازطریق <xliff:g id="NAME">%1%s</xliff:g>"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"اتصال ازطریق <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"‏برای بهبود دقت موقعیت مکانی و مقاصد دیگر، <xliff:g id="APP_NAME">%1$s</xliff:g> می‌خواهد اسکن کردن شبکه را فعال کند، حتی هنگامی که Wi-Fi خاموش است.\n\nاین مورد را برای همه برنامه‌هایی که می‌خواهند اسکن کنند مجاز می‌کنید؟"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"برای خاموش کردن این مورد، در منوی سرریز، به «پیشرفته» بروید."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"مجاز است"</string>

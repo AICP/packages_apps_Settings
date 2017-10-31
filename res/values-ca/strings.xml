@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (WPS disponible)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"Introdueix la contrasenya de la xarxa."</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"Xarxa Wi-Fi de l\'operador"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"Connecta\'t mitjançant <xliff:g id="NAME">%1%s</xliff:g>"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"Connecta\'t mitjançant <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"Per millorar la precisió de la ubicació i per a altres finalitats, <xliff:g id="APP_NAME">%1$s</xliff:g> vol activar la cerca de xarxes tot i que la connexió Wi-Fi estigui desactivada.\n\nVols permetre-ho per a totes les aplicacions que vulguin cercar xarxes?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"Per desactivar aquesta funció, ves a Configuració avançada al menú addicional."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"Permet"</string>

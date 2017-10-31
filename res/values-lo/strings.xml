@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (ສາມາດໃຊ້ WPS ໄດ້)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"ໃສ່​ລະຫັດ​ເຄືອ​ຂ່າຍ​ຂອງ​ທ່ານ"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"ເຄືອຂ່າຍ Wi‑Fi ຜູ້ໃຫ້ບໍລິການ"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"ເຊື່ອມຕໍ່ຜ່ານ <xliff:g id="NAME">%1%s</xliff:g>"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"ເຊື່ອມຕໍ່ຜ່ານ <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"ເພື່ອປັບປຸງຄວາມຖືກຕ້ອງຂອງສະຖານທີ່ ແລະເພື່ອຈຸດປະສົງອື່ນໆ, <xliff:g id="APP_NAME">%1$s</xliff:g> ຕ້ອງການເປີດນຳໃຊ້ການສະແກນເຄືອຂ່າຍ ເຖິງແມ່ນວ່າ Wi-Fi ຈະປິດກໍຕາມ.\n\nອະນຸຍາດການດຳເນີນການນີ້ ໃຫ້ກັບທຸກແອັບຯທີ່ຕ້ອງການສະແກນບໍ່?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"ເພື່ອ​ປິດ, ໃຫ້​ໄປ​ທີ່​ຫົວ​ຂໍ້​ຂັ້ນ​ສູງ ໃນ​ເມ​ນູ​ໂອ​ເວີ​ໂຟລ."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"ອະ​ນຸ​ຍາດ​"</string>

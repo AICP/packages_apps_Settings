@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (WPS elérhető)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"Adja meg hálózati jelszavát"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"Szolgáltatói Wi‑Fi-hálózat"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"Csatlakozás a következőn keresztül: <xliff:g id="NAME">%1%s</xliff:g>"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"Csatlakozás a következőn keresztül: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"A helymeghatározás pontosságának javítása és egyéb célok érdekében a(z) <xliff:g id="APP_NAME">%1$s</xliff:g> szeretné engedélyezni a hálózatkeresést még kikapcsolt Wi-Fi mellett is.\n\nEngedélyezi ezt az összes olyan alkalmazásnál, amely keresést akar végezni?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"A kikapcsoláshoz menjen a további elemeket tartalmazó menü Speciális pontjához."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"Engedélyezés"</string>

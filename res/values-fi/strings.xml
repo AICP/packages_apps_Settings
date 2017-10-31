@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (WPS käytettävissä)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"Anna verkkosalasana"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"Operaattorin Wi‑Fi-verkko"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"Muodosta yhteys: <xliff:g id="NAME">%1%s</xliff:g>"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"Muodosta yhteys: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"<xliff:g id="APP_NAME">%1$s</xliff:g> haluaa parantaa sijainnin tarkkuutta ja suorittaa muita toimintoja ottamalla verkon etsinnän käyttöön, vaikka Wi-Fi-yhteys ei ole käytössä.\n\nAnnetaanko tämä lupa kaikille sovelluksille, jotka haluavat etsiä verkkoja?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"Poista asetus käytöstä ylivuotovalikon lisäasetuksista."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"Salli"</string>

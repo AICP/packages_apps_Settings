@@ -844,7 +844,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" ‏ (WPS זמין)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"הזן את סיסמת הרשת שלך"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"‏רשת Wi-Fi של ספק"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"חיבור לרשת של <xliff:g id="NAME">%1%s</xliff:g>"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"חיבור לרשת של <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"‏לשיפור דיוק המיקום ולמטרות אחרות, <xliff:g id="APP_NAME">%1$s</xliff:g> רוצה להפעיל את סריקת הרשתות, גם כאשר ה-Wi-Fi כבוי.\n\nהאם להתיר זאת עבור כל האפליקציות שרוצות לסרוק?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"כדי לכבות, עבור אל \'מתקדם\' באפשרויות הנוספות."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"כן, זה בסדר"</string>

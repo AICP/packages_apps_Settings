@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (WPS kullanılabilir)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"Ağ şifrenizi girin"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"Operatör kablosuz ağı"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"<xliff:g id="NAME">%1%s</xliff:g> üzerinden bağlanın"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"<xliff:g id="NAME">%1$s</xliff:g> üzerinden bağlanın"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"Konum bilgisinin doğruluğunu iyileştirmek ve diğer amaçlar için, <xliff:g id="APP_NAME">%1$s</xliff:g> Kablosuz bağlantı kapalı olduğunda bile ağ tarama işlevini açmak istiyor.\n\nTarama yapmak isteyen tüm uygulamaların bu işlevi kullanmalarına izin veriyor musunuz?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"Bu özelliği kapatmak için taşma menüsünde Gelişmiş seçeneğine gidin."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"İzin ver"</string>

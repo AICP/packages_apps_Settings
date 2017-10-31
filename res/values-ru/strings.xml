@@ -844,7 +844,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (доступно WPS)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"Введите пароль для подключения к сети."</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"Сеть Wi‑Fi оператора связи"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"Подключиться через <xliff:g id="NAME">%1%s</xliff:g>"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"Подключиться через <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"Чтобы определение местоположения и некоторые другие функции работали лучше, приложению \"<xliff:g id="APP_NAME">%1$s</xliff:g>\" необходимо выполнять поиск сетей, даже если модуль Wi-Fi отключен.\n\nРазрешить?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"Этот параметр можно отключить в расширенных настройках в дополнительном меню."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"Разрешить"</string>

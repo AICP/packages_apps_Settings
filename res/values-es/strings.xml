@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (WPS disponible)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"Introduce la contraseña de tu red"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"Red Wi‑Fi del operador"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"Conectar a través de <xliff:g id="NAME">%1%s</xliff:g>"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"Conectar a través de <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"Para mejorar la precisión de la ubicación y para otros fines, <xliff:g id="APP_NAME">%1$s</xliff:g> quiere activar la búsqueda de redes aunque la conexión Wi-Fi esté desactivada.\n\n¿Permitir para todas las aplicaciones que quieran buscar redes?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"Para desactivar esta opción, accede a las opciones avanzadas del menú adicional."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"Permitir"</string>

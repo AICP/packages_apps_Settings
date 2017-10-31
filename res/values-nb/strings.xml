@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (WPS tilgjengelig)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"Skriv inn nettverkspassordet ditt"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"Operatørens Wi-Fi-nettverk"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"Koble til via <xliff:g id="NAME">%1%s</xliff:g>"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"Koble til via <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"<xliff:g id="APP_NAME">%1$s</xliff:g> ønsker å bruke nettverksskanning, også når Wi-Fi er slått av, for bedre posisjonsnøyaktighet og andre formål. \n\nVil du tillate dette for alle apper som prøver å skanne?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"For å slå dette av går du til Avansert i overflytsmenyen."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"Tillat"</string>

@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (WPS అందుబాటులో ఉంది)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"మీ నెట్‌వర్క్ పాస్‌వర్డ్‌ను నమోదు చేయండి"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"క్యారియర్ Wi‑Fi నెట్‌వర్క్"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"<xliff:g id="NAME">%1%s</xliff:g> ద్వారా కనెక్ట్ చేయండి"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"<xliff:g id="NAME">%1$s</xliff:g> ద్వారా కనెక్ట్ చేయండి"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"స్థాన ఖచ్చితత్వాన్ని మెరుగుపరచడానికి మరియు ఇతర ప్రయోజనాల దృష్ట్యా, <xliff:g id="APP_NAME">%1$s</xliff:g> Wi-Fi ఆఫ్‌లో ఉన్నప్పటికీ, నెట్‌వర్క్‌ను స్కాన్ చేయడం ప్రారంభించాలనుకుంటుంది.\n\nస్కాన్ చేయాలనుకునే అన్ని అనువర్తనాల కోసం దీన్ని అనుమతించాలా?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"దీన్ని ఆఫ్ చేయడానికి, ఓవర్‌ఫ్లో మెనులో అధునాతనంకి వెళ్లండి."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"అనుమతించు"</string>

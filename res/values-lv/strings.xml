@@ -833,7 +833,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (WPS ir pieejams)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"Ievadiet tīkla paroli"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"Mobilo sakaru operatora Wi‑Fi tīkls"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"Izveidojiet savienojumu, izmantojot <xliff:g id="NAME">%1%s</xliff:g>"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"Izveidojiet savienojumu, izmantojot <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"Lai uzlabotu atrašanās vietu noteikšanas precizitāti, kā arī citas funkcijas, lietotnē <xliff:g id="APP_NAME">%1$s</xliff:g> tiek pieprasīts ieslēgt tīkla skenēšanu, pat ja Wi-Fi savienojums ir izslēgts.\n\nVai atļaut šo darbību visām lietotnēm, kurās tiek pieprasīta skenēšana?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"Lai to izslēgtu, pārpildes izvēlnē pārejiet uz sadaļu Papildu."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"Atļaut"</string>

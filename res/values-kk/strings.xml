@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (WPS қол жетімді)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"Желі құпия сөзін енгізіңіз"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"Оператордың Wi‑Fi желісі"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"<xliff:g id="NAME">%1%s</xliff:g> арқылы қосу"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"<xliff:g id="NAME">%1$s</xliff:g> арқылы қосу"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"Аймақ нақтылығын жақсарту және басқа мақсаттар үшін, <xliff:g id="APP_NAME">%1$s</xliff:g> қолданбасы желі тексеруді қосуды қалайды, Wi-Fi өшіріліп тұрса да.\n\nЖелі тексергісі келетеін барлық қолданбаларға рұқсат берілсін бе?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"Мұны өшіру үшін артылған мазмұндар мәзірінде «Кеңейтілген» тармағына өтіңіз."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"Рұқсат беру"</string>

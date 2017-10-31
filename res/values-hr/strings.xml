@@ -833,7 +833,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (WPS dostupan)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"Unesite mrežnu zaporku"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"Wi‑Fi mreža mobilnog operatera"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"Povežite se putem mreže <xliff:g id="NAME">%1%s</xliff:g>"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"Povežite se putem mreže <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"Radi poboljšanja preciznosti lokacije kao i u druge svrhe aplikacija <xliff:g id="APP_NAME">%1$s</xliff:g> želi uključiti pregledavanje mreže, čak i kada je Wi-Fi isključen.\n\nŽelite li to dozvoliti za sve aplikacije koje žele izvoditi pregledavanje?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"Isključite putem opcije Napredno na dodatnom izborniku."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"Dopusti"</string>

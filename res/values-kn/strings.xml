@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (WPS ಲಭ್ಯವಿದೆ)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"ನಿಮ್ಮ ನೆಟ್‌ವರ್ಕ್‌ ಪಾಸ್‌ವರ್ಡ್‌ ನಮೂದಿಸಿ"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"ವೈ-ಫೈ ನೆಟ್‌ವರ್ಕ್‌ ವಾಹಕ"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"<xliff:g id="NAME">%1%s</xliff:g> ಮೂಲಕ ಸಂಪರ್ಕಿಸಿ"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"<xliff:g id="NAME">%1$s</xliff:g> ಮೂಲಕ ಸಂಪರ್ಕಿಸಿ"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"ಸ್ಥಳ ನಿಖರತೆಯನ್ನು ಸುಧಾರಿಸಲು ಮತ್ತು ಇತರ ಉದ್ದೇಶಗಳಿಗಾಗಿ, ವೈ-ಫೈ ಆಫ್‌ ಇದ್ದಾಗಲೂ ಸಹ <xliff:g id="APP_NAME">%1$s</xliff:g> ನೆಟ್‌ವರ್ಕ್‌ ಸ್ಕ್ಯಾನಿಂಗ್‌ ಆನ್‌ ಮಾಡಲು ಬಯಸುತ್ತದೆ.\n\nಸ್ಕ್ಯಾನ್ ಮಾಡಲು ಬಯಸುವ ಎಲ್ಲಾ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಇದಕ್ಕೆ ಅನುಮತಿಸುವುದೇ?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"ಇದನ್ನು ಆಫ್ ಮಾಡಲು, ಓವರ್‌ಫ್ಲೋ ಮೆನುವಿನಲ್ಲಿನ ಸುಧಾರಿತ ಗೆ ಹೋಗಿ."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"ಅನುಮತಿಸಿ"</string>

@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (WPS mövcuddur)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"Şəbəkə parolunuzu daxil edin"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"Operator Wi‑Fi şəbəkəsi"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"<xliff:g id="NAME">%1%s</xliff:g> vasitəsilə qoşulun"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"<xliff:g id="NAME">%1$s</xliff:g> vasitəsilə qoşulun"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"Yerləşmə dəqiqliyini təkmilləşdirmək və digər məqsədlər üçün Wi-Fi qapalı olsa da belə <xliff:g id="APP_NAME">%1$s</xliff:g> tətbiqi şəbəkə skanını yandırmaq istəyir. \n \n Skan etmək istəyən bütün tətbiqlərə icazə verilsin?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"Bunu söndürmək üçün daşma menyuda Qabaqcıl bölməsinə daxil olun."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"İcazə verin"</string>

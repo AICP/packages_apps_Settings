@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (WPS verfügbar)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"Gib dein Netzwerkpasswort ein."</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"WLAN eines Mobilfunkanbieters"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"Über <xliff:g id="NAME">%1%s</xliff:g> verbinden"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"Über <xliff:g id="NAME">%1$s</xliff:g> verbinden"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"Zur Verbesserung der Standortgenauigkeit und zu anderen Zwecken möchte <xliff:g id="APP_NAME">%1$s</xliff:g> die Netzwerküberprüfung aktivieren, auch wenn das WLAN deaktiviert ist.\n\nMöchtest du dies für alle Apps zulassen, die eine Überprüfung durchführen möchten?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"Rufe im Dreipunkt-Menü \"Erweitert\" auf, um diese Option zu deaktivieren."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"Zulassen"</string>

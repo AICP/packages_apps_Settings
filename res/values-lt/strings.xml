@@ -844,7 +844,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (galima WPS)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"Įveskite tinklo slaptažodį"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"Operatoriaus „Wi‑Fi“ ryšio tinklas"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"Prisijunkite per „<xliff:g id="NAME">%1%s</xliff:g>“"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"Prisijunkite per „<xliff:g id="NAME">%1$s</xliff:g>“"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"Siekiant tiksliau nustatyti vietą ir dėl kitų priežasčių, „<xliff:g id="APP_NAME">%1$s</xliff:g>“ prašo leidimo nuskaityti tinklus, net kai „Wi-Fi“ yra išjungtas.\n\nAr norite suteikti leidimą nuskaityti visoms to prašančioms programoms?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"Kad išjungtumėte, perpildymo meniu eikite į skiltį „Išplėstiniai“"</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"Leisti"</string>

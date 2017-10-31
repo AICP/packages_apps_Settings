@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (WPS கிடைக்கிறது)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"நெட்வொர்க் கடவுச்சொல்லை உள்ளிடவும்"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"தொலைத்தொடர்பு நிறுவன வைஃபை நெட்வொர்க்"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"<xliff:g id="NAME">%1%s</xliff:g> மூலம் இணை"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"<xliff:g id="NAME">%1$s</xliff:g> மூலம் இணை"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"இருப்பிடத்தைத் துல்லியமாக அறிவதற்கு மேம்படுத்த மற்றும் பிற காரணங்களுக்காக, வைஃபை முடக்கத்தில் இருக்கும்போதும் நெட்வொர்க்கை ஸ்கேன் செய்வதை இயக்கத்தில் வைக்க <xliff:g id="APP_NAME">%1$s</xliff:g> விரும்புகிறது.\n\nஸ்கேன் செய்ய விரும்பும் எல்லா பயன்பாடுகளுக்கும் இதை அனுமதிக்கவா?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"இதனை முடக்க, கூடுதல் உருப்படி மெனுவில் மேம்பட்டவை என்பதற்குச் செல்லவும்."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"அனுமதி"</string>

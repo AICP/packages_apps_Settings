@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (WPS боломжтой)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"Сүлжээний нууц үгээ оруулна уу"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"Оператор компанийн Wi‑Fi сүлжээ"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"<xliff:g id="NAME">%1%s</xliff:g>-р холбогдох"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"<xliff:g id="NAME">%1$s</xliff:g>-р холбогдох"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"Байршлын нарийвчлалыг сайжруулах болон бусад зорилгоор <xliff:g id="APP_NAME">%1$s</xliff:g> нь Wi-Fi хаалттай байгаа хэдий ч сүлжээний сканийг идэвхжүүлэхийг хүсч байна.\n\nҮүнийг скан хийхийг хүсч байгаа бүх апп-д зөвшөөрөх үү?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"Үүнийг унтраахын тулд дээрх цэсний Дэлгэрэнгүй рүү очно уу."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"Зөвшөөрөх"</string>
