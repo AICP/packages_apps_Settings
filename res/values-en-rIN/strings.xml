@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (WPS available)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"Enter your network password"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"Operator Wi‑Fi network"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"Connect via <xliff:g id="NAME">%1%s</xliff:g>"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"Connect via <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"To improve location accuracy and for other purposes, <xliff:g id="APP_NAME">%1$s</xliff:g> wants to turn on network scanning, even when Wi-Fi is off.\n\nAllow this for all apps that want to scan?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"To turn this off, go to Advanced in the overflow menu."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"Allow"</string>

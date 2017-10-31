@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" WPS inapatikana"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"Weka nenosiri la mtandao wako"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"Mtandao wa mtoa huduma wa Wi‑Fi"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"Unganisha kupitia <xliff:g id="NAME">%1%s</xliff:g>"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"Unganisha kupitia <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"Ili kuboresha usahihi wa mahali na kwa madhumuni mengine, <xliff:g id="APP_NAME">%1$s</xliff:g> inataka kuwasha ukaguaji mitandao, hata wakati Wi-Fi imezimwa.\n\nJe, ungependa kuruhusu programu zote ambazo zingependa kukagua ziweza kufanya hivyo?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"Ili uzime hii, nenda kwenye Mahiri katika menyu ya vipengee vya ziada."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"Ruhusu"</string>

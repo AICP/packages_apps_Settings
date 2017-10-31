@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" （WPS利用可）"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"ネットワークパスワードを入力してください"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"携帯通信会社の Wi‑Fi ネットワーク"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"<xliff:g id="NAME">%1%s</xliff:g> 経由で接続"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"<xliff:g id="NAME">%1$s</xliff:g> 経由で接続"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"現在地情報の精度向上やその他の目的で、<xliff:g id="APP_NAME">%1$s</xliff:g>ではWi-FiがOFFのときでもネットワークスキャンをオンにすることを要求しています。\n\nスキャンを必要とするすべてのアプリでスキャンを許可しますか？"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"この機能をOFFにするには、オーバーフローメニューの[詳細設定]にアクセスします。"</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"許可する"</string>

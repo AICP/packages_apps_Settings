@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (មាន WPS)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"បញ្ចូល​ពាក្យ​សម្ងាត់​បណ្ដាញ​របស់​អ្នក"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"បណ្ដាញ Wi‑Fi នៃក្រុមហ៊ុន​បម្រើសេវាទូរសព្ទ"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"ភ្ជាប់តាមរយៈ <xliff:g id="NAME">%1%s</xliff:g>"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"ភ្ជាប់តាមរយៈ <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"ដើម្បី​បង្កើន​ភាព​ត្រឹមត្រូវ​ទីតាំង និង​សម្រាប់​គោល​បំណង​ផ្សេងៗ <xliff:g id="APP_NAME">%1$s</xliff:g> ចង់​បើក​ការ​វិភាគ រក​បណ្ដាញ ទោះ​បី​ជា​បិទ វ៉ាយហ្វាយ ក៏​ដោយ។\n\nអនុញ្ញាត​សម្រាប់​កម្មវិធី​ទាំងអស់​ដែល​អ្នក​ចង់​វិភាគ​រក?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"ដើម្បី​បិទ, ចូល​ទៅ​កាន់​កម្រិត​ខ្ពស់​នៅ​ក្នុង​ម៉ឺនុយ​លើស​ចំណុះ។"</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"អនុញ្ញាត"</string>

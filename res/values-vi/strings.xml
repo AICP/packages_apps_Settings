@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (Có WPS)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"Nhập mật khẩu mạng của bạn"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"Mạng Wi‑Fi của nhà cung cấp dịch vụ"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"Kết nối qua <xliff:g id="NAME">%1%s</xliff:g>"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"Kết nối qua <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"Để nâng cao độ chính xác vị trí và phục vụ các mục đích khác, <xliff:g id="APP_NAME">%1$s</xliff:g> muốn bật tính năng quét mạng ngay cả khi Wi-Fi đang tắt.\n\nCho phép cài đặt này đối với tất cả ứng dụng muốn quét?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"Để tắt tính năng này, đi tới phần Nâng cao trong trình đơn mục bổ sung."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"Cho phép"</string>

@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" （可使用 WPS）"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"请输入您的网络密码"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"运营商 WLAN 网络"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"通过<xliff:g id="NAME">%1%s</xliff:g>连接"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"通过<xliff:g id="NAME">%1$s</xliff:g>连接"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"为了提高位置信息精确度以及其他目的，“<xliff:g id="APP_NAME">%1$s</xliff:g>”请求启用网络扫描功能（在关闭了WLAN时也可进行扫描）。\n\n是否对所有需要进行扫描的应用批准这项请求？"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"要关闭此功能，请转到菜单下的“高级”。"</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"允许"</string>

@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (Διαθέσιμο WPS)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"Εισαγάγετε κωδικό πρόσβασης δικτύου"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"Δίκτυο Wi‑Fi εταιρείας κιν. τηλεφωνίας"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"Σύνδεση μέσω <xliff:g id="NAME">%1%s</xliff:g>"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"Σύνδεση μέσω <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"Για τη βελτίωση της ακρίβειας της τοποθεσίας σας και για άλλους σκοπούς, η εφαρμογή <xliff:g id="APP_NAME">%1$s</xliff:g> επιθυμεί να ενεργοποιήσει τη σάρωση δικτύων, ακόμη και όταν το Wi-Fi είναι απενεργοποιημένο.\n\nΝα επιτρέπεται αυτή η ενέργεια για όλες τις εφαρμογές που επιθυμούν σάρωση;"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"Για να το απενεργοποιήσετε, μεταβείτε στις Σύνθετες ρυθμίσεις, στο μενού υπερχείλισης."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"Να επιτρέπεται"</string>

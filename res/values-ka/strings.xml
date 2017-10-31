@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (WPS ხელმისაწვდომია)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"შეიყვანეთ თქვენი ქსელის პაროლი"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"ოპერატორის Wi‑Fi ქსელი"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"<xliff:g id="NAME">%1%s</xliff:g>-ით დაკავშირება"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"<xliff:g id="NAME">%1$s</xliff:g>-ით დაკავშირება"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"მდებარეობის ზუსტი განსაზღვრის და სხვა ფუნქციების გასაუმჯობესებლად <xliff:g id="APP_NAME">%1$s</xliff:g>-ს სურს, გააქტიურდეს ქსელების მოძიება, მაშინაც კი, როცა გამორთულია Wi-Fi.\n\nმიეცეს ამის უფლება ყველა აპს?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"ამის გამოსართავად, მოინახულეთ გაფართოებული სექცია გადავსების მენიუში."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"ნებართვა"</string>

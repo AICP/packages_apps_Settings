@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (WPS mavjud)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"Tarmoqqa ulanish uchun parolni kiriting"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"Aloqa operatorining Wi‑Fi tarmog‘i"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"<xliff:g id="NAME">%1%s</xliff:g> orqali ulanish"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"<xliff:g id="NAME">%1$s</xliff:g> orqali ulanish"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"Joylashuv aniqligini yana ham yaxshilash va boshqa maqsadlar uchun, Wi-Fi o‘chirilgan bo‘lsada <xliff:g id="APP_NAME">%1$s</xliff:g> tarmoqlarni qidirish vazifasini yoqmoqchi.\n\nBu ruxsat tarmoqlarni qidirishni istagan barcha ilovalarga berilsinmi?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"Uni o‘chirish uchun menyudan “Qo‘shimcha” bandiga o‘ting."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"Ruxsat berish"</string>

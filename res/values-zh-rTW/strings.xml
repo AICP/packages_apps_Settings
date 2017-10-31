@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (可使用 WPS)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"輸入你的網路密碼"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"電信業者 Wi‑Fi 網路"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"透過「<xliff:g id="NAME">%1%s</xliff:g>」連線"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"透過「<xliff:g id="NAME">%1$s</xliff:g>」連線"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"<xliff:g id="APP_NAME">%1$s</xliff:g> 要求開啟網路掃描功能 (即使 Wi-Fi 已關閉)，藉此提升定位精確度及用於其他用途。\n\n你要對所有需要執行掃描的應用程式允許這項要求嗎？"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"如要關閉這項功能，請在溢位選單中選取 [進階]。"</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"允許"</string>

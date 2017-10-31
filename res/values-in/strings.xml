@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (WPS tersedia)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"Masukkan sandi jaringan Anda"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"Jaringan Wi‑Fi operator"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"Sambungkan melalui <xliff:g id="NAME">%1%s</xliff:g>"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"Sambungkan melalui <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"Untuk meningkatkan ketepatan lokasi dan untuk tujuan lainnya, <xliff:g id="APP_NAME">%1$s</xliff:g> ingin mengaktifkan pemindaian jaringan, bahkan saat Wi-Fi sedang tidak aktif.\n\nIzinkan ini untuk semua aplikasi yang ingin memindai?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"Untuk menonaktifkannya, buka Lanjutan di menu luapan."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"Izinkan"</string>

@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (WPS පවතී)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"ඔබගේ ජාල මුරපදය ඇතුළත් කරන්න"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"වාහක Wi-Fi ජාලය"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"<xliff:g id="NAME">%1%s</xliff:g> හරහා සම්බන්ධ කරන්න"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"<xliff:g id="NAME">%1$s</xliff:g> හරහා සම්බන්ධ කරන්න"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"ස්ථාන නිරවද්‍යතාවය වැඩි කිරීමට සහ වෙනත් අරමුණු සඳහා, Wi-Fi අක්‍රිය වුවද <xliff:g id="APP_NAME">%1$s</xliff:g>  හට ජාල පරිලෝකනය සක්‍රිය කිරීමට අවශ්‍යය. \n\nපරිලෝකනය අවශ්‍ය සියලු යෙදුම් සඳහා මෙයට අවසර දෙන්නේ ද?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"මෙය අක්‍රිය කිරීමට, ඉතිරී ගිය මෙනුව තුළ උසස් වෙත යන්න."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"අවසර දෙන්න"</string>

@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (i-WPS iyatholakala)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"Faka iphasiwedi yakho yenethiwekhi"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"Inethiwekhi ye-Wi-Fi yenkampani yenethiwekhi"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"Xhuma nge-<xliff:g id="NAME">%1%s</xliff:g>"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"Xhuma nge-<xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"Ukuze kuthuthukiswe ukufaneleka kwendawo nezinye izinjongo, i-<xliff:g id="APP_NAME">%1$s</xliff:g> ifuna ukuvula ukuskena kwenethiwekhi, noma ngabe i-Wi-Fi ivaliwe.\n\nVumela lokhu ngazo zonke izinhlelo zokusebenza ezifuna ukuskena?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"Ukuze uvale lokhu, iya ku-Okuthuthukile kwimenyu yokuningi."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"Vumela"</string>

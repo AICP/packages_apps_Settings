@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (Available ang WPS)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"Ilagay ang iyong password sa network"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"Carrier ng Wi-Fi network"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"Kumonekta sa pamamagitan ng <xliff:g id="NAME">%1%s</xliff:g>"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"Kumonekta sa pamamagitan ng <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"Upang mapahusay ang katumpakan ng lokasyon at para sa iba pang mga layunin, gustong i-on ng <xliff:g id="APP_NAME">%1$s</xliff:g> ang pag-scan ng network, kahit na naka-off ang Wi-Fi.\n\nPayagan ito para sa lahat ng apps na gustong mag-scan?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"Upang i-off ito, pumunta sa Advanced sa overflow menu."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"Payagan"</string>

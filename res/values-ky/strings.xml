@@ -821,7 +821,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (WPS жеткиликтүү)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"Тармактагы сырсөзүңүздү киргизиңиз"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"Оператордун Wi‑Fi тармагы"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"<xliff:g id="NAME">%1%s</xliff:g> аркылуу туташуу"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"<xliff:g id="NAME">%1$s</xliff:g> аркылуу туташуу"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"Жайгаштыруунун тактыгын жогорулатуу жана башка максаттарда, Wi-Fi өчүк болсо да, <xliff:g id="APP_NAME">%1$s</xliff:g> желелерди скандагысы келет.\n\nБардык скандоону кааалаган колдонмолорго уруксат берелсинби?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"Муну өчүрүү үчүн, жөндөөлөр менюсунан Өркүндөтүлгөндөргө өтүңүз."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"Уруксат"</string>

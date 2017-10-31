@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (WPS-ը հասանելի է)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"Մուտքագրեք ձեր ցանցի գաղտնաբառը"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"Օպերատորի Wi‑Fi ցանց"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"Միանալ <xliff:g id="NAME">%1%s</xliff:g>-ի միջոցով"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"Միանալ <xliff:g id="NAME">%1$s</xliff:g>-ի միջոցով"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"Տեղադրության ճշգրտությունը կատարելագործելու կամ այլ նպատակների համար` <xliff:g id="APP_NAME">%1$s</xliff:g>-ը ցանկանում է միացնել ցանցի սկանավորումը, նույնիսկ եթե Wi-Fi-ը անջատված է:\n\nԹույլատրե՞լ բոլոր սկանավորում ցանկացող ծրագրերին:"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"Սա անջատելու համար գերբեռնված ցանկում անցեք Ընդլայնված:"</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"Թույլատրել"</string>

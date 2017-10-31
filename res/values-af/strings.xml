@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (WPS beskikbaar)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"Voer jou netwerkwagwoord in"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"Diensverskaffer-Wi‑Fi-netwerk"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"Gekoppel via <xliff:g id="NAME">%1%s</xliff:g>"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"Gekoppel via <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"Om liggingsakkuraatheid te verbeter en vir ander doele, wil <xliff:g id="APP_NAME">%1$s</xliff:g> netwerkskandering aanskakel, selfs wanneer Wi-Fi af is.\n\n Laat dit toe vir alle programme wat wil skandeer?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"Gaan in die oorloopkieslys na Gevorderd om dit af te skakel."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"Laat toe"</string>

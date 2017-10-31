@@ -822,7 +822,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" ‏ (WPS دستیاب ہے)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"اپنا نیٹ ورک پاس ورڈ درج کریں"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"‏کیریئر Wi‑Fi نیٹ ورک"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"منسلک ہوں بذریعہ <xliff:g id="NAME">%1%s</xliff:g>"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"منسلک ہوں بذریعہ <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"‏مقام کی قطعیت کو بہتر بنانے اور دوسرے مقاصد کیلئے، <xliff:g id="APP_NAME">%1$s</xliff:g> Wi-Fi بند ہونے پر بھی نیٹ ورک اسکیننگ آن کرنا چاہتی ہے۔\n\nاسکین کرنے کی خواہاں سبھی ایپس کیلئے اس کی اجازت دیں؟"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"اسے آف کرنے کیلئے، اوور فلو مینو میں ایڈوانسڈ پر جائیں۔"</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"اجازت دیں"</string>

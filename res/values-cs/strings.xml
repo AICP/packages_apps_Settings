@@ -844,7 +844,7 @@
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (WPS je k dispozici)"</string>
     <string name="wifi_wps_nfc_enter_password" msgid="2288214226916117159">"Zadejte heslo sítě"</string>
     <string name="wifi_carrier_connect" msgid="8174696557882299911">"Síť Wi-Fi operátora"</string>
-    <string name="wifi_carrier_content" msgid="4634077285415851933">"Připojit přes: <xliff:g id="NAME">%1%s</xliff:g>"</string>
+    <string name="wifi_carrier_content" msgid="4634077285415851933">"Připojit přes: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="wifi_scan_always_turnon_message" msgid="203123538572122989">"Aplikace <xliff:g id="APP_NAME">%1$s</xliff:g> chce zapnout vyhledávání sítí (kvůli lepšímu určení polohy i kvůli jiným účelům) a hledat sítě i v případě, že je vypnut modul Wi-Fi.\n\nChcete tuto možnost povolit všem aplikacím, které chtějí vyhledávat sítě?"</string>
     <string name="wifi_scan_always_turnoff_message" msgid="5538901671131941043">"Chcete-li toto nastavení vypnout, přejděte do rozbalovací nabídky Rozšířené."</string>
     <string name="wifi_scan_always_confirm_allow" msgid="5355973075896817232">"Povolit"</string>
