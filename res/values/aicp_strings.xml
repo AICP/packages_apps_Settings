@@ -71,4 +71,11 @@
 
     <string name="link_volume_option_title">Link ring and notification volume</string>
 
+    <!-- Ambient category -->
+    <string name="doze_category">Ambient options</string>
+
+    <!-- Ambient display always-on of the tuner-->
+    <string name="always_on_title">Always on</string>
+    <string name="always_on_summary">Allows your device to always display information without unlocking the screen</string>
+
 </resources>

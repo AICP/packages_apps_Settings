@@ -100,6 +100,15 @@
         android:key="lift_to_wake"
         android:title="@string/lift_to_wake_title" />
 
+    <PreferenceCategory
+        android:key="doze_category"
+        android:title="@string/doze_category">
+
+        <SwitchPreference
+            android:key="doze"
+            android:title="@string/doze_title"
+            android:summary="@string/doze_summary" />
+
     <lineageos.preference.RemotePreference
         android:key="doze_device_settings"
         android:title="@string/doze_title"
@@ -108,6 +117,14 @@
         <intent
             android:action="org.lineageos.settings.device.DOZE_SETTINGS" />
     </lineageos.preference.RemotePreference>
+
+        <com.android.settings.preferences.SecureSettingSwitchPreference
+            android:key="doze_always_on"
+            android:title="@string/always_on_title"
+            android:summary="@string/always_on_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
 
     <SwitchPreference
         android:key="tap_to_wake"
