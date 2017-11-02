@@ -96,10 +96,14 @@
         android:title="@string/ambient_display_pickup_title"
         android:fragment="com.android.settings.gestures.PickupGestureSettings" />
 
-    <SwitchPreference
-        android:key="doze"
-        android:title="@string/doze_title"
-        android:summary="@string/doze_summary" />
+    <PreferenceCategory
+        android:key="doze_category"
+        android:title="@string/doze_category">
+
+        <SwitchPreference
+            android:key="doze"
+            android:title="@string/doze_title"
+            android:summary="@string/doze_summary" />
 
     <lineageos.preference.RemotePreference
         android:key="doze_device_settings"
@@ -109,6 +113,14 @@
         <intent
             android:action="org.lineageos.settings.device.DOZE_SETTINGS" />
     </lineageos.preference.RemotePreference>
+
+        <com.android.settings.preferences.SecureSettingSwitchPreference
+            android:key="doze_always_on"
+            android:title="@string/always_on_title"
+            android:summary="@string/always_on_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
 
     <SwitchPreference
         android:key="tap_to_wake"
