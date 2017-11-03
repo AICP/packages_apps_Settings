@@ -1016,8 +1016,8 @@
       <item quantity="one">SIM PINコードが無効です。入力できるのはあと<xliff:g id="NUMBER_0">%d</xliff:g>回です。この回数を超えた場合は、携帯通信会社にお問い合わせください。</item>
     </plurals>
     <string name="pin_failed" msgid="1848423634948587645">"SIM PIN操作に失敗しました。"</string>
-    <string name="device_info_settings" product="tablet" msgid="1119755927536987178">"タブレット情報"</string>
-    <string name="device_info_settings" product="default" msgid="475872867864762157">"端末情報"</string>
+    <string name="device_info_settings" product="tablet" msgid="1119755927536987178">"タブレットの状態"</string>
+    <string name="device_info_settings" product="default" msgid="475872867864762157">"端末の状態"</string>
     <string name="system_update_settings_list_item_title" msgid="3342887311059985961">"システムアップデート"</string>
     <string name="system_update_settings_list_item_summary" msgid="3853057315907710747"></string>
     <string name="firmware_version" msgid="4801135784886859972">"Androidバージョン"</string>
@@ -1052,7 +1052,6 @@
     <string name="status_signal_strength" msgid="3732655254188304547">"電波強度"</string>
     <string name="status_roaming" msgid="2638800467430913403">"ローミング"</string>
     <string name="status_operator" msgid="2274875196954742087">"ネットワーク"</string>
-    <string name="status_hostname">ホスト名</string>
     <string name="status_wifi_mac_address" msgid="2202206684020765378">"Wi-Fi MACアドレス"</string>
     <string name="status_bt_address" msgid="4195174192087439720">"Bluetoothアドレス"</string>
     <string name="status_serial_number" msgid="2257111183374628137">"シリアル番号"</string>

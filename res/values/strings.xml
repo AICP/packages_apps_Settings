@@ -2362,9 +2362,9 @@
     <string name="pin_failed">SIM PIN operation failed!</string>
 
     <!-- Advanced (used for diagnostics) device info activity title [CHAR LIMIT=40] -->
-    <string name="device_info_settings" product="tablet">About tablet</string>
+    <string name="device_info_settings" product="tablet">Tablet status</string>
     <!-- Advanced (used for diagnostics) device info activity title [CHAR LIMIT=40] -->
-    <string name="device_info_settings" product="default">About phone</string>
+    <string name="device_info_settings" product="default">Phone status</string>
 
     <!-- About phone screen, list item title.  Takes the user to the screen for seeing and installing system updates. [CHAR LIMIT=40] -->
     <string name="system_update_settings_list_item_title">System updates</string>
@@ -7317,7 +7317,7 @@
     <string name="backup_disabled">Back up disabled</string>
 
     <!-- Summary of device info page [CHAR LIMIT=NONE] -->
-    <string name="about_summary">AICP Android <xliff:g id="version" example="6.0">%1$s</xliff:g></string>
+    <string name="about_summary">Android <xliff:g id="version" example="6.0">%1$s</xliff:g></string>
 
     <!-- TODO: Update these strings with the finalized ones. -->
     <!-- Title for dialog displayed when user clicks on a setting locked by an admin [CHAR LIMIT=30] -->
@@ -7812,6 +7812,9 @@
     <string name="notify_connect">CMCC WLAN prompt</string>
     <string name="notify_connect_summary">Prompt me when access to CMCC WLAN</string>
     <string name="wifi_setting_connect_type_error">There was a problem setting the connect type.</string>
+    <string name="wifi_advanced_gateway">Gateway</string>
+    <string name="wifi_advanced_network_netmask">Netmask</string>
+
     <string name="app_ops_permiss_name">App network access</string>
 
     <!-- Roaming Data Settings -->
@@ -7829,6 +7832,12 @@
 
     <string name="lte_data_and_voice_calling_enabled">LTE data and Voice Calling (IMS/VoLTE) service enabled </string>
     <string name="lte_data_service_enabled">LTE data service enabled </string>
+
+    <string name="maximum_connections_dialog_title_text">Set Maximum Connections</string>
+    <string name="maximum_connections_dialog_positive_text">YES</string>
+    <string name="maximum_connections_dialog_negative_text">NO</string>
+    <string name="ssid_broadcast_dialog_title">Your HotSpot is not visible now</string>
+    <string name="ssid_broadcast_dialog_text">If you switch the Broadcast Network Name (SSID) option off, your phone will not be visible to other devices and will not appear in the list of available Wi-Fi networks. Other devices can still connect to your HotSpot by entering its network name manually.</string>
 
     <!-- Used as title on the automatic storage manager settings. [CHAR LIMIT=60] -->
     <string name="automatic_storage_manager_settings">Manage storage</string>
@@ -7942,6 +7951,12 @@
     <string name="carrier_provisioning">Carrier Provisioning Info</string>
     <!-- Trigger Carrier Provisioning [CHAR LIMIT=NONE] -->
     <string name="trigger_carrier_provisioning">Trigger Carrier Provisioning</string>
+
+    <!-- Protected Apps -->
+    <string name="menu_hidden_apps_delete">Reset</string>
+    <string name="menu_hidden_apps_reset_lock">Reset pattern lock</string>
+    <string name="protected_apps">Protected apps</string>
+    <string name="saving_protected_components">Saving component state</string>
 
     <!-- Touchscreen gesture settings -->
     <string name="touchscreen_gesture_settings_title">Touchscreen gestures</string>

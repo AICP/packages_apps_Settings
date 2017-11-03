@@ -89,7 +89,7 @@
   <string name="profile_applist_title">Приложения</string>
   <string name="default_string">По умолчанию</string>
   <string name="reset">Сбросить</string>
-  <string name="summary_navbar">Визуализатор Smartbar/Fling и Pulse</string>
+  <string name="summary_navbar">Smartbar/Fling и Pulse</string>
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <string name="choose_action_title">Выбор действия</string>
   <string name="action_entry_default_action">Настройки по умолчанию</string>
@@ -153,15 +153,15 @@
   <string name="pulse_help_policy_notice_title">О Pulse</string>
   <string name="pulse_help_policy_notice_summary">Pulse - это блестящий и стильный визуализатор звука, который отображается на панели навигации при воспроизведении музыки. Pulse не работает с некоторыми источниками звука при прослушивании через динамик устройства.</string>
   <string name="pulse_settings">Pulse</string>
-  <string name="pulse_settings_summary">Аудио визуализация панели навигации</string>
+  <string name="pulse_settings_summary">Аудиовизуализация в панели навигации</string>
   <string name="fling_show_pulse_title">Включить Pulse</string>
-  <string name="fling_show_pulse_summary">Включить аудио визуализацию в панели навигации</string>
-  <string name="pulse_render_mode_title">Режим визуализации</string>
+  <string name="fling_show_pulse_summary">Включить аудиовизуализацию в панели навигации</string>
+  <string name="pulse_render_mode_title">Режим аудиовизуализации</string>
   <string name="pulse_render_mode_fading_bars">Затухающие блоки</string>
   <string name="pulse_render_mode_solid_lines">Сплошные линии</string>
   <string name="fling_pulse_color">Цвет Pulse</string>
   <string name="eos_fling_lavalamp_title">Включить \"Лава Лампу\"</string>
-  <string name="eos_fling_lavalamp_summary">Включить плавно меняющиеся цвета визуализатора Pulse</string>
+  <string name="eos_fling_lavalamp_summary">Включить плавно меняющиеся цвета Pulse</string>
   <string name="pulse_advanced_category">Дополнительно</string>
   <string name="pulse_legacy_mode_advanced_category">Настройки режима затухающих блоков</string>
   <string name="pulse_custom_fudge_factor">Уровень чувствительности</string>
@@ -373,8 +373,8 @@
   <string name="dnd_when_call_title">Режим «Не беспокоить» во время разговора</string>
   <string name="dnd_when_call_summary">Автоматическое включение режима «Не беспокоить» во время голосовых вызовов</string>
   <!-- Navigation bar button color -->
-  <string name="navbar_button_tint_title">Оттенок кнопки навигации</string>
-  <string name="navbar_button_tint_switch_title">Расцветка кнопки навигации</string>
+  <string name="navbar_button_tint_title">Оттенок кнопок навигации</string>
+  <string name="navbar_button_tint_switch_title">Расцветка кнопок навигации</string>
   <string name="navbar_button_custom_icon_switch_title">Добавить цветовой фильтр для кнопок приложения</string>
   <!-- Slim lockscreen shortcuts -->
   <string name="shortcut_action_none">Пусто</string>

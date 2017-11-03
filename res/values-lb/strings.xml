@@ -5204,6 +5204,7 @@ Fir d\'Performance ze verbesseren an de Späicherverbrauch ze reduzéiere stinn 
   <!-- Message for telling the user the kind of BT device being displayed in list. -->
   <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
   <!-- Wifi extension requirement -->
+  <string name="wifi_advanced_gateway">Gateway</string>
   <!-- Roaming Data Settings -->
   <string name="select_sim_card">SIM-Kaart auswielen</string>
   <!-- show security alert for open type end -->

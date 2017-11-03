@@ -2829,7 +2829,7 @@
     <string name="notifications_redacted" msgid="4493588975742803160">"屏幕锁定时不显示敏感内容"</string>
     <string name="notifications_hidden" msgid="3619610536038757468">"屏幕锁定时不显示"</string>
     <string name="notifications_priority" msgid="1066342037602085552">"覆盖“勿扰”设置"</string>
-    <string name="notifications_summary_divider" msgid="9013807608804041387">" / "</string>
+    <string name="notifications_summary_divider" msgid="9013807608804041387">" / "</string>
     <string name="notification_summary_level" msgid="2726571692704140826">"%d 级"</string>
     <plurals name="permissions_summary" formatted="false" msgid="6402730318075959117">
       <item quantity="other">已授予 <xliff:g id="COUNT_1">%d</xliff:g> 项权限</item>
@@ -3246,6 +3246,9 @@
     <string name="notify_connect">连接CMCC告警</string>
     <string name="notify_connect_summary">连接到CMCC热点后提示</string>
     <string name="wifi_setting_connect_type_error">设置自动连接类型时出现错误。</string>
+    <string name="wifi_advanced_gateway">网关</string>
+    <string name="wifi_advanced_network_netmask">子网掩码</string>
+
     <string name="label_global_roaming_settings">国际漫游设置</string>
     <string name="set_data_time_range">显示时间区间</string>
     <string name="app_ops_permiss_name">应用联网限制</string>

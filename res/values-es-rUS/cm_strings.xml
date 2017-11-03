@@ -23,9 +23,9 @@
     <item quantity="other">Estás a <xliff:g id="step_count">%1$d</xliff:g> pasos de activar los ajustes de desarrollo.</item>
   </plurals>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
-  <string name="show_dev_on_cm">¡Has habilitado las configuraciones de desarrollo!</string>
+  <string name="show_dev_on_cm">¡Has activado los ajustes de desarrollo!</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
-  <string name="show_dev_already_cm">No es necesario. Las configuraciones de desarrollo ya están habilitadas.</string>
+  <string name="show_dev_already_cm">No es necesario. Los ajustes de desarrollo ya están activos.</string>
   <!-- Launch Dev Tools -->
   <string name="development_tools_title">Herramientas de desarrollo</string>
   <!-- Setting checkbox title for root access -->
@@ -33,14 +33,14 @@
   <string name="root_access_warning_title">¿Permitir acceso de superusuario?</string>
   <string name="root_access_warning_message">¡Permitir a las aplicaciones solicitar acceso de superusuario es muy peligroso y puede comprometer la seguridad del sistema!</string>
   <string name="root_access_none">Desactivado</string>
-  <string name="root_access_apps">Solo aplicaciones</string>
-  <string name="root_access_adb">Solo ADB</string>
+  <string name="root_access_apps">Sólo aplicaciones</string>
+  <string name="root_access_adb">Sólo ADB</string>
   <string name="root_access_all">Aplicaciones y ADB</string>
   <!-- Preference link for root appops -->
   <string name="root_appops_title">Gestionar acceso de superusuario (root)</string>
   <string name="root_appops_summary">Ver y controlar las reglas de superusuario</string>
   <!-- About phone screen, LineageOS version -->
-  <string name="mod_version">Versión de AICP</string>
+  <string name="mod_version">Versión de LineageOS</string>
   <string name="mod_version_default">Desconocido</string>
   <!-- About phone screen, Device model -->
   <string name="device_model">Modelo de dispositivo</string>
@@ -247,7 +247,7 @@
   <string name="memory_startup_apps_title">Aplicaciones iniciadas en el arranque</string>
   <!-- Advanced restart options -->
   <string name="advanced_reboot_title">Reinicio avanzado</string>
-  <string name="advanced_reboot_summary">Al desbloquear, incluir en el menú de apagado opciones para reiniciar en modo recovery, bootloader o realizar un reinicio rápido</string>
+  <string name="advanced_reboot_summary">Al activar esta opción, se incluirán en el menú de apagado opciones para reiniciar en modo recovery, bootloader o realizar un reinicio rápido</string>
   <!-- PIN scramble -->
   <string name="unlock_scramble_pin_layout_title">Disposición aleatoria</string>
   <string name="unlock_scramble_pin_layout_summary">Cambiar la disposición de los números del PIN para desbloquear el dispositivo</string>
@@ -324,10 +324,13 @@
   <!-- [CHAR LIMIT=50] Like zen_mode_events, but part of a list, so lower case if needed -->
   <string name="zen_mode_summary_events">eventos</string>
   <!-- [CHAR LIMIT=50] Like zen_mode_all_callers, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_all_callers">todos los autores de llamadas</string>
   <!-- [CHAR LIMIT=50] Like zen_mode_selected_callers, but part of a list, so lower case if needed -->
   <string name="zen_mode_summary_selected_callers">llamadores seleccionados</string>
   <!-- [CHAR LIMIT=50] Like zen_mode_repeat_callers, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_repeat_callers">repetir autores de llamadas</string>
   <!-- [CHAR LIMIT=50] Like zen_mode_all_messages, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_all_messages">todos los mensajes</string>
   <!-- [CHAR LIMIT=50] Like zen_mode_selected_messages, but part of a list, so lower case if needed -->
   <string name="zen_mode_summary_selected_messages">mensajes seleccionados</string>
   <!-- Notification sound timeout -->
@@ -359,16 +362,6 @@
   <string name="security_settings_fingerprint_sensor_location_front">lado frontal</string>
   <string name="security_settings_fingerprint_sensor_location_left">lado izquierdo</string>
   <string name="security_settings_fingerprint_sensor_location_right">lado derecho</string>
-  <!-- Tethering & portable hotspot other category -->
-  <string name="tethering_other_category_text">Otros</string>
-  <!-- Wi-Fi tethering inactivity timeout -->
-  <string name="hotstpot_inactivity_timeout_text">Tiempo de espera del punto de acceso Wi\u2011Fi</string>
-  <string name="hotstpot_inactivity_timeout_never">Nunca</string>
-  <string name="hotstpot_inactivity_timeout_1_minute">1 minuto</string>
-  <string name="hotstpot_inactivity_timeout_5_minutes">5 minutos</string>
-  <string name="hotstpot_inactivity_timeout_10_minutes">10 minutos</string>
-  <string name="hotstpot_inactivity_timeout_never_summary_text">El punto de acceso portátil Wi\u2011Fi no se apagará nunca</string>
-  <string name="hotstpot_inactivity_timeout_summary_text">El punto de acceso portátil Wi\u2011Fi se apagará después de <xliff:g id="timeout">%1$s</xliff:g></string>
   <!-- Wi-Fi region code -->
   <string name="wifi_setting_countrycode_title">Código de región Wi\u2011Fi</string>
   <!-- Wi-Fi settings screen, setting summary for setting the wifi frequency band [CHAR LIMIT=50]-->
@@ -381,12 +374,16 @@
   <!-- Heads-up -->
   <string name="heads_up_notifications_enabled_title">Notificaciones emergentes</string>
   <string name="heads_up_notifications_enabled_summary">Mostrar notificaciones prioritarias en una pequeña ventana flotante</string>
-  <!-- Encryption password -->
-  <string name="crypt_keeper_change_password_title">Cambiar contraseña de cifrado</string>
-  <string name="crypt_keeper_change_password_summary">Cambiar la contraseña usada para el cifrado del dispositivo</string>
-  <string name="crypt_keeper_choose_your_password_header">Establecer contraseña de cifrado</string>
-  <string name="crypt_keeper_replace_password_title">Reemplazar contraseña de cifrado</string>
-  <string name="crypt_keeper_replace_password_summary">Quitar contraseña de cifrado separado</string>
+  <!-- Tethering & portable hotspot other category -->
+  <string name="tethering_other_category_text">Otros</string>
+  <!-- Wi-Fi tethering inactivity timeout -->
+  <string name="hotstpot_inactivity_timeout_text">Tiempo de espera del punto de acceso Wi\u2011Fi</string>
+  <string name="hotstpot_inactivity_timeout_never">Nunca</string>
+  <string name="hotstpot_inactivity_timeout_1_minute">1 minuto</string>
+  <string name="hotstpot_inactivity_timeout_5_minutes">5 minutos</string>
+  <string name="hotstpot_inactivity_timeout_10_minutes">10 minutos</string>
+  <string name="hotstpot_inactivity_timeout_never_summary_text">El punto de acceso portátil Wi\u2011Fi no se apagará nunca</string>
+  <string name="hotstpot_inactivity_timeout_summary_text">El punto de acceso portátil Wi\u2011Fi se apagará después de <xliff:g id="timeout">%1$s</xliff:g></string>
   <!-- Per-app data restrictions -->
   <string name="data_usage_app_restrict_data_category_title">Acceso a los datos móviles</string>
   <string name="data_usage_app_restrict_wifi_category_title">Acceso a los datos Wi\u2011Fi</string>
@@ -434,4 +431,9 @@
   <!-- IC Codes -->
   <string name="ic_code_model">Modelo: %1$s</string>
   <string name="ic_code_full">IC: %1$s</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <string name="shortcut_carrier_title">Operadores de red</string>
+  <!-- Burn in protection -->
+  <string name="burnin_protection_title">Pantalla de protección contra quemaduras</string>
+  <string name="burnin_protection_summary">Mueva periódicamente los elementos que permanentemente aparecen en la pantalla, para evitar el desgaste excesivo de la pantalla en esa área</string>
 </resources>

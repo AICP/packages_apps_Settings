@@ -735,6 +735,11 @@ Teníemos un Palaciu…\n
   <!-- Message to describe "BLE scan always available feature" when Bluetooth is off. The
       place-holders "LINK_BEGIN" and "LINK_END" must NOT be translated. They mark a link to bring
       the user to "scanning settings" screen. -->
+  <string name="ble_scan_notify_text">P\'ameyorar la precisión del allugamientu, les aplicaciones
+      del sistema entá puen deteutar preseos Bluetooth. Pues
+      camudar esto nos <xliff:g id="link_begin">LINK_BEGIN
+      </xliff:g>axustes d\'escanéu<xliff:g id="link_end">
+      LINK_END</xliff:g>.</string>
   <!-- Bluetooth settings.  The title of the screen to pick which profiles to connect to on the device.  For example, headphones may have both A2DP and headset, this allows the user to choose which one he wants to connect to. -->
   <!-- Bluetooth settings.  Message for disconnecting from the A2DP profile. [CHAR LIMIT=80] -->
   <!-- Bluetooth settings.  Message for disconnecting from the headset profile. [CHAR LIMIT=80] -->
@@ -796,6 +801,7 @@ Teníemos un Palaciu…\n
   <!-- Used to describe the on state of the Android Beam feature [CHAR LIMIT=NONE] -->
   <!-- Used to describe the off state of the Android Beam feature [CHAR LIMIT=NONE] -->
   <!-- Used to describe the enabled state of the Android Beam feature when NFC, which it relies on, is turned off [CHAR LIMIT=NONE] -->
+  <string name="android_beam_disabled_summary">Non disponible porque\'l NFC ta desactivao</string>
   <!-- Used in the Android Beam sharing preferences screen. This phrase is a trademark. [CHAR LIMIT=32] -->
   <!-- Explanation of the Android Beam feature in the Android Beam settings panel. The use of "beam" here is as a verb and not considered trademarked. [CHAR LIMIT=NONE] -->
   <!-- Wi-Fi Settings -->
@@ -895,6 +901,7 @@ Teníemos un Palaciu…\n
   <!-- Label for the frequency band of the connection -->
   <!-- Label for the IP address of the connection -->
   <!-- Label for Passpoint network -->
+  <string name="passpoint_label">Guardóse per</string>
   <!-- Content for Passpoint network -->
   <!-- Label for the EAP method of the network -->
   <!-- Label for the phase2 -->
@@ -910,7 +917,7 @@ Teníemos un Palaciu…\n
   <!-- Label for the radio button to choose wifi ap 2.4 GHz band -->
   <!-- Label for the radio button to choose wifi ap 5GHz band -->
   <!-- Label for the spinner to show ip settings [CHAR LIMIT=25] -->
-  <string name="wifi_ip_settings">Axustes d\'IP</string>
+  <string name="wifi_ip_settings">Axuste d\'IP</string>
   <!-- Label for the check box to share a network with other users on the same device -->
   <string name="wifi_shared">Compartir con otros usuarios del preséu</string>
   <!-- Hint for unchanged fields -->
@@ -933,6 +940,7 @@ Teníemos un Palaciu…\n
          string is listed after a wifi_secured_* string-->
   <string name="wifi_wps_available_second_item">\u0020(WPS disponible)</string>
   <!-- Message in WriteWifiConfigToNfcDialog when prompted to enter network password [CHAR_LIMIT=40] -->
+  <string name="wifi_scan_always_turnon_message">P\'ameyorar la precisión del allugamientu y otros fines, <xliff:g id="app_name">%1$s</xliff:g> quier activar l\'escanéu de redes, magar que\'l Wi-Fi tea apagáu.\n\n¿Permitilo pa toles aplicaciones que quieran escaniar?</string>
   <!-- Message informing the user how to turn off  [CHAR LIMIT=200] -->
   <string name="wifi_scan_always_confirm_deny">Ñegar</string>
   <!-- Dialog label to sign in to a Hotspot. [CHAR LIMIT=50]-->
@@ -1074,7 +1082,9 @@ Teníemos un Palaciu…\n
   <!-- Wireless networks, item title to go into the WFC settings [CHAR LIMIT=30] -->
   <string name="wifi_calling_settings_title">Llamaes Wi-Fi</string>
   <!-- Title of suggestion to turn on wifi calling [CHAR LIMIT=30] -->
+  <string name="wifi_calling_suggestion_title">Desactivar llamaes Wi-Fi</string>
   <!-- Summary of suggestion to turn on wifi calling [CHAR LIMIT=60] -->
+  <string name="wifi_calling_suggestion_summary">Usa la rede Wi-Fi en cuentes de la móvil</string>
   <!-- Title of WFC preference item [CHAR LIMIT=30] -->
   <!-- Title of WFC preference selection dialog [CHAR LIMIT=30] -->
   <!-- Title of WFC roaming preference item [CHAR LIMIT=45] -->
@@ -1193,9 +1203,12 @@ Teníemos un Palaciu…\n
   <!-- Sound & display settings screen, setting option summary to change screen timeout -->
   <!-- Wallpaper settings title [CHAR LIMIT=30] -->
   <!-- Wallpaper suggestion title [CHAR LIMIT=30] -->
+  <string name="wallpaper_suggestion_title">Camudar fondu de pantalla</string>
   <!-- Wallpaper suggestion title [CHAR LIMIT=60] -->
+  <string name="wallpaper_suggestion_summary">Personaliza la to pantalla</string>
   <!-- Wallpaper settings fragment title [CHAR LIMIT=30] -->
   <!-- Display settings screen, trigger for screen saver options -->
+  <string name="screensaver_settings_title">Curiapantalles</string>
   <!-- Display settings screen, summary fragment for screen saver options, activated when docked or asleep and charging -->
   <!-- Dream settings screen, dialog option, activated when docked or asleep and charging -->
   <!-- Display settings screen, summary fragment for screen saver options, activated when asleep and charging -->
@@ -1769,6 +1782,7 @@ Teníemos un Palaciu…\n
   <!-- Applications settings summary, on main settings screen. The summary for the "Applications" item on the main settings screen. Describes what settings are accessible from the "Applications" screen. -->
   <!-- Applications settings screen heading. The header for the Application settings screen. -->
   <!-- Applications settings screen, setting check box title. If checked, the system allows installation of applications that are downloaded from random places, such as web sites.  -->
+  <string name="install_applications">Fontes desconocíes</string>
   <!-- Applications settings screen, setting check box title. If checked, the system allows installation of applications that are downloaded from random places, such as web sites.  [CHAR LIMIT=30] -->
   <!-- Applications settings screen, setting check box summary.  This is the summary for "Unknown sources" checkbox  [CHAR LIMIT=65] -->
   <!-- Applications settings screen, setting check box summary.  This is the summary for "Unknown sources" checkbox  -->
@@ -1985,6 +1999,7 @@ Teníemos un Palaciu…\n
   <!-- On Text & language settings screen, category for physical keyboard text entry options. -->
   <!-- On Text & language settings screen, setting summary for the Auto-punctuate setting. -->
   <!-- On Security & location settings screen, setting check box name. Title of the checkbox to set whether password edit fields will show the most recent character typed and then hide it, or just hide it right away.  By hide, I mean mask it out. -->
+  <string name="show_password">Visibilizar contraseñes</string>
   <!-- Warning message about security implications of enabling an input method, displayed as a dialog
          message when the user selects to enable an IME. -->
   <!-- Warning message about security implications of enabling a spell checker, displayed as a dialog
@@ -2164,6 +2179,7 @@ Teníemos un Palaciu…\n
   <!-- Sample characters for previewing video caption preferences. [CHAR LIMIT=2] -->
   <!-- Label for the default device locale. [CHAR LIMIT=35] -->
   <!-- Label for color selection title in sim settings [CHAR LIMIT=35] -->
+  <string name="color_title">Color</string>
   <!-- Label for default color. This lets the app pick the color. [CHAR LIMIT=35] -->
   <!-- Label for no color (transparent). [CHAR LIMIT=35] -->
   <!-- Label for the color white. [CHAR LIMIT=35] -->
@@ -2338,6 +2354,7 @@ Teníemos un Palaciu…\n
   <!-- Label for mediaserver process in battery usage -->
   <!-- Label for dex2oat process in battery usage used for the optimization of one or more apps -->
   <!-- [CHAR_LIMIT=40] Battery saver: Label for feature, title + menu item -->
+  <string name="battery_saver">Aforrador de batería</string>
   <!-- [CHAR_LIMIT=40] Battery saver: Title for automatic entry option -->
   <!-- [CHAR_LIMIT=40] Battery saver: Value for automatic entry option: Never -->
   <!-- [CHAR_LIMIT=40] Battery saver: Value for automatic entry option: pct% battery -->
@@ -2647,9 +2664,13 @@ Teníemos un Palaciu…\n
   <!-- Informational text on the pin entry screen prompting the user for their pin -->
   <!-- Informational text on the pattern entry screen prompting the user for their pattern -->
   <!-- Message shown when user enters wrong pattern -->
+  <string name="cryptkeeper_wrong_pattern">Patrón incorreutu</string>
   <!-- Message shown when user enters wrong password -->
+  <string name="cryptkeeper_wrong_password">Contraseña incorreuta</string>
   <!-- Message shown when user enters wrong PIN -->
+  <string name="cryptkeeper_wrong_pin">PIN incorreutu</string>
   <!-- Shown when a password has been entered, and we're checking it -->
+  <string name="checking_decryption">Comprobando\u2026</string>
   <!-- Shown when password is correct, and we're starting Android -->
   <string name="starting_android">Aniciando Android\u2026</string>
   <!-- the following are for Settings Storage screen -->
@@ -2941,6 +2962,7 @@ Teníemos un Palaciu…\n
   <!-- If open app supports TapPay, use that app instead of the default -->
   <!-- Header for a dialog asking the user which payment app to use -->
   <!-- Header for text explaning how to pay at a payment terminal in a store -->
+  <string name="nfc_how_it_works_title">Pagando na terminal</string>
   <!-- Content for text explaning how to pay at a payment terminal in a store -->
   <!-- Button the user can click to indicate he understood and dismiss the screen -->
   <!-- NFC More... title.  [CHAR LIMIT=40] -->
@@ -3153,10 +3175,13 @@ Teníemos un Palaciu…\n
   <!-- Sound: Other sounds: Value for the emergency tone option with value 2: vibrate. [CHAR LIMIT=30] -->
   <!-- Sound: Other sounds: Title for the option enabling boot sounds. [CHAR LIMIT=30] -->
   <!-- Sound: Title for the Do not Disturb option and associated settings page. [CHAR LIMIT=30] -->
+  <string name="zen_mode_settings_title">Nun molestar</string>
   <!-- Do not disturb: Title for the Priority interruptions option and associated settings page. [CHAR LIMIT=30] -->
   <!--  Do not disturb: Title for the zen mode automation option and associated settings page. [CHAR LIMIT=30] -->
   <!--  Do not disturb: Title for the zen mode automation option Suggestion. [CHAR LIMIT=30] -->
+  <string name="zen_mode_automation_suggestion_title">Afitar plan de Nun molestar</string>
   <!--  Do not disturb: Summary for the zen mode automation option Suggestion. [CHAR LIMIT=30] -->
+  <string name="zen_mode_automation_suggestion_summary">Silencia\'l to preséu cada ciertu tiempu</string>
   <!--  Do not disturb: Zen mode option: Important interruptions [CHAR LIMIT=60] -->
   <!--  Do not disturb: Zen mode option: Alarms only [CHAR LIMIT=60] -->
   <!--  Do not disturb: Zen mode option: No interruptions [CHAR LIMIT=60] -->
@@ -3680,6 +3705,7 @@ Teníemos un Palaciu…\n
   <string name="see_less">Ver menos</string>
   <!-- Wi-Fi state - Disconnected [CHAR LIMIT=NONE] -->
   <!-- Summary of data usage [CHAR LIMIT=NONE] -->
+  <string name="data_usage_summary_format"><xliff:g id="amount" example="50%">%1$s</xliff:g> de datos usaos</string>
   <!-- Summary of notifications [CHAR LIMIT=NONE] -->
   <!-- Summary of notifications when no apps are blocked [CHAR LIMIT=NONE] -->
   <string name="notification_summary_none">Toles aplicaciones puen unviar</string>
@@ -3738,6 +3764,7 @@ Teníemos un Palaciu…\n
   <!-- Summary of condition that cellular data is off [CHAR LIMIT=NONE] -->
   <string name="condition_cellular_summary">Internet namái ta disponible per Wi-Fi</string>
   <!-- Title of condition that background data is off [CHAR LIMIT=30] -->
+  <string name="condition_bg_data_title">L\'aforrador de datos ta activáu</string>
   <!-- Summary of condition that background data is off [CHAR LIMIT=NONE] -->
   <string name="condition_bg_data_summary">Los datos de fondu namái tán disponibles per Wi-Fi. Esto quiciabes afeute a delles aplicaciones o servicios al nun tar disponibe\'l Wi-Fi.</string>
   <!-- Title of condition that work mode is off [CHAR LIMIT=30] -->
@@ -3761,8 +3788,11 @@ Teníemos un Palaciu…\n
   <!-- Label for category for data usage [CHAR LIMIT=30] -->
   <string name="usage">Usu</string>
   <!-- Label for cellular data usage in data usage screen [CHAR LIMIT=60] -->
+  <string name="cellular_data_usage">Usu de datos móviles</string>
   <!-- Label for wifi data usage in data usage screen [CHAR LIMIT=60] -->
+  <string name="wifi_data_usage">Usu de datos del Wi-Fi</string>
   <!-- Label for ethernet data usage in data usage screen [CHAR LIMIT=60] -->
+  <string name="ethernet_data_usage">Usu de datos d\'ethernet</string>
   <!-- Label for section about wifi in data usage screen [CHAR LIMIT=60] -->
   <string name="wifi">Wi-Fi</string>
   <!-- Label for section about ethernet in data usage screen [CHAR LIMIT=60] -->
@@ -3796,6 +3826,7 @@ Teníemos un Palaciu…\n
          [CHAR LIMIT=50] -->
   <!-- Description of number of apps allowed to ignore Data Saver [CHAR LIMIT=NONE] -->
   <!-- Name of Data Saver screens [CHAR LIMIT=30] -->
+  <string name="data_saver_title">Aforrador de datos</string>
   <!-- Button that leads to list of apps with unrestricted data access [CHAR LIMIT=60] -->
   <string name="unrestricted_data_saver">Accesu non restrinxíu de datos</string>
   <!-- Description of message shown when app is blacklisted for background data access [CHAR LIMIT=NONE] -->
@@ -3867,7 +3898,9 @@ Teníemos un Palaciu…\n
      [CHAR_LIMIT=none] -->
   <!-- Toast message shown when "Reset ShortcutManager rate-limiting" has been performed. [CHAR_LIMIT=none] -->
   <!-- Title of notification suggestion during optional steps of setup. [CHAR_LIMIT=60] -->
+  <string name="notification_suggestion_title">Controlar avisos de pantalla de bloquéu</string>
   <!-- Summary of notification suggestion during optional steps of setup. [CHAR_LIMIT=80] -->
+  <string name="notification_suggestion_summary">Amuesa o anubre\'l conteníu de los avisos</string>
   <!-- Setting tab title for all setting options. [CHAR LIMIT=20] -->
   <!-- Setting tab title for support setting options. [CHAR LIMIT=20] -->
   <!-- Summary of developer options to set the smallest width of the screen [CHAR LIMIT=60]-->
@@ -3879,6 +3912,7 @@ Teníemos un Palaciu…\n
   <!-- Title of screen controlling which apps have access to send premium SMS messages [CHAR LIMIT=60] -->
   <!-- [CHAR LIMIT=25] Bluetooth is disabled. -->
   <!-- [CHAR LIMIT=60] Name of dev option called demo mode -->
+  <string name="demo_mode">Mou demostración</string>
   <!-- Title text for connecting to customer support [CHAR LIMIT=80]-->
   <string name="support_escalation_title">Tamos equí p\'ayudate</string>
   <!-- Title text for connecting to 24/7 available customer support [CHAR LIMIT=80]-->
@@ -3919,6 +3953,7 @@ Teníemos un Palaciu…\n
   <!-- Dialog title displayed before initiating real time support [CHAR LIMIT=80]-->
   <string name="support_disclaimer_title">Unviar información del sistema</string>
   <!-- Checkbox text, when checked dialog will not show again [CHAR LIMIT=80] -->
+  <string name="support_disclaimer_do_not_show">Nun amosar de nueves</string>
   <!-- [CHAR LIMIT=60] Title of work profile setting page -->
   <!-- [CHAR LIMIT=60] The preference title for enabling cross-profile remote contact search -->
   <!-- [CHAR LIMIT=NONE] The preference summary for enabling cross-profile remote contact search -->
@@ -3928,12 +3963,17 @@ Teníemos un Palaciu…\n
     <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> hores</item>
   </plurals>
   <!-- Time in minutes -->
+  <plurals name="minutes">
+    <item quantity="one">1 minutu</item>
+    <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> minutos</item>
+  </plurals>
   <!-- Time in seconds -->
   <plurals name="seconds">
     <item quantity="one">1 segundu</item>
     <item quantity="other"><xliff:g id="number" example="7">%s</xliff:g> segundos</item>
   </plurals>
   <!-- Estimated wait time range for real time supports -->
+  <string name="support_estimated_wait_time">~<xliff:g id="ESTIMATE" example="2 minutes">%1$s</xliff:g> d\'espera</string>
   <!-- Message for telling the user the kind of BT device being displayed in list. -->
   <string name="bluetooth_talkback_computer">Ordenador</string>
   <!-- Message for telling the user the kind of BT device being displayed in list. -->
