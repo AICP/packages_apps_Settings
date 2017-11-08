@@ -37,7 +37,7 @@
   <string name="root_access_adb">केवल एडीबी</string>
   <string name="root_access_all">ऐप और एडीबी</string>
   <!-- Preference link for root appops -->
-  <!-- About phone screen, LineageOS version -->
+  <!-- About phone screen, AICP version -->
   <string name="mod_version">सियानोजेनमोड संस्करण</string>
   <string name="mod_version_default">अज्ञात</string>
   <!-- About phone screen, Device model -->

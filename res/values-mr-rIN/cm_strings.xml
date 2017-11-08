@@ -37,8 +37,8 @@
   <string name="root_access_adb">केवळ ADB</string>
   <string name="root_access_all">अनुप्रयोग आणि ADB</string>
   <!-- Preference link for root appops -->
-  <!-- About phone screen, LineageOS version -->
-  <string name="mod_version">LineageOS आवृत्ती</string>
+  <!-- About phone screen, AICP version -->
+  <string name="mod_version">AICP आवृत्ती</string>
   <string name="mod_version_default">अज्ञात</string>
   <!-- About phone screen, Device model -->
   <string name="device_model">डिव्हाइस मॉडेल</string>

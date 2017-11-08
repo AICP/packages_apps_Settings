@@ -39,8 +39,8 @@
   <!-- Preference link for root appops -->
   <string name="root_appops_title">Bestuur root toegang</string>
   <string name="root_appops_summary">Kyk na en beheer die root reëls</string>
-  <!-- About phone screen, LineageOS version -->
-  <string name="mod_version">LineageOS weergawe</string>
+  <!-- About phone screen, AICP version -->
+  <string name="mod_version">AICP weergawe</string>
   <string name="mod_version_default">Onbekend</string>
   <!-- About phone screen, Device model -->
   <string name="device_model">Toestel tipe</string>

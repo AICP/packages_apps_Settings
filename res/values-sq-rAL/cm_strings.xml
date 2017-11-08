@@ -37,8 +37,8 @@
   <string name="root_access_all">Aplikacionet dhe ADB</string>
   <!-- Preference link for root appops -->
   <string name="root_appops_title">Menaxho akseset Root</string>
-  <!-- About phone screen, LineageOS version -->
-  <string name="mod_version">Versioni i LineageOS</string>
+  <!-- About phone screen, AICP version -->
+  <string name="mod_version">Versioni i AICP</string>
   <string name="mod_version_default">I panjohur</string>
   <!-- About phone screen, Device model -->
   <string name="device_model">Modeli i pajisjes</string>

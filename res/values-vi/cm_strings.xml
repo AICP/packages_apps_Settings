@@ -38,8 +38,8 @@
   <!-- Preference link for root appops -->
   <string name="root_appops_title">Quản lý truy cập root</string>
   <string name="root_appops_summary">Xem và kiểm soát các truy cập root</string>
-  <!-- About phone screen, LineageOS version -->
-  <string name="mod_version">Phiên bản LineageOS</string>
+  <!-- About phone screen, AICP version -->
+  <string name="mod_version">Phiên bản AICP</string>
   <string name="mod_version_default">Không rõ</string>
   <!-- About phone screen, Device model -->
   <string name="device_model">Mẫu thiết bị</string>
