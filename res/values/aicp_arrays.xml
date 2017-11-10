@@ -57,4 +57,18 @@
         <item>@string/volume_steps_5</item>
     </string-array>
 
+     <!-- Charged battery alert -->
+    <string-array name="alert_on_charged_entries">
+        <item>@string/alert_on_charged_level_dis</item>
+        <item>@string/alert_on_charged_level_80</item>
+        <item>@string/alert_on_charged_level_90</item>
+        <item>@string/alert_on_charged_level_99</item>
+    </string-array>
+
+    <string-array name="alert_on_charged_level_values" translatable="false">
+        <item>-1</item>
+        <item>80</item>
+        <item>90</item>
+        <item>99</item>
+    </string-array>
 </resources>
