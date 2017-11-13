@@ -26,9 +26,17 @@
   <string name="supersu_title">SuperSU</string>
   <string name="device_info_title">Telefoon info</string>
   <!-- Encryption and credential -->
+  <string name="custom_encryption_and_credential_settings_summary_on">Apparaat is gecodeerd</string>
+  <string name="custom_encryption_and_credential_settings_summary_off">Apparaat is gedecodeerd</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
+  <plurals name="show_dev_countdown_custom">
+    <item quantity="one">U bent nog <xliff:g id="step_count">%1$d</xliff:g> stap verwijderd van het inschakelen van de ontwikkelaarsopties.</item>
+    <item quantity="other">U bent nog <xliff:g id="step_count">%1$d</xliff:g> stappen verwijderd van het inschakelen van de ontwikkelaarsopties.</item>
+  </plurals>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
+  <string name="show_dev_on_custom">Ontwikkelaarsopties zijn ingeschakeld! Wees voorzichtig!</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
+  <string name="show_dev_already_custom">Ontwikkelaarsopties zijn al ingeschakeld!</string>
   <!-- Density category -->
   <string name="density_category">Schermresolutie opties</string>
   <!-- Volume Steps -->
@@ -49,4 +57,6 @@
   <string name="volume_steps_5">5</string>
   <!-- Sound & Notification Settings -->
   <!-- Volume settings - Volume adjustment sound -->
+  <string name="volume_adjust_sounds_title">Aanpassingsgeluid volume</string>
+  <string name="link_volume_option_title">Koppel bel- en notificatievolume</string>
 </resources>
