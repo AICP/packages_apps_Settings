@@ -59,4 +59,5 @@
   <!-- Sound & Notification Settings -->
   <!-- Volume settings - Volume adjustment sound -->
   <string name="volume_adjust_sounds_title">Zvuk při změně hlasitosti</string>
+  <string name="link_volume_option_title">Spojit hlasitost vyzvánění a oznámení</string>
 </resources>
