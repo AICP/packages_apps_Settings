@@ -128,6 +128,12 @@ import com.android.settings.wifi.WifiInfo;
 import com.android.settings.wifi.WifiSettings;
 import com.android.settings.wifi.p2p.WifiP2pSettings;
 
+// DUI
+import com.aicp.extras.fragments.FlingSettings;
+import com.aicp.extras.fragments.NavigationBar;
+import com.aicp.extras.fragments.PulseSettings;
+import com.aicp.extras.fragments.SmartbarSettings;
+
 public class SettingsGateway {
 
     /**
@@ -246,6 +252,11 @@ public class SettingsGateway {
             WebViewAppPicker.class.getName(),
             LockscreenDashboardFragment.class.getName(),
             StartAe.class.getName(),
+            // DUI
+            NavigationBar.class.getName(),
+            FlingSettings.class.getName(),
+            SmartbarSettings.class.getName(),
+            PulseSettings.class.getName()
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -284,5 +295,10 @@ public class SettingsGateway {
             Settings.DateTimeSettingsActivity.class.getName(),
             Settings.DeviceInfoSettingsActivity.class.getName(),
             Settings.EnterprisePrivacySettingsActivity.class.getName(),
+            // DUI
+            Settings.NavigationSettingsActivity.class.getName(),
+            Settings.FlingSettingsActivity.class.getName(),
+            Settings.SmartbarSettingsActivity.class.getName(),
+            Settings.PulseSettingsActivity.class.getName()
     };
 }
