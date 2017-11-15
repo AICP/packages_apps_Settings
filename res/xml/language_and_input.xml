@@ -95,10 +95,6 @@
             android:title="@string/ambient_display_pickup_title"
             android:fragment="com.android.settings.gestures.PickupGestureSettings"/>
 
-    </PreferenceCategory>
-
-    <PreferenceCategory>
-
         <com.android.settings.PointerSpeedPreference
             android:key="pointer_speed"
             android:title="@string/pointer_speed"
