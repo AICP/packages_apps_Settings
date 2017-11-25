@@ -71,6 +71,8 @@
 
     <string name="link_volume_option_title">Link ring and notification volume</string>
 
+    <string name="select_sim_for_sms">Select a SIM for SMS</string>
+
     <!-- Ambient category -->
     <string name="doze_category">Ambient options</string>
 
