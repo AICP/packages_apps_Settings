@@ -522,4 +522,6 @@
   <string name="cyan">Cian</string>
   <string name="grey">Gris</string>
   <!-- Audio ducking on mediaplay -->
+  <string name="interruptions_ignore_while_media_title">Evitar la atenuación de sonido</string>
+  <string name="interruptions_ignore_while_media_summary">No reducir el volumen de reproducción multimedia cuando llega una notificación</string>
 </resources>

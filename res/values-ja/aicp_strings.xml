@@ -90,7 +90,7 @@
   <string name="profile_applist_title">アプリ</string>
   <string name="default_string">デフォルト</string>
   <string name="reset">リセット</string>
-  <string name="summary_navbar">ナビゲーションバー、Fling、Pulseの設定</string>
+  <string name="summary_navbar">ナビバー、Fling、Pulseを設定します</string>
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <string name="choose_action_title">アクションを選択...</string>
   <string name="action_entry_default_action">デフォルトの設定</string>
@@ -319,7 +319,7 @@
   <string name="doze_trigger_notification_summary_off">通知をトリガーにしません</string>
   <string name="doze_brightness_level_title">明るさレベル</string>
   <string name="fivehundred_ms_default">500 ms（デフォルト）</string>
-  <string name="three_second_default">3 s（デフォルト）</string>
+  <string name="three_second_default">3秒（デフォルト）</string>
   <string name="doze_notification_color_invert_title">通知の反転</string>
   <string name="doze_notification_color_invert_summary_off">通知を反転させません。ダークテーマで使用してください。</string>
   <string name="doze_notification_color_invert_summary_on">通知を反転させます。デフォルト/ライトテーマで使用してください。</string>

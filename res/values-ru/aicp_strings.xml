@@ -21,7 +21,7 @@
   <string name="summary_aicp">Дополнительные настройки системы</string>
   <string name="header_category_aicpextras">Персонализация</string>
   <!-- Turn on display when power connected; turn off display when power disconnected -->
-  <string name="wake_when_plugged_or_unplugged_title">Включение экрана при зарядке</string>
+  <string name="wake_when_plugged_or_unplugged_title">Включение экрана при подключении зарядки</string>
   <string name="wake_when_plugged_or_unplugged_summary">Включать экран при подключении или отключении источника питания</string>
   <!-- Less Notification sounds -->
   <string name="notifications_category_title">Уведомления</string>
@@ -164,7 +164,7 @@
   <string name="eos_fling_lavalamp_summary">Включить плавно меняющиеся цвета Pulse</string>
   <string name="pulse_advanced_category">Дополнительно</string>
   <string name="pulse_legacy_mode_advanced_category">Настройки режима затухающих блоков</string>
-  <string name="pulse_custom_fudge_factor">Уровень чувствительности</string>
+  <string name="pulse_custom_fudge_factor">Уровень вменяемости</string>
   <string name="lavamp_solid_speed_title">Скорость \"Лава Лампы\"</string>
   <string name="pulse_solid_units_count">Количество сплошных линий</string>
   <string name="pulse_solid_lines_count">Количество сплошных линий</string>
@@ -204,14 +204,14 @@
   <string name="smartbar_factory_reset_title">Сброс к настройкам по умолчанию</string>
   <string name="smartbar_factory_reset_confirm">Вы уверены, что хотите сбросить SmartBar к настройкам по умолчанию?</string>
   <string name="smartbar_ime_action_title">Параметры метода ввода</string>
-  <string name="smartbar_ime_action_summary">Установить, какие кнопки будут показаны при отображании клавиатуры</string>
+  <string name="smartbar_ime_action_summary">Установить, какие кнопки будут показаны при отображании клавиатуры или проигрывании музыки</string>
   <string name="smartbar_ime_action_none">Ничего</string>
   <string name="smartbar_ime_action_arrows">Стрелки ввода</string>
   <string name="smartbar_ime_action_switcher">Переключатель клавиатуры</string>
   <string name="smartbar_ime_action_dynamic">Стрелки ввода/медиа</string>
   <string name="smartbar_backup_current_config_title">Сохранить профиль</string>
   <string name="smartbar_restore_config_title">Восстановить профиль</string>
-  <string name="smartbar_config_name_edit_dialog_title">Имя профиля Smartbar</string>
+  <string name="smartbar_config_name_edit_dialog_title">Название профиля Smartbar</string>
   <string name="smartbar_config_name_edit_dialog_message">Введите название или оставьте поле пустым</string>
   <string name="smartbar_config_dialog_title">Профили Smartbar</string>
   <string name="smartbar_config_backup_success_toast">Профиль Smartbar успешно сохранен</string>
