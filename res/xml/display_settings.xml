@@ -204,6 +204,13 @@
             android:title="@string/tap_to_wake"
             android:summary="@string/tap_to_wake_summary"/>
 
+        <!-- Prevent accidental wake-up -->
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="proximity_on_wake"
+            android:title="@string/proximity_wake_title"
+            android:summary="@string/proximity_wake_summary"
+            android:defaultValue="false" />
+
         <Preference
             android:key="display_cutout_force_fullscreen_settings"
             android:title="@string/display_cutout_force_fullscreen_title"

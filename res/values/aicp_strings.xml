@@ -371,4 +371,8 @@
     <string name="search">Search</string>
     <string name="search_apps">Search apps</string>
     <string name="application_icon">Application icon</string>
+
+    <!-- Proximity wake -->
+    <string name="proximity_wake_title">Prevent accidental wake-up</string>
+    <string name="proximity_wake_summary">Check the proximity sensor prior to waking up screen</string>
 </resources>
