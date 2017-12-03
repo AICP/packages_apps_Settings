@@ -16,14 +16,46 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="aicp_name_title">AICP 體驗</string>
+  <string name="aicpextras_settings">Aicp 額外功能</string>
+  <string name="aicpextras_dashboard_summary">ROM 自訂</string>
   <!-- Root Management -->
+  <string name="rootmanagement_title">Root 管理</string>
+  <string name="rootmanagement_dashboard_summary">管理 root 權限</string>
   <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
+  <string name="supersu_title">超級使用者</string>
+  <string name="device_info_title">手機資訊</string>
   <!-- Encryption and credential -->
+  <string name="custom_encryption_and_credential_settings_summary_on">裝置已加密</string>
+  <string name="custom_encryption_and_credential_settings_summary_off">裝置已解密</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
+  <plurals name="show_dev_countdown_custom">
+    <item quantity="other">離開發人員只剩下 <xliff:g id="step_count">%1$d</xliff:g> 個步驟</item>
+  </plurals>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
+  <string name="show_dev_on_custom">開發人員選項已啟用！請小心！</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
+  <string name="show_dev_already_custom">開發人員選項已啟用！</string>
   <!-- Density category -->
+  <string name="density_category">密度選項</string>
   <!-- Volume Steps -->
+  <string name="volume_steps_title">音量調整步進</string>
+  <string name="volume_steps_alarm_title">音量調整步進：鬧鐘</string>
+  <string name="volume_steps_dtmf_title">音量步進等級：DTMF</string>
+  <string name="volume_steps_music_title">音量調整步進：音樂</string>
+  <string name="volume_steps_notification_title">音量調整步進：通知</string>
+  <string name="volume_steps_ring_title">音量調整等級：鈴聲</string>
+  <string name="volume_steps_system_title">音量調整步進：系統</string>
+  <string name="volume_steps_voice_call_title">音量調整步進：語音通話</string>
+  <string name="volume_steps_reset">重設</string>
+  <string name="volume_steps_60">60</string>
+  <string name="volume_steps_45">45</string>
+  <string name="volume_steps_30">30</string>
+  <string name="volume_steps_15">15</string>
+  <string name="volume_steps_7">7</string>
+  <string name="volume_steps_5">5</string>
   <!-- Sound & Notification Settings -->
   <!-- Volume settings - Volume adjustment sound -->
+  <string name="volume_adjust_sounds_title">音量調整音效</string>
+  <string name="link_volume_option_title">連結鈴聲與通知音量</string>
 </resources>
