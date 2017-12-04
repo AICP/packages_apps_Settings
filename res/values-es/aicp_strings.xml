@@ -32,7 +32,7 @@
   <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
   <plurals name="show_dev_countdown_custom">
     <item quantity="one">Estás a <xliff:g id="step_count">%1$d</xliff:g> paso de habilitar los ajustes de desarrollo.</item>
-    <item quantity="other">Estás a <xliff:g id="step_count">%1$d</xliff:g> pasos de habilitar los ajustes de desarrollo.</item>
+    <item quantity="other">Estás a <xliff:g id="step_count">%1$d</xliff:g> paso de habilitar los ajustes de desarrollo.</item>
   </plurals>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
   <string name="show_dev_on_custom">¡Opciones de desarrollo activadas! ¡Actua con precaución!</string>
