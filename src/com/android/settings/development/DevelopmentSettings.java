@@ -69,7 +69,6 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
-import android.support.v7.preference.Preference.OnPreferenceClickListener;
 import android.support.v7.preference.PreferenceGroup;
 import android.support.v7.preference.PreferenceScreen;
 import android.telephony.TelephonyManager;
@@ -88,7 +87,6 @@ import android.widget.Toast;
 
 import com.android.internal.app.LocalePicker;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
-import com.android.settings.AnimationScalePreference;
 import com.android.settings.R;
 import com.android.settings.RestrictedSettingsFragment;
 import com.android.settings.SettingsActivity;
@@ -118,7 +116,7 @@ import java.util.List;
  */
 public class DevelopmentSettings extends RestrictedSettingsFragment
         implements DialogInterface.OnClickListener, DialogInterface.OnDismissListener,
-        OnPreferenceChangeListener, OnPreferenceClickListener, SwitchBar.OnSwitchChangeListener, Indexable {
+        OnPreferenceChangeListener, SwitchBar.OnSwitchChangeListener, Indexable {
     private static final String TAG = "DevelopmentSettings";
 
     /**
@@ -331,9 +329,9 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
     private ListPreference mUsbConfiguration;
     private ListPreference mTrackFrameTime;
     private ListPreference mShowNonRectClip;
-    private AnimationScalePreference mWindowAnimationScale;
-    private AnimationScalePreference mTransitionAnimationScale;
-    private AnimationScalePreference mAnimatorDurationScale;
+    private ListPreference mWindowAnimationScale;
+    private ListPreference mTransitionAnimationScale;
+    private ListPreference mAnimatorDurationScale;
     private ListPreference mOverlayDisplayDevices;
 
     private WebViewAppPreferenceController mWebViewAppPrefController;
@@ -545,14 +543,13 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         mBluetoothSelectA2dpLdacPlaybackQuality = addListPreference(BLUETOOTH_SELECT_A2DP_LDAC_PLAYBACK_QUALITY_KEY);
         initBluetoothConfigurationValues();
 
+        mWindowAnimationScale = addListPreference(WINDOW_ANIMATION_SCALE_KEY);
+        mTransitionAnimationScale = addListPreference(TRANSITION_ANIMATION_SCALE_KEY);
+        mAnimatorDurationScale = addListPreference(ANIMATOR_DURATION_SCALE_KEY);
         mOverlayDisplayDevices = addListPreference(OVERLAY_DISPLAY_DEVICES_KEY);
         mSimulateColorSpace = addListPreference(SIMULATE_COLOR_SPACE);
         mUSBAudio = findAndInitSwitchPref(USB_AUDIO_KEY);
         mForceResizable = findAndInitSwitchPref(FORCE_RESIZABLE_KEY);
-
-        mWindowAnimationScale = findAndInitAnimationScalePreference(WINDOW_ANIMATION_SCALE_KEY);
-        mTransitionAnimationScale = findAndInitAnimationScalePreference(TRANSITION_ANIMATION_SCALE_KEY);
-        mAnimatorDurationScale = findAndInitAnimationScalePreference(ANIMATOR_DURATION_SCALE_KEY);
 
         mImmediatelyDestroyActivities = (SwitchPreference) findPreference(
                 IMMEDIATELY_DESTROY_ACTIVITIES_KEY);
@@ -661,14 +658,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
             pref.setEnabled(false);
             mDisabledPrefs.add(pref);
         }
-    }
-
-    private AnimationScalePreference findAndInitAnimationScalePreference(String key) {
-        AnimationScalePreference pref = (AnimationScalePreference) findPreference(key);
-        pref.setOnPreferenceChangeListener(this);
-        pref.setOnPreferenceClickListener(this);
-        mAllPrefs.add(pref);
-        return pref;
     }
 
     private SwitchPreference findAndInitSwitchPref(String key) {
@@ -2333,13 +2322,23 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
                 != 0);
     }
 
-    private void updateAnimationScaleValue(int which, AnimationScalePreference pref) {
+    private void updateAnimationScaleValue(int which, ListPreference pref) {
         try {
             float scale = mWindowManager.getAnimationScale(which);
             if (scale != 1) {
                 mHaveDebugSettings = true;
             }
-            pref.setScale(scale);
+            CharSequence[] values = pref.getEntryValues();
+            for (int i = 0; i < values.length; i++) {
+                float val = Float.parseFloat(values[i].toString());
+                if (scale <= val) {
+                    pref.setValueIndex(i);
+                    pref.setSummary(pref.getEntries()[i]);
+                    return;
+                }
+            }
+            pref.setValueIndex(values.length - 1);
+            pref.setSummary(pref.getEntries()[0]);
         } catch (RemoteException e) {
         }
     }
@@ -2350,8 +2349,7 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         updateAnimationScaleValue(2, mAnimatorDurationScale);
     }
 
-    private void writeAnimationScaleOption(int which, AnimationScalePreference pref,
-            Object newValue) {
+    private void writeAnimationScaleOption(int which, ListPreference pref, Object newValue) {
         try {
             float scale = newValue != null ? Float.parseFloat(newValue.toString()) : 1;
             mWindowManager.setAnimationScale(which, scale);
@@ -2521,15 +2519,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         } else {
             super.onActivityResult(requestCode, resultCode, data);
         }
-    }
-
-    public boolean onPreferenceClick(Preference preference) {
-        if (preference == mWindowAnimationScale ||
-                preference == mTransitionAnimationScale ||
-                preference == mAnimatorDurationScale) {
-            ((AnimationScalePreference) preference).click();
-        }
-        return false;
     }
 
     @Override
