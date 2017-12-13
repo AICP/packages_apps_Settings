@@ -135,11 +135,6 @@
           android:key="docking_sounds"
           android:title="@string/docking_sounds_title" />
 
-        <!-- Volume adjustment sounds -->
-        <SwitchPreference
-          android:key="volume_adjust_sounds"
-          android:title="@string/volume_adjust_sounds_title" />
-
         <!-- Touch sounds -->
         <SwitchPreference
           android:key="touch_sounds"
