@@ -153,6 +153,7 @@ public class ConfirmLockPattern extends ConfirmDeviceCredentialBaseActivity {
                 // doesn't exist).
                 if (!mLockPatternUtils.isLockPatternEnabled(mEffectiveUserId)) {
                     getActivity().setResult(Activity.RESULT_OK, new Intent());
+                }
 
                 // Don't do this check for FRP though, because the pattern is not stored
                 // in a way that isLockPatternEnabled is aware of for that case.

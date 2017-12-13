@@ -253,8 +253,8 @@ public class SettingsGateway {
             WebViewAppPicker.class.getName(),
             LockscreenDashboardFragment.class.getName(),
             BluetoothDeviceDetailsFragment.class.getName(),
-            DataUsageList.class.getName()
-            StartAe.class.getName(),
+            DataUsageList.class.getName(),
+            StartAe.class.getName()
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -292,6 +292,6 @@ public class SettingsGateway {
             Settings.LanguageAndInputSettingsActivity.class.getName(),
             Settings.DateTimeSettingsActivity.class.getName(),
             Settings.DeviceInfoSettingsActivity.class.getName(),
-            Settings.EnterprisePrivacySettingsActivity.class.getName(),
+            Settings.EnterprisePrivacySettingsActivity.class.getName()
     };
 }

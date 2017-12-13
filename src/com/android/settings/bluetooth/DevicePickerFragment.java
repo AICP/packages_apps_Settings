@@ -69,6 +69,8 @@ public final class DevicePickerFragment extends DeviceListPreferenceFragment {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        menu.add(Menu.NONE, MENU_ID_REFRESH, 0, R.string.bluetooth_search_for_devices)
+                .setEnabled(true)
                 .setIcon(com.android.internal.R.drawable.ic_menu_refresh)
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
         super.onCreateOptionsMenu(menu, inflater);
