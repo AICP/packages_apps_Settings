@@ -17,7 +17,6 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="aicp_name_title">AICP Experience</string>
-  <string name="aicp_name_summary">Aicp Oreo Edition - 13.0</string>
   <string name="aicpextras_settings">Aicp Extras</string>
   <string name="aicpextras_dashboard_summary">Personnalisation de ROM</string>
   <!-- Root Management -->
