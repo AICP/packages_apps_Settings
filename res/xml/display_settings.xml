@@ -110,6 +110,14 @@
         android:fragment="com.android.settings.display.AmbientDisplaySettings"
         settings:userRestriction="no_ambient_display" />
 
+    <Preference
+        android:key="ambient_display_custom"
+        android:title="@string/ambient_display_screen_title" >
+        <intent
+            android:action="com.custom.ambient.display.DOZE_SETTINGS"
+            android:targetPackage="com.custom.ambient.display" />
+    </Preference>
+
     <!-- Hide night mode for now
     <ListPreference
         android:key="night_mode"
