@@ -17,8 +17,11 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Aicp Extras -->
+  <string name="header_category_aicpextras">Personalisasi</string>
   <!-- Turn on display when power connected; turn off display when power disconnected -->
+  <string name="wake_when_plugged_or_unplugged_title">Bangun saat pengisi daya di pasang</string>
   <!-- Less Notification sounds -->
+  <string name="notifications_category_title">Pemberitahuan</string>
   <!-- Development Settings -->
   <!-- Dev Options Enabled by Default -->
   <!-- ADB always notify -->
