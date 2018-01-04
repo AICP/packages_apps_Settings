@@ -17,6 +17,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="aicp_name_title">AICP Version</string>
+  <string name="aicp_name_summary">AICP Oreo Edition - 13.1</string>
   <string name="aicpextras_settings">AICP Extras</string>
   <string name="aicpextras_dashboard_summary">ROM-Anpassung</string>
   <!-- Root Management -->
@@ -56,7 +57,6 @@
   <string name="volume_steps_7">7</string>
   <string name="volume_steps_5">5</string>
   <!-- Sound & Notification Settings -->
-  <!-- Volume settings - Volume adjustment sound -->
-  <string name="volume_adjust_sounds_title">Ton bei Lautstärkenänderung</string>
   <string name="link_volume_option_title">Klingelton- und Benachrichtigungslautstärke verknüpfen</string>
+  <string name="select_sim_for_sms">SIM-Karte für SMS wählen</string>
 </resources>

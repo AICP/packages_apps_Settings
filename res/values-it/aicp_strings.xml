@@ -17,6 +17,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="aicp_name_title">AICP Experience</string>
+  <string name="aicp_name_summary">Aicp Oreo Edition - 13.1</string>
   <string name="aicpextras_settings">AICP Extras</string>
   <string name="aicpextras_dashboard_summary">Personalizzazione ROM</string>
   <!-- Root Management -->
@@ -56,7 +57,6 @@
   <string name="volume_steps_7">7</string>
   <string name="volume_steps_5">5</string>
   <!-- Sound & Notification Settings -->
-  <!-- Volume settings - Volume adjustment sound -->
-  <string name="volume_adjust_sounds_title">Suoni regolazione volume</string>
   <string name="link_volume_option_title">Collega volume suoneria e notifica</string>
+  <string name="select_sim_for_sms">Scegli la SIM per gli SMS</string>
 </resources>
