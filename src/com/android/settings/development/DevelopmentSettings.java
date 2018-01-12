@@ -1685,13 +1685,13 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
     private void updateTetheringHardwareOffloadOptions() {
         updateSwitchPreference(mTetheringHardwareOffload, Settings.Global.getInt(
                 getActivity().getContentResolver(),
-                Settings.Global.TETHER_OFFLOAD_DISABLED, 0) != 1);
+                Settings.Global.TETHER_OFFLOAD_DISABLED, 1) != 0);
     }
 
     private void writeTetheringHardwareOffloadOptions() {
         Settings.Global.putInt(getActivity().getContentResolver(),
                 Settings.Global.TETHER_OFFLOAD_DISABLED,
-                mTetheringHardwareOffload.isChecked() ? 0 : 1);
+                mTetheringHardwareOffload.isChecked() ? 1 : 0);
     }
 
     private String defaultLogdSizeValue() {
