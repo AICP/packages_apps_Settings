@@ -82,12 +82,6 @@
         android:title="@string/screensaver_settings_title"
         android:fragment="com.android.settings.dream.DreamSettings" />
 
-    <!-- Cross-listed item, if you change this, also change it in power_usage_summary.xml -->
-    <Preference
-        android:key="ambient_display"
-        android:title="@string/ambient_display_screen_title"
-        android:fragment="com.android.settings.display.AmbientDisplaySettings" />
-
     <!-- Hide night mode for now
     <ListPreference
         android:key="night_mode"
@@ -136,6 +130,23 @@
         android:key="vr_display_pref"
         android:title="@string/display_vr_pref_title"
         android:fragment="com.android.settings.display.VrDisplayPreferencePicker" />
+
+    <PreferenceCategory
+        android:key="ambient_display_category"
+        android:title="@string/ambient_display_category">
+
+        <Preference
+            android:key="ambient_display"
+            android:title="@string/ambient_display_screen_title"
+            android:fragment="com.android.settings.display.AmbientDisplaySettings" />
+
+        <Preference
+            android:key="force_ambient_for_media_pref"
+            android:fragment="com.aicp.extras.fragments.AmbientTicker"
+            android:title="@string/force_ambient_for_media_pref_title"
+            android:summary="@string/force_ambient_for_media_pref_summary"/>
+
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="density_category"
