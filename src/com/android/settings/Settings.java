@@ -159,6 +159,8 @@ public class Settings extends SettingsActivity {
         /* empty */ }
     public static class SwipeToNotificationSuggestionActivity extends SettingsActivity {
         /* empty */ }
+    public static class SwipeToDismissSuggestionActivity extends SettingsActivity {
+        /* empty */ }
     public static class WallpaperSettingsActivity extends SettingsActivity { /* empty */ }
     public static class ManagedProfileSettingsActivity extends SettingsActivity { /* empty */ }
     public static class DeletionHelperActivity extends SettingsActivity { /* empty */ }

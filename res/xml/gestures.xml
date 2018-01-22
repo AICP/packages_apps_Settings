@@ -30,6 +30,11 @@
         android:fragment="com.android.settings.gestures.SwipeToNotificationSettings" />
 
     <Preference
+        android:key="gesture_swipe_fingerprint_to_dismiss_summary"
+        android:title="@string/fp_swipe_to_dismiss_notifications_title"
+        android:fragment="com.android.settings.gestures.SwipeToDismissSettings" />
+
+    <Preference
         android:key="gesture_double_tap_power_input_summary"
         android:title="@string/double_tap_power_for_camera_title"
         android:fragment="com.android.settings.gestures.DoubleTapPowerSettings" />
