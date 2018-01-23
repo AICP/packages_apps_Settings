@@ -60,4 +60,8 @@
   <!-- Sound & Notification Settings -->
   <string name="link_volume_option_title">Spojit hlasitost vyzvánění a oznámení</string>
   <string name="select_sim_for_sms">Vyberte SIM kartu pro SMS</string>
+  <!-- Reset battery stats -->
+  <string name="ok">OK</string>
+  <string name="menu_stats_reset">Vynulovat statistiky</string>
+  <string name="reset_stats_msg">Chystáte se obnovit historii statistiky baterie</string>
 </resources>

@@ -58,4 +58,8 @@
   <!-- Sound & Notification Settings -->
   <string name="link_volume_option_title">連結鈴聲與通知音量</string>
   <string name="select_sim_for_sms">選擇一個 SIM 卡的簡訊</string>
+  <!-- Reset battery stats -->
+  <string name="ok">確定</string>
+  <string name="menu_stats_reset">重設統計</string>
+  <string name="reset_stats_msg">電池統計數據即將重設</string>
 </resources>

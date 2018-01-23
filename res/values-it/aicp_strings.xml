@@ -59,4 +59,8 @@
   <!-- Sound & Notification Settings -->
   <string name="link_volume_option_title">Collega volume suoneria e notifica</string>
   <string name="select_sim_for_sms">Scegli la SIM per gli SMS</string>
+  <!-- Reset battery stats -->
+  <string name="ok">Ok</string>
+  <string name="menu_stats_reset">Resetta statistiche</string>
+  <string name="reset_stats_msg">Le statistiche della batteria stanno per essere resettate</string>
 </resources>

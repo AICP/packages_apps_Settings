@@ -59,4 +59,8 @@
   <!-- Sound & Notification Settings -->
   <string name="link_volume_option_title">Koppel bel- en notificatievolume</string>
   <string name="select_sim_for_sms">Selecteer een simkaart voor SMS</string>
+  <!-- Reset battery stats -->
+  <string name="ok">Ok</string>
+  <string name="menu_stats_reset">Statistieken resetten</string>
+  <string name="reset_stats_msg">Accugeschiedenis zal worden gereset</string>
 </resources>
