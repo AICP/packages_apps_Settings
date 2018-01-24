@@ -68,8 +68,6 @@
     <!-- Sound & Notification Settings -->
     <string name="link_volume_option_title">Link ring and notification volume</string>
 
-    <string name="select_sim_for_sms">Select a SIM for SMS</string>
-
     <!-- Reset battery stats -->
     <string name="ok">Okay</string>
     <string name="menu_stats_reset">Reset stats</string>

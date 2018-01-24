@@ -163,7 +163,7 @@ public class SimSettings extends RestrictedSettingsFragment implements Indexable
         if (DBG) log("[updateSmsValues] mSubInfoList=" + mSubInfoList);
 
         if (sir != null) {
-            simPref.setSummary(getSubscriptionDisplayName(sir));
+            simPref.setSummary(sir.getDisplayName());
             simPref.setEnabled(mSelectableSubInfos.size() > 1);
         } else if (sir == null) {
             simPref.setSummary(R.string.sim_selection_required_pref);
@@ -181,7 +181,7 @@ public class SimSettings extends RestrictedSettingsFragment implements Indexable
         final boolean ecbMode = SystemProperties.getBoolean(
                 TelephonyProperties.PROPERTY_INECM_MODE, false);
         if (sir != null) {
-            simPref.setSummary(getSubscriptionDisplayName(sir));
+            simPref.setSummary(sir.getDisplayName());
             // Enable data preference in msim mode and call state idle
             simPref.setEnabled((mSelectableSubInfos.size() > 1) && callStateIdle && !ecbMode);
         } else if (sir == null) {
@@ -193,7 +193,6 @@ public class SimSettings extends RestrictedSettingsFragment implements Indexable
 
     private void updateCallValues() {
         final Preference simPref = findPreference(KEY_CALLS);
-        final SubscriptionInfo sir = mSubscriptionManager.getDefaultVoiceSubscriptionInfo();
         final TelecomManager telecomManager = TelecomManager.from(mContext);
         final PhoneAccountHandle phoneAccount =
             telecomManager.getUserSelectedOutgoingPhoneAccount();
@@ -201,18 +200,10 @@ public class SimSettings extends RestrictedSettingsFragment implements Indexable
             telecomManager.getCallCapablePhoneAccounts();
 
         simPref.setTitle(R.string.calls_title);
-        if (sir != null) {
-            simPref.setSummary(phoneAccount == null
-                    ? mContext.getResources().getString(R.string.sim_calls_ask_first_prefs_title)
-                    : getSubscriptionDisplayName(sir));
-            // Enable data preference in msim mode and call state idle
-            simPref.setEnabled(allPhoneAccounts.size() > 1);
-        } else {
-            simPref.setSummary(phoneAccount == null
-                    ? mContext.getResources().getString(R.string.sim_calls_ask_first_prefs_title)
-                    : (String)telecomManager.getPhoneAccount(phoneAccount).getLabel());
-            simPref.setEnabled(allPhoneAccounts.size() > 1);
-        }
+        simPref.setSummary(phoneAccount == null
+                ? mContext.getResources().getString(R.string.sim_calls_ask_first_prefs_title)
+                : (String)telecomManager.getPhoneAccount(phoneAccount).getLabel());
+        simPref.setEnabled(allPhoneAccounts.size() > 1);
     }
 
     @Override
@@ -307,11 +298,11 @@ public class SimSettings extends RestrictedSettingsFragment implements Indexable
             setTitle(String.format(mContext.getResources()
                     .getString(R.string.sim_editor_title), (mSlotId + 1)));
             if (mSubInfoRecord != null) {
-                setTitle(getSubscriptionDisplayName(mSubInfoRecord));
                 if (TextUtils.isEmpty(getPhoneNumber(mSubInfoRecord))) {
-                    setSummary("");
+                    setSummary(mSubInfoRecord.getDisplayName());
                 } else {
-                    setSummary(PhoneNumberUtils.createTtsSpannable(getPhoneNumber(mSubInfoRecord)));
+                    setSummary(mSubInfoRecord.getDisplayName() + " - " +
+                            PhoneNumberUtils.createTtsSpannable(getPhoneNumber(mSubInfoRecord)));
                     setEnabled(true);
                 }
                 setIcon(new BitmapDrawable(res, (mSubInfoRecord.createIconBitmap(mContext))));
@@ -369,15 +360,5 @@ public class SimSettings extends RestrictedSettingsFragment implements Indexable
         }
         Log.d(TAG, "isCallStateIdle " + callStateIdle);
         return callStateIdle;
-    }
-
-    private String getSubscriptionDisplayName(SubscriptionInfo sir) {
-        return sir.getDisplayName() + " - " + getSubscriptionCarrierName(sir);
-    }
-
-    private String getSubscriptionCarrierName(SubscriptionInfo sir) {
-        CharSequence simCarrierName = sir.getCarrierName();
-        return !TextUtils.isEmpty(simCarrierName) ? simCarrierName.toString() :
-                mContext.getString(com.android.internal.R.string.unknownName);
     }
 }
