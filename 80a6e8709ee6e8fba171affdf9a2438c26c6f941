@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "54144d8b_61d847df",
+        "filename": "res/layout/app_ops_details_item.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-01-25T08:31:06Z",
+      "side": 1,
+      "message": "Mosche, I dont see this change in the original commit. This may belong to the appops topic commits.",
+      "revId": "80a6e8709ee6e8fba171affdf9a2438c26c6f941",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": false
+    }
+  ]
+}
