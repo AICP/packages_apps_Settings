@@ -40,6 +40,7 @@ public class GestureSettings extends DashboardFragment {
 
     private static final String KEY_ASSIST = "gesture_assist_input_summary";
     private static final String KEY_SWIPE_DOWN = "gesture_swipe_down_fingerprint_input_summary";
+    private static final String KEY_SWIPE_DISMISS = "gesture_swipe_fingerprint_to_dismiss_summary";
     private static final String KEY_DOUBLE_TAP_POWER = "gesture_double_tap_power_input_summary";
     private static final String KEY_DOUBLE_TWIST = "gesture_double_twist_input_summary";
     private static final String KEY_DOUBLE_TAP_SCREEN = "gesture_double_tap_screen_input_summary";
@@ -79,6 +80,8 @@ public class GestureSettings extends DashboardFragment {
                 KEY_ASSIST, false /* assistOnly */));
         controllers.add(new SwipeToNotificationPreferenceController(context, lifecycle,
                 KEY_SWIPE_DOWN));
+        controllers.add(new SwipeToDismissPreferenceController(context, lifecycle,
+                KEY_SWIPE_DISMISS));
         controllers.add(new DoubleTwistPreferenceController(context, lifecycle, KEY_DOUBLE_TWIST));
         controllers.add(new DoubleTapPowerPreferenceController(context, lifecycle,
                 KEY_DOUBLE_TAP_POWER));
