@@ -53,6 +53,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.os.Build;
+import android.os.SystemProperties;
 import android.provider.SearchIndexablesContract;
 import android.provider.SearchIndexablesContract.SiteMapColumns;
 import android.support.annotation.VisibleForTesting;
@@ -101,7 +102,7 @@ public class DatabaseIndexingManager {
                 mContext.getPackageManager().queryIntentContentProviders(intent, 0);
 
         final String localeStr = Locale.getDefault().toString();
-        final String fingerprint = Build.FINGERPRINT;
+        final String fingerprint = SystemProperties.get(Build.DATE, Build.FINGERPRINT);
         final String providerVersionedNames =
                 IndexDatabaseHelper.buildProviderVersionedNames(providers);
 
