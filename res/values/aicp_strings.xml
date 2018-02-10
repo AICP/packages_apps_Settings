@@ -23,4 +23,10 @@
     <string name="aicpextras_title">AICP Extras</string>
     <string name="aicpextras_summary">ROM customization</string>
 
+    <!-- Screen off animation -->
+    <string name="screen_off_animation_title">Screen off animation</string>
+    <string name="screen_off_animation_default">Default</string>
+    <string name="screen_off_animation_crt">CRT</string>
+    <string name="screen_off_animation_scale">Scale</string>
+
 </resources>
