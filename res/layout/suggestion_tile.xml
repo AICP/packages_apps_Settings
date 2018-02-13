@@ -23,14 +23,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/suggestion_card_background_color"
+        android:background="@android:color/white"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:minHeight="@dimen/dashboard_tile_minimum_height">
 
         <ImageView
             android:id="@android:id/icon"
-            android:tint="@color/suggestion_card_icon_tint_color"
+            android:tint="@*android:color/accent_device_default_light"
             android:layout_width="@dimen/dashboard_tile_image_size"
             android:layout_height="@dimen/dashboard_tile_image_size"
             android:layout_marginStart="14dp"
@@ -46,7 +46,6 @@
                 android:layout_height="wrap_content"
                 android:singleLine="true"
                 android:textAppearance="@style/TextAppearance.TileTitle"
-                android:textColor="@color/suggestion_card_title_text_color"
                 android:ellipsize="marquee"
                 android:fadingEdge="horizontal"/>
 
@@ -54,7 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="@style/TextAppearance.Small"
-                android:textColor="@color/suggestion_card_summary_text_color"/>
+                android:textColor="?android:attr/textColorSecondary"/>
 
         </LinearLayout>
 
