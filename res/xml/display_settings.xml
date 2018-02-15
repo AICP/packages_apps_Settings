@@ -106,15 +106,6 @@
         android:key="lift_to_wake"
         android:title="@string/lift_to_wake_title" />
 
-    <lineageos.preference.RemotePreference
-        android:key="doze_device_settings"
-        android:title="@string/doze_title"
-        android:summary="@string/doze_summary"
-        lineage:replacesKey="doze">
-        <intent
-            android:action="org.lineageos.settings.device.DOZE_SETTINGS" />
-    </lineageos.preference.RemotePreference>
-
     <SwitchPreference
         android:key="tap_to_wake"
         android:title="@string/tap_to_wake"
@@ -127,7 +118,7 @@
         android:summary="@string/proximity_wake_summary"
         lineage:requiresConfig="@*lineageos.platform:bool/config_proximityCheckOnWake" />
 
-    <!-- Use LineageParts for styles 
+    <!-- Use LineageParts for styles
     <ListPreference
         android:key="theme"
         android:title="@string/device_theme"
