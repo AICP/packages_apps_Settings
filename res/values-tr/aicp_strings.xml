@@ -17,14 +17,17 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Aicp Extras -->
+  <string name="aicpextras_settings">AICP Ekstra</string>
   <!-- Turn on display when power connected; turn off display when power disconnected -->
   <!-- Less Notification sounds -->
+  <string name="less_notification_sounds_default">Varsayılan davranış</string>
   <!-- Development Settings -->
   <!-- Dev Options Enabled by Default -->
   <!-- ADB always notify -->
   <!-- Expanded desktop -->
   <!-- Vendor version -->
   <!-- Density category -->
+  <string name="density_category">Yoğunluk seçenekleri</string>
   <!-- Color Picker -->
   <!-- Navigation Bar -->
   <!-- Actions dialog and default task values set in ActionPreference xml-->
@@ -34,6 +37,14 @@
   <!-- Navbar height -->
   <!-- SmartBar -->
   <!-- Volume Steps -->
+  <string name="volume_steps_title">Ses seviyeleri</string>
+  <string name="volume_steps_reset">Sıfırla</string>
+  <string name="volume_steps_60">60</string>
+  <string name="volume_steps_45">45</string>
+  <string name="volume_steps_30">30</string>
+  <string name="volume_steps_15">15</string>
+  <string name="volume_steps_7">7</string>
+  <string name="volume_steps_5">5</string>
   <!-- Manage applications: show substratum overlays -->
   <!-- Manage applications: show substratum icon overlays -->
   <!-- Navbar dynamic color -->
@@ -47,7 +58,9 @@
   <!-- Dashboard columns -->
   <!-- Doze pulse options -->
   <!-- Advanced night mode brightness -->
+  <string name="magisk_summary">Root yönetimi</string>
   <!-- Top Level SuperSU settings -->
+  <string name="supersu_title">SuperSU</string>
   <!-- Top Level Substratum settings -->
   <!-- Force authorize substratum packages -->
   <!-- HTC Gesture settings -->
@@ -57,6 +70,9 @@
   <!-- Pixel Animation Duration -->
   <!-- Fingerprint Gestures -->
   <!-- Reset battery stats -->
+  <string name="ok">Tamam</string>
+  <string name="menu_stats_reset">İstatislikleri sıfırla</string>
+  <string name="reset_stats_msg">Pil geçmişi istatistikleri sıfırlanacak</string>
   <!-- Color engine -->
   <!-- Audio ducking on mediaplay -->
 </resources>
