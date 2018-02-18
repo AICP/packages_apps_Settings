@@ -43,4 +43,12 @@
   <string name="volume_steps_5">5</string>
   <!-- Sound & Notification Settings -->
   <!-- Reset battery stats -->
+  <!-- [CHAR LIMIT=80]-->
+  <!--  [CHAR LIMIT=160]-->
+  <!-- [CHAR LIMIT=60] -->
+  <!-- [CHAR LIMIT=60] -->
+  <!-- Less Notification sounds -->
+  <string name="less_notification_sounds_title">减少通知的频率</string>
+  <string name="less_notification_sounds_default">默认行为</string>
+  <!-- Notification log -->
 </resources>

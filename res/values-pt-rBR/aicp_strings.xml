@@ -58,9 +58,16 @@
   <string name="volume_steps_5">5</string>
   <!-- Sound & Notification Settings -->
   <string name="link_volume_option_title">Juntar volume de toque e notificação</string>
-  <string name="select_sim_for_sms">Selecione um SIM para SMS</string>
   <!-- Reset battery stats -->
   <string name="ok">Ok</string>
   <string name="menu_stats_reset">Resetar estatísticas</string>
   <string name="reset_stats_msg">Os históricos de estatísticas da bateria serão reiniciados</string>
+  <!-- [CHAR LIMIT=80]-->
+  <!--  [CHAR LIMIT=160]-->
+  <!-- [CHAR LIMIT=60] -->
+  <!-- [CHAR LIMIT=60] -->
+  <!-- Less Notification sounds -->
+  <string name="less_notification_sounds_title">Sons de notificação menos frequentes</string>
+  <string name="less_notification_sounds_default">Comportamento padrão</string>
+  <!-- Notification log -->
 </resources>

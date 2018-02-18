@@ -45,4 +45,12 @@
   <!-- Sound & Notification Settings -->
   <!-- Reset battery stats -->
   <string name="ok">OK</string>
+  <!-- [CHAR LIMIT=80]-->
+  <!--  [CHAR LIMIT=160]-->
+  <!-- [CHAR LIMIT=60] -->
+  <!-- [CHAR LIMIT=60] -->
+  <!-- Less Notification sounds -->
+  <string name="less_notification_sounds_title">頻繁な通知音の軽減</string>
+  <string name="less_notification_sounds_default">デフォルト</string>
+  <!-- Notification log -->
 </resources>

@@ -59,9 +59,32 @@
   <string name="volume_steps_5">5</string>
   <!-- Sound & Notification Settings -->
   <string name="link_volume_option_title">Spojit hlasitost vyzvánění a oznámení</string>
-  <string name="select_sim_for_sms">Vyberte SIM kartu pro SMS</string>
   <!-- Reset battery stats -->
   <string name="ok">OK</string>
   <string name="menu_stats_reset">Vynulovat statistiky</string>
   <string name="reset_stats_msg">Chystáte se obnovit historii statistiky baterie</string>
+  <!-- [CHAR LIMIT=80]-->
+  <string name="fp_swipe_to_dismiss_notifications_title">Pro odmítnutí oznámení přejeďte prstem vlevo nebo vpravo přes snímač otisků prstů</string>
+  <string name="fp_swipe_to_dismiss_notifications_pref_title">Přejeďte vlevo nebo vpravo přes snímač otisků prstů</string>
+  <!--  [CHAR LIMIT=160]-->
+  <string name="fp_swipe_to_dismiss_notifications_summary">Chcete-li zrušit oznámení, přejeďte prstem vlevo nebo vpravo pře snímač otisků prstů na zadní straně telefonu.</string>
+  <!-- [CHAR LIMIT=60] -->
+  <string name="fingerprint_swipe_to_dismiss_suggestion_title">Rychlé zrušení oznámení</string>
+  <!-- [CHAR LIMIT=60] -->
+  <string name="fingerprint_swipe_to_dismiss_suggestion_summary">Přejeďte prstem vlevo nebo vravo přes snímač otisků prstů</string>
+  <!-- Less Notification sounds -->
+  <string name="less_notification_sounds_title">Méně časté zvuky oznámení</string>
+  <string name="less_notification_sounds_summary">Přehrát zvuk oznámení každé aplikace pouze jednou za stanovené časové období</string>
+  <string name="less_notification_sounds_default">Výchozí chování</string>
+  <string name="less_notification_sounds_3s">Každé 3 sekundy</string>
+  <string name="less_notification_sounds_5s">Každých 5 sekund</string>
+  <string name="less_notification_sounds_10s">Každých 10 sekund</string>
+  <string name="less_notification_sounds_15s">Každých 15 sekund</string>
+  <string name="less_notification_sounds_30s">Každých 30 sekund</string>
+  <string name="less_notification_sounds_45s">Každých 45 sekund</string>
+  <string name="less_notification_sounds_1m">Každou 1 minutu</string>
+  <string name="less_notification_sounds_2m">Každé 2 minuty</string>
+  <string name="less_notification_sounds_5m">Každých 5 minut</string>
+  <!-- Notification log -->
+  <string name="notification_log_summary">Zobrazit protokol historie oznámení</string>
 </resources>

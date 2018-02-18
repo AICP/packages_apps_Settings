@@ -59,9 +59,32 @@
   <string name="volume_steps_5">5</string>
   <!-- Sound & Notification Settings -->
   <string name="link_volume_option_title">Связать громкость звонка и уведомлений</string>
-  <string name="select_sim_for_sms">Выбор SIM-карты для SMS</string>
   <!-- Reset battery stats -->
   <string name="ok">Хорошо</string>
   <string name="menu_stats_reset">Сброс статистики</string>
   <string name="reset_stats_msg">Статистика батареи будет сброшена</string>
+  <!-- [CHAR LIMIT=80]-->
+  <string name="fp_swipe_to_dismiss_notifications_title">Проведите пальцем по сканеру отпечатка пальца влево или вправо, чтобы убрать уведомления</string>
+  <string name="fp_swipe_to_dismiss_notifications_pref_title">Проведите пальцем по сканеру отпечатка пальца влево или вправо</string>
+  <!--  [CHAR LIMIT=160]-->
+  <string name="fp_swipe_to_dismiss_notifications_summary">Чтобы убрать ваши уведомления, проведите пальцем влево или право по сканеру отпечатка пальца.</string>
+  <!-- [CHAR LIMIT=60] -->
+  <string name="fingerprint_swipe_to_dismiss_suggestion_title">Быстро убрать уведомления</string>
+  <!-- [CHAR LIMIT=60] -->
+  <string name="fingerprint_swipe_to_dismiss_suggestion_summary">Проведите пальцем влево или вправо по датчику отпечатков пальцев</string>
+  <!-- Less Notification sounds -->
+  <string name="less_notification_sounds_title">Менее частые звуки уведомлений</string>
+  <string name="less_notification_sounds_summary">Ограничить частоту звука уведомления каждого приложения только одним разом за выбраный период времени</string>
+  <string name="less_notification_sounds_default">По умолчанию</string>
+  <string name="less_notification_sounds_3s">Каждые 3 секунды</string>
+  <string name="less_notification_sounds_5s">Каждые 5 секунд</string>
+  <string name="less_notification_sounds_10s">Каждые 10 секунд</string>
+  <string name="less_notification_sounds_15s">Каждые 15 секунд</string>
+  <string name="less_notification_sounds_30s">Каждые 30 секунд</string>
+  <string name="less_notification_sounds_45s">Каждые 45 секунд</string>
+  <string name="less_notification_sounds_1m">Каждую 1 минуту</string>
+  <string name="less_notification_sounds_2m">Каждые 2 минуты</string>
+  <string name="less_notification_sounds_5m">Каждые 5 минут</string>
+  <!-- Notification log -->
+  <string name="notification_log_summary">Показать журнал истории уведомлений</string>
 </resources>

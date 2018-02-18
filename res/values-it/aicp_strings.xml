@@ -58,9 +58,32 @@
   <string name="volume_steps_5">5</string>
   <!-- Sound & Notification Settings -->
   <string name="link_volume_option_title">Collega volume suoneria e notifica</string>
-  <string name="select_sim_for_sms">Scegli la SIM per gli SMS</string>
   <!-- Reset battery stats -->
   <string name="ok">Ok</string>
   <string name="menu_stats_reset">Resetta statistiche</string>
   <string name="reset_stats_msg">Le statistiche della batteria stanno per essere resettate</string>
+  <!-- [CHAR LIMIT=80]-->
+  <string name="fp_swipe_to_dismiss_notifications_title">Scorri a sinistra o destra sul sensore d\'impronte per rimuovere le notifiche</string>
+  <string name="fp_swipe_to_dismiss_notifications_pref_title">Scorri a sinistra o destra sul sensore d\'impronte</string>
+  <!--  [CHAR LIMIT=160]-->
+  <string name="fp_swipe_to_dismiss_notifications_summary">Per rimuovere le notifiche, scorri a sinistra o destra sul sensore d\'impronte posto sul retro del tuo dispositivo.</string>
+  <!-- [CHAR LIMIT=60] -->
+  <string name="fingerprint_swipe_to_dismiss_suggestion_title">Rimuovi le notifiche rapidamente</string>
+  <!-- [CHAR LIMIT=60] -->
+  <string name="fingerprint_swipe_to_dismiss_suggestion_summary">Scorri a sinistra o destra sul sensore d\'impronte</string>
+  <!-- Less Notification sounds -->
+  <string name="less_notification_sounds_title">Suoni di notifica meno frequenti</string>
+  <string name="less_notification_sounds_summary">Riproduci i suoni di notifica di ogni app per il periodo di tempo impostato</string>
+  <string name="less_notification_sounds_default">Comportamento predefinito</string>
+  <string name="less_notification_sounds_3s">Ogni 3 secondi</string>
+  <string name="less_notification_sounds_5s">Ogni 5 secondi</string>
+  <string name="less_notification_sounds_10s">Ogni 10 secondi</string>
+  <string name="less_notification_sounds_15s">Ogni 15 secondi</string>
+  <string name="less_notification_sounds_30s">Ogni 30 secondi</string>
+  <string name="less_notification_sounds_45s">Ogni 45 secondi</string>
+  <string name="less_notification_sounds_1m">Ogni minuto</string>
+  <string name="less_notification_sounds_2m">Ogni 2 minuti</string>
+  <string name="less_notification_sounds_5m">Ogni 5 minuti</string>
+  <!-- Notification log -->
+  <string name="notification_log_summary">Visualizza il registro cronologico delle notifiche</string>
 </resources>

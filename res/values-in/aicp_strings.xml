@@ -29,9 +29,6 @@
   <string name="custom_encryption_and_credential_settings_summary_on">Perangkat terenkripsi</string>
   <string name="custom_encryption_and_credential_settings_summary_off">Perangkat dienkripsi</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
-  <plurals name="show_dev_countdown_custom">
-    <item quantity="other">Anda sekarang <xliff:g id="step_count">%1$d</xliff:g> langkah dari pengaktifan pengaturan pengembang.</item>
-  </plurals>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
   <string name="show_dev_on_custom">Opsi pengembang diaktifkan! Hati-hati!</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
@@ -48,4 +45,10 @@
   <!-- Sound & Notification Settings -->
   <string name="link_volume_option_title">Volume dering dan notifikasi</string>
   <!-- Reset battery stats -->
+  <!-- [CHAR LIMIT=80]-->
+  <!--  [CHAR LIMIT=160]-->
+  <!-- [CHAR LIMIT=60] -->
+  <!-- [CHAR LIMIT=60] -->
+  <!-- Less Notification sounds -->
+  <!-- Notification log -->
 </resources>

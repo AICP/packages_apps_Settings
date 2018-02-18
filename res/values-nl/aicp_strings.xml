@@ -58,9 +58,32 @@
   <string name="volume_steps_5">5</string>
   <!-- Sound & Notification Settings -->
   <string name="link_volume_option_title">Koppel bel- en notificatievolume</string>
-  <string name="select_sim_for_sms">Selecteer een simkaart voor SMS</string>
   <!-- Reset battery stats -->
   <string name="ok">Ok</string>
   <string name="menu_stats_reset">Statistieken resetten</string>
   <string name="reset_stats_msg">Accugeschiedenis zal worden gereset</string>
+  <!-- [CHAR LIMIT=80]-->
+  <string name="fp_swipe_to_dismiss_notifications_title">Veeg vingerafdruk naar links of rechts om meldingen te negeren</string>
+  <string name="fp_swipe_to_dismiss_notifications_pref_title">Veeg vingerafdruk naar links of rechts</string>
+  <!--  [CHAR LIMIT=160]-->
+  <string name="fp_swipe_to_dismiss_notifications_summary">Veeg naar links of rechts over de vingerafdruk sensor om meldingen te negeren.</string>
+  <!-- [CHAR LIMIT=60] -->
+  <string name="fingerprint_swipe_to_dismiss_suggestion_title">Negeer meldingen snel</string>
+  <!-- [CHAR LIMIT=60] -->
+  <string name="fingerprint_swipe_to_dismiss_suggestion_summary">Veeg naar links of rechts over de vingerafdruk sensor</string>
+  <!-- Less Notification sounds -->
+  <string name="less_notification_sounds_title">Minder frequente notificatie geluiden</string>
+  <string name="less_notification_sounds_summary">Beperk de notificatiegeluiden van elke app tot de ingestelde tijdsperiode</string>
+  <string name="less_notification_sounds_default">Standaard gedrag</string>
+  <string name="less_notification_sounds_3s">Elke 3 seconden</string>
+  <string name="less_notification_sounds_5s">Elke 5 seconden</string>
+  <string name="less_notification_sounds_10s">Elke 10 seconden</string>
+  <string name="less_notification_sounds_15s">Elke 15 seconden</string>
+  <string name="less_notification_sounds_30s">Elke 30 seconden</string>
+  <string name="less_notification_sounds_45s">Elke 45 seconden</string>
+  <string name="less_notification_sounds_1m">Elke minuut</string>
+  <string name="less_notification_sounds_2m">Elke 2 minuten</string>
+  <string name="less_notification_sounds_5m">Elke 5 minuten</string>
+  <!-- Notification log -->
+  <string name="notification_log_summary">Toon geschiedenislogboek van notificaties</string>
 </resources>

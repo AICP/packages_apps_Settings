@@ -57,9 +57,32 @@
   <string name="volume_steps_5">5</string>
   <!-- Sound & Notification Settings -->
   <string name="link_volume_option_title">連結鈴聲與通知音量</string>
-  <string name="select_sim_for_sms">選擇一個 SIM 卡的簡訊</string>
   <!-- Reset battery stats -->
   <string name="ok">確定</string>
   <string name="menu_stats_reset">重設統計</string>
   <string name="reset_stats_msg">電池統計數據即將重設</string>
+  <!-- [CHAR LIMIT=80]-->
+  <string name="fp_swipe_to_dismiss_notifications_title">向左或向右滑動指紋以解除通知</string>
+  <string name="fp_swipe_to_dismiss_notifications_pref_title">向左或向右滑動指紋</string>
+  <!--  [CHAR LIMIT=160]-->
+  <string name="fp_swipe_to_dismiss_notifications_summary">要解除通知, 請在手機背面的指紋感應器上向左或向右滑動。</string>
+  <!-- [CHAR LIMIT=60] -->
+  <string name="fingerprint_swipe_to_dismiss_suggestion_title">快速解除通知</string>
+  <!-- [CHAR LIMIT=60] -->
+  <string name="fingerprint_swipe_to_dismiss_suggestion_summary">在指紋感應器上向左或向右滑動</string>
+  <!-- Less Notification sounds -->
+  <string name="less_notification_sounds_title">低頻率通知的音效</string>
+  <string name="less_notification_sounds_summary">限制應用程式在一段時間內只能播放一次通知音效</string>
+  <string name="less_notification_sounds_default">預設行為</string>
+  <string name="less_notification_sounds_3s">每 3 秒</string>
+  <string name="less_notification_sounds_5s">每 5 秒</string>
+  <string name="less_notification_sounds_10s">每 10 秒</string>
+  <string name="less_notification_sounds_15s">每 15 秒</string>
+  <string name="less_notification_sounds_30s">每 30 秒</string>
+  <string name="less_notification_sounds_45s">每 45 秒</string>
+  <string name="less_notification_sounds_1m">每 1 分鐘</string>
+  <string name="less_notification_sounds_2m">每 2 分鐘</string>
+  <string name="less_notification_sounds_5m">每 5 分鐘</string>
+  <!-- Notification log -->
+  <string name="notification_log_summary">顯示通知歷史記錄日誌</string>
 </resources>
