@@ -80,7 +80,6 @@ import android.view.LayoutInflater;
 import android.view.ThreadedRenderer;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManagerGlobal;
 import android.view.accessibility.AccessibilityManager;
 import android.webkit.IWebViewUpdateService;
 import android.webkit.WebViewFactory;
@@ -177,7 +176,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
     private static final String ANIMATOR_DURATION_SCALE_KEY = "animator_duration_scale";
     private static final String OVERLAY_DISPLAY_DEVICES_KEY = "overlay_display_devices";
     private static final String DEBUG_DEBUGGING_CATEGORY_KEY = "debug_debugging_category";
-    private static final String DEBUG_APPLICATIONS_CATEGORY_KEY = "debug_applications_category";
     private static final String SELECT_LOGD_SIZE_KEY = "select_logd_size";
     private static final String SELECT_LOGD_SIZE_PROPERTY = "persist.logd.size";
     private static final String SELECT_LOGD_TAG_PROPERTY = "persist.log.tag";
@@ -212,7 +210,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
     private static final String KEY_COLOR_MODE = "picture_color_mode";
     private static final String FORCE_RESIZABLE_KEY = "force_resizable_activities";
     private static final String COLOR_TEMPERATURE_KEY = "color_temperature";
-    private static final String KILL_APP_LONGPRESS_BACK = "kill_app_longpress_back";
 
     private static final String BLUETOOTH_SHOW_DEVICES_WITHOUT_NAMES_KEY =
             "bluetooth_show_devices_without_names";
@@ -294,7 +291,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
     private RestrictedSwitchPreference mEnableOemUnlock;
     private SwitchPreference mDebugViewAttributes;
     private SwitchPreference mForceAllowOnExternal;
-    private SwitchPreference mKillAppLongpressBack;
 
     private Preference mPassword;
     private String mDebugApp;
@@ -467,19 +463,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         if (!isPackageInstalled(getActivity(), TERMINAL_APP_PACKAGE)) {
             debugDebuggingCategory.removePreference(mEnableTerminal);
             mEnableTerminal = null;
-        }
-
-        final PreferenceGroup debugApplicationsCategory = (PreferenceGroup)
-                findPreference(DEBUG_APPLICATIONS_CATEGORY_KEY);
-        mKillAppLongpressBack = findAndInitSwitchPref(KILL_APP_LONGPRESS_BACK);
-        boolean hasNavigationBar = true;
-        try {
-            hasNavigationBar = WindowManagerGlobal.getWindowManagerService().hasNavigationBar();
-        } catch (RemoteException e) {
-            // Do nothing
-        }
-        if (hasNavigationBar) {
-            debugApplicationsCategory.removePreference(mKillAppLongpressBack);
         }
 
         //mBugReportController.displayPreference(getPreferenceScreen());
