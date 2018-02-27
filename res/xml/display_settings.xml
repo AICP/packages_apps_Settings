@@ -77,10 +77,6 @@
         android:fragment="com.android.settings.display.ColorModePreferenceFragment"
         settings:keywords="@string/keywords_color_mode" />
 
-    <!-- Expanded desktop -->
-    <org.lineageos.internal.lineageparts.LineagePartsPreference
-        android:key="expanded_desktop_settings" />
-
     <Preference
         android:key="screensaver"
         android:title="@string/screensaver_settings_title"
