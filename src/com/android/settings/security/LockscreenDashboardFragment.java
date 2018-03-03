@@ -23,6 +23,7 @@ import android.support.annotation.VisibleForTesting;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.accounts.AddUserWhenLockedPreferenceController;
+import com.android.settings.aicp.AmbientWeatherPreferenceController;
 import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.notification.LockScreenNotificationPreferenceController;
 import com.android.settings.search.BaseSearchIndexProvider;
@@ -90,6 +91,7 @@ public class LockscreenDashboardFragment extends DashboardFragment
         mOwnerInfoPreferenceController =
             new OwnerInfoPreferenceController(context, this, lifecycle);
         controllers.add(mOwnerInfoPreferenceController);
+        controllers.add(new AmbientWeatherPreferenceController(context));
         return controllers;
     }
 

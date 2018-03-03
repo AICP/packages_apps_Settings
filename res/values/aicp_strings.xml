@@ -100,4 +100,8 @@
 
     <!-- Notification log -->
     <string name="notification_log_summary">Show notifications history log</string>
+
+    <!-- Ambient Weather -->
+    <string name="ambient_weather_lockscreen_title">Ambient weather</string>
+    <string name="ambient_weather_lockscreen_summary">Show weather on the lockscreen and when dozing</string>
 </resources>
