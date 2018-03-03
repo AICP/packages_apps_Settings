@@ -569,6 +569,10 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         mTransitionAnimationScale = findAndInitAnimationScalePreference(TRANSITION_ANIMATION_SCALE_KEY);
         mAnimatorDurationScale = findAndInitAnimationScalePreference(ANIMATOR_DURATION_SCALE_KEY);
 
+        if (ActivityManager.isLowRamDeviceStatic()) {
+            disableForUser(mForceResizable);
+        }
+
         mImmediatelyDestroyActivities = (SwitchPreference) findPreference(
                 IMMEDIATELY_DESTROY_ACTIVITIES_KEY);
         mAllPrefs.add(mImmediatelyDestroyActivities);
