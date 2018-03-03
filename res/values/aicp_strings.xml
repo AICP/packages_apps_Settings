@@ -105,4 +105,8 @@
     <string name="usb_paranoia_connect_title">USB secure connect</string>
     <string name="usb_paranoia_connect_summary">Only enable charging when USB plugged on secure lock screens</string>
     <string name="usb_category_title">USB</string>
+
+    <!-- Ambient Weather -->
+    <string name="ambient_weather_lockscreen_title">Ambient weather</string>
+    <string name="ambient_weather_lockscreen_summary">Show weather on the lockscreen and when dozing</string>
 </resources>
