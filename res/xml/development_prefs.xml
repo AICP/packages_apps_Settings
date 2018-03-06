@@ -210,6 +210,23 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory android:key="usb_category"
+                        android:title="@string/usb_category_title">
+        <ListPreference
+            android:key="select_usb_configuration"
+            android:title="@string/select_usb_configuration_title"
+            android:dialogTitle="@string/select_usb_configuration_dialog_title"
+            android:entries="@array/usb_configuration_titles"
+            android:entryValues="@array/usb_configuration_values" />
+
+        <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="usb_paranoia_connect"
+            android:title="@string/usb_paranoia_connect_title"
+            android:summary="@string/usb_paranoia_connect_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
     <PreferenceCategory android:key="debug_networking_category"
             android:title="@string/debug_networking_category">
 
@@ -242,13 +259,6 @@
             android:key="tethering_hardware_offload"
             android:title="@string/tethering_hardware_offload"
             android:summary="@string/tethering_hardware_offload_summary"/>
-
-        <ListPreference
-            android:key="select_usb_configuration"
-            android:title="@string/select_usb_configuration_title"
-            android:dialogTitle="@string/select_usb_configuration_dialog_title"
-            android:entries="@array/usb_configuration_titles"
-            android:entryValues="@array/usb_configuration_values" />
 
         <SwitchPreference
             android:key="bluetooth_show_devices_without_names"
