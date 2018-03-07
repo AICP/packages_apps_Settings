@@ -33,6 +33,7 @@
   <plurals name="show_dev_countdown_custom">
     <item quantity="one">Teraz ste <xliff:g id="step_count">%1$d</xliff:g> krok od povolenia možnosti pre vývojárov.</item>
     <item quantity="few">Teraz ste <xliff:g id="step_count">%1$d</xliff:g> kroky od povolenia možnosti pre vývojárov.</item>
+    <item quantity="many">Teraz ste <xliff:g id="step_count">%1$d</xliff:g> krokov od povolenia možnosti pre vývojárov.</item>
     <item quantity="other">Teraz ste <xliff:g id="step_count">%1$d</xliff:g> krokov od povolenia možnosti pre vývojárov.</item>
   </plurals>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
@@ -87,4 +88,8 @@
   <string name="less_notification_sounds_5m">Každých 5 minút</string>
   <!-- Notification log -->
   <string name="notification_log_summary">Zobraziť protokol histórie upozornení</string>
+  <!-- USB paranoia mode -->
+  <string name="usb_paranoia_connect_title">USB bezpečné pripojenie</string>
+  <string name="usb_paranoia_connect_summary">Na zabezpečenej obrazovke uzamknutia povoliť pri pripojení na USB iba režim nabíjania</string>
+  <string name="usb_category_title">USB</string>
 </resources>

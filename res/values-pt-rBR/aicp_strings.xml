@@ -68,6 +68,8 @@
   <!-- [CHAR LIMIT=60] -->
   <!-- Less Notification sounds -->
   <string name="less_notification_sounds_title">Sons de notificação menos frequentes</string>
+  <string name="less_notification_sounds_summary">Tocar som de notificação de cada app apenas uma vez por período de tempo definido</string>
   <string name="less_notification_sounds_default">Comportamento padrão</string>
   <!-- Notification log -->
+  <!-- USB paranoia mode -->
 </resources>

@@ -18,13 +18,16 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Root Management -->
   <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
+  <string name="supersu_title">SuperSU</string>
   <!-- Encryption and credential -->
+  <string name="custom_encryption_and_credential_settings_summary_off">장치가 비암호화 되어있습니다</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
   <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
   <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
   <!-- Density category -->
   <!-- Volume Steps -->
   <!-- Sound & Notification Settings -->
+  <string name="link_volume_option_title">전화 벨소리와 알림 소리 연결</string>
   <!-- Reset battery stats -->
   <!-- [CHAR LIMIT=80]-->
   <!--  [CHAR LIMIT=160]-->
@@ -32,4 +35,5 @@
   <!-- [CHAR LIMIT=60] -->
   <!-- Less Notification sounds -->
   <!-- Notification log -->
+  <!-- USB paranoia mode -->
 </resources>

@@ -16,6 +16,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="aicp_name_summary">Aicp Oreo Utgave - 13.1</string>
   <!-- Root Management -->
   <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
   <!-- Encryption and credential -->
@@ -31,5 +32,15 @@
   <!-- [CHAR LIMIT=60] -->
   <!-- [CHAR LIMIT=60] -->
   <!-- Less Notification sounds -->
+  <string name="less_notification_sounds_3s">Hvert 3. sekund</string>
+  <string name="less_notification_sounds_5s">Hvert 5. sekund</string>
+  <string name="less_notification_sounds_10s">Hvert 10. sekund</string>
+  <string name="less_notification_sounds_15s">Hvert 15. sekund</string>
+  <string name="less_notification_sounds_30s">Hvert 30. sekund</string>
+  <string name="less_notification_sounds_45s">Hvert 45. sekund</string>
+  <string name="less_notification_sounds_1m">Hvert minutt</string>
+  <string name="less_notification_sounds_2m">Hvert 2. minutt</string>
+  <string name="less_notification_sounds_5m">Hvert 5. minutt</string>
   <!-- Notification log -->
+  <!-- USB paranoia mode -->
 </resources>

@@ -34,6 +34,7 @@
   <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
   <string name="show_dev_already_custom">Opsi pengembang sudah diaktifkan!</string>
   <!-- Density category -->
+  <string name="density_category">Pilihan kepadatan</string>
   <!-- Volume Steps -->
   <string name="volume_steps_reset">Setel ulang</string>
   <string name="volume_steps_60">60</string>
@@ -46,9 +47,26 @@
   <string name="link_volume_option_title">Volume dering dan notifikasi</string>
   <!-- Reset battery stats -->
   <!-- [CHAR LIMIT=80]-->
+  <string name="fp_swipe_to_dismiss_notifications_title">Geser sidik jari ke kiri atau kanan untuk menolak notifikasi</string>
+  <string name="fp_swipe_to_dismiss_notifications_pref_title">Geser sidik jari ke kiri atau kanan</string>
   <!--  [CHAR LIMIT=160]-->
+  <string name="fp_swipe_to_dismiss_notifications_summary">Untuk mengabaikan pemberitahuan anda, gesek ke kiri atau kanan pada sensor sidik jari di bagian belakang telepon anda.</string>
   <!-- [CHAR LIMIT=60] -->
+  <string name="fingerprint_swipe_to_dismiss_suggestion_title">Tutup notifikasi dengan cepat</string>
   <!-- [CHAR LIMIT=60] -->
+  <string name="fingerprint_swipe_to_dismiss_suggestion_summary">Usap ke kiri atau ke kanan pada sensor sidik jari</string>
   <!-- Less Notification sounds -->
+  <string name="less_notification_sounds_summary">Memutar suara pemberitahuan setiap aplikasi hanya sekali per periode waktu yang ditetapkan</string>
+  <string name="less_notification_sounds_3s">Setiap 3 detik</string>
+  <string name="less_notification_sounds_5s">Setiap 5 detik</string>
+  <string name="less_notification_sounds_10s">Setiap 10 detik</string>
+  <string name="less_notification_sounds_15s">Setiap 15 detik</string>
+  <string name="less_notification_sounds_30s">Setiap 30 detik</string>
+  <string name="less_notification_sounds_45s">Setiap 45 detik</string>
+  <string name="less_notification_sounds_1m">Setiap 1 menit</string>
+  <string name="less_notification_sounds_2m">Setiap 2 menit</string>
+  <string name="less_notification_sounds_5m">Setiap 5 menit</string>
   <!-- Notification log -->
+  <string name="notification_log_summary">Tampilkan riwayat pemberitahuan</string>
+  <!-- USB paranoia mode -->
 </resources>

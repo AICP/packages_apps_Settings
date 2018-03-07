@@ -85,4 +85,8 @@
   <string name="less_notification_sounds_5m">每 5 分鐘</string>
   <!-- Notification log -->
   <string name="notification_log_summary">顯示通知歷史記錄日誌</string>
+  <!-- USB paranoia mode -->
+  <string name="usb_paranoia_connect_title">USB 安全連線</string>
+  <string name="usb_paranoia_connect_summary">僅當 USB 插入安全鎖定畫面時才啟用充電</string>
+  <string name="usb_category_title">USB</string>
 </resources>

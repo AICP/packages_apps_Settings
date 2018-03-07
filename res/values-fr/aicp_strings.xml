@@ -21,6 +21,7 @@
   <!-- Root Management -->
   <string name="rootmanagement_dashboard_summary">Gérer les permissions Root</string>
   <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
+  <string name="supersu_title">SuperSU</string>
   <string name="device_info_title">Informations sur le téléphone</string>
   <!-- Encryption and credential -->
   <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
@@ -36,4 +37,5 @@
   <!-- [CHAR LIMIT=60] -->
   <!-- Less Notification sounds -->
   <!-- Notification log -->
+  <!-- USB paranoia mode -->
 </resources>

@@ -86,4 +86,8 @@
   <string name="less_notification_sounds_5m">Elke 5 minuten</string>
   <!-- Notification log -->
   <string name="notification_log_summary">Toon geschiedenislogboek van notificaties</string>
+  <!-- USB paranoia mode -->
+  <string name="usb_paranoia_connect_title">Beveiligde USB verbinding</string>
+  <string name="usb_paranoia_connect_summary">Opladen via USB alleen activeren bij beveiligd vergrendelscherm</string>
+  <string name="usb_category_title">USB</string>
 </resources>

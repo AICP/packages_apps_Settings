@@ -86,4 +86,8 @@
   <string name="less_notification_sounds_5m">Cada 5 minutos</string>
   <!-- Notification log -->
   <string name="notification_log_summary">Mostrar historial de notificaciones</string>
+  <!-- USB paranoia mode -->
+  <string name="usb_paranoia_connect_title">Conexión USB segura</string>
+  <string name="usb_paranoia_connect_summary">Solamente se permite la carga al conectar por USB si estamos en la pantalla de bloqueo</string>
+  <string name="usb_category_title">USB</string>
 </resources>

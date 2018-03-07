@@ -17,6 +17,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="aicp_name_title">AICP tapasztalatok</string>
+  <string name="aicp_name_summary">Aicp Oreo Edition - 13.1</string>
   <string name="aicpextras_dashboard_summary">ROM testreszabás</string>
   <!-- Root Management -->
   <string name="rootmanagement_dashboard_summary">Root hozzáférés kezelése</string>
@@ -33,6 +34,7 @@
   <!-- Density category -->
   <!-- Volume Steps -->
   <!-- Sound & Notification Settings -->
+  <string name="link_volume_option_title">Csengetési és értesítési hangerő összevonása</string>
   <!-- Reset battery stats -->
   <!-- [CHAR LIMIT=80]-->
   <!--  [CHAR LIMIT=160]-->
@@ -40,4 +42,5 @@
   <!-- [CHAR LIMIT=60] -->
   <!-- Less Notification sounds -->
   <!-- Notification log -->
+  <!-- USB paranoia mode -->
 </resources>

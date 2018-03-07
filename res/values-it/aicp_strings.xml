@@ -86,4 +86,5 @@
   <string name="less_notification_sounds_5m">Ogni 5 minuti</string>
   <!-- Notification log -->
   <string name="notification_log_summary">Visualizza il registro cronologico delle notifiche</string>
+  <!-- USB paranoia mode -->
 </resources>

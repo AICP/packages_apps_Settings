@@ -18,17 +18,17 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="aicp_name_title">AICP deneyimi</string>
   <string name="aicp_name_summary">Aicp Oreo Sürümü - 13.1</string>
-  <string name="aicpextras_settings">AICP Ekstra</string>
+  <string name="aicpextras_settings">AICP Extras</string>
   <string name="aicpextras_dashboard_summary">Rom Özelleştirmeleri</string>
   <!-- Root Management -->
   <string name="rootmanagement_title">Root yönetimi</string>
-  <string name="rootmanagement_dashboard_summary">Root erişimini yönet</string>
+  <string name="rootmanagement_dashboard_summary">Root erişimini yönetme</string>
   <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
   <string name="supersu_title">SuperSU</string>
   <string name="device_info_title">Telefon bilgisi</string>
   <!-- Encryption and credential -->
   <string name="custom_encryption_and_credential_settings_summary_on">Cihaz şifrelenmiş</string>
-  <string name="custom_encryption_and_credential_settings_summary_off">Cihaz şifrelenmiş</string>
+  <string name="custom_encryption_and_credential_settings_summary_off">Cihaz şifresi çözülmüş</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
   <plurals name="show_dev_countdown_custom">
     <item quantity="one">Geliştirici seçeneklerinin etkinleştirilmesi için <xliff:g id="step_count">%1$d</xliff:g> adım kaldı.</item>
@@ -64,7 +64,7 @@
   <string name="reset_stats_msg">Pil geçmişi istatistikleri sıfırlanacak</string>
   <!-- [CHAR LIMIT=80]-->
   <string name="fp_swipe_to_dismiss_notifications_title">Bildirimleri kapatmak için parmağınızı sağa veya sola kaydırın</string>
-  <string name="fp_swipe_to_dismiss_notifications_pref_title">Parmağınızı sola veya sağa doğru hızlıca kaydır</string>
+  <string name="fp_swipe_to_dismiss_notifications_pref_title">Parmağınızı sola veya sağa doğru kaydır</string>
   <!--  [CHAR LIMIT=160]-->
   <string name="fp_swipe_to_dismiss_notifications_summary">Bildirimlerinizi yok saymak için, parmağınızı parmak izi sönsöründe sola veya sağa doğru kaydırın.</string>
   <!-- [CHAR LIMIT=60] -->
@@ -72,7 +72,7 @@
   <!-- [CHAR LIMIT=60] -->
   <string name="fingerprint_swipe_to_dismiss_suggestion_summary">Parmak izi sensöründe sola veya sağa kaydırın</string>
   <!-- Less Notification sounds -->
-  <string name="less_notification_sounds_title">Daha seyrek bildirim sesleri</string>
+  <string name="less_notification_sounds_title">Daha az sıklıkla bildirim sesleri</string>
   <string name="less_notification_sounds_summary">Her uygulamanın bildirim seslerini, yalnızca belirli bir zaman aralığında bir kez çalacak şekilde sınırla</string>
   <string name="less_notification_sounds_default">Varsayılan davranış</string>
   <string name="less_notification_sounds_3s">Her 3 saniyede</string>
@@ -86,4 +86,8 @@
   <string name="less_notification_sounds_5m">Her 5 dakikada</string>
   <!-- Notification log -->
   <string name="notification_log_summary">Bildirim geçmişi günlüğünü göster</string>
+  <!-- USB paranoia mode -->
+  <string name="usb_paranoia_connect_title">USB güvenli bağlantı</string>
+  <string name="usb_paranoia_connect_summary">Sadece güvenli kilit ekranlarında USB şarjı etkinleştir</string>
+  <string name="usb_category_title">USB</string>
 </resources>

@@ -16,8 +16,11 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="aicp_name_summary">AICP Oreo Edycja - 13.1</string>
+  <string name="aicpextras_dashboard_summary">Dostosowanie Romu</string>
   <!-- Root Management -->
   <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
+  <string name="supersu_title">SuperSU</string>
   <!-- Encryption and credential -->
   <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
   <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
@@ -26,10 +29,12 @@
   <!-- Volume Steps -->
   <!-- Sound & Notification Settings -->
   <!-- Reset battery stats -->
+  <string name="ok">OK</string>
   <!-- [CHAR LIMIT=80]-->
   <!--  [CHAR LIMIT=160]-->
   <!-- [CHAR LIMIT=60] -->
   <!-- [CHAR LIMIT=60] -->
   <!-- Less Notification sounds -->
   <!-- Notification log -->
+  <!-- USB paranoia mode -->
 </resources>

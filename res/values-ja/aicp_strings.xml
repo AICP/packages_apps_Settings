@@ -19,6 +19,7 @@
   <string name="aicpextras_settings">AICP Extras</string>
   <!-- Root Management -->
   <string name="rootmanagement_title">Root 管理</string>
+  <string name="rootmanagement_dashboard_summary">root アクセスを管理します</string>
   <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
   <!-- Encryption and credential -->
   <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
@@ -53,4 +54,5 @@
   <string name="less_notification_sounds_title">頻繁な通知音の軽減</string>
   <string name="less_notification_sounds_default">デフォルト</string>
   <!-- Notification log -->
+  <!-- USB paranoia mode -->
 </resources>
