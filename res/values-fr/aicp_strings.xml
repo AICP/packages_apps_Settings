@@ -17,6 +17,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="aicp_name_title">AICP Experience</string>
+  <string name="aicp_name_summary">Aicp Oreo Edition - 13.1</string>
+  <string name="aicpextras_settings">Extras AICP</string>
   <string name="aicpextras_dashboard_summary">Personnalisation de ROM</string>
   <!-- Root Management -->
   <string name="rootmanagement_dashboard_summary">Gérer les permissions Root</string>
@@ -38,4 +40,5 @@
   <!-- Less Notification sounds -->
   <!-- Notification log -->
   <!-- USB paranoia mode -->
+  <!-- Running services -->
 </resources>

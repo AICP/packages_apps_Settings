@@ -86,4 +86,9 @@
   <!-- Notification log -->
   <string name="notification_log_summary">显示通知历史记录日志</string>
   <!-- USB paranoia mode -->
+  <string name="usb_paranoia_connect_title">USB 安全连接</string>
+  <string name="usb_paranoia_connect_summary">仅当 USB 插入安全锁定屏幕时才启用充电</string>
+  <string name="usb_category_title">USB</string>
+  <!-- Running services -->
+  <string name="background_processes_settings_title">后台进程</string>
 </resources>

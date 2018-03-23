@@ -87,4 +87,9 @@
   <!-- Notification log -->
   <string name="notification_log_summary">Visualizza il registro cronologico delle notifiche</string>
   <!-- USB paranoia mode -->
+  <string name="usb_paranoia_connect_title">Connessione USB sicura</string>
+  <string name="usb_paranoia_connect_summary">Abilita la sola ricarica quando viene collegato l\'USB nella schermata di blocco</string>
+  <string name="usb_category_title">USB</string>
+  <!-- Running services -->
+  <string name="background_processes_settings_title">Processi in background</string>
 </resources>

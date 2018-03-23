@@ -16,15 +16,23 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="aicp_name_title">Εμπειρία AICP</string>
   <string name="aicpextras_settings">Συμπληρώματα AICP</string>
+  <string name="aicpextras_dashboard_summary">Προσαρμογή ROM</string>
   <!-- Root Management -->
   <string name="rootmanagement_title">Διαχείριση root</string>
+  <string name="rootmanagement_dashboard_summary">Διαχείριση πρόσβασης root</string>
   <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
   <string name="supersu_title">SuperSU</string>
+  <string name="device_info_title">Πληροφορίες τηλεφώνου</string>
   <!-- Encryption and credential -->
+  <string name="custom_encryption_and_credential_settings_summary_on">Η συσκευή είναι κρυπτογραφημένη</string>
+  <string name="custom_encryption_and_credential_settings_summary_off">Η συσκευή είναι αποκρυπτογραφημένη</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
   <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
+  <string name="show_dev_on_custom">Οι επιλογές για προγραμματιστές ενεργοποιήθηκαν! Προσοχή!</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
+  <string name="show_dev_already_custom">Οι επιλογές για προγραμματιστές είναι ήδη ενεργοποιημένες!</string>
   <!-- Density category -->
   <string name="density_category">Επιλογές πυκνότητος</string>
   <!-- Volume Steps -->
@@ -44,6 +52,7 @@
   <string name="volume_steps_7">7</string>
   <string name="volume_steps_5">5</string>
   <!-- Sound & Notification Settings -->
+  <string name="link_volume_option_title">Σύνδεση εντάσεων ήχου κλήσης &amp; ειδοποιήσεων</string>
   <!-- Reset battery stats -->
   <!-- [CHAR LIMIT=80]-->
   <!--  [CHAR LIMIT=160]-->
@@ -54,4 +63,5 @@
   <string name="less_notification_sounds_default">Προεπιλεγμένη συμπεριφορά</string>
   <!-- Notification log -->
   <!-- USB paranoia mode -->
+  <!-- Running services -->
 </resources>

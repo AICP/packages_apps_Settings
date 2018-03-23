@@ -90,4 +90,6 @@
   <string name="usb_paranoia_connect_title">Sichere USB-Verbindung</string>
   <string name="usb_paranoia_connect_summary">Bei aktivem Sperrbildschirm wird nur das Aufladen über USB aktiviert</string>
   <string name="usb_category_title">USB</string>
+  <!-- Running services -->
+  <string name="background_processes_settings_title">Hintergrundprozesse</string>
 </resources>

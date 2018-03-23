@@ -90,4 +90,6 @@
   <string name="usb_paranoia_connect_title">Conexión USB segura</string>
   <string name="usb_paranoia_connect_summary">Solamente se permite la carga al conectar por USB si estamos en la pantalla de bloqueo</string>
   <string name="usb_category_title">USB</string>
+  <!-- Running services -->
+  <string name="background_processes_settings_title">Procesos en segundo plano</string>
 </resources>

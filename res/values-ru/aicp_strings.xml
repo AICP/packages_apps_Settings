@@ -86,4 +86,6 @@
   <string name="usb_paranoia_connect_title">Безопасное подключение USB</string>
   <string name="usb_paranoia_connect_summary">Разрешить зарядку, только когда USB подключен на безопасных экранах блокировки</string>
   <string name="usb_category_title">USB</string>
+  <!-- Running services -->
+  <string name="background_processes_settings_title">Фоновые процессы</string>
 </resources>

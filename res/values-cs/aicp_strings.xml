@@ -89,4 +89,9 @@
   <!-- Notification log -->
   <string name="notification_log_summary">Zobrazit protokol historie oznámení</string>
   <!-- USB paranoia mode -->
+  <string name="usb_paranoia_connect_title">Bezpečné připojení USB</string>
+  <string name="usb_paranoia_connect_summary">Na zabezpečené zamykací obrazovce povolit při připojení USB pouze režim nabíjení</string>
+  <string name="usb_category_title">USB</string>
+  <!-- Running services -->
+  <string name="background_processes_settings_title">Procesy na pozadí</string>
 </resources>

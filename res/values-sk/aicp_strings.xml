@@ -92,4 +92,6 @@
   <string name="usb_paranoia_connect_title">USB bezpečné pripojenie</string>
   <string name="usb_paranoia_connect_summary">Na zabezpečenej obrazovke uzamknutia povoliť pri pripojení na USB iba režim nabíjania</string>
   <string name="usb_category_title">USB</string>
+  <!-- Running services -->
+  <string name="background_processes_settings_title">Procesy na pozadí</string>
 </resources>
