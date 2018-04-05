@@ -122,4 +122,7 @@
     <string name="battery_usage_stats_reset_message">Battery history stats are going to be reset</string>
 
     <string name="battery_temp">Battery temperature</string>
+
+    <!-- Title for connected TWS device group [CHAR LIMIT=none]-->
+    <string name="connected_tws_device_saved_title">Saved Earbuds</string>
 </resources>
