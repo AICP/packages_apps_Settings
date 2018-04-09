@@ -16,22 +16,92 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="aicp_name_title">AICP Experience</string>
+  <string name="aicp_name_summary">إصدار أوريو Aicp-13.1</string>
+  <string name="aicpextras_settings">إضافات Aicp</string>
+  <string name="aicpextras_dashboard_summary">تخصيص الروم</string>
   <!-- Root Management -->
+  <string name="rootmanagement_title">إدارة الروت</string>
+  <string name="rootmanagement_dashboard_summary">إدارة صلاحيات الجذر</string>
   <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
+  <string name="supersu_title">SuperSU</string>
+  <string name="device_info_title">معلومات الهاتف</string>
   <!-- Encryption and credential -->
+  <string name="custom_encryption_and_credential_settings_summary_on">الجهاز مشفّر</string>
+  <string name="custom_encryption_and_credential_settings_summary_off">تم فك تشفير الجهاز</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
+  <plurals name="show_dev_countdown_custom">
+    <item quantity="zero">انت الان على بعد <xliff:g id="step_count">%1$d</xliff:g> خطوة من تمكين خيارات المطور.</item>
+    <item quantity="one">انت الان على بعد <xliff:g id="step_count">%1$d</xliff:g> خطوة من تمكين خيارات المطور.</item>
+    <item quantity="two">انت الان على بعد <xliff:g id="step_count">%1$d</xliff:g> خطوة من تمكين خيارات المطور.</item>
+    <item quantity="few">انت الان على بعد <xliff:g id="step_count">%1$d</xliff:g> خطوة من تمكين خيارات المطور.</item>
+    <item quantity="many">انت الان على بعد <xliff:g id="step_count">%1$d</xliff:g> خطوة من تمكين خيارات المطور.</item>
+    <item quantity="other">انت الان على بعد <xliff:g id="step_count">%1$d</xliff:g> خطوة من تمكين خيارات المطور.</item>
+  </plurals>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
+  <string name="show_dev_on_custom">تم تمكين خيارات المطور! انتبه!</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
+  <string name="show_dev_already_custom">خيارات المطور ممكنة بالفعل!</string>
   <!-- Density category -->
+  <string name="density_category">خيارات الكثافة</string>
   <!-- Volume Steps -->
+  <string name="volume_steps_title">درجات الصوت</string>
+  <string name="volume_steps_alarm_title">درجات الصوت: المنبه</string>
+  <string name="volume_steps_dtmf_title">درجات الصوت: DTMF</string>
+  <string name="volume_steps_music_title">درجات الصوت: الموسيقى</string>
+  <string name="volume_steps_notification_title">درجات الصوت: الاشعارات</string>
+  <string name="volume_steps_ring_title">درجات الصوت: الرنين</string>
+  <string name="volume_steps_system_title">درجات الصوت: النظام</string>
+  <string name="volume_steps_voice_call_title">درجات الصوت: صوت المكالمة</string>
+  <string name="volume_steps_reset">إعادة تعيين</string>
+  <string name="volume_steps_60">60</string>
+  <string name="volume_steps_45">45</string>
+  <string name="volume_steps_30">30</string>
+  <string name="volume_steps_15">15</string>
+  <string name="volume_steps_7">7</string>
+  <string name="volume_steps_5">5</string>
   <!-- Sound & Notification Settings -->
+  <string name="link_volume_option_title">ربط مستوى نغمة الرنين مع الاشعارات</string>
   <!-- Reset battery stats -->
+  <string name="ok">حسناً</string>
+  <string name="menu_stats_reset">إعادة تعيين الإحصاءات</string>
+  <string name="reset_stats_msg">سيتم إعادة تعيين إحصاءات البطارية</string>
   <!-- [CHAR LIMIT=80]-->
+  <string name="fp_swipe_to_dismiss_notifications_title">مرر بصمة إصبعك إلى اليسار أو اليمين لرفض الإشعارات</string>
+  <string name="fp_swipe_to_dismiss_notifications_pref_title">مرر بصمة الاصبع الى اليسار أو اليمين</string>
   <!--  [CHAR LIMIT=160]-->
+  <string name="fp_swipe_to_dismiss_notifications_summary">لتجاهل الإشعارات ،قم بالتمرير إلى اليسار أو اليمين في مستشعر بصمات الإصابع خلف الجهاز.</string>
   <!-- [CHAR LIMIT=60] -->
+  <string name="fingerprint_swipe_to_dismiss_suggestion_title">تجاهل الإشعارات بسرعة</string>
   <!-- [CHAR LIMIT=60] -->
+  <string name="fingerprint_swipe_to_dismiss_suggestion_summary">اسحب إلى اليسار أو اليمين على مستشعر بصمات الأصابع</string>
   <!-- Less Notification sounds -->
+  <string name="less_notification_sounds_title">التقليل من تكرار اصوات الاشعارات</string>
+  <string name="less_notification_sounds_summary">تشغيل صوت الإشعارات لكل تطبيق مرة واحدة فقط لكل فترة زمنية محددة</string>
+  <string name="less_notification_sounds_default">السلوك الافتراضي</string>
+  <string name="less_notification_sounds_3s">كل 3 ثوان</string>
+  <string name="less_notification_sounds_5s">كل 5 ثوان</string>
+  <string name="less_notification_sounds_10s">كل 10 ثوان</string>
+  <string name="less_notification_sounds_15s">كل 15 ثوان</string>
+  <string name="less_notification_sounds_30s">كل 30 ثوان</string>
+  <string name="less_notification_sounds_45s">كل 45 ثوان</string>
+  <string name="less_notification_sounds_1m">كل 1 دقيقة</string>
+  <string name="less_notification_sounds_2m">كل 2 دقيقة</string>
+  <string name="less_notification_sounds_5m">كل 5 دقيقة</string>
   <!-- Notification log -->
+  <string name="notification_log_summary">إظهار سجل تاريخ الإشعارات</string>
   <!-- USB paranoia mode -->
+  <string name="usb_paranoia_connect_title">توصيل USB آمن</string>
+  <string name="usb_paranoia_connect_summary">قم فقط بتمكين الشحن عند توصيل USB بشاشات قفل آمنة</string>
+  <string name="usb_category_title">USB</string>
   <!-- Running services -->
+  <string name="background_processes_settings_title">العمليات في الخلفية</string>
+  <!-- Development QS -->
+  <!-- Force authorize substratum packages -->
+  <string name="force_authorize_substratum_packages_title">أجبار السماح لكل تطبيق سمات</string>
+  <string name="force_authorize_substratum_packages_summary">السماح لتطبيقات السمات من المصادر غير المعروفة</string>
+  <!-- Manage applications: show substratum overlays -->
+  <string name="filter_substratum_apps">طبقات Substratum</string>
+  <string name="menu_show_substratum">أظهر الطبقات</string>
+  <string name="menu_hide_substratum">إخفاء الطبقات</string>
 </resources>

@@ -64,4 +64,12 @@
   <!-- Notification log -->
   <!-- USB paranoia mode -->
   <!-- Running services -->
+  <!-- Development QS -->
+  <!-- Force authorize substratum packages -->
+  <string name="force_authorize_substratum_packages_title">Να επιτρέπεται η εγκατάσταση θεμάτων εφαρμογών από άγνωστες πηγές</string>
+  <string name="force_authorize_substratum_packages_summary">Να επιτρέπεται η εγκατάσταση θεμάτων εφαρμογών από άγνωστες πηγές</string>
+  <!-- Manage applications: show substratum overlays -->
+  <string name="filter_substratum_apps">Επικάλυψη υποστρώματος</string>
+  <string name="menu_show_substratum">Εμφάνιση επικαλύψεων</string>
+  <string name="menu_hide_substratum">Απόκρυψη επικαλύψεων</string>
 </resources>

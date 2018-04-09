@@ -91,4 +91,13 @@
   <string name="usb_category_title">USB</string>
   <!-- Running services -->
   <string name="background_processes_settings_title">后台进程</string>
+  <!-- Development QS -->
+  <string name="qs_show_touches">@string/show_touches</string>
+  <!-- Force authorize substratum packages -->
+  <string name="force_authorize_substratum_packages_title">允许未知来源的主题应用</string>
+  <string name="force_authorize_substratum_packages_summary">强制授权所有主题应用</string>
+  <!-- Manage applications: show substratum overlays -->
+  <string name="filter_substratum_apps">Substratum叠加层</string>
+  <string name="menu_show_substratum">显示叠加层</string>
+  <string name="menu_hide_substratum">隐藏叠加层</string>
 </resources>

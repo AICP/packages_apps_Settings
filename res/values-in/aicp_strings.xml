@@ -18,17 +18,17 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="aicp_name_title">AICP Experience</string>
   <string name="aicp_name_summary">Edisi Aicp Oreo - 13.1</string>
-  <string name="aicpextras_settings">Ekstra AICP</string>
+  <string name="aicpextras_settings">Aicp Extras</string>
   <string name="aicpextras_dashboard_summary">Kustomisasi ROM</string>
   <!-- Root Management -->
-  <string name="rootmanagement_title">Pengelolaan Root</string>
+  <string name="rootmanagement_title">Pengelolaan root</string>
   <string name="rootmanagement_dashboard_summary">Kelola akses root</string>
   <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
   <string name="supersu_title">SuperSU</string>
-  <string name="device_info_title">Info Perangkat</string>
+  <string name="device_info_title">Info perangkat</string>
   <!-- Encryption and credential -->
-  <string name="custom_encryption_and_credential_settings_summary_on">Perangkat terenkripsi</string>
-  <string name="custom_encryption_and_credential_settings_summary_off">Perangkat dienkripsi</string>
+  <string name="custom_encryption_and_credential_settings_summary_on">Perangkat dienkripsi</string>
+  <string name="custom_encryption_and_credential_settings_summary_off">Perangkat didekripsi</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
   <plurals name="show_dev_countdown_custom">
     <item quantity="other">Anda sekarang <xliff:g id="step_count">%1$d</xliff:g> langkah dari pengaktifan opsi pengembang.</item>
@@ -56,11 +56,11 @@
   <string name="volume_steps_7">7</string>
   <string name="volume_steps_5">5</string>
   <!-- Sound & Notification Settings -->
-  <string name="link_volume_option_title">Volume dering dan notifikasi</string>
+  <string name="link_volume_option_title">Hubungkan volume dering dan pemberitahuan</string>
   <!-- Reset battery stats -->
-  <string name="ok">Baik</string>
+  <string name="ok">Oke</string>
   <string name="menu_stats_reset">Setel ulang statistik</string>
-  <string name="reset_stats_msg">Riwayat statistik baterai akan diatur ulang</string>
+  <string name="reset_stats_msg">Statistik riwayat baterai akan disetel ulang</string>
   <!-- [CHAR LIMIT=80]-->
   <string name="fp_swipe_to_dismiss_notifications_title">Geser sidik jari ke kiri atau kanan untuk menolak notifikasi</string>
   <string name="fp_swipe_to_dismiss_notifications_pref_title">Geser sidik jari ke kiri atau kanan</string>
@@ -71,9 +71,9 @@
   <!-- [CHAR LIMIT=60] -->
   <string name="fingerprint_swipe_to_dismiss_suggestion_summary">Usap ke kiri atau ke kanan pada sensor sidik jari</string>
   <!-- Less Notification sounds -->
-  <string name="less_notification_sounds_title">Suara pemberitahuan kurang sering</string>
+  <string name="less_notification_sounds_title">Kurangi frekuensi suara pemberitahuan</string>
   <string name="less_notification_sounds_summary">Memutar suara pemberitahuan setiap aplikasi hanya sekali per periode waktu yang ditetapkan</string>
-  <string name="less_notification_sounds_default">Perilaku standar</string>
+  <string name="less_notification_sounds_default">Perilaku Standar</string>
   <string name="less_notification_sounds_3s">Setiap 3 detik</string>
   <string name="less_notification_sounds_5s">Setiap 5 detik</string>
   <string name="less_notification_sounds_10s">Setiap 10 detik</string>
@@ -86,7 +86,17 @@
   <!-- Notification log -->
   <string name="notification_log_summary">Tampilkan riwayat pemberitahuan</string>
   <!-- USB paranoia mode -->
+  <string name="usb_paranoia_connect_title">Koneksi USB aman</string>
+  <string name="usb_paranoia_connect_summary">Hanya mengaktifkan pengisian ketika USB terpasang pada layar kunci aman</string>
   <string name="usb_category_title">USB</string>
   <!-- Running services -->
   <string name="background_processes_settings_title">Proses latar belakang</string>
+  <!-- Development QS -->
+  <!-- Force authorize substratum packages -->
+  <string name="force_authorize_substratum_packages_title">Memungkinkan aplikasi tema dari sumber tak dikenal</string>
+  <string name="force_authorize_substratum_packages_summary">Memungkinkan aplikasi tema dari sumber tak dikenal</string>
+  <!-- Manage applications: show substratum overlays -->
+  <string name="filter_substratum_apps">Lapisan bawah</string>
+  <string name="menu_show_substratum">Tampilkan hamparan</string>
+  <string name="menu_hide_substratum">Sembunyikan hamparan</string>
 </resources>

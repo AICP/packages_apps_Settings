@@ -56,4 +56,10 @@
   <!-- Notification log -->
   <!-- USB paranoia mode -->
   <!-- Running services -->
+  <!-- Development QS -->
+  <!-- Force authorize substratum packages -->
+  <!-- Manage applications: show substratum overlays -->
+  <string name="filter_substratum_apps">Substratum オーバーレイ</string>
+  <string name="menu_show_substratum">オーバーレイを表示する</string>
+  <string name="menu_hide_substratum">オーバーレイを非表示にする</string>
 </resources>

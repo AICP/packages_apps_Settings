@@ -88,4 +88,12 @@
   <string name="usb_category_title">USB</string>
   <!-- Running services -->
   <string name="background_processes_settings_title">Фоновые процессы</string>
+  <!-- Development QS -->
+  <!-- Force authorize substratum packages -->
+  <string name="force_authorize_substratum_packages_title">Принудительно запрашивать разрешения для каждой темы</string>
+  <string name="force_authorize_substratum_packages_summary">Разрешить установку тем из неизвестных источников</string>
+  <!-- Manage applications: show substratum overlays -->
+  <string name="filter_substratum_apps">Слои Substratum</string>
+  <string name="menu_show_substratum">Показать слои</string>
+  <string name="menu_hide_substratum">Скрыть слои</string>
 </resources>

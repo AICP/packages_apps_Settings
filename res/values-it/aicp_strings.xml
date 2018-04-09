@@ -92,4 +92,12 @@
   <string name="usb_category_title">USB</string>
   <!-- Running services -->
   <string name="background_processes_settings_title">Processi in background</string>
+  <!-- Development QS -->
+  <!-- Force authorize substratum packages -->
+  <string name="force_authorize_substratum_packages_title">Forza l\'autorizzazione di ogni app tema</string>
+  <string name="force_authorize_substratum_packages_summary">Consenti l\'installazione di temi da fonti sconosciute</string>
+  <!-- Manage applications: show substratum overlays -->
+  <string name="filter_substratum_apps">Substratum overlays</string>
+  <string name="menu_show_substratum">Mostra overlays</string>
+  <string name="menu_hide_substratum">Nascondi overlays</string>
 </resources>

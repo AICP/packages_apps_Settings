@@ -94,4 +94,12 @@
   <string name="usb_category_title">USB</string>
   <!-- Running services -->
   <string name="background_processes_settings_title">Procesy na pozadí</string>
+  <!-- Development QS -->
+  <!-- Force authorize substratum packages -->
+  <string name="force_authorize_substratum_packages_title">Vyžadovať povolenie pre každú tému</string>
+  <string name="force_authorize_substratum_packages_summary">Povoliť inštaláciu tém z neznámych zdrojov</string>
+  <!-- Manage applications: show substratum overlays -->
+  <string name="filter_substratum_apps">Substratum prekrytia</string>
+  <string name="menu_show_substratum">Zobraziť prekrytia</string>
+  <string name="menu_hide_substratum">Skryť prekrytia</string>
 </resources>

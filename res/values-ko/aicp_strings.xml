@@ -30,11 +30,20 @@
   <string name="link_volume_option_title">전화 벨소리와 알림 소리 연결</string>
   <!-- Reset battery stats -->
   <!-- [CHAR LIMIT=80]-->
+  <string name="fp_swipe_to_dismiss_notifications_pref_title">지문을 왼쪽 또는 오른쪽으로 스 와이프합니다.</string>
   <!--  [CHAR LIMIT=160]-->
+  <string name="fp_swipe_to_dismiss_notifications_summary">알림을 닫으려면 휴대 전화 뒷면의 지문 센서에서 왼쪽 또는 오른쪽으로 스 와이프합니다.</string>
   <!-- [CHAR LIMIT=60] -->
   <!-- [CHAR LIMIT=60] -->
+  <string name="fingerprint_swipe_to_dismiss_suggestion_summary">지문 센서에서 왼쪽 또는 오른쪽으로 스 와이프합니다.</string>
   <!-- Less Notification sounds -->
+  <string name="less_notification_sounds_summary">설정 한 기간에 한 번만 각 앱의 알림 소리를 재생합니다.</string>
   <!-- Notification log -->
   <!-- USB paranoia mode -->
   <!-- Running services -->
+  <!-- Development QS -->
+  <!-- Force authorize substratum packages -->
+  <string name="force_authorize_substratum_packages_title">테마가 적용된 모든 앱에 강제로 권한 부여</string>
+  <string name="force_authorize_substratum_packages_summary">알 수 없는 출처의 테마 앱 허용</string>
+  <!-- Manage applications: show substratum overlays -->
 </resources>

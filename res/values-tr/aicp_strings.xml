@@ -92,4 +92,12 @@
   <string name="usb_category_title">USB</string>
   <!-- Running services -->
   <string name="background_processes_settings_title">Arka plan işlemleri</string>
+  <!-- Development QS -->
+  <!-- Force authorize substratum packages -->
+  <string name="force_authorize_substratum_packages_title">Bilinmeyen kaynaklardan tema uygulamalarına izin ver</string>
+  <string name="force_authorize_substratum_packages_summary">Her tema uygulamasını zorla yetkilendir</string>
+  <!-- Manage applications: show substratum overlays -->
+  <string name="filter_substratum_apps">Substratum temaları</string>
+  <string name="menu_show_substratum">Temaları göster</string>
+  <string name="menu_hide_substratum">Temaları gizle</string>
 </resources>

@@ -92,4 +92,12 @@
   <string name="usb_category_title">USB</string>
   <!-- Running services -->
   <string name="background_processes_settings_title">Achtergrondprocessen</string>
+  <!-- Development QS -->
+  <!-- Force authorize substratum packages -->
+  <string name="force_authorize_substratum_packages_title">Machtiging afdwingen voor alle thematoepassingen</string>
+  <string name="force_authorize_substratum_packages_summary">Thematoepassingen uit onbekende bronnen toestaan</string>
+  <!-- Manage applications: show substratum overlays -->
+  <string name="filter_substratum_apps">Substratum lagen</string>
+  <string name="menu_show_substratum">Toon lagen</string>
+  <string name="menu_hide_substratum">Verberg lagen</string>
 </resources>
