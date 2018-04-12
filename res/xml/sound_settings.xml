@@ -23,6 +23,7 @@
     settings:keywords="@string/keywords_sounds">
 
     <PreferenceCategory
+        android:key="volume_settings"
         android:order="-100">
         <!-- Media volume -->
         <com.android.settings.notification.VolumeSeekBarPreference
