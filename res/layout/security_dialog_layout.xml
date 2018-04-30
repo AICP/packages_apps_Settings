@@ -36,13 +36,30 @@
                 android:id="@+id/security_patch_level_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:textColor="?android:attr/colorAccent"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/vendor_patch_level_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vendor_security_title"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/vendor_patch_level_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="?android:attr/colorAccent"
+                android:text=""
                 android:textSize="14sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/android_security_summary"
                 android:textColor="?android:attr/textColorSecondary"
                 android:textSize="16sp" />
@@ -51,6 +68,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:textStyle="bold"
                 android:text="@string/android_functional_updates_title"
                 android:textColor="?android:attr/textColorSecondary"
                 android:textSize="16sp" />
@@ -58,7 +76,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/android_functional_updates_summary"
                 android:textColor="?android:attr/textColorSecondary"
                 android:textSize="16sp" />
