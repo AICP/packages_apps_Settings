@@ -25,6 +25,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
@@ -58,6 +59,14 @@ public class SecurityDialogFragment extends InstrumentedDialogFragment {
 
         TextView mSecurityPatch = content.findViewById(R.id.security_patch_level_text);
         mSecurityPatch.setText(DeviceInfoUtils.getSecurityPatch());
+
+        TextView mVendorPatchText = content.findViewById(R.id.vendor_patch_level_text);
+        TextView mVendorPatchSummary = content.findViewById(R.id.vendor_patch_level_summary);
+        mVendorPatchSummary.setText(Build.VENDOR_PATCH_LEVEL.replace("_", " "));
+        if (mVendorPatchSummary.getText().toString().equals("unknown")) {
+            mVendorPatchText.setVisibility(View.GONE);
+            mVendorPatchSummary.setVisibility(View.GONE);
+        }
 
         builder.setPositiveButton(getString(android.R.string.ok), new DialogInterface.OnClickListener() {
             @Override
