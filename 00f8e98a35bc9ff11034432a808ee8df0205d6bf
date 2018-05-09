@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "879b0e8b_f9defd86",
+        "filename": "res/xml/security_settings_password.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1393
+      },
+      "writtenOn": "2018-05-09T04:29:06Z",
+      "side": 1,
+      "message": "I\u0027m not sure if this is the correct line for here or not, I don\u0027t even know what it does. I only know it needs to match security_settings_pin.xml as well. Maybe someone else could take a look for me?",
+      "revId": "00f8e98a35bc9ff11034432a808ee8df0205d6bf",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": true
+    }
+  ]
+}
