@@ -17,22 +17,216 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Aicp Extras -->
+  <string name="aicpextras_settings">AICP Extras</string>
+  <string name="summary_aicp">커스텀 롬 개별화</string>
+  <string name="header_category_aicpextras">개인 설정</string>
   <!-- Turn on display when power connected; turn off display when power disconnected -->
+  <string name="wake_when_plugged_or_unplugged_title">충전 시 켜짐</string>
+  <string name="wake_when_plugged_or_unplugged_summary">전원이 연결되거나 분리될 때 화면을 켭니다.</string>
   <!-- Less Notification sounds -->
+  <string name="notifications_category_title">알림</string>
+  <string name="less_notification_sounds_title">알림 소리 간격 줄이기</string>
+  <string name="less_notification_sounds_summary">제한 설정된 기간 당 한 번만 재생 하려면 각 응용 프로그램의 알림 소리를 제한하세요.</string>
+  <string name="less_notification_sounds_default">기본 행동</string>
+  <string name="less_notification_sounds_3s">3 초</string>
+  <string name="less_notification_sounds_5s">5 초</string>
+  <string name="less_notification_sounds_10s">10 초</string>
+  <string name="less_notification_sounds_15s">15 초</string>
+  <string name="less_notification_sounds_30s">30 초</string>
+  <string name="less_notification_sounds_45s">45 초</string>
+  <string name="less_notification_sounds_1m">1 분</string>
+  <string name="less_notification_sounds_2m">2 분</string>
+  <string name="less_notification_sounds_5m">5 분</string>
   <!-- Development Settings -->
   <!-- Dev Options Enabled by Default -->
+  <string name="show_dev_already_enabled">필요 없음, 개발 설정이 기본적으로 사용됩니다.</string>
   <!-- ADB always notify -->
+  <string name="adb_always_notify">항상 디버깅 알림</string>
+  <string name="adb_always_notify_summary">연결되어 있지 않은 경우에도 디버깅 기능이 활성화 되어있으면 항상 알림을 표시합니다</string>
   <!-- Expanded desktop -->
+  <string name="power_menu_expanded_desktop">확장 데스크탑</string>
+  <string name="expanded_hide_nothing">숨기지 않음</string>
+  <string name="expanded_hide_status">상태 표시줄 숨기기</string>
+  <string name="expanded_hide_navigation">네비게이션 바 숨기기</string>
+  <string name="expanded_hide_both">모두 숨기기</string>
+  <string name="expanded_nothing_to_show">앱별로 각각 확장 상태 설정을 하려면 \'모두 확장\'을 끄십시오.</string>
+  <string name="expanded_desktop_state">화면 확장 상태</string>
+  <string name="expanded_enabled_for_all">모두 확장</string>
+  <string name="expanded_user_configurable">사용자 설정</string>
+  <string name="expanded_desktop_style">확장 데스크탑 스타일</string>
+  <string name="expanded_desktop_style_description">기본 확장 데스크톱 스타일 선택</string>
+  <string name="expanded_desktop_title">확장 데스크탑 옵션</string>
   <!-- Vendor version -->
+  <string name="vendor_version">제조사 버전</string>
+  <string name="vendor_version_default">알 수 없음</string>
   <!-- Density category -->
+  <string name="density_category">밀도 옵션</string>
   <!-- Color Picker -->
+  <string name="press_color_to_apply">적용할 색상을 아래에서 선택하세요</string>
+  <string name="hex">Hex:</string>
+  <string name="set">설정</string>
+  <string name="color_default">기본</string>
   <!-- Navigation Bar -->
+  <string name="navigation_category">내비게이션</string>
+  <string name="navbar_interface_title">인터페이스</string>
+  <string name="navbar_size">바 크기</string>
+  <string name="navbar_mode">내비게이션 바 모드</string>
+  <string name="navbar_visibility">내비게이션 바 활성화</string>
+  <string name="navigationbar_settings_title">내비게이션 바</string>
+  <string name="navigationbar_settings_summary">내비게이션 바의 스타일과 작동 방식을 변경합니다</string>
+  <string name="navbar_general_title">고급</string>
+  <string name="navigation_bar_left_title">왼손잡이 모드</string>
+  <string name="navigation_bar_left_summary">가로화면 모드에서 화면 왼쪽에 내비게이션 바를 배치</string>
+  <string name="info_pref_note_title">알림</string>
+  <string name="smartbar_interface">스마트 바</string>
+  <string name="icon_pack_picker_dialog_title">아이콘 팩</string>
+  <string name="image_exceeds_max_allowed_size">이미지 크기가 512 x 512를 초과 해서는 안됩니다</string>
+  <string name="invalid_icon_from_uri">콘텐츠 제공자에서 이미지를 불러올 수 없음</string>
+  <string name="picker_activities">활동</string>
+  <string name="select_custom_app_title">사용자 정의 앱 선택</string>
+  <string name="select_custom_activity_title">사용자 지정 활동 선택</string>
+  <string name="profile_applist_title">애플리케이션</string>
+  <string name="default_string">기본 값</string>
+  <string name="reset">초기화</string>
+  <string name="summary_navbar">Smartbar/Fling과 펄스 시각화 도우미</string>
   <!-- Actions dialog and default task values set in ActionPreference xml-->
+  <string name="choose_action_title">작업 선택</string>
+  <string name="action_entry_default_action">기본 설정</string>
+  <string name="action_entry_select_app">애플리케이션 선택</string>
+  <string name="action_entry_custom_action">사용자 지정 작업 선택</string>
   <!-- Fling -->
+  <string name="fling_settings">Fling 설정</string>
+  <string name="fling_interface">Fling 제스처 인터페이스</string>
+  <string name="fling_enable_title">Fling 활성화</string>
+  <string name="fling_back_home_policy">뒤로가기와 홈 버튼은 항상 필수적으로 설정되어야 합니다. 뒤로가기와 홈 버튼 지정을 변경하려면, 원하는 활동을 먼저 설정하세요</string>
+  <string name="fling_split_bar_policy">오른쪽이나 왼쪽 활동만 지정되었을 때, 내비게이션 바 전체로 활동이 적용됩니다.</string>
+  <string name="fling_def_summary">설정된 활동 없음</string>
+  <string name="fling_swipe_actions">밀기 제스처</string>
+  <string name="fling_tap_actions">탭 제스쳐</string>
+  <string name="fling_short_swipe_right">오른쪽으로 짧게 밀기</string>
+  <string name="fling_short_swipe_left">왼쪽으로 짧게 밀기</string>
+  <string name="fling_long_swipe_right">오른쪽으로 길게 밀기</string>
+  <string name="fling_long_swipe_left">왼쪽으로 길게 밀기</string>
+  <string name="fling_right_up_swipe">오른쪽 위로 쓸어넘기기</string>
+  <string name="fling_left_up_swipe">왼쪽 위로 쓸어넘기기</string>
+  <string name="fling_single_tap">오른쪽 한번 탭</string>
+  <string name="fling_double_tap">오른쪽 두번 탭</string>
+  <string name="fling_long_press">오른쪽 길게 누르기</string>
+  <string name="fling_single_left_tap">왼쪽 한번 탭</string>
+  <string name="fling_double_left_tap">왼쪽 두번 탭</string>
+  <string name="fling_long_left_press">왼쪽 길게 누르기</string>
+  <string name="long_swipe_portrait_title">세로 모드</string>
+  <string name="long_swipe_landscape_title">가로 모드</string>
+  <string name="portrait_right_swipe_title">세로 모드에서 오른쪽 쓸어넘기기</string>
+  <string name="portrait_left_swipe_title">세로 모드에서 왼쪽 쓸어넘기기</string>
+  <string name="landscape_right_swipe_title">가로 모드에서 오른쪽 쓸어넘기기</string>
+  <string name="landscape_left_swipe_title">가로 모드에서 왼쪽 쓸어넘기기</string>
+  <string name="vertical_up_swipe_title">위로 수직 쓸어넘기기</string>
+  <string name="vertical_down_swipe_title">아래로 수직 쓸어넘기기</string>
+  <string name="up_swipe_title">위로 쓸어넘기기</string>
+  <string name="down_swipe_title">아래로 쓸어넘기기</string>
+  <string name="long_swipe_reset">초기화</string>
+  <string name="fling_advanced">고급</string>
+  <string name="fling_long_swipe_title">길게 밀기 한계점</string>
+  <string name="fling_long_swipe_summary">Fling 인터페이스의 너비가 높이를 고려해서 길게 밀기 제스처의 한계점을 조절하세요</string>
+  <string name="fling_trails_enable_title">제스처 흔적 활성화</string>
+  <string name="fling_trails_enable_summary">밀기 제스처의 흔적을 표시합니다</string>
+  <string name="fling_trails_color_title">흔적 색상</string>
+  <string name="fling_trails_width_title">흔적 너비</string>
+  <string name="fling_appearance">모양</string>
+  <string name="fling_show_logo_title">Fling 로고 표시</string>
+  <string name="fling_animate_logo_title">움직이는 로고</string>
+  <string name="fling_animate_logo_summary">터치 시 로고가 움직입니다</string>
+  <string name="fling_logo_color">로고 색상</string>
+  <string name="fling_logo_custom_logo_pick_title">사용자 지정 로고 아이콘</string>
+  <string name="fling_logo_custom_logo_image_pick_title">사용자 지정 로고 이미지</string>
+  <string name="fling_logo_custom_logo_reset_title">로고 아이콘 초기화</string>
+  <string name="fling_show_ripple_title">물결 효과 표시</string>
+  <string name="fling_show_ripple_summary">터치 시 물결 효과가 나타납니다</string>
+  <string name="fling_ripple_color">물결 효과 색상</string>
+  <string name="fling_longpress_timeout_label_left">지연시간 짧게</string>
+  <string name="fling_longpress_timeout_label_right">지연시간 길게</string>
+  <string name="fling_longpress_title">길게 눌러 지연 입력</string>
+  <string name="fling_longpress_summary">길게 누르기에 지정된 활동을 실행할 시간 조절</string>
   <!-- Pulse navigation bar music visualizer -->
+  <string name="pulse_help_policy_notice_title">펄스에 대하여</string>
+  <string name="pulse_help_policy_notice_summary">펄스는 음악이 재생 중일 때 내비게이션 바에 표시되는 멋진 오디오 시각화 기능입니다. 기기의 스피커로 들을 시 몇몇 오디오 소스에는 작동하지 않습니다.</string>
+  <string name="pulse_settings">펄스</string>
+  <string name="pulse_settings_summary">내비게이션 바에 오디오 시각화 표시</string>
+  <string name="fling_show_pulse_title">펄스 표시</string>
+  <string name="fling_show_pulse_summary">내비게이션 바에 오디오 그래픽 이퀄라이저를 표시</string>
+  <string name="pulse_render_mode_title">렌더 모드</string>
+  <string name="pulse_render_mode_fading_bars">페이딩 블록</string>
+  <string name="pulse_render_mode_solid_lines">실선</string>
+  <string name="fling_pulse_color">펄스 색상</string>
+  <string name="eos_fling_lavalamp_title">라바 램프 켜기</string>
+  <string name="eos_fling_lavalamp_summary">라바 램프 스타일의 색 조합으로 펄스의 색을 자동으로 변경합니다</string>
+  <string name="pulse_advanced_category">고급</string>
+  <string name="pulse_legacy_mode_advanced_category">페이딩 블록 모드 설정</string>
+  <string name="pulse_custom_fudge_factor">바 구분 정도</string>
+  <string name="lavamp_solid_speed_title">라바 램프 변화 속도</string>
+  <string name="pulse_solid_units_count">실선 수</string>
+  <string name="pulse_solid_lines_count">실선 수</string>
+  <string name="pulse_solid_units_opacity">실선 불투명도</string>
+  <string name="pulse_solid_dimen_category">실선 모드 설정</string>
+  <string name="pulse_custom_buttons_opacity_title">Pulse 사용 시 버튼의 불투명도</string>
+  <string name="fling_lavalamp_color_from">라바 램프 시작 색상</string>
+  <string name="fling_lavalamp_color_to">라바 램프 마지막 색상</string>
   <!-- Pulse config -->
+  <string name="pulse_custom_dimen">바 너비</string>
+  <string name="pulse_custom_div">바 간격</string>
+  <string name="pulse_filled_block_size">블록 크기</string>
+  <string name="pulse_empty_block_size">블록 간격</string>
   <!-- Navbar height -->
+  <string name="navigation_bar_size_title">바 크기</string>
+  <string name="portrait_title">세로 모드 시 높이</string>
+  <string name="land_vert_title">가로 모드 시 너비</string>
+  <string name="land_hor_title">가로 모드 시 높이</string>
+  <string name="positive_done">완료</string>
   <!-- SmartBar -->
+  <string name="smartbar_category">스마트바</string>
+  <string name="smartbar_settings_title">스마트바 설정</string>
+  <string name="smartbar_editor_title">버튼 편집기 활성화</string>
+  <string name="smartbar_editor_summary">버튼을 눌러 드래그하면 위치를 바꿀 수 있습니다. 길게 누르면 수정 메뉴를 표시합니다. 수정 메뉴를 표시하면서도 버튼의 위치를 변경할 수 있습니다.</string>
+  <string name="smartbar_context_menu_position_title">상황별 버튼 레이아웃 위치</string>
+  <string name="smartbar_context_menu_position_summary">메뉴 버튼이나 IME 전환기 같이 상황에 따라 표시되는 상황별 버튼의 위치를 설정합니다</string>
+  <string name="smartbar_right">오른쪽</string>
+  <string name="smartbar_left">왼쪽</string>
+  <string name="smartbar_button_animation_title">버튼 터치 시 애니메이션</string>
+  <string name="smartbar_button_animation_summary">주요 버튼을 누를 때의 애니메이션 스타일을 설정합니다</string>
+  <string name="smartbar_button_animation_ripple">물결</string>
+  <string name="smartbar_button_animation_spring">스프링</string>
+  <string name="smartbar_button_animation_flip">뒤집기</string>
+  <string name="smartbar_button_animation_pixel">픽셀</string>
+  <string name="smartbar_factory_reset_title">기본 설정으로 되돌리기</string>
+  <string name="smartbar_factory_reset_confirm">초기 설정으로 스마트바를 초기화 하겠습니까?</string>
+  <string name="smartbar_ime_action_title">입력 방법과 미디어 활동</string>
+  <string name="smartbar_ime_action_summary">화면에 키보드가 표시되거나 음악을 재생중일 때 어떤 버튼을 표시할지 설정합니다</string>
+  <string name="smartbar_ime_action_none">없음</string>
+  <string name="smartbar_ime_action_arrows">화살표 입력</string>
+  <string name="smartbar_ime_action_switcher">키보드 전환기</string>
+  <string name="smartbar_ime_action_dynamic">입력기/미디어 화살표</string>
+  <string name="smartbar_backup_current_config_title">프로필 저장</string>
+  <string name="smartbar_restore_config_title">프로필 복구</string>
+  <string name="smartbar_config_name_edit_dialog_title">스마트바 프로필 이름</string>
+  <string name="smartbar_config_name_edit_dialog_message">이름을 입력하거나 비우세요</string>
+  <string name="smartbar_config_dialog_title">스마트바 프로필</string>
+  <string name="smartbar_config_backup_success_toast">스마트바 프로필이 성공적으로 저장됨</string>
+  <string name="smartbar_config_restore_success_toast">스마트바 프로필이 성공적으로 복구됨</string>
+  <string name="smartbar_config_backup_error_toast">스마트바 프로필 저장 오류</string>
+  <string name="smartbar_config_restore_error_toast">스마트바 프로필 복구 오류</string>
+  <string name="navbar_buttons_alpha_title">버튼 투명도</string>
+  <string name="smartbar_doubletap_sleep_title">두번 두드려 화면 끄기</string>
+  <string name="smartbar_doubletap_sleep_summary">내비게이션 바의 빈 공간을 두번 두드려 화면을 끕니다</string>
+  <string name="one_handed_mode_title">한 손 조작 모드</string>
+  <string name="one_handed_mode_summary">내비게이션 바를 좌우로 밀어서 한 손 조작 모드를 사용합니다</string>
+  <string name="smartbar_longpress_delay_title">버튼 길게 누르기 지연 시간</string>
+  <string name="smartbar_longpress_delay_summary">길게 누르기 작업 실행 전 시스템 대기 시간을 설정합니다.</string>
+  <string name="smartbar_longpress_delay_default">지연시간 기본 (빠르게)</string>
+  <string name="smartbar_longpress_delay_normal">지연시간 보통</string>
+  <string name="smartbar_longpress_delay_long">지연시간 길게</string>
+  <string name="smartbar_custom_icon_size_title">아이콘 크기 조절</string>
+  <string name="link_volume_option_title">통화 벨소리와 알림 볼륨을 연결하기</string>
   <!-- Volume Steps -->
   <!-- Manage applications: show substratum overlays -->
   <!-- Manage applications: show substratum icon overlays -->
@@ -43,20 +237,188 @@
   <!-- Development QS -->
   <!-- EdgeGesture service -->
   <!-- Kill app long-press back -->
+  <string name="kill_app_longpress_back_summary">뒤로가기 버튼을 길게 눌러 실행 중인 모든 앱 강제 종료</string>
   <!-- Dashboard options -->
+  <string name="dashboard_category">대시보드 설정</string>
+  <string name="dashboard_suggestions_title">제안</string>
+  <string name="summary_dashboard_suggestions_enabled">대시보드 제안이 활성화됨</string>
+  <string name="summary_dashboard_suggestions_disabled">대시보드 제안이 비활성화됨</string>
+  <string name="remove_tile_summaries_title">요약</string>
+  <string name="remove_tile_summaries_summary_enabled">대시보드 요약이 활성화됨</string>
+  <string name="remove_tile_summaries_summary_disabled">대시보드 요약이 비활성화됨</string>
+  <string name="dashboard_conditions_title">상태</string>
+  <string name="summary_dashboard_conditions_enabled">대시보드 상태가 활성화됨</string>
+  <string name="summary_dashboard_conditions_disabled">대시보드 상태가 비활성화됨</string>
+  <string name="dashboard_columns_portrait_title">행 (세로 모드)</string>
+  <string name="dashboard_columns_landscape_title">행 (가로 모드)</string>
   <!-- Dashboard columns -->
+  <string name="dashboard_columns_title">대시보드 열</string>
+  <string name="dashboard_columns_summary">대시보드에서 보여지는 열 수 변경</string>
+  <string name="dashboard_columns_dialog_title">대시보드 열 선택</string>
+  <string name="dashboard_columns_default">한개 (가로 모드시 두개)</string>
+  <string name="dashboard_columns_two">2개 (가로모드시 3개)</string>
+  <string name="dashboard_columns_three">3개 (가로모드시 4개)</string>
+  <string name="dashboard_summary_double_lines_title">대시보드 요약 줄 수</string>
+  <string name="dashboard_summary_double_lines_summary_on">대시보드 타일 요약을 여러 줄로 표시합니다</string>
+  <string name="dashboard_summary_double_lines_summary_off">대시보드 타일 요약을 한 줄로 표시합니다</string>
   <!-- Doze pulse options -->
+  <string name="doze_settings">잠자기 설정</string>
+  <string name="summary_doze_enabled">활성화됨</string>
+  <string name="summary_doze_disabled">비활성화됨</string>
+  <string name="doze_overwrite_value_title">기본값 덮어쓰기</string>
+  <string name="doze_overwrite_value_summary">사용자 설정 값으로 기본값 덮어쓰기를 허용합니다</string>
+  <string name="doze_pulse_title">사용자가 변경 가능한 설정</string>
+  <string name="doze_pulse_duration_in_title">페이드 인</string>
+  <string name="doze_pulse_duration_visible_title">표시 기간</string>
+  <string name="doze_pulse_duration_out_title">페이드 아웃</string>
+  <string name="doze_trigger_pickup_title">휴대폰 들기 센서 사용</string>
+  <string name="doze_trigger_pickup_summary_on">휴대폰을 드는 것을 센서가 감지할 경우 펄스가 실행됩니다</string>
+  <string name="doze_trigger_pickup_summary_off">휴대폰을 드는 것을 센서가 감지해도 실행되지 않을겁니다</string>
+  <string name="doze_trigger_notification_title">알림 트리거</string>
+  <string name="doze_trigger_notification_summary_on">알림에 의해 펄스가 실행됩니다</string>
+  <string name="doze_trigger_notification_summary_off">알림이 트리거로 활용되지 않습니다.</string>
+  <string name="doze_brightness_level_title">밝기 수준</string>
+  <string name="onehundred_ms">100 ms</string>
+  <string name="twofifty_ms">250 ms</string>
+  <string name="fivehundred_ms_default">500 ms (기본)</string>
+  <string name="sevenfifty_ms">750 ms</string>
+  <string name="one_second">1초</string>
+  <string name="onehalf_second">1.5초</string>
+  <string name="two_second">2 초</string>
+  <string name="twohalf_second">2.5 초</string>
+  <string name="three_second_default">3 초 (기본)</string>
+  <string name="threehalf_second">3.5 초</string>
+  <string name="four_second">4 초</string>
+  <string name="fourhalf_second">4.5 초</string>
+  <string name="five_second">5 초</string>
+  <string name="doze_notification_color_invert_title">알림 색상 반전</string>
+  <string name="doze_notification_color_invert_summary_off">알림의 색이 반전되지 않습니다. 어두운 테마에 사용하세요.</string>
+  <string name="doze_notification_color_invert_summary_on">알림의 색이 반전됩니다. 기본 테마나 밝은 테마에 사용하세요.</string>
+  <string name="double_tap_wake_doze_title">두 번 탭하여 기기를 깨웁니다</string>
+  <string name="double_tap_wake_doze_summary">두 번 탭하여 숙면 펄스 화면에서 기기를 깨웁니다</string>
   <!-- Advanced night mode brightness -->
+  <string name="night_brightness_category">화면 밝기</string>
+  <string name="night_brightness_value_title">야간 모드 화면 밝기</string>
+  <string name="night_brightness_text">야간 모드를 사용 중일 때, 자동으로 지정된 밝기로 설정합니다.</string>
+  <string name="night_bright_disabled">비활성화됨</string>
+  <string name="night_bright_min">최소 밝기</string>
+  <string name="night_bright_low">낮은 밝기</string>
+  <string name="night_bright_medium">중간 밝기</string>
+  <string name="magisk_title">Magisk 관리자</string>
+  <string name="magisk_summary">루트 권한 관리</string>
   <!-- Top Level SuperSU settings -->
+  <string name="supersu_title">SuperSU</string>
+  <string name="supersu_summary">루트 권한 관리</string>
   <!-- Top Level Substratum settings -->
+  <string name="substratum_title">Substratum (테마 엔진)</string>
+  <string name="substratum_summary">기기 테마 사용자 정의</string>
   <!-- Force authorize substratum packages -->
+  <string name="force_authorize_substratum_packages_title">알 수 없는 출처의 테마 앱 허용</string>
+  <string name="force_authorize_substratum_packages_summary">테마가 적용된 모든 앱에 강제로 권한 부여</string>
   <!-- HTC Gesture settings -->
+  <string name="htc_gesture_preference_title">터치스크린 제스처</string>
+  <string name="htc_gesture_preference_summary">다양한 터치스크린 제스처를 사용하여 빠른 작업 실행</string>
   <!-- In-call DND -->
+  <string name="dnd_when_call_title">통화 중 방해 금지 모드</string>
+  <string name="dnd_when_call_summary">통화 중 방해 금지 모드 자동 활성화</string>
   <!-- Navigation bar button color -->
+  <string name="navbar_button_tint_title">내비게이션 바 밝기</string>
+  <string name="navbar_button_tint_switch_title">내비게이션 바 버튼 밝기</string>
+  <string name="navbar_button_custom_icon_switch_title">애플리케이션 버튼에 색상 필터를 적용합니다</string>
   <!-- Slim lockscreen shortcuts -->
+  <string name="shortcut_action_none">없음</string>
+  <string name="shortcut_action_longpress">길게 누르기:</string>
+  <string name="shortcut_action_select_action_longpress">길게 눌렀을 때의 동작 선택:</string>
+  <string name="shortcut_action_select_action">작업 선택:</string>
+  <string name="shortcut_action_select_action_newaction">새 작업 선택:</string>
+  <string name="shortcut_action_reset">초기화</string>
+  <string name="shortcut_action_add">추가</string>
+  <string name="shortcut_action_reset_message">모든 항목을 기본값으로 재설정 하겠습니까?</string>
+  <string name="shortcut_action_max">최대 항목 크기에 도달 했습니다.</string>
+  <string name="shortcut_action_warning">경고</string>
+  <string name="shortcut_action_warning_message">마지막 항목은 지울 수 없습니다</string>
+  <string name="shortcut_action_disable_message">비활성화됨\n이 기능을 사용하려면 항목을 추가하세요</string>
+  <string name="shortcut_image_not_valid">선택한 애플리케이션은 올바른 아이콘을 반환하지 않았거나 이미지 자르기를 지원하지 않습니다. 다른 애플리케이션을 사용합니다.</string>
+  <string name="shortcut_duplicate_entry">선택한 작업을 두 번 추가할 수 없습니다</string>
+  <string name="shortcut_action_help_shortcut">단축키</string>
+  <string name="shortcut_action_help_button">버튼</string>
+  <string name="shortcut_action_help_app">앱</string>
+  <string name="shortcut_action_help_icon">, 앱 아이콘을 누르면 있으면 개별화 옵션이 나타납니다</string>
+  <string name="shortcut_action_help_main">%1$s을(를) 추가하려면, 추가 아이콘을 선택하세요. %1$s이(가) 추가되면, 항목을 선택하여 다른 앱으로 바꿀 수 있습니다%2$s\n\n%1$s을(를) 삭제하려면, 삭제하려는 항목을 왼쪽이나 오른쪽으로 스와이프 하세요. 왼쪽의 바를 수직으로 드래그하여 목록의 %1$s 순서를 바꿀 수 있습니다.\n\n지우거나 기본값으로 되돌리려면, 초기화 옵션을 사용하세요.</string>
+  <string name="shortcut_action_help_delete_last_entry">목록에 있는 모든 %1$s을(를) 삭제하면 기능이 비활성화 됩니다.</string>
+  <string name="shortcut_action_help_pie_second_layer_delete_last_entry">목록에 있는 모든 %1$s을(를) 삭제하면 두 번째 Pie 레이어 전체가 비활성화 됩니다.</string>
+  <string name="shortcuts_applications">애플리케이션</string>
+  <string name="shortcuts_select_custom_app_title">사용자 지정 애플리케이션 선택</string>
+  <string name="shortcuts_icon_picker_type">아이콘 형식 선택:</string>
+  <string name="shortcuts_icon_default">기본</string>
+  <string name="shortcuts_icon_presets">시스템 아이콘</string>
+  <string name="shortcuts_icon_custom">갤러리</string>
+  <string name="shortcuts_icon_picker_choose_icon_title">아이콘 선택</string>
+  <string name="shortcuts_icon_picker_alarm">알람</string>
+  <string name="shortcuts_icon_picker_andy">앤디</string>
+  <string name="shortcuts_icon_picker_battery">배터리</string>
+  <string name="shortcuts_icon_picker_browser">브라우저</string>
+  <string name="shortcuts_icon_picker_calendar">캘린더</string>
+  <string name="shortcuts_icon_picker_camera">카메라</string>
+  <string name="shortcuts_icon_picker_cloud">클라우드</string>
+  <string name="shortcuts_icon_picker_contact">연락처</string>
+  <string name="shortcuts_icon_picker_directdial">바로 전화 걸기</string>
+  <string name="shortcuts_icon_picker_directmessage">바로 메세지 보내기</string>
+  <string name="shortcuts_icon_picker_drive">드라이브</string>
+  <string name="shortcuts_icon_picker_dropbox">드롭박스</string>
+  <string name="shortcuts_icon_picker_email">이메일</string>
+  <string name="shortcuts_icon_picker_email2">대체 이메일</string>
+  <string name="shortcuts_icon_picker_evernote">에버노트</string>
+  <string name="shortcuts_icon_picker_facebook">페이스북</string>
+  <string name="shortcuts_icon_picker_favorite">즐겨찾기</string>
+  <string name="shortcuts_icon_picker_file_browser">파일 탐색기</string>
+  <string name="shortcuts_icon_picker_file_browser2">대체 파일 탐색기</string>
+  <string name="shortcuts_icon_picker_fitness">건강</string>
+  <string name="shortcuts_icon_picker_gallery">갤러리</string>
+  <string name="shortcuts_icon_picker_gears">기어</string>
+  <string name="shortcuts_icon_picker_google_small">구글</string>
+  <string name="shortcuts_icon_picker_gplus">Google+</string>
+  <string name="shortcuts_icon_picker_gtalk">행아웃</string>
+  <string name="shortcuts_icon_picker_help">도움말</string>
+  <string name="shortcuts_icon_picker_joystick">조이스틱</string>
+  <string name="shortcuts_icon_picker_key">키/계정</string>
+  <string name="shortcuts_icon_picker_laptop">노트북</string>
+  <string name="shortcuts_icon_picker_notes">메모</string>
+  <string name="shortcuts_icon_picker_luggage">여행</string>
+  <string name="shortcuts_icon_picker_maps">지도</string>
+  <string name="shortcuts_icon_picker_market">마켓</string>
+  <string name="shortcuts_icon_picker_movie">영화</string>
+  <string name="shortcuts_icon_picker_music">음악</string>
+  <string name="shortcuts_icon_picker_nav">내비게이션</string>
+  <string name="shortcuts_icon_picker_phone">전화</string>
+  <string name="shortcuts_icon_picker_package">패키지</string>
+  <string name="shortcuts_icon_picker_pinterest">핀터레스트</string>
+  <string name="shortcuts_icon_picker_play">재생</string>
+  <string name="shortcuts_icon_picker_pocket">주머니</string>
+  <string name="shortcuts_icon_picker_quicksettings">빠른 설정</string>
+  <string name="shortcuts_icon_picker_rss">RSS 피드</string>
+  <string name="shortcuts_icon_picker_sdcard">SD카드</string>
   <!-- Pixel Animation Duration -->
   <!-- Fingerprint Gestures -->
   <!-- Reset battery stats -->
   <!-- Color engine -->
+  <string name="theme_accent_color">강조 색상</string>
+  <string name="theme_primary_color">주요/배경 색</string>
+  <string name="theme">테마</string>
+  <string name="oms_enabled">Substratum 테마가 현재 적용되어 있어 테마 모드를 사용할 수 없습니다.</string>
+  <string name="red">빨간색</string>
+  <string name="orange">황색</string>
+  <string name="blue">파란색</string>
+  <string name="green">녹색 </string>
+  <string name="yellow">노랑색</string>
+  <string name="purple">보라색</string>
+  <string name="pink">분홍색</string>
+  <string name="dark">검은색</string>
+  <string name="pixel">픽셀</string>
+  <string name="teal">기본</string>
+  <string name="cyan">청록색</string>
+  <string name="grey">회색</string>
   <!-- Audio ducking on mediaplay -->
+  <string name="interruptions_ignore_while_media_title">오디오 더킹 방지</string>
+  <string name="interruptions_ignore_while_media_summary">알림 수신 시 미디어 음량을 감소시키지 않습니다.</string>
 </resources>

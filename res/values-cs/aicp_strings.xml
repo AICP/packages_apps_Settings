@@ -78,7 +78,7 @@
   <string name="navigation_bar_left_title">Režim ovládání levou rukou</string>
   <string name="navigation_bar_left_summary">Zobrazit navigační panel na levé straně v režimu na šířku</string>
   <string name="info_pref_note_title">Poznámka</string>
-  <string name="smartbar_interface">Chytrá lišta</string>
+  <string name="smartbar_interface">SmartBar</string>
   <string name="icon_pack_picker_dialog_title">Balíčky ikon</string>
   <string name="image_exceeds_max_allowed_size">Obrázek nesmí překročit rozměr 512x512</string>
   <string name="invalid_icon_from_uri">Nelze načíst obrázek z obsahu poskytovatele</string>
@@ -88,7 +88,7 @@
   <string name="profile_applist_title">Aplikace</string>
   <string name="default_string">Výchozí</string>
   <string name="reset">Obnovit</string>
-  <string name="summary_navbar">Chytrá lišta/Fling a pulzní vizualizér</string>
+  <string name="summary_navbar">SmartBar/Fling a pulzní vizualizér</string>
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <string name="choose_action_title">Vyberte akci</string>
   <string name="action_entry_default_action">Výchozí nastavení</string>
@@ -184,8 +184,8 @@
   <string name="land_hor_title">Výška v režimu na šířku</string>
   <string name="positive_done">Hotovo</string>
   <!-- SmartBar -->
-  <string name="smartbar_category">Chytrá lišta</string>
-  <string name="smartbar_settings_title">Nastavení chytré lišty</string>
+  <string name="smartbar_category">SmartBar</string>
+  <string name="smartbar_settings_title">Nastavení lišty SmartBar</string>
   <string name="smartbar_editor_title">Editor tlačítek</string>
   <string name="smartbar_editor_summary">Stisknutím a přetažením je možné změnit pozici. Dlouhým stisknutím ukázat \"zpracovat\". Můžete změnit pozici tlačítka, pokud je zobrazeno menu.</string>
   <string name="smartbar_context_menu_position_title">Pozice kontextových tlačítek</string>
@@ -201,7 +201,7 @@
   <string name="smartbar_button_animation_pixel_home">Pixel (pouze Domů - odskok)</string>
   <string name="smartbar_button_animation_pixel_home_ripple">Pixel (pouze Domů - vlnka)</string>
   <string name="smartbar_factory_reset_title">Obnovit výchozí</string>
-  <string name="smartbar_factory_reset_confirm">Opravdu chcete obnovit nastavení chytré lišty?</string>
+  <string name="smartbar_factory_reset_confirm">Opravdu chcete obnovit nastavení lišty SmartBar?</string>
   <string name="smartbar_ime_action_title">Vstupní metoda a mediální akce</string>
   <string name="smartbar_ime_action_summary">Nastavte, které tlačítka mají být zobrazeny, když se zobrazí klávesnice nebo se přehrává hudba</string>
   <string name="smartbar_ime_action_none">Žádná</string>
@@ -210,13 +210,13 @@
   <string name="smartbar_ime_action_dynamic">Šipky vstupu/médií</string>
   <string name="smartbar_backup_current_config_title">Uložit profil</string>
   <string name="smartbar_restore_config_title">Obnovit profil</string>
-  <string name="smartbar_config_name_edit_dialog_title">Název profilu chytré lišty</string>
+  <string name="smartbar_config_name_edit_dialog_title">Název profilu lišty SmartBar</string>
   <string name="smartbar_config_name_edit_dialog_message">Zadejte název nebo ponechte prázdné</string>
-  <string name="smartbar_config_dialog_title">Profily chytré lišty</string>
-  <string name="smartbar_config_backup_success_toast">Profil chytré lišty byl úspěšně uložen</string>
-  <string name="smartbar_config_restore_success_toast">Profil chytré lišty byl úspěšně obnoven</string>
-  <string name="smartbar_config_backup_error_toast">Chyba při ukládání profilu chytré lišty</string>
-  <string name="smartbar_config_restore_error_toast">Chyba při obnovení profilu chytré lišty</string>
+  <string name="smartbar_config_dialog_title">Profily lišty SmartBar</string>
+  <string name="smartbar_config_backup_success_toast">Profil lišty SmartBar byl úspěšně uložen</string>
+  <string name="smartbar_config_restore_success_toast">Profil lišty SmartBar byl úspěšně obnoven</string>
+  <string name="smartbar_config_backup_error_toast">Chyba při ukládání profilu lišty SmartBar</string>
+  <string name="smartbar_config_restore_error_toast">Chyba při obnovení profilu lišty SmartBar</string>
   <string name="navbar_buttons_alpha_title">Průhlednost tlačítka</string>
   <string name="smartbar_doubletap_sleep_title">Dvojím poklepáním uspat</string>
   <string name="smartbar_doubletap_sleep_summary">Dvojím poklepáním na prázdné místo navigačního panelu vypnete obrazovku</string>

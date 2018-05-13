@@ -17,49 +17,160 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Aicp Extras -->
+  <string name="aicpextras_settings">Extras AICP</string>
+  <string name="header_category_aicpextras">Personnalisation</string>
   <!-- Turn on display when power connected; turn off display when power disconnected -->
   <!-- Less Notification sounds -->
+  <string name="notifications_category_title">Notifications</string>
+  <string name="less_notification_sounds_3s">3 Secondes</string>
+  <string name="less_notification_sounds_5s">5 secondes</string>
+  <string name="less_notification_sounds_10s">10 secondes</string>
+  <string name="less_notification_sounds_15s">15 secondes</string>
+  <string name="less_notification_sounds_30s">30 secondes</string>
+  <string name="less_notification_sounds_45s">45 secondes</string>
+  <string name="less_notification_sounds_1m">1 minute</string>
+  <string name="less_notification_sounds_2m">2 minutes</string>
+  <string name="less_notification_sounds_5m">5 minutes</string>
   <!-- Development Settings -->
   <!-- Dev Options Enabled by Default -->
+  <string name="show_dev_already_enabled">Inutile, les options de développement sont activés par défaut.</string>
   <!-- ADB always notify -->
   <!-- Expanded desktop -->
+  <string name="power_menu_expanded_desktop">Bureau étendu</string>
+  <string name="expanded_hide_nothing">Ne rien masquer</string>
+  <string name="expanded_hide_status">Cacher la barre d\'état</string>
+  <string name="expanded_hide_navigation">Cacher la barre de navigation</string>
+  <string name="expanded_hide_both">Cacher les deux</string>
+  <string name="expanded_enabled_for_all">Activé pour tous</string>
   <!-- Vendor version -->
+  <string name="vendor_version_default">Inconnu</string>
   <!-- Density category -->
   <!-- Color Picker -->
+  <string name="press_color_to_apply">Appuyer sur une couleur ci-dessous pour l\'appliquer</string>
   <string name="hex">Hex:</string>
+  <string name="hex_hint">#ff000000</string>
+  <string name="set">Définir</string>
+  <string name="color_default">Par défaut</string>
   <!-- Navigation Bar -->
+  <string name="navigation_category">Navigation</string>
+  <string name="navbar_interface_title">Interface</string>
+  <string name="navbar_size">Taille de la barre</string>
+  <string name="navbar_mode">Mode de navigation</string>
+  <string name="navbar_visibility">Activer la barre de navigation</string>
+  <string name="navigationbar_settings_title">Barre de navigation</string>
+  <string name="navbar_general_title">Avancé</string>
+  <string name="navigation_bar_left_title">Mode gaucher</string>
+  <string name="smartbar_interface">SmartBar</string>
+  <string name="icon_pack_picker_dialog_title">Packs d\'icônes</string>
+  <string name="image_exceeds_max_allowed_size">L\'image ne doit pas dépasser 512x512</string>
+  <string name="picker_activities">Activités</string>
+  <string name="select_custom_app_title">Sélectionner l\'application</string>
+  <string name="select_custom_activity_title">Sélectionner l\'activité</string>
+  <string name="profile_applist_title">Applications</string>
+  <string name="default_string">Par défaut</string>
+  <string name="reset">Réinitialiser</string>
   <!-- Actions dialog and default task values set in ActionPreference xml-->
+  <string name="action_entry_default_action">Paramètres par défaut</string>
+  <string name="action_entry_select_app">Choisir une application</string>
   <!-- Fling -->
+  <string name="fling_settings">Paramètres Fling</string>
+  <string name="fling_interface">Fling</string>
+  <string name="fling_enable_title">Activer Fling</string>
+  <string name="fling_def_summary">Aucune action définie</string>
   <string name="fling_single_left_tap">Simple tap à gauche</string>
   <string name="fling_double_left_tap">Double tap à gauche</string>
+  <string name="long_swipe_portrait_title">Portrait</string>
+  <string name="long_swipe_landscape_title">Paysage</string>
+  <string name="long_swipe_reset">Réinitialiser</string>
+  <string name="fling_advanced">Avancé</string>
+  <string name="fling_logo_color">Couleur du logo</string>
+  <string name="fling_longpress_timeout_label_left">Diminution du délai</string>
+  <string name="fling_longpress_timeout_label_right">Augmentation du délai</string>
+  <string name="fling_longpress_summary">Augmenter ou diminuer le temps nécessaire pour exécuter une longue pression</string>
   <!-- Pulse navigation bar music visualizer -->
+  <string name="pulse_help_policy_notice_title">À propos de Pulse</string>
+  <string name="pulse_settings">Pulse</string>
+  <string name="pulse_advanced_category">Avancé</string>
   <!-- Pulse config -->
+  <string name="pulse_custom_dimen">Largeur de la barre</string>
   <!-- Navbar height -->
+  <string name="navigation_bar_size_title">Taille de la barre</string>
+  <string name="positive_done">Terminé</string>
   <!-- SmartBar -->
+  <string name="smartbar_right">À droite</string>
+  <string name="smartbar_left">À gauche</string>
+  <string name="smartbar_button_animation_flip">Retourner</string>
+  <string name="smartbar_ime_action_none">Aucun</string>
+  <string name="smartbar_backup_current_config_title">Enregistrer le profil</string>
+  <string name="smartbar_longpress_delay_normal">Délai normal</string>
   <!-- Volume Steps -->
   <!-- Manage applications: show substratum overlays -->
   <!-- Manage applications: show substratum icon overlays -->
   <!-- Navbar dynamic color -->
   <!-- setting: show CPU info-->
   <!-- setting: show CPU info-->
+  <string name="gpu_info">GPU</string>
+  <string name="cpu_info">CPU</string>
+  <string name="mem_info">Mémoire vive</string>
   <!-- Keyboard and Input ASS methods  -->
+  <string name="show_enter_key_title">Afficher la touche Entrée</string>
   <!-- Development QS -->
   <!-- EdgeGesture service -->
   <!-- Kill app long-press back -->
   <!-- Dashboard options -->
   <!-- Dashboard columns -->
   <!-- Doze pulse options -->
+  <string name="summary_doze_enabled">Activé</string>
+  <string name="summary_doze_disabled">Désactivé</string>
+  <string name="onehundred_ms">100 ms</string>
+  <string name="twofifty_ms">250 ms</string>
+  <string name="fivehundred_ms_default">500 ms (Par défaut)</string>
+  <string name="sevenfifty_ms">750 ms</string>
+  <string name="one_second">1 s</string>
+  <string name="onehalf_second">1.5 s</string>
+  <string name="two_second">2 s</string>
+  <string name="twohalf_second">2.5 s</string>
+  <string name="three_second_default">3 sec (Par défaut)</string>
+  <string name="threehalf_second">3.5 s</string>
+  <string name="four_second">4 s</string>
+  <string name="fourhalf_second">4.5 s</string>
+  <string name="five_second">5 s</string>
   <!-- Advanced night mode brightness -->
+  <string name="night_brightness_category">Luminosité</string>
+  <string name="night_bright_disabled">Désactivé</string>
   <!-- Top Level SuperSU settings -->
+  <string name="supersu_title">SuperSU</string>
+  <string name="supersu_summary">Gestion du Root</string>
   <!-- Top Level Substratum settings -->
+  <string name="substratum_title">Substratum</string>
   <!-- Force authorize substratum packages -->
   <!-- HTC Gesture settings -->
   <!-- In-call DND -->
   <!-- Navigation bar button color -->
   <!-- Slim lockscreen shortcuts -->
+  <string name="shortcuts_icon_default">Par défaut</string>
+  <string name="shortcuts_icon_custom">Galerie</string>
+  <string name="shortcuts_icon_picker_choose_icon_title">Sélectionner une icône</string>
+  <string name="shortcuts_icon_picker_alarm">Alarme</string>
+  <string name="help">Aide</string>
   <!-- Pixel Animation Duration -->
   <!-- Fingerprint Gestures -->
+  <string name="fp_swipe_call_actions_disabled">Désactivé</string>
   <!-- Reset battery stats -->
   <!-- Color engine -->
+  <string name="theme_accent_color">Couleur d’accentuation</string>
+  <string name="theme">Thème</string>
+  <string name="red">Rouge</string>
+  <string name="orange">Ambre</string>
+  <string name="blue">Bleu</string>
+  <string name="green">Vert</string>
+  <string name="yellow">Jaune</string>
+  <string name="purple">Violet</string>
+  <string name="pink">Rose</string>
+  <string name="dark">Sombre</string>
+  <string name="pixel">Pixel</string>
+  <string name="teal">Par défaut</string>
+  <string name="cyan">Cyan</string>
+  <string name="grey">Gris</string>
   <!-- Audio ducking on mediaplay -->
 </resources>

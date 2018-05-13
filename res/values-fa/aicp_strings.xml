@@ -27,27 +27,12 @@
   <!-- Density category -->
   <!-- Color Picker -->
   <!-- Navigation Bar -->
-  <string name="smartbar_interface">SmartBar</string>
-  <string name="summary_navbar">SmartBar/Fling of Pulse visualiserer</string>
   <!-- Actions dialog and default task values set in ActionPreference xml-->
   <!-- Fling -->
-  <string name="fling_settings">Fling innstillinger</string>
-  <string name="fling_interface">Fling</string>
-  <string name="fling_enable_title">Aktiver Fling</string>
-  <string name="fling_show_logo_title">Vis Fling logo</string>
   <!-- Pulse navigation bar music visualizer -->
   <!-- Pulse config -->
   <!-- Navbar height -->
   <!-- SmartBar -->
-  <string name="smartbar_category">SmartBar</string>
-  <string name="smartbar_settings_title">SmartBar innstillinger</string>
-  <string name="smartbar_factory_reset_confirm">Er du sikker på at du vil tilbakestille Smartbar til standardinnstillinger?</string>
-  <string name="smartbar_config_name_edit_dialog_title">SmartBar Profilnavn</string>
-  <string name="smartbar_config_dialog_title">SmartBar profiler</string>
-  <string name="smartbar_config_backup_success_toast">Vellykket lagring av SmartBar profil</string>
-  <string name="smartbar_config_restore_success_toast">Vellykket gjenoppretting av SmartBar profil</string>
-  <string name="smartbar_config_backup_error_toast">Feil ved lagring av SmartBar profil</string>
-  <string name="smartbar_config_restore_error_toast">Feil ved gjenoppretting av SmartBar profil</string>
   <!-- Volume Steps -->
   <!-- Manage applications: show substratum overlays -->
   <!-- Manage applications: show substratum icon overlays -->
