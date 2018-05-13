@@ -16,13 +16,26 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="aicp_name_title">用户体验</string>
   <string name="aicpextras_settings">AICP额外设置</string>
+  <string name="aicpextras_dashboard_summary">ROM定制</string>
   <!-- Root Management -->
+  <string name="rootmanagement_title">Root管理</string>
+  <string name="rootmanagement_dashboard_summary">管理 root 权限</string>
   <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
+  <string name="supersu_title">超级用户</string>
+  <string name="device_info_title">手机信息</string>
   <!-- Encryption and credential -->
+  <string name="custom_encryption_and_credential_settings_summary_on">设备已加密</string>
+  <string name="custom_encryption_and_credential_settings_summary_off">设备已解密</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
+  <plurals name="show_dev_countdown_custom">
+    <item quantity="other">还需 <xliff:g id="step_count">%1$d</xliff:g> 步就可以启用开发者选项。</item>
+  </plurals>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
+  <string name="show_dev_on_custom">已启用开发人员选项! 小心！</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
+  <string name="show_dev_already_custom">已启用开发人员选项!</string>
   <!-- Density category -->
   <string name="density_category">密度选项</string>
   <!-- Volume Steps -->
@@ -43,4 +56,6 @@
   <string name="volume_steps_5">5</string>
   <!-- Sound & Notification Settings -->
   <!-- Volume settings - Volume adjustment sound -->
+  <string name="volume_adjust_sounds_title">音量调节提示音</string>
+  <string name="link_volume_option_title">关联铃声和通知音量</string>
 </resources>

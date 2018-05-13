@@ -29,11 +29,6 @@
   <string name="custom_encryption_and_credential_settings_summary_on">Устройство зашифровано</string>
   <string name="custom_encryption_and_credential_settings_summary_off">Устройство не зашифровано</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
-  <plurals name="show_dev_countdown_custom">
-    <item quantity="one">Остался <xliff:g id="step_count">%1$d</xliff:g> шаг для включения настроек для разработчиков.</item>
-    <item quantity="few">Осталось <xliff:g id="step_count">%1$d</xliff:g> шагов/шага для включения настроек для разработчиков.</item>
-    <item quantity="other">Осталось <xliff:g id="step_count">%1$d</xliff:g> шагов/шага для включения настроек для разработчиков.</item>
-  </plurals>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
   <string name="show_dev_on_custom">Настройки для разработчиков включены! Будьте осторожны!</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->

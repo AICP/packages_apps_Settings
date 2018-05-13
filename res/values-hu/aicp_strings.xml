@@ -17,22 +17,46 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="aicp_name_title">AICP tapasztalatok</string>
+  <string name="aicpextras_settings">AICP Extrák</string>
   <string name="aicpextras_dashboard_summary">ROM testreszabás</string>
   <!-- Root Management -->
+  <string name="rootmanagement_title">Root jogosultság kezelése</string>
   <string name="rootmanagement_dashboard_summary">Root hozzáférés kezelése</string>
   <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
+  <string name="supersu_title">SuperSU</string>
   <string name="device_info_title">Telefon infó</string>
   <!-- Encryption and credential -->
   <string name="custom_encryption_and_credential_settings_summary_on">Készülék titkosított</string>
   <string name="custom_encryption_and_credential_settings_summary_off">Készülék nem titkosított</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
+  <plurals name="show_dev_countdown_custom">
+    <item quantity="one"><xliff:g id="step_count">%1$d</xliff:g> lépésre van attól, hogy engedélyezze a fejlesztői beállításokat.</item>
+    <item quantity="other"><xliff:g id="step_count">%1$d</xliff:g> lépésre van attól, hogy engedélyezze a fejlesztői beállításokat.</item>
+  </plurals>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
   <string name="show_dev_on_custom">Fejlesztői beállítások engedélyezve! Körültekintően járjon el!</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
   <string name="show_dev_already_custom">A fejlesztő beállítások engedélyezése már megtörtént!</string>
   <!-- Density category -->
+  <string name="density_category">Sűrűség beállításai</string>
   <!-- Volume Steps -->
+  <string name="volume_steps_title">Hangerőléptetés</string>
+  <string name="volume_steps_alarm_title">Hangerőléptetés: Ébresztő</string>
+  <string name="volume_steps_dtmf_title">Hangerőléptetés: DTMF</string>
+  <string name="volume_steps_music_title">Hangerőléptetés: Zene</string>
+  <string name="volume_steps_notification_title">Hangerőléptetés: Értesítés</string>
+  <string name="volume_steps_ring_title">Hangerőléptetés: Csengés</string>
+  <string name="volume_steps_system_title">Hangerőléptetés: Rendszer</string>
+  <string name="volume_steps_voice_call_title">Hangerőléptetés: Hanghívás</string>
+  <string name="volume_steps_reset">Visszaállítás</string>
+  <string name="volume_steps_60">60</string>
+  <string name="volume_steps_45">45</string>
+  <string name="volume_steps_30">30</string>
+  <string name="volume_steps_15">15</string>
+  <string name="volume_steps_7">7</string>
+  <string name="volume_steps_5">5</string>
   <!-- Sound & Notification Settings -->
   <!-- Volume settings - Volume adjustment sound -->
   <string name="volume_adjust_sounds_title">Hangerőállítási hangok</string>
+  <string name="link_volume_option_title">Csengetési és értesítési hangerő összevonása</string>
 </resources>

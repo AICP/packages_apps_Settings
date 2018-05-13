@@ -32,6 +32,7 @@
   <plurals name="show_dev_countdown_custom">
     <item quantity="one">Jste <xliff:g id="step_count">%1$d</xliff:g> krok od povolení vývojářských nástrojů.</item>
     <item quantity="few">Jste <xliff:g id="step_count">%1$d</xliff:g> kroky od povolení vývojářských nástrojů.</item>
+    <item quantity="many">Jste <xliff:g id="step_count">%1$d</xliff:g> kroků od povolení vývojářských nástrojů.</item>
     <item quantity="other">Jste <xliff:g id="step_count">%1$d</xliff:g> kroků od povolení vývojářských nástrojů.</item>
   </plurals>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->

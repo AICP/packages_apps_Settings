@@ -16,31 +16,14 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="aicp_name_title">AICP 경험</string>
-  <string name="aicpextras_settings">AICP Extras</string>
-  <string name="aicpextras_dashboard_summary">ROM 사용자 설정</string>
   <!-- Root Management -->
-  <string name="rootmanagement_title">루트 권한 관리</string>
-  <string name="rootmanagement_dashboard_summary">루트 권한 관리</string>
   <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
-  <string name="supersu_title">SuperSU</string>
-  <string name="device_info_title">휴대폰 정보</string>
   <!-- Encryption and credential -->
-  <string name="custom_encryption_and_credential_settings_summary_on">장치가 암호화 되어있습니다</string>
-  <string name="custom_encryption_and_credential_settings_summary_off">장치가 비암호화 되어있습니다</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
-  <plurals name="show_dev_countdown_custom">
-    <item quantity="other">개발자가 되려면 <xliff:g id="step_count">%1$d</xliff:g>단계가 남았습니다.</item>
-  </plurals>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
-  <string name="show_dev_on_custom">개발자 옵션을 사용합니다! 조심하세요!</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
-  <string name="show_dev_already_custom">이미 개발자 옵션을 사용하고 있습니다!</string>
   <!-- Density category -->
-  <string name="density_category">밀도 옵션</string>
   <!-- Volume Steps -->
   <!-- Sound & Notification Settings -->
   <!-- Volume settings - Volume adjustment sound -->
-  <string name="volume_adjust_sounds_title">볼륨 조절 시 소리</string>
-  <string name="link_volume_option_title">전화 벨소리와 알림 소리 연결</string>
 </resources>

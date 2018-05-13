@@ -17,7 +17,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="aicp_name_title">AICP deneyimi</string>
-  <string name="aicpextras_settings">AICP Ekstra</string>
+  <string name="aicpextras_settings">AICP Extras</string>
   <string name="aicpextras_dashboard_summary">Rom Özelleştirmeleri</string>
   <!-- Root Management -->
   <string name="rootmanagement_title">Root yönetimi</string>
@@ -34,11 +34,20 @@
     <item quantity="other">Geliştirici seçeneklerinin etkinleştirilmesi için <xliff:g id="step_count">%1$d</xliff:g> adım kaldı.</item>
   </plurals>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
+  <string name="show_dev_on_custom">Geliştirici seçenekleri etkin! Dikkat et!</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
+  <string name="show_dev_already_custom">Geliştirici seçenekleri zaten etkin!</string>
   <!-- Density category -->
   <string name="density_category">Yoğunluk seçenekleri</string>
   <!-- Volume Steps -->
   <string name="volume_steps_title">Ses seviyeleri</string>
+  <string name="volume_steps_alarm_title">Ses seviyesi: Alarm</string>
+  <string name="volume_steps_dtmf_title">Ses seviyesi: DTMF</string>
+  <string name="volume_steps_music_title">Ses seviyesi: Müzik</string>
+  <string name="volume_steps_notification_title">Ses seviyesi: Bildirimler</string>
+  <string name="volume_steps_ring_title">Ses seviyesi: Zil sesi</string>
+  <string name="volume_steps_system_title">Ses seviyesi: Sistem</string>
+  <string name="volume_steps_voice_call_title">Ses seviyesi: Sesli arama</string>
   <string name="volume_steps_reset">Sıfırla</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
@@ -48,5 +57,6 @@
   <string name="volume_steps_5">5</string>
   <!-- Sound & Notification Settings -->
   <!-- Volume settings - Volume adjustment sound -->
+  <string name="volume_adjust_sounds_title">Ses ayarlama sesleri</string>
   <string name="link_volume_option_title">Zil sesi ve bildirim sesini birleştir</string>
 </resources>
