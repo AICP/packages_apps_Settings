@@ -197,4 +197,5 @@ public class Settings extends SettingsActivity {
 
     // Aicp Additions.
     public static class DevRunningServicesActivity extends SettingsActivity { /* empty */ }
+    public static class AmbientDisplaySettingsActivity extends SettingsActivity { /* empty */ }
 }
