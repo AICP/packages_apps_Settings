@@ -16,29 +16,64 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="aicp_name_title">AICP Experience</string>
   <string name="aicp_name_summary">AICP Oreo Edycja - 13.1</string>
+  <string name="aicpextras_settings">AICP Extras</string>
   <string name="aicpextras_dashboard_summary">Dostosowanie Romu</string>
   <!-- Root Management -->
+  <string name="rootmanagement_title">Zarządzanie rootem</string>
+  <string name="rootmanagement_dashboard_summary">Zarządzanie uprawnieniami root</string>
   <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
   <string name="supersu_title">SuperSU</string>
+  <string name="device_info_title">Informacje o telefonie</string>
   <!-- Encryption and credential -->
   <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
   <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
   <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
   <!-- Density category -->
+  <string name="density_category">Ustawienia gęstości</string>
   <!-- Volume Steps -->
+  <string name="volume_steps_notification_title">Poziom głośności: Powiadomienia</string>
+  <string name="volume_steps_ring_title">Poziom głośności: Dzwonek</string>
+  <string name="volume_steps_system_title">Poziom głośności: System</string>
+  <string name="volume_steps_voice_call_title">Poziom głośności: Rozmowa</string>
+  <string name="volume_steps_reset">Resetuj</string>
+  <string name="volume_steps_60">60</string>
+  <string name="volume_steps_45">45</string>
+  <string name="volume_steps_30">30</string>
+  <string name="volume_steps_15">15</string>
+  <string name="volume_steps_7">7</string>
+  <string name="volume_steps_5">5</string>
   <!-- Sound & Notification Settings -->
   <!-- Reset battery stats -->
   <string name="ok">OK</string>
+  <string name="menu_stats_reset">Zresetuj statystyki</string>
+  <string name="reset_stats_msg">Statystyki baterii zostaną zresetowane</string>
   <!-- [CHAR LIMIT=80]-->
   <!--  [CHAR LIMIT=160]-->
   <!-- [CHAR LIMIT=60] -->
   <!-- [CHAR LIMIT=60] -->
   <!-- Less Notification sounds -->
+  <string name="less_notification_sounds_title">Rzadsze dźwięki powiadomień</string>
+  <string name="less_notification_sounds_default">Domyślne zachowanie</string>
+  <string name="less_notification_sounds_3s">Co 3 sekundy</string>
+  <string name="less_notification_sounds_5s">Co 5 sekund</string>
+  <string name="less_notification_sounds_10s">Co 10 sekund</string>
+  <string name="less_notification_sounds_15s">Co 15 sekund</string>
+  <string name="less_notification_sounds_30s">Co 30 sekund</string>
+  <string name="less_notification_sounds_45s">Co 45 sekund</string>
+  <string name="less_notification_sounds_1m">Co 1 minutę</string>
+  <string name="less_notification_sounds_2m">Co 2 minuty</string>
+  <string name="less_notification_sounds_5m">Co 5 minut</string>
   <!-- Notification log -->
+  <string name="notification_log_summary">Pokaż historię powiadomień</string>
   <!-- USB paranoia mode -->
   <!-- Running services -->
+  <string name="background_processes_settings_title">Procesy pracujące w tle</string>
   <!-- Development QS -->
   <!-- Force authorize substratum packages -->
   <!-- Manage applications: show substratum overlays -->
+  <string name="filter_substratum_apps">Nakładki Substratum</string>
+  <string name="menu_show_substratum">Pokaż nakładki</string>
+  <string name="menu_hide_substratum">Ukryj nakładki</string>
 </resources>

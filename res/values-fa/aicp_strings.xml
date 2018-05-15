@@ -16,6 +16,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="aicp_name_summary">نسخه Aicp Oreo - 13.1</string>
   <!-- Root Management -->
   <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
   <!-- Encryption and credential -->
@@ -31,7 +32,17 @@
   <!-- [CHAR LIMIT=60] -->
   <!-- [CHAR LIMIT=60] -->
   <!-- Less Notification sounds -->
+  <string name="less_notification_sounds_3s">هر ۳ ثانیه</string>
+  <string name="less_notification_sounds_5s">هر ۵ ثانیه</string>
+  <string name="less_notification_sounds_10s">هر ۱۰ ثانیه</string>
+  <string name="less_notification_sounds_15s">هر ۱۵ ثانیه</string>
+  <string name="less_notification_sounds_30s">هر ۳۰ ثانیه</string>
+  <string name="less_notification_sounds_45s">هر ۴۵ ثانیه</string>
+  <string name="less_notification_sounds_1m">هر دقیقه</string>
+  <string name="less_notification_sounds_2m">هر ۲ دقیقه</string>
+  <string name="less_notification_sounds_5m">هر ۵ دقیقه</string>
   <!-- Notification log -->
+  <string name="notification_log_summary">نمایش گزارش تاریخچه ی اعلان ها</string>
   <!-- USB paranoia mode -->
   <!-- Running services -->
   <!-- Development QS -->

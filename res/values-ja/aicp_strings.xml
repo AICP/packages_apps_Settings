@@ -17,14 +17,24 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="aicpextras_settings">AICP Extras</string>
+  <string name="aicpextras_dashboard_summary">ROM のカスタマイズ</string>
   <!-- Root Management -->
   <string name="rootmanagement_title">Root 管理</string>
   <string name="rootmanagement_dashboard_summary">root アクセスを管理します</string>
   <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
+  <string name="supersu_title">SuperSU</string>
+  <string name="device_info_title">携帯電話情報</string>
   <!-- Encryption and credential -->
+  <string name="custom_encryption_and_credential_settings_summary_on">暗号化されています</string>
+  <string name="custom_encryption_and_credential_settings_summary_off">復号されています</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
+  <plurals name="show_dev_countdown_custom">
+    <item quantity="other">開発者向けオプションが有効になるまであと<xliff:g id="step_count">%1$d</xliff:g>ステップです。</item>
+  </plurals>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
+  <string name="show_dev_on_custom">開発者向けオプションが有効化されました！お気を付けて！</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
+  <string name="show_dev_already_custom">開発者向けオプションは既に有効です！</string>
   <!-- Density category -->
   <string name="density_category">解像度オプション</string>
   <!-- Volume Steps -->
@@ -44,8 +54,11 @@
   <string name="volume_steps_7">7</string>
   <string name="volume_steps_5">5</string>
   <!-- Sound & Notification Settings -->
+  <string name="link_volume_option_title">着信と通知の音量をリンク</string>
   <!-- Reset battery stats -->
   <string name="ok">OK</string>
+  <string name="menu_stats_reset">統計のリセット</string>
+  <string name="reset_stats_msg">バッテリーの使用統計を初期化します</string>
   <!-- [CHAR LIMIT=80]-->
   <!--  [CHAR LIMIT=160]-->
   <!-- [CHAR LIMIT=60] -->
@@ -56,8 +69,11 @@
   <!-- Notification log -->
   <!-- USB paranoia mode -->
   <!-- Running services -->
+  <string name="background_processes_settings_title">バックグラウンドプロセス</string>
   <!-- Development QS -->
   <!-- Force authorize substratum packages -->
+  <string name="force_authorize_substratum_packages_title">すべてのテーマアプリを強制的に承認します</string>
+  <string name="force_authorize_substratum_packages_summary">提供元不明のテーマアプリのインストールを許可する</string>
   <!-- Manage applications: show substratum overlays -->
   <string name="filter_substratum_apps">Substratum オーバーレイ</string>
   <string name="menu_show_substratum">オーバーレイを表示する</string>

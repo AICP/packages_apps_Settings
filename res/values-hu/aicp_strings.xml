@@ -16,35 +16,88 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="aicp_name_title">AICP tapasztalatok</string>
-  <string name="aicp_name_summary">Aicp Oreo Edition - 13.1</string>
+  <string name="aicp_name_title">AICP Élmény</string>
+  <string name="aicp_name_summary">AICP Oreo Edition - 13.1</string>
+  <string name="aicpextras_settings">AICP Extrák</string>
   <string name="aicpextras_dashboard_summary">ROM testreszabás</string>
   <!-- Root Management -->
-  <string name="rootmanagement_dashboard_summary">Root hozzáférés kezelése</string>
+  <string name="rootmanagement_title">Root jogosultság kezelése</string>
+  <string name="rootmanagement_dashboard_summary">Beállíthatja a root jogosultságokat</string>
   <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
-  <string name="device_info_title">Telefon infó</string>
+  <string name="supersu_title">SuperSU</string>
+  <string name="device_info_title">Készülékinformációk</string>
   <!-- Encryption and credential -->
-  <string name="custom_encryption_and_credential_settings_summary_on">Készülék titkosított</string>
-  <string name="custom_encryption_and_credential_settings_summary_off">Készülék nem titkosított</string>
+  <string name="custom_encryption_and_credential_settings_summary_on">A készülék titkosított</string>
+  <string name="custom_encryption_and_credential_settings_summary_off">A készülék nem titkosított</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
+  <plurals name="show_dev_countdown_custom">
+    <item quantity="one"><xliff:g id="step_count">%1$d</xliff:g> lépésre van attól, hogy engedélyezze a fejlesztői beállításokat.</item>
+    <item quantity="other"><xliff:g id="step_count">%1$d</xliff:g> lépésre van attól, hogy engedélyezze a fejlesztői beállításokat.</item>
+  </plurals>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
-  <string name="show_dev_on_custom">Fejlesztői beállítások engedélyezve! Körültekintően járjon el!</string>
+  <string name="show_dev_on_custom">Fejlesztői beállítások engedélyezve! Legyen óvatos!</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
-  <string name="show_dev_already_custom">A fejlesztő beállítások engedélyezése már megtörtént!</string>
+  <string name="show_dev_already_custom">A fejlesztői beállítások engedélyezése már megtörtént!</string>
   <!-- Density category -->
+  <string name="density_category">Sűrűség beállításai</string>
   <!-- Volume Steps -->
+  <string name="volume_steps_title">Hangerőléptetés</string>
+  <string name="volume_steps_alarm_title">Hangerőléptetés: Ébresztő</string>
+  <string name="volume_steps_dtmf_title">Hangerőléptetés: DTMF</string>
+  <string name="volume_steps_music_title">Hangerőléptetés: Zene</string>
+  <string name="volume_steps_notification_title">Hangerőléptetés: Értesítés</string>
+  <string name="volume_steps_ring_title">Hangerőléptetés: Csengés</string>
+  <string name="volume_steps_system_title">Hangerőléptetés: Rendszer</string>
+  <string name="volume_steps_voice_call_title">Hangerőléptetés: Hanghívás</string>
+  <string name="volume_steps_reset">Visszaállítás</string>
+  <string name="volume_steps_60">60</string>
+  <string name="volume_steps_45">45</string>
+  <string name="volume_steps_30">30</string>
+  <string name="volume_steps_15">15</string>
+  <string name="volume_steps_7">7</string>
+  <string name="volume_steps_5">5</string>
   <!-- Sound & Notification Settings -->
   <string name="link_volume_option_title">Csengetési és értesítési hangerő összevonása</string>
   <!-- Reset battery stats -->
+  <string name="ok">Rendben</string>
+  <string name="menu_stats_reset">Statisztikák törlése</string>
+  <string name="reset_stats_msg">Akkumulátorhasználati statisztika törlésre kerül</string>
   <!-- [CHAR LIMIT=80]-->
+  <string name="fp_swipe_to_dismiss_notifications_title">Ujjlenyomat csúsztatása jobbra vagy balra az értesítések eltüntetéséhez</string>
+  <string name="fp_swipe_to_dismiss_notifications_pref_title">Ujjlenyomat csúsztatása jobbra vagy balra</string>
   <!--  [CHAR LIMIT=160]-->
+  <string name="fp_swipe_to_dismiss_notifications_summary">Az értesítések eltüntetéséhez csúsztasson jobbra vagy balra a telefon hátulján az ujjlenyomatolvasó-szenzoron.</string>
   <!-- [CHAR LIMIT=60] -->
+  <string name="fingerprint_swipe_to_dismiss_suggestion_title">Értesítések gyors eltüntetése</string>
   <!-- [CHAR LIMIT=60] -->
+  <string name="fingerprint_swipe_to_dismiss_suggestion_summary">Csúsztasson jobbra vagy balra az ujjlenyomatolvasó-szenzoron</string>
   <!-- Less Notification sounds -->
+  <string name="less_notification_sounds_title">Kevésbé gyakori értesítési hangok</string>
+  <string name="less_notification_sounds_summary">Minden alkalmazás értesítési hangját csak egyszer játssza le egy beállított időtartam alatt</string>
+  <string name="less_notification_sounds_default">Alapértelmezett viselkedés</string>
+  <string name="less_notification_sounds_3s">3 másodpercenként</string>
+  <string name="less_notification_sounds_5s">5 másodpercenként</string>
+  <string name="less_notification_sounds_10s">10 másodpercenként</string>
+  <string name="less_notification_sounds_15s">15 másodpercenként</string>
+  <string name="less_notification_sounds_30s">30 másodpercenként</string>
+  <string name="less_notification_sounds_45s">45 másodpercenként</string>
+  <string name="less_notification_sounds_1m">1 percenként</string>
+  <string name="less_notification_sounds_2m">2 percenként</string>
+  <string name="less_notification_sounds_5m">5 percenként</string>
   <!-- Notification log -->
+  <string name="notification_log_summary">Értesítéselőzmény-napló megjelenítése</string>
   <!-- USB paranoia mode -->
+  <string name="usb_paranoia_connect_title">Biztonságos USB-kapcsolat</string>
+  <string name="usb_paranoia_connect_summary">Csak a töltést engedélyezi és letiltja az ADB hozzáférést, ha lezárt képernyőnél USB-re csatlakoztatja</string>
+  <string name="usb_category_title">USB</string>
   <!-- Running services -->
+  <string name="background_processes_settings_title">Háttérfolyamatok</string>
   <!-- Development QS -->
   <!-- Force authorize substratum packages -->
+  <string name="force_authorize_substratum_packages_title">Minden témaalkalmazás kényszerített ellenőrzése</string>
+  <string name="force_authorize_substratum_packages_summary">Az ismeretlen forrásból származó témaalkalmazások telepítésének engedélyezése</string>
   <!-- Manage applications: show substratum overlays -->
+  <string name="filter_substratum_apps">Substratum fedőrétegek</string>
+  <string name="menu_show_substratum">Fedőrétegek megjelenítése</string>
+  <string name="menu_hide_substratum">Fedőrétegek elrejtése</string>
 </resources>

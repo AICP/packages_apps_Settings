@@ -16,30 +16,61 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="aicp_name_title">AICP 경험</string>
+  <string name="aicp_name_summary">Aicp Oreo Edition - 13.1</string>
+  <string name="aicpextras_settings">AICP Extras</string>
+  <string name="aicpextras_dashboard_summary">ROM 사용자 설정</string>
   <!-- Root Management -->
+  <string name="rootmanagement_title">루트 권한 관리</string>
+  <string name="rootmanagement_dashboard_summary">루트 권한 관리</string>
   <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
   <string name="supersu_title">SuperSU</string>
+  <string name="device_info_title">휴대폰 정보</string>
   <!-- Encryption and credential -->
+  <string name="custom_encryption_and_credential_settings_summary_on">장치가 암호화 되어있습니다</string>
   <string name="custom_encryption_and_credential_settings_summary_off">장치가 비암호화 되어있습니다</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
+  <plurals name="show_dev_countdown_custom">
+    <item quantity="other">개발자가 되려면 <xliff:g id="step_count">%1$d</xliff:g>단계가 남았습니다.</item>
+  </plurals>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
+  <string name="show_dev_on_custom">개발자 옵션을 사용합니다! 조심하세요!</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
+  <string name="show_dev_already_custom">이미 개발자 옵션을 사용하고 있습니다!</string>
   <!-- Density category -->
+  <string name="density_category">밀도 옵션</string>
   <!-- Volume Steps -->
   <!-- Sound & Notification Settings -->
   <string name="link_volume_option_title">전화 벨소리와 알림 소리 연결</string>
   <!-- Reset battery stats -->
   <!-- [CHAR LIMIT=80]-->
+  <string name="fp_swipe_to_dismiss_notifications_title">지문 인식을 왼쪽이나 오른쪽으로 밀어 알림 해제</string>
   <string name="fp_swipe_to_dismiss_notifications_pref_title">지문을 왼쪽 또는 오른쪽으로 스 와이프합니다.</string>
   <!--  [CHAR LIMIT=160]-->
   <string name="fp_swipe_to_dismiss_notifications_summary">알림을 닫으려면 휴대 전화 뒷면의 지문 센서에서 왼쪽 또는 오른쪽으로 스 와이프합니다.</string>
   <!-- [CHAR LIMIT=60] -->
+  <string name="fingerprint_swipe_to_dismiss_suggestion_title">알림을 빠르게 닫습니다.</string>
   <!-- [CHAR LIMIT=60] -->
   <string name="fingerprint_swipe_to_dismiss_suggestion_summary">지문 센서에서 왼쪽 또는 오른쪽으로 스 와이프합니다.</string>
   <!-- Less Notification sounds -->
+  <string name="less_notification_sounds_title">알림 소리 간격 줄이기</string>
   <string name="less_notification_sounds_summary">설정 한 기간에 한 번만 각 앱의 알림 소리를 재생합니다.</string>
+  <string name="less_notification_sounds_default">기본 행동</string>
+  <string name="less_notification_sounds_3s">3초 마다</string>
+  <string name="less_notification_sounds_5s">5초 마다</string>
+  <string name="less_notification_sounds_10s">10초 마다</string>
+  <string name="less_notification_sounds_15s">15초 마다</string>
+  <string name="less_notification_sounds_30s">30초 마다</string>
+  <string name="less_notification_sounds_45s">45초 마다</string>
+  <string name="less_notification_sounds_1m">1분 마다</string>
+  <string name="less_notification_sounds_2m">2분 마다</string>
+  <string name="less_notification_sounds_5m">5분 마다</string>
   <!-- Notification log -->
+  <string name="notification_log_summary">알림 기록 로그 표시</string>
   <!-- USB paranoia mode -->
+  <string name="usb_paranoia_connect_title">USB 보안 연결</string>
+  <string name="usb_paranoia_connect_summary">USB가 잠금 장치 화면에 연결된 경우에만 충전 가능</string>
+  <string name="usb_category_title">USB</string>
   <!-- Running services -->
   <!-- Development QS -->
   <!-- Force authorize substratum packages -->
