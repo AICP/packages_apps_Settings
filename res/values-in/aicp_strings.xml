@@ -47,7 +47,7 @@
   <string name="volume_steps_notification_title">Tingkat volume: Pemberitahuan</string>
   <string name="volume_steps_ring_title">Tingkat volume: Dering</string>
   <string name="volume_steps_system_title">Tingkat volume: Sistem</string>
-  <string name="volume_steps_voice_call_title">Tingkat volume: Panggilan suara</string>
+  <string name="volume_steps_voice_call_title">Tingkat volume: Panggilan Suara</string>
   <string name="volume_steps_reset">Setel ulang</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
@@ -62,17 +62,17 @@
   <string name="menu_stats_reset">Setel ulang statistik</string>
   <string name="reset_stats_msg">Statistik riwayat baterai akan disetel ulang</string>
   <!-- [CHAR LIMIT=80]-->
-  <string name="fp_swipe_to_dismiss_notifications_title">Geser sidik jari ke kiri atau kanan untuk menolak notifikasi</string>
-  <string name="fp_swipe_to_dismiss_notifications_pref_title">Geser sidik jari ke kiri atau kanan</string>
+  <string name="fp_swipe_to_dismiss_notifications_title">Usap menggunakan sidik jari ke kiri atau ke kanan untuk menghapus pemberitahuan</string>
+  <string name="fp_swipe_to_dismiss_notifications_pref_title">Usap menggunakan sidik jari ke kiri atau ke kanan</string>
   <!--  [CHAR LIMIT=160]-->
   <string name="fp_swipe_to_dismiss_notifications_summary">Untuk mengabaikan pemberitahuan anda, gesek ke kiri atau kanan pada sensor sidik jari di bagian belakang telepon anda.</string>
   <!-- [CHAR LIMIT=60] -->
-  <string name="fingerprint_swipe_to_dismiss_suggestion_title">Tutup notifikasi dengan cepat</string>
+  <string name="fingerprint_swipe_to_dismiss_suggestion_title">Tutup pemberitahuan dengan cepat</string>
   <!-- [CHAR LIMIT=60] -->
   <string name="fingerprint_swipe_to_dismiss_suggestion_summary">Usap ke kiri atau ke kanan pada sensor sidik jari</string>
   <!-- Less Notification sounds -->
   <string name="less_notification_sounds_title">Kurangi frekuensi suara pemberitahuan</string>
-  <string name="less_notification_sounds_summary">Memutar suara pemberitahuan setiap aplikasi hanya sekali per periode waktu yang ditetapkan</string>
+  <string name="less_notification_sounds_summary">Putar suara pemberitahuan setiap aplikasi hanya sekali untuk jangka waktu tertentu</string>
   <string name="less_notification_sounds_default">Perilaku Standar</string>
   <string name="less_notification_sounds_3s">Setiap 3 detik</string>
   <string name="less_notification_sounds_5s">Setiap 5 detik</string>
@@ -93,10 +93,10 @@
   <string name="background_processes_settings_title">Proses latar belakang</string>
   <!-- Development QS -->
   <!-- Force authorize substratum packages -->
-  <string name="force_authorize_substratum_packages_title">Memungkinkan aplikasi tema dari sumber tak dikenal</string>
-  <string name="force_authorize_substratum_packages_summary">Memungkinkan aplikasi tema dari sumber tak dikenal</string>
+  <string name="force_authorize_substratum_packages_title">Paksa otorisasi setiap aplikasi tema</string>
+  <string name="force_authorize_substratum_packages_summary">Izinkan aplikasi tema dari sumber tidak dikenal</string>
   <!-- Manage applications: show substratum overlays -->
-  <string name="filter_substratum_apps">Lapisan bawah</string>
-  <string name="menu_show_substratum">Tampilkan hamparan</string>
-  <string name="menu_hide_substratum">Sembunyikan hamparan</string>
+  <string name="filter_substratum_apps">Lapisan Substratum</string>
+  <string name="menu_show_substratum">Tampilkan lapisan</string>
+  <string name="menu_hide_substratum">Sembunyikan lapisan</string>
 </resources>

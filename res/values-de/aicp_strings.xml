@@ -25,7 +25,7 @@
   <string name="rootmanagement_dashboard_summary">Root-Zugriff verwalten</string>
   <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
   <string name="supersu_title">SuperSU</string>
-  <string name="device_info_title">Über das Telefon</string>
+  <string name="device_info_title">Details zum Telefonsignal</string>
   <!-- Encryption and credential -->
   <string name="custom_encryption_and_credential_settings_summary_on">Gerät ist verschlüsselt</string>
   <string name="custom_encryption_and_credential_settings_summary_off">Gerät ist nicht verschlüsselt</string>

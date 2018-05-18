@@ -18,9 +18,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="aicp_name_title">AICP Experience</string>
   <string name="aicp_name_summary">Aicp Oreo Edition - 13.1</string>
-  <string name="aicpextras_settings">Extras AICP</string>
+  <string name="aicpextras_settings">Aicp Extras</string>
   <string name="aicpextras_dashboard_summary">Personnalisation de ROM</string>
   <!-- Root Management -->
+  <string name="rootmanagement_title">Gestion du Root</string>
   <string name="rootmanagement_dashboard_summary">Gérer les permissions Root</string>
   <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
   <string name="supersu_title">SuperSU</string>
@@ -38,8 +39,18 @@
   <!-- [CHAR LIMIT=60] -->
   <!-- [CHAR LIMIT=60] -->
   <!-- Less Notification sounds -->
+  <string name="less_notification_sounds_3s">Toutes les 3 secondes</string>
+  <string name="less_notification_sounds_5s">Toutes les 5 secondes</string>
+  <string name="less_notification_sounds_10s">Toutes les 10 secondes</string>
+  <string name="less_notification_sounds_15s">Toutes les 15 secondes</string>
+  <string name="less_notification_sounds_30s">Toutes les 30 secondes</string>
+  <string name="less_notification_sounds_45s">Toutes les 45 secondes</string>
+  <string name="less_notification_sounds_1m">Toutes les minutes</string>
+  <string name="less_notification_sounds_2m">Toutes les 2 minutes</string>
+  <string name="less_notification_sounds_5m">Toutes les 5 minutes</string>
   <!-- Notification log -->
   <!-- USB paranoia mode -->
+  <string name="usb_category_title">USB</string>
   <!-- Running services -->
   <!-- Development QS -->
   <!-- Force authorize substratum packages -->
