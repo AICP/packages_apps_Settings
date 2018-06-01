@@ -27,8 +27,8 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.support.annotation.NonNull;
-import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
@@ -36,6 +36,8 @@ import android.widget.TextView;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
+import com.android.settings.Utils;
+import com.android.settings.deviceinfo.SecurityDialogPreferenceController;
 import com.android.settings.core.instrumentation.InstrumentedDialogFragment;
 import com.android.settingslib.DeviceInfoUtils;
 
@@ -58,7 +60,9 @@ public class SecurityDialogFragment extends InstrumentedDialogFragment {
                 .inflate(R.layout.security_dialog_layout, null /* parent */);
 
         TextView mSecurityPatch = content.findViewById(R.id.security_patch_level_text);
-        mSecurityPatch.setText(DeviceInfoUtils.getSecurityPatch());
+
+        String deviceCheck = SystemProperties.get("ro.du.version");
+        mSecurityPatch.setText(deviceCheck.contains("berkeley") ? SecurityDialogPreferenceController.getSecurityPatch() : DeviceInfoUtils.getSecurityPatch());
 
         TextView mVendorPatchText = content.findViewById(R.id.vendor_patch_level_text);
         TextView mVendorPatchSummary = content.findViewById(R.id.vendor_patch_level_summary);
