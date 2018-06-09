@@ -118,6 +118,11 @@
         android:summary="@string/proximity_wake_summary"
         lineage:requiresConfig="@*lineageos.platform:bool/config_proximityCheckOnWake" />
 
+    <SwitchPreference
+       android:key="pocket_judge"
+       android:title="@string/pocket_judge_title"
+       android:summary="@string/pocket_judge_summary" />
+
     <lineageos.preference.LineageSystemSettingSwitchPreference
         android:key="high_touch_sensitivity_enable"
         android:title="@string/high_touch_sensitivity_title"
