@@ -60,14 +60,21 @@
   <string name="menu_stats_reset">統計のリセット</string>
   <string name="reset_stats_msg">バッテリーの使用統計を初期化します</string>
   <!-- [CHAR LIMIT=80]-->
+  <string name="fp_swipe_to_dismiss_notifications_title">指紋センサーで左右にスワイプして通知を削除</string>
+  <string name="fp_swipe_to_dismiss_notifications_pref_title">指紋センサーで左右にスワイプ</string>
   <!--  [CHAR LIMIT=160]-->
+  <string name="fp_swipe_to_dismiss_notifications_summary">通知を削除するには、端末の指紋センサー上で左右にスワイプしてください</string>
   <!-- [CHAR LIMIT=60] -->
+  <string name="fingerprint_swipe_to_dismiss_suggestion_title">通知を素早く削除する</string>
   <!-- [CHAR LIMIT=60] -->
+  <string name="fingerprint_swipe_to_dismiss_suggestion_summary">指紋センサー上で左右にスワイプ</string>
   <!-- Less Notification sounds -->
   <string name="less_notification_sounds_title">頻繁な通知音の軽減</string>
   <string name="less_notification_sounds_default">デフォルト</string>
   <!-- Notification log -->
   <!-- USB paranoia mode -->
+  <string name="usb_paranoia_connect_title">USB セキュア接続</string>
+  <string name="usb_paranoia_connect_summary">ロック時に USB 接続したときは充電だけ有効化するようにします</string>
   <!-- Running services -->
   <string name="background_processes_settings_title">バックグラウンドプロセス</string>
   <!-- Development QS -->
@@ -78,4 +85,6 @@
   <string name="filter_substratum_apps">Substratum オーバーレイ</string>
   <string name="menu_show_substratum">オーバーレイを表示する</string>
   <string name="menu_hide_substratum">オーバーレイを非表示にする</string>
+  <!-- Quick unlock -->
+  <!-- Pocket judge -->
 </resources>

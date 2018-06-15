@@ -104,4 +104,6 @@
   <string name="filter_substratum_apps">طبقات Substratum</string>
   <string name="menu_show_substratum">أظهر الطبقات</string>
   <string name="menu_hide_substratum">إخفاء الطبقات</string>
+  <!-- Quick unlock -->
+  <!-- Pocket judge -->
 </resources>

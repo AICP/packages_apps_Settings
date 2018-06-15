@@ -100,4 +100,6 @@
   <string name="filter_substratum_apps">Substratum lagen</string>
   <string name="menu_show_substratum">Toon lagen</string>
   <string name="menu_hide_substratum">Verberg lagen</string>
+  <!-- Quick unlock -->
+  <!-- Pocket judge -->
 </resources>

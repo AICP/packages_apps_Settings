@@ -100,4 +100,6 @@
   <string name="filter_substratum_apps">Substratum fedőrétegek</string>
   <string name="menu_show_substratum">Fedőrétegek megjelenítése</string>
   <string name="menu_hide_substratum">Fedőrétegek elrejtése</string>
+  <!-- Quick unlock -->
+  <!-- Pocket judge -->
 </resources>

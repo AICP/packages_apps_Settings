@@ -100,4 +100,10 @@
   <string name="filter_substratum_apps">Substratum Überlagerungen</string>
   <string name="menu_show_substratum">Zeige Überlagerungen</string>
   <string name="menu_hide_substratum">Verstecke Überlagerungen</string>
+  <!-- Quick unlock -->
+  <string name="unlock_quick_unlock_control_title">Schnelles Entsperren</string>
+  <string name="unlock_quick_unlock_control_summary">Automatisch entsperren, wenn das/die korrekte Passwort/PIN eingegeben wurde.\nHinweis: Es wird empfohlen eine PIN unter 6 Zeichen zu wählen. Wenn die PIN 6 Zeichen übersteigt, könntest du ausgesperrt werden.</string>
+  <!-- Pocket judge -->
+  <string name="pocket_judge_title">Taschenerkennung</string>
+  <string name="pocket_judge_summary">Verhindert Bildschirm- und Tasteneingaben, wenn sich das Gerät in einer Tasche befindet</string>
 </resources>

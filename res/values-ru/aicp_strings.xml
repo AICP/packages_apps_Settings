@@ -17,7 +17,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="aicp_name_title">Опыт использования AICP</string>
-  <string name="aicp_name_summary">Aicp Oreo Edition - 13.1</string>
+  <string name="aicp_name_summary">AICP Oreo Edition - 13.1</string>
   <string name="aicpextras_settings">AICP Extras</string>
   <string name="aicpextras_dashboard_summary">Настройка прошивки</string>
   <!-- Root Management -->
@@ -96,4 +96,6 @@
   <string name="filter_substratum_apps">Слои Substratum</string>
   <string name="menu_show_substratum">Показать слои</string>
   <string name="menu_hide_substratum">Скрыть слои</string>
+  <!-- Quick unlock -->
+  <!-- Pocket judge -->
 </resources>

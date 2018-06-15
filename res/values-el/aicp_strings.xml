@@ -76,4 +76,6 @@
   <string name="filter_substratum_apps">Επικάλυψη υποστρώματος</string>
   <string name="menu_show_substratum">Εμφάνιση επικαλύψεων</string>
   <string name="menu_hide_substratum">Απόκρυψη επικαλύψεων</string>
+  <!-- Quick unlock -->
+  <!-- Pocket judge -->
 </resources>

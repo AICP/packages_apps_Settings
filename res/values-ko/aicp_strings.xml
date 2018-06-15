@@ -77,4 +77,6 @@
   <string name="force_authorize_substratum_packages_title">테마가 적용된 모든 앱에 강제로 권한 부여</string>
   <string name="force_authorize_substratum_packages_summary">알 수 없는 출처의 테마 앱 허용</string>
   <!-- Manage applications: show substratum overlays -->
+  <!-- Quick unlock -->
+  <!-- Pocket judge -->
 </resources>

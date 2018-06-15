@@ -100,4 +100,6 @@
   <string name="filter_substratum_apps">Sobreposições do substratum</string>
   <string name="menu_show_substratum">Mostrar overlays</string>
   <string name="menu_hide_substratum">Ocultar overlays</string>
+  <!-- Quick unlock -->
+  <!-- Pocket judge -->
 </resources>

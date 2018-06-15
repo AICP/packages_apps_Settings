@@ -100,4 +100,10 @@
   <string name="filter_substratum_apps">Capas Substratum</string>
   <string name="menu_show_substratum">Mostrar capas</string>
   <string name="menu_hide_substratum">Ocultar capas</string>
+  <!-- Quick unlock -->
+  <string name="unlock_quick_unlock_control_title">Desbloqueo rápido</string>
+  <string name="unlock_quick_unlock_control_summary">Desbloquear automáticamente cuando el PIN/contraseña es correcto. Se recomienda que use un pin de menos de 6 dígitos. Si su PIN tiene más de 6 dígitos, es posible que su dispositivo no se desbloquee. ¡Ha sido advertido.</string>
+  <!-- Pocket judge -->
+  <string name="pocket_judge_title">Detección de bolsillo</string>
+  <string name="pocket_judge_summary">Bloquear pantalla y botones cuando el dispositivo está en el bolsillo</string>
 </resources>
