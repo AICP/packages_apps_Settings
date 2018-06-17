@@ -46,7 +46,7 @@ public class PocketJudgePreferenceController extends AbstractPreferenceControlle
     @Override
     public void updateState(Preference preference) {
         int pocketJudgeValue = Settings.System.getInt(mContext.getContentResolver(),
-                POCKET_JUDGE, 1);
+                POCKET_JUDGE, 0);
         ((SwitchPreference) preference).setChecked(pocketJudgeValue != 0);
     }
 
