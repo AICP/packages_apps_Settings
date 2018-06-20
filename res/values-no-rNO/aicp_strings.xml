@@ -28,10 +28,16 @@
   <!-- Sound & Notification Settings -->
   <!-- Reset battery stats -->
   <!-- [CHAR LIMIT=80]-->
+  <string name="fp_swipe_to_dismiss_notifications_title">Sveip fingeravtrykk til venstre eller høyre for å avvise varsler</string>
+  <string name="fp_swipe_to_dismiss_notifications_pref_title">Sveip fingeravtrykk til venstre eller høyre</string>
   <!--  [CHAR LIMIT=160]-->
+  <string name="fp_swipe_to_dismiss_notifications_summary">For å avvise varselene dine, sveip til venstre eller høyre på fingeravtrykkssensoren på baksiden av telefonen.</string>
   <!-- [CHAR LIMIT=60] -->
+  <string name="fingerprint_swipe_to_dismiss_suggestion_title">Avvise varsler raskt</string>
   <!-- [CHAR LIMIT=60] -->
+  <string name="fingerprint_swipe_to_dismiss_suggestion_summary">Sveip til venstre eller høyre på fingeravtrykkssensoren</string>
   <!-- Less Notification sounds -->
+  <string name="less_notification_sounds_summary">Spill kunvarslingslyden av hver app bare en gang per sett tidsperiode</string>
   <string name="less_notification_sounds_3s">Hvert 3. sekund</string>
   <string name="less_notification_sounds_5s">Hvert 5. sekund</string>
   <string name="less_notification_sounds_10s">Hvert 10. sekund</string>
@@ -42,6 +48,7 @@
   <string name="less_notification_sounds_2m">Hvert 2. minutt</string>
   <string name="less_notification_sounds_5m">Hvert 5. minutt</string>
   <!-- Notification log -->
+  <string name="notification_log_summary">Vis varslingsloggen</string>
   <!-- USB paranoia mode -->
   <!-- Running services -->
   <!-- Development QS -->

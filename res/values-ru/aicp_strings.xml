@@ -97,5 +97,9 @@
   <string name="menu_show_substratum">Показать слои</string>
   <string name="menu_hide_substratum">Скрыть слои</string>
   <!-- Quick unlock -->
+  <string name="unlock_quick_unlock_control_title">Быстрая разблокировка</string>
+  <string name="unlock_quick_unlock_control_summary">Автоматическая разблокировка при верно введённом PIN-коде/пароле. В качестве PIN-кода мы рекомендуем использовать не более 6 цифр. Если PIN-код состоит из более чем 6 цифр, вы можете не разблокировать устройство.</string>
   <!-- Pocket judge -->
+  <string name="pocket_judge_title">Режим \"В кармане\"</string>
+  <string name="pocket_judge_summary">Блокировать экран и физические кнопки, когда устройство находится в кармане</string>
 </resources>

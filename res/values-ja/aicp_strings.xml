@@ -86,5 +86,9 @@
   <string name="menu_show_substratum">オーバーレイを表示する</string>
   <string name="menu_hide_substratum">オーバーレイを非表示にする</string>
   <!-- Quick unlock -->
+  <string name="unlock_quick_unlock_control_title">クイックロック解除</string>
+  <string name="unlock_quick_unlock_control_summary">正しい PIN/パスワードを入力したとき自動的にロック解除します。6桁以下の PIN を使用することをおすすめします。6桁を超える PIN で使用するとロック解除できない可能性があります</string>
   <!-- Pocket judge -->
+  <string name="pocket_judge_title">ポケットの検出</string>
+  <string name="pocket_judge_summary">端末がポケットの中にある時、画面とボタンの入力をブロックします</string>
 </resources>

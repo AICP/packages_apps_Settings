@@ -40,9 +40,27 @@
   <!-- Density category -->
   <string name="density_category">밀도 옵션</string>
   <!-- Volume Steps -->
+  <string name="volume_steps_title">불륨 단계</string>
+  <string name="volume_steps_alarm_title">볼륨 단계: 알람</string>
+  <string name="volume_steps_dtmf_title">볼륨 단계: DTMF</string>
+  <string name="volume_steps_music_title">볼륨 단계: 음악</string>
+  <string name="volume_steps_notification_title">볼륨 단계: 알림</string>
+  <string name="volume_steps_ring_title">볼륨 단계: 벨소리</string>
+  <string name="volume_steps_system_title">볼륨 단계: 시스템</string>
+  <string name="volume_steps_voice_call_title">볼륨 단계: 전화</string>
+  <string name="volume_steps_reset">초기화</string>
+  <string name="volume_steps_60">60</string>
+  <string name="volume_steps_45">45</string>
+  <string name="volume_steps_30">30</string>
+  <string name="volume_steps_15">15</string>
+  <string name="volume_steps_7">7</string>
+  <string name="volume_steps_5">5</string>
   <!-- Sound & Notification Settings -->
   <string name="link_volume_option_title">전화 벨소리와 알림 소리 연결</string>
   <!-- Reset battery stats -->
+  <string name="ok">확인</string>
+  <string name="menu_stats_reset">상태 초기화</string>
+  <string name="reset_stats_msg">배터리 사용 기록이 초기화됩니다</string>
   <!-- [CHAR LIMIT=80]-->
   <string name="fp_swipe_to_dismiss_notifications_title">지문 인식을 왼쪽이나 오른쪽으로 밀어 알림 해제</string>
   <string name="fp_swipe_to_dismiss_notifications_pref_title">지문을 왼쪽 또는 오른쪽으로 스 와이프합니다.</string>
@@ -72,11 +90,15 @@
   <string name="usb_paranoia_connect_summary">USB가 잠금 장치 화면에 연결된 경우에만 충전 가능</string>
   <string name="usb_category_title">USB</string>
   <!-- Running services -->
+  <string name="background_processes_settings_title">백그라운드 프로세스</string>
   <!-- Development QS -->
   <!-- Force authorize substratum packages -->
   <string name="force_authorize_substratum_packages_title">테마가 적용된 모든 앱에 강제로 권한 부여</string>
   <string name="force_authorize_substratum_packages_summary">알 수 없는 출처의 테마 앱 허용</string>
   <!-- Manage applications: show substratum overlays -->
+  <string name="filter_substratum_apps">Substratum 오버레이</string>
+  <string name="menu_show_substratum">오버레이 보이기</string>
+  <string name="menu_hide_substratum">오버레이 숨기기</string>
   <!-- Quick unlock -->
   <!-- Pocket judge -->
 </resources>
