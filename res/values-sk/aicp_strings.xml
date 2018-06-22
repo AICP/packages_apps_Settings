@@ -103,5 +103,9 @@
   <string name="menu_show_substratum">Zobraziť prekrytia</string>
   <string name="menu_hide_substratum">Skryť prekrytia</string>
   <!-- Quick unlock -->
+  <string name="unlock_quick_unlock_control_title">Rýchle odomknutie</string>
+  <string name="unlock_quick_unlock_control_summary">Automatické odblokovanie, keď je zadaný správny PIN kód/heslo. Ako kód PIN odporúčame použiť maximálne 6 číslic. Ak kód PIN obsahuje viac ako 6 číslic, možno nebudete môcť zariadenie odomknúť.</string>
   <!-- Pocket judge -->
+  <string name="pocket_judge_title">Detekcia režimu Vo vrecku</string>
+  <string name="pocket_judge_summary">Blokovať obrazovku a hardvérové tlačidlá, keď je zariadenie vo vrecku</string>
 </resources>

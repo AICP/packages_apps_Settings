@@ -16,9 +16,9 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="aicp_name_title">用户体验</string>
+  <string name="aicp_name_title">AICP 用户体验</string>
   <string name="aicp_name_summary">Aicp奥利利版-13.1</string>
-  <string name="aicpextras_settings">AICP额外设置</string>
+  <string name="aicpextras_settings">AICP 额外设置</string>
   <string name="aicpextras_dashboard_summary">ROM 定制</string>
   <!-- Root Management -->
   <string name="rootmanagement_title">Root 管理</string>
@@ -101,5 +101,9 @@
   <string name="menu_show_substratum">显示叠加层</string>
   <string name="menu_hide_substratum">隐藏叠加层</string>
   <!-- Quick unlock -->
+  <string name="unlock_quick_unlock_control_title">快速解锁</string>
+  <string name="unlock_quick_unlock_control_summary">输入正确的 PIN / 密码时会自动解锁。建议您使用 6 位数以下的 PIN 码。如果 PIN 码长于 6 位，则可能会被锁定</string>
   <!-- Pocket judge -->
+  <string name="pocket_judge_title">口袋检测</string>
+  <string name="pocket_judge_summary">当设备在口袋中时屏蔽屏幕和按键操作</string>
 </resources>

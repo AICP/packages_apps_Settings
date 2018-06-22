@@ -101,5 +101,9 @@
   <string name="menu_show_substratum">Mostrar overlays</string>
   <string name="menu_hide_substratum">Ocultar overlays</string>
   <!-- Quick unlock -->
+  <string name="unlock_quick_unlock_control_title">Desbloqueio rápido</string>
+  <string name="unlock_quick_unlock_control_summary">Desbloquear automaticamente quando o PIN/palavra-passe correto(a) for inserido(a). É recomendável que o PIN tenha menos de 6 dígitos. Se o PIN tiver mais de 6 dígitos, pode não conseguir desbloquear. Nós avisámos!</string>
   <!-- Pocket judge -->
+  <string name="pocket_judge_title">Detetor de bolso</string>
+  <string name="pocket_judge_summary">Bloquear o ecrã e os botões enquanto o dispositivo estiver no bolso</string>
 </resources>

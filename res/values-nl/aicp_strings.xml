@@ -101,5 +101,9 @@
   <string name="menu_show_substratum">Toon lagen</string>
   <string name="menu_hide_substratum">Verberg lagen</string>
   <!-- Quick unlock -->
+  <string name="unlock_quick_unlock_control_title">Snel ontgrendelen</string>
+  <string name="unlock_quick_unlock_control_summary">Ontgrendelt automatisch wanneer juiste pincode/wachtwoord wordt ingevoerd. Het wordt aanbevolen een pin met minder dan 6 cijfers te gebruiken. Als de pincode meer dan 6 cijfers bevat kunt u worden buitengesloten!</string>
   <!-- Pocket judge -->
+  <string name="pocket_judge_title">Broekzak detectie</string>
+  <string name="pocket_judge_summary">Scherm- en toetsaanrakingen blokkeren wanneer het apparaat in de broekzak zit</string>
 </resources>

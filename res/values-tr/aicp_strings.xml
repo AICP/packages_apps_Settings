@@ -101,5 +101,9 @@
   <string name="menu_show_substratum">Temaları göster</string>
   <string name="menu_hide_substratum">Temaları gizle</string>
   <!-- Quick unlock -->
+  <string name="unlock_quick_unlock_control_title">Hızlı kilit açma</string>
+  <string name="unlock_quick_unlock_control_summary">Doğru PIN/şifre girildiğinde otomatik olarak kilidi açar. 6 basamaktan az bir PIN kullanmanız önerilir. PIN 6 basamağı geçerse cihazınız kilitli kalabilir. Sizi uyarıyoruz.</string>
   <!-- Pocket judge -->
+  <string name="pocket_judge_title">Cep algılama</string>
+  <string name="pocket_judge_summary">Cihaz cebinizdeyken ekran ve tuş girişlerini engelle</string>
 </resources>

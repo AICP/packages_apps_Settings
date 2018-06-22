@@ -101,5 +101,9 @@
   <string name="menu_show_substratum">Fedőrétegek megjelenítése</string>
   <string name="menu_hide_substratum">Fedőrétegek elrejtése</string>
   <!-- Quick unlock -->
+  <string name="unlock_quick_unlock_control_title">Gyorsfeloldás</string>
+  <string name="unlock_quick_unlock_control_summary">Automatikus feloldás, ha a helyes PIN/jelszó beírásra kerül. Ajánlott 6 számjegynél rövidebb PIN használata. Ha a PIN több, mint 6 számjegyű, előfordulhat, hogy kizáródik saját készülékéből.</string>
   <!-- Pocket judge -->
+  <string name="pocket_judge_title">Zseb érzékelése</string>
+  <string name="pocket_judge_summary">A képernyő és a gombok általi véletlen bevitelek blokkolása, ha a készülék a zsebben van</string>
 </resources>

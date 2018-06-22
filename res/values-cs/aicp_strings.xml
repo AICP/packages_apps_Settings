@@ -103,5 +103,9 @@
   <string name="menu_show_substratum">Zobrazit překrytí</string>
   <string name="menu_hide_substratum">Skrýt překrytí</string>
   <!-- Quick unlock -->
+  <string name="unlock_quick_unlock_control_title">Rychlé odemknutí</string>
+  <string name="unlock_quick_unlock_control_summary">Automatické odemknutí při zadání správného PINu/hesla. Doporučuje se použít PIN menší než 6 číslic. Pokud PIN překročí 6 číslic, může dojít k zamknutí.</string>
   <!-- Pocket judge -->
+  <string name="pocket_judge_title">Detekce uložení v kapse</string>
+  <string name="pocket_judge_summary">Blokovat obrazovku a hardwarová tlačítka, když je zařízení v kapse</string>
 </resources>
