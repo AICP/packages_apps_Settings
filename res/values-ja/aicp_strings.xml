@@ -16,6 +16,8 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="aicp_name_title">AICP Experience</string>
+  <string name="aicp_name_summary">Aicp Oreo Edition - 13.1</string>
   <string name="aicpextras_settings">AICP Extras</string>
   <string name="aicpextras_dashboard_summary">ROM のカスタマイズ</string>
   <!-- Root Management -->
@@ -70,11 +72,23 @@
   <string name="fingerprint_swipe_to_dismiss_suggestion_summary">指紋センサー上で左右にスワイプ</string>
   <!-- Less Notification sounds -->
   <string name="less_notification_sounds_title">頻繁な通知音の軽減</string>
+  <string name="less_notification_sounds_summary">一定時間に一度だけ各アプリの通知音を再生する</string>
   <string name="less_notification_sounds_default">デフォルト</string>
+  <string name="less_notification_sounds_3s">3秒ごと</string>
+  <string name="less_notification_sounds_5s">5秒ごと</string>
+  <string name="less_notification_sounds_10s">10秒ごと</string>
+  <string name="less_notification_sounds_15s">15秒ごと</string>
+  <string name="less_notification_sounds_30s">30秒ごと</string>
+  <string name="less_notification_sounds_45s">45秒ごと</string>
+  <string name="less_notification_sounds_1m">1分ごと</string>
+  <string name="less_notification_sounds_2m">2分ごと</string>
+  <string name="less_notification_sounds_5m">5分ごと</string>
   <!-- Notification log -->
+  <string name="notification_log_summary">通知履歴を表示します</string>
   <!-- USB paranoia mode -->
   <string name="usb_paranoia_connect_title">USB セキュア接続</string>
   <string name="usb_paranoia_connect_summary">ロック時に USB 接続したときは充電だけ有効化するようにします</string>
+  <string name="usb_category_title">USB</string>
   <!-- Running services -->
   <string name="background_processes_settings_title">バックグラウンドプロセス</string>
   <!-- Development QS -->

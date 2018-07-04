@@ -100,5 +100,9 @@
   <string name="menu_show_substratum">顯示重疊</string>
   <string name="menu_hide_substratum">隱藏重疊</string>
   <!-- Quick unlock -->
+  <string name="unlock_quick_unlock_control_title">快速解除鎖定</string>
+  <string name="unlock_quick_unlock_control_summary">當輸入了正確的 PIN /密碼時自動解鎖。建議使用 6 個數字以內的 PIN 。如果 PIN 超過 6 個位數，你可能會被鎖住。後果自行承擔！</string>
   <!-- Pocket judge -->
+  <string name="pocket_judge_title">口袋檢測</string>
+  <string name="pocket_judge_summary">當裝置在口袋中時阻止螢幕和按鍵輸入</string>
 </resources>
