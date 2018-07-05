@@ -101,7 +101,7 @@
   <string name="menu_hide_substratum">Sembunyikan lapisan</string>
   <!-- Quick unlock -->
   <string name="unlock_quick_unlock_control_title">Buka cepat</string>
-  <string name="unlock_quick_unlock_control_summary">Membuka otomatis ketika PIN/sandi dimasukkan dengan benar. Dianjurkan bahwa Anda menggunakan PIN di bawah 6 digit. Jika PIN lebih dari 6 digit, mungkin akan terkunci.</string>
+  <string name="unlock_quick_unlock_control_summary">Membuka otomatis ketika PIN/kata sandi dimasukkan dengan benar. Anda dianjurkan untuk menggunakan PIN di bawah 6 digit. Jika PIN lebih dari 6 digit, mungkin akan terkunci.</string>
   <!-- Pocket judge -->
   <string name="pocket_judge_title">Deteksi saku</string>
   <string name="pocket_judge_summary">Blokir masukan tombol dan layar saat perangkat berada dalam saku</string>

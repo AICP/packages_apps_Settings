@@ -17,8 +17,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="aicp_name_title">AICP 用户体验</string>
-  <string name="aicp_name_summary">Aicp奥利利版-13.1</string>
-  <string name="aicpextras_settings">AICP 额外设置</string>
+  <string name="aicp_name_summary">Aicp 奥利利版 - 13.1</string>
+  <string name="aicpextras_settings">AICP 附加设置</string>
   <string name="aicpextras_dashboard_summary">ROM 定制</string>
   <!-- Root Management -->
   <string name="rootmanagement_title">Root 管理</string>
