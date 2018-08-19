@@ -58,7 +58,7 @@ public class DevelopmentSettingsDashboardFragment extends RestrictedDashboardFra
         implements SwitchBar.OnSwitchChangeListener, OemUnlockDialogHost, AdbDialogHost,
         AdbClearKeysDialogHost, LogPersistDialogHost,
         BluetoothA2dpHwOffloadRebootDialog.OnA2dpHwDialogConfirmedListener,
-        RootAccessDialogHost {
+        RootAccessDialogHost, AdbNetworkDialogHost {
 
     private static final String TAG = "DevSettingsDashboard";
 
@@ -292,6 +292,20 @@ public class DevelopmentSettingsDashboardFragment extends RestrictedDashboardFra
         controller.onRootAccessDialogDismissed();
     }
 
+    public void onEnableAdbNetworkDialogConfirmed() {
+        final AdbNetworkPreferenceController controller = getDevelopmentOptionsController(
+                AdbNetworkPreferenceController.class);
+        controller.onAdbDialogConfirmed();
+
+    }
+
+    @Override
+    public void onEnableAdbNetworkDialogDismissed() {
+        final AdbNetworkPreferenceController controller = getDevelopmentOptionsController(
+                AdbNetworkPreferenceController.class);
+        controller.onAdbDialogDismissed();
+    }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         boolean handledResult = false;
@@ -480,6 +494,7 @@ public class DevelopmentSettingsDashboardFragment extends RestrictedDashboardFra
         controllers.add(new DefaultLaunchPreferenceController(context, "density"));
         controllers.add(new DefaultLaunchPreferenceController(context, "background_check"));
         controllers.add(new DefaultLaunchPreferenceController(context, "inactive_apps"));
+        controllers.add(new AdbNetworkPreferenceController(context, fragment));
         return controllers;
     }
 
