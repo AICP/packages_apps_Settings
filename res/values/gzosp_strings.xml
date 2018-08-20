@@ -45,4 +45,11 @@
     <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Swipe to screenshot</string>
     <string name="three_finger_gesture_summary">Swipe three fingers to take screenshot</string>
+
+    <!-- OP like Navigation Gestures -->
+    <string name="gesture_settings_title">Navigation Gestures</string>
+    <string name="gesture_settings_info">Navigation bar must be disabled!\n\nAvailable gestures:\n\nBack\n- Swipe up on left or right side\n\nHome\n- Swipe up center\n\nRecent apps\n- Swipe up center and hold\n\nLong press home\n- Short swipe up and hold in the center</string>
+    <string name="use_bottom_gesture_title">Navigation gestures</string>
+    <string name="use_bottom_gesture_summary">Use bottom swipe up gestures for navigation</string>
+
 </resources>
