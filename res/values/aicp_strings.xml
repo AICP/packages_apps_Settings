@@ -21,6 +21,12 @@
     <!-- Manage applications, package string displayed in app snippet -->
     <string name="packagename_text">"<xliff:g id="package_name">%1$s</xliff:g>"</string>
 
+    <!-- AıcpExtras -->
+    <string name="aicp_version_title">AICP Experience</string>
+    <string name="aicp_version_summary">AICP 12 Edition - 17.0</string>
+    <string name="aicpextras_title">AICP Extras</string>
+    <string name="aicpextras_summary">ROM customization</string>
+
     <!-- SELinux Status -->
     <string name="selinux_status">SELinux status</string>
     <string name="selinux_status_disabled">Disabled</string>
@@ -57,12 +63,6 @@
 
     <!-- Volume link notification -->
     <string name="volume_link_notification_title">Link ring &amp; notification volumes</string>
-
-    <!-- AicpExtras -->
-    <string name="aicp_version_title">AICP Experience</string>
-    <string name="aicp_version_summary">Aicp 10 Edition - 15.0</string>
-    <string name="aicpextras_title">AICP Extras</string>
-    <string name="aicpextras_summary">ROM customization</string>
 
     <!-- Misc gesture settings -->
     <string name="back_gesture_haptic_title">Haptic feedback</string>
