@@ -36,6 +36,14 @@
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController"/>
 
+    <!-- AICP version -->
+    <Preference
+        android:key="aicp_version"
+        android:title="@string/aicp_version_title"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="false"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.AicpVersionPreferenceController"/>
+
     <!-- Security patch -->
     <Preference
         android:key="security_key"
