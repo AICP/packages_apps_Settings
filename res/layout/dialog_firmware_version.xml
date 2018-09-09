@@ -39,6 +39,20 @@
 
         <TextView
             style="@style/device_info_dialog_label"
+            android:id="@+id/aicp_version_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/aicp_version_title"/>
+        <TextView
+            style="@style/device_info_dialog_value"
+            android:id="@+id/aicp_version_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/aicp_version_summary"/>
+
+<!--
+        <TextView
+            style="@style/device_info_dialog_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@*lineageos.platform:string/lineage_version"/>
@@ -46,6 +60,7 @@
             style="@style/device_info_dialog_value"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+-->
 
         <TextView
             style="@style/device_info_dialog_label"

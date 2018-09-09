@@ -39,11 +39,14 @@ public class FirmwareVersionDialogController implements View.OnClickListener {
     static final int FIRMWARE_VERSION_VALUE_ID = R.id.firmware_version_value;
     @VisibleForTesting
     static final int FIRMWARE_VERSION_LABEL_ID = R.id.firmware_version_label;
+    private static final int AICP_VERSION_VALUE_ID = R.id.aicp_version_value;
+    private static final int AICP_VERSION_LABEL_ID = R.id.aicp_version_label;
 
     private final FirmwareVersionDialogFragment mDialog;
     private final Context mContext;
     private final UserManager mUserManager;
     private final long[] mHits = new long[ACTIVITY_TRIGGER_COUNT];
+    private final long[] mAicpHits = new long[ACTIVITY_TRIGGER_COUNT];
 
     private RestrictedLockUtils.EnforcedAdmin mFunDisallowedAdmin;
     private boolean mFunDisallowedBySystem;
@@ -53,6 +56,33 @@ public class FirmwareVersionDialogController implements View.OnClickListener {
         mContext = dialog.getContext();
         mUserManager = (UserManager) mContext.getSystemService(Context.USER_SERVICE);
     }
+
+    private View.OnClickListener mAicpClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            aicpArrayCopy();
+            mAicpHits[mHits.length - 1] = SystemClock.uptimeMillis();
+            if (mAicpHits[0] >= (SystemClock.uptimeMillis() - DELAY_TIMER_MILLIS)) {
+                if (mUserManager.hasUserRestriction(UserManager.DISALLOW_FUN)) {
+                    if (mFunDisallowedAdmin != null && !mFunDisallowedBySystem) {
+                        RestrictedLockUtils.sendShowAdminSupportDetailsIntent(mContext,
+                                mFunDisallowedAdmin);
+                    }
+                    Log.d(TAG, "Sorry, no fun for you!");
+                    return;
+                }
+
+                final Intent intent = new Intent(Intent.ACTION_MAIN)
+                        .setClassName(
+                                "com.android.systemui", "com.android.systemui.egg.MLandActivity");
+                try {
+                    mContext.startActivity(intent);
+                } catch (Exception e) {
+                    Log.e(TAG, "Unable to start activity " + intent.toString());
+                }
+            }
+        }
+    };
 
     @Override
     public void onClick(View v) {
@@ -92,6 +122,8 @@ public class FirmwareVersionDialogController implements View.OnClickListener {
     private void registerClickListeners() {
         mDialog.registerClickListener(FIRMWARE_VERSION_LABEL_ID, this /* listener */);
         mDialog.registerClickListener(FIRMWARE_VERSION_VALUE_ID, this /* listener */);
+        mDialog.registerClickListener(AICP_VERSION_LABEL_ID, mAicpClickListener /* listener */);
+        mDialog.registerClickListener(AICP_VERSION_VALUE_ID, mAicpClickListener /* listener */);
     }
 
     /**
@@ -100,6 +132,9 @@ public class FirmwareVersionDialogController implements View.OnClickListener {
     @VisibleForTesting
     void arrayCopy() {
         System.arraycopy(mHits, 1, mHits, 0, mHits.length - 1);
+    }
+    private void aicpArrayCopy() {
+        System.arraycopy(mAicpHits, 1, mAicpHits, 0, mAicpHits.length - 1);
     }
 
     @VisibleForTesting
