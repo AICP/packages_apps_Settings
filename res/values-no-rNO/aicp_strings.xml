@@ -20,15 +20,30 @@
   <!-- Root Management -->
   <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
   <string name="supersu_title">SuperSU</string>
+  <string name="device_info_title">Telefoninformasjon</string>
   <!-- Encryption and credential -->
   <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
+  <plurals name="show_dev_countdown_custom">
+    <item quantity="one">Du er nå <xliff:g id="step_count">%1$d</xliff:g> klikk fra aktivering av utvikler innstillinger.</item>
+    <item quantity="other">Du er nå <xliff:g id="step_count">%1$d</xliff:g> steg fra aktivering av utvikler innstillinger.</item>
+  </plurals>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
   <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
   <!-- Density category -->
   <!-- Volume Steps -->
+  <string name="volume_steps_notification_title">Volum trinnene: Varsling</string>
+  <string name="volume_steps_reset">Tilbakestill</string>
+  <string name="volume_steps_60">60</string>
+  <string name="volume_steps_45">45</string>
+  <string name="volume_steps_30">30</string>
+  <string name="volume_steps_15">15</string>
+  <string name="volume_steps_7">7</string>
+  <string name="volume_steps_5">5</string>
   <!-- Sound & Notification Settings -->
   <string name="link_volume_option_title">Knytt ringetone- og varslingsvolum sammen</string>
   <!-- Reset battery stats -->
+  <string name="ok">Ok</string>
+  <string name="reset_stats_msg">Batterihistorie statistikken vil bli nullstilt</string>
   <!-- [CHAR LIMIT=80]-->
   <string name="fp_swipe_to_dismiss_notifications_title">Sveip fingeravtrykk til venstre eller høyre for å avvise varsler</string>
   <string name="fp_swipe_to_dismiss_notifications_pref_title">Sveip fingeravtrykk til venstre eller høyre</string>
@@ -52,11 +67,13 @@
   <!-- Notification log -->
   <string name="notification_log_summary">Vis varslingsloggen</string>
   <!-- USB paranoia mode -->
+  <string name="usb_category_title">USB</string>
   <!-- Running services -->
   <string name="background_processes_settings_title">Bakgrunnsprosess</string>
   <!-- Development QS -->
   <!-- Force authorize substratum packages -->
   <!-- Manage applications: show substratum overlays -->
   <!-- Quick unlock -->
+  <string name="unlock_quick_unlock_control_title">Hurtigåpning</string>
   <!-- Pocket judge -->
 </resources>

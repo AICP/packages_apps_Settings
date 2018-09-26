@@ -100,6 +100,9 @@
   <string name="menu_show_substratum">오버레이 보이기</string>
   <string name="menu_hide_substratum">오버레이 숨기기</string>
   <!-- Quick unlock -->
+  <string name="unlock_quick_unlock_control_title">빠른 잠금 해제</string>
   <string name="unlock_quick_unlock_control_summary">올바른 PIN / 비밀번호를 입력하면 자동으로 잠금 해제됩니다. 6 자리 미만의 PIN을 사용하는 것이 좋습니다. PIN이 6 자리보다 길면 잠길 수 있습니다.</string>
   <!-- Pocket judge -->
+  <string name="pocket_judge_title">주머니 감지</string>
+  <string name="pocket_judge_summary">기기가 주머니에 있을 때 화면과 버튼 입력을 방지합니다.</string>
 </resources>
