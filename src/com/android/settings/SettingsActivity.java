@@ -160,9 +160,8 @@ public class SettingsActivity extends SettingsDrawerActivity
 
     private static final String ROOT_MANAGER_FRAGMENT = "com.android.settings.RootManagement";
 
-    private boolean mRootSupport;
-    private String mRootPackage;
-    private String mRootClass;
+    // null = no known root solution installed (or unable to find launch activity)
+    private Intent mRootIntent = null;
 
     private static final String[] LIKE_SHORTCUT_INTENT_ACTION_ARRAY = {
             "android.settings.APPLICATION_DETAILS_SETTINGS"
@@ -723,9 +722,7 @@ public class SettingsActivity extends SettingsDrawerActivity
             boolean addToBackStack, int titleResId, CharSequence title, boolean withTransition) {
         if (ROOT_MANAGER_FRAGMENT.equals(fragmentName)) {
             if (isRootAvailable()) {
-                Intent rootManagementIntent = new Intent();
-                rootManagementIntent.setClassName(mRootPackage, mRootClass);
-                startActivity(rootManagementIntent);
+                startActivity(mRootIntent);
                 finish();
                 return null;
             }
@@ -906,36 +903,18 @@ public class SettingsActivity extends SettingsDrawerActivity
     }
 
     // Maximum available root managers
-    private int ROOT_MGR_MAX = 2; // mRootManagers
-    private Object[][] mRootManagers = {
-        {
-            "eu.chainfire.supersu", //pkg name
-            "eu.chainfire.supersu.MainActivity", // class name
-            185, // minimum version
-        },
-        {
-            "me.phh.superuser", //pkg name
-            "com.koushikdutta.superuser.MainActivity", // class name
-            0, // minimum version
-        },
-        {
-            "com.topjohnwu.magisk", //pkg name
-            "com.topjohnwu.magisk.SplashActivity", // class name
-            0,
-        },
+    private static final String[] ROOT_MANAGERS = {
+            "eu.chainfire.supersu",
+            "me.phh.superuser",
+            "com.topjohnwu.magisk",
     };
 
     private boolean isRootAvailable() {
-        mRootSupport = false;
-        mRootPackage = "";
-        mRootClass = "";
-        for (int i = 0; i <= ROOT_MGR_MAX; i++) {
-            try {
-                mRootSupport = getPackageManager().getPackageInfo((String) mRootManagers[i][0], 0).versionCode >= (int) mRootManagers[i][2];
-                mRootPackage = (String) mRootManagers[i][0];
-                mRootClass = (String) mRootManagers[i][1];
-                if (mRootSupport) return true;
-            } catch (PackageManager.NameNotFoundException e) {
+        mRootIntent = null;
+        for (String rm: ROOT_MANAGERS) {
+            mRootIntent = getPackageManager().getLaunchIntentForPackage(rm);
+            if (mRootIntent != null) {
+                return true;
             }
         }
         return false;
