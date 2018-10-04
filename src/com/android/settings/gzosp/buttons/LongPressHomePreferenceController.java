@@ -34,6 +34,8 @@ public class LongPressHomePreferenceController extends BasePreferenceController
 
     private Context mContext;
     private ListPreference mPref;
+
+    private int mDefaultBehavior;
     private final String mKey;
 
     public LongPressHomePreferenceController(Context context, String key) {
@@ -57,9 +59,9 @@ public class LongPressHomePreferenceController extends BasePreferenceController
         super.displayPreference(screen);
         mPref = (ListPreference) screen.findPreference(getPreferenceKey());
         if (mPref == null) return;
-        int defaultBehavior = mContext.getResources().getInteger(
+        mDefaultBehavior = mContext.getResources().getInteger(
                 com.android.internal.R.integer.config_longPressOnHomeKeyBehavior);
-        int value = Settings.System.getInt(mContext.getContentResolver(), KEY_HOME_LONG_PRESS_ACTION, defaultBehavior);
+        int value = Settings.System.getInt(mContext.getContentResolver(), KEY_HOME_LONG_PRESS_ACTION, mDefaultBehavior);
         mPref.setValue(Integer.toString(value));
     }
 
@@ -73,7 +75,7 @@ public class LongPressHomePreferenceController extends BasePreferenceController
 
     @Override
     public CharSequence getSummary() {
-        int value = Settings.System.getInt(mContext.getContentResolver(), KEY_HOME_LONG_PRESS_ACTION, 0);
+        int value = Settings.System.getInt(mContext.getContentResolver(), KEY_HOME_LONG_PRESS_ACTION, mDefaultBehavior);
         int index = mPref.findIndexOfValue(Integer.toString(value));
         return mPref.getEntries()[index];
     }
