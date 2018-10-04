@@ -59,10 +59,13 @@ public class LongPressAppSwitchPreferenceController extends BasePreferenceContro
         super.displayPreference(screen);
         mPref = (ListPreference) screen.findPreference(getPreferenceKey());
         if (mPref == null) return;
+        boolean isQuickStep = Settings.Secure.getInt(mContext.getContentResolver(),
+                Settings.Secure.SWIPE_UP_TO_SWITCH_APPS_ENABLED, 0) != 0;
         mDefaultBehavior = mContext.getResources().getInteger(
                 com.android.internal.R.integer.config_longPressOnAppSwitchKeyBehavior);
         int value = Settings.System.getInt(mContext.getContentResolver(), KEY_APP_SWITCH_LONG_PRESS_ACTION, mDefaultBehavior);
         mPref.setValue(Integer.toString(value));
+        mPref.setEnabled(isQuickStep ? false : true);
     }
 
     @Override
