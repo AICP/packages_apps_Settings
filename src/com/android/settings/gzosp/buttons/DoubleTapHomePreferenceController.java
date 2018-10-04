@@ -34,6 +34,8 @@ public class DoubleTapHomePreferenceController extends BasePreferenceController
 
     private Context mContext;
     private ListPreference mPref;
+
+    private int mDefaultBehavior;
     private final String mKey;
 
     public DoubleTapHomePreferenceController(Context context, String key) {
@@ -57,9 +59,9 @@ public class DoubleTapHomePreferenceController extends BasePreferenceController
         super.displayPreference(screen);
         mPref = (ListPreference) screen.findPreference(getPreferenceKey());
         if (mPref == null) return;
-        int defaultBehavior = mContext.getResources().getInteger(
+        mDefaultBehavior = mContext.getResources().getInteger(
                 com.android.internal.R.integer.config_doubleTapOnHomeKeyBehavior);
-        int value = Settings.System.getInt(mContext.getContentResolver(), KEY_HOME_DOUBLE_TAP_ACTION, defaultBehavior);
+        int value = Settings.System.getInt(mContext.getContentResolver(), KEY_HOME_DOUBLE_TAP_ACTION, mDefaultBehavior);
         mPref.setValue(Integer.toString(value));
     }
 
@@ -73,7 +75,7 @@ public class DoubleTapHomePreferenceController extends BasePreferenceController
 
     @Override
     public CharSequence getSummary() {
-        int value = Settings.System.getInt(mContext.getContentResolver(), KEY_HOME_DOUBLE_TAP_ACTION, 0);
+        int value = Settings.System.getInt(mContext.getContentResolver(), KEY_HOME_DOUBLE_TAP_ACTION, mDefaultBehavior);
         int index = mPref.findIndexOfValue(Integer.toString(value));
         return mPref.getEntries()[index];
     }
