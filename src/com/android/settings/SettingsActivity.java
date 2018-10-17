@@ -158,11 +158,6 @@ public class SettingsActivity extends SettingsDrawerActivity
     private CharSequence mInitialTitle;
     private int mInitialTitleResId;
 
-    private static final String ROOT_MANAGER_FRAGMENT = "com.android.settings.RootManagement";
-
-    // null = no known root solution installed (or unable to find launch activity)
-    private Intent mRootIntent = null;
-
     private static final String[] LIKE_SHORTCUT_INTENT_ACTION_ARRAY = {
             "android.settings.APPLICATION_DETAILS_SETTINGS"
     };
@@ -726,13 +721,6 @@ public class SettingsActivity extends SettingsDrawerActivity
      */
     private Fragment switchToFragment(String fragmentName, Bundle args, boolean validate,
             boolean addToBackStack, int titleResId, CharSequence title, boolean withTransition) {
-        if (ROOT_MANAGER_FRAGMENT.equals(fragmentName)) {
-            if (isRootAvailable()) {
-                startActivity(mRootIntent);
-                finish();
-                return null;
-            }
-        }
         if (validate && !isValidFragment(fragmentName)) {
             throw new IllegalArgumentException("Invalid fragment for this activity: "
                     + fragmentName);
@@ -871,11 +859,6 @@ public class SettingsActivity extends SettingsDrawerActivity
                         Settings.StartAeActivity.class.getName()),
                 aicpExtrasSupported, isAdmin);
 
-        // Root management
-        setTileEnabled(new ComponentName(packageName,
-                        Settings.RootManagementActivity.class.getName()),
-                isRootAvailable(), isAdmin);
-
         if (UserHandle.MU_ENABLED && !isAdmin) {
 
             // When on restricted users, disable all extra categories (but only the settings ones).
@@ -906,24 +889,6 @@ public class SettingsActivity extends SettingsDrawerActivity
         } else {
             Log.d(LOG_TAG, "No enabled state changed, skipping updateCategory call");
         }
-    }
-
-    // Maximum available root managers
-    private static final String[] ROOT_MANAGERS = {
-            "eu.chainfire.supersu",
-            "me.phh.superuser",
-            "com.topjohnwu.magisk",
-    };
-
-    private boolean isRootAvailable() {
-        mRootIntent = null;
-        for (String rm: ROOT_MANAGERS) {
-            mRootIntent = getPackageManager().getLaunchIntentForPackage(rm);
-            if (mRootIntent != null) {
-                return true;
-            }
-        }
-        return false;
     }
 
     /**
