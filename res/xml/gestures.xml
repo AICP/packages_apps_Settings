@@ -81,4 +81,10 @@
         android:fragment="com.android.settings.gestures.GlobalActionsPanelSettings"
         settings:controller="com.android.settings.gestures.GlobalActionsPanelPreferenceController" />
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="three_finger_gesture"
+        android:title="@string/three_finger_gesture"
+        android:summary="@string/three_finger_gesture_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
