@@ -23,7 +23,4 @@
     <string name="aicpextras_title">AICP Extras</string>
     <string name="aicpextras_summary">ROM customization</string>
 
-    <!-- Ambient category -->
-    <string name="ambient_display_category">Ambient options</string>
-
 </resources>
