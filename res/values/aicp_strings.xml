@@ -23,4 +23,10 @@
     <string name="aicpextras_title">AICP Extras</string>
     <string name="aicpextras_summary">ROM customization</string>
 
+    <!-- SElinux status in About -->
+    <string name="selinux_status">SELinux status</string>
+    <string name="selinux_status_disabled">Disabled</string>
+    <string name="selinux_status_permissive">Permissive</string>
+    <string name="selinux_status_enforcing">Enforcing</string>
+
 </resources>
