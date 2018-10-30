@@ -262,4 +262,14 @@
         <!-- OP_BOOT_COMPLETED -->
         <item>@string/app_ops_boot_completed</item>
     </string-array>
+
+    <!-- Weather -->
+    <string-array name="weather_unit_entries" translatable="false">
+        <item>@string/weather_unit_metric</item>
+        <item>@string/weather_unit_imperial</item>
+    </string-array>
+    <string-array name="weather_unit_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
 </resources>
