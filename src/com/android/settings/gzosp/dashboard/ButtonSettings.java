@@ -31,20 +31,27 @@ import android.support.v7.preference.PreferenceScreen;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
+import com.android.settings.gzosp.buttons.AppSwitchButtonWakePreferenceController;
+import com.android.settings.gzosp.buttons.AssistButtonWakePreferenceController;
+import com.android.settings.gzosp.buttons.BackButtonWakePreferenceController;
 import com.android.settings.gzosp.buttons.ButtonBrightnessPreferenceController;
+import com.android.settings.gzosp.buttons.CameraButtonWakePreferenceController;
 import com.android.settings.gzosp.buttons.DoubleTapAppSwitchPreferenceController;
 import com.android.settings.gzosp.buttons.DoubleTapAssistPreferenceController;
 import com.android.settings.gzosp.buttons.DoubleTapBackPreferenceController;
 import com.android.settings.gzosp.buttons.DoubleTapCameraPreferenceController;
 import com.android.settings.gzosp.buttons.DoubleTapHomePreferenceController;
 import com.android.settings.gzosp.buttons.DoubleTapMenuPreferenceController;
+import com.android.settings.gzosp.buttons.HomeButtonWakePreferenceController;
 import com.android.settings.gzosp.buttons.LongPressAppSwitchPreferenceController;
 import com.android.settings.gzosp.buttons.LongPressAssistPreferenceController;
 import com.android.settings.gzosp.buttons.LongPressBackPreferenceController;
 import com.android.settings.gzosp.buttons.LongPressCameraPreferenceController;
 import com.android.settings.gzosp.buttons.LongPressHomePreferenceController;
 import com.android.settings.gzosp.buttons.LongPressMenuPreferenceController;
+import com.android.settings.gzosp.buttons.MenuButtonWakePreferenceController;
 import com.android.settings.gzosp.buttons.NavigationBarPreferenceController;
+import com.android.settings.gzosp.buttons.VolRockerWakePreferenceController;
 import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.core.AbstractPreferenceController;
@@ -61,6 +68,14 @@ public class ButtonSettings extends DashboardFragment {
     // Switches
     private static final String KEY_BUTTON_BRIGHTNESS      = "button_brightness";
     private static final String KEY_NAVIGATION_BAR         = "navigation_bar";
+    // Wake keys
+    private static final String KEY_VOLUME_ROCKER_WAKE     = "volrocker_wake_screen";
+    private static final String KEY_HOME_WAKE              = "home_wake_screen";
+    private static final String KEY_MENU_WAKE              = "menu_wake_screen";
+    private static final String KEY_ASSIST_WAKE            = "assist_wake_screen";
+    private static final String KEY_BACK_WAKE              = "back_wake_screen";
+    private static final String KEY_APPSWITCH_WAKE         = "app_switch_wake_screen";
+    private static final String KEY_CAMERA_WAKE            = "camera_wake_screen";
 
     // Long Press/Double Tap Actions
     private static final String KEY_HOME_LONG_PRESS        = "home_key_long_press";
@@ -83,6 +98,7 @@ public class ButtonSettings extends DashboardFragment {
     private static final String KEY_CATEGORY_ASSIST        = "assist_key";
     private static final String KEY_CATEGORY_APP_SWITCH    = "app_switch_key";
     private static final String KEY_CATEGORY_CAMERA        = "camera_key";
+    private static final String KEY_CATEGORY_VOLUME        = "volume_key";
 
     // Masked keys
     private static final int KEY_MASK_HOME = 0x01;
@@ -91,8 +107,10 @@ public class ButtonSettings extends DashboardFragment {
     private static final int KEY_MASK_ASSIST = 0x08;
     private static final int KEY_MASK_APP_SWITCH = 0x10;
     private static final int KEY_MASK_CAMERA = 0x20;
-    
+    private static final int KEY_MASK_VOLUME = 0x40;
+
     private int mDeviceHardwareKeys;
+    private int mDeviceHardwareWakeKeys;
 
     @Override
     public int getMetricsCategory() {
@@ -122,12 +140,23 @@ public class ButtonSettings extends DashboardFragment {
         mDeviceHardwareKeys = res.getInteger(
                 com.android.internal.R.integer.config_deviceHardwareKeys);
 
+        mDeviceHardwareWakeKeys = res.getInteger(
+                com.android.internal.R.integer.config_deviceHardwareWakeKeys);
+
         final boolean hasHome = (mDeviceHardwareKeys & KEY_MASK_HOME) != 0 || navigationBarEnabled;
         final boolean hasMenu = (mDeviceHardwareKeys & KEY_MASK_MENU) != 0;
         final boolean hasBack = (mDeviceHardwareKeys & KEY_MASK_BACK) != 0 || navigationBarEnabled;
         final boolean hasAssist = (mDeviceHardwareKeys & KEY_MASK_ASSIST) != 0;
         final boolean hasAppSwitch = (mDeviceHardwareKeys & KEY_MASK_APP_SWITCH) != 0 || navigationBarEnabled;
         final boolean hasCamera = (mDeviceHardwareKeys & KEY_MASK_CAMERA) != 0;
+
+        final boolean hasVolRockerWake = (mDeviceHardwareWakeKeys & KEY_MASK_VOLUME) != 0;
+        final boolean hasHomeWake = (mDeviceHardwareWakeKeys & KEY_MASK_HOME) != 0;
+        final boolean hasMenuWake = (mDeviceHardwareWakeKeys & KEY_MASK_MENU) != 0;
+        final boolean hasAssistWake = (mDeviceHardwareWakeKeys & KEY_MASK_ASSIST) != 0;
+        final boolean hasBackWake = (mDeviceHardwareWakeKeys & KEY_MASK_BACK) != 0;
+        final boolean hasAppSwitchWake = (mDeviceHardwareWakeKeys & KEY_MASK_APP_SWITCH) != 0;
+        final boolean hasCameraWake = (mDeviceHardwareWakeKeys & KEY_MASK_CAMERA) != 0;
 
         final PreferenceCategory homeCategory =
                 (PreferenceCategory) screen.findPreference(KEY_CATEGORY_HOME);
@@ -147,19 +176,26 @@ public class ButtonSettings extends DashboardFragment {
         final PreferenceCategory cameraCategory =
                 (PreferenceCategory) screen.findPreference(KEY_CATEGORY_CAMERA);
 
-        if (!hasMenu && menuCategory != null) {
+        final PreferenceCategory volumeCategory =
+                (PreferenceCategory) screen.findPreference(KEY_CATEGORY_VOLUME);
+
+        if (!hasMenu && !hasMenuWake && menuCategory != null) {
             screen.removePreference(menuCategory);
         }
 
-        if (!hasAssist && assistCategory != null) {
+        if (!hasAssist && !hasAssistWake && assistCategory != null) {
             screen.removePreference(assistCategory);
         }
 
-        if (!hasCamera && cameraCategory != null) {
+        if (!hasCamera && !hasCameraWake && cameraCategory != null) {
             screen.removePreference(cameraCategory);
         }
 
-        mFooterPreferenceMixin.createFooterPreference().setTitle(R.string.button_settings_description);        
+        if (!hasVolRockerWake && volumeCategory != null) {
+            screen.removePreference(volumeCategory);
+        }
+
+        mFooterPreferenceMixin.createFooterPreference().setTitle(R.string.button_settings_description);
     }
 
     @Override
@@ -168,6 +204,14 @@ public class ButtonSettings extends DashboardFragment {
         final List<AbstractPreferenceController> controllers = new ArrayList<>();
         controllers.add(new ButtonBrightnessPreferenceController(context, KEY_BUTTON_BRIGHTNESS));
         controllers.add(new NavigationBarPreferenceController(context, KEY_NAVIGATION_BAR));
+        /*Wake Key Actions */
+        controllers.add(new VolRockerWakePreferenceController(context, KEY_VOLUME_ROCKER_WAKE));
+        controllers.add(new HomeButtonWakePreferenceController(context, KEY_HOME_WAKE));
+        controllers.add(new MenuButtonWakePreferenceController(context, KEY_MENU_WAKE));
+        controllers.add(new AssistButtonWakePreferenceController(context, KEY_ASSIST_WAKE));
+        controllers.add(new BackButtonWakePreferenceController(context, KEY_BACK_WAKE));
+        controllers.add(new AppSwitchButtonWakePreferenceController(context, KEY_APPSWITCH_WAKE));
+        controllers.add(new CameraButtonWakePreferenceController(context, KEY_CAMERA_WAKE));
         /*Long Press/Double Tap Actions */
         controllers.add(new LongPressHomePreferenceController(context, KEY_HOME_LONG_PRESS));
         controllers.add(new DoubleTapHomePreferenceController(context, KEY_HOME_DOUBLE_TAP));
