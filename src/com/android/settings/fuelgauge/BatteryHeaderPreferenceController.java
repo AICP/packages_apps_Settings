@@ -17,14 +17,18 @@
 
 package com.android.settings.fuelgauge;
 
+import android.animation.Animator;
+import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.BatteryManager;
+import android.os.Bundle;
 import android.support.annotation.VisibleForTesting;
 import android.support.v14.preference.PreferenceFragment;
 import android.support.v7.preference.PreferenceScreen;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import com.android.settings.R;
@@ -44,6 +48,9 @@ public class BatteryHeaderPreferenceController extends AbstractPreferenceControl
         implements PreferenceControllerMixin, LifecycleObserver, OnStart {
     @VisibleForTesting
     static final String KEY_BATTERY_HEADER = "battery_header";
+    @VisibleForTesting
+    static final String ARG_BATTERY_LEVEL = "key_battery_level";
+    private static final int BATTERY_ANIMATION_DURATION_MS_PER_LEVEL = 30;
 
     @VisibleForTesting
     BatteryMeterView mBatteryMeterView;
@@ -53,6 +60,8 @@ public class BatteryHeaderPreferenceController extends AbstractPreferenceControl
     TextView mSummary1;
     @VisibleForTesting
     TextView mSummary2;
+    @VisibleForTesting
+    int mBatteryLevel;
 
     private final Activity mActivity;
     private final PreferenceFragment mHost;
@@ -69,6 +78,8 @@ public class BatteryHeaderPreferenceController extends AbstractPreferenceControl
         if (mLifecycle != null) {
             mLifecycle.addObserver(this);
         }
+        mBatteryLevel = context.getResources().getInteger(
+                com.android.internal.R.integer.config_criticalBatteryWarningLevel) + 1;
     }
 
     @Override
@@ -113,8 +124,9 @@ public class BatteryHeaderPreferenceController extends AbstractPreferenceControl
         // activity.
         mSummary2.setText("");
 
-        mBatteryMeterView.setBatteryLevel(info.batteryLevel);
         mBatteryMeterView.setCharging(!info.discharging);
+        startBatteryHeaderAnimationIfNecessary(mBatteryMeterView, mBatteryPercentText, mBatteryLevel,
+                info.batteryLevel);
     }
 
     public void quickUpdateHeaderPreference() {
@@ -132,5 +144,30 @@ public class BatteryHeaderPreferenceController extends AbstractPreferenceControl
         // clear all the summaries
         mSummary1.setText("");
         mSummary2.setText("");
+    }
+
+    public void startBatteryHeaderAnimationIfNecessary(BatteryMeterView batteryMeterView, TextView batteryPercentText,
+            int prevLevel, int currentLevel) {
+        mBatteryLevel = currentLevel;
+        final int diff = Math.abs(prevLevel - currentLevel);
+        if (diff != 0) {
+            final ValueAnimator animator = ValueAnimator.ofInt(prevLevel, currentLevel);
+            animator.setDuration(BATTERY_ANIMATION_DURATION_MS_PER_LEVEL * diff);
+            animator.setInterpolator(AnimationUtils.loadInterpolator(mContext,
+                    android.R.interpolator.fast_out_slow_in));
+            animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                @Override
+                public void onAnimationUpdate(ValueAnimator animation) {
+                    final Integer level = (Integer) animation.getAnimatedValue();
+                    batteryMeterView.setBatteryLevel(level);
+                    batteryPercentText.setText(Utils.formatPercentage(level));
+                }
+            });
+            animator.start();
+        }
+    }
+
+    public void saveInstanceState(Bundle outState) {
+        mBatteryLevel = outState.getInt(ARG_BATTERY_LEVEL);
     }
 }
