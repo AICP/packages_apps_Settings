@@ -55,7 +55,7 @@
     <!-- Button Settings -->
     <string name="button_settings_title">Buttons</string>
     <string name="button_settings_title_summary">Perform custom button actions</string>
-    <string name="button_settings_description">Set custom button actions to several hardware keys presented on your device.</string>
+    <string name="button_settings_description">Assign custom actions to various keys on your device.\nVolume rocker is separately handled in AicpExtras.</string>
     <!-- Navigation bar -->
     <string name="navigation_bar_title">Navigation bar</string>
     <string name="navigation_bar_title_summary">Enable on-screen navigation keys</string>

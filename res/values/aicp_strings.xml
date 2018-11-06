@@ -37,9 +37,5 @@
     <string name="adb_over_network_warning">WARNING: When ADB over network is enabled, your phone is open for intrusions on all connected networks, including GSM data network!\n\nOnly use this feature when you are connected on trusted networks.\n\nDo you really want to enable this function?</string>
     <string name="adb_over_network_warning_title">Allow ADB over network?</string>
 
-    <!-- Volume Rocker -->
-    <string name="volume_key_title">Volume keys</string>
-    <string name="volume_wake_screen_title">Wake screen</string>
-
     <string name="wake_screen_title">Wake screen</string>
 </resources>

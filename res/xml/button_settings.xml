@@ -181,15 +181,4 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:key="volume_key"
-        android:title="@string/volume_key_title">
-
-        <SwitchPreference
-            android:key="volrocker_wake_screen"
-            android:title="@string/volume_wake_screen_title"
-            android:defaultValue="false" />
-
-    </PreferenceCategory>
-
 </PreferenceScreen>
