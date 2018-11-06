@@ -48,7 +48,9 @@ public class VolRockerWakePreferenceController extends AbstractPreferenceControl
 
     @Override
     public boolean isAvailable() {
-        return (mDeviceHardwareWakeKeys & KEY_MASK_VOLUME) != 0;
+        // This will be handled in AicpExtras.
+        //return (mDeviceHardwareWakeKeys & KEY_MASK_VOLUME) != 0;
+        return false;
     }
 
     @Override
