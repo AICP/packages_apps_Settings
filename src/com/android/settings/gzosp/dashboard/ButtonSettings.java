@@ -51,7 +51,6 @@ import com.android.settings.gzosp.buttons.LongPressHomePreferenceController;
 import com.android.settings.gzosp.buttons.LongPressMenuPreferenceController;
 import com.android.settings.gzosp.buttons.MenuButtonWakePreferenceController;
 import com.android.settings.gzosp.buttons.NavigationBarPreferenceController;
-import com.android.settings.gzosp.buttons.VolRockerWakePreferenceController;
 import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.core.AbstractPreferenceController;
@@ -69,7 +68,6 @@ public class ButtonSettings extends DashboardFragment {
     private static final String KEY_BUTTON_BRIGHTNESS      = "button_brightness";
     private static final String KEY_NAVIGATION_BAR         = "navigation_bar";
     // Wake keys
-    private static final String KEY_VOLUME_ROCKER_WAKE     = "volrocker_wake_screen";
     private static final String KEY_HOME_WAKE              = "home_wake_screen";
     private static final String KEY_MENU_WAKE              = "menu_wake_screen";
     private static final String KEY_ASSIST_WAKE            = "assist_wake_screen";
@@ -98,7 +96,6 @@ public class ButtonSettings extends DashboardFragment {
     private static final String KEY_CATEGORY_ASSIST        = "assist_key";
     private static final String KEY_CATEGORY_APP_SWITCH    = "app_switch_key";
     private static final String KEY_CATEGORY_CAMERA        = "camera_key";
-    private static final String KEY_CATEGORY_VOLUME        = "volume_key";
 
     // Masked keys
     private static final int KEY_MASK_HOME = 0x01;
@@ -107,7 +104,6 @@ public class ButtonSettings extends DashboardFragment {
     private static final int KEY_MASK_ASSIST = 0x08;
     private static final int KEY_MASK_APP_SWITCH = 0x10;
     private static final int KEY_MASK_CAMERA = 0x20;
-    private static final int KEY_MASK_VOLUME = 0x40;
 
     private int mDeviceHardwareKeys;
     private int mDeviceHardwareWakeKeys;
@@ -150,7 +146,6 @@ public class ButtonSettings extends DashboardFragment {
         final boolean hasAppSwitch = (mDeviceHardwareKeys & KEY_MASK_APP_SWITCH) != 0 || navigationBarEnabled;
         final boolean hasCamera = (mDeviceHardwareKeys & KEY_MASK_CAMERA) != 0;
 
-        final boolean hasVolRockerWake = (mDeviceHardwareWakeKeys & KEY_MASK_VOLUME) != 0;
         final boolean hasHomeWake = (mDeviceHardwareWakeKeys & KEY_MASK_HOME) != 0;
         final boolean hasMenuWake = (mDeviceHardwareWakeKeys & KEY_MASK_MENU) != 0;
         final boolean hasAssistWake = (mDeviceHardwareWakeKeys & KEY_MASK_ASSIST) != 0;
@@ -176,9 +171,6 @@ public class ButtonSettings extends DashboardFragment {
         final PreferenceCategory cameraCategory =
                 (PreferenceCategory) screen.findPreference(KEY_CATEGORY_CAMERA);
 
-        final PreferenceCategory volumeCategory =
-                (PreferenceCategory) screen.findPreference(KEY_CATEGORY_VOLUME);
-
         if (!hasMenu && !hasMenuWake && menuCategory != null) {
             screen.removePreference(menuCategory);
         }
@@ -191,10 +183,6 @@ public class ButtonSettings extends DashboardFragment {
             screen.removePreference(cameraCategory);
         }
 
-        if (!hasVolRockerWake && volumeCategory != null) {
-            screen.removePreference(volumeCategory);
-        }
-
         mFooterPreferenceMixin.createFooterPreference().setTitle(R.string.button_settings_description);
     }
 
@@ -205,7 +193,6 @@ public class ButtonSettings extends DashboardFragment {
         controllers.add(new ButtonBrightnessPreferenceController(context, KEY_BUTTON_BRIGHTNESS));
         controllers.add(new NavigationBarPreferenceController(context, KEY_NAVIGATION_BAR));
         /*Wake Key Actions */
-        controllers.add(new VolRockerWakePreferenceController(context, KEY_VOLUME_ROCKER_WAKE));
         controllers.add(new HomeButtonWakePreferenceController(context, KEY_HOME_WAKE));
         controllers.add(new MenuButtonWakePreferenceController(context, KEY_MENU_WAKE));
         controllers.add(new AssistButtonWakePreferenceController(context, KEY_ASSIST_WAKE));
