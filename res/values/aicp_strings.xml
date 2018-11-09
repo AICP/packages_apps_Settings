@@ -68,4 +68,8 @@
 
     <!-- Charging vibration -->
     <string name="charging_vibro_title">Charging vibration</string>
+
+    <string name="fp_swipe_to_dismiss_notifications_title">Swipe fingerprint left or right to dismiss notifications</string>
+    <string name="fp_swipe_to_dismiss_notifications_summary">To dismiss your notifications, swipe left or right on the fingerprint sensor on the back of your phone.</string>
+
 </resources>
