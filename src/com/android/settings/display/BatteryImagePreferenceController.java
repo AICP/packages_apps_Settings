@@ -23,7 +23,7 @@ import android.support.v14.preference.SwitchPreference;
 import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settingslib.core.AbstractPreferenceController;
 
-import static android.provider.Settings.System.OMNI_SHOW_BATTERY_IMAGE;
+import static android.provider.Settings.System.AICP_SHOW_BATTERY_IMAGE;
 
 /**
  * A controller to manage the switch for showing battery image in the status bar.
@@ -51,7 +51,7 @@ public class BatteryImagePreferenceController extends AbstractPreferenceControll
     @Override
     public void updateState(Preference preference) {
         int setting = Settings.System.getInt(mContext.getContentResolver(),
-                OMNI_SHOW_BATTERY_IMAGE, 1);
+                AICP_SHOW_BATTERY_IMAGE, 1);
 
         ((SwitchPreference) preference).setChecked(setting == 1);
     }
@@ -59,7 +59,7 @@ public class BatteryImagePreferenceController extends AbstractPreferenceControll
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         boolean showImage = (Boolean) newValue;
-        Settings.System.putInt(mContext.getContentResolver(), OMNI_SHOW_BATTERY_IMAGE,
+        Settings.System.putInt(mContext.getContentResolver(), AICP_SHOW_BATTERY_IMAGE,
                 showImage ? 1 : 0);
         return true;
     }
