@@ -252,9 +252,8 @@
     <string name="app_ops_reset_confirm_title">تأكيد إعادة تعيين العدادات</string>
     <string name="app_ops_reset_confirm_mesg">هل أنت متأكد من رغبتك في إعادة تعيين العدادات؟</string>
     <string name="ok">موافق</string>
-    <string name="lineagelicense_title">قانون LineageOS</string>
     <!-- Volume settings - Volume adjustment sound -->
-    <string name="volume_adjust_sounds_title">أصوات تعديل حجم الصوت</string>
+    <string name="volume_adjust_sounds_title">أصوات تعديل حجم الصوت </string>
     <!-- High touch sensitivity -->
     <string name="high_touch_sensitivity_title">حساسية ذات لمس عالي</string>
     <string name="high_touch_sensitivity_summary">زيادة حساسية شاشة اللمس حتى يمكن استخدامها أثناء ارتداء القفازات</string>
