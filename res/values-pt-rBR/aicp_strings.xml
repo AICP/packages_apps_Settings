@@ -16,94 +16,94 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="aicp_name_title">Experiência AICP</string>
-  <string name="aicp_name_summary">AICP Edição Oreo - 13.1</string>
-  <string name="aicpextras_settings">AICP Extras</string>
-  <string name="aicpextras_dashboard_summary">Personalização da ROM</string>
-  <!-- Root Management -->
-  <string name="rootmanagement_title">Gerenciar acesso root</string>
-  <string name="rootmanagement_dashboard_summary">Gerenciar acesso root</string>
-  <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
-  <string name="supersu_title">SuperSU</string>
-  <string name="device_info_title">Informações do telefone</string>
-  <!-- Encryption and credential -->
-  <string name="custom_encryption_and_credential_settings_summary_on">Dispositivo criptografado</string>
-  <string name="custom_encryption_and_credential_settings_summary_off">Dispositivo descriptografado</string>
-  <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
-  <plurals name="show_dev_countdown_custom">
-    <item quantity="one">Você está a <xliff:g id="step_count">%1$d</xliff:g> passo de ativar as configurações de desenvolvimento.</item>
-    <item quantity="other">Você está a <xliff:g id="step_count">%1$d</xliff:g> passos de ativar as configurações de desenvolvimento.</item>
-  </plurals>
-  <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
-  <string name="show_dev_on_custom">Opções do desenvolvedor habilitadas! Tenha cuidado!</string>
-  <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
-  <string name="show_dev_already_custom">Opções de desenvolvedor já está ativado!</string>
-  <!-- Density category -->
-  <string name="density_category">Opções de densidade</string>
-  <!-- Volume Steps -->
-  <string name="volume_steps_title">Níveis de volume</string>
-  <string name="volume_steps_alarm_title">Níveis de volume: Alarme</string>
-  <string name="volume_steps_dtmf_title">Níveis de volume: DTMF</string>
-  <string name="volume_steps_music_title">Níveis de volume: Música</string>
-  <string name="volume_steps_notification_title">Níveis de volume: Notificação</string>
-  <string name="volume_steps_ring_title">Níveis de volume: Toque</string>
-  <string name="volume_steps_system_title">Níveis de volume: Sistema</string>
-  <string name="volume_steps_voice_call_title">Níveis de volume: Chamada de Voz</string>
-  <string name="volume_steps_reset">Redefinir</string>
-  <string name="volume_steps_60">60</string>
-  <string name="volume_steps_45">45</string>
-  <string name="volume_steps_30">30</string>
-  <string name="volume_steps_15">15</string>
-  <string name="volume_steps_7">7</string>
-  <string name="volume_steps_5">5</string>
-  <!-- Sound & Notification Settings -->
-  <string name="link_volume_option_title">Juntar volume de toque e notificação</string>
-  <!-- Reset battery stats -->
-  <string name="ok">Ok</string>
-  <string name="menu_stats_reset">Resetar estatísticas</string>
-  <string name="reset_stats_msg">Os históricos de estatísticas da bateria serão reiniciados</string>
-  <!-- [CHAR LIMIT=80]-->
-  <string name="fp_swipe_to_dismiss_notifications_title">Deslize a impressão digital para a esquerda ou para a direita para desativar as notificações</string>
-  <string name="fp_swipe_to_dismiss_notifications_pref_title">Deslize a impressão digital para a esquerda ou para a direita</string>
-  <!--  [CHAR LIMIT=160]-->
-  <string name="fp_swipe_to_dismiss_notifications_summary">Para descartar suas notificações, deslize para esquerda ou direita no sensor de impressões digitais na parte de trás do seu telefone.</string>
-  <!-- [CHAR LIMIT=60] -->
-  <string name="fingerprint_swipe_to_dismiss_suggestion_title">Descartar notificações rapidamente</string>
-  <!-- [CHAR LIMIT=60] -->
-  <string name="fingerprint_swipe_to_dismiss_suggestion_summary">Deslize para a esquerda ou para a direita no sensor de impressão digital</string>
-  <!-- Less Notification sounds -->
-  <string name="less_notification_sounds_title">Sons de notificação menos frequentes</string>
-  <string name="less_notification_sounds_summary">Tocar som de notificação de cada app apenas uma vez por período de tempo definido</string>
-  <string name="less_notification_sounds_default">Comportamento padrão</string>
-  <string name="less_notification_sounds_3s">A cada 3 segundos</string>
-  <string name="less_notification_sounds_5s">A cada 5 segundos</string>
-  <string name="less_notification_sounds_10s">A cada 10 segundos</string>
-  <string name="less_notification_sounds_15s">A cada 15 segundos</string>
-  <string name="less_notification_sounds_30s">A cada 30 segundos</string>
-  <string name="less_notification_sounds_45s">A cada 45 segundos</string>
-  <string name="less_notification_sounds_1m">A cada 1 minuto</string>
-  <string name="less_notification_sounds_2m">A cada 2 minutos</string>
-  <string name="less_notification_sounds_5m">A cada 5 minutos</string>
-  <!-- Notification log -->
-  <string name="notification_log_summary">Mostrar histórico de notificações</string>
-  <!-- USB paranoia mode -->
-  <string name="usb_paranoia_connect_title">Conexão segura no USB</string>
-  <string name="usb_paranoia_connect_summary">Apenas ative o carregamento quando o USB é conectado à tela de bloqueio com segurança</string>
-  <string name="usb_category_title">USB</string>
-  <!-- Running services -->
-  <string name="background_processes_settings_title">Processos em segundo plano</string>
-  <!-- Development QS -->
-  <!-- Force authorize substratum packages -->
-  <string name="force_authorize_substratum_packages_title">Forçar autorização a cada app de tema</string>
-  <string name="force_authorize_substratum_packages_summary">Permitir aplicativos de temas de fontes desconhecidas</string>
-  <!-- Manage applications: show substratum overlays -->
-  <string name="filter_substratum_apps">Sobreposições do substratum</string>
-  <string name="menu_show_substratum">Mostrar overlays</string>
-  <string name="menu_hide_substratum">Ocultar overlays</string>
-  <!-- Quick unlock -->
-  <string name="unlock_quick_unlock_control_title">Desbloqueio rápido</string>
-  <string name="unlock_quick_unlock_control_summary">Desbloquear automaticamente quando o PIN/palavra-passe correto(a) for inserido(a). É recomendável que o PIN tenha menos de 6 dígitos. Se o PIN tiver mais de 6 dígitos, pode não conseguir desbloquear. Nós avisámos!</string>
-  <!-- Pocket judge -->
-  <string name="pocket_judge_title">Detetor de bolso</string>
-  <string name="pocket_judge_summary">Bloquear o ecrã e os botões enquanto o dispositivo estiver no bolso</string>
+    <string name="aicp_name_title">Experiência AICP</string>
+    <string name="aicp_name_summary">AICP Edição Oreo - 13.1</string>
+    <string name="aicpextras_settings">AICP Extras</string>
+    <string name="aicpextras_dashboard_summary">Personalização da ROM</string>
+    <!-- Root Management -->
+    <string name="rootmanagement_title">Gerenciar acesso root</string>
+    <string name="rootmanagement_dashboard_summary">Gerenciar acesso root</string>
+    <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
+    <string name="supersu_title">SuperSU</string>
+    <string name="device_info_title">Informações do telefone</string>
+    <!-- Encryption and credential -->
+    <string name="custom_encryption_and_credential_settings_summary_on">Dispositivo criptografado</string>
+    <string name="custom_encryption_and_credential_settings_summary_off">Dispositivo descriptografado</string>
+    <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
+    <plurals name="show_dev_countdown_custom">
+        <item quantity="one">Você está a <xliff:g id="step_count">%1$d</xliff:g> passo de ativar as configurações de desenvolvimento.</item>
+        <item quantity="other">Você está a <xliff:g id="step_count">%1$d</xliff:g> passos de ativar as configurações de desenvolvimento.</item>
+    </plurals>
+    <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
+    <string name="show_dev_on_custom">Opções do desenvolvedor habilitadas! Tenha cuidado!</string>
+    <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
+    <string name="show_dev_already_custom">Opções de desenvolvedor já está ativado!</string>
+    <!-- Density category -->
+    <string name="density_category">Opções de densidade</string>
+    <!-- Volume Steps -->
+    <string name="volume_steps_title">Níveis de volume</string>
+    <string name="volume_steps_alarm_title">Níveis de volume: Alarme</string>
+    <string name="volume_steps_dtmf_title">Níveis de volume: DTMF</string>
+    <string name="volume_steps_music_title">Níveis de volume: Música</string>
+    <string name="volume_steps_notification_title">Níveis de volume: Notificação</string>
+    <string name="volume_steps_ring_title">Níveis de volume: Toque</string>
+    <string name="volume_steps_system_title">Níveis de volume: Sistema</string>
+    <string name="volume_steps_voice_call_title">Níveis de volume: Chamada de Voz</string>
+    <string name="volume_steps_reset">Redefinir</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
+    <!-- Sound & Notification Settings -->
+    <string name="link_volume_option_title">Juntar volume de toque e notificação</string>
+    <!-- Reset battery stats -->
+    <string name="ok">Ok</string>
+    <string name="menu_stats_reset">Resetar estatísticas</string>
+    <string name="reset_stats_msg">Os históricos de estatísticas da bateria serão reiniciados</string>
+    <!-- [CHAR LIMIT=80]-->
+    <string name="fp_swipe_to_dismiss_notifications_title">Deslize a impressão digital para a esquerda ou para a direita para desativar as notificações</string>
+    <string name="fp_swipe_to_dismiss_notifications_pref_title">Deslize a impressão digital para a esquerda ou para a direita</string>
+    <!--  [CHAR LIMIT=160]-->
+    <string name="fp_swipe_to_dismiss_notifications_summary">Para descartar suas notificações, deslize para esquerda ou direita no sensor de impressões digitais na parte de trás do seu telefone.</string>
+    <!-- [CHAR LIMIT=60] -->
+    <string name="fingerprint_swipe_to_dismiss_suggestion_title">Descartar notificações rapidamente</string>
+    <!-- [CHAR LIMIT=60] -->
+    <string name="fingerprint_swipe_to_dismiss_suggestion_summary">Deslize para a esquerda ou para a direita no sensor de impressão digital</string>
+    <!-- Less Notification sounds -->
+    <string name="less_notification_sounds_title">Sons de notificação menos frequentes</string>
+    <string name="less_notification_sounds_summary">Tocar som de notificação de cada app apenas uma vez por período de tempo definido</string>
+    <string name="less_notification_sounds_default">Comportamento padrão</string>
+    <string name="less_notification_sounds_3s">A cada 3 segundos</string>
+    <string name="less_notification_sounds_5s">A cada 5 segundos</string>
+    <string name="less_notification_sounds_10s">A cada 10 segundos</string>
+    <string name="less_notification_sounds_15s">A cada 15 segundos</string>
+    <string name="less_notification_sounds_30s">A cada 30 segundos</string>
+    <string name="less_notification_sounds_45s">A cada 45 segundos</string>
+    <string name="less_notification_sounds_1m">A cada 1 minuto</string>
+    <string name="less_notification_sounds_2m">A cada 2 minutos</string>
+    <string name="less_notification_sounds_5m">A cada 5 minutos</string>
+    <!-- Notification log -->
+    <string name="notification_log_summary">Mostrar histórico de notificações</string>
+    <!-- USB paranoia mode -->
+    <string name="usb_paranoia_connect_title">Conexão segura no USB</string>
+    <string name="usb_paranoia_connect_summary">Apenas ative o carregamento quando o USB é conectado à tela de bloqueio com segurança</string>
+    <string name="usb_category_title">USB</string>
+    <!-- Running services -->
+    <string name="background_processes_settings_title">Processos em segundo plano</string>
+    <!-- Development QS -->
+    <!-- Force authorize substratum packages -->
+    <string name="force_authorize_substratum_packages_title">Forçar autorização a cada app de tema</string>
+    <string name="force_authorize_substratum_packages_summary">Permitir aplicativos de temas de fontes desconhecidas</string>
+    <!-- Manage applications: show substratum overlays -->
+    <string name="filter_substratum_apps">Sobreposições do substratum</string>
+    <string name="menu_show_substratum">Mostrar overlays</string>
+    <string name="menu_hide_substratum">Ocultar overlays</string>
+    <!-- Quick unlock -->
+    <string name="unlock_quick_unlock_control_title">Desbloqueio rápido</string>
+    <string name="unlock_quick_unlock_control_summary">Desbloquear automaticamente quando o PIN/palavra-passe correto(a) for inserido(a). É recomendável que o PIN tenha menos de 6 dígitos. Se o PIN tiver mais de 6 dígitos, pode não conseguir desbloquear. Nós avisámos!</string>
+    <!-- Pocket judge -->
+    <string name="pocket_judge_title">Detetor de bolso</string>
+    <string name="pocket_judge_summary">Bloquear o ecrã e os botões enquanto o dispositivo estiver no bolso</string>
 </resources>

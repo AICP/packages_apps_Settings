@@ -16,90 +16,90 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="aicp_name_title">Опыт использования AICP</string>
-  <string name="aicp_name_summary">AICP Oreo Edition - 13.1</string>
-  <string name="aicpextras_settings">AICP Extras</string>
-  <string name="aicpextras_dashboard_summary">Настройка прошивки</string>
-  <!-- Root Management -->
-  <string name="rootmanagement_title">Управление правами суперпользователя</string>
-  <string name="rootmanagement_dashboard_summary">Управление правами суперпользователя</string>
-  <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
-  <string name="supersu_title">SuperSU</string>
-  <string name="device_info_title">Информация о телефоне</string>
-  <!-- Encryption and credential -->
-  <string name="custom_encryption_and_credential_settings_summary_on">Устройство зашифровано</string>
-  <string name="custom_encryption_and_credential_settings_summary_off">Устройство не зашифровано</string>
-  <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
-  <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
-  <string name="show_dev_on_custom">Настройки для разработчиков включены! Будьте осторожны!</string>
-  <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
-  <string name="show_dev_already_custom">Настройки для разработчиков уже включены!</string>
-  <!-- Density category -->
-  <string name="density_category">Настройки плотности</string>
-  <!-- Volume Steps -->
-  <string name="volume_steps_title">Количество уровней громкости</string>
-  <string name="volume_steps_alarm_title">Будильник</string>
-  <string name="volume_steps_dtmf_title">Набор номера</string>
-  <string name="volume_steps_music_title">Мультимедиа</string>
-  <string name="volume_steps_notification_title">Уведомления</string>
-  <string name="volume_steps_ring_title">Звонок</string>
-  <string name="volume_steps_system_title">Система</string>
-  <string name="volume_steps_voice_call_title">Голосовой вызов</string>
-  <string name="volume_steps_reset">Сбросить</string>
-  <string name="volume_steps_60">60</string>
-  <string name="volume_steps_45">45</string>
-  <string name="volume_steps_30">30</string>
-  <string name="volume_steps_15">15</string>
-  <string name="volume_steps_7">7</string>
-  <string name="volume_steps_5">5</string>
-  <!-- Sound & Notification Settings -->
-  <string name="link_volume_option_title">Связать громкость звонка и уведомлений</string>
-  <!-- Reset battery stats -->
-  <string name="ok">Хорошо</string>
-  <string name="menu_stats_reset">Сброс статистики</string>
-  <string name="reset_stats_msg">Статистика батареи будет сброшена</string>
-  <!-- [CHAR LIMIT=80]-->
-  <string name="fp_swipe_to_dismiss_notifications_title">Проведите пальцем по сканеру отпечатка пальца влево или вправо, чтобы убрать уведомления</string>
-  <string name="fp_swipe_to_dismiss_notifications_pref_title">Проведите пальцем по сканеру отпечатка пальца влево или вправо</string>
-  <!--  [CHAR LIMIT=160]-->
-  <string name="fp_swipe_to_dismiss_notifications_summary">Чтобы убрать ваши уведомления, проведите пальцем влево или право по сканеру отпечатка пальца.</string>
-  <!-- [CHAR LIMIT=60] -->
-  <string name="fingerprint_swipe_to_dismiss_suggestion_title">Быстро убрать уведомления</string>
-  <!-- [CHAR LIMIT=60] -->
-  <string name="fingerprint_swipe_to_dismiss_suggestion_summary">Проведите пальцем влево или вправо по датчику отпечатков пальцев</string>
-  <!-- Less Notification sounds -->
-  <string name="less_notification_sounds_title">Менее частые звуки уведомлений</string>
-  <string name="less_notification_sounds_summary">Ограничить частоту звука уведомления каждого приложения только одним разом за выбраный период времени</string>
-  <string name="less_notification_sounds_default">По умолчанию</string>
-  <string name="less_notification_sounds_3s">Каждые 3 секунды</string>
-  <string name="less_notification_sounds_5s">Каждые 5 секунд</string>
-  <string name="less_notification_sounds_10s">Каждые 10 секунд</string>
-  <string name="less_notification_sounds_15s">Каждые 15 секунд</string>
-  <string name="less_notification_sounds_30s">Каждые 30 секунд</string>
-  <string name="less_notification_sounds_45s">Каждые 45 секунд</string>
-  <string name="less_notification_sounds_1m">Каждую 1 минуту</string>
-  <string name="less_notification_sounds_2m">Каждые 2 минуты</string>
-  <string name="less_notification_sounds_5m">Каждые 5 минут</string>
-  <!-- Notification log -->
-  <string name="notification_log_summary">Показать журнал истории уведомлений</string>
-  <!-- USB paranoia mode -->
-  <string name="usb_paranoia_connect_title">Безопасное подключение USB</string>
-  <string name="usb_paranoia_connect_summary">Разрешить зарядку, только когда USB подключен на безопасных экранах блокировки</string>
-  <string name="usb_category_title">USB</string>
-  <!-- Running services -->
-  <string name="background_processes_settings_title">Фоновые процессы</string>
-  <!-- Development QS -->
-  <!-- Force authorize substratum packages -->
-  <string name="force_authorize_substratum_packages_title">Принудительно запрашивать разрешения для каждой темы</string>
-  <string name="force_authorize_substratum_packages_summary">Разрешить установку тем из неизвестных источников</string>
-  <!-- Manage applications: show substratum overlays -->
-  <string name="filter_substratum_apps">Слои Substratum</string>
-  <string name="menu_show_substratum">Показать слои</string>
-  <string name="menu_hide_substratum">Скрыть слои</string>
-  <!-- Quick unlock -->
-  <string name="unlock_quick_unlock_control_title">Быстрая разблокировка</string>
-  <string name="unlock_quick_unlock_control_summary">Автоматическая разблокировка при верно введённом PIN-коде/пароле. В качестве PIN-кода мы рекомендуем использовать не более 6 цифр. Если PIN-код состоит из более чем 6 цифр, вы можете не разблокировать устройство.</string>
-  <!-- Pocket judge -->
-  <string name="pocket_judge_title">Режим \"В кармане\"</string>
-  <string name="pocket_judge_summary">Блокировать экран и физические кнопки, когда устройство находится в кармане</string>
+    <string name="aicp_name_title">Опыт использования AICP</string>
+    <string name="aicp_name_summary">AICP Oreo Edition - 13.1</string>
+    <string name="aicpextras_settings">AICP Extras</string>
+    <string name="aicpextras_dashboard_summary">Настройка прошивки</string>
+    <!-- Root Management -->
+    <string name="rootmanagement_title">Управление правами суперпользователя</string>
+    <string name="rootmanagement_dashboard_summary">Управление правами суперпользователя</string>
+    <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
+    <string name="supersu_title">SuperSU</string>
+    <string name="device_info_title">Информация о телефоне</string>
+    <!-- Encryption and credential -->
+    <string name="custom_encryption_and_credential_settings_summary_on">Устройство зашифровано</string>
+    <string name="custom_encryption_and_credential_settings_summary_off">Устройство не зашифровано</string>
+    <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
+    <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
+    <string name="show_dev_on_custom">Настройки для разработчиков включены! Будьте осторожны!</string>
+    <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
+    <string name="show_dev_already_custom">Настройки для разработчиков уже включены!</string>
+    <!-- Density category -->
+    <string name="density_category">Настройки плотности</string>
+    <!-- Volume Steps -->
+    <string name="volume_steps_title">Количество уровней громкости</string>
+    <string name="volume_steps_alarm_title">Будильник</string>
+    <string name="volume_steps_dtmf_title">Набор номера</string>
+    <string name="volume_steps_music_title">Мультимедиа</string>
+    <string name="volume_steps_notification_title">Уведомления</string>
+    <string name="volume_steps_ring_title">Звонок</string>
+    <string name="volume_steps_system_title">Система</string>
+    <string name="volume_steps_voice_call_title">Голосовой вызов</string>
+    <string name="volume_steps_reset">Сбросить</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
+    <!-- Sound & Notification Settings -->
+    <string name="link_volume_option_title">Связать громкость звонка и уведомлений</string>
+    <!-- Reset battery stats -->
+    <string name="ok">Хорошо</string>
+    <string name="menu_stats_reset">Сброс статистики</string>
+    <string name="reset_stats_msg">Статистика батареи будет сброшена</string>
+    <!-- [CHAR LIMIT=80]-->
+    <string name="fp_swipe_to_dismiss_notifications_title">Проведите пальцем по сканеру отпечатка пальца влево или вправо, чтобы убрать уведомления</string>
+    <string name="fp_swipe_to_dismiss_notifications_pref_title">Проведите пальцем по сканеру отпечатка пальца влево или вправо</string>
+    <!--  [CHAR LIMIT=160]-->
+    <string name="fp_swipe_to_dismiss_notifications_summary">Чтобы убрать ваши уведомления, проведите пальцем влево или право по сканеру отпечатка пальца.</string>
+    <!-- [CHAR LIMIT=60] -->
+    <string name="fingerprint_swipe_to_dismiss_suggestion_title">Быстро убрать уведомления</string>
+    <!-- [CHAR LIMIT=60] -->
+    <string name="fingerprint_swipe_to_dismiss_suggestion_summary">Проведите пальцем влево или вправо по датчику отпечатков пальцев</string>
+    <!-- Less Notification sounds -->
+    <string name="less_notification_sounds_title">Менее частые звуки уведомлений</string>
+    <string name="less_notification_sounds_summary">Ограничить частоту звука уведомления каждого приложения только одним разом за выбраный период времени</string>
+    <string name="less_notification_sounds_default">По умолчанию</string>
+    <string name="less_notification_sounds_3s">Каждые 3 секунды</string>
+    <string name="less_notification_sounds_5s">Каждые 5 секунд</string>
+    <string name="less_notification_sounds_10s">Каждые 10 секунд</string>
+    <string name="less_notification_sounds_15s">Каждые 15 секунд</string>
+    <string name="less_notification_sounds_30s">Каждые 30 секунд</string>
+    <string name="less_notification_sounds_45s">Каждые 45 секунд</string>
+    <string name="less_notification_sounds_1m">Каждую 1 минуту</string>
+    <string name="less_notification_sounds_2m">Каждые 2 минуты</string>
+    <string name="less_notification_sounds_5m">Каждые 5 минут</string>
+    <!-- Notification log -->
+    <string name="notification_log_summary">Показать журнал истории уведомлений</string>
+    <!-- USB paranoia mode -->
+    <string name="usb_paranoia_connect_title">Безопасное подключение USB</string>
+    <string name="usb_paranoia_connect_summary">Разрешить зарядку, только когда USB подключен на безопасных экранах блокировки</string>
+    <string name="usb_category_title">USB</string>
+    <!-- Running services -->
+    <string name="background_processes_settings_title">Фоновые процессы</string>
+    <!-- Development QS -->
+    <!-- Force authorize substratum packages -->
+    <string name="force_authorize_substratum_packages_title">Принудительно запрашивать разрешения для каждой темы</string>
+    <string name="force_authorize_substratum_packages_summary">Разрешить установку тем из неизвестных источников</string>
+    <!-- Manage applications: show substratum overlays -->
+    <string name="filter_substratum_apps">Слои Substratum</string>
+    <string name="menu_show_substratum">Показать слои</string>
+    <string name="menu_hide_substratum">Скрыть слои</string>
+    <!-- Quick unlock -->
+    <string name="unlock_quick_unlock_control_title">Быстрая разблокировка</string>
+    <string name="unlock_quick_unlock_control_summary">Автоматическая разблокировка при верно введённом PIN-коде/пароле. В качестве PIN-кода мы рекомендуем использовать не более 6 цифр. Если PIN-код состоит из более чем 6 цифр, вы можете не разблокировать устройство.</string>
+    <!-- Pocket judge -->
+    <string name="pocket_judge_title">Режим \"В кармане\"</string>
+    <string name="pocket_judge_summary">Блокировать экран и физические кнопки, когда устройство находится в кармане</string>
 </resources>

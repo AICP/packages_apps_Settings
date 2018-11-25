@@ -16,94 +16,94 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="aicp_name_title">AICP Experience</string>
-  <string name="aicp_name_summary">Aicp Oreo Editie - 13.1</string>
-  <string name="aicpextras_settings">AICP Extras</string>
-  <string name="aicpextras_dashboard_summary">ROM aanpassingen</string>
-  <!-- Root Management -->
-  <string name="rootmanagement_title">Root beheer</string>
-  <string name="rootmanagement_dashboard_summary">Root-toegang beheren</string>
-  <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
-  <string name="supersu_title">SuperSU</string>
-  <string name="device_info_title">Telefoon info</string>
-  <!-- Encryption and credential -->
-  <string name="custom_encryption_and_credential_settings_summary_on">Apparaat is gecodeerd</string>
-  <string name="custom_encryption_and_credential_settings_summary_off">Apparaat is gedecodeerd</string>
-  <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
-  <plurals name="show_dev_countdown_custom">
-    <item quantity="one">U bent nog <xliff:g id="step_count">%1$d</xliff:g> stap verwijderd van het inschakelen van de ontwikkelaarsopties.</item>
-    <item quantity="other">U bent nog <xliff:g id="step_count">%1$d</xliff:g> stappen verwijderd van het inschakelen van de ontwikkelaarsopties.</item>
-  </plurals>
-  <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
-  <string name="show_dev_on_custom">Ontwikkelaarsopties zijn ingeschakeld! Wees voorzichtig!</string>
-  <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
-  <string name="show_dev_already_custom">Ontwikkelaarsopties zijn al ingeschakeld!</string>
-  <!-- Density category -->
-  <string name="density_category">Schermresolutie opties</string>
-  <!-- Volume Steps -->
-  <string name="volume_steps_title">Volume stappen</string>
-  <string name="volume_steps_alarm_title">Volume stappen: Alarm</string>
-  <string name="volume_steps_dtmf_title">Volume stappen: DTMF</string>
-  <string name="volume_steps_music_title">Volume stappen: Muziek</string>
-  <string name="volume_steps_notification_title">Volume stappen: Notificaties</string>
-  <string name="volume_steps_ring_title">Volume stappen: Beltoon</string>
-  <string name="volume_steps_system_title">Volume stappen: Systeem</string>
-  <string name="volume_steps_voice_call_title">Volume stappen: Bellen</string>
-  <string name="volume_steps_reset">Herstellen</string>
-  <string name="volume_steps_60">60</string>
-  <string name="volume_steps_45">45</string>
-  <string name="volume_steps_30">30</string>
-  <string name="volume_steps_15">15</string>
-  <string name="volume_steps_7">7</string>
-  <string name="volume_steps_5">5</string>
-  <!-- Sound & Notification Settings -->
-  <string name="link_volume_option_title">Koppel bel- en notificatievolume</string>
-  <!-- Reset battery stats -->
-  <string name="ok">Ok</string>
-  <string name="menu_stats_reset">Statistieken resetten</string>
-  <string name="reset_stats_msg">Accugeschiedenis zal worden gereset</string>
-  <!-- [CHAR LIMIT=80]-->
-  <string name="fp_swipe_to_dismiss_notifications_title">Veeg vingerafdruk naar links of rechts om meldingen te negeren</string>
-  <string name="fp_swipe_to_dismiss_notifications_pref_title">Veeg vingerafdruk naar links of rechts</string>
-  <!--  [CHAR LIMIT=160]-->
-  <string name="fp_swipe_to_dismiss_notifications_summary">Veeg naar links of rechts over de vingerafdruk sensor om meldingen te negeren.</string>
-  <!-- [CHAR LIMIT=60] -->
-  <string name="fingerprint_swipe_to_dismiss_suggestion_title">Negeer meldingen snel</string>
-  <!-- [CHAR LIMIT=60] -->
-  <string name="fingerprint_swipe_to_dismiss_suggestion_summary">Veeg naar links of rechts over de vingerafdruk sensor</string>
-  <!-- Less Notification sounds -->
-  <string name="less_notification_sounds_title">Minder frequente notificatie geluiden</string>
-  <string name="less_notification_sounds_summary">Beperk de notificatiegeluiden van elke app tot de ingestelde tijdsperiode</string>
-  <string name="less_notification_sounds_default">Standaard gedrag</string>
-  <string name="less_notification_sounds_3s">Elke 3 seconden</string>
-  <string name="less_notification_sounds_5s">Elke 5 seconden</string>
-  <string name="less_notification_sounds_10s">Elke 10 seconden</string>
-  <string name="less_notification_sounds_15s">Elke 15 seconden</string>
-  <string name="less_notification_sounds_30s">Elke 30 seconden</string>
-  <string name="less_notification_sounds_45s">Elke 45 seconden</string>
-  <string name="less_notification_sounds_1m">Elke minuut</string>
-  <string name="less_notification_sounds_2m">Elke 2 minuten</string>
-  <string name="less_notification_sounds_5m">Elke 5 minuten</string>
-  <!-- Notification log -->
-  <string name="notification_log_summary">Toon geschiedenislogboek van notificaties</string>
-  <!-- USB paranoia mode -->
-  <string name="usb_paranoia_connect_title">Beveiligde USB verbinding</string>
-  <string name="usb_paranoia_connect_summary">Opladen via USB alleen activeren bij beveiligd vergrendelscherm</string>
-  <string name="usb_category_title">USB</string>
-  <!-- Running services -->
-  <string name="background_processes_settings_title">Achtergrondprocessen</string>
-  <!-- Development QS -->
-  <!-- Force authorize substratum packages -->
-  <string name="force_authorize_substratum_packages_title">Machtiging afdwingen voor alle thematoepassingen</string>
-  <string name="force_authorize_substratum_packages_summary">Thematoepassingen uit onbekende bronnen toestaan</string>
-  <!-- Manage applications: show substratum overlays -->
-  <string name="filter_substratum_apps">Substratum lagen</string>
-  <string name="menu_show_substratum">Toon lagen</string>
-  <string name="menu_hide_substratum">Verberg lagen</string>
-  <!-- Quick unlock -->
-  <string name="unlock_quick_unlock_control_title">Snel ontgrendelen</string>
-  <string name="unlock_quick_unlock_control_summary">Ontgrendelt automatisch wanneer juiste pincode/wachtwoord wordt ingevoerd. Het wordt aanbevolen een pin met minder dan 6 cijfers te gebruiken. Als de pincode meer dan 6 cijfers bevat kunt u worden buitengesloten!</string>
-  <!-- Pocket judge -->
-  <string name="pocket_judge_title">Broekzak detectie</string>
-  <string name="pocket_judge_summary">Scherm- en toetsaanrakingen blokkeren wanneer het apparaat in de broekzak zit</string>
+    <string name="aicp_name_title">AICP Experience</string>
+    <string name="aicp_name_summary">Aicp Oreo Editie - 13.1</string>
+    <string name="aicpextras_settings">AICP Extras</string>
+    <string name="aicpextras_dashboard_summary">ROM aanpassingen</string>
+    <!-- Root Management -->
+    <string name="rootmanagement_title">Root beheer</string>
+    <string name="rootmanagement_dashboard_summary">Root-toegang beheren</string>
+    <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
+    <string name="supersu_title">SuperSU</string>
+    <string name="device_info_title">Telefoon info</string>
+    <!-- Encryption and credential -->
+    <string name="custom_encryption_and_credential_settings_summary_on">Apparaat is gecodeerd</string>
+    <string name="custom_encryption_and_credential_settings_summary_off">Apparaat is gedecodeerd</string>
+    <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
+    <plurals name="show_dev_countdown_custom">
+        <item quantity="one">U bent nog <xliff:g id="step_count">%1$d</xliff:g> stap verwijderd van het inschakelen van de ontwikkelaarsopties.</item>
+        <item quantity="other">U bent nog <xliff:g id="step_count">%1$d</xliff:g> stappen verwijderd van het inschakelen van de ontwikkelaarsopties.</item>
+    </plurals>
+    <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
+    <string name="show_dev_on_custom">Ontwikkelaarsopties zijn ingeschakeld! Wees voorzichtig!</string>
+    <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
+    <string name="show_dev_already_custom">Ontwikkelaarsopties zijn al ingeschakeld!</string>
+    <!-- Density category -->
+    <string name="density_category">Schermresolutie opties</string>
+    <!-- Volume Steps -->
+    <string name="volume_steps_title">Volume stappen</string>
+    <string name="volume_steps_alarm_title">Volume stappen: Alarm</string>
+    <string name="volume_steps_dtmf_title">Volume stappen: DTMF</string>
+    <string name="volume_steps_music_title">Volume stappen: Muziek</string>
+    <string name="volume_steps_notification_title">Volume stappen: Notificaties</string>
+    <string name="volume_steps_ring_title">Volume stappen: Beltoon</string>
+    <string name="volume_steps_system_title">Volume stappen: Systeem</string>
+    <string name="volume_steps_voice_call_title">Volume stappen: Bellen</string>
+    <string name="volume_steps_reset">Herstellen</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
+    <!-- Sound & Notification Settings -->
+    <string name="link_volume_option_title">Koppel bel- en notificatievolume</string>
+    <!-- Reset battery stats -->
+    <string name="ok">Ok</string>
+    <string name="menu_stats_reset">Statistieken resetten</string>
+    <string name="reset_stats_msg">Accugeschiedenis zal worden gereset</string>
+    <!-- [CHAR LIMIT=80]-->
+    <string name="fp_swipe_to_dismiss_notifications_title">Veeg vingerafdruk naar links of rechts om meldingen te negeren</string>
+    <string name="fp_swipe_to_dismiss_notifications_pref_title">Veeg vingerafdruk naar links of rechts</string>
+    <!--  [CHAR LIMIT=160]-->
+    <string name="fp_swipe_to_dismiss_notifications_summary">Veeg naar links of rechts over de vingerafdruk sensor om meldingen te negeren.</string>
+    <!-- [CHAR LIMIT=60] -->
+    <string name="fingerprint_swipe_to_dismiss_suggestion_title">Negeer meldingen snel</string>
+    <!-- [CHAR LIMIT=60] -->
+    <string name="fingerprint_swipe_to_dismiss_suggestion_summary">Veeg naar links of rechts over de vingerafdruk sensor</string>
+    <!-- Less Notification sounds -->
+    <string name="less_notification_sounds_title">Minder frequente notificatie geluiden</string>
+    <string name="less_notification_sounds_summary">Beperk de notificatiegeluiden van elke app tot de ingestelde tijdsperiode</string>
+    <string name="less_notification_sounds_default">Standaard gedrag</string>
+    <string name="less_notification_sounds_3s">Elke 3 seconden</string>
+    <string name="less_notification_sounds_5s">Elke 5 seconden</string>
+    <string name="less_notification_sounds_10s">Elke 10 seconden</string>
+    <string name="less_notification_sounds_15s">Elke 15 seconden</string>
+    <string name="less_notification_sounds_30s">Elke 30 seconden</string>
+    <string name="less_notification_sounds_45s">Elke 45 seconden</string>
+    <string name="less_notification_sounds_1m">Elke minuut</string>
+    <string name="less_notification_sounds_2m">Elke 2 minuten</string>
+    <string name="less_notification_sounds_5m">Elke 5 minuten</string>
+    <!-- Notification log -->
+    <string name="notification_log_summary">Toon geschiedenislogboek van notificaties</string>
+    <!-- USB paranoia mode -->
+    <string name="usb_paranoia_connect_title">Beveiligde USB verbinding</string>
+    <string name="usb_paranoia_connect_summary">Opladen via USB alleen activeren bij beveiligd vergrendelscherm</string>
+    <string name="usb_category_title">USB</string>
+    <!-- Running services -->
+    <string name="background_processes_settings_title">Achtergrondprocessen</string>
+    <!-- Development QS -->
+    <!-- Force authorize substratum packages -->
+    <string name="force_authorize_substratum_packages_title">Machtiging afdwingen voor alle thematoepassingen</string>
+    <string name="force_authorize_substratum_packages_summary">Thematoepassingen uit onbekende bronnen toestaan</string>
+    <!-- Manage applications: show substratum overlays -->
+    <string name="filter_substratum_apps">Substratum lagen</string>
+    <string name="menu_show_substratum">Toon lagen</string>
+    <string name="menu_hide_substratum">Verberg lagen</string>
+    <!-- Quick unlock -->
+    <string name="unlock_quick_unlock_control_title">Snel ontgrendelen</string>
+    <string name="unlock_quick_unlock_control_summary">Ontgrendelt automatisch wanneer juiste pincode/wachtwoord wordt ingevoerd. Het wordt aanbevolen een pin met minder dan 6 cijfers te gebruiken. Als de pincode meer dan 6 cijfers bevat kunt u worden buitengesloten!</string>
+    <!-- Pocket judge -->
+    <string name="pocket_judge_title">Broekzak detectie</string>
+    <string name="pocket_judge_summary">Scherm- en toetsaanrakingen blokkeren wanneer het apparaat in de broekzak zit</string>
 </resources>
