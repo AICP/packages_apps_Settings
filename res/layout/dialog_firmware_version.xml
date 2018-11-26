@@ -24,6 +24,21 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="@dimen/sim_content_padding">
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:selectable="false">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="36dp"
+                android:layout_marginRight="36dp"
+                android:src="@drawable/ic_settings_aicp_logo"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
 
         <TextView
             style="@style/device_info_dialog_label"
