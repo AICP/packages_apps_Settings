@@ -27,6 +27,12 @@
         android:summary="%s"
         settings:controller="com.android.settings.display.NightDisplayAutoModePreferenceController" />
 
+    <DropDownPreference
+        android:key="night_brightness_value"
+        android:title="@string/night_brightness_value_title"
+        android:summary="%s"
+        settings:controller="com.android.settings.display.NightDisplayAutoModeValuePreferenceController" />
+
     <Preference
         android:key="night_display_start_time"
         android:title="@string/night_display_start_time_title"
