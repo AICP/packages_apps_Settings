@@ -149,6 +149,12 @@ public class DashboardSummary extends InstrumentedFragment
         if (DEBUG_TIMING) {
             Log.d(TAG, "onResume took " + (System.currentTimeMillis() - startTime) + " ms");
         }
+
+        // Check if we should recreate do to settings change
+        if (mAdapter.shouldRecreate()) {
+            // Recreate activity to apply theme change
+            getActivity().recreate();
+        }
     }
 
     @Override

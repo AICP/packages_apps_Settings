@@ -18,8 +18,11 @@ package com.android.settings.dashboard;
 import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.service.settings.suggestions.Suggestion;
 import android.support.annotation.VisibleForTesting;
 import android.support.v7.util.DiffUtil;
@@ -71,6 +74,10 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
     private RecyclerView mRecyclerView;
     private SuggestionAdapter mSuggestionAdapter;
 
+    private int mIconStyle;
+    private int mNormalColor;
+    private int mAccentColor;
+
     @VisibleForTesting
     DashboardData mDashboardData;
 
@@ -115,6 +122,18 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
                 .setCategory(category)
                 .setConditionExpanded(conditionExpanded)
                 .build();
+
+        int[] attrs = new int[] {
+            android.R.attr.colorControlNormal,
+            android.R.attr.colorAccent,
+        };
+        TypedArray ta = mContext.getTheme().obtainStyledAttributes(attrs);
+        mNormalColor = ta.getColor(0, 0xff808080);
+        mAccentColor = ta.getColor(1, 0xff808080);
+        ta.recycle();
+
+        mIconStyle = Settings.System.getInt(mContext.getContentResolver(),
+                Settings.System.THEMING_SETTINGS_DASHBOARD_ICONS, 0);
     }
 
     public void setSuggestions(List<Suggestion> data) {
@@ -315,24 +334,49 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
     @VisibleForTesting
     void onBindTile(DashboardItemHolder holder, Tile tile) {
         Drawable icon = mCache.getIcon(tile.icon);
-        if (!TextUtils.equals(tile.icon.getResPackage(), mContext.getPackageName())
-                && !(icon instanceof RoundedHomepageIcon)) {
-            icon = new RoundedHomepageIcon(mContext, icon);
-            try {
-                if (tile.metaData != null) {
-                    final int colorRes = tile.metaData.getInt(
-                            TileUtils.META_DATA_PREFERENCE_ICON_BACKGROUND_HINT, 0 /* default */);
-                    if (colorRes != 0) {
-                        final int bgColor = mContext.getPackageManager()
-                                .getResourcesForApplication(tile.icon.getResPackage())
-                                .getColor(colorRes, null /* theme */);
-                        ((RoundedHomepageIcon) icon).setBackgroundColor(bgColor);
-                    }
+
+        // Clear tint from previous calls
+        icon.setTintList(null);
+
+        if (mIconStyle != 0) {
+            // Remove round background from icons
+            if (icon instanceof LayerDrawable) {
+                LayerDrawable lIcon = (LayerDrawable) icon;
+                if (lIcon.getNumberOfLayers() == 2) {
+                    icon = lIcon.getDrawable(1);
+                } else {
+                    Log.w(TAG, "Layer drawable has " + lIcon.getNumberOfLayers() + " layers");
                 }
-            } catch (PackageManager.NameNotFoundException e) {
-                Log.e(TAG, "Failed to set background color for " + tile.intent.getPackage());
+            }
+            if (mIconStyle == 1) {
+                icon = new RoundedHomepageIcon(mContext, icon);
+                ((RoundedHomepageIcon) icon).setBackgroundColor(mAccentColor);
+            } else if (mIconStyle == 2) {
+                icon.setTint(mNormalColor);
+            } else if (mIconStyle == 3) {
+                icon.setTint(mAccentColor);
             }
             mCache.updateIcon(tile.icon, icon);
+        } else {
+            if (!TextUtils.equals(tile.icon.getResPackage(), mContext.getPackageName())
+                    && !(icon instanceof RoundedHomepageIcon)) {
+                icon = new RoundedHomepageIcon(mContext, icon);
+                try {
+                    if (tile.metaData != null) {
+                        final int colorRes = tile.metaData.getInt(
+                                TileUtils.META_DATA_PREFERENCE_ICON_BACKGROUND_HINT, 0 /* default */);
+                        if (colorRes != 0) {
+                            final int bgColor = mContext.getPackageManager()
+                                    .getResourcesForApplication(tile.icon.getResPackage())
+                                    .getColor(colorRes, null /* theme */);
+                            ((RoundedHomepageIcon) icon).setBackgroundColor(bgColor);
+                        }
+                    }
+                } catch (PackageManager.NameNotFoundException e) {
+                    Log.e(TAG, "Failed to set background color for " + tile.intent.getPackage());
+                }
+                mCache.updateIcon(tile.icon, icon);
+            }
         }
         holder.icon.setImageDrawable(icon);
         holder.title.setText(tile.title);
@@ -371,6 +415,12 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
 
     private void scrollToTopOfConditions() {
         mRecyclerView.scrollToPosition(mDashboardData.hasSuggestion() ? 1 : 0);
+    }
+
+    public boolean shouldRecreate() {
+        int iconStyle = Settings.System.getInt(mContext.getContentResolver(),
+                Settings.System.THEMING_SETTINGS_DASHBOARD_ICONS, 0);
+        return mIconStyle != iconStyle;
     }
 
     public static class DashboardItemHolder extends RecyclerView.ViewHolder {
