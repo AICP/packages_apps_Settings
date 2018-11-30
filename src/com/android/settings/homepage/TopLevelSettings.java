@@ -23,8 +23,12 @@ import android.app.ActivityManager;
 import android.app.settings.SettingsEnums;
 import android.content.Context;
 import android.content.res.Configuration;
+import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
 import android.provider.SearchIndexableResource;
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -56,6 +60,7 @@ import com.android.settings.widget.HomepagePreferenceLayoutHelper.HomepagePrefer
 import com.android.settingslib.core.instrumentation.Instrumentable;
 import com.android.settingslib.drawer.Tile;
 import com.android.settingslib.search.SearchIndexable;
+import com.android.settingslib.widget.AdaptiveIcon;
 import com.android.settingslib.widget.SettingsThemeHelper;
 
 import java.util.List;
@@ -74,6 +79,10 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
     private boolean mScrollNeeded = true;
     private boolean mFirstStarted = true;
     private ActivityEmbeddingController mActivityEmbeddingController;
+
+    private int mIconStyle;
+    private int mNormalColor;
+    private int mAccentColor;
 
     public TopLevelSettings() {
         final Bundle args = new Bundle();
@@ -109,6 +118,12 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
         super.onAttach(context);
         HighlightableMenu.fromXml(context, getPreferenceScreenResId());
         use(SupportPreferenceController.class).setActivity(getActivity());
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateTheme();
     }
 
     @Override
@@ -303,6 +318,91 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
     protected boolean shouldForceRoundedIcon() {
         return getContext().getResources()
                 .getBoolean(R.bool.config_force_rounded_icon_TopLevelSettings);
+    }
+
+    private void updateTheme() {
+        int[] attrs = new int[] {
+            android.R.attr.colorControlNormal,
+            android.R.attr.colorAccent,
+        };
+        TypedArray ta = getContext().getTheme().obtainStyledAttributes(attrs);
+        mNormalColor = ta.getColor(0, 0xff808080);
+        mAccentColor = ta.getColor(1, 0xff808080);
+        ta.recycle();
+
+        mIconStyle = Settings.System.getInt(getContext().getContentResolver(),
+                Settings.System.THEMING_SETTINGS_DASHBOARD_ICONS, 0);
+        themePreferences(getPreferenceScreen());
+    }
+
+    private void themePreferences(PreferenceGroup prefGroup) {
+        themePreference(prefGroup);
+        for (int i = 0; i < prefGroup.getPreferenceCount(); i++) {
+            Preference pref = prefGroup.getPreference(i);
+            if (pref instanceof PreferenceGroup) {
+                themePreferences(prefGroup);
+            } else {
+                themePreference(pref);
+            }
+        }
+    }
+
+    private void themePreference(Preference pref) {
+        Drawable icon = pref.getIcon();
+        if (icon != null) {
+            if (icon instanceof AdaptiveIcon) {
+                AdaptiveIcon aIcon = (AdaptiveIcon) icon;
+                // Clear colors from previous calls
+                aIcon.resetCustomColors();
+                switch (mIconStyle) {
+                    case 0:
+                    default:
+                        break;
+                    case 1:
+                        aIcon.setCustomForegroundColor(getResources().getColor(android.R.color.white));
+                        break;
+                    case 2:
+                        aIcon.setCustomBackgroundColor(mAccentColor);
+                        break;
+                    case 3:
+                        aIcon.setCustomForegroundColor(mNormalColor);
+                        aIcon.setCustomBackgroundColor(0);
+                        break;
+                    case 4:
+                        aIcon.setCustomForegroundColor(mAccentColor);
+                        aIcon.setCustomBackgroundColor(0);
+                        break;
+                }
+            } else if (icon instanceof LayerDrawable) {
+                LayerDrawable lIcon = (LayerDrawable) icon;
+                if (lIcon.getNumberOfLayers() == 2) {
+                    Drawable fg = lIcon.getDrawable(1);
+                    Drawable bg = lIcon.getDrawable(0);
+                    // Clear tints from previous calls
+                    bg.setTintList(null);
+                    fg.setTintList(null);
+                    switch (mIconStyle) {
+                        case 0:
+                        default:
+                            break;
+                        case 1:
+                            fg.setTint(getResources().getColor(android.R.color.white));
+                            break;
+                        case 2:
+                            bg.setTint(mAccentColor);
+                            break;
+                        case 3:
+                            fg.setTint(mNormalColor);
+                            bg.setTint(0);
+                            break;
+                        case 4:
+                            fg.setTint(mAccentColor);
+                            bg.setTint(0);
+                            break;
+                    }
+                }
+            }
+        }
     }
 
     @Override
