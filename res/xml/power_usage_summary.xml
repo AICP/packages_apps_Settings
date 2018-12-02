@@ -70,6 +70,12 @@
         <intent android:action="android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS" />
     </Preference>
 
+    <Preference
+        android:fragment="com.android.settings.fuelgauge.BatteryChargeSoundSettings"
+        android:key="battery_charge_sound"
+        android:title="@string/notification_battery_charge_level_title"
+        android:summary="@string/notification_battery_charge_level_summary" />
+
     <com.android.settings.fuelgauge.batteryusage.PowerGaugePreference
         android:key="battery_temperature"
         android:title="@string/battery_temperature"
