@@ -16,96 +16,96 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="aicp_name_title">AICP Experience</string>
-  <string name="aicp_name_summary">Aicp Oreo Edition - 13.1</string>
-  <string name="aicpextras_settings">AICP Extras</string>
-  <string name="aicpextras_dashboard_summary">Přizpůsobení ROM</string>
-  <!-- Root Management -->
-  <string name="rootmanagement_title">Správa přístupu root</string>
-  <string name="rootmanagement_dashboard_summary">Spravovat přístup uživatele root</string>
-  <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
-  <string name="supersu_title">SuperSU</string>
-  <string name="device_info_title">Informace o telefonu</string>
-  <!-- Encryption and credential -->
-  <string name="custom_encryption_and_credential_settings_summary_on">Zařízení je šifrováno</string>
-  <string name="custom_encryption_and_credential_settings_summary_off">Zařízení je dešifrováno</string>
-  <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
-  <plurals name="show_dev_countdown_custom">
-    <item quantity="one">Jste <xliff:g id="step_count">%1$d</xliff:g> krok od povolení vývojářských nástrojů.</item>
-    <item quantity="few">Jste <xliff:g id="step_count">%1$d</xliff:g> kroky od povolení vývojářských nástrojů.</item>
-    <item quantity="many">Jste <xliff:g id="step_count">%1$d</xliff:g> kroků od povolení vývojářských nástrojů.</item>
-    <item quantity="other">Jste <xliff:g id="step_count">%1$d</xliff:g> kroků od povolení vývojářských nástrojů.</item>
-  </plurals>
-  <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
-  <string name="show_dev_on_custom">Možnosti pro vývojáře jsou povoleny! Dávejte si pozor!</string>
-  <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
-  <string name="show_dev_already_custom">Možnosti pro vývojáře jsou již povoleny!</string>
-  <!-- Density category -->
-  <string name="density_category">Možnosti hustoty zobrazení</string>
-  <!-- Volume Steps -->
-  <string name="volume_steps_title">Kroky hlasitosti</string>
-  <string name="volume_steps_alarm_title">Kroky hlasitosti: Budík</string>
-  <string name="volume_steps_dtmf_title">Kroky hlasitosti: DTMF</string>
-  <string name="volume_steps_music_title">Kroky hlasitosti: Hudba</string>
-  <string name="volume_steps_notification_title">Kroky hlasitosti: Upozornění</string>
-  <string name="volume_steps_ring_title">Kroky hlasitosti: Vyzvánění</string>
-  <string name="volume_steps_system_title">Kroky hlasitosti: Systémové zvuky</string>
-  <string name="volume_steps_voice_call_title">Kroky hlasitosti: Hlasové hovory</string>
-  <string name="volume_steps_reset">Obnovit</string>
-  <string name="volume_steps_60">60</string>
-  <string name="volume_steps_45">45</string>
-  <string name="volume_steps_30">30</string>
-  <string name="volume_steps_15">15</string>
-  <string name="volume_steps_7">7</string>
-  <string name="volume_steps_5">5</string>
-  <!-- Sound & Notification Settings -->
-  <string name="link_volume_option_title">Spojit hlasitost vyzvánění a oznámení</string>
-  <!-- Reset battery stats -->
-  <string name="ok">OK</string>
-  <string name="menu_stats_reset">Vynulovat statistiky</string>
-  <string name="reset_stats_msg">Chystáte se obnovit historii statistiky baterie</string>
-  <!-- [CHAR LIMIT=80]-->
-  <string name="fp_swipe_to_dismiss_notifications_title">Pro odmítnutí oznámení přejeďte prstem vlevo nebo vpravo přes snímač otisků prstů</string>
-  <string name="fp_swipe_to_dismiss_notifications_pref_title">Přejeďte vlevo nebo vpravo přes snímač otisků prstů</string>
-  <!--  [CHAR LIMIT=160]-->
-  <string name="fp_swipe_to_dismiss_notifications_summary">Chcete-li zrušit oznámení, přejeďte prstem vlevo nebo vpravo pře snímač otisků prstů na zadní straně telefonu.</string>
-  <!-- [CHAR LIMIT=60] -->
-  <string name="fingerprint_swipe_to_dismiss_suggestion_title">Rychlé zrušení oznámení</string>
-  <!-- [CHAR LIMIT=60] -->
-  <string name="fingerprint_swipe_to_dismiss_suggestion_summary">Přejeďte prstem vlevo nebo vravo přes snímač otisků prstů</string>
-  <!-- Less Notification sounds -->
-  <string name="less_notification_sounds_title">Méně časté zvuky oznámení</string>
-  <string name="less_notification_sounds_summary">Přehrát zvuk oznámení každé aplikace pouze jednou za stanovené časové období</string>
-  <string name="less_notification_sounds_default">Výchozí chování</string>
-  <string name="less_notification_sounds_3s">Každé 3 sekundy</string>
-  <string name="less_notification_sounds_5s">Každých 5 sekund</string>
-  <string name="less_notification_sounds_10s">Každých 10 sekund</string>
-  <string name="less_notification_sounds_15s">Každých 15 sekund</string>
-  <string name="less_notification_sounds_30s">Každých 30 sekund</string>
-  <string name="less_notification_sounds_45s">Každých 45 sekund</string>
-  <string name="less_notification_sounds_1m">Každou 1 minutu</string>
-  <string name="less_notification_sounds_2m">Každé 2 minuty</string>
-  <string name="less_notification_sounds_5m">Každých 5 minut</string>
-  <!-- Notification log -->
-  <string name="notification_log_summary">Zobrazit protokol historie oznámení</string>
-  <!-- USB paranoia mode -->
-  <string name="usb_paranoia_connect_title">Bezpečné připojení USB</string>
-  <string name="usb_paranoia_connect_summary">Na zabezpečené zamykací obrazovce povolit při připojení USB pouze režim nabíjení</string>
-  <string name="usb_category_title">USB</string>
-  <!-- Running services -->
-  <string name="background_processes_settings_title">Procesy na pozadí</string>
-  <!-- Development QS -->
-  <!-- Force authorize substratum packages -->
-  <string name="force_authorize_substratum_packages_title">Vyžadovat povolení pro každý motiv</string>
-  <string name="force_authorize_substratum_packages_summary">Povolit instalaci motivů z neznámých zdrojů</string>
-  <!-- Manage applications: show substratum overlays -->
-  <string name="filter_substratum_apps">Substratum překrytí</string>
-  <string name="menu_show_substratum">Zobrazit překrytí</string>
-  <string name="menu_hide_substratum">Skrýt překrytí</string>
-  <!-- Quick unlock -->
-  <string name="unlock_quick_unlock_control_title">Rychlé odemknutí</string>
-  <string name="unlock_quick_unlock_control_summary">Automatické odemknutí při zadání správného PINu/hesla. Doporučuje se použít PIN menší než 6 číslic. Pokud PIN překročí 6 číslic, může dojít k zamknutí.</string>
-  <!-- Pocket judge -->
-  <string name="pocket_judge_title">Detekce uložení v kapse</string>
-  <string name="pocket_judge_summary">Blokovat obrazovku a hardwarová tlačítka, když je zařízení v kapse</string>
+    <string name="aicp_name_title">AICP Experience</string>
+    <string name="aicp_name_summary">Aicp Oreo Edition - 13.1</string>
+    <string name="aicpextras_settings">AICP Extras</string>
+    <string name="aicpextras_dashboard_summary">Přizpůsobení ROM</string>
+    <!-- Root Management -->
+    <string name="rootmanagement_title">Správa přístupu root</string>
+    <string name="rootmanagement_dashboard_summary">Spravovat přístup uživatele root</string>
+    <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
+    <string name="supersu_title">SuperSU</string>
+    <string name="device_info_title">Informace o telefonu</string>
+    <!-- Encryption and credential -->
+    <string name="custom_encryption_and_credential_settings_summary_on">Zařízení je šifrováno</string>
+    <string name="custom_encryption_and_credential_settings_summary_off">Zařízení je dešifrováno</string>
+    <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
+    <plurals name="show_dev_countdown_custom">
+        <item quantity="one">Jste <xliff:g id="step_count">%1$d</xliff:g> krok od povolení vývojářských nástrojů.</item>
+        <item quantity="few">Jste <xliff:g id="step_count">%1$d</xliff:g> kroky od povolení vývojářských nástrojů.</item>
+        <item quantity="many">Jste <xliff:g id="step_count">%1$d</xliff:g> kroků od povolení vývojářských nástrojů.</item>
+        <item quantity="other">Jste <xliff:g id="step_count">%1$d</xliff:g> kroků od povolení vývojářských nástrojů.</item>
+    </plurals>
+    <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
+    <string name="show_dev_on_custom">Možnosti pro vývojáře jsou povoleny! Dávejte si pozor!</string>
+    <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
+    <string name="show_dev_already_custom">Možnosti pro vývojáře jsou již povoleny!</string>
+    <!-- Density category -->
+    <string name="density_category">Možnosti hustoty zobrazení</string>
+    <!-- Volume Steps -->
+    <string name="volume_steps_title">Kroky hlasitosti</string>
+    <string name="volume_steps_alarm_title">Kroky hlasitosti: Budík</string>
+    <string name="volume_steps_dtmf_title">Kroky hlasitosti: DTMF</string>
+    <string name="volume_steps_music_title">Kroky hlasitosti: Hudba</string>
+    <string name="volume_steps_notification_title">Kroky hlasitosti: Upozornění</string>
+    <string name="volume_steps_ring_title">Kroky hlasitosti: Vyzvánění</string>
+    <string name="volume_steps_system_title">Kroky hlasitosti: Systémové zvuky</string>
+    <string name="volume_steps_voice_call_title">Kroky hlasitosti: Hlasové hovory</string>
+    <string name="volume_steps_reset">Obnovit</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
+    <!-- Sound & Notification Settings -->
+    <string name="link_volume_option_title">Spojit hlasitost vyzvánění a oznámení</string>
+    <!-- Reset battery stats -->
+    <string name="ok">OK</string>
+    <string name="menu_stats_reset">Vynulovat statistiky</string>
+    <string name="reset_stats_msg">Chystáte se obnovit historii statistiky baterie</string>
+    <!-- [CHAR LIMIT=80]-->
+    <string name="fp_swipe_to_dismiss_notifications_title">Pro odmítnutí oznámení přejeďte prstem vlevo nebo vpravo přes snímač otisků prstů</string>
+    <string name="fp_swipe_to_dismiss_notifications_pref_title">Přejeďte vlevo nebo vpravo přes snímač otisků prstů</string>
+    <!--  [CHAR LIMIT=160]-->
+    <string name="fp_swipe_to_dismiss_notifications_summary">Chcete-li zrušit oznámení, přejeďte prstem vlevo nebo vpravo pře snímač otisků prstů na zadní straně telefonu.</string>
+    <!-- [CHAR LIMIT=60] -->
+    <string name="fingerprint_swipe_to_dismiss_suggestion_title">Rychlé zrušení oznámení</string>
+    <!-- [CHAR LIMIT=60] -->
+    <string name="fingerprint_swipe_to_dismiss_suggestion_summary">Přejeďte prstem vlevo nebo vravo přes snímač otisků prstů</string>
+    <!-- Less Notification sounds -->
+    <string name="less_notification_sounds_title">Méně časté zvuky oznámení</string>
+    <string name="less_notification_sounds_summary">Přehrát zvuk oznámení každé aplikace pouze jednou za stanovené časové období</string>
+    <string name="less_notification_sounds_default">Výchozí chování</string>
+    <string name="less_notification_sounds_3s">Každé 3 sekundy</string>
+    <string name="less_notification_sounds_5s">Každých 5 sekund</string>
+    <string name="less_notification_sounds_10s">Každých 10 sekund</string>
+    <string name="less_notification_sounds_15s">Každých 15 sekund</string>
+    <string name="less_notification_sounds_30s">Každých 30 sekund</string>
+    <string name="less_notification_sounds_45s">Každých 45 sekund</string>
+    <string name="less_notification_sounds_1m">Každou 1 minutu</string>
+    <string name="less_notification_sounds_2m">Každé 2 minuty</string>
+    <string name="less_notification_sounds_5m">Každých 5 minut</string>
+    <!-- Notification log -->
+    <string name="notification_log_summary">Zobrazit protokol historie oznámení</string>
+    <!-- USB paranoia mode -->
+    <string name="usb_paranoia_connect_title">Bezpečné připojení USB</string>
+    <string name="usb_paranoia_connect_summary">Na zabezpečené zamykací obrazovce povolit při připojení USB pouze režim nabíjení</string>
+    <string name="usb_category_title">USB</string>
+    <!-- Running services -->
+    <string name="background_processes_settings_title">Procesy na pozadí</string>
+    <!-- Development QS -->
+    <!-- Force authorize substratum packages -->
+    <string name="force_authorize_substratum_packages_title">Vyžadovat povolení pro každý motiv</string>
+    <string name="force_authorize_substratum_packages_summary">Povolit instalaci motivů z neznámých zdrojů</string>
+    <!-- Manage applications: show substratum overlays -->
+    <string name="filter_substratum_apps">Substratum překrytí</string>
+    <string name="menu_show_substratum">Zobrazit překrytí</string>
+    <string name="menu_hide_substratum">Skrýt překrytí</string>
+    <!-- Quick unlock -->
+    <string name="unlock_quick_unlock_control_title">Rychlé odemknutí</string>
+    <string name="unlock_quick_unlock_control_summary">Automatické odemknutí při zadání správného PINu/hesla. Doporučuje se použít PIN menší než 6 číslic. Pokud PIN překročí 6 číslic, může dojít k zamknutí.</string>
+    <!-- Pocket judge -->
+    <string name="pocket_judge_title">Detekce uložení v kapse</string>
+    <string name="pocket_judge_summary">Blokovat obrazovku a hardwarová tlačítka, když je zařízení v kapse</string>
 </resources>

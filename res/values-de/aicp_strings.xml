@@ -16,94 +16,94 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="aicp_name_title">AICP Version</string>
-  <string name="aicp_name_summary">AICP Oreo Edition - 13.1</string>
-  <string name="aicpextras_settings">AICP Extras</string>
-  <string name="aicpextras_dashboard_summary">ROM-Anpassung</string>
-  <!-- Root Management -->
-  <string name="rootmanagement_title">SU/Root Einstellungen</string>
-  <string name="rootmanagement_dashboard_summary">Root-Zugriff verwalten</string>
-  <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
-  <string name="supersu_title">SuperSU</string>
-  <string name="device_info_title">Details zum Telefonsignal</string>
-  <!-- Encryption and credential -->
-  <string name="custom_encryption_and_credential_settings_summary_on">Gerät ist verschlüsselt</string>
-  <string name="custom_encryption_and_credential_settings_summary_off">Gerät ist nicht verschlüsselt</string>
-  <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
-  <plurals name="show_dev_countdown_custom">
-    <item quantity="one">Sie sind <xliff:g id="step_count">%1$d</xliff:g> Schritt von der Aktivierung der Entwickleroptionen entfernt.</item>
-    <item quantity="other">Sie sind <xliff:g id="step_count">%1$d</xliff:g> Schritte von der Aktivierung der Entwickleroptionen entfernt.</item>
-  </plurals>
-  <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
-  <string name="show_dev_on_custom">Entwickleroptionen aktiviert! Vorsicht!</string>
-  <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
-  <string name="show_dev_already_custom">Entwickleroptionen sind bereits aktiviert!</string>
-  <!-- Density category -->
-  <string name="density_category">Displayauflösung</string>
-  <!-- Volume Steps -->
-  <string name="volume_steps_title">Lautstärke-Schritte</string>
-  <string name="volume_steps_alarm_title">Lautstärke-Schritte: Wecker</string>
-  <string name="volume_steps_dtmf_title">Lautstärke-Schritte: MFV-Töne</string>
-  <string name="volume_steps_music_title">Lautstärke-Schritte: Musik</string>
-  <string name="volume_steps_notification_title">Lautstärke-Schritte: Benachrichtigung</string>
-  <string name="volume_steps_ring_title">Lautstärke-Schritte: Klingelton</string>
-  <string name="volume_steps_system_title">Lautstärke-Schritte: System</string>
-  <string name="volume_steps_voice_call_title">Lautstärke-Schritte: Sprachanruf</string>
-  <string name="volume_steps_reset">Zurücksetzen</string>
-  <string name="volume_steps_60">60</string>
-  <string name="volume_steps_45">45</string>
-  <string name="volume_steps_30">30</string>
-  <string name="volume_steps_15">15</string>
-  <string name="volume_steps_7">7</string>
-  <string name="volume_steps_5">5</string>
-  <!-- Sound & Notification Settings -->
-  <string name="link_volume_option_title">Klingelton- und Benachrichtigungslautstärke verknüpfen</string>
-  <!-- Reset battery stats -->
-  <string name="ok">Okay</string>
-  <string name="menu_stats_reset">Statistik zurücksetzen</string>
-  <string name="reset_stats_msg">Akkuverbrauch-Statistiken werden zurückgesetzt werden</string>
-  <!-- [CHAR LIMIT=80]-->
-  <string name="fp_swipe_to_dismiss_notifications_title">Über Fingerabdrucksensor streichen, um Benachrichtigungen zu schließen</string>
-  <string name="fp_swipe_to_dismiss_notifications_pref_title">Nach links oder rechts über Fingerabdrucksensor streichen</string>
-  <!--  [CHAR LIMIT=160]-->
-  <string name="fp_swipe_to_dismiss_notifications_summary">Um Benachrichtigungen zu schließen, nach links oder rechts über den Fingerabdrucksensor streichen.</string>
-  <!-- [CHAR LIMIT=60] -->
-  <string name="fingerprint_swipe_to_dismiss_suggestion_title">Benachrichtigungen schnell schließen</string>
-  <!-- [CHAR LIMIT=60] -->
-  <string name="fingerprint_swipe_to_dismiss_suggestion_summary">Wische nach links oder rechts über den Fingerabdrucksensor</string>
-  <!-- Less Notification sounds -->
-  <string name="less_notification_sounds_title">Weniger häufige Benachrichtigungstöne</string>
-  <string name="less_notification_sounds_summary">Begrenze Benachrichtigungstöne pro App, so dass diese nur einmal pro Zeitspanne ertönen</string>
-  <string name="less_notification_sounds_default">Standardverhalten</string>
-  <string name="less_notification_sounds_3s">Alle 3 Sekunden</string>
-  <string name="less_notification_sounds_5s">Alle 5 Sekunden</string>
-  <string name="less_notification_sounds_10s">Alle 10 Sekunden</string>
-  <string name="less_notification_sounds_15s">Alle 15 Sekunden</string>
-  <string name="less_notification_sounds_30s">Alle 30 Sekunden</string>
-  <string name="less_notification_sounds_45s">Alle 45 Sekunden</string>
-  <string name="less_notification_sounds_1m">Alle 1 Minuten</string>
-  <string name="less_notification_sounds_2m">Alle 2 Minuten</string>
-  <string name="less_notification_sounds_5m">Alle 5 Minuten</string>
-  <!-- Notification log -->
-  <string name="notification_log_summary">Zeige Benachrichtigungsverlauf</string>
-  <!-- USB paranoia mode -->
-  <string name="usb_paranoia_connect_title">Sichere USB-Verbindung</string>
-  <string name="usb_paranoia_connect_summary">Bei aktivem Sperrbildschirm wird nur das Aufladen über USB aktiviert</string>
-  <string name="usb_category_title">USB</string>
-  <!-- Running services -->
-  <string name="background_processes_settings_title">Hintergrundprozesse</string>
-  <!-- Development QS -->
-  <!-- Force authorize substratum packages -->
-  <string name="force_authorize_substratum_packages_title">Erzwingt die Genehmigung für alle Design-Anwendungen</string>
-  <string name="force_authorize_substratum_packages_summary">Design-Apps aus unbekannten Quellen erlauben</string>
-  <!-- Manage applications: show substratum overlays -->
-  <string name="filter_substratum_apps">Substratum Überlagerungen</string>
-  <string name="menu_show_substratum">Zeige Überlagerungen</string>
-  <string name="menu_hide_substratum">Verstecke Überlagerungen</string>
-  <!-- Quick unlock -->
-  <string name="unlock_quick_unlock_control_title">Schnelles Entsperren</string>
-  <string name="unlock_quick_unlock_control_summary">Automatisch entsperren, wenn das/die korrekte Passwort/PIN eingegeben wurde.\nHinweis: Es wird empfohlen eine PIN unter 6 Zeichen zu wählen. Wenn die PIN 6 Zeichen übersteigt, könntest du ausgesperrt werden.</string>
-  <!-- Pocket judge -->
-  <string name="pocket_judge_title">Taschenerkennung</string>
-  <string name="pocket_judge_summary">Verhindert Bildschirm- und Tasteneingaben, wenn sich das Gerät in einer Tasche befindet</string>
+    <string name="aicp_name_title">AICP Version</string>
+    <string name="aicp_name_summary">AICP Oreo Edition - 13.1</string>
+    <string name="aicpextras_settings">AICP Extras</string>
+    <string name="aicpextras_dashboard_summary">ROM-Anpassung</string>
+    <!-- Root Management -->
+    <string name="rootmanagement_title">SU/Root Einstellungen</string>
+    <string name="rootmanagement_dashboard_summary">Root-Zugriff verwalten</string>
+    <!-- Dummy string needed to hide SuperSU from launcher, no need to translate -->
+    <string name="supersu_title">SuperSU</string>
+    <string name="device_info_title">Details zum Telefonsignal</string>
+    <!-- Encryption and credential -->
+    <string name="custom_encryption_and_credential_settings_summary_on">Gerät ist verschlüsselt</string>
+    <string name="custom_encryption_and_credential_settings_summary_off">Gerät ist nicht verschlüsselt</string>
+    <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
+    <plurals name="show_dev_countdown_custom">
+        <item quantity="one">Sie sind <xliff:g id="step_count">%1$d</xliff:g> Schritt von der Aktivierung der Entwickleroptionen entfernt.</item>
+        <item quantity="other">Sie sind <xliff:g id="step_count">%1$d</xliff:g> Schritte von der Aktivierung der Entwickleroptionen entfernt.</item>
+    </plurals>
+    <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
+    <string name="show_dev_on_custom">Entwickleroptionen aktiviert! Vorsicht!</string>
+    <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
+    <string name="show_dev_already_custom">Entwickleroptionen sind bereits aktiviert!</string>
+    <!-- Density category -->
+    <string name="density_category">Displayauflösung</string>
+    <!-- Volume Steps -->
+    <string name="volume_steps_title">Lautstärke-Schritte</string>
+    <string name="volume_steps_alarm_title">Lautstärke-Schritte: Wecker</string>
+    <string name="volume_steps_dtmf_title">Lautstärke-Schritte: MFV-Töne</string>
+    <string name="volume_steps_music_title">Lautstärke-Schritte: Musik</string>
+    <string name="volume_steps_notification_title">Lautstärke-Schritte: Benachrichtigung</string>
+    <string name="volume_steps_ring_title">Lautstärke-Schritte: Klingelton</string>
+    <string name="volume_steps_system_title">Lautstärke-Schritte: System</string>
+    <string name="volume_steps_voice_call_title">Lautstärke-Schritte: Sprachanruf</string>
+    <string name="volume_steps_reset">Zurücksetzen</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
+    <!-- Sound & Notification Settings -->
+    <string name="link_volume_option_title">Klingelton- und Benachrichtigungslautstärke verknüpfen</string>
+    <!-- Reset battery stats -->
+    <string name="ok">Okay</string>
+    <string name="menu_stats_reset">Statistik zurücksetzen</string>
+    <string name="reset_stats_msg">Akkuverbrauch-Statistiken werden zurückgesetzt werden</string>
+    <!-- [CHAR LIMIT=80]-->
+    <string name="fp_swipe_to_dismiss_notifications_title">Über Fingerabdrucksensor streichen, um Benachrichtigungen zu schließen</string>
+    <string name="fp_swipe_to_dismiss_notifications_pref_title">Nach links oder rechts über Fingerabdrucksensor streichen</string>
+    <!--  [CHAR LIMIT=160]-->
+    <string name="fp_swipe_to_dismiss_notifications_summary">Um Benachrichtigungen zu schließen, nach links oder rechts über den Fingerabdrucksensor streichen.</string>
+    <!-- [CHAR LIMIT=60] -->
+    <string name="fingerprint_swipe_to_dismiss_suggestion_title">Benachrichtigungen schnell schließen</string>
+    <!-- [CHAR LIMIT=60] -->
+    <string name="fingerprint_swipe_to_dismiss_suggestion_summary">Wische nach links oder rechts über den Fingerabdrucksensor</string>
+    <!-- Less Notification sounds -->
+    <string name="less_notification_sounds_title">Weniger häufige Benachrichtigungstöne</string>
+    <string name="less_notification_sounds_summary">Begrenze Benachrichtigungstöne pro App, so dass diese nur einmal pro Zeitspanne ertönen</string>
+    <string name="less_notification_sounds_default">Standardverhalten</string>
+    <string name="less_notification_sounds_3s">Alle 3 Sekunden</string>
+    <string name="less_notification_sounds_5s">Alle 5 Sekunden</string>
+    <string name="less_notification_sounds_10s">Alle 10 Sekunden</string>
+    <string name="less_notification_sounds_15s">Alle 15 Sekunden</string>
+    <string name="less_notification_sounds_30s">Alle 30 Sekunden</string>
+    <string name="less_notification_sounds_45s">Alle 45 Sekunden</string>
+    <string name="less_notification_sounds_1m">Alle 1 Minuten</string>
+    <string name="less_notification_sounds_2m">Alle 2 Minuten</string>
+    <string name="less_notification_sounds_5m">Alle 5 Minuten</string>
+    <!-- Notification log -->
+    <string name="notification_log_summary">Zeige Benachrichtigungsverlauf</string>
+    <!-- USB paranoia mode -->
+    <string name="usb_paranoia_connect_title">Sichere USB-Verbindung</string>
+    <string name="usb_paranoia_connect_summary">Bei aktivem Sperrbildschirm wird nur das Aufladen über USB aktiviert</string>
+    <string name="usb_category_title">USB</string>
+    <!-- Running services -->
+    <string name="background_processes_settings_title">Hintergrundprozesse</string>
+    <!-- Development QS -->
+    <!-- Force authorize substratum packages -->
+    <string name="force_authorize_substratum_packages_title">Erzwingt die Genehmigung für alle Design-Anwendungen</string>
+    <string name="force_authorize_substratum_packages_summary">Design-Apps aus unbekannten Quellen erlauben</string>
+    <!-- Manage applications: show substratum overlays -->
+    <string name="filter_substratum_apps">Substratum Überlagerungen</string>
+    <string name="menu_show_substratum">Zeige Überlagerungen</string>
+    <string name="menu_hide_substratum">Verstecke Überlagerungen</string>
+    <!-- Quick unlock -->
+    <string name="unlock_quick_unlock_control_title">Schnelles Entsperren</string>
+    <string name="unlock_quick_unlock_control_summary">Automatisch entsperren, wenn das/die korrekte Passwort/PIN eingegeben wurde.\nHinweis: Es wird empfohlen eine PIN unter 6 Zeichen zu wählen. Wenn die PIN 6 Zeichen übersteigt, könntest du ausgesperrt werden.</string>
+    <!-- Pocket judge -->
+    <string name="pocket_judge_title">Taschenerkennung</string>
+    <string name="pocket_judge_summary">Verhindert Bildschirm- und Tasteneingaben, wenn sich das Gerät in einer Tasche befindet</string>
 </resources>
