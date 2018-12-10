@@ -49,7 +49,7 @@ public class PowerButtonInstantLockPreferenceController extends AbstractPreferen
 
     @Override
     public boolean isAvailable() {
-        if (!mLockPatternUtils.isSecure(mUserId)) {
+        /*if (!mLockPatternUtils.isSecure(mUserId)) {
             return false;
         }
         switch (mLockPatternUtils.getKeyguardStoredPasswordQuality(mUserId)) {
@@ -63,7 +63,8 @@ public class PowerButtonInstantLockPreferenceController extends AbstractPreferen
                 return true;
             default:
                 return false;
-        }
+        }*/
+        return true;
     }
 
     @Override

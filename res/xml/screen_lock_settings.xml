@@ -25,7 +25,7 @@
         android:key="visiblepattern"
         android:title="@string/lockpattern_settings_enable_visible_pattern_title" />
 
-    <!-- available in pin/pattern/password -->
+    <!-- available in pin/pattern/password/slide -->
     <com.android.settings.TimeoutListPreference
         android:key="lock_after_timeout"
         android:title="@string/lock_after_timeout"
@@ -33,7 +33,7 @@
         android:entries="@array/lock_after_timeout_entries"
         android:entryValues="@array/lock_after_timeout_values" />
 
-    <!-- available in pin/pattern/password -->
+    <!-- available in pin/pattern/password/slide -->
     <SwitchPreference
         android:key="power_button_instantly_locks"
         android:title="@string/lockpattern_settings_enable_power_button_instantly_locks" />
