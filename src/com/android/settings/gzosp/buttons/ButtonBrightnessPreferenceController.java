@@ -40,7 +40,7 @@ public class ButtonBrightnessPreferenceController extends AbstractPreferenceCont
 
     @Override
     public boolean isAvailable() {
-        return mDeviceHardwareKeys != 0;
+        return false;
     }
 
     @Override
