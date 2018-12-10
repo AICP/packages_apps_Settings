@@ -43,7 +43,7 @@ public class NavigationBarPreferenceController extends AbstractPreferenceControl
 
     @Override
     public boolean isAvailable() {
-        return mDeviceHardwareKeys != 0;
+        return false;
     }
 
     @Override
@@ -56,7 +56,7 @@ public class NavigationBarPreferenceController extends AbstractPreferenceControl
         final boolean defaultToNavigationBar = mContext.getResources().getBoolean(
                 com.android.internal.R.bool.config_defaultToNavigationBar);
         final boolean navigationBarEnabled = Settings.System.getIntForUser(
-                mContext.getContentResolver(), NAVIGATION_BAR_ENABLED, 
+                mContext.getContentResolver(), NAVIGATION_BAR_ENABLED,
                 defaultToNavigationBar ? 1 : 0, UserHandle.USER_CURRENT) != 0;
         ((SwitchPreference) preference).setChecked(navigationBarEnabled);
     }
