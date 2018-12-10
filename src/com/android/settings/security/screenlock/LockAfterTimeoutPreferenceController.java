@@ -57,9 +57,9 @@ public class LockAfterTimeoutPreferenceController extends AbstractPreferenceCont
 
     @Override
     public boolean isAvailable() {
-        if (!mLockPatternUtils.isSecure(mUserId)) {
+        /*if (!mLockPatternUtils.isSecure(mUserId)) {
             return false;
-        }
+        }*/
         switch (mLockPatternUtils.getKeyguardStoredPasswordQuality(mUserId)) {
             case DevicePolicyManager.PASSWORD_QUALITY_SOMETHING:
             case DevicePolicyManager.PASSWORD_QUALITY_NUMERIC:
@@ -68,6 +68,7 @@ public class LockAfterTimeoutPreferenceController extends AbstractPreferenceCont
             case DevicePolicyManager.PASSWORD_QUALITY_ALPHANUMERIC:
             case DevicePolicyManager.PASSWORD_QUALITY_COMPLEX:
             case DevicePolicyManager.PASSWORD_QUALITY_MANAGED:
+            case DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED:
                 return true;
             default:
                 return false;
