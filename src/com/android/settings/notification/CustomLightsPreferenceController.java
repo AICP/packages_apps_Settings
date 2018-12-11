@@ -64,6 +64,7 @@ public class CustomLightsPreferenceController extends NotificationPreferenceCont
             if (mChannel.getLightColor() != 0) {
                 ColorPickerPreference mCustomLight = (ColorPickerPreference) preference;
                 mCustomLight.setNewPreviewColor(mChannel.getLightColor());
+                mCustomLight.setDefaultValue(mChannel.getUnmodifiedLightColor());
             }
         }
     }
@@ -72,7 +73,7 @@ public class CustomLightsPreferenceController extends NotificationPreferenceCont
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (mChannel != null) {
             mLedColor = ((Integer) newValue).intValue();
-            mChannel.setLightColor(mLedColor);
+            mChannel.setModifiedLightColor(mLedColor);
             saveChannel();
         }
         return true;
