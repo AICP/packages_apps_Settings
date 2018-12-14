@@ -104,6 +104,7 @@
     <string name="app_ops_summaries_modify_calendar">am mìosachan atharrachadh</string>
     <string name="app_ops_summaries_wifi_scan">WiFi a sganadh</string>
     <string name="app_ops_summaries_notification">brath/toast</string>
+    <string name="app_ops_summaries_cell_scan">sganadh fòn-làimhe</string>
     <string name="app_ops_summaries_call_phone">fòn a chur gu fòn</string>
     <string name="app_ops_summaries_read_sms">SMS a leughadh</string>
     <string name="app_ops_summaries_write_sms">SMS a sgrìobhadh</string>
@@ -115,6 +116,7 @@
     <string name="app_ops_summaries_read_icc_sms">ICC SMS a leughadh</string>
     <string name="app_ops_summaries_write_icc_sms">ICC SMS a sgrìobhadh</string>
     <string name="app_ops_summaries_modify_settings">roghainnean atharrachadh</string>
+    <string name="app_ops_summaries_draw_on_top">tarraing os a chionn</string>
     <string name="app_ops_summaries_access_notifications">cothrom fhaighinn air brathan</string>
     <string name="app_ops_summaries_camera">an camara</string>
     <string name="app_ops_summaries_record_audio">fuaim a chlàradh</string>
@@ -176,6 +178,7 @@
     <string name="app_ops_labels_modify_calendar">Am mìosachan atharrachadh</string>
     <string name="app_ops_labels_wifi_scan">WiFi a sganadh</string>
     <string name="app_ops_labels_notification">Brath/toast</string>
+    <string name="app_ops_labels_cell_scan">Sganadh fòn-làimhe</string>
     <string name="app_ops_labels_call_phone">Fòn a chur gu fòn</string>
     <string name="app_ops_labels_read_sms">SMS a leughadh</string>
     <string name="app_ops_labels_write_sms">SMS a sgrìobhadh</string>
@@ -187,6 +190,7 @@
     <string name="app_ops_labels_read_icc_sms">ICC SMS a leughadh</string>
     <string name="app_ops_labels_write_icc_sms">ICC SMS a sgrìobhadh</string>
     <string name="app_ops_labels_modify_settings">Roghainnean atharrachadh</string>
+    <string name="app_ops_labels_draw_on_top">Tarraing os a chionn</string>
     <string name="app_ops_labels_access_notifications">Cothrom fhaighinn air brathan</string>
     <string name="app_ops_labels_camera">An camara</string>
     <string name="app_ops_labels_record_audio">Fuaim a chlàradh</string>
