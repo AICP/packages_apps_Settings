@@ -15,6 +15,7 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
         android:key="gesture_settings"
         android:title="@string/gesture_settings_title" >
 
@@ -23,5 +24,25 @@
             android:title="@string/use_bottom_gesture_title"
             android:summary="@string/use_bottom_gesture_summary"
             android:defaultValue="false" />
+
+    <com.aicp.gear.preference.SeekBarPreferenceCham
+        android:key="gesture_swipe_length"
+        android:title="@string/gesture_swipe_length_title"
+        android:summary="@string/gesture_swipe_length_summary"
+        android:persistent="false"
+        android:defaultValue="@*android:integer/config_navgestureswipeminlength"
+        aicpextras:unitsRight="@string/unit_px"
+        android:dependency="use_bottom_gesture_navigation" />
+
+    <com.aicp.gear.preference.SeekBarPreferenceCham
+        android:key="gesture_swipe_timeout"
+        android:title="@string/gesture_action_timeout_title"
+        android:summary="@string/gesture_action_timeout_summary"
+        android:max="500"
+        android:min="100"
+        android:defaultValue="@*android:integer/config_navgestureswipetimout"
+        android:persistent="false"
+        aicpextras:unitsRight="@string/unit_msec"
+        android:dependency="use_bottom_gesture_navigation" />
 
 </PreferenceScreen>
