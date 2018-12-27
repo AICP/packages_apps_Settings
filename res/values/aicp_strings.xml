@@ -211,4 +211,8 @@
     <!-- Battery saving mode for Location - GPS will be disabled -->
     <string name="location_mode_battery_saving_title">Battery saving mode</string>
     <string name="location_mode_battery_saving_summary">You can turn GPS off using this setting. As a result, your exact location will be unknown.</string>
+
+    <!-- Proximity wake -->
+    <string name="proximity_wake_title">Prevent accidental wake-up</string>
+    <string name="proximity_wake_summary">Check the proximity sensor prior to waking up screen</string>
 </resources>
