@@ -194,4 +194,7 @@
     <string name="app_ops_bluetooth_scan">bluetooth scan</string>
     <string name="app_ops_boot_completed">auto start</string>
 
+    <!-- Buttons: actions -->
+    <string name="action_screen_off">Screen off</string>
+    <string name="action_screen_power_menu">Power menu</string>
 </resources>
