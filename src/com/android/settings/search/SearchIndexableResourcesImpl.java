@@ -99,6 +99,8 @@ import com.android.settings.wfd.WifiDisplaySettings;
 import com.android.settings.wifi.ConfigureWifiSettings;
 import com.android.settings.wifi.WifiSettings;
 
+import com.aicp.extras.fragments.NetworkTraffic;
+
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
@@ -193,6 +195,7 @@ public class SearchIndexableResourcesImpl implements SearchIndexableResources {
         addIndex(RecentLocationRequestSeeAllFragment.class);
         addIndex(PreviouslyConnectedDeviceDashboardFragment.class);
         addIndex(BluetoothDashboardFragment.class);
+        addIndex(NetworkTraffic.class);
     }
 
     @Override
