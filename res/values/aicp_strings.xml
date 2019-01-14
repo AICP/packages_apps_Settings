@@ -97,4 +97,9 @@
 
     <!-- Volume link notification -->
     <string name="volume_link_notification_title">Link ring &amp; notification volumes</string>
+
+    <!-- [CHAR LIMIT=50] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to be always on -->
+    <string name="ambient_display_screen_summary_always_on">Always on / Increased battery usage</string>
+    <!-- [CHAR LIMIT=30] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to show when new notifications come in. -->
+    <string name="ambient_display_screen_summary_notifications">New notifications</string>
 </resources>
