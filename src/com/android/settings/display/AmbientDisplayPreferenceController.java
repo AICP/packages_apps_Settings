@@ -20,7 +20,6 @@ import android.os.UserHandle;
 import android.support.v7.preference.Preference;
 
 import com.android.internal.hardware.AmbientDisplayConfiguration;
-import com.aicp.gear.util.AicpUtils;
 import com.android.settings.R;
 import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settingslib.core.AbstractPreferenceController;
@@ -29,7 +28,6 @@ public class AmbientDisplayPreferenceController extends AbstractPreferenceContro
         PreferenceControllerMixin {
 
     private static final int MY_USER_ID = UserHandle.myUserId();
-    private static final String PACKAGE_CUSTOM_DOZE = "com.custom.ambient.display";
 
     private final AmbientDisplayConfiguration mConfig;
     private final String mKey;
@@ -43,7 +41,7 @@ public class AmbientDisplayPreferenceController extends AbstractPreferenceContro
 
     @Override
     public boolean isAvailable() {
-        return mConfig.available() && !AicpUtils.isPackageInstalled(mContext.getApplicationContext(), PACKAGE_CUSTOM_DOZE);
+        return mConfig.available();
     }
 
     @Override
