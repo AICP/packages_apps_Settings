@@ -16,6 +16,7 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aicp="http://schemas.android.com/apk/res-auto"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="display_settings_screen"
     android:title="@string/display_settings"
@@ -124,6 +125,12 @@
         android:fragment="com.android.settings.security.LockscreenDashboardFragment"
         settings:controller="com.android.settings.security.screenlock.LockScreenPreferenceController"
         settings:userRestriction="no_ambient_display" />
+
+    <com.aicp.gear.preference.SelfRemovingPreference
+        android:key="doze_device_settings"
+        android:title="@string/ambient_display_screen_title">
+        <intent android:action="com.aicp.settings.device.DOZE_SETTINGS" />
+    </com.aicp.gear.preference.SelfRemovingPreference>
 
     <SwitchPreference
         android:key="camera_gesture"
