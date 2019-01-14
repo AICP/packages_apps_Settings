@@ -74,6 +74,8 @@ android_library {
         "android.hardware.dumpstate-V1.1-java",
         "lottie",
         "windowExtLib",
+        "AicpGear-preference",
+        "AicpGear-util",
     ],
 
     libs: [
