@@ -77,6 +77,8 @@ android_library {
         "lottie",
         "WifiTrackerLib",
         "SettingsLibActivityEmbedding",
+        "AicpGear-preference",
+        "AicpGear-util",
     ],
 
     libs: [
