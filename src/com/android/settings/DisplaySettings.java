@@ -18,9 +18,11 @@ package com.android.settings;
 
 import android.app.settings.SettingsEnums;
 import android.content.Context;
+import android.hardware.display.AmbientDisplayConfiguration;
 import android.os.Bundle;
 
 import com.android.settings.dashboard.DashboardFragment;
+import com.android.settings.display.AmbientDisplayPreferenceController;
 import com.android.settings.display.BrightnessLevelPreferenceController;
 import com.android.settings.display.CameraGesturePreferenceController;
 import com.android.settings.display.LiftToWakePreferenceController;
@@ -45,6 +47,7 @@ public class DisplaySettings extends DashboardFragment {
     private static final String TAG = "DisplaySettings";
 
     private static final String KEY_SCREEN_TIMEOUT = "screen_timeout";
+    private static final String KEY_AMBIENT_DISPLAY = "doze_device_settings";
 
     @Override
     public int getMetricsCategory() {
@@ -84,6 +87,10 @@ public class DisplaySettings extends DashboardFragment {
         controllers.add(new NightDisplayPreferenceController(context));
         controllers.add(new NightModePreferenceController(context));
         controllers.add(new ScreenSaverPreferenceController(context));
+        controllers.add(new AmbientDisplayPreferenceController(
+                context,
+                new AmbientDisplayConfiguration(context),
+                KEY_AMBIENT_DISPLAY));
         controllers.add(new TapToWakePreferenceController(context));
         controllers.add(new TimeoutPreferenceController(context, KEY_SCREEN_TIMEOUT));
         controllers.add(new VrDisplayPreferenceController(context));
