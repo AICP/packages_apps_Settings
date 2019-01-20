@@ -352,8 +352,12 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
                 icon = new RoundedHomepageIcon(mContext, icon);
                 ((RoundedHomepageIcon) icon).setBackgroundColor(mAccentColor);
             } else if (mIconStyle == 2) {
-                icon.setTint(mNormalColor);
+                icon = new RoundedHomepageIcon(mContext, icon);
+                ((RoundedHomepageIcon) icon).setBackgroundColor(mContext.getColor(R.color.settings_icon_oneplus));
+                icon.setTint(mAccentColor);
             } else if (mIconStyle == 3) {
+                icon.setTint(mNormalColor);
+            } else if (mIconStyle == 4) {
                 icon.setTint(mAccentColor);
             }
             mCache.updateIcon(tile.icon, icon);
