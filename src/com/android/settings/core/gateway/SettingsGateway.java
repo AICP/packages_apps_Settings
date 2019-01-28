@@ -50,6 +50,7 @@ import com.android.settings.applications.appinfo.ExternalSourcesDetails;
 import com.android.settings.applications.appinfo.PictureInPictureDetails;
 import com.android.settings.applications.appinfo.PictureInPictureSettings;
 import com.android.settings.applications.appinfo.WriteSettingsDetails;
+import com.android.settings.applications.appops.AppOpsSummary;
 import com.android.settings.applications.appops.BackgroundCheckSummary;
 import com.android.settings.applications.assist.ManageAssist;
 import com.android.settings.applications.manageapplications.ManageApplications;
@@ -269,6 +270,7 @@ public class SettingsGateway {
             StartAe.class.getName(),
             AmbientDisplaySettings.class.getName(),
             RunningServices.class.getName(),
+            AppOpsSummary.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
