@@ -29,16 +29,6 @@
         android:fragment="com.android.settings.gestures.GestureSettings"
         settings:controller="com.android.settings.gestures.GesturesSettingPreferenceController"/>
 
-    <!-- Button Settings -->
-    <Preference
-        android:key="button_settings"
-        android:title="@string/button_settings_title"
-        android:summary="@string/button_settings_title_summary"
-        android:icon="@drawable/ic_settings_buttons"
-        android:order="-70"
-        android:fragment="com.android.settings.gzosp.dashboard.ButtonSettings"
-        settings:controller="com.android.settings.gzosp.dashboard.ButtonSettingsPreferenceController"/>
-
     <!-- Backup -->
     <Preference
         android:key="backup_settings"

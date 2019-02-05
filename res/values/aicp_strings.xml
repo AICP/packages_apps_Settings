@@ -37,8 +37,6 @@
     <string name="adb_over_network_warning">WARNING: When ADB over network is enabled, your phone is open for intrusions on all connected networks, including GSM data network!\n\nOnly use this feature when you are connected on trusted networks.\n\nDo you really want to enable this function?</string>
     <string name="adb_over_network_warning_title">Allow ADB over network?</string>
 
-    <string name="wake_screen_title">Wake screen</string>
-
     <!-- Volume Steps -->
     <string name="volume_steps_title">Volume steps</string>
     <string name="volume_steps_alarm_title">Volume steps: Alarm</string>
@@ -193,10 +191,6 @@
     <string name="app_ops_start_foreground">start foreground</string>
     <string name="app_ops_bluetooth_scan">bluetooth scan</string>
     <string name="app_ops_boot_completed">auto start</string>
-
-    <!-- Buttons: actions -->
-    <string name="action_screen_off">Screen off</string>
-    <string name="action_power_menu">Power menu</string>
 
     <!-- Increasing ring tone volume -->
     <string name="increasing_ring_volume_option_title">Increasing ring volume</string>

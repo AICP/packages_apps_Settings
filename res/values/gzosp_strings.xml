@@ -59,37 +59,4 @@
     <string name="unit_px">px</string>
     <string name="unit_msec">ms</string>
 
-    <!-- Button Settings -->
-    <string name="button_settings_title">Buttons</string>
-    <string name="button_settings_title_summary">Perform custom button actions</string>
-    <string name="button_settings_description">Assign custom actions to various keys on your device.\nVolume rocker is separately handled in AicpExtras.</string>
-    <!-- Navigation bar -->
-    <string name="navigation_bar_title">Navigation bar</string>
-    <string name="navigation_bar_title_summary">Enable on-screen navigation keys</string>
-    <!-- Button brightness -->
-    <string name="hardware_brightness_keys_title">Backlight</string>
-    <string name="hardware_brightness_keys_title_summary">Enable navigation keys backlight</string>
-    <!-- Buttons: Categories -->
-    <string name="home_key_title">Home button</string>
-    <string name="back_key_title">Back button</string>
-    <string name="menu_key_title">Menu button</string>
-    <string name="assist_key_title">Assist button</string>
-    <string name="app_switch_key_title">Recents button</string>
-    <string name="camera_key_title">Camera button</string>
-    <!-- Buttons: Actions -->
-    <string name="short_press_title">Short press action</string>
-    <string name="long_press_title">Long press action</string>
-    <string name="double_tap_title">Double tap action</string>
-    <string name="action_nothing">No action</string>
-    <string name="action_menu">Open/close menu</string>
-    <string name="action_app_switch">Recents</string>
-    <string name="action_search">Search assistant</string>
-    <string name="action_voice_search">Voice search</string>
-    <string name="action_in_app_search">In-app search</string>
-    <string name="action_launch_camera">Open camera</string>
-    <string name="action_last_app">Launch last app</string>
-    <string name="action_forceclose_app">Force close active app</string>
-    <string name="action_splitscreen">Splitscreen</string>
-    <string name="action_screenshot">Take screenshot</string>
-
 </resources>
