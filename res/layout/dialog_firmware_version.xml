@@ -78,6 +78,16 @@
 
         <TextView
             style="@style/device_info_dialog_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@*android:string/aicp_vendor_security_patch"/>
+        <com.android.settings.deviceinfo.aboutphone.AicpVendorSecurityPatchTextView
+            style="@style/device_info_dialog_value"
+            android:layout_width="match_parent"
+	    android:layout_height="wrap_content"/>
+
+        <TextView
+            style="@style/device_info_dialog_label"
             android:id="@+id/baseband_version_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
