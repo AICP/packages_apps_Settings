@@ -38,6 +38,10 @@
         android:title="@string/sort_order_size"
         android:showAsAction="never" />
     <item
+        android:id="@+id/filter_all_apps"
+        android:title="@string/filter_all_apps"
+        android:showAsAction="never" />
+    <item
         android:id="@+id/sort_order_recent_notification"
         android:title="@string/sort_order_recent_notification"
         android:showAsAction="never" />
