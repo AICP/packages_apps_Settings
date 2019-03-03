@@ -54,36 +54,4 @@
     <string name="unit_dpi">dpi</string>
     <string name="unit_px">px</string>
     <string name="unit_msec">ms</string>
-    <!-- Button Settings -->
-    <string name="button_settings_title">Knoppen</string>
-    <string name="button_settings_title_summary">Aangepaste knopacties uitvoeren</string>
-    <string name="button_settings_description">Aangepaste acties toewijzen aan diverse toetsen op uw apparaat. \nVolumetoetsen worden afzonderlijk ingesteld in AicpExtras.</string>
-    <!-- Navigation bar -->
-    <string name="navigation_bar_title">Navigatiebalk</string>
-    <string name="navigation_bar_title_summary">Schermnavigatieknoppen inschakelen</string>
-    <!-- Button brightness -->
-    <string name="hardware_brightness_keys_title">Achtergrondverlichting</string>
-    <string name="hardware_brightness_keys_title_summary">Achtergrondverlichting navigatieknoppen inschakelen</string>
-    <!-- Buttons: Categories -->
-    <string name="home_key_title">Homeknop</string>
-    <string name="back_key_title">Terugknop</string>
-    <string name="menu_key_title">Menuknop</string>
-    <string name="assist_key_title">Assistent-knop</string>
-    <string name="app_switch_key_title">Recente apps-knop</string>
-    <string name="camera_key_title">Cameraknop</string>
-    <!-- Buttons: Actions -->
-    <string name="short_press_title">Actie bij kort indrukken</string>
-    <string name="long_press_title">Actie bij lang indrukken</string>
-    <string name="double_tap_title">Actie bij dubbeltikken</string>
-    <string name="action_nothing">Geen actie</string>
-    <string name="action_menu">Open/Sluit menu</string>
-    <string name="action_app_switch">Recente apps</string>
-    <string name="action_search">Zoekassistent</string>
-    <string name="action_voice_search">Spraakgestuurd zoeken</string>
-    <string name="action_in_app_search">In-app zoeken</string>
-    <string name="action_launch_camera">Open camera</string>
-    <string name="action_last_app">Open laatst geopende app</string>
-    <string name="action_forceclose_app">Actieve app geforceerd sluiten</string>
-    <string name="action_splitscreen">Gesplitst scherm</string>
-    <string name="action_screenshot">Maak schermafdruk</string>
 </resources>

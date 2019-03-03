@@ -34,7 +34,6 @@
     <!-- Warning for Adb over Network -->
     <string name="adb_over_network_warning">WARNUNG: Wenn Sie \"ADB über Netzwerk\" aktivieren, ist ihr Telefon für Zugriffe aus allen verbundenen Netzwerken offen, auch aus dem GSM-Datennetz!\n\nAktivieren Sie diese Funktion nur, wenn Sie mit einem vertrauenwürdigen Netzwerk verbunden sind.\n\nWollen Sie diese Funktion wirklich aktivieren?</string>
     <string name="adb_over_network_warning_title">ADB über Netzwerk erlauben?</string>
-    <string name="wake_screen_title">Bildschirm aktivieren</string>
     <!-- Volume Steps -->
     <string name="volume_steps_title">Lautstärke-Schritte</string>
     <string name="volume_steps_alarm_title">Lautstärke-Schritte: Wecker</string>
@@ -178,11 +177,17 @@
     <string name="app_ops_start_foreground">Im Vordergrund starten</string>
     <string name="app_ops_bluetooth_scan">Bluetooth-Suche</string>
     <string name="app_ops_boot_completed">Automatisch starten</string>
-    <!-- Buttons: actions -->
-    <string name="action_screen_off">Bildschirm ausschalten</string>
-    <string name="action_power_menu">Ein/Aus-Menü</string>
     <!-- Increasing ring tone volume -->
     <string name="increasing_ring_volume_option_title">Ansteigende Klingeltonlautstärke</string>
     <string name="increasing_ring_min_volume_title">Anfangslautstärke</string>
     <string name="increasing_ring_ramp_up_time_title">Anstiegszeit</string>
+    <!-- Running services -->
+    <string name="background_processes_settings_title">Hintergrundprozesse</string>
+    <!-- Font picker -->
+    <string name="font_picker_title">Schriftart</string>
+    <string name="disable_fonts_installed_title">Die Auswahl von Schriftarten ist nicht verfügbar, um Konflikte mit Substratum zu vermeiden. Deinstallieren Sie es, wenn Sie den Schriftarten-Manager verwenden möchten.</string>
+    <string name="font_picker_progress">Aktiviere neue Schriftart\u2026</string>
+    <!-- doze on charge -->
+    <string name="doze_on_charge_title">Beim Laden anzeigen</string>
+    <string name="doze_on_charge_summary">Bildschirm beim Laden aktiv halten</string>
 </resources>

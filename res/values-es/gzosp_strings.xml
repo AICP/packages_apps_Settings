@@ -54,36 +54,4 @@
     <string name="unit_dpi">dpi</string>
     <string name="unit_px">px</string>
     <string name="unit_msec">ms</string>
-    <!-- Button Settings -->
-    <string name="button_settings_title">Botones</string>
-    <string name="button_settings_title_summary">Acciones personalizadas de los botones</string>
-    <string name="button_settings_description">Asignar acciones personalizadas a distintos botones del dispositivo.\nLos botones de volumen se configuran de otra forma desde AicpExtras.</string>
-    <!-- Navigation bar -->
-    <string name="navigation_bar_title">Barra de navegación</string>
-    <string name="navigation_bar_title_summary">Activar barra de navegación en la pantalla</string>
-    <!-- Button brightness -->
-    <string name="hardware_brightness_keys_title">Retroiluminación</string>
-    <string name="hardware_brightness_keys_title_summary">Activar la retroiluminación de las teclas de navegación</string>
-    <!-- Buttons: Categories -->
-    <string name="home_key_title">Botón Inicio</string>
-    <string name="back_key_title">Botón Atrás</string>
-    <string name="menu_key_title">Botón Menú</string>
-    <string name="assist_key_title">Botón de asistente</string>
-    <string name="app_switch_key_title">Botón Recientes</string>
-    <string name="camera_key_title">Botón de la cámara</string>
-    <!-- Buttons: Actions -->
-    <string name="short_press_title">Acción de pulsación corta</string>
-    <string name="long_press_title">Acción de pulsación larga</string>
-    <string name="double_tap_title">Acción de doble toque</string>
-    <string name="action_nothing">Ninguna acción</string>
-    <string name="action_menu">Abrir/cerrar menú</string>
-    <string name="action_app_switch">Recientes</string>
-    <string name="action_search">Asistente de búsqueda</string>
-    <string name="action_voice_search">Búsqueda por voz</string>
-    <string name="action_in_app_search">Búsqueda en aplicaciones</string>
-    <string name="action_launch_camera">Abrir cámara</string>
-    <string name="action_last_app">Iniciar última aplicación</string>
-    <string name="action_forceclose_app">Forzar cierre de la aplicación en primer plano</string>
-    <string name="action_splitscreen">Pantalla dividida</string>
-    <string name="action_screenshot">Capturar pantalla</string>
 </resources>

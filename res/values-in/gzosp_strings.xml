@@ -39,25 +39,4 @@
     <string name="face_auto_unlock_summary">Lewati kunci layar setelah terbuka dengan wajah</string>
     <!-- Three-fingers-swipe to screenshot -->
     <!-- OP like Navigation Gestures -->
-    <!-- Button Settings -->
-    <string name="button_settings_title">Tombol</string>
-    <!-- Navigation bar -->
-    <string name="navigation_bar_title">Bilah navigasi</string>
-    <!-- Button brightness -->
-    <string name="hardware_brightness_keys_title">Lampu latar</string>
-    <!-- Buttons: Categories -->
-    <string name="home_key_title">Tombol beranda</string>
-    <string name="back_key_title">Tombol kembali</string>
-    <string name="menu_key_title">Tombol menu</string>
-    <string name="app_switch_key_title">Tombol recent</string>
-    <string name="camera_key_title">Tombol kamera</string>
-    <!-- Buttons: Actions -->
-    <string name="long_press_title">Tindakan tekan lama</string>
-    <string name="double_tap_title">Tindakan tekan dua kali</string>
-    <string name="action_nothing">Tidak ada tindakan</string>
-    <string name="action_menu">Buka/Tutup menu</string>
-    <string name="action_app_switch">Recent</string>
-    <string name="action_search">Asisten pencarian</string>
-    <string name="action_voice_search">Pencarian suara</string>
-    <string name="action_launch_camera">Buka kamera</string>
 </resources>

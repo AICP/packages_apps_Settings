@@ -43,39 +43,15 @@
     <string name="three_finger_gesture">Свайп для создания скриншота</string>
     <string name="three_finger_gesture_summary">Свайп тремя пальцами вниз для создания скриншота</string>
     <!-- OP like Navigation Gestures -->
+    <string name="gesture_settings_title">Жесты навигации</string>
     <string name="gesture_settings_info">Панель навигации должна быть отключена!\n\nДоступны жесты:\n\nНазад\n- Свайп вверх слева или справа\n\nДомой\n- Свайп вверх по центру\n\nНедавние приложения\n\n- Свайп вверх по центру и удержание\n\nДолгое нажатие \"Домой\"\n- Короткий свайп вверх и удержание в центре</string>
     <string name="use_bottom_gesture_title">Жесты навигации</string>
     <string name="use_bottom_gesture_summary">Используйте свайпы вверх для навигации</string>
-    <!-- Button Settings -->
-    <string name="button_settings_title">Кнопки</string>
-    <string name="button_settings_title_summary">Выполнение пользовательских действий кнопки</string>
-    <string name="button_settings_description">Назначьте пользовательские действия различным клавишам на вашем устройстве.\nКлавиши громкости отдельно настраиваются в AicpExtras.</string>
-    <!-- Navigation bar -->
-    <string name="navigation_bar_title">Панель навигации</string>
-    <string name="navigation_bar_title_summary">Включить наэкранные кнопки навигации</string>
-    <!-- Button brightness -->
-    <string name="hardware_brightness_keys_title">Подсветка</string>
-    <string name="hardware_brightness_keys_title_summary">Включить подсветку кнопок навигации</string>
-    <!-- Buttons: Categories -->
-    <string name="home_key_title">Кнопка «Домой»</string>
-    <string name="back_key_title">Кнопка «Назад»</string>
-    <string name="menu_key_title">Кнопка «Меню»</string>
-    <string name="assist_key_title">Кнопка Ассистента</string>
-    <string name="app_switch_key_title">Кнопка «Недавние приложения»</string>
-    <string name="camera_key_title">Кнопка «Камера»</string>
-    <!-- Buttons: Actions -->
-    <string name="short_press_title">Действие при коротком нажатии</string>
-    <string name="long_press_title">Действие при долгом нажатии</string>
-    <string name="double_tap_title">Действие при двойном нажатии</string>
-    <string name="action_nothing">Нет действия</string>
-    <string name="action_menu">Открытие/закрытие меню</string>
-    <string name="action_app_switch">Недавние приложения</string>
-    <string name="action_search">Поисковый помощник</string>
-    <string name="action_voice_search">Голосовой поиск</string>
-    <string name="action_in_app_search">Поиск в приложении</string>
-    <string name="action_launch_camera">Открыть камеру</string>
-    <string name="action_last_app">Запустить последнее приложение</string>
-    <string name="action_forceclose_app">Принудительное закрытие активного приложения</string>
-    <string name="action_splitscreen">Раздельный экран</string>
-    <string name="action_screenshot">Сделать снимок экрана</string>
+    <string name="gesture_swipe_length_title">Высота области жестов</string>
+    <string name="gesture_swipe_length_summary">Высота снизу для срабатывания жестов</string>
+    <string name="gesture_action_timeout_title">Время обработки жеста</string>
+    <string name="gesture_action_timeout_summary">Время ожидания до начала выполнения жеста</string>
+    <string name="unit_dpi">dpi</string>
+    <string name="unit_px">пикс</string>
+    <string name="unit_msec">мсек</string>
 </resources>

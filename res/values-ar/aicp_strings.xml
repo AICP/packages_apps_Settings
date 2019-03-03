@@ -54,6 +54,9 @@
     <string name="notification_log_summary">إظهار سجل تاريخ الإشعارات</string>
     <!-- App Ops Categories -->
     <!-- App ops labels -->
-    <!-- Buttons: actions -->
     <!-- Increasing ring tone volume -->
+    <!-- Running services -->
+    <string name="background_processes_settings_title">العمليات في الخلفية</string>
+    <!-- Font picker -->
+    <!-- doze on charge -->
 </resources>

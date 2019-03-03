@@ -54,36 +54,4 @@
     <string name="unit_dpi">dpi</string>
     <string name="unit_px">px</string>
     <string name="unit_msec">ms</string>
-    <!-- Button Settings -->
-    <string name="button_settings_title">Gombok</string>
-    <string name="button_settings_title_summary">Egyéni gombműveletek végrehajtása</string>
-    <string name="button_settings_description">Rendeljen egyéni műveleteket a készüléke billentyűihez.\nA hangerőszabályzó külön kezelhető az AICPExtrákban.</string>
-    <!-- Navigation bar -->
-    <string name="navigation_bar_title">Navigációs sáv</string>
-    <string name="navigation_bar_title_summary">Képernyőn megjelenő navigációs gombok engedélyezése</string>
-    <!-- Button brightness -->
-    <string name="hardware_brightness_keys_title">Háttérvilágítás</string>
-    <string name="hardware_brightness_keys_title_summary">Navigációs gombok háttérvilágításának engedélyezése</string>
-    <!-- Buttons: Categories -->
-    <string name="home_key_title">Kezdőoldal-gomb</string>
-    <string name="back_key_title">Visszagomb</string>
-    <string name="menu_key_title">Menügomb</string>
-    <string name="assist_key_title">Asszisztens-gomb</string>
-    <string name="app_switch_key_title">Előzmények-gomb</string>
-    <string name="camera_key_title">Kameragomb</string>
-    <!-- Buttons: Actions -->
-    <string name="short_press_title">Rövid érintés művelete</string>
-    <string name="long_press_title">Hosszan nyomás művelete</string>
-    <string name="double_tap_title">Dupla koppintás művelete</string>
-    <string name="action_nothing">Nincs művelet</string>
-    <string name="action_menu">Megnyitás/Bezárás menü</string>
-    <string name="action_app_switch">Előzmények</string>
-    <string name="action_search">Keresőasszisztens</string>
-    <string name="action_voice_search">Hangalapú keresés</string>
-    <string name="action_in_app_search">Alkalmazáson belüli keresés</string>
-    <string name="action_launch_camera">Kamera megnyitása</string>
-    <string name="action_last_app">Legutóbbi alkalmazás megnyitása</string>
-    <string name="action_forceclose_app">Aktív alkalmazás kényszerített bezárása</string>
-    <string name="action_splitscreen">Osztott képernyő</string>
-    <string name="action_screenshot">Képernyőmentés készítése</string>
 </resources>

@@ -56,6 +56,9 @@
     <string name="notification_log_summary">Tampilkan riwayat pemberitahuan</string>
     <!-- App Ops Categories -->
     <!-- App ops labels -->
-    <!-- Buttons: actions -->
     <!-- Increasing ring tone volume -->
+    <!-- Running services -->
+    <string name="background_processes_settings_title">Proses latar belakang</string>
+    <!-- Font picker -->
+    <!-- doze on charge -->
 </resources>

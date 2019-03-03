@@ -54,36 +54,4 @@
     <string name="unit_dpi">dpi</string>
     <string name="unit_px">px</string>
     <string name="unit_msec">ms</string>
-    <!-- Button Settings -->
-    <string name="button_settings_title">Tlačítka</string>
-    <string name="button_settings_title_summary">Proveďte vlastní akce tlačítek</string>
-    <string name="button_settings_description">Přiřaďte vlastní akce k různým tlačítkům v zařízení.\nTlačítko hlasitosti se samostatně nachází v Aicp Extras.</string>
-    <!-- Navigation bar -->
-    <string name="navigation_bar_title">Navigační panel</string>
-    <string name="navigation_bar_title_summary">Zapnout navigační tlačítka na obrazovce</string>
-    <!-- Button brightness -->
-    <string name="hardware_brightness_keys_title">Podsvícení</string>
-    <string name="hardware_brightness_keys_title_summary">Zapnout podsvícení navigačních tlačítek</string>
-    <!-- Buttons: Categories -->
-    <string name="home_key_title">Tlačítko Domů</string>
-    <string name="back_key_title">Tlačítko Zpět</string>
-    <string name="menu_key_title">Tlačítko Nabídka</string>
-    <string name="assist_key_title">Tlačítko Asistent</string>
-    <string name="app_switch_key_title">Tlačítko Nedávné aplikace</string>
-    <string name="camera_key_title">Tlačítko fotoaparátu</string>
-    <!-- Buttons: Actions -->
-    <string name="short_press_title">Akce krátkým stiskem</string>
-    <string name="long_press_title">Akce dlouhým stiskem</string>
-    <string name="double_tap_title">Akce dvojím poklepáním</string>
-    <string name="action_nothing">Žádná akce</string>
-    <string name="action_menu">Otevřít/zavřít nabídku</string>
-    <string name="action_app_switch">Nedávné</string>
-    <string name="action_search">Vyhledávací asistent</string>
-    <string name="action_voice_search">Hlasové vyhledávání</string>
-    <string name="action_in_app_search">Vyhledávání v aplikacích</string>
-    <string name="action_launch_camera">Otevřít fotoaparát</string>
-    <string name="action_last_app">Spustit poslední aplikaci</string>
-    <string name="action_forceclose_app">Vynuceně ukončit aktivní aplikaci</string>
-    <string name="action_splitscreen">Rozdělit obrazovku</string>
-    <string name="action_screenshot">Pořídit snímek obrazovky</string>
 </resources>

@@ -56,6 +56,9 @@
     <string name="notification_log_summary">Pokaż historię powiadomień</string>
     <!-- App Ops Categories -->
     <!-- App ops labels -->
-    <!-- Buttons: actions -->
     <!-- Increasing ring tone volume -->
+    <!-- Running services -->
+    <string name="background_processes_settings_title">Procesy pracujące w tle</string>
+    <!-- Font picker -->
+    <!-- doze on charge -->
 </resources>

@@ -54,36 +54,4 @@
     <string name="unit_dpi">点每英寸</string>
     <string name="unit_px">像素</string>
     <string name="unit_msec">毫秒</string>
-    <!-- Button Settings -->
-    <string name="button_settings_title">按钮</string>
-    <string name="button_settings_title_summary">执行自定义按钮操作</string>
-    <string name="button_settings_description">将自定义操作分配给设备上的各种键。\n音量摇杆在 Aicp 附加设置中单独处理。</string>
-    <!-- Navigation bar -->
-    <string name="navigation_bar_title">导航栏</string>
-    <string name="navigation_bar_title_summary">启用屏幕上的导航键</string>
-    <!-- Button brightness -->
-    <string name="hardware_brightness_keys_title">背光</string>
-    <string name="hardware_brightness_keys_title_summary">启用导航键背光</string>
-    <!-- Buttons: Categories -->
-    <string name="home_key_title">主页按钮</string>
-    <string name="back_key_title">返回按钮</string>
-    <string name="menu_key_title">菜单按钮</string>
-    <string name="assist_key_title">助手按钮</string>
-    <string name="app_switch_key_title">最近任务按钮</string>
-    <string name="camera_key_title">相机按钮</string>
-    <!-- Buttons: Actions -->
-    <string name="short_press_title">短按操作</string>
-    <string name="long_press_title">长按操作</string>
-    <string name="double_tap_title">双击操作</string>
-    <string name="action_nothing">无动作</string>
-    <string name="action_menu">开启/关闭菜单</string>
-    <string name="action_app_switch">最近任务面板</string>
-    <string name="action_search">搜索助手</string>
-    <string name="action_voice_search">语音搜索</string>
-    <string name="action_in_app_search">应用内搜索</string>
-    <string name="action_launch_camera">打开相机</string>
-    <string name="action_last_app">启动上一个应用</string>
-    <string name="action_forceclose_app">强制关闭活动应用</string>
-    <string name="action_splitscreen">分屏</string>
-    <string name="action_screenshot">屏幕截图</string>
 </resources>

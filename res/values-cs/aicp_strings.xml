@@ -34,7 +34,6 @@
     <!-- Warning for Adb over Network -->
     <string name="adb_over_network_warning">UPOZORNĚNÍ: Pokud je povoleno ADB přes síťové připojení, zařízení je otevřené pro pokusy o průniky na všech připojených sítích, včetně GSM datové sítě!\n\nPoužijte tuto vlastnost pouze pokud jste připojeni k důvěryhodné síti.\n\nOpravdu chcete povolit tuto funkci?</string>
     <string name="adb_over_network_warning_title">Povolit ADB přes síť?</string>
-    <string name="wake_screen_title">Probuzení obrazovky</string>
     <!-- Volume Steps -->
     <string name="volume_steps_title">Kroky hlasitosti</string>
     <string name="volume_steps_alarm_title">Kroky hlasitosti: Budík</string>
@@ -178,11 +177,17 @@
     <string name="app_ops_start_foreground">spustit na popředí</string>
     <string name="app_ops_bluetooth_scan">skenování Bluetooth</string>
     <string name="app_ops_boot_completed">spustit při startu</string>
-    <!-- Buttons: actions -->
-    <string name="action_screen_off">Vypnutá obrazovka</string>
-    <string name="action_power_menu">Menu napájení</string>
     <!-- Increasing ring tone volume -->
     <string name="increasing_ring_volume_option_title">Narůstající hlasitost vyzvánění</string>
     <string name="increasing_ring_min_volume_title">Počáteční hlasitost</string>
     <string name="increasing_ring_ramp_up_time_title">Doba zesilování</string>
+    <!-- Running services -->
+    <string name="background_processes_settings_title">Procesy na pozadí</string>
+    <!-- Font picker -->
+    <string name="font_picker_title">Písmo</string>
+    <string name="disable_fonts_installed_title">Výběr písma není k dispozici, aby se předešlo konfliktům se Substratum. Pokud chcete použít výběr písma, odinstalujte Substratum.</string>
+    <string name="font_picker_progress">Aplikuji nové písmo\u2026</string>
+    <!-- doze on charge -->
+    <string name="doze_on_charge_title">Zobrazit při nabíjení</string>
+    <string name="doze_on_charge_summary">Probudit obrazovku při nabíjení</string>
 </resources>

@@ -56,6 +56,9 @@
     <string name="notification_log_summary">Zobraziť protokol histórie upozornení</string>
     <!-- App Ops Categories -->
     <!-- App ops labels -->
-    <!-- Buttons: actions -->
     <!-- Increasing ring tone volume -->
+    <!-- Running services -->
+    <string name="background_processes_settings_title">Procesy na pozadí</string>
+    <!-- Font picker -->
+    <!-- doze on charge -->
 </resources>
