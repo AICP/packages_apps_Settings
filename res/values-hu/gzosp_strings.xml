@@ -15,7 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- MSIM Manual provisioning -->
     <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g> állapota <xliff:g id="status" example="disabled">%2$s</xliff:g></string>
     <string name="sim_enabled">engedélyezett</string>
     <string name="sim_disabled">letiltott</string>
@@ -33,16 +32,12 @@
     <string name="sub_deactivate_success">A SIM-kártya deaktiválva.</string>
     <string name="sub_deactivate_failed">A deaktiválás meghiúsult.</string>
     <string name="available_sims_title">Elérhető SIM-kártyák</string>
-    <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">Töltés kijelzése a záróképernyőn</string>
     <string name="lockscreen_battery_info_summary">Megjeleníti a leadott maximális töltőfeszültséget és az akkumulátor hőmérsékletét a zárképernyőn töltés közben</string>
-    <!-- Facelock toggle -->
     <string name="face_auto_unlock_title">Automatikus arcfeloldás</string>
     <string name="face_auto_unlock_summary">Záróképernyő kihagyása az arcfeloldás után</string>
-    <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Képernyőkép csúsztatással</string>
     <string name="three_finger_gesture_summary">Csúsztasson három ujjal képernyőkép készítéséhez</string>
-    <!-- OP like Navigation Gestures -->
     <string name="gesture_settings_title">Navigációs vezérlőmozdulatok</string>
     <string name="gesture_settings_info">A navigációs sávot le kell tiltani!\n\nElérhető gesztusok:\n\nVissza\n- Felfelé csúsztatás bal vagy jobb oldalon\n\nKezdőoldal\n- Felfelé csúsztatás középen\n\nAlkalmazáselőzmények\n- Felfelé csúsztatás középen majd megtartás\n\nKezdőoldal-gomb hosszan nyomása\n- Rövid felfelé csúsztatás és középentartás</string>
     <string name="use_bottom_gesture_title">Navigációs vezérlőmozdulatok</string>

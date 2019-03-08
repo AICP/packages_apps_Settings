@@ -15,7 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- MSIM Manual provisioning -->
     <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g> ist <xliff:g id="status" example="disabled">%2$s</xliff:g></string>
     <string name="sim_enabled">aktiviert</string>
     <string name="sim_disabled">deaktiviert</string>
@@ -33,16 +32,12 @@
     <string name="sub_deactivate_success">SIM-Karte deaktiviert.</string>
     <string name="sub_deactivate_failed">Deaktivierung fehlgeschlagen.</string>
     <string name="available_sims_title">Verfügbare SIM-Karten</string>
-    <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">Informationen zur Aufladung auf dem Sperrbildschirm</string>
     <string name="lockscreen_battery_info_summary">Zeige die maximal ermittelte Ladespannung und Akkutemperatur auf dem Sperrbildschirm während der Aufladung</string>
-    <!-- Facelock toggle -->
     <string name="face_auto_unlock_title">Automatisches Entsperren per Gesichtserkennung</string>
     <string name="face_auto_unlock_summary">Sperrbildschirm nach Gesichtserkennung automatisch übergehen</string>
-    <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Wischen um Bildschirmfoto zu erstellen</string>
     <string name="three_finger_gesture_summary">Wische mit drei Fingern, um ein Bildschirmfoto aufzunehmen</string>
-    <!-- OP like Navigation Gestures -->
     <string name="gesture_settings_title">Gestennavigation</string>
     <string name="gesture_settings_info">Die Navigationsleiste muss deaktiviert werden!\n\nVerfügbare Gesten:\n\nZurück                 - auf der Linken oder rechten Seite nach oben wischen\nStart                 - Mittig nach oben wischen\nVerlauf                - Mittig nach oben wischen und halten\nStart (Langes Drücken) - Mittig kurz nach oben wischen und halten</string>
     <string name="use_bottom_gesture_title">Gestennavigation</string>

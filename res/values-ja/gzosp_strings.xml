@@ -15,7 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- MSIM Manual provisioning -->
     <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g>は<xliff:g id="status" example="disabled">%2$s</xliff:g>です</string>
     <string name="sim_enabled">有効</string>
     <string name="sim_disabled">無効</string>
@@ -33,12 +32,8 @@
     <string name="sub_deactivate_success">SIM をアクティベート解除しました。</string>
     <string name="sub_deactivate_failed">アクティベート解除に失敗しました。</string>
     <string name="available_sims_title">利用可能な SIM カード</string>
-    <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">ロック画面での充電情報</string>
     <string name="lockscreen_battery_info_summary">充電中、ロック画面に接続した充電器の最大電流/電圧とバッテリーの温度を表示します</string>
-    <!-- Facelock toggle -->
     <string name="face_auto_unlock_title">顔認証で自動ロック解除</string>
     <string name="face_auto_unlock_summary">顔認証したときロック画面をスキップします</string>
-    <!-- Three-fingers-swipe to screenshot -->
-    <!-- OP like Navigation Gestures -->
 </resources>

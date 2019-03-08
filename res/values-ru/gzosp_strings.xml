@@ -15,7 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- MSIM Manual provisioning -->
     <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g> <xliff:g id="status" example="disabled">%2$s</xliff:g></string>
     <string name="sim_enabled">включена</string>
     <string name="sim_disabled">отключена</string>
@@ -33,16 +32,12 @@
     <string name="sub_deactivate_success">SIM-карта отключена.</string>
     <string name="sub_deactivate_failed">Отключение не удалось.</string>
     <string name="available_sims_title">Доступные SIM-карты</string>
-    <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">Информация о зарядке на экране блокировки</string>
     <string name="lockscreen_battery_info_summary">Показывать примерные максимальные ток, напряжение и температуру аккумулятора на экране блокировки во время зарядки</string>
-    <!-- Facelock toggle -->
     <string name="face_auto_unlock_title">Автоматическая разблокировка сканером лица</string>
     <string name="face_auto_unlock_summary">Убрать экран блокировки после разблокировки сканером лица</string>
-    <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Свайп для создания скриншота</string>
     <string name="three_finger_gesture_summary">Свайп тремя пальцами вниз для создания скриншота</string>
-    <!-- OP like Navigation Gestures -->
     <string name="gesture_settings_title">Жесты навигации</string>
     <string name="gesture_settings_info">Панель навигации должна быть отключена!\n\nДоступны жесты:\n\nНазад\n- Свайп вверх слева или справа\n\nДомой\n- Свайп вверх по центру\n\nНедавние приложения\n\n- Свайп вверх по центру и удержание\n\nДолгое нажатие \"Домой\"\n- Короткий свайп вверх и удержание в центре</string>
     <string name="use_bottom_gesture_title">Жесты навигации</string>

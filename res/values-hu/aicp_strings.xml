@@ -20,7 +20,6 @@
     <string name="aicp_version_summary">AICP PIE Edition - 14.0</string>
     <string name="aicpextras_title">AICP Extrák</string>
     <string name="aicpextras_summary">ROM testreszabás</string>
-    <!-- Setting checkbox title for root access -->
     <string name="root_access">Root-jogosultság</string>
     <string name="root_access_warning_title">Engedélyezi a root-hozzáférést?</string>
     <string name="root_access_warning_message">Veszélyes root-jogosultságot adni az alkalmazásoknak, veszélyeztetheti a rendszere biztonságát!</string>
@@ -28,13 +27,10 @@
     <string name="root_access_apps">Csak az alkalmazásoknak</string>
     <string name="root_access_adb">Csak ADB-n engedélyezve</string>
     <string name="root_access_all">Alkalmazásokhoz és ADB-n is engedélyezve</string>
-    <!-- Android debugging over WiFi -->
     <string name="adb_over_network">ADB a hálózaton keresztül</string>
     <string name="adb_over_network_summary">TCP/IP hibakeresés hálózati eszközön keresztüli engedélyezése (Wi-Fi, USB hálózatok). Újraindítás után alaphelyzetbe áll vissza</string>
-    <!-- Warning for Adb over Network -->
     <string name="adb_over_network_warning">FIGYELEM: Ha a hálózati ADB enegdélyezve van, a telefon védtelen minden hálózati behatolás ellen, beleértve a GSM hálózatot is!\n\nCsak akkor használja, ha megbízható hálózatra csatlakozik.\n\nBiztosan engedélyezni kívánja ezt a funkciót?</string>
     <string name="adb_over_network_warning_title">Lehetővé teszi az ADB-t a hálózaton keresztül?</string>
-    <!-- Volume Steps -->
     <string name="volume_steps_title">Hangerőléptetés</string>
     <string name="volume_steps_alarm_title">Hangerőléptetés: Ébresztő</string>
     <string name="volume_steps_dtmf_title">Hangerőléptetés: DTMF</string>
@@ -50,45 +46,34 @@
     <string name="volume_steps_15">15</string>
     <string name="volume_steps_7">7</string>
     <string name="volume_steps_5">5</string>
-    <!-- SElinux status in About -->
     <string name="selinux_status">A SELinux állapota</string>
     <string name="selinux_status_disabled">Letiltva</string>
     <string name="selinux_status_permissive">Megengedve</string>
     <string name="selinux_status_enforcing">Kényszerítve</string>
-    <!-- Media gestures -->
     <string name="prevent_ringing_option_mute_no_media">Némítás, nincs média</string>
     <string name="prevent_ringing_option_mute_no_media_summary">Be (némítás, nincs média)</string>
-    <!-- Charging vibration -->
     <string name="charging_vibro_title">A töltés rezgő visszajelzése</string>
     <string name="fp_swipe_to_dismiss_notifications_title">Ujjlenyomat csúsztatása jobbra vagy balra az értesítések eltüntetéséhez</string>
     <string name="fp_swipe_to_dismiss_notifications_summary">Az értesítések eltüntetéséhez csúsztasson jobbra vagy balra a telefon hátulján az ujjlenyomatolvasó-szenzoron.</string>
-    <!-- Format string for fingerprint location message -->
     <string name="security_settings_fingerprint_enroll_find_sensor_message_cm">Az ujjlenyomat-olvasót megtalálhatja a telefonja <xliff:g id="sensor_location">%1$s</xliff:g>.</string>
-    <!-- Fingerprint sensor locations -->
     <string name="security_settings_fingerprint_sensor_location_back">hátoldalán</string>
     <string name="security_settings_fingerprint_sensor_location_front">előlapján</string>
     <string name="security_settings_fingerprint_sensor_location_left">bal oldalán</string>
     <string name="security_settings_fingerprint_sensor_location_right">jobb oldalán</string>
-    <!-- Battery stats reset -->
     <string name="battery_stats_reset">Statisztikák törlése</string>
     <string name="battery_stats_message">Akkumulátorhasználati statisztika törlésre kerül</string>
     <string name="ok_string">OK</string>
-    <!-- Advanced night mode brightness -->
     <string name="night_brightness_value_title">Éjszakai fényviszonyok esetén alacsonyabb fényerő</string>
     <string name="night_auto_value_disabled">Letiltva</string>
     <string name="night_auto_value_min">Minimum fényerő</string>
     <string name="night_bright_low">Alacsony fényerő</string>
     <string name="night_bright_midlow">Mérsékelten alacsony fényerő</string>
-    <!-- Custom light color -->
     <string name="custom_light_title">Egyéni fény</string>
     <string name="custom_light_on_time_title">A fény bekapcsolt állapotának ideje pulzálás közben (ms)</string>
     <string name="custom_light_off_time_title">A fény kikapcsolt állapotának ideje pulzálás közben (ms)\"</string>
     <string name="show_light_on_zen_title">Villogás a Ne zavarjanak (DND) módban</string>
-    <!-- Volume link notification -->
     <string name="volume_link_notification_title">Csengő és értesítési hangok összekapcsolása</string>
-    <!-- Notification log -->
     <string name="notification_log_summary">Értesítéselőzmény-napló megjelenítése</string>
-    <!-- App Ops Categories -->
     <string name="app_ops_settings">Alkalmazásműveletek</string>
     <string name="app_ops_cat_location">Tartózkodási hely</string>
     <string name="app_ops_cat_personal">Személyes</string>
@@ -96,7 +81,6 @@
     <string name="app_ops_cat_media">Média</string>
     <string name="app_ops_cat_device">Készülék</string>
     <string name="app_ops_cat_bootup">Rendszerindítás</string>
-    <!-- App ops labels -->
     <string name="app_ops_access_camera">kamera</string>
     <string name="app_ops_coarse_location">nyers helymeghatározás</string>
     <string name="app_ops_fine_location">pontos helymeghatározás</string>
@@ -177,17 +161,13 @@
     <string name="app_ops_start_foreground">előtérben indítás</string>
     <string name="app_ops_bluetooth_scan">bluetooth keresés</string>
     <string name="app_ops_boot_completed">automatikus indítás</string>
-    <!-- Increasing ring tone volume -->
     <string name="increasing_ring_volume_option_title">Emelkedő csengőhang</string>
     <string name="increasing_ring_min_volume_title">Kezdeti hangerő</string>
     <string name="increasing_ring_ramp_up_time_title">Felfutási idő</string>
-    <!-- Running services -->
     <string name="background_processes_settings_title">Háttérfolyamatok</string>
-    <!-- Font picker -->
     <string name="font_picker_title">Betűtípus</string>
     <string name="disable_fonts_installed_title">A Betűtípus-választó nem érhető el a Substratummal való ütközés elkerülése érdekében. Távolítsa el azt, ha használni szeretné ezt az alkalmazást.</string>
     <string name="font_picker_progress">Az új betűtípus alkalmazása\u2026</string>
-    <!-- doze on charge -->
     <string name="doze_on_charge_title">Töltéskor jelenítse meg</string>
     <string name="doze_on_charge_summary">Töltéskor ébressze fel a képernyőt</string>
 </resources>

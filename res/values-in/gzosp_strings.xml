@@ -15,7 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- MSIM Manual provisioning -->
     <string name="sim_enabled">diaktifkan</string>
     <string name="sim_disabled">dinonaktifkan</string>
     <string name="sim_missing">hilang atau rusak</string>
@@ -32,11 +31,7 @@
     <string name="sub_deactivate_success">SIM dinonaktifkan.</string>
     <string name="sub_deactivate_failed">Penonaktifan gagal.</string>
     <string name="available_sims_title">Kartu SIM yang tersedia</string>
-    <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">Info pengisian daya pada kunci layar</string>
-    <!-- Facelock toggle -->
     <string name="face_auto_unlock_title">Wajah membuka kunci otomatis</string>
     <string name="face_auto_unlock_summary">Lewati kunci layar setelah terbuka dengan wajah</string>
-    <!-- Three-fingers-swipe to screenshot -->
-    <!-- OP like Navigation Gestures -->
 </resources>

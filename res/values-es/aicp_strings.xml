@@ -20,7 +20,6 @@
     <string name="aicp_version_summary">Aicp edición Pie - 14.0</string>
     <string name="aicpextras_title">AICP Extras</string>
     <string name="aicpextras_summary">Personalización</string>
-    <!-- Setting checkbox title for root access -->
     <string name="root_access">Acceso administrativo</string>
     <string name="root_access_warning_title">¿Permitir el acceso administrativo?</string>
     <string name="root_access_warning_message">¡Permitir a las aplicaciones solicitar acceso administrativo es muy peligroso y puede comprometer la seguridad del sistema!</string>
@@ -28,13 +27,10 @@
     <string name="root_access_apps">Sólo aplicaciones</string>
     <string name="root_access_adb">Sólo ADB</string>
     <string name="root_access_all">Aplicaciones y ADB</string>
-    <!-- Android debugging over WiFi -->
     <string name="adb_over_network">ADB sobre red</string>
     <string name="adb_over_network_summary">Activar la depuración TCP/IP sobre las interfaces de red (Wi-Fi, redes USB). Esta configuración se restablece al reiniciar el dispositivo</string>
-    <!-- Warning for Adb over Network -->
     <string name="adb_over_network_warning">AVISO: ¡Cuando ADB sobre red esté activo, el dispositivo estará abierto a intrusiones en todas las redes conectadas, incluida la red de datos GSM!\n\nUsa solo esta característica cuando estés conectado a redes de confianza.\n\n¿Deseas realmente activar esta función?</string>
     <string name="adb_over_network_warning_title">Permitir ADB sobre red?</string>
-    <!-- Volume Steps -->
     <string name="volume_steps_title">Escala de volumen</string>
     <string name="volume_steps_alarm_title">Escala de volumen: Alarma</string>
     <string name="volume_steps_dtmf_title">Escala de volumen: DTMF</string>
@@ -50,45 +46,34 @@
     <string name="volume_steps_15">15</string>
     <string name="volume_steps_7">7</string>
     <string name="volume_steps_5">5</string>
-    <!-- SElinux status in About -->
     <string name="selinux_status">Estado de SELinux</string>
     <string name="selinux_status_disabled">Deshabilitado</string>
     <string name="selinux_status_permissive">Permisivo</string>
     <string name="selinux_status_enforcing">Obligatorio</string>
-    <!-- Media gestures -->
     <string name="prevent_ringing_option_mute_no_media">Silenciado, sin sonido</string>
     <string name="prevent_ringing_option_mute_no_media_summary">Habilitado (silenciado, sin sonido)</string>
-    <!-- Charging vibration -->
     <string name="charging_vibro_title">Vibración al cargar</string>
     <string name="fp_swipe_to_dismiss_notifications_title">Deslizar el dedo sobre el lector de huellas a la derecha para desechar notificaciones</string>
     <string name="fp_swipe_to_dismiss_notifications_summary">Para desechar las notificaciones, deslice el dedo a la izquierda o derecha en el lector de huellas de su teléfono.</string>
-    <!-- Format string for fingerprint location message -->
     <string name="security_settings_fingerprint_enroll_find_sensor_message_cm">Localiza el sensor de huella dactilar <xliff:g id="sensor_location">%1$s</xliff:g> del teléfono.</string>
-    <!-- Fingerprint sensor locations -->
     <string name="security_settings_fingerprint_sensor_location_back">detrás</string>
     <string name="security_settings_fingerprint_sensor_location_front">delante</string>
     <string name="security_settings_fingerprint_sensor_location_left">lado Izquierdo</string>
     <string name="security_settings_fingerprint_sensor_location_right">lado derecho</string>
-    <!-- Battery stats reset -->
     <string name="battery_stats_reset">Resetear estadísticas</string>
     <string name="battery_stats_message">Las estadísticas de la batería van a restablecerse</string>
     <string name="ok_string">Aceptar</string>
-    <!-- Advanced night mode brightness -->
     <string name="night_brightness_value_title">Reducir brillo en modo luz nocturna</string>
     <string name="night_auto_value_disabled">Deshabilitado</string>
     <string name="night_auto_value_min">Brillo mínimo</string>
     <string name="night_bright_low">Brillo bajo</string>
     <string name="night_bright_midlow">Brillo medio-bajo</string>
-    <!-- Custom light color -->
     <string name="custom_light_title">Color del Led</string>
     <string name="custom_light_on_time_title">Duración del parpadeo del led encendido (ms)</string>
     <string name="custom_light_off_time_title">Duración del parpadeo del led apagado (ms)\"</string>
     <string name="show_light_on_zen_title">Parpadear durante No Molestar</string>
-    <!-- Volume link notification -->
     <string name="volume_link_notification_title">Vincular volumen de tono y notificaciones</string>
-    <!-- Notification log -->
     <string name="notification_log_summary">Mostrar historial de notificaciones</string>
-    <!-- App Ops Categories -->
     <string name="app_ops_settings">Permisos de Apps</string>
     <string name="app_ops_cat_location">Ubicación</string>
     <string name="app_ops_cat_personal">Personal</string>
@@ -96,7 +81,6 @@
     <string name="app_ops_cat_media">Media</string>
     <string name="app_ops_cat_device">Dispositivo</string>
     <string name="app_ops_cat_bootup">Arranque</string>
-    <!-- App ops labels -->
     <string name="app_ops_access_camera">cámara</string>
     <string name="app_ops_coarse_location">ubicación aproximada</string>
     <string name="app_ops_fine_location">ubicación precisa</string>
@@ -177,17 +161,13 @@
     <string name="app_ops_start_foreground">inicio en primer plano</string>
     <string name="app_ops_bluetooth_scan">escaneo bluetooth</string>
     <string name="app_ops_boot_completed">arranque automático</string>
-    <!-- Increasing ring tone volume -->
     <string name="increasing_ring_volume_option_title">Volumen de tono ascendente</string>
     <string name="increasing_ring_min_volume_title">Volumen inicial</string>
     <string name="increasing_ring_ramp_up_time_title">Tiempo de incremento</string>
-    <!-- Running services -->
     <string name="background_processes_settings_title">Procesos en segundo plano</string>
-    <!-- Font picker -->
     <string name="font_picker_title">Fuente</string>
     <string name="disable_fonts_installed_title">El gestor de fuentes del sistema no está disponible para evitar conflictos con Substratum. Desinstala Substratum si deseas usarlo.</string>
     <string name="font_picker_progress">Aplicando nueva fuente\u2026</string>
-    <!-- doze on charge -->
     <string name="doze_on_charge_title">Mostrar al cargar</string>
     <string name="doze_on_charge_summary">Activar la pantalla al cargar</string>
 </resources>

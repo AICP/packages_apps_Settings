@@ -15,7 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- MSIM Manual provisioning -->
     <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g> je <xliff:g id="status" example="disabled">%2$s</xliff:g></string>
     <string name="sim_enabled">zapnutá</string>
     <string name="sim_disabled">vypnutá</string>
@@ -33,12 +32,8 @@
     <string name="sub_deactivate_success">SIM bola deaktivovaná.</string>
     <string name="sub_deactivate_failed">Deaktivácia zlyhala.</string>
     <string name="available_sims_title">Dostupné SIM karty</string>
-    <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">Informácie o batérii na obrazovke uzamknutia</string>
     <string name="lockscreen_battery_info_summary">Zobraziť maximálny prúd, napätie a teplotu batérie pri nabíjaní na obrazovke uzamknutia</string>
-    <!-- Facelock toggle -->
     <string name="face_auto_unlock_title">Automatické odomknutie pomocou tváre</string>
     <string name="face_auto_unlock_summary">Nezobraziť obrazovku uzamknutia po odomknutí pomocou tváre</string>
-    <!-- Three-fingers-swipe to screenshot -->
-    <!-- OP like Navigation Gestures -->
 </resources>

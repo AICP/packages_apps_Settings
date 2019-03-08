@@ -15,7 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- MSIM Manual provisioning -->
     <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g> is <xliff:g id="status" example="disabled">%2$s</xliff:g></string>
     <string name="sim_enabled">ingeschakeld</string>
     <string name="sim_disabled">uitgeschakeld</string>
@@ -33,16 +32,12 @@
     <string name="sub_deactivate_success">Simkaart uitgeschakeld.</string>
     <string name="sub_deactivate_failed">Uitschakelen mislukt.</string>
     <string name="available_sims_title">Beschikbare simkaarten</string>
-    <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">Oplaad-info op vergrendelscherm</string>
     <string name="lockscreen_battery_info_summary">Toon huidige laadstroom en accutemperatuur op vergrendelscherm tijdens opladen</string>
-    <!-- Facelock toggle -->
     <string name="face_auto_unlock_title">Automatisch ontgrendelen door gezichtsherkenning</string>
     <string name="face_auto_unlock_summary">Vergrendelscherm uitschakelen na gezichtsontgrendeling</string>
-    <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Veeg voor schermopname</string>
     <string name="three_finger_gesture_summary">Veeg met 3 vingers om een schermafbeelding te maken</string>
-    <!-- OP like Navigation Gestures -->
     <string name="gesture_settings_title">Navigatie gebaren</string>
     <string name="gesture_settings_info">Navigatiebalk moet worden uitgeschakeld!\n\nBeschikbare gebaren:\n\nTerug\n - Veeg omhoog aan de linker- of rechterkant\n\nHome\n - Veeg omhoog in het midden\n\nRecente apps\n - Omhoog vegen in het midden en vasthouden\n\nHome lang\n - Kort omhoog vegen in het midden en vasthouden</string>
     <string name="use_bottom_gesture_title">Navigatie gebaren</string>

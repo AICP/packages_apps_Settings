@@ -15,7 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- MSIM Manual provisioning -->
     <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g> <xliff:g id="status" example="disabled">%2$s</xliff:g></string>
     <string name="sim_enabled">etkin</string>
     <string name="sim_disabled">devre dışı</string>
@@ -33,16 +32,12 @@
     <string name="sub_deactivate_success">SIM devre dışı bırakıldı.</string>
     <string name="sub_deactivate_failed">Devre dışı bırakma başarısız.</string>
     <string name="available_sims_title">Kullanılabilir SIM kartlar</string>
-    <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">Pil bilgisi</string>
     <string name="lockscreen_battery_info_summary">Şarj olurken kilit ekranında şarj cihazının maksimum akım voltajını ve pil sıcaklığını görüntüle</string>
-    <!-- Facelock toggle -->
     <string name="face_auto_unlock_title">Otomatik kilit açma</string>
     <string name="face_auto_unlock_summary">Yüz kilidini açtıktan sonra kilit ekranını otomatik kapat</string>
-    <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Üç parmak hareketi</string>
     <string name="three_finger_gesture_summary">Ekran görüntüsü almak için üç parmağınızı ekran üzerinde kaydırın</string>
-    <!-- OP like Navigation Gestures -->
     <string name="gesture_settings_title">Navigasyon hareketleri</string>
     <string name="gesture_settings_info">Gezinme çubuğu devre dışı bırakılmalıdır!\n\nKullanılabilir hareketler:\n\nGeri\n- Soldan veya sağdan hızlıca kaydırın\n\nAna ekran\n- Kaydırma merkezi\n\nSon uygulamalar\n- Merkezinizi hızlıca kaydırın ve tutun\n\nAna ekrana uzun basın\n- Kısa hızlı yukarı kaydırın ve merkezde tutun</string>
     <string name="use_bottom_gesture_title">Gezinme hareketleri</string>

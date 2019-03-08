@@ -15,7 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- MSIM Manual provisioning -->
     <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s </xliff:g> es <xliff:g id="status" example="disabled">%2$s </xliff:g></string>
     <string name="sim_enabled">habilitada</string>
     <string name="sim_disabled">deshabilitada</string>
@@ -33,16 +32,12 @@
     <string name="sub_deactivate_success">SIM desactivada.</string>
     <string name="sub_deactivate_failed">Error al desactivar.</string>
     <string name="available_sims_title">Tarjetas SIM disponibles</string>
-    <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">Información de carga en pantalla de bloqueo</string>
     <string name="lockscreen_battery_info_summary">Muestra el voltaje y la temperatura de la batería en la pantalla de bloqueo mientras se carga</string>
-    <!-- Facelock toggle -->
     <string name="face_auto_unlock_title">Desbloqueo facial automático</string>
     <string name="face_auto_unlock_summary">Quitar el bloqueo de pantalla tras el desbloqueo facial</string>
-    <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Deslizar para capturar pantalla</string>
     <string name="three_finger_gesture_summary">Desliza tres dedos por la pantalla para hacer una captura</string>
-    <!-- OP like Navigation Gestures -->
     <string name="gesture_settings_title">Gestos de navegación</string>
     <string name="gesture_settings_info">La barra de navegación debe estar desactivada! \n\nGestos disponibles:\n\nBack\n-Deslizar hacia arriba en el lado izquierdo o derecho\n\nInicio\n- Deslizar hacia arriba y mantener\n\nAps. recientes\n Deslizamiento corto y mantener en el centro\n\nPulsación larga en inicio\n- Deslizamiento corto hacia arriba y mantener en el centro</string>
     <string name="use_bottom_gesture_title">Gestos de navegación</string>

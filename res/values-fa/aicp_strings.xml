@@ -16,25 +16,5 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Setting checkbox title for root access -->
-    <!-- Android debugging over WiFi -->
-    <!-- Warning for Adb over Network -->
-    <!-- Volume Steps -->
-    <!-- SElinux status in About -->
-    <!-- Media gestures -->
-    <!-- Charging vibration -->
-    <!-- Format string for fingerprint location message -->
-    <!-- Fingerprint sensor locations -->
-    <!-- Battery stats reset -->
-    <!-- Advanced night mode brightness -->
-    <!-- Custom light color -->
-    <!-- Volume link notification -->
-    <!-- Notification log -->
     <string name="notification_log_summary">نمایش گزارش تاریخچه ی اعلان ها</string>
-    <!-- App Ops Categories -->
-    <!-- App ops labels -->
-    <!-- Increasing ring tone volume -->
-    <!-- Running services -->
-    <!-- Font picker -->
-    <!-- doze on charge -->
 </resources>

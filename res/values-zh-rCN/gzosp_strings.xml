@@ -15,7 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- MSIM Manual provisioning -->
     <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g> <xliff:g id="status" example="disabled">%2$s</xliff:g></string>
     <string name="sim_enabled">启用</string>
     <string name="sim_disabled">禁用</string>
@@ -33,16 +32,12 @@
     <string name="sub_deactivate_success">SIM 卡已禁用。</string>
     <string name="sub_deactivate_failed">禁用失败。</string>
     <string name="available_sims_title">可用 SIM 卡</string>
-    <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_info_title">锁屏充电信息</string>
     <string name="lockscreen_battery_info_summary">充电时在锁屏界面显示适配充电器的最大电流电压以及电池温度</string>
-    <!-- Facelock toggle -->
     <string name="face_auto_unlock_title">面部自动解锁</string>
     <string name="face_auto_unlock_summary">面部解锁后解除锁屏</string>
-    <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">划屏截图</string>
-    <string name="three_finger_gesture_summary">用三根手指滑动屏幕以截取屏幕</string>
-    <!-- OP like Navigation Gestures -->
+    <string name="three_finger_gesture_summary">三指下滑截屏</string>
     <string name="gesture_settings_title">导航手势</string>
     <string name="gesture_settings_info">必须关闭导航栏！\n\n可用手势\n\n后退\n-向左或向右滑动\n\n主页\n-上滑到中心\n\n最近打开的程序\n-向上滑到中心并长按住\n\n上一个应用\n-从中间向上短滑短并按住</string>
     <string name="use_bottom_gesture_title">导航手势</string>
@@ -51,7 +46,7 @@
     <string name="gesture_swipe_length_summary">从底部高度触发滑动</string>
     <string name="gesture_action_timeout_title">滑动触发器超时</string>
     <string name="gesture_action_timeout_summary">手势操作开始前超时</string>
-    <string name="unit_dpi">点每英寸</string>
+    <string name="unit_dpi">dpi</string>
     <string name="unit_px">像素</string>
     <string name="unit_msec">毫秒</string>
 </resources>

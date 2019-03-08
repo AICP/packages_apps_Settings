@@ -20,7 +20,6 @@
     <string name="aicp_version_summary">Aicp 馅饼版 - 14.0</string>
     <string name="aicpextras_title">AICP 附加设置</string>
     <string name="aicpextras_summary">ROM 定制</string>
-    <!-- Setting checkbox title for root access -->
     <string name="root_access">Root 授权</string>
     <string name="root_access_warning_title">允许 Root 授权请求？</string>
     <string name="root_access_warning_message">允许应用得到 Root 权限是有风险的，可能会影响您的系统安全！</string>
@@ -28,13 +27,10 @@
     <string name="root_access_apps">仅应用程序</string>
     <string name="root_access_adb">仅限于 ADB</string>
     <string name="root_access_all">应用程序和 ADB</string>
-    <!-- Android debugging over WiFi -->
     <string name="adb_over_network">网络 ADB 调试</string>
     <string name="adb_over_network_summary">通过网络接口 (WLAN，USB 网络) 启用 TCP/IP 调试。该设置重启后失效</string>
-    <!-- Warning for Adb over Network -->
     <string name="adb_over_network_warning">警告：网络 ADB 调试启用后，您的设备将会在已连接的网络 (包括 GSM 数据网络) 上被视为是开放的，并有可能被侵入！\n\n请仅在您所信任的网络上使用此功能。\n\n您确实要启用该功能吗？</string>
     <string name="adb_over_network_warning_title">网络 ADB 调试?</string>
-    <!-- Volume Steps -->
     <string name="volume_steps_title">音量等级</string>
     <string name="volume_steps_alarm_title">音量等级:闹钟</string>
     <string name="volume_steps_dtmf_title">音量等级:双音多频</string>
@@ -50,45 +46,34 @@
     <string name="volume_steps_15">15</string>
     <string name="volume_steps_7">7</string>
     <string name="volume_steps_5">5</string>
-    <!-- SElinux status in About -->
     <string name="selinux_status">SELinux 状态</string>
     <string name="selinux_status_disabled">禁用</string>
     <string name="selinux_status_permissive">许可</string>
     <string name="selinux_status_enforcing">执行</string>
-    <!-- Media gestures -->
     <string name="prevent_ringing_option_mute_no_media">静音, 无媒体</string>
     <string name="prevent_ringing_option_mute_no_media_summary">打开 (静音, 无媒体)</string>
-    <!-- Charging vibration -->
     <string name="charging_vibro_title">充电振动</string>
     <string name="fp_swipe_to_dismiss_notifications_title">向左或向右滑动指纹以取消通知</string>
     <string name="fp_swipe_to_dismiss_notifications_summary">要取消通知，请从左右两侧滑动手机背面的指纹传感器。</string>
-    <!-- Format string for fingerprint location message -->
     <string name="security_settings_fingerprint_enroll_find_sensor_message_cm">在您手机的 <xliff:g id="sensor_location">%1$s</xliff:g> 找到指纹传感器。</string>
-    <!-- Fingerprint sensor locations -->
     <string name="security_settings_fingerprint_sensor_location_back">返回</string>
     <string name="security_settings_fingerprint_sensor_location_front">前置</string>
     <string name="security_settings_fingerprint_sensor_location_left">左侧</string>
     <string name="security_settings_fingerprint_sensor_location_right">右侧</string>
-    <!-- Battery stats reset -->
     <string name="battery_stats_reset">重置统计数据</string>
     <string name="battery_stats_message">电池的历史统计数据将被重置</string>
     <string name="ok_string">确认</string>
-    <!-- Advanced night mode brightness -->
     <string name="night_brightness_value_title">处于夜间模式时降低亮度</string>
     <string name="night_auto_value_disabled">禁用</string>
     <string name="night_auto_value_min">最低亮度</string>
     <string name="night_bright_low">低亮度</string>
     <string name="night_bright_midlow">中低亮度</string>
-    <!-- Custom light color -->
     <string name="custom_light_title">指示灯颜色</string>
     <string name="custom_light_on_time_title">呼吸灯闪烁时亮灯时间 (毫秒)</string>
     <string name="custom_light_off_time_title">呼吸灯闪烁时熄灯时间 (毫秒)\"</string>
     <string name="show_light_on_zen_title">在勿扰期间闪烁</string>
-    <!-- Volume link notification -->
     <string name="volume_link_notification_title">链接铃声&amp;通知音量</string>
-    <!-- Notification log -->
     <string name="notification_log_summary">显示通知历史记录日志</string>
-    <!-- App Ops Categories -->
     <string name="app_ops_settings">应用操作</string>
     <string name="app_ops_cat_location">地理位置</string>
     <string name="app_ops_cat_personal">个人资料</string>
@@ -96,7 +81,6 @@
     <string name="app_ops_cat_media">媒体</string>
     <string name="app_ops_cat_device">设备</string>
     <string name="app_ops_cat_bootup">启动时</string>
-    <!-- App ops labels -->
     <string name="app_ops_access_camera">相机</string>
     <string name="app_ops_coarse_location">粗略位置</string>
     <string name="app_ops_fine_location">精确位置</string>
@@ -177,17 +161,13 @@
     <string name="app_ops_start_foreground">前台启动</string>
     <string name="app_ops_bluetooth_scan">蓝牙扫描</string>
     <string name="app_ops_boot_completed">自动启动</string>
-    <!-- Increasing ring tone volume -->
     <string name="increasing_ring_volume_option_title">铃声音量渐强</string>
     <string name="increasing_ring_min_volume_title">初始音量</string>
     <string name="increasing_ring_ramp_up_time_title">渐强时间</string>
-    <!-- Running services -->
     <string name="background_processes_settings_title">后台进程</string>
-    <!-- Font picker -->
     <string name="font_picker_title">字体</string>
-    <string name="disable_fonts_installed_title">字体选择器无法避免与 Substratum 的冲突。如果您想使用字体选择器，则卸载它。</string>
+    <string name="disable_fonts_installed_title">字体选择器不可用，以避免和 Substratum 发生冲突。如果要使用字体选择器, 请卸载 Substratum。</string>
     <string name="font_picker_progress">应用新的字体\u2026</string>
-    <!-- doze on charge -->
     <string name="doze_on_charge_title">充电时显示</string>
     <string name="doze_on_charge_summary">充电时唤醒屏幕</string>
 </resources>
