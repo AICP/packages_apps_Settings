@@ -87,4 +87,6 @@
     <string name="full_gesture_mode_title">Enable full gesture mode</string>
     <string name="full_gesture_mode_summary">This mode will disable also the back button and you will be able to trigger a back button action by a left swipe on navbar. Right swipe will still trigger the last-app action.</string>
 
+    <!-- About phone, uptime. Deep sleep ratio since last reboot. -->
+    <string name="status_deep_sleep">(Deep sleep: %1$d%2$s)</string>
 </resources>
