@@ -75,9 +75,10 @@
         android:summary="@string/three_finger_gesture_summary"
         android:defaultValue="false" />
 
-    <Preference
+<!--    <Preference
         android:key="gesture_settings"
         android:title="@string/gesture_settings_title"
         android:fragment="com.android.settings.gzosp.GestureSettings" />
+-->
 
 </PreferenceScreen>
