@@ -18,6 +18,7 @@ package com.android.settings.development;
 
 import android.app.UiModeManager;
 import android.content.Context;
+import android.provider.Settings;
 import android.support.annotation.VisibleForTesting;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
@@ -57,6 +58,13 @@ public class DarkUIPreferenceController extends DeveloperOptionsPreferenceContro
     @Override
     public void updateState(Preference preference) {
         updateSummary(preference);
+    }
+
+    @Override
+    public boolean isAvailable() {
+        // This setting only works when we don't overwrite it with our theming solution
+        return Settings.System.getInt(mContext.getContentResolver(),
+                Settings.System.THEMING_CONTROL_NIGHT_MODE, 1) == 0;
     }
 
     private void updateSummary(Preference preference) {
