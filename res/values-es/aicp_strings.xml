@@ -170,4 +170,8 @@
     <string name="font_picker_progress">Aplicando nueva fuente\u2026</string>
     <string name="doze_on_charge_title">Mostrar al cargar</string>
     <string name="doze_on_charge_summary">Activar la pantalla al cargar</string>
+    <string name="location_mode_battery_saving_title">Modo de ahorro de batería</string>
+    <string name="location_mode_battery_saving_summary">Puedes desactivar el GPS usando esta configuración. Como resultado, tu ubicación exacta no será desconocida.</string>
+    <string name="proximity_wake_title">Evitar el encendido accidental</string>
+    <string name="proximity_wake_summary">Comprobar el sensor de proximidad antes de encender la pantalla</string>
 </resources>

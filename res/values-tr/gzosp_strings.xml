@@ -40,7 +40,7 @@
     <string name="three_finger_gesture_summary">Ekran görüntüsü almak için üç parmağınızı ekran üzerinde kaydırın</string>
     <string name="gesture_settings_title">Navigasyon hareketleri</string>
     <string name="gesture_settings_info">Gezinme çubuğu devre dışı bırakılmalıdır!\n\nKullanılabilir hareketler:\n\nGeri\n- Soldan veya sağdan hızlıca kaydırın\n\nAna ekran\n- Kaydırma merkezi\n\nSon uygulamalar\n- Merkezinizi hızlıca kaydırın ve tutun\n\nAna ekrana uzun basın\n- Kısa hızlı yukarı kaydırın ve merkezde tutun</string>
-    <string name="use_bottom_gesture_title">Gezinme hareketleri</string>
+    <string name="use_bottom_gesture_title">Gezinme hareketi</string>
     <string name="use_bottom_gesture_summary">Gezinme için yukarı kaydırma hareketlerini kullan</string>
     <string name="gesture_swipe_length_title">Kaydırma alanı yüksekliği</string>
     <string name="gesture_swipe_length_summary">Kaydırmayı etkinleştirmek için alt yükseklik</string>

@@ -15,4 +15,38 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g> is <xliff:g id="status" example="disabled">%2$s</xliff:g></string>
+    <string name="sim_enabled">مفعّل</string>
+    <string name="sim_disabled">معّطل</string>
+    <string name="sim_missing">مفقود أو به خلل</string>
+    <string name="sim_enabler_need_disable_sim">سيتم إلغاء تنشيط بطاقة SIM. هل تريد الاستمرار؟</string>
+    <string name="sim_enabler_will_disable_sim_title">انتباه</string>
+    <string name="sim_enabler_need_switch_data_service">سيتم تعطيل شريحة SIM وسيتم استخدام شريحة <xliff:g id="slotid">%1$s</xliff:g> لخدمات البيانات. هل أنت متأكد من أنك تريد المتابعة؟</string>
+    <string name="sim_enabler_airplane_on">غير قادر على القيام بالعملية أثناء وضع الطيران.</string>
+    <string name="sim_enabler_in_call">تعذر القيام بالعملية أثناء إجراء مكالمة.</string>
+    <string name="sim_enabler_both_inactive">لا يمكن تعطيل جميع شرائح SIM</string>
+    <string name="sim_enabler_enabling">التنشيط...</string>
+    <string name="sim_enabler_disabling">إلغاء التنشيط...</string>
+    <string name="sub_activate_success">تم تنشيط SIM.</string>
+    <string name="sub_activate_failed">فشل التنشيط.</string>
+    <string name="sub_deactivate_success">تم إلغاء تنشيط SIM.</string>
+    <string name="sub_deactivate_failed">فشل إلغاء التنشيط.</string>
+    <string name="available_sims_title">بطاقات SIM المتوفرة</string>
+    <string name="lockscreen_battery_info_title">معلومات الشحن على شاشة القفل</string>
+    <string name="lockscreen_battery_info_summary">عرض الحد الأقصى للفولتية و تيار الشاحن وحرارة البطارية على شاشة القفل أثناء الشحن</string>
+    <string name="face_auto_unlock_title">إلغاء قفل الوجه تلقائياً</string>
+    <string name="face_auto_unlock_summary">صرف النظر عن قفل الشاشة بعد إلغاء قفل الوجه</string>
+    <string name="three_finger_gesture">إيماء الثلاثة أصابع</string>
+    <string name="three_finger_gesture_summary">السحب بثلاثة أصابع لأخذ لقطة للشاشة</string>
+    <string name="gesture_settings_title">إيماءات التنقل</string>
+    <string name="gesture_settings_info">يجب تعطيل شريط التنقل!\n\nالإيماءات المتاحة:\n\nرجوع\n- مرر لأعلى على الجانب الأيمن أو الأيسر\n\nالصفحة الرئيسية\n- مرر لأعلى من الوسط\n\nالتطبيقات الحديثة\n- مرر لأعلى من الوسط مع الاستمرار\n\nضغط مطول على الرئيسية\n- اسحب سريعاً لأعلى مع الاستمرار في المركز</string>
+    <string name="use_bottom_gesture_title">إيماءات التنقل</string>
+    <string name="use_bottom_gesture_summary">استخدم إيماءات السحب لأعلى من الأسفل للتنقل</string>
+    <string name="gesture_swipe_length_title">إرتفاع مشغل التمرير</string>
+    <string name="gesture_swipe_length_summary">الارتفاع من الأسفل إلى مشغل التمرير</string>
+    <string name="gesture_action_timeout_title">مهلة مشغل التمرير</string>
+    <string name="gesture_action_timeout_summary">المهلة قبل بدء إجراء الإيماءة</string>
+    <string name="unit_dpi">النقاط لكل بوصة dpi</string>
+    <string name="unit_px">بكسل px</string>
+    <string name="unit_msec">ميلي ثانية</string>
 </resources>

@@ -17,9 +17,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="aicp_version_title">AICP 用户体验</string>
-    <string name="aicp_version_summary">Aicp 馅饼版 - 14.0</string>
+    <string name="aicp_version_summary">Aicp Pie 版本 - 14.0</string>
     <string name="aicpextras_title">AICP 附加设置</string>
-    <string name="aicpextras_summary">ROM 定制</string>
+    <string name="aicpextras_summary">系统自定义</string>
     <string name="root_access">Root 授权</string>
     <string name="root_access_warning_title">允许 Root 授权请求？</string>
     <string name="root_access_warning_message">允许应用得到 Root 权限是有风险的，可能会影响您的系统安全！</string>
@@ -56,8 +56,8 @@
     <string name="fp_swipe_to_dismiss_notifications_title">向左或向右滑动指纹以取消通知</string>
     <string name="fp_swipe_to_dismiss_notifications_summary">要取消通知，请从左右两侧滑动手机背面的指纹传感器。</string>
     <string name="security_settings_fingerprint_enroll_find_sensor_message_cm">在您手机的 <xliff:g id="sensor_location">%1$s</xliff:g> 找到指纹传感器。</string>
-    <string name="security_settings_fingerprint_sensor_location_back">返回</string>
-    <string name="security_settings_fingerprint_sensor_location_front">前置</string>
+    <string name="security_settings_fingerprint_sensor_location_back">背面</string>
+    <string name="security_settings_fingerprint_sensor_location_front">正面</string>
     <string name="security_settings_fingerprint_sensor_location_left">左侧</string>
     <string name="security_settings_fingerprint_sensor_location_right">右侧</string>
     <string name="battery_stats_reset">重置统计数据</string>
@@ -72,15 +72,15 @@
     <string name="custom_light_on_time_title">呼吸灯闪烁时亮灯时间 (毫秒)</string>
     <string name="custom_light_off_time_title">呼吸灯闪烁时熄灯时间 (毫秒)\"</string>
     <string name="show_light_on_zen_title">在勿扰期间闪烁</string>
-    <string name="volume_link_notification_title">链接铃声&amp;通知音量</string>
+    <string name="volume_link_notification_title">关联铃声&amp; 通知的音量</string>
     <string name="notification_log_summary">显示通知历史记录日志</string>
-    <string name="app_ops_settings">应用操作</string>
+    <string name="app_ops_settings">权限管理</string>
     <string name="app_ops_cat_location">地理位置</string>
     <string name="app_ops_cat_personal">个人资料</string>
     <string name="app_ops_cat_messaging">短信</string>
     <string name="app_ops_cat_media">媒体</string>
     <string name="app_ops_cat_device">设备</string>
-    <string name="app_ops_cat_bootup">启动时</string>
+    <string name="app_ops_cat_bootup">自启动</string>
     <string name="app_ops_access_camera">相机</string>
     <string name="app_ops_coarse_location">粗略位置</string>
     <string name="app_ops_fine_location">精确位置</string>
@@ -88,7 +88,7 @@
     <string name="app_ops_access_notifications">通知</string>
     <string name="app_ops_activate_vpn">VPN</string>
     <string name="app_ops_auto_start">自动启动</string>
-    <string name="app_ops_delete_call_log">删除呼叫记录</string>
+    <string name="app_ops_delete_call_log">删除通话记录</string>
     <string name="app_ops_delete_contacts">删除联系人</string>
     <string name="app_ops_delete_mms">删除彩信</string>
     <string name="app_ops_delete_sms">删除短信</string>
@@ -106,7 +106,7 @@
     <string name="app_ops_mute_unmute_microphone">麦克风静音/取消静音</string>
     <string name="app_ops_play_audio">播放音频</string>
     <string name="app_ops_post_notification">发布通知</string>
-    <string name="app_ops_cell_scan">蜂窝网络扫描</string>
+    <string name="app_ops_cell_scan">基站扫描</string>
     <string name="app_ops_project_media">投影媒体</string>
     <string name="app_ops_read_calendar">读取日历</string>
     <string name="app_ops_read_call_log">读取通话记录</string>
@@ -118,7 +118,7 @@
     <string name="app_ops_record_audio">录制音频</string>
     <string name="app_ops_send_mms">发送彩信</string>
     <string name="app_ops_send_sms">发送短信</string>
-    <string name="app_ops_toast_window">吐司信息</string>
+    <string name="app_ops_toast_window">toast 信息</string>
     <string name="app_ops_use_alarm_volume">闹铃音量</string>
     <string name="app_ops_use_audio_focus">音频焦点</string>
     <string name="app_ops_use_bluetooth_volume">蓝牙音量</string>
@@ -133,10 +133,10 @@
     <string name="app_ops_write_sms">编写短信</string>
     <string name="app_ops_use_fingerprint">指纹</string>
     <string name="app_ops_add_voicemail">语音信箱</string>
-    <string name="app_ops_read_phone_state">访问电话状态</string>
+    <string name="app_ops_read_phone_state">读取手机状态</string>
     <string name="app_ops_scan_wifi">扫描无线网络</string>
     <string name="app_ops_change_wallpaper">更改壁纸</string>
-    <string name="app_ops_assist_structure">辅助结构</string>
+    <string name="app_ops_assist_structure">辅助功能</string>
     <string name="app_ops_assist_screenshot">屏幕截图</string>
     <string name="app_ops_use_body_sensors">身体传感器</string>
     <string name="app_ops_read_cell_broadcasts">小区广播</string>
@@ -144,8 +144,8 @@
     <string name="app_ops_read_external_storage">读取外置存储卡</string>
     <string name="app_ops_write_external_storage">写入外置存储卡</string>
     <string name="app_ops_turn_on_screen">亮屏</string>
-    <string name="app_ops_get_accounts">设备账户</string>
-    <string name="app_ops_run_in_background">后台运行</string>
+    <string name="app_ops_get_accounts">获取设备帐户</string>
+    <string name="app_ops_run_in_background">在后台运行</string>
     <string name="app_ops_accessibility_volume">辅助音量</string>
     <string name="app_ops_read_phone_numbers">读取电话号码</string>
     <string name="app_ops_request_install_packages">安装软件包</string>
@@ -157,7 +157,7 @@
     <string name="app_ops_request_delete_packages">删除软件包</string>
     <string name="app_ops_bind_accessibility_service">绑定到辅助功能</string>
     <string name="app_ops_accept_handover">接受切换</string>
-    <string name="app_ops_manage_ipsec_tunnels">管理 Ip 通道</string>
+    <string name="app_ops_manage_ipsec_tunnels">管理 ip 通道</string>
     <string name="app_ops_start_foreground">前台启动</string>
     <string name="app_ops_bluetooth_scan">蓝牙扫描</string>
     <string name="app_ops_boot_completed">自动启动</string>

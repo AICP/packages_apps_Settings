@@ -170,4 +170,8 @@
     <string name="font_picker_progress">Aplikuji nové písmo\u2026</string>
     <string name="doze_on_charge_title">Zobrazit při nabíjení</string>
     <string name="doze_on_charge_summary">Probudit obrazovku při nabíjení</string>
+    <string name="location_mode_battery_saving_title">Úsporný režim</string>
+    <string name="location_mode_battery_saving_summary">Pomocí tohoto nastavení můžete vypnout GPS. V důsledku toho bude vaše přesná poloha neznámá.</string>
+    <string name="proximity_wake_title">Zabránit nechtěnému probuzení</string>
+    <string name="proximity_wake_summary">Kontrolovat senzor přiblížení pro zabránění nechtěného probuzení</string>
 </resources>
