@@ -174,4 +174,10 @@
     <string name="location_mode_battery_saving_summary">Sie können das GPS mit dieser Einstellung ausschalten. Infolgedessen wird Ihr exakter Standort unbekannt sein.</string>
     <string name="proximity_wake_title">Unbeabsichtigtes Aufwecken verhindern</string>
     <string name="proximity_wake_summary">Vor dem Aufwecken des Bildschirms den Näherungssensor überprüfen</string>
+    <string name="data_usage_app_restrict_data">Mobilfunk-Datennutzung</string>
+    <string name="data_usage_app_restrict_data_summary">Nutzung über Mobilfunk-Verbindungen aktivieren</string>
+    <string name="data_usage_app_restrict_vpn">VPN-Datennutzung</string>
+    <string name="data_usage_app_restrict_vpn_summary">Nutzung über VPN-Verbindungen aktivieren</string>
+    <string name="data_usage_app_restrict_wifi">WLAN-Datennutzung</string>
+    <string name="data_usage_app_restrict_wifi_summary">Nutzung über WLAN-Verbindungen aktivieren</string>
 </resources>
