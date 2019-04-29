@@ -180,6 +180,10 @@ public class SwipeUpPreferenceController extends BasePreferenceController
             if (fullModePref != null) {
                 fullModePref.setEnabled(enabled);
             }
+            if (enabled && !isPieRecentsEnabled(mContext)) {
+                Settings.System.putInt(mContext.getContentResolver(),
+                        Settings.System.RECENTS_COMPONENT, 0);
+            }
         } else if (TextUtils.equals(pref.getKey(), PREF_FULL_MODE)) {
             boolean enabled = ((Boolean) newValue).booleanValue();
             Settings.System.putInt(mContext.getContentResolver(),
