@@ -140,6 +140,7 @@ import com.android.settings.wifi.WifiSettings;
 import com.android.settings.wifi.calling.WifiCallingSettings;
 import com.android.settings.wifi.p2p.WifiP2pSettings;
 import com.android.settings.wifi.tether.WifiTetherSettings;
+import com.android.settings.livedisplay.LiveDisplaySettings;
 
 public class SettingsGateway {
 
@@ -269,6 +270,7 @@ public class SettingsGateway {
             StartAe.class.getName(),
             AmbientDisplaySettings.class.getName(),
             RunningServices.class.getName(),
+            LiveDisplaySettings.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {

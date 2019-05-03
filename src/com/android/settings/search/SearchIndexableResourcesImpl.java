@@ -104,6 +104,9 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
+// LiveDisplay
+import com.android.settings.livedisplay.LiveDisplaySettings;
+
 public class SearchIndexableResourcesImpl implements SearchIndexableResources {
 
     private final Set<Class> sProviders = new HashSet<>();
@@ -195,6 +198,9 @@ public class SearchIndexableResourcesImpl implements SearchIndexableResources {
         addIndex(RecentLocationRequestSeeAllFragment.class);
         addIndex(PreviouslyConnectedDeviceDashboardFragment.class);
         addIndex(BluetoothDashboardFragment.class);
+
+        // LiveDisplay
+        addIndex(LiveDisplaySettings.class);
     }
 
     @Override

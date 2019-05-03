@@ -59,7 +59,7 @@
 
     <!-- Manage applications, package string displayed in app snippet -->
     <string name="packagename_text"><xliff:g id="package_name">%1$s</xliff:g></string>
-    
+  
     <!-- FontEngine -->
     <string name="font_picker_title">Font</string>
     <string name="disable_fonts_installed_title">Font picker is unavailable to avoid conflicts with Substratum. Uninstall it if you wish to use the font picker.</string>
