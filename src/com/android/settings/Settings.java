@@ -332,4 +332,7 @@ public class Settings extends SettingsActivity {
     // AICP Activities
     public static class StartAeActivity extends SettingsActivity {}
 
+    // LiveDisplay
+    public static class LiveDisplaySettingsActivity extends SettingsActivity { /* empty */ }
+
 }
