@@ -25,11 +25,13 @@ import android.graphics.PorterDuffColorFilter;
 import android.provider.Settings;
 import android.support.annotation.VisibleForTesting;
 import android.util.AttributeSet;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.android.settings.R;
 import com.android.settings.Utils;
 import com.android.settingslib.graph.BatteryMeterDrawableBase;
+import com.android.settingslib.graph.ThemedBatteryDrawable;
 
 public class BatteryMeterView extends ImageView {
     @VisibleForTesting
@@ -70,6 +72,7 @@ public class BatteryMeterView extends ImageView {
                     new PorterDuffColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN));
         }
         setImageDrawable(mDrawable);
+        setLayerType(View.LAYER_TYPE_SOFTWARE, null);
     }
 
     public void setBatteryLevel(int level) {
@@ -130,6 +133,11 @@ public class BatteryMeterView extends ImageView {
                                       R.dimen.battery_meter_height);
                     setDashEffect(new float[]{18,10}, 0);
                     break;
+                case BatteryMeterDrawableBase.BATTERY_STYLE_Q:
+                    mIntrinsicWidth = mContext.getResources().getDimensionPixelSize(R.dimen.battery_meter_height);
+                    mIntrinsicHeight = mContext.getResources().getDimensionPixelSize(R.dimen.battery_meter_height);
+                    setShowPercent(false);
+                    break;
             }
         }
 
@@ -153,5 +161,4 @@ public class BatteryMeterView extends ImageView {
             mBoltPaint.setColorFilter(colorFilter);
         }
     }
-
 }
