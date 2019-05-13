@@ -25,6 +25,7 @@ import android.support.annotation.NonNull;
 import android.util.Log;
 import android.util.Pair;
 
+import com.android.internal.app.ColorDisplayController;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.Settings.NightDisplaySuggestionActivity;
@@ -86,8 +87,8 @@ public class SuggestionFeatureProviderImpl implements SuggestionFeatureProvider 
         } else if (className.equals(WifiCallingSuggestionActivity.class.getName())) {
             return WifiCallingSuggestionActivity.isSuggestionComplete(context);
         } else if (className.equals(NightDisplaySuggestionActivity.class.getName())) {
-            return true;
-            //return NightDisplayPreferenceController.isSuggestionComplete(context);
+            return ColorDisplayController.isAvailable(context) &&
+                NightDisplayPreferenceController.isSuggestionComplete(context);
         } else if (className.equals(NewDeviceIntroSuggestionActivity.class.getName())) {
             return NewDeviceIntroSuggestionActivity.isSuggestionComplete(context);
         } else if (className.equals(ZenSuggestionActivity.class.getName())) {
