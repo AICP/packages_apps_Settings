@@ -25,6 +25,7 @@ import android.provider.Settings;
 
 import androidx.annotation.NonNull;
 
+import com.android.internal.app.ColorDisplayController;
 import com.android.settings.Settings.NightDisplaySuggestionActivity;
 import com.android.settings.biometrics.fingerprint.FingerprintEnrollSuggestionActivity;
 import com.android.settings.biometrics.fingerprint.FingerprintSuggestionActivity;
@@ -78,7 +79,8 @@ public class SuggestionFeatureProviderImpl implements SuggestionFeatureProvider 
         } else if (className.equals(WifiCallingSuggestionActivity.class.getName())) {
             return WifiCallingSuggestionActivity.isSuggestionComplete(context);
         } else if (className.equals(NightDisplaySuggestionActivity.class.getName())) {
-            return NightDisplayPreferenceController.isSuggestionComplete(context);
+            return ColorDisplayController.isAvailable(context) &&
+                NightDisplayPreferenceController.isSuggestionComplete(context);
         } else if (className.equals(ZenSuggestionActivity.class.getName())) {
             return ZenOnboardingActivity.isSuggestionComplete(context);
         }
