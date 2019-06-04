@@ -41,4 +41,5 @@
     <string name="battery_stats_message">バッテリーの使用統計を初期化します</string>
     <string name="notification_log_summary">通知履歴を表示します</string>
     <string name="background_processes_settings_title">バックグラウンドプロセス</string>
+    <string name="reset">リセット</string>
 </resources>

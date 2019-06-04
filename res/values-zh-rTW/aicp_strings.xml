@@ -41,4 +41,5 @@
     <string name="battery_stats_message">電池統計數據即將重設</string>
     <string name="notification_log_summary">顯示通知歷史記錄日誌</string>
     <string name="background_processes_settings_title">背景處理程序</string>
+    <string name="reset">重設</string>
 </resources>

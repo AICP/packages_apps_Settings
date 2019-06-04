@@ -41,4 +41,5 @@
     <string name="battery_stats_message">Chystáte sa vymazať históriu štatistiky batérie</string>
     <string name="notification_log_summary">Zobraziť protokol histórie upozornení</string>
     <string name="background_processes_settings_title">Procesy na pozadí</string>
+    <string name="reset">Resetovať</string>
 </resources>

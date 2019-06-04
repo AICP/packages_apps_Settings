@@ -75,7 +75,7 @@
     <string name="volume_link_notification_title">关联铃声&amp; 通知的音量</string>
     <string name="notification_log_summary">显示通知历史记录日志</string>
     <string name="app_ops_settings">权限管理</string>
-    <string name="app_ops_cat_location">地理位置</string>
+    <string name="app_ops_cat_location">位置</string>
     <string name="app_ops_cat_personal">个人资料</string>
     <string name="app_ops_cat_messaging">短信</string>
     <string name="app_ops_cat_media">媒体</string>
@@ -170,4 +170,24 @@
     <string name="font_picker_progress">应用新的字体\u2026</string>
     <string name="doze_on_charge_title">充电时显示</string>
     <string name="doze_on_charge_summary">充电时唤醒屏幕</string>
+    <string name="location_mode_battery_saving_title">省电模式</string>
+    <string name="location_mode_battery_saving_summary">您可以使用此设置关闭 GPS。因此, 您的确切位置将是未知的。</string>
+    <string name="proximity_wake_title">防止意外唤醒</string>
+    <string name="proximity_wake_summary">唤醒屏幕前检查接近传感器</string>
+    <string name="data_usage_app_restrict_data">移动数据流量</string>
+    <string name="data_usage_app_restrict_data_summary">启用移动网络流量使用统计</string>
+    <string name="data_usage_app_restrict_vpn">VPN 数据</string>
+    <string name="data_usage_app_restrict_vpn_summary">启用 VPN 数据流量使用统计</string>
+    <string name="data_usage_app_restrict_wifi">Wi\u2011Fi 数据</string>
+    <string name="data_usage_app_restrict_wifi_summary">启用 Wi\u2011Fi 数据流量使用统计</string>
+    <string name="aggressive_battery_title">极限省电</string>
+    <string name="aggressive_battery_summary">更严格的电量节省措施</string>
+    <string name="aggressive_battery_warning_text">这是电量节省特性。它可能会干扰原计划在空闲状态时运行的服务, 如导航应用。你可以将这些应用列入白名单, 使其在应用电池设置中免受影响。</string>
+    <string name="aggressive_idle_title">Idle 主动调整</string>
+    <string name="aggressive_idle_summary">更频繁地进入设备空闲状态并且唤醒更少</string>
+    <string name="aggressive_standby_title">极限待机</string>
+    <string name="aggressive_standby_summary">限制应用程序后台运行</string>
+    <string name="aggressive_battery_saver_title">省电模式时自动启用 </string>
+    <string name="aggressive_battery_saver_summary">当使用省电模式时自动开启极限省电</string>
+    <string name="reset">重置</string>
 </resources>

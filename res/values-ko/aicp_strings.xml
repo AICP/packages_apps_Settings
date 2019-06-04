@@ -39,4 +39,5 @@
     <string name="battery_stats_message">배터리 사용 기록이 초기화됩니다</string>
     <string name="notification_log_summary">알림 기록 로그 표시</string>
     <string name="background_processes_settings_title">백그라운드 프로세스</string>
+    <string name="reset">초기화</string>
 </resources>

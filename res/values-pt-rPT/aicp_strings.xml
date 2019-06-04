@@ -40,4 +40,5 @@
     <string name="battery_stats_message">O histórico de estatísticas da bateria vai ser apagado</string>
     <string name="notification_log_summary">Mostrar o registro de histórico de notificações</string>
     <string name="background_processes_settings_title">Processos em segundo plano</string>
+    <string name="reset">Repor</string>
 </resources>

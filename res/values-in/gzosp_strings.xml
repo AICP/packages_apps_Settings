@@ -34,4 +34,7 @@
     <string name="lockscreen_battery_info_title">Info pengisian daya pada kunci layar</string>
     <string name="face_auto_unlock_title">Wajah membuka kunci otomatis</string>
     <string name="face_auto_unlock_summary">Lewati kunci layar setelah terbuka dengan wajah</string>
+    <string name="unit_dpi">dpi</string>
+    <string name="unit_px">px</string>
+    <string name="unit_msec">md</string>
 </resources>
