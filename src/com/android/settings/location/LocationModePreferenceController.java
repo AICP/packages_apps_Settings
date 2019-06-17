@@ -1,16 +1,19 @@
 /*
  * Copyright (C) 2019 The LineageOS Project
  *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
- * except in compliance with the License. You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
  *      http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing, software distributed under the
- * License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied. See the License for the specific language governing
- * permissions and limitations under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
 package com.android.settings.location;
 
 import android.content.Context;
@@ -52,9 +55,9 @@ public class LocationModePreferenceController extends LocationBasePreferenceCont
         ((TwoStatePreference) preference).setChecked(
                 mLocationMode == Settings.Secure.LOCATION_MODE_BATTERY_SAVING);
 
-        // Restricted user can't change the location mode, so disable the master switch. But in some
-        // corner cases, the location might still be enabled. In such case the master switch should
-        // be disabled but checked.
+        // Restricted user can't change the location mode, so disable the master switch.
+        // However, in some corner cases, the location might still be enabled and therefore,
+        // the master switch should be disabled, but checked at the same time.
         preference.setEnabled(mLocationEnabler.isEnabled(mLocationMode));
     }
 
@@ -72,8 +75,8 @@ public class LocationModePreferenceController extends LocationBasePreferenceCont
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        mLocationEnabler.setLocationMode(
-                (Boolean) newValue ? Settings.Secure.LOCATION_MODE_BATTERY_SAVING :
+        mLocationEnabler.setLocationMode((Boolean) newValue ?
+                Settings.Secure.LOCATION_MODE_BATTERY_SAVING :
                 Settings.Secure.LOCATION_MODE_HIGH_ACCURACY);
         return true;
     }
