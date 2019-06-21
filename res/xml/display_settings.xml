@@ -153,10 +153,10 @@
         android:title="@string/tap_to_wake"
         android:summary="@string/tap_to_wake_summary" />
 
-    <SwitchPreference
-        android:key="proximity_on_wake"
-        android:title="@string/proximity_wake_title"
-        android:summary="@string/proximity_wake_summary" />
+     <SwitchPreference
+        android:key="pocket_judge"
+        android:title="@string/pocket_judge_title"
+        android:summary="@string/pocket_judge_summary" />
 
     <ListPreference
         android:key="theme"

@@ -32,9 +32,9 @@ import com.android.settings.display.CameraGesturePreferenceController;
 import com.android.settings.display.ColorModePreferenceController;
 import com.android.settings.display.LiftToWakePreferenceController;
 import com.android.settings.display.LiveDisplayPreferenceController;
+import com.android.settings.display.PocketJudgePreferenceController;
 import com.android.settings.display.NightDisplayPreferenceController;
 import com.android.settings.display.NightModePreferenceController;
-import com.android.settings.display.ProximityOnWakePreferenceController;
 import com.android.settings.display.ScreenSaverPreferenceController;
 import com.android.settings.display.ShowOperatorNamePreferenceController;
 import com.android.settings.display.TapToWakePreferenceController;
@@ -55,7 +55,6 @@ public class DisplaySettings extends DashboardFragment {
     private static final String TAG = "DisplaySettings";
 
     public static final String KEY_DISPLAY_SIZE = "display_settings_screen_zoom";
-    public static final String KEY_PROXIMITY_ON_WAKE = "proximity_on_wake";
 
     private static final String KEY_SCREEN_TIMEOUT = "screen_timeout";
     private static final String KEY_AMBIENT_DISPLAY = "ambient_display";
@@ -128,6 +127,7 @@ public class DisplaySettings extends DashboardFragment {
         controllers.add(mFontPickerPreference = new FontPickerPreferenceController(context, lifecycle));
         controllers.add(new CameraGesturePreferenceController(context));
         controllers.add(new LiftToWakePreferenceController(context));
+        controllers.add(new PocketJudgePreferenceController(context));
         controllers.add(new NightDisplayPreferenceController(context));
         controllers.add(new NightModePreferenceController(context));
         controllers.add(new ScreenSaverPreferenceController(context));
@@ -143,7 +143,6 @@ public class DisplaySettings extends DashboardFragment {
         controllers.add(new ThemePreferenceController(context));
         controllers.add(new BrightnessLevelPreferenceController(context, lifecycle));
         controllers.add(new ColorModePreferenceController(context));
-        controllers.add(new ProximityOnWakePreferenceController(context));
         controllers.add(new LiveDisplayPreferenceController(context));
         return controllers;
     }
@@ -168,10 +167,6 @@ public class DisplaySettings extends DashboardFragment {
                     keys.add(WallpaperPreferenceController.KEY_WALLPAPER);
                     keys.add(KEY_NIGHT_DISPLAY);
                     keys.add(KEY_AUTO_BRIGHTNESS);
-                    if (!context.getResources().getBoolean(
-                            com.android.internal.R.bool.config_proximityCheckOnWake)) {
-                        keys.add(KEY_PROXIMITY_ON_WAKE);
-                    }
                     return keys;
                 }
 
