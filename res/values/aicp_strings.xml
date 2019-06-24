@@ -423,4 +423,7 @@
     <!-- Immersive Navigation -->
     <string name="immersive_navigation_title">Immersive navigation</string>
     <string name="immersive_navigation_summary">Hide navbar and pill</string>
+
+    <!-- Cloudflare DNS -->
+    <string name="private_dns_mode_cloudflare" translatable="false">Cloudflare DNS</string>
 </resources>
