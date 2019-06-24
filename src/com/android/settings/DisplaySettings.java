@@ -35,6 +35,7 @@ import com.android.settings.display.LiveDisplayPreferenceController;
 import com.android.settings.display.PocketJudgePreferenceController;
 import com.android.settings.display.NightDisplayPreferenceController;
 import com.android.settings.display.NightModePreferenceController;
+import com.android.settings.display.QsTileStylePreferenceController;
 import com.android.settings.display.ScreenSaverPreferenceController;
 import com.android.settings.display.ShowOperatorNamePreferenceController;
 import com.android.settings.display.TapToWakePreferenceController;
@@ -130,6 +131,7 @@ public class DisplaySettings extends DashboardFragment {
         controllers.add(new PocketJudgePreferenceController(context));
         controllers.add(new NightDisplayPreferenceController(context));
         controllers.add(new NightModePreferenceController(context));
+        controllers.add(new QsTileStylePreferenceController(context));
         controllers.add(new ScreenSaverPreferenceController(context));
         controllers.add(new AmbientDisplayPreferenceController(
                 context,

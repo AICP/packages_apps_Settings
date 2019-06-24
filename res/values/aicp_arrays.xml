@@ -262,4 +262,20 @@
         <!-- OP_BOOT_COMPLETED -->
         <item>@string/app_ops_boot_completed</item>
     </string-array>
+
+        <!-- QS tile styles -->
+    <string-array name="qs_tile_style_selector_entries" translatable="false">
+        <item>@string/qs_tile_style_default</item>
+        <item>@string/qs_tile_style_circle_trim</item>
+        <item>@string/qs_tile_style_two_tone_circle</item>
+        <item>@string/qs_tile_style_squircle_trim</item>
+    </string-array>
+
+    <string-array name="qs_tile_style_selector_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
 </resources>

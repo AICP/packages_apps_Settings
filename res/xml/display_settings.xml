@@ -85,6 +85,13 @@
         android:fragment="com.android.settings.display.ColorModePreferenceFragment"
         settings:keywords="@string/keywords_color_mode" />
 
+    <ListPreference
+        android:key="qs_tile_style"
+        android:title="@string/qs_tile_style_title"
+        android:entries="@array/qs_tile_style_selector_entries"
+        android:entryValues="@array/qs_tile_style_selector_values"
+        android:persistent="false" />
+
     <Preference
         android:key="font_size"
         android:title="@string/title_font_size"
