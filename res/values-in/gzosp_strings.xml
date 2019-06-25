@@ -15,6 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g> adalah <xliff:g id="status" example="disabled">%2$s</xliff:g></string>
     <string name="sim_enabled">diaktifkan</string>
     <string name="sim_disabled">dinonaktifkan</string>
     <string name="sim_missing">hilang atau rusak</string>
@@ -32,8 +33,18 @@
     <string name="sub_deactivate_failed">Penonaktifan gagal.</string>
     <string name="available_sims_title">Kartu SIM yang tersedia</string>
     <string name="lockscreen_battery_info_title">Info pengisian daya pada kunci layar</string>
+    <string name="lockscreen_battery_info_summary">Menampilkan maksimal arus tegangan yang dinegosiasikan pengisi daya dan suhu baterai pada layar kunci saat pengisian</string>
     <string name="face_auto_unlock_title">Wajah membuka kunci otomatis</string>
     <string name="face_auto_unlock_summary">Lewati kunci layar setelah terbuka dengan wajah</string>
+    <string name="three_finger_gesture">Usap untuk menangkap layar</string>
+    <string name="three_finger_gesture_summary">Usap 3 jari untuk mengambil tangkapan layar</string>
+    <string name="gesture_settings_title">Gerakan navigasi</string>
+    <string name="gesture_settings_info">Bilah navigasi harus dimatikan!\n\nGerakan yang tersedia:\n\nKembali\n- Usap ke atas di sisi kiri atau kanan\n\nBeranda\n- Usap ke atas di bagian tengah\n\nAplikasi baru-baru ini\n- Usap ke atas di bagian tengah dan tahan\n\nTekan lama beranda\n- Usap pendek ke atas dan tahan di tengah</string>
+    <string name="use_bottom_gesture_title">Gerakan navigasi</string>
+    <string name="gesture_swipe_length_title">Tinggi pemicu usapan</string>
+    <string name="gesture_swipe_length_summary">Tinggi dari bawah untuk memicu usapan</string>
+    <string name="gesture_action_timeout_title">Batas waktu pemicu usapan</string>
+    <string name="gesture_action_timeout_summary">Batas waktu sebelum tindakan gerakan dimulai</string>
     <string name="unit_dpi">dpi</string>
     <string name="unit_px">px</string>
     <string name="unit_msec">md</string>

@@ -171,9 +171,7 @@
     <string name="doze_on_charge_title">Toon bij opladen</string>
     <string name="doze_on_charge_summary">Scherm aan tijdens opladen</string>
     <string name="location_mode_battery_saving_title">Batterijbesparende modus</string>
-    <string name="location_mode_battery_saving_summary">Je kunt GPS uitschakelen met deze instelling. Hierdoor zal je exacte locatie onbekend zijn.</string>
-    <string name="proximity_wake_title">Per ongeluk ontwaken voorkomen</string>
-    <string name="proximity_wake_summary">Nabijheidssensor checken voorafgaand aan ontwaken van scherm</string>
+    <string name="location_mode_battery_saving_summary">Gebruik alleen Wi\u2011Fi, Bluetooth of mobiele netwerken om de locatie te bepalen (minder nauwkeurig)</string>
     <string name="data_usage_app_restrict_data">Mobiele gegevens</string>
     <string name="data_usage_app_restrict_data_summary">Gebruik van mobiele gegevens inschakelen</string>
     <string name="data_usage_app_restrict_vpn">VPN-gegevens</string>
@@ -239,4 +237,6 @@
     <string name="adj_intensity_title">Intensiteit</string>
     <string name="adj_contrast_title">Contrast</string>
     <string name="reset">Herstellen</string>
+    <string name="pocket_judge_title">Broekzak detectie</string>
+    <string name="pocket_judge_summary">Scherm- en toetsaanrakingen blokkeren wanneer het apparaat in de broekzak zit</string>
 </resources>

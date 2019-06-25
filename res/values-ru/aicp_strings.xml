@@ -171,9 +171,7 @@
     <string name="doze_on_charge_title">Показывать во время зарядки</string>
     <string name="doze_on_charge_summary">Включение экрана при зарядке</string>
     <string name="location_mode_battery_saving_title">Режим энергосбережения</string>
-    <string name="location_mode_battery_saving_summary">Вы можете отключить GPS с помощью этой настройки. В результате, ваше точное местоположение будет неизвестно.</string>
-    <string name="proximity_wake_title">Предотвращать случайное пробуждение</string>
-    <string name="proximity_wake_summary">Проверять датчик приближения перед пробуждением</string>
+    <string name="location_mode_battery_saving_summary">Использовать только Wi-Fi, Bluetooth или мобильные сети для определения местоположения (менее точно)</string>
     <string name="data_usage_app_restrict_data">Мобильные данные</string>
     <string name="data_usage_app_restrict_data_summary">Включить использование мобильных данных</string>
     <string name="data_usage_app_restrict_vpn">Данные VPN</string>
@@ -239,4 +237,6 @@
     <string name="adj_intensity_title">Интенсивность</string>
     <string name="adj_contrast_title">Контраст</string>
     <string name="reset">Сбросить</string>
+    <string name="pocket_judge_title">Режим \"В кармане\"</string>
+    <string name="pocket_judge_summary">Блокировать экран и физические кнопки, когда устройство находится в кармане</string>
 </resources>

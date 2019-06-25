@@ -171,9 +171,7 @@
     <string name="doze_on_charge_title">عرض عند الشحن</string>
     <string name="doze_on_charge_summary">إيقاظ الشاشة عند الشحن</string>
     <string name="location_mode_battery_saving_title">وضع توفير البطارية</string>
-    <string name="location_mode_battery_saving_summary">يمكنك إيقاف نظام تحديد المواقع باستخدام هذا الإعداد. نتيجة لذلك سوف يكون موقعك بالضبط غير معروف.</string>
-    <string name="proximity_wake_title">منع الاستيقاظ بالخطأ</string>
-    <string name="proximity_wake_summary">التحقق من مستشعر القرب قبل إيقاظ الشاشة</string>
+    <string name="location_mode_battery_saving_summary">إستخدام فقط شبكات WiFi أو بلوتوث أو الجوّال لتحديد الموقع (أقل دقة)</string>
     <string name="data_usage_app_restrict_data">البيانات الخلوية</string>
     <string name="data_usage_app_restrict_data_summary">تمكين استخدام البيانات الخلوية</string>
     <string name="data_usage_app_restrict_vpn">بيانات VPN</string>
@@ -239,4 +237,6 @@
     <string name="adj_intensity_title">الكثافة</string>
     <string name="adj_contrast_title">التباين</string>
     <string name="reset">إعادة تعيين</string>
+    <string name="pocket_judge_title">إستشعار الجيب</string>
+    <string name="pocket_judge_summary">الغاء تفعيل الشاشة و أزرار الإدخال عندما يكون الجهاز في الجيب</string>
 </resources>

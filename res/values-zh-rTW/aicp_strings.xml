@@ -42,4 +42,6 @@
     <string name="notification_log_summary">顯示通知歷史記錄日誌</string>
     <string name="background_processes_settings_title">背景處理程序</string>
     <string name="reset">重設</string>
+    <string name="pocket_judge_title">口袋檢測</string>
+    <string name="pocket_judge_summary">當裝置在口袋中時阻止螢幕和按鍵輸入</string>
 </resources>

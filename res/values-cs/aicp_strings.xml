@@ -171,9 +171,7 @@
     <string name="doze_on_charge_title">Zobrazit při nabíjení</string>
     <string name="doze_on_charge_summary">Probudit obrazovku při nabíjení</string>
     <string name="location_mode_battery_saving_title">Úsporný režim</string>
-    <string name="location_mode_battery_saving_summary">Pomocí tohoto nastavení můžete vypnout GPS. V důsledku toho bude vaše přesná poloha neznámá.</string>
-    <string name="proximity_wake_title">Zabránit nechtěnému probuzení</string>
-    <string name="proximity_wake_summary">Kontrolovat senzor přiblížení pro zabránění nechtěného probuzení</string>
+    <string name="location_mode_battery_saving_summary">K určování polohy používat pouze Wi-Fi, Bluetooth nebo mobilní sítě (méně přesné)</string>
     <string name="data_usage_app_restrict_data">Mobilní data</string>
     <string name="data_usage_app_restrict_data_summary">Povolit používání mobilních dat</string>
     <string name="data_usage_app_restrict_vpn">VPN data</string>
@@ -239,4 +237,6 @@
     <string name="adj_intensity_title">Intenzita</string>
     <string name="adj_contrast_title">Kontrast</string>
     <string name="reset">Obnovit</string>
+    <string name="pocket_judge_title">Detekce uložení v kapse</string>
+    <string name="pocket_judge_summary">Blokovat obrazovku a hardwarová tlačítka, když je zařízení v kapse</string>
 </resources>

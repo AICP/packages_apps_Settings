@@ -40,4 +40,6 @@
     <string name="notification_log_summary">Visualizza il registro cronologico delle notifiche</string>
     <string name="background_processes_settings_title">Processi in background</string>
     <string name="reset">Ripristina</string>
+    <string name="pocket_judge_title">Rilevamento in tasca</string>
+    <string name="pocket_judge_summary">Blocca lo schermo e i pulsanti quando il dispositivo è in tasca</string>
 </resources>

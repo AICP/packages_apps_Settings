@@ -171,9 +171,7 @@
     <string name="doze_on_charge_title">Şarj olurken göster</string>
     <string name="doze_on_charge_summary">Şarj olurken ekranı uyandır</string>
     <string name="location_mode_battery_saving_title">Pil tasarrufu modu</string>
-    <string name="location_mode_battery_saving_summary">Bu ayarı kullanarak GPS\'i kapatabilirsiniz. Sonuç olarak, tam konumunuz bilinmeyecektir.</string>
-    <string name="proximity_wake_title">Yanlışlıkla uyandırmayı önle</string>
-    <string name="proximity_wake_summary">Ekranı uyandırmadan önce yakınlık sensörünü kontrol et</string>
+    <string name="location_mode_battery_saving_summary">Konum belirlemek için yalnızca Wi\u2011Fi, Bluetooth veya mobil ağları kullanın (daha az doğru)</string>
     <string name="data_usage_app_restrict_data">Hücresel veri</string>
     <string name="data_usage_app_restrict_data_summary">Hücresel veri kullanımını etkinleştir</string>
     <string name="data_usage_app_restrict_vpn">VPN veri</string>
@@ -239,4 +237,6 @@
     <string name="adj_intensity_title">Yoğunluk</string>
     <string name="adj_contrast_title">Kontrast</string>
     <string name="reset">Sıfırla</string>
+    <string name="pocket_judge_title">Cep algılama</string>
+    <string name="pocket_judge_summary">Cihaz cebinizdeyken ekran ve tuş girişlerini engelle</string>
 </resources>

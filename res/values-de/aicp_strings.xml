@@ -171,9 +171,7 @@
     <string name="doze_on_charge_title">Beim Laden anzeigen</string>
     <string name="doze_on_charge_summary">Bildschirm beim Laden aktiv halten</string>
     <string name="location_mode_battery_saving_title">Energiesparmodus</string>
-    <string name="location_mode_battery_saving_summary">Sie können das GPS mit dieser Einstellung ausschalten. Infolgedessen wird Ihr exakter Standort unbekannt sein.</string>
-    <string name="proximity_wake_title">Unbeabsichtigtes Aufwecken verhindern</string>
-    <string name="proximity_wake_summary">Vor dem Aufwecken des Bildschirms den Näherungssensor überprüfen</string>
+    <string name="location_mode_battery_saving_summary">Nur WLAN, Bluetooth oder Mobilfunknetze zur Standortbestimmung nutzen (weniger genau)</string>
     <string name="data_usage_app_restrict_data">Mobilfunk-Datennutzung</string>
     <string name="data_usage_app_restrict_data_summary">Nutzung über Mobilfunk-Verbindungen aktivieren</string>
     <string name="data_usage_app_restrict_vpn">VPN-Datennutzung</string>
@@ -239,4 +237,6 @@
     <string name="adj_intensity_title">Intensität</string>
     <string name="adj_contrast_title">Kontrast</string>
     <string name="reset">Zurücksetzen</string>
+    <string name="pocket_judge_title">Taschenerkennung</string>
+    <string name="pocket_judge_summary">Verhindert Bildschirm- und Tasteneingaben, wenn sich das Gerät in einer Tasche befindet</string>
 </resources>

@@ -171,9 +171,7 @@
     <string name="doze_on_charge_title">Töltéskor jelenítse meg</string>
     <string name="doze_on_charge_summary">Töltéskor ébressze fel a képernyőt</string>
     <string name="location_mode_battery_saving_title">Akkumulátorkímélő mód</string>
-    <string name="location_mode_battery_saving_summary">Ennek a beállításnak a használatával kikapcsolhatja a GPS-t. Ennek következtében az Ön pontos tartózkodási helye ismeretlen lesz.</string>
-    <string name="proximity_wake_title">Véletlenébresztés-gátló</string>
-    <string name="proximity_wake_summary">Ellenőrzi a közelségérzékelőt a képernyő ébredése előtt</string>
+    <string name="location_mode_battery_saving_summary">Wi\u2011Fi, Bluetooth és mobilhálózatok használata a tartózkodási hely megállapításához (kevésbé pontos)</string>
     <string name="data_usage_app_restrict_data">Mobiladat-kapcsolat</string>
     <string name="data_usage_app_restrict_data_summary">A mobiladat-használat engedélyezése</string>
     <string name="data_usage_app_restrict_vpn">VPN-adatok</string>
@@ -239,4 +237,6 @@
     <string name="adj_intensity_title">Intenzitás</string>
     <string name="adj_contrast_title">Kontraszt</string>
     <string name="reset">Visszaállítás</string>
+    <string name="pocket_judge_title">Zseb érzékelése</string>
+    <string name="pocket_judge_summary">A képernyő és a gombok általi véletlen bevitelek blokkolása, ha a készülék a zsebben van</string>
 </resources>

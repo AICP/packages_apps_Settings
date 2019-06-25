@@ -171,9 +171,7 @@
     <string name="doze_on_charge_title">Pokaż podczas ładowania</string>
     <string name="doze_on_charge_summary">Włączenie ekranu podczas ładowania</string>
     <string name="location_mode_battery_saving_title">Tryb oszczędzania baterii</string>
-    <string name="location_mode_battery_saving_summary">Możesz wyłączyć GPS za pomocą tego ustawienia. Dzięki temu Twoja dokładna lokalizacja będzie nieznana.</string>
-    <string name="proximity_wake_title">Zapobiegaj przypadkowemu wybudzeniu</string>
-    <string name="proximity_wake_summary">Sprawdź czujnik zbliżeniowy przed wybudzeniem ekranu</string>
+    <string name="location_mode_battery_saving_summary">Używaj tylko Wi\u2011Fi, Bluetooth lub sieci mobilnej do lokalizacji (mniej dokładne)</string>
     <string name="data_usage_app_restrict_data">Dane komórkowe</string>
     <string name="data_usage_app_restrict_data_summary">Włącz użycie danych komórkowych</string>
     <string name="data_usage_app_restrict_vpn">Dane VPN</string>
@@ -239,4 +237,6 @@
     <string name="adj_intensity_title">Intensywność</string>
     <string name="adj_contrast_title">Kontrast</string>
     <string name="reset">Resetuj</string>
+    <string name="pocket_judge_title">Wykrywanie telefonu w kieszeni</string>
+    <string name="pocket_judge_summary">Zablokuj funkcje ekranu i przycisków, gdy urządzenie jest w kieszeni</string>
 </resources>

@@ -15,4 +15,38 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g> é <xliff:g id="status" example="disabled">%2$s</xliff:g></string>
+    <string name="sim_enabled">ativado</string>
+    <string name="sim_disabled">desativado</string>
+    <string name="sim_missing">faltando ou com defeito</string>
+    <string name="sim_enabler_need_disable_sim">O cartão SIM será desativado. Você quer continuar?</string>
+    <string name="sim_enabler_will_disable_sim_title">Atenção</string>
+    <string name="sim_enabler_need_switch_data_service">Este SIM será desativado e o <xliff:g id="slotid">%1$s</xliff:g> será usado para serviços de dados. Você tem certeza que quer continuar?</string>
+    <string name="sim_enabler_airplane_on">Não é possível realizar a operação enquanto o modo avião está ativado.</string>
+    <string name="sim_enabler_in_call">Não é possível executar a operação durante a chamada.</string>
+    <string name="sim_enabler_both_inactive">Não é possível desativar todos os cartões SIM</string>
+    <string name="sim_enabler_enabling">Ativando\u2026</string>
+    <string name="sim_enabler_disabling">Desativando\u2026</string>
+    <string name="sub_activate_success">SIM ativado.</string>
+    <string name="sub_activate_failed">Falha ao ativar.</string>
+    <string name="sub_deactivate_success">SIM desativado.</string>
+    <string name="sub_deactivate_failed">Falha ao desativar.</string>
+    <string name="available_sims_title">Cartões SIM disponíveis</string>
+    <string name="lockscreen_battery_info_title">Informação de carregamento na tela de bloqueio</string>
+    <string name="lockscreen_battery_info_summary">Exibir tensão máxima negociada do carregador e temperatura da bateria na tela de bloqueio durante o carregamento</string>
+    <string name="face_auto_unlock_title">Desbloqueio facial automático</string>
+    <string name="face_auto_unlock_summary">Pular a tela de bloqueio após o desbloqueio facial</string>
+    <string name="three_finger_gesture">Deslize para capturar a tela</string>
+    <string name="three_finger_gesture_summary">Deslize três dedos para tirar uma captura de tela</string>
+    <string name="gesture_settings_title">Gestos de navegação</string>
+    <string name="gesture_settings_info">A barra de navegação deve estar desativada! \n\nGestos disponíveis:\n\nVoltar\n- Deslize para cima pelos lados direito ou esquerdo\n\nInício\n- Deslize para cima no centro\n\nAplicativos recentes\n- Deslize para cima no centro e segure\n\nÚltimo aplicativo\n- Deslize rápido para cima e segure no centro</string>
+    <string name="use_bottom_gesture_title">Gestos de navegação</string>
+    <string name="use_bottom_gesture_summary">Usar gestos de deslize para cima para a navegação</string>
+    <string name="gesture_swipe_length_title">Altura da área de deslize</string>
+    <string name="gesture_swipe_length_summary">Altura da parte inferior para deslizar</string>
+    <string name="gesture_action_timeout_title">Tempo limite da área de deslize</string>
+    <string name="gesture_action_timeout_summary">Tempo limite para que a ação do gesto seja iniciada</string>
+    <string name="unit_dpi">dpi</string>
+    <string name="unit_px">px</string>
+    <string name="unit_msec">ms</string>
 </resources>

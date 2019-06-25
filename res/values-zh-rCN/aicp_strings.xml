@@ -171,9 +171,6 @@
     <string name="doze_on_charge_title">充电时显示</string>
     <string name="doze_on_charge_summary">充电时唤醒屏幕</string>
     <string name="location_mode_battery_saving_title">省电模式</string>
-    <string name="location_mode_battery_saving_summary">您可以使用此设置关闭 GPS。因此, 您的确切位置将是未知的。</string>
-    <string name="proximity_wake_title">防止意外唤醒</string>
-    <string name="proximity_wake_summary">唤醒屏幕前检查接近传感器</string>
     <string name="data_usage_app_restrict_data">移动数据流量</string>
     <string name="data_usage_app_restrict_data_summary">启用移动网络流量使用统计</string>
     <string name="data_usage_app_restrict_vpn">VPN 数据</string>
@@ -189,5 +186,31 @@
     <string name="aggressive_standby_summary">限制应用程序后台运行</string>
     <string name="aggressive_battery_saver_title">省电模式时自动启用 </string>
     <string name="aggressive_battery_saver_summary">当使用省电模式时自动开启极限省电</string>
+    <string name="live_display_summary">基于时间和环境条件来优化您的屏幕，以改善可读性和减少眼睛疲劳</string>
+    <string name="live_display_mode">显示模式</string>
+    <string name="live_display_color_temperature_title">色温</string>
+    <string name="live_display_color_temperature_summary">白天：<xliff:g id="day_temperature">%1$d</xliff:g>K  夜间：<xliff:g id="night_temperature">%2$d</xliff:g>K</string>
+    <string name="live_display_color_temperature_label"><xliff:g id="degrees">%1$d</xliff:g>K</string>
+    <string name="live_display_day">白天</string>
+    <string name="live_display_night">夜间</string>
+    <string name="live_display_outdoor_mode_title">自动户外模式</string>
+    <string name="live_display_outdoor_mode_summary">在强光下自动增强亮度和饱和度</string>
+    <string name="live_display_low_power_title">降低电量消耗</string>
+    <string name="live_display_low_power_summary">调整显示屏以获得最低功耗，但不削弱显示效果</string>
+    <string name="live_display_enhance_color_title">增强色彩</string>
+    <string name="live_display_enhance_color_summary">为肤色、风景和其他图像提升色彩饱和度</string>
+    <string name="live_display_color_profile_title">颜色配置文件</string>
+    <string name="live_display_color_profile_standard_title">标准</string>
+    <string name="live_display_color_profile_standard_summary">准确的颜色和明亮的白色</string>
+    <string name="live_display_color_profile_natural_title">自然</string>
+    <string name="live_display_color_profile_natural_summary">写实的颜色和肤色</string>
+    <string name="live_display_color_profile_dynamic_title">动态</string>
+    <string name="live_display_color_profile_dynamic_summary">增强的颜色和明亮的白色</string>
+    <string name="live_display_color_profile_cinema_title">影院</string>
+    <string name="live_display_color_profile_cinema_summary">针对视频的完美色彩重现</string>
+    <string name="live_display_color_profile_astronomy_title">天文</string>
+    <string name="live_display_color_profile_astronomy_summary">夜视用的深红色</string>
     <string name="reset">重置</string>
+    <string name="pocket_judge_title">口袋检测</string>
+    <string name="pocket_judge_summary">当设备在口袋中时屏蔽屏幕和按键操作</string>
 </resources>

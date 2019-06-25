@@ -42,4 +42,6 @@
     <string name="notification_log_summary">通知履歴を表示します</string>
     <string name="background_processes_settings_title">バックグラウンドプロセス</string>
     <string name="reset">リセット</string>
+    <string name="pocket_judge_title">ポケットの検出</string>
+    <string name="pocket_judge_summary">端末がポケットの中にある時、画面とボタンの入力をブロックします</string>
 </resources>

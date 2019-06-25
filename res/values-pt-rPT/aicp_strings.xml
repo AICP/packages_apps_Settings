@@ -41,4 +41,6 @@
     <string name="notification_log_summary">Mostrar o registro de histórico de notificações</string>
     <string name="background_processes_settings_title">Processos em segundo plano</string>
     <string name="reset">Repor</string>
+    <string name="pocket_judge_title">Detetor de bolso</string>
+    <string name="pocket_judge_summary">Bloquear o ecrã e os botões enquanto o dispositivo estiver no bolso</string>
 </resources>
