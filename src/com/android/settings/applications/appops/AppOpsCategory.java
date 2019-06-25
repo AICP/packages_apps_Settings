@@ -29,6 +29,7 @@ import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.IconDrawableFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,17 +39,18 @@ import android.widget.ListView;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsActivity;
 import com.android.settings.applications.appops.AppOpsState.AppOpEntry;
 import com.android.settings.core.SubSettingLauncher;
 
-import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
-
 import java.util.List;
 
 public class AppOpsCategory extends ListFragment implements
         LoaderManager.LoaderCallbacks<List<AppOpEntry>> {
+
+    private static final String LOG_TAG = "SettingsActivity";
 
     private static final int RESULT_APP_DETAILS = 1;
 
@@ -59,6 +61,7 @@ public class AppOpsCategory extends ListFragment implements
     AppListAdapter mAdapter;
 
     String mCurrentPkgName;
+    private int mCurrentPkgUid;
 
     public AppOpsCategory() {
     }
@@ -142,8 +145,8 @@ public class AppOpsCategory extends ListFragment implements
         }
 
         @Override public List<AppOpEntry> loadInBackground() {
-            return mState.buildState(mTemplate, 0, null,
-                    mUserControlled ? AppOpsState.LABEL_COMPARATOR : AppOpsState.RECENCY_COMPARATOR);
+            return mState.buildState(mTemplate, 0, null, mUserControlled ?
+                    AppOpsState.LABEL_COMPARATOR : AppOpsState.RECENCY_COMPARATOR);
         }
 
         /**
@@ -263,10 +266,12 @@ public class AppOpsCategory extends ListFragment implements
         private final LayoutInflater mInflater;
         private final AppOpsState mState;
         private final boolean mUserControlled;
+        private final Context mContext;
 
         List<AppOpEntry> mList;
 
         public AppListAdapter(Context context, AppOpsState state, boolean userControlled) {
+            mContext = context;
             mResources = context.getResources();
             mInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             mState = state;
@@ -296,7 +301,8 @@ public class AppOpsCategory extends ListFragment implements
         /**
          * Populate new items in the list.
          */
-        @Override public View getView(int position, View convertView, ViewGroup parent) {
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
             View view;
 
             if (convertView == null) {
@@ -306,9 +312,10 @@ public class AppOpsCategory extends ListFragment implements
             }
 
             AppOpEntry item = getItem(position);
-            ((ImageView)view.findViewById(R.id.app_icon)).setImageDrawable(
-                    item.getAppEntry().getIcon());
-            ((TextView)view.findViewById(R.id.app_name)).setText(item.getAppEntry().getLabel());
+            ((ImageView) view.findViewById(R.id.app_icon)).setImageDrawable(
+                    IconDrawableFactory.newInstance(mContext).getBadgedIcon(
+                            item.getAppEntry().getApplicationInfo()));
+            ((TextView) view.findViewById(R.id.app_name)).setText(item.getAppEntry().getLabel());
             if (mUserControlled) {
                 ((TextView) view.findViewById(R.id.op_name)).setText(
                         item.getTimeText(mResources, false));
@@ -357,13 +364,16 @@ public class AppOpsCategory extends ListFragment implements
     // utility method used to start sub activity
     private void startApplicationDetailsActivity() {
         // start new fragment to display extended information
-        Bundle args = new Bundle();
+        final Bundle args = new Bundle();
         args.putString(AppOpsDetails.ARG_PACKAGE_NAME, mCurrentPkgName);
+        args.putInt(AppOpsDetails.ARG_PACKAGE_UID, mCurrentPkgUid);
+
         new SubSettingLauncher(getContext())
                 .setDestination(AppOpsDetails.class.getName())
-                .setTitle(R.string.app_ops_settings)
+                .setTitle(R.string.privacy_guard_manager_title)
                 .setArguments(args)
-                .setSourceMetricsCategory(MetricsEvent.APP_OPS_SUMMARY)
+                .setSourceMetricsCategory(MetricsProto.MetricsEvent.VIEW_UNKNOWN)
+                .setResultListener(this, RESULT_APP_DETAILS)
                 .launch();
     }
 
@@ -384,6 +394,7 @@ public class AppOpsCategory extends ListFragment implements
                 entry.overridePrimaryOpMode(mode);
             } else {
                 mCurrentPkgName = entry.getAppEntry().getApplicationInfo().packageName;
+                mCurrentPkgUid = entry.getAppEntry().getApplicationInfo().uid;
                 startApplicationDetailsActivity();
             }
         }
@@ -393,7 +404,7 @@ public class AppOpsCategory extends ListFragment implements
         Bundle fargs = getArguments();
         AppOpsState.OpsTemplate template = null;
         if (fargs != null) {
-            template = (AppOpsState.OpsTemplate)fargs.getParcelable("template");
+            template = (AppOpsState.OpsTemplate) fargs.getParcelable("template");
         }
         return new AppListLoader(getActivity(), mState, template, mUserControlled);
     }
