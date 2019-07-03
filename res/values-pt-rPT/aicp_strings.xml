@@ -43,4 +43,5 @@
     <string name="reset">Repor</string>
     <string name="pocket_judge_title">Detetor de bolso</string>
     <string name="pocket_judge_summary">Bloquear o ecrã e os botões enquanto o dispositivo estiver no bolso</string>
+    <string name="privacy_guard_reset_title">Repor</string>
 </resources>

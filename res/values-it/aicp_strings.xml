@@ -42,4 +42,5 @@
     <string name="reset">Ripristina</string>
     <string name="pocket_judge_title">Rilevamento in tasca</string>
     <string name="pocket_judge_summary">Blocca lo schermo e i pulsanti quando il dispositivo è in tasca</string>
+    <string name="privacy_guard_reset_title">Ripristina</string>
 </resources>

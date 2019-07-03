@@ -44,4 +44,5 @@
     <string name="reset">Resetovať</string>
     <string name="pocket_judge_title">Detekcia režimu Vo vrecku</string>
     <string name="pocket_judge_summary">Blokovať obrazovku a hardvérové tlačidlá, keď je zariadenie vo vrecku</string>
+    <string name="privacy_guard_reset_title">Resetovať</string>
 </resources>

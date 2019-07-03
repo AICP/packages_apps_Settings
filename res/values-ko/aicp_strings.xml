@@ -42,4 +42,5 @@
     <string name="reset">초기화</string>
     <string name="pocket_judge_title">주머니 감지</string>
     <string name="pocket_judge_summary">기기가 주머니에 있을 때 화면과 버튼 입력을 방지합니다.</string>
+    <string name="privacy_guard_reset_title">초기화</string>
 </resources>

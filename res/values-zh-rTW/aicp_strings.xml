@@ -44,4 +44,5 @@
     <string name="reset">重設</string>
     <string name="pocket_judge_title">口袋檢測</string>
     <string name="pocket_judge_summary">當裝置在口袋中時阻止螢幕和按鍵輸入</string>
+    <string name="privacy_guard_reset_title">重設</string>
 </resources>
