@@ -76,6 +76,7 @@
     <string name="font_picker_progress">Menerapkan huruf baru\u2026</string>
     <string name="doze_on_charge_title">Hanya ketika pengisian</string>
     <string name="location_mode_battery_saving_title">Mode hemat baterai</string>
+    <string name="location_mode_battery_saving_summary">Gunakan hanya Wi\u2011Fi, Bluetooth, atau jaringan seluler untuk menentukan lokasi (kurang akurat)</string>
     <string name="data_usage_app_restrict_data">Data seluler</string>
     <string name="data_usage_app_restrict_data_summary">Hidupkan penggunaan data seluler</string>
     <string name="data_usage_app_restrict_vpn">Data VPN</string>
@@ -136,5 +137,32 @@
     <string name="app_ops_cat_device">Perangkat</string>
     <string name="app_ops_cat_bootup">Saat memulai</string>
     <string name="app_ops_settings">Pengoperasian aplikasi</string>
+    <string name="privacy_guard_no_user_apps">Tidak ada aplikasi terpasang</string>
+    <string name="privacy_guard_help_title">Bantuan</string>
     <string name="privacy_guard_reset_title">Setel ulang</string>
+    <string name="privacy_guard_reset_text">Setel ulang perizinan?</string>
+    <string name="privacy_guard_notification_title">Tampilkan pemberitahuan</string>
+    <string name="loading">Memuat\u2026</string>
+    <string name="app_ops_permissions_allowed">Diizinkan</string>
+    <string name="app_ops_permissions_ignored">Diabaikan</string>
+    <string name="app_ops_permissions_always_ask">Selalu tanya</string>
+    <string name="app_ops_entry_summary"><xliff:g id="op">%1$s</xliff:g> (digunakan <xliff:g id="count">%2$s</xliff:g>)</string>
+    <string name="app_ops_allowed_count">Diizinkan <xliff:g id="menghitung" contoh="2 waktu">%s</xliff:g></string>
+    <string name="app_ops_ignored_count">Ditolak: <xliff:g id="count" example="2 times">%s</xliff:g></string>
+    <string name="app_ops_both_count">Diizinkan <xliff:g id="count">%1$s</xliff:g>, ditolak <xliff:g id="count">%2$s</xliff:g></string>
+    <string name="app_ops_no_blockable_permissions">Tidak ada izin yang tersedia untuk diblokir</string>
+    <string name="app_ops_show_user_apps">Tampilkan aplikasi pengguna</string>
+    <string name="app_ops_show_system_apps">Menampilkan aplikasi bawaan</string>
+    <string name="memory_startup_apps_title">Aplikasi dimulai saat boot</string>
+    <string name="app_ops_categories_location">Lokasi</string>
+    <string name="app_ops_categories_personal">Pribadi</string>
+    <string name="app_ops_categories_messaging">Pesan</string>
+    <string name="app_ops_categories_media">Media</string>
+    <string name="app_ops_categories_device">Perangkat</string>
+    <string name="app_ops_categories_run_in_background">Berjalan di latar belakang</string>
+    <string name="app_ops_categories_other">Lainnya</string>
+    <string name="app_ops_summaries_access_camera">mengakses kamera</string>
+    <string name="app_ops_summaries_access_notifications">mengakses pemberitahuan</string>
+    <string name="app_ops_summaries_activate_vpn">mengatifkan VPN</string>
+    <string name="app_ops_summaries_add_voicemail">menambahkan pesan suara</string>
 </resources>
