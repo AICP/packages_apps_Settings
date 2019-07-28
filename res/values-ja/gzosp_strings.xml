@@ -24,5 +24,4 @@
     <string name="available_sims_title">利用可能な SIM カード</string>
     <string name="lockscreen_battery_info_title">ロック画面での充電情報</string>
     <string name="face_auto_unlock_title">顔認証で自動ロック解除</string>
-    <string name="face_auto_unlock_summary">顔認証したときロック画面をスキップします</string>
 </resources>
