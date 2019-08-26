@@ -33,6 +33,12 @@
         android:summary="%s"
         settings:controller="com.android.settings.display.NightDisplayAutoModeValuePreferenceController" />
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="night_display_theme"
+        android:title="@string/night_display_theme_title"
+        android:summary="@string/night_display_theme_summary"
+        android:defaultValue="false" />
+
     <Preference
         android:key="night_display_start_time"
         android:title="@string/night_display_start_time_title"
