@@ -593,10 +593,11 @@
 
     </com.android.settings.development.autofill.AutofillPreferenceCategory>
 
+<!--
     <PreferenceCategory
         android:key="theme_customization_category"
         android:title="@string/theme_customization_category"
-        android:order="1200"> <!-- Incremented by 100 from last order (i.e. 1100) -->
+        android:order="1200"> <!- - Incremented by 100 from last order (i.e. 1100) - ->
 
         <ListPreference
             android:key="android.theme.customization.accent_color"
@@ -608,4 +609,5 @@
             android:key="android.theme.customization.adaptive_icon_shape"
             android:title="@string/theme_customization_icon_shape_title"/>
     </PreferenceCategory>
+    -->
 </PreferenceScreen>
