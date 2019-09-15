@@ -120,4 +120,6 @@
     <!-- Battery stats reset -->
     <string name="battery_usage_stats_reset">Reset stats</string>
     <string name="battery_usage_stats_reset_message">Battery history stats are going to be reset</string>
+
+    <string name="battery_temp">Battery temperature</string>
 </resources>
