@@ -66,4 +66,6 @@
     <string name="custom_light_off_time_title">Light OFF time during led pulse (ms)"</string>
     <string name="show_light_on_zen_title">Blink during Do Not Disturb</string>
 
+    <!-- Battery temperature -->
+    <string name="battery_temp">Battery temperature</string>
 </resources>
