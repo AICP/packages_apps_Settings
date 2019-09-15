@@ -68,6 +68,8 @@
     <string name="night_auto_value_min">Minimum parlaklık</string>
     <string name="night_bright_low">Düşük parlaklık</string>
     <string name="night_bright_midlow">Orta düşük parlaklık</string>
+    <string name="night_display_theme_title">Gece ışığında karanlık tema</string>
+    <string name="night_display_theme_summary">Gece ışığında karanlık temaya geç</string>
     <string name="custom_light_title">Işık rengi</string>
     <string name="custom_light_on_time_title">Işık açıkken yanıp sönme hızı (ms)</string>
     <string name="custom_light_off_time_title">Işık kapalıyken yanıp sönme hızı (ms)</string>

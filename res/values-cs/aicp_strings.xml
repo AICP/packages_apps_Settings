@@ -63,11 +63,13 @@
     <string name="battery_stats_reset">Vynulovat statistiky</string>
     <string name="battery_stats_message">Chystáte se obnovit historii statistiky baterie</string>
     <string name="ok_string">Ok</string>
-    <string name="night_brightness_value_title">Nižší jas při nočním světle</string>
+    <string name="night_brightness_value_title">Nižší jas při Nočním světle</string>
     <string name="night_auto_value_disabled">Zakázáno</string>
     <string name="night_auto_value_min">Minimální jas</string>
     <string name="night_bright_low">Nízký jas</string>
     <string name="night_bright_midlow">Středně nízký jas</string>
+    <string name="night_display_theme_title">Tmavý motiv při Nočním světle</string>
+    <string name="night_display_theme_summary">Přepnout na tmavý motiv, pokud je zapnuto Noční světlo</string>
     <string name="custom_light_title">Barva kontrolky</string>
     <string name="custom_light_on_time_title">Doba zapnutí kontrolky LED během pulsování (ms)</string>
     <string name="custom_light_off_time_title">Doba vypnutí kontrolky LED během pulsování (ms)</string>

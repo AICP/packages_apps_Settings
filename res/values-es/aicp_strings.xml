@@ -68,6 +68,8 @@
     <string name="night_auto_value_min">Brillo mínimo</string>
     <string name="night_bright_low">Brillo bajo</string>
     <string name="night_bright_midlow">Brillo medio-bajo</string>
+    <string name="night_display_theme_title">Tema oscuro en modo luz nocturna</string>
+    <string name="night_display_theme_summary">Cambiar a tema oscuro si luz nocturna está activada</string>
     <string name="custom_light_title">Color del Led</string>
     <string name="custom_light_on_time_title">Duración del parpadeo del led encendido (ms)</string>
     <string name="custom_light_off_time_title">Duración del parpadeo del led apagado (ms)\"</string>

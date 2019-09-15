@@ -18,10 +18,35 @@
     <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g>は<xliff:g id="status" example="disabled">%2$s</xliff:g>です</string>
     <string name="sim_enabled">有効</string>
     <string name="sim_disabled">無効</string>
+    <string name="sim_missing">未検出または問題が発生しています</string>
+    <string name="sim_enabler_need_disable_sim">SIM カードはアクティベート解除されます。続行しますか?</string>
     <string name="sim_enabler_will_disable_sim_title">注意</string>
+    <string name="sim_enabler_need_switch_data_service">この SIM は無効になり、SIM <xliff:g id="slotid">%1$s</xliff:g>がデータサービスに使用されます。続行しますか?</string>
+    <string name="sim_enabler_airplane_on">機内モードが ON になっている間はこの操作を実行することはできません</string>
+    <string name="sim_enabler_in_call">通話中はこの操作を実行することはできません</string>
+    <string name="sim_enabler_both_inactive">全ての SIM カードを無効にはできません</string>
     <string name="sim_enabler_enabling">アクティベート中\u2026</string>
     <string name="sim_enabler_disabling">アクティベート解除中\u2026</string>
+    <string name="sub_activate_success">SIM をアクティベートしました</string>
+    <string name="sub_activate_failed">アクティベーションに失敗しました</string>
+    <string name="sub_deactivate_success">SIM をアクティベート解除しました</string>
+    <string name="sub_deactivate_failed">アクティベート解除に失敗しました</string>
     <string name="available_sims_title">利用可能な SIM カード</string>
     <string name="lockscreen_battery_info_title">ロック画面での充電情報</string>
+    <string name="lockscreen_battery_info_summary">充電中のロック画面に接続した充電器の情報を表示する</string>
     <string name="face_auto_unlock_title">顔認証で自動ロック解除</string>
+    <string name="face_auto_unlock_summary">顔認証した時ロック画面をスキップする</string>
+    <string name="three_finger_gesture">スワイプでスクリーンショット</string>
+    <string name="three_finger_gesture_summary">3本指でスワイプしてスクリーンショットを取得する</string>
+    <string name="gesture_settings_title">ナビゲーションジェスチャー</string>
+    <string name="gesture_settings_info">ナビゲーションバーは無効でなければなりません!\n\n利用可能なジェスチャー: \n\n戻る\n- 左右どちらかを上スワイプ\n\nホーム\n- 中央を上スワイプ\n\nアプリ履歴\n- 中央を上スワイプして維持\n\nホーム長押し\n- 中央を短く上スワイプして維持</string>
+    <string name="use_bottom_gesture_title">ナビゲーションジェスチャー</string>
+    <string name="use_bottom_gesture_summary">ナビゲーションに下部から上スワイプジェスチャーを使用する</string>
+    <string name="gesture_swipe_length_title">スワイプ起動領域の高さ</string>
+    <string name="gesture_swipe_length_summary">スワイプ起動領域の下部からの高さ</string>
+    <string name="gesture_action_timeout_title">スワイプ起動の持続時間</string>
+    <string name="gesture_action_timeout_summary">ジェスチャーアクションが開始される前の待機時間</string>
+    <string name="unit_dpi">dpi</string>
+    <string name="unit_px">px</string>
+    <string name="unit_msec">ms</string>
 </resources>

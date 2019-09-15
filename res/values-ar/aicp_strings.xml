@@ -68,6 +68,8 @@
     <string name="night_auto_value_min">السطوع الأدنى</string>
     <string name="night_bright_low">سطوع منخفض</string>
     <string name="night_bright_midlow">سطوع منخفض قليلاً</string>
+    <string name="night_display_theme_title">سمة داكن في ضوء الليل</string>
+    <string name="night_display_theme_summary">قم بالتبديل إلى المظهر الداكن إذا كان ضوء الليل قيد التشغيل</string>
     <string name="custom_light_title">لون الضوء</string>
     <string name="custom_light_on_time_title">مدة تشغيل الضوء أثناء النبض (ملي ثانية)</string>
     <string name="custom_light_off_time_title">مدة ايقاف الضوء أثناء النبض (ملي ثانية)</string>

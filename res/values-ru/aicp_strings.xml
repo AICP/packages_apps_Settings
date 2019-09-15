@@ -68,6 +68,8 @@
     <string name="night_auto_value_min">Минимальная яркость</string>
     <string name="night_bright_low">Низкая яркость</string>
     <string name="night_bright_midlow">Средняя низкая яркость</string>
+    <string name="night_display_theme_title">Темная тема при использовании ночного режима</string>
+    <string name="night_display_theme_summary">Включать темную тему при включении ночного режима</string>
     <string name="custom_light_title">Цвет светодиода</string>
     <string name="custom_light_on_time_title">Время работы светодиода во время пульсации (мс)</string>
     <string name="custom_light_off_time_title">Время паузы светодиода во время пульсации (мс)</string>

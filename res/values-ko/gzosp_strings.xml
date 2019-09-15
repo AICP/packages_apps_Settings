@@ -15,4 +15,39 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g> <xliff:g id="status" example="disabled">%2$s</xliff:g></string>
+    <string name="sim_enabled">활성화됨</string>
+    <string name="sim_disabled">사용 안 함</string>
+    <string name="sim_missing">누락 혹은 오류</string>
+    <string name="sim_enabler_need_disable_sim">SIM 카드가 비활성화됩니다. 계속하시겠습니까?</string>
+    <string name="sim_enabler_will_disable_sim_title">주의</string>
+    <string name="sim_enabler_need_switch_data_service">이 SIM은 비활성화되며, <xliff:g id="slotid">%1$s</xliff:g> SIM이 데이터 서비스에 사용됩니다. 계속하겠습니까?</string>
+    <string name="sim_enabler_airplane_on">비행기 모드가 켜져있는 동안에는 작업을 수행할 수 없습니다.</string>
+    <string name="sim_enabler_in_call">통화 중에는 작업을 수행할 수 없습니다.</string>
+    <string name="sim_enabler_both_inactive">모든 SIM카드를 사용중지시킬 수 없습니다.</string>
+    <string name="sim_enabler_enabling">활성화 중\u2026</string>
+    <string name="sim_enabler_disabling">\u2026 비활성화중</string>
+    <string name="sub_activate_success">SIM카드가 활성화되었습니다.</string>
+    <string name="sub_activate_failed">활성화에 실패했습니다.</string>
+    <string name="sub_deactivate_success">SIM카드가 비활성화되었습니다.</string>
+    <string name="sub_deactivate_failed">비활성화에 실패했습니다.</string>
+    <string name="available_sims_title">사용 가능한 SIM 카드</string>
+    <string name="lockscreen_battery_info_title">잠금 화면에 충전 정보 표시</string>
+    <string name="lockscreen_battery_info_summary">충전 중 잠금 화면에 충전기 최대 전류 전압 및 배터리 온도 표시합니다.</string>
+    <string name="face_auto_unlock_title">얼굴 자동 잠금 해제</string>
+    <string name="face_auto_unlock_summary">얼굴 인식으로 해제 후 잠금 화면 넘어가기</string>
+    <string name="three_finger_gesture">화면을 쓸어 스크린샷 찍기</string>
+    <string name="three_finger_gesture_summary">세 손가락을 스와이프 해서 스크린샷을 찍습니다</string>
+    <string name="gesture_settings_title">네비게이션 제스쳐</string>
+    <string name="gesture_settings_info">네비게이션 바를 사용중지 해야 이 기능을 사용 사용 할 수 있습니다.
+제스쳐 사용법 : 위로 짧게 스와이프 하여 홈, 위로 길게 스와이프 하면 멀티태스킹 창, 왼쪽과 오른쪽으로 스와이프 하면 이전버튼으로 대체 됩니다!</string>
+    <string name="use_bottom_gesture_title">네비게이션 제스쳐</string>
+    <string name="use_bottom_gesture_summary">네비게이션 바를 스와이프 제스쳐로 대체 사용합니다.</string>
+    <string name="gesture_swipe_length_title">스와이프 영역 높이</string>
+    <string name="gesture_swipe_length_summary">스와이프 할 때 의 높이를 설정 합니다.</string>
+    <string name="gesture_action_timeout_title">스와이프 트리거 시간 제한</string>
+    <string name="gesture_action_timeout_summary">제스쳐를 사용 하기 전의 시간 제한을 시작 하도록 설정 합니다.</string>
+    <string name="unit_dpi">dpi</string>
+    <string name="unit_px">px</string>
+    <string name="unit_msec">ms</string>
 </resources>

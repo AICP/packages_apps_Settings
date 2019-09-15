@@ -63,7 +63,6 @@
     <string name="battery_stats_reset">Statisztikák törlése</string>
     <string name="battery_stats_message">Akkumulátorhasználati statisztika törlésre kerül</string>
     <string name="ok_string">OK</string>
-    <string name="night_brightness_value_title">Éjszakai fényviszonyok esetén alacsonyabb fényerő</string>
     <string name="night_auto_value_disabled">Letiltva</string>
     <string name="night_auto_value_min">Minimum fényerő</string>
     <string name="night_bright_low">Alacsony fényerő</string>
