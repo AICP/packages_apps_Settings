@@ -63,6 +63,7 @@
     <string name="battery_stats_reset">Zresetuj statystyki</string>
     <string name="battery_stats_message">Statystyki baterii zostaną zresetowane</string>
     <string name="ok_string">OK</string>
+    <string name="night_brightness_value_title">Mniejsza jasność przy Nocnym Świetle</string>
     <string name="night_auto_value_disabled">Wyłączony</string>
     <string name="night_auto_value_min">Minimalna jasność</string>
     <string name="night_bright_low">Niska jasność</string>
