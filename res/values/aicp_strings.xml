@@ -118,4 +118,12 @@
     <string name="increasing_ring_volume_option_title">Increasing ring volume</string>
     <string name="increasing_ring_min_volume_title">Start volume</string>
     <string name="increasing_ring_ramp_up_time_title">Ramp-up time</string>
+
+    <!-- Navigation settings -->
+    <string name="back_height_low_label">Full</string>
+    <string name="back_height_high_label">Bottom</string>
+    <string name="gesture_height_category_title">Back location</string>
+    <string name="gesture_region">Height</string>
+
+    <string name="back_height_message">Location is that part of the screen height used as touchable region for the back gesture.</string>
 </resources>
