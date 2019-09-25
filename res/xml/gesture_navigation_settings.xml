@@ -45,6 +45,20 @@
             settings:textEnd="@string/high_label"/>
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="gesture_height_category"
+        android:persistent="false"
+        android:title="@string/gesture_height_category_title">
+
+        <com.android.settings.widget.LabeledSeekBarPreference
+            android:key="back_gesture_region"
+            android:title="@string/gesture_region"
+            android:max="3"
+            android:selectable="true"
+            settings:textStart="@string/back_height_low_label"
+            settings:textEnd="@string/back_height_high_label"/>
+    </PreferenceCategory>
+
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="back_gesture_haptic"
         android:title="@string/back_gesture_haptic_title"
@@ -57,5 +71,11 @@
         android:selectable="false"
         settings:searchable="false"
         settings:allowDividerAbove="true"/>
-</PreferenceScreen>
 
+    <com.android.settingslib.widget.FooterPreference
+        android:key="gesture_navigation_settings_region_footer"
+        android:title="@string/back_height_message"
+        android:selectable="false"
+        settings:searchable="false"
+        settings:allowDividerAbove="false"/>
+</PreferenceScreen>
