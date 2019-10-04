@@ -183,6 +183,7 @@
         android:key="app_package_name"
         android:selectable="false"
         android:order="9999"
-        settings:controller="com.android.settings.applications.appinfo.AppPackageNamePreferenceController" />
+        settings:controller="com.android.settings.applications.appinfo.AppPackageNamePreferenceController"
+        settings:enableCopying="true"/>
 
 </PreferenceScreen>
