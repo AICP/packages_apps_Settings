@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c4093ea5_c60c545f",
+        "filename": "res/xml/top_level_settings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2019-10-13T11:19:22Z",
+      "side": 1,
+      "message": "Shall be placed above Apps and Notifications part IMHO.",
+      "range": {
+        "startLine": 50,
+        "startChar": 0,
+        "endLine": 57,
+        "endChar": 15
+      },
+      "revId": "22d3bb9aae896ac4f7706dbb0cb80bdb55f597aa",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": true
+    }
+  ]
+}
