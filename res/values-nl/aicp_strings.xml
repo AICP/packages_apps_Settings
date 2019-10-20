@@ -63,10 +63,13 @@
     <string name="battery_stats_reset">Statistieken resetten</string>
     <string name="battery_stats_message">Accugeschiedenis zal worden gereset</string>
     <string name="ok_string">Ok</string>
+    <string name="night_brightness_value_title">Verlaag helderheid als Nachtlicht actief is</string>
     <string name="night_auto_value_disabled">Uitgeschakeld</string>
     <string name="night_auto_value_min">Minimale helderheid</string>
     <string name="night_bright_low">Lage helderheid</string>
     <string name="night_bright_midlow">Gemiddelde helderheid</string>
+    <string name="night_display_theme_title">Donker thema als Nachtlicht actief is</string>
+    <string name="night_display_theme_summary">Wissel naar donker thema als Nachtlicht actief is</string>
     <string name="custom_light_title">LED kleur</string>
     <string name="custom_light_on_time_title">Inschakelduur van de pulserende LED (in ms)</string>
     <string name="custom_light_off_time_title">Uitschakelduur van de pulserende LED (in ms)</string>
