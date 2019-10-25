@@ -169,4 +169,7 @@
     <string name="touch_sensitivity_summary">Improves touch when using screen protectors</string>
     <string name="touch_sensitivity_title">Increase touch sensitivity</string>
     <string name="keywords_touch_sensitivity">touch, sensitivity, sensitive, screen protector, film, responsive, responsiveness</string>
+
+    <!-- String for removal of sensitive info on about, depending on tap -->
+    <string name="device_info_protected_single_press">Tap to show info</string>
 </resources>
