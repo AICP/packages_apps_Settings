@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bc2ba9c3_55b3305a",
+        "filename": "src/com/android/settings/display/AmbientDisplayPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2019-11-22T12:56:46Z",
+      "side": 1,
+      "message": "http://haste.aicp-rom.com/omopodekup.coffeescript",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 54
+      },
+      "revId": "c3ac2975263f04e912551b38abe5107f60796b77",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": true
+    }
+  ]
+}
