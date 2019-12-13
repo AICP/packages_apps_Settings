@@ -29,7 +29,9 @@
             android:taskAffinity="com.android.settings"
             android:parentActivityName="Settings">
             <intent-filter android:priority="9">
+                <action android:name="android.intent.action.MAIN" />
                 <action android:name="com.android.settings.action.SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.aicp.StartAe" />
