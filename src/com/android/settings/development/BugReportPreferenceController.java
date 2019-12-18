@@ -37,7 +37,8 @@ public class BugReportPreferenceController extends DeveloperOptionsPreferenceCon
 
     @Override
     public boolean isAvailable() {
-        return !mUserManager.hasUserRestriction(UserManager.DISALLOW_DEBUGGING_FEATURES);
+        //return !mUserManager.hasUserRestriction(UserManager.DISALLOW_DEBUGGING_FEATURES);
+        return false;
     }
 
     @Override
