@@ -56,7 +56,7 @@ public class DataUsageSummaryPreference extends Preference {
     private static final long WARNING_AGE = TimeUnit.HOURS.toMillis(6L);
     @VisibleForTesting
     static final Typeface SANS_SERIF_MEDIUM =
-            Typeface.create("sans-serif-medium", Typeface.NORMAL);
+            Typeface.create("@*android:string/config_headlineFontFamilyMedium", Typeface.NORMAL);
 
     private boolean mChartEnabled = true;
     private CharSequence mStartLabel;
