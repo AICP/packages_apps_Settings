@@ -49,6 +49,7 @@ android_library {
         "src/**/*.kt",
         "AicpExtras/src/**/*.java",
         "AicpExtras/src/**/*.kt",
+        "TouchGestures/res",
     ],
 
     aaptflags: ["--extra-packages com.aicp.extras"],
