@@ -87,4 +87,15 @@
         android:summary="@string/three_finger_gesture_summary"
         android:defaultValue="false" />
 
+    <Preference
+        android:key="touchscreen_gesture_settings"
+        android:persistent="false"
+        android:title="@string/touchscreen_gesture_settings_title"
+        android:summary="@string/touchscreen_gesture_settings_summary">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.android.touch.gestures"
+            android:targetClass="com.android.touch.gestures.TouchscreenGestureSettings" />
+    </Preference>
+
 </PreferenceScreen>
