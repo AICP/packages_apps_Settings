@@ -65,6 +65,12 @@
         android:summary="@string/back_gesture_haptic_summary"
         android:defaultValue="false" />
 
+    <com.aicp.gear.preference.SecureSettingSwitchPreference
+        android:key="show_back_arrow_gesture"
+        android:title="@string/back_gesture_arrow_message"
+        android:summary="@string/back_gesture_arrow_summary"
+        android:defaultValue="true" />
+
     <com.android.settingslib.widget.FooterPreference
         android:key="gesture_navigation_settings_footer"
         android:title="@string/back_sensitivity_dialog_message"
