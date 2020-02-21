@@ -62,8 +62,8 @@
 
         <com.aicp.gear.preference.SelfRemovingPreference
             android:key="doze_device_settings"
-            android:title="@string/doze_title"
-            android:summary="@string/doze_summary">
+            android:title="@string/doze_when_to_show_title"
+            android:summary="@string/doze_when_to_show_summary">
             <intent android:action="com.aicp.settings.device.DOZE_SETTINGS" />
         </com.aicp.gear.preference.SelfRemovingPreference>
 

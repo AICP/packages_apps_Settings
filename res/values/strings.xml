@@ -3005,6 +3005,10 @@
 
     <!-- [CHAR LIMIT=30] Category title for the settings that control when Ambient display shows. -->
     <string name="ambient_display_category_triggers">When to show</string>
+    <!-- [CHAR LIMIT=30] Ambient display screen, title for setting to change when the ambient display feature is triggered do display notifications. -->
+    <string name="doze_when_to_show_title">Manage</string>
+    <!-- [CHAR LIMIT=NONE] Ambient display screen, summary for setting to change when  the ambient display feature is triggered to display notifications. -->
+    <string name="doze_when_to_show_summary">Details of when to wake screen to display notifications</string>
     <!-- [CHAR LIMIT=30] Ambient display screen, title for setting to change whether the ambient display feature is triggered for new incoming notifications. -->
     <string name="doze_title">New notifications</string>
     <!-- [CHAR LIMIT=NONE] Ambient display screen, summary for setting to change whether the ambient display feature is triggered for new incoming notifications. -->
