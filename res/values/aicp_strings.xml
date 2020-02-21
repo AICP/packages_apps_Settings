@@ -103,6 +103,9 @@
     <!-- [CHAR LIMIT=30] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to show when new notifications come in. -->
     <string name="ambient_display_screen_summary_notifications">New notifications</string>
 
+    <string name="device_specific_ambient_display_title">Device specific ambient display</string>
+    <string name="device_specific_ambient_display_title_summary">Custom device specific ambient display settings</string>
+
     <!-- Display : Rotation -->
     <string name="display_rotation_title">Auto Rotate Options</string>
     <string name="display_rotation_summary">Configure screen auto-rotate functions</string>
