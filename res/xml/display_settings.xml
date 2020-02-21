@@ -178,12 +178,6 @@
             android:title="@string/screensaver_settings_title"
             android:fragment="com.android.settings.dream.DreamSettings"/>
 
-        <com.aicp.gear.preference.SelfRemovingPreference
-            android:key="doze_device_settings"
-            android:title="@string/ambient_display_screen_title">
-            <intent android:action="com.aicp.settings.device.DOZE_SETTINGS" />
-        </com.aicp.gear.preference.SelfRemovingPreference>
-
         <SwitchPreference
             android:key="camera_gesture"
             android:title="@string/camera_gesture_title"
