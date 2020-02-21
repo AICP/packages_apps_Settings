@@ -60,6 +60,13 @@
         android:title="@string/ambient_display_category_triggers"
         android:order="1000">
 
+        <com.aicp.gear.preference.SelfRemovingPreference
+            android:key="doze_device_settings"
+            android:title="@string/doze_title"
+            android:summary="@string/doze_summary">
+            <intent android:action="com.aicp.settings.device.DOZE_SETTINGS" />
+        </com.aicp.gear.preference.SelfRemovingPreference>
+
         <com.android.settingslib.RestrictedSwitchPreference
             android:key="ambient_display_always_on"
             android:title="@string/doze_always_on_title"
