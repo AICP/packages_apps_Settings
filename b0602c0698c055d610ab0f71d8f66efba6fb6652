@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b86d6f1b_bc3f3c92",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3011,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2020-02-21T16:35:20Z",
+      "side": 1,
+      "message": "Isn\u0027t better to move to aicp_strings ?\nWill cause merge conflicts on every future update...",
+      "range": {
+        "startLine": 3008,
+        "startChar": 0,
+        "endLine": 3011,
+        "endChar": 109
+      },
+      "revId": "b0602c0698c055d610ab0f71d8f66efba6fb6652",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": true
+    }
+  ]
+}
