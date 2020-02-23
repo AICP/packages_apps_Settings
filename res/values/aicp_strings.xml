@@ -125,6 +125,7 @@
 
     <!-- NavigationBar Gestural Mode Tweaks -->
     <string name="gesture_pill_message">Hide the navigation bar pill for seamless fullscreen gestures.</string>
+    <string name="back_gesture_haptic">Enable haptic tick effect on back gesture</string>
 
     <!-- Manual provisioning support -->
     <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g> is <xliff:g id="status" example="disabled">%2$s</xliff:g></string>
