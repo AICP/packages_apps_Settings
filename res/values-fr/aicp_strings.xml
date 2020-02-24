@@ -16,30 +16,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- SELinux status -->
-    <!-- Sound: Title for the option defining the phone ringtone for slot1 on Muilti SIM device. [CHAR LIMIT=50] -->
-    <!-- Sound: Title for the option defining the phone ringtone for slot2 on Muilti SIM device. [CHAR LIMIT=50] -->
-    <!-- Battery stats reset -->
     <string name="aicp_version_title">AICP Experience</string>
     <string name="aicpextras_title">Aicp Extras</string>
-    <!-- Three-fingers-swipe to screenshot -->
-    <!-- Strings for suggestion card's close button [CHAR LIMIT=20] -->
-    <!-- Android debugging over WiFi -->
-    <!-- Warning for Adb over Network -->
-    <!-- Dashboard -->
-    <!-- Custom light color -->
-    <!-- Battery temperature -->
-    <!-- App details: open play store link if app is user installed -->
-    <!-- Media gestures -->
-    <!-- Android debugging as root -->
-    <!-- Pocket judge -->
-    <!-- Increasing ring tone volume -->
-    <!-- Volume link notification -->
-    <!-- [CHAR LIMIT=50] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to be always on -->
-    <!-- [CHAR LIMIT=30] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to show when new notifications come in. -->
-    <!-- Display : Rotation -->
-    <!-- Navigation settings -->
-    <!-- Back gesture animation -->
-    <!-- NavigationBar Gestural Mode Tweaks -->
-    <!-- Manual provisioning support -->
 </resources>

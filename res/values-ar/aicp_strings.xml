@@ -16,56 +16,32 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- SELinux status -->
     <string name="selinux_status">‏حالة SELinux</string>
     <string name="selinux_status_disabled">معّطل</string>
     <string name="selinux_status_permissive">متساهل</string>
     <string name="selinux_status_enforcing">فرض</string>
-    <!-- Sound: Title for the option defining the phone ringtone for slot1 on Muilti SIM device. [CHAR LIMIT=50] -->
-    <!-- Sound: Title for the option defining the phone ringtone for slot2 on Muilti SIM device. [CHAR LIMIT=50] -->
-    <!-- Battery stats reset -->
     <string name="battery_stats_reset">إعادة تعيين الإحصاءات</string>
     <string name="battery_stats_message">سيتم إعادة تعيين إحصاءات البطارية</string>
     <string name="aicp_version_title">AICP Experience</string>
     <string name="aicpextras_title">إضافات Aicp</string>
     <string name="aicpextras_summary">إعدادات مخصصة</string>
-    <!-- Three-fingers-swipe to screenshot -->
-    <!-- Strings for suggestion card's close button [CHAR LIMIT=20] -->
-    <!-- Android debugging over WiFi -->
     <string name="adb_over_network">ADB عبر الشبكة</string>
     <string name="adb_over_network_summary">تمكين تصحيح أخطاء TCP/IP عبر واجهات شبكة الاتصال (وأي فأي، وشبكات USB). تتم إعادة تعيين هذا الإعداد عند إعادة التشغيل</string>
-    <!-- Warning for Adb over Network -->
     <string name="adb_over_network_warning">تحذير: عند تمكين ADB عبر الشبكة، هاتفك مفتوح للتدخلات على جميع الشبكات المتصلة، بما في ذلك شبكة بيانات GSM!\n\nاستخدم هذه الميزة فقط عندما تكون متصلا على شبكات موثوق بها.\n\nهل تريد حقا لتمكين هذه الوظيفة؟</string>
     <string name="adb_over_network_warning_title">السماح ADB عبر الشبكة؟</string>
-    <!-- Dashboard -->
-    <!-- Custom light color -->
     <string name="custom_light_title">لون الضوء</string>
     <string name="custom_light_on_time_title">مدة تشغيل الضوء أثناء النبض (ملي ثانية)</string>
     <string name="custom_light_off_time_title">مدة ايقاف الضوء أثناء النبض (ملي ثانية)</string>
     <string name="show_light_on_zen_title">وميض أثناء عدم الإزعاج</string>
-    <!-- Battery temperature -->
-    <!-- App details: open play store link if app is user installed -->
-    <!-- Media gestures -->
     <string name="prevent_ringing_option_mute_no_media">كتم، لا صوت وسائط</string>
     <string name="prevent_ringing_option_mute_no_media_summary">تشغيل (كتم، لا صوت وسائط)</string>
-    <!-- Android debugging as root -->
-    <!-- Pocket judge -->
     <string name="pocket_judge_title">إستشعار الجيب</string>
     <string name="pocket_judge_summary">الغاء تفعيل الشاشة و أزرار الإدخال عندما يكون الجهاز في الجيب</string>
     <string name="fp_swipe_to_dismiss_notifications_title">مرر بصمة إصبعك إلى اليسار أو اليمين لرفض الإشعارات</string>
     <string name="fp_swipe_to_dismiss_notifications_summary">لتجاهل الإشعارات ،قم بالتمرير إلى اليسار أو اليمين في مستشعر بصمات الإصابع خلف الجهاز.</string>
-    <!-- Increasing ring tone volume -->
     <string name="increasing_ring_volume_option_title">زيادة مستوى صوت الرنين</string>
     <string name="increasing_ring_min_volume_title">حجم الصوت البدائي</string>
     <string name="increasing_ring_ramp_up_time_title">زمن التدرج</string>
-    <!-- Volume link notification -->
     <string name="volume_link_notification_title">ربط مستوى صوت نغمة الرنين مع الاشعارات</string>
-    <!-- [CHAR LIMIT=50] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to be always on -->
-    <!-- [CHAR LIMIT=30] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to show when new notifications come in. -->
-    <!-- Display : Rotation -->
     <string name="display_rotation_disabled">معّطل</string>
-    <!-- Navigation settings -->
-    <!-- Back gesture animation -->
-    <!-- NavigationBar Gestural Mode Tweaks -->
-    <!-- Manual provisioning support -->
 </resources>

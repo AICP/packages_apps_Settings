@@ -16,56 +16,32 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- SELinux status -->
     <string name="selinux_status">SELinux ステータス</string>
     <string name="selinux_status_disabled">Disabled</string>
     <string name="selinux_status_permissive">Permissive</string>
     <string name="selinux_status_enforcing">Enforcing</string>
-    <!-- Sound: Title for the option defining the phone ringtone for slot1 on Muilti SIM device. [CHAR LIMIT=50] -->
-    <!-- Sound: Title for the option defining the phone ringtone for slot2 on Muilti SIM device. [CHAR LIMIT=50] -->
-    <!-- Battery stats reset -->
     <string name="battery_stats_reset">統計のリセット</string>
     <string name="battery_stats_message">バッテリーの使用統計を初期化します</string>
     <string name="aicp_version_title">AICP Experience</string>
     <string name="aicpextras_title">AICP Extras</string>
     <string name="aicpextras_summary">ROM のカスタマイズ</string>
-    <!-- Three-fingers-swipe to screenshot -->
-    <!-- Strings for suggestion card's close button [CHAR LIMIT=20] -->
-    <!-- Android debugging over WiFi -->
     <string name="adb_over_network">ネットワーク経由の ADB</string>
     <string name="adb_over_network_summary">ネットワークインターフェース (Wi-Fi、USB ネットワーク) 経由での TCP/IP デバッグを有効にします。この設定は再起動時にリセットされます。</string>
-    <!-- Warning for Adb over Network -->
     <string name="adb_over_network_warning">警告: ネットワーク経由での ADB を有効にすると、あなたの携帯電話は GSM データネットワークを含む接続している全てのネットワークから侵入できるようになります。\n\nこの機能は信頼されたネットワークに接続している時にのみ使用して下さい。\n\nこの機能を本当に有効にしますか?</string>
     <string name="adb_over_network_warning_title">ネットワーク経由の ADB を許可しますか?</string>
-    <!-- Dashboard -->
-    <!-- Custom light color -->
     <string name="custom_light_title">ライトカラー</string>
     <string name="custom_light_on_time_title">LED 点滅時の光っている時間 (ms)</string>
     <string name="custom_light_off_time_title">LED 点滅時の消えている時間 (ms)</string>
     <string name="show_light_on_zen_title">マナーモードの間はライトを点滅</string>
-    <!-- Battery temperature -->
-    <!-- App details: open play store link if app is user installed -->
-    <!-- Media gestures -->
     <string name="prevent_ringing_option_mute_no_media">ミュート、メディアなし</string>
     <string name="prevent_ringing_option_mute_no_media_summary">ON (ミュート、メディアなし)</string>
-    <!-- Android debugging as root -->
-    <!-- Pocket judge -->
     <string name="pocket_judge_title">ポケット検出</string>
     <string name="pocket_judge_summary">ポケットに入っている時にタッチやボタン入力を無効化する</string>
     <string name="fp_swipe_to_dismiss_notifications_title">指紋センサーで左右にスワイプして通知を削除</string>
     <string name="fp_swipe_to_dismiss_notifications_summary">通知を削除するには端末の指紋センサー上で左右にスワイプして下さい</string>
-    <!-- Increasing ring tone volume -->
     <string name="increasing_ring_volume_option_title">着信音量の増幅</string>
     <string name="increasing_ring_min_volume_title">開始音量</string>
     <string name="increasing_ring_ramp_up_time_title">増幅時間</string>
-    <!-- Volume link notification -->
     <string name="volume_link_notification_title">着信と通知の音量をリンク</string>
-    <!-- [CHAR LIMIT=50] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to be always on -->
-    <!-- [CHAR LIMIT=30] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to show when new notifications come in. -->
-    <!-- Display : Rotation -->
     <string name="display_rotation_disabled">無効</string>
-    <!-- Navigation settings -->
-    <!-- Back gesture animation -->
-    <!-- NavigationBar Gestural Mode Tweaks -->
-    <!-- Manual provisioning support -->
 </resources>

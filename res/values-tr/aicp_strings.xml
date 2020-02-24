@@ -16,56 +16,32 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- SELinux status -->
     <string name="selinux_status">SELinux durumu</string>
     <string name="selinux_status_disabled">Devre dışı</string>
     <string name="selinux_status_permissive">Permissive (Serbest)</string>
     <string name="selinux_status_enforcing">Enforcing (Zorunlu)</string>
-    <!-- Sound: Title for the option defining the phone ringtone for slot1 on Muilti SIM device. [CHAR LIMIT=50] -->
-    <!-- Sound: Title for the option defining the phone ringtone for slot2 on Muilti SIM device. [CHAR LIMIT=50] -->
-    <!-- Battery stats reset -->
     <string name="battery_stats_reset">İstatistikleri sıfırla</string>
     <string name="battery_stats_message">Pil geçmişi istatistikleri sıfırlanacak</string>
     <string name="aicp_version_title">AICP Experience</string>
     <string name="aicpextras_title">AICP Extras</string>
     <string name="aicpextras_summary">Rom özelleştirmeleri</string>
-    <!-- Three-fingers-swipe to screenshot -->
-    <!-- Strings for suggestion card's close button [CHAR LIMIT=20] -->
-    <!-- Android debugging over WiFi -->
     <string name="adb_over_network">Ağ üzerinden ADB</string>
     <string name="adb_over_network_summary">Ağ arayüzleri (Wi-Fi, USB ağları) üzerinde TCP/IP ayıklamayı etkinleştir. Bu ayar, yeniden başlatıldığında sıfırlanır</string>
-    <!-- Warning for Adb over Network -->
     <string name="adb_over_network_warning">UYARI: ADB üzerinden ağ aktifken telefonunuz GSM veri ağı dahil tüm bağlı ağlar üzerinden kötüye kullanımlara açık olacaktır!\n\nBu özelliği sadece güvenlir ağlara bağlıyken kullanın.\n\nBu özellik açılsın mı?</string>
     <string name="adb_over_network_warning_title">Ağ üzerinden ADB izin verilsin mi?</string>
-    <!-- Dashboard -->
-    <!-- Custom light color -->
     <string name="custom_light_title">Işık rengi</string>
     <string name="custom_light_on_time_title">Işık açıkken yanıp sönme hızı (ms)</string>
     <string name="custom_light_off_time_title">Işık kapalıyken yanıp sönme hızı (ms)</string>
     <string name="show_light_on_zen_title">Rahatsız etmeyinde ışığı yak söndür</string>
-    <!-- Battery temperature -->
-    <!-- App details: open play store link if app is user installed -->
-    <!-- Media gestures -->
     <string name="prevent_ringing_option_mute_no_media">Sessiz, medya yok</string>
     <string name="prevent_ringing_option_mute_no_media_summary">Açık (sessiz, medya yok)</string>
-    <!-- Android debugging as root -->
-    <!-- Pocket judge -->
     <string name="pocket_judge_title">Cep algılama</string>
     <string name="pocket_judge_summary">Cihaz cebinizdeyken ekran ve tuş girişlerini engelle</string>
     <string name="fp_swipe_to_dismiss_notifications_title">Bildirimleri kapatmak için parmağınızı parmak izinde sağa veya sola kaydırın</string>
     <string name="fp_swipe_to_dismiss_notifications_summary">Bildirimlerinizi yok saymak için, parmağınızı parmak izi sönsöründe sola veya sağa doğru kaydırın.</string>
-    <!-- Increasing ring tone volume -->
     <string name="increasing_ring_volume_option_title">Artan zil sesi</string>
     <string name="increasing_ring_min_volume_title">Başlangıç sesi</string>
     <string name="increasing_ring_ramp_up_time_title">Yükselme zamanı</string>
-    <!-- Volume link notification -->
     <string name="volume_link_notification_title">Zil sesi ve bildirim sesini bağla</string>
-    <!-- [CHAR LIMIT=50] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to be always on -->
-    <!-- [CHAR LIMIT=30] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to show when new notifications come in. -->
-    <!-- Display : Rotation -->
     <string name="display_rotation_disabled">Devre dışı</string>
-    <!-- Navigation settings -->
-    <!-- Back gesture animation -->
-    <!-- NavigationBar Gestural Mode Tweaks -->
-    <!-- Manual provisioning support -->
 </resources>
