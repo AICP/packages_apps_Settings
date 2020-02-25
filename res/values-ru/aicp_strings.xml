@@ -16,73 +16,53 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- SELinux status -->
     <string name="selinux_status">Статус SELinux</string>
     <string name="selinux_status_disabled">Отключено</string>
     <string name="selinux_status_permissive">Только предупреждение</string>
     <string name="selinux_status_enforcing">Блокировка</string>
-    <!-- Sound: Title for the option defining the phone ringtone for slot1 on Muilti SIM device. [CHAR LIMIT=50] -->
     <string name="ringtone1_title">Рингтон - SIM 1</string>
-    <!-- Sound: Title for the option defining the phone ringtone for slot2 on Muilti SIM device. [CHAR LIMIT=50] -->
     <string name="ringtone2_title">Рингтон - SIM 2</string>
-    <!-- Battery stats reset -->
     <string name="battery_stats_reset">Сброс статистики</string>
     <string name="battery_stats_message">Статистика батареи будет сброшена</string>
     <string name="aicp_version_title">Опыт использования AICP</string>
     <string name="aicp_version_summary">Aicp 10 Версия - 15.0</string>
     <string name="aicpextras_title">AICP Extras</string>
     <string name="aicpextras_summary">Настройка прошивки</string>
-    <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Свайп для создания скриншота</string>
     <string name="three_finger_gesture_summary">Свайп тремя пальцами вниз для создания скриншота</string>
-    <!-- Strings for suggestion card's close button [CHAR LIMIT=20] -->
     <string name="suggestion_button_close">Закрыть</string>
-    <!-- Android debugging over WiFi -->
     <string name="adb_over_network">ADB по сети</string>
     <string name="adb_over_network_summary">Включить TCP/IP отладку через сетевые интерфейсы (Wi-Fi, USB сети). Этот настройка отменяется после перезагрузки</string>
-    <!-- Warning for Adb over Network -->
     <string name="adb_over_network_warning">ВНИМАНИЕ: Когда включена отладка по сети (ADB по сети), устройство открыто для неконтролируемого доступа из всех подключённых сетей, включая сеть данных GSM!\n\nИспользуйте эту функцию только тогда, когда вы подключены к доверенным сетям.\n\nВы действительно хотите включить эту функцию?</string>
     <string name="adb_over_network_warning_title">Разрешить ADB по сети?</string>
-    <!-- Dashboard -->
     <string name="dashboard_conditions_title">Уведомления в меню настроек</string>
     <string name="summary_dashboard_conditions_enabled">Уведомления в меню настроек включены</string>
     <string name="summary_dashboard_conditions_disabled">Уведомления в меню настроек выключены</string>
     <string name="dashboard_suggestions_title">Подсказки в меню настроек</string>
     <string name="summary_dashboard_suggestions_enabled">Подсказки в меню настроек включены</string>
     <string name="summary_dashboard_suggestions_disabled">Подсказки в меню настроек выключены</string>
-    <!-- Custom light color -->
     <string name="custom_light_title">Цвет светодиода</string>
     <string name="custom_light_on_time_title">Время работы светодиода во время пульсации (мс)</string>
     <string name="custom_light_off_time_title">Время паузы светодиода во время пульсации (мс)</string>
     <string name="show_light_on_zen_title">Мерцание во время режима \"Не беспокоить\"</string>
-    <!-- Battery temperature -->
     <string name="battery_temp">Температура батареи</string>
-    <!-- App details: open play store link if app is user installed -->
     <string name="app_play_store">Google Play</string>
-    <!-- Media gestures -->
     <string name="prevent_ringing_option_mute_no_media">Отключение звука, отсутствие воспроизведения мультимедиа</string>
     <string name="prevent_ringing_option_mute_no_media_summary">Включено (отключение звука, отсутствие воспроизведения мультимедиа)</string>
-    <!-- Android debugging as root -->
     <string name="adb_enable_root">Root отладка по USB</string>
     <string name="adb_enable_summary_root">Включить отладку Android как root</string>
-    <!-- Pocket judge -->
     <string name="pocket_judge_title">Режим \"В кармане\"</string>
     <string name="pocket_judge_summary">Блокировать экран и физические кнопки, когда устройство находится в кармане</string>
     <string name="fp_swipe_to_dismiss_notifications_title">Проведите пальцем по сканеру отпечатка пальца влево или вправо, чтобы убрать уведомления</string>
     <string name="fp_swipe_to_dismiss_notifications_summary">Чтобы убрать ваши уведомления, проведите пальцем влево или право по сканеру отпечатка пальца.</string>
     <string name="pulse_on_new_tracks_title">Ambient Music Ticker</string>
     <string name="pulse_on_new_tracks_summary">Показывать Ambient Display при воспроизведении новой музыкальной дорожки</string>
-    <!-- Increasing ring tone volume -->
     <string name="increasing_ring_volume_option_title">Возрастающая громкость звонка</string>
     <string name="increasing_ring_min_volume_title">Начальная громкость</string>
     <string name="increasing_ring_ramp_up_time_title">Время нарастания</string>
-    <!-- Volume link notification -->
     <string name="volume_link_notification_title">Связать громкость рингтона и уведомлений</string>
-    <!-- [CHAR LIMIT=50] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to be always on -->
     <string name="ambient_display_screen_summary_always_on">Всегда включено (батарея разряжается быстрее)</string>
-    <!-- [CHAR LIMIT=30] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to show when new notifications come in. -->
     <string name="ambient_display_screen_summary_notifications">Новые уведомления</string>
-    <!-- Display : Rotation -->
     <string name="display_rotation_title">Параметры автоповорота</string>
     <string name="display_rotation_summary">Настройка функций автоповорота экрана</string>
     <string name="display_rotation_disabled">Выключено</string>
@@ -92,16 +72,12 @@
     <string name="display_rotation_90_title">90 градусов</string>
     <string name="display_rotation_180_title">180 градусов</string>
     <string name="display_rotation_270_title">270 градусов</string>
-    <!-- Navigation settings -->
     <string name="back_height_low_label">Заполнено</string>
     <string name="back_height_high_label">Снизу</string>
     <string name="back_options_dialog_title">Настройки</string>
     <string name="back_height_message">Высота экрана, используемая в качестве сенсорной области для жеста назад.</string>
-    <!-- Back gesture animation -->
     <string name="back_gesture_arrow_message">Показать анимированную стрелку для жеста назад.</string>
-    <!-- NavigationBar Gestural Mode Tweaks -->
     <string name="gesture_pill_message">Скрыть панель навигации для бесшовных полноэкранных жестов.</string>
-    <!-- Manual provisioning support -->
     <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g> - <xliff:g id="status" example="disabled">%2$s</xliff:g></string>
     <string name="sim_disabled">выключено</string>
     <string name="sim_missing">отсутствует или неисправна</string>

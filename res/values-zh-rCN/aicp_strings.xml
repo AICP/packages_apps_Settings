@@ -16,73 +16,53 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- SELinux status -->
     <string name="selinux_status">SELinux 状态</string>
     <string name="selinux_status_disabled">禁用</string>
     <string name="selinux_status_permissive">许可</string>
     <string name="selinux_status_enforcing">执行</string>
-    <!-- Sound: Title for the option defining the phone ringtone for slot1 on Muilti SIM device. [CHAR LIMIT=50] -->
     <string name="ringtone1_title">电话铃声 - SIM 1</string>
-    <!-- Sound: Title for the option defining the phone ringtone for slot2 on Muilti SIM device. [CHAR LIMIT=50] -->
     <string name="ringtone2_title">电话铃声 - SIM 2</string>
-    <!-- Battery stats reset -->
     <string name="battery_stats_reset">重置统计数据</string>
     <string name="battery_stats_message">电池的历史统计数据将被重置</string>
     <string name="aicp_version_title">AICP 用户体验</string>
     <string name="aicp_version_summary">Aicp 10 版本 - 15.0</string>
     <string name="aicpextras_title">AICP 附加设置</string>
     <string name="aicpextras_summary">系统自定义</string>
-    <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">滑动截图</string>
     <string name="three_finger_gesture_summary">三指滑动截图</string>
-    <!-- Strings for suggestion card's close button [CHAR LIMIT=20] -->
     <string name="suggestion_button_close">关闭</string>
-    <!-- Android debugging over WiFi -->
     <string name="adb_over_network">网络 ADB 调试</string>
     <string name="adb_over_network_summary">通过网络接口 (WLAN，USB 网络) 启用 TCP/IP 调试。该设置重启后失效</string>
-    <!-- Warning for Adb over Network -->
     <string name="adb_over_network_warning">警告：网络 ADB 调试启用后，您的设备将会在已连接的网络 (包括 GSM 数据网络) 上被视为是开放的，并有可能被侵入！\n\n请仅在您所信任的网络上使用此功能。\n\n您确实要启用该功能吗？</string>
     <string name="adb_over_network_warning_title">网络 ADB 调试?</string>
-    <!-- Dashboard -->
     <string name="dashboard_conditions_title">面板状态摘要</string>
     <string name="summary_dashboard_conditions_enabled">面板状态摘要已启用</string>
     <string name="summary_dashboard_conditions_disabled">面板状态摘要已禁用</string>
     <string name="dashboard_suggestions_title">面板建议摘要</string>
     <string name="summary_dashboard_suggestions_enabled">面板建议已启用</string>
     <string name="summary_dashboard_suggestions_disabled">面板建议已禁用</string>
-    <!-- Custom light color -->
     <string name="custom_light_title">指示灯颜色</string>
     <string name="custom_light_on_time_title">呼吸灯闪烁时亮灯时间 (毫秒)</string>
     <string name="custom_light_off_time_title">呼吸灯闪烁时熄灯时间 (毫秒)\"</string>
     <string name="show_light_on_zen_title">在勿扰期间闪烁</string>
-    <!-- Battery temperature -->
     <string name="battery_temp">电池温度</string>
-    <!-- App details: open play store link if app is user installed -->
     <string name="app_play_store">Google 市场</string>
-    <!-- Media gestures -->
     <string name="prevent_ringing_option_mute_no_media">静音, 无媒体</string>
     <string name="prevent_ringing_option_mute_no_media_summary">打开 (静音, 无媒体)</string>
-    <!-- Android debugging as root -->
     <string name="adb_enable_root">Root Android 调试</string>
     <string name="adb_enable_summary_root">启用 Android 调试作为 root</string>
-    <!-- Pocket judge -->
     <string name="pocket_judge_title">口袋检测</string>
     <string name="pocket_judge_summary">当设备在口袋中时屏蔽屏幕和按键操作</string>
     <string name="fp_swipe_to_dismiss_notifications_title">向左或向右滑动指纹以取消通知</string>
     <string name="fp_swipe_to_dismiss_notifications_summary">要取消通知，请从左右两侧滑动手机背面的指纹传感器。</string>
     <string name="pulse_on_new_tracks_title">息屏音乐信息</string>
     <string name="pulse_on_new_tracks_summary">主动显示新音乐播放</string>
-    <!-- Increasing ring tone volume -->
     <string name="increasing_ring_volume_option_title">铃声音量渐强</string>
     <string name="increasing_ring_min_volume_title">初始音量</string>
     <string name="increasing_ring_ramp_up_time_title">渐强时间</string>
-    <!-- Volume link notification -->
     <string name="volume_link_notification_title">关联铃声和通知音量</string>
-    <!-- [CHAR LIMIT=50] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to be always on -->
     <string name="ambient_display_screen_summary_always_on">一律开启/耗电量更高</string>
-    <!-- [CHAR LIMIT=30] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to show when new notifications come in. -->
     <string name="ambient_display_screen_summary_notifications">新通知</string>
-    <!-- Display : Rotation -->
     <string name="display_rotation_title">自动旋转选项</string>
     <string name="display_rotation_summary">配置屏幕自动旋转函数</string>
     <string name="display_rotation_disabled">禁用</string>
@@ -92,16 +72,12 @@
     <string name="display_rotation_90_title">90 度</string>
     <string name="display_rotation_180_title">180 度</string>
     <string name="display_rotation_270_title">270 度</string>
-    <!-- Navigation settings -->
     <string name="back_height_low_label">充满</string>
     <string name="back_height_high_label">底部</string>
     <string name="back_options_dialog_title">选项</string>
     <string name="back_height_message">屏幕高度作为背面手势的触摸区域</string>
-    <!-- Back gesture animation -->
     <string name="back_gesture_arrow_message">显示后退手势的动画箭头</string>
-    <!-- NavigationBar Gestural Mode Tweaks -->
     <string name="gesture_pill_message">隐藏导航栏药丸以实现无缝的全屏手势</string>
-    <!-- Manual provisioning support -->
     <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g> <xliff:g id="status" example="disabled">%2$s</xliff:g></string>
     <string name="sim_disabled">禁用</string>
     <string name="sim_missing">缺失或故障</string>

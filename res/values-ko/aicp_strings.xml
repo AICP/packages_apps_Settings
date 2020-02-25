@@ -16,56 +16,32 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- SELinux status -->
     <string name="selinux_status">SELinux 상태</string>
     <string name="selinux_status_disabled">비활성화됨</string>
     <string name="selinux_status_permissive">허용</string>
     <string name="selinux_status_enforcing">Enforcing (사용)</string>
-    <!-- Sound: Title for the option defining the phone ringtone for slot1 on Muilti SIM device. [CHAR LIMIT=50] -->
-    <!-- Sound: Title for the option defining the phone ringtone for slot2 on Muilti SIM device. [CHAR LIMIT=50] -->
-    <!-- Battery stats reset -->
     <string name="battery_stats_reset">상태 초기화</string>
     <string name="battery_stats_message">배터리 사용 기록이 초기화됩니다</string>
     <string name="aicp_version_title">AICP 경험</string>
     <string name="aicpextras_title">AICP Extras</string>
     <string name="aicpextras_summary">ROM 사용자 설정</string>
-    <!-- Three-fingers-swipe to screenshot -->
-    <!-- Strings for suggestion card's close button [CHAR LIMIT=20] -->
-    <!-- Android debugging over WiFi -->
     <string name="adb_over_network">네트워크를 통한 ADB</string>
     <string name="adb_over_network_summary">네트워크 인터페이스(Wi-Fi, USB 네트워크)를 통해 TCP/IP 디버깅을 사용합니다. 이 설정은 재부팅 시 초기화됩니다</string>
-    <!-- Warning for Adb over Network -->
     <string name="adb_over_network_warning">경고: 무선 네트워크로 ADB 사용시, GSM 데이터 네트워크를 비롯하여 연결된 모든 네트워크에서 디바이스에 침입할 수 있습니다.\n\n신뢰할 수 있는 네트워크에 연결되었을 때만 이 설정을 사용하십시오.\n\n이 기능을 정말로 사용하시겠습니까?</string>
     <string name="adb_over_network_warning_title">네트워크상에서 ADB를 허용 하시겠습니까?</string>
-    <!-- Dashboard -->
-    <!-- Custom light color -->
     <string name="custom_light_title">밝은 색상</string>
     <string name="custom_light_on_time_title">LED 점등 지연시간 (ms)</string>
     <string name="custom_light_off_time_title">LED 점등 끄기 지연시간 (ms)\"</string>
     <string name="show_light_on_zen_title">방해 금지 중 깜박임</string>
-    <!-- Battery temperature -->
-    <!-- App details: open play store link if app is user installed -->
-    <!-- Media gestures -->
     <string name="prevent_ringing_option_mute_no_media">음소거, 미디어 없음</string>
     <string name="prevent_ringing_option_mute_no_media_summary">켜기 (음소거, 미디어 없음)</string>
-    <!-- Android debugging as root -->
-    <!-- Pocket judge -->
     <string name="pocket_judge_title">주머니 감지</string>
     <string name="pocket_judge_summary">기기가 주머니에 있을 때 화면과 버튼 입력을 방지합니다.</string>
     <string name="fp_swipe_to_dismiss_notifications_title">지문 인식을 왼쪽이나 오른쪽으로 밀어 알림 해제</string>
     <string name="fp_swipe_to_dismiss_notifications_summary">알림을 닫으려면 휴대 전화 뒷면의 지문 센서에서 왼쪽 또는 오른쪽으로 스 와이프합니다.</string>
-    <!-- Increasing ring tone volume -->
     <string name="increasing_ring_volume_option_title">점점 커지는 벨 소리</string>
     <string name="increasing_ring_min_volume_title">시작 볼륨</string>
     <string name="increasing_ring_ramp_up_time_title">볼륨 증가 시간</string>
-    <!-- Volume link notification -->
     <string name="volume_link_notification_title">벨소리 볼륨과 알림 볼륨 연결</string>
-    <!-- [CHAR LIMIT=50] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to be always on -->
-    <!-- [CHAR LIMIT=30] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to show when new notifications come in. -->
-    <!-- Display : Rotation -->
     <string name="display_rotation_disabled">비활성화됨</string>
-    <!-- Navigation settings -->
-    <!-- Back gesture animation -->
-    <!-- NavigationBar Gestural Mode Tweaks -->
-    <!-- Manual provisioning support -->
 </resources>

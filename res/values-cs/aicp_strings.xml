@@ -16,73 +16,53 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- SELinux status -->
     <string name="selinux_status">Stav SELinux</string>
     <string name="selinux_status_disabled">Zakázáno</string>
     <string name="selinux_status_permissive">Mírný</string>
     <string name="selinux_status_enforcing">Vynucený</string>
-    <!-- Sound: Title for the option defining the phone ringtone for slot1 on Muilti SIM device. [CHAR LIMIT=50] -->
     <string name="ringtone1_title">Vyzváněcí tón telefonu - SIM 1</string>
-    <!-- Sound: Title for the option defining the phone ringtone for slot2 on Muilti SIM device. [CHAR LIMIT=50] -->
     <string name="ringtone2_title">Vyzváněcí tón telefonu - SIM 2</string>
-    <!-- Battery stats reset -->
     <string name="battery_stats_reset">Vynulovat statistiky</string>
     <string name="battery_stats_message">Chystáte se obnovit historii statistiky baterie</string>
     <string name="aicp_version_title">AICP Experience</string>
     <string name="aicp_version_summary">AICP 10 Edition - 15.0</string>
     <string name="aicpextras_title">AICP Extras</string>
     <string name="aicpextras_summary">Přizpůsobení ROM</string>
-    <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Přejetím pořídit snímek obrazovky</string>
     <string name="three_finger_gesture_summary">Přejeďte po displeji třemi prsty pro vytvoření snímku obrazovky</string>
-    <!-- Strings for suggestion card's close button [CHAR LIMIT=20] -->
     <string name="suggestion_button_close">Zavřít</string>
-    <!-- Android debugging over WiFi -->
     <string name="adb_over_network">ADB přes síť</string>
     <string name="adb_over_network_summary">Povolit ladění přes síťové připojení (např. Wi-Fi nebo síť USB). Toto nastavení bude obnoveno po restartu</string>
-    <!-- Warning for Adb over Network -->
     <string name="adb_over_network_warning">UPOZORNĚNÍ: Pokud je povoleno ADB přes síťové připojení, zařízení je otevřené pro pokusy o průniky na všech připojených sítích, včetně GSM datové sítě!\n\nPoužijte tuto vlastnost pouze pokud jste připojeni k důvěryhodné síti.\n\nOpravdu chcete povolit tuto funkci?</string>
     <string name="adb_over_network_warning_title">Povolit ADB přes síť?</string>
-    <!-- Dashboard -->
     <string name="dashboard_conditions_title">Podmínky Hlavního panelu</string>
     <string name="summary_dashboard_conditions_enabled">Podmínky Hlavního panelu jsou povoleny</string>
     <string name="summary_dashboard_conditions_disabled">Podmínky Hlavního panelu jsou zakázány</string>
     <string name="dashboard_suggestions_title">Návrhy Hlavního panelu</string>
     <string name="summary_dashboard_suggestions_enabled">Návrhy Hlavního panelu jsou povoleny</string>
     <string name="summary_dashboard_suggestions_disabled">Návrhy Hlavního panelu jsou zakázány</string>
-    <!-- Custom light color -->
     <string name="custom_light_title">Barva kontrolky</string>
     <string name="custom_light_on_time_title">Doba zapnutí kontrolky LED během pulsování (ms)</string>
     <string name="custom_light_off_time_title">Doba vypnutí kontrolky LED během pulsování (ms)</string>
     <string name="show_light_on_zen_title">Blikat během režimu Nerušit</string>
-    <!-- Battery temperature -->
     <string name="battery_temp">Teplota baterie</string>
-    <!-- App details: open play store link if app is user installed -->
     <string name="app_play_store">Obchod Play</string>
-    <!-- Media gestures -->
     <string name="prevent_ringing_option_mute_no_media">Ztlumit, žádná média</string>
     <string name="prevent_ringing_option_mute_no_media_summary">Zap. (ztlumit, žádná média)</string>
-    <!-- Android debugging as root -->
     <string name="adb_enable_root">Root android ladění</string>
     <string name="adb_enable_summary_root">Povolit android ladění jako root</string>
-    <!-- Pocket judge -->
     <string name="pocket_judge_title">Detekce uložení v kapse</string>
     <string name="pocket_judge_summary">Blokovat obrazovku a hardwarová tlačítka, když je zařízení v kapse</string>
     <string name="fp_swipe_to_dismiss_notifications_title">Pro odmítnutí oznámení přejeďte prstem vlevo nebo vpravo přes snímač otisků prstů</string>
     <string name="fp_swipe_to_dismiss_notifications_summary">Chcete-li zrušit oznámení, přejeďte prstem vlevo nebo vpravo pře snímač otisků prstů na zadní straně telefonu.</string>
     <string name="pulse_on_new_tracks_title">Hudební oznámení na Ambientním displeji</string>
     <string name="pulse_on_new_tracks_summary">Zobrazit Ambientní displej po spuštění nové hudební skladby</string>
-    <!-- Increasing ring tone volume -->
     <string name="increasing_ring_volume_option_title">Narůstající hlasitost vyzvánění</string>
     <string name="increasing_ring_min_volume_title">Počáteční hlasitost</string>
     <string name="increasing_ring_ramp_up_time_title">Doba zesilování</string>
-    <!-- Volume link notification -->
     <string name="volume_link_notification_title">Spojit hlasitost vyzvánění &amp; oznámení</string>
-    <!-- [CHAR LIMIT=50] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to be always on -->
     <string name="ambient_display_screen_summary_always_on">Vždy zapnuto / zvýšené používání baterie</string>
-    <!-- [CHAR LIMIT=30] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to show when new notifications come in. -->
     <string name="ambient_display_screen_summary_notifications">Nová oznámení</string>
-    <!-- Display : Rotation -->
     <string name="display_rotation_title">Možnosti automatického otáčení</string>
     <string name="display_rotation_summary">Konfigurace funkcí automatického otáčení obrazovky</string>
     <string name="display_rotation_disabled">Zakázáno</string>
@@ -92,16 +72,12 @@
     <string name="display_rotation_90_title">90°</string>
     <string name="display_rotation_180_title">180°</string>
     <string name="display_rotation_270_title">270°</string>
-    <!-- Navigation settings -->
     <string name="back_height_low_label">Celá</string>
     <string name="back_height_high_label">Dolní</string>
     <string name="back_options_dialog_title">Možnosti</string>
     <string name="back_height_message">Část výšky obrazovky použité jako dotyková oblast pro gesto Zpět.</string>
-    <!-- Back gesture animation -->
     <string name="back_gesture_arrow_message">Zobrazit animovanou šipku pro gesto Zpět.</string>
-    <!-- NavigationBar Gestural Mode Tweaks -->
     <string name="gesture_pill_message">Skrýt pilulku navigačního panelu pro plynulá gesta na celé obrazovce.</string>
-    <!-- Manual provisioning support -->
     <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g> je <xliff:g id="status" example="disabled">%2$s</xliff:g></string>
     <string name="sim_disabled">odpojena</string>
     <string name="sim_missing">chybějící nebo vadná</string>

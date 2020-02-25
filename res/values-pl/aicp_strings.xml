@@ -16,56 +16,32 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- SELinux status -->
     <string name="selinux_status">Status SELinux</string>
     <string name="selinux_status_disabled">Wyłączone</string>
     <string name="selinux_status_permissive">Pobłażliwy</string>
     <string name="selinux_status_enforcing">Restrykcyjny</string>
-    <!-- Sound: Title for the option defining the phone ringtone for slot1 on Muilti SIM device. [CHAR LIMIT=50] -->
-    <!-- Sound: Title for the option defining the phone ringtone for slot2 on Muilti SIM device. [CHAR LIMIT=50] -->
-    <!-- Battery stats reset -->
     <string name="battery_stats_reset">Zresetuj statystyki</string>
     <string name="battery_stats_message">Statystyki baterii zostaną zresetowane</string>
     <string name="aicp_version_title">AICP Experience</string>
     <string name="aicpextras_title">AICP Extras</string>
     <string name="aicpextras_summary">Dostosowywanie ROMu</string>
-    <!-- Three-fingers-swipe to screenshot -->
-    <!-- Strings for suggestion card's close button [CHAR LIMIT=20] -->
-    <!-- Android debugging over WiFi -->
     <string name="adb_over_network">ADB przez sieć</string>
     <string name="adb_over_network_summary">Aktywuj debugowanie TCP/IP przez interfejs sieciowy (Wi-Fi, sieci USB). Ustawienie zostanie zresetowane po ponownym uruchomieniu</string>
-    <!-- Warning for Adb over Network -->
     <string name="adb_over_network_warning">UWAGA: Kiedy ADB przez sieć jest włączone, Twój telefon jest podatny na włamania ze wszystkich połączonych sieci, nawet GSM!\n\nUżywaj tej opcji tylko w zaufanych sieciach.\n\nCzy na pewno chcesz włączyć tą funkcję?</string>
     <string name="adb_over_network_warning_title">Zezwolić na ADB przez sieć?</string>
-    <!-- Dashboard -->
-    <!-- Custom light color -->
     <string name="custom_light_title">Kolor światła</string>
     <string name="custom_light_on_time_title">Czas świecenia diody LED podczas impulsu (ms)</string>
     <string name="custom_light_off_time_title">Czas nieświecenia diody podczas impulsu (ms)</string>
     <string name="show_light_on_zen_title">Migająca dioda podczas trybu Nie Przeszkadzać</string>
-    <!-- Battery temperature -->
-    <!-- App details: open play store link if app is user installed -->
-    <!-- Media gestures -->
     <string name="prevent_ringing_option_mute_no_media">Wyciszony, brak dźwięku multimediów</string>
     <string name="prevent_ringing_option_mute_no_media_summary">Włączone (wyciszony, brak dźwięku multimediów)</string>
-    <!-- Android debugging as root -->
-    <!-- Pocket judge -->
     <string name="pocket_judge_title">Wykrywanie telefonu w kieszeni</string>
     <string name="pocket_judge_summary">Zablokuj funkcje ekranu i przycisków, gdy urządzenie jest w kieszeni</string>
     <string name="fp_swipe_to_dismiss_notifications_title">Przesuń w prawo lub lewo po czytniku linii papilarnych aby odwołać powiadomienia</string>
     <string name="fp_swipe_to_dismiss_notifications_summary">W celu odwołania powiadomień przesuń palcem w lewo lub w prawo po czytniku linii papilarnych.</string>
-    <!-- Increasing ring tone volume -->
     <string name="increasing_ring_volume_option_title">Zwiększanie głośności dzwonka</string>
     <string name="increasing_ring_min_volume_title">Głośność początkowa</string>
     <string name="increasing_ring_ramp_up_time_title">Odstęp podgłaszania</string>
-    <!-- Volume link notification -->
     <string name="volume_link_notification_title">Połącz głośność dzwonka i powiadomień</string>
-    <!-- [CHAR LIMIT=50] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to be always on -->
-    <!-- [CHAR LIMIT=30] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to show when new notifications come in. -->
-    <!-- Display : Rotation -->
     <string name="display_rotation_disabled">Wyłączone</string>
-    <!-- Navigation settings -->
-    <!-- Back gesture animation -->
-    <!-- NavigationBar Gestural Mode Tweaks -->
-    <!-- Manual provisioning support -->
 </resources>

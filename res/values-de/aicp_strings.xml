@@ -16,73 +16,53 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- SELinux status -->
     <string name="selinux_status">SELinux-Status</string>
     <string name="selinux_status_disabled">Deaktiviert</string>
     <string name="selinux_status_permissive">Moderat</string>
     <string name="selinux_status_enforcing">Strikt</string>
-    <!-- Sound: Title for the option defining the phone ringtone for slot1 on Muilti SIM device. [CHAR LIMIT=50] -->
     <string name="ringtone1_title">Klingelton - SIM 1</string>
-    <!-- Sound: Title for the option defining the phone ringtone for slot2 on Muilti SIM device. [CHAR LIMIT=50] -->
     <string name="ringtone2_title">Klingelton - SIM 2</string>
-    <!-- Battery stats reset -->
     <string name="battery_stats_reset">Statistik zurücksetzen</string>
     <string name="battery_stats_message">Akkuverbrauch-Statistiken werden zurückgesetzt werden</string>
     <string name="aicp_version_title">AICP Version</string>
     <string name="aicp_version_summary">AICP Q Edition - 15.0</string>
     <string name="aicpextras_title">AICP Extras</string>
     <string name="aicpextras_summary">ROM-Anpassung</string>
-    <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Wischen für Bildschirmfoto</string>
     <string name="three_finger_gesture_summary">Mit drei Fingern wischen, um ein Bildschirmfoto aufzunehmen</string>
-    <!-- Strings for suggestion card's close button [CHAR LIMIT=20] -->
     <string name="suggestion_button_close">Schließen</string>
-    <!-- Android debugging over WiFi -->
     <string name="adb_over_network">ADB über Netzwerk</string>
     <string name="adb_over_network_summary">TCP/IP-Debugging über Netzwerkschnittstellen (WLAN, USB-Netzwerke) aktivieren. Diese Einstellung wird beim Neustart zurückgesetzt!</string>
-    <!-- Warning for Adb over Network -->
     <string name="adb_over_network_warning">WARNUNG: Wenn Sie \"ADB über Netzwerk\" aktivieren, ist ihr Telefon für Zugriffe aus allen verbundenen Netzwerken offen, auch aus dem GSM-Datennetz!\n\nAktivieren Sie diese Funktion nur, wenn Sie mit einem vertrauenwürdigen Netzwerk verbunden sind.\n\nWollen Sie diese Funktion wirklich aktivieren?</string>
     <string name="adb_over_network_warning_title">ADB über Netzwerk erlauben?</string>
-    <!-- Dashboard -->
     <string name="dashboard_conditions_title">Zustandsanzeigen in der Einstellungsübersicht</string>
     <string name="summary_dashboard_conditions_enabled">Zustandsanzeigen werden angezeigt</string>
     <string name="summary_dashboard_conditions_disabled">Zustandsanzeigen werden nicht angezeigt</string>
     <string name="dashboard_suggestions_title">Vorschläge in der Einstellungsübersicht</string>
     <string name="summary_dashboard_suggestions_enabled">Einstellungsvorschläge werden angezeigt</string>
     <string name="summary_dashboard_suggestions_disabled">Einstellungsvorschläge werden nicht angezeigt</string>
-    <!-- Custom light color -->
     <string name="custom_light_title">LED Farbe</string>
     <string name="custom_light_on_time_title">Anschaltdauer der pulsierenden LED (in ms)</string>
     <string name="custom_light_off_time_title">Ausschaltdauer der pulsierenden LED (in ms)</string>
     <string name="show_light_on_zen_title">Blinken während \"Nicht Stören\"</string>
-    <!-- Battery temperature -->
     <string name="battery_temp">Akku-Temperatur</string>
-    <!-- App details: open play store link if app is user installed -->
     <string name="app_play_store">Google Play</string>
-    <!-- Media gestures -->
     <string name="prevent_ringing_option_mute_no_media">Stumm, keine Medienwiedergabe</string>
     <string name="prevent_ringing_option_mute_no_media_summary">AN (Stumm, keine Medienwiedergabe)</string>
-    <!-- Android debugging as root -->
     <string name="adb_enable_root">Android-Debugging (root)</string>
     <string name="adb_enable_summary_root">Android-Debugging als root aktivieren</string>
-    <!-- Pocket judge -->
     <string name="pocket_judge_title">Taschenerkennung</string>
     <string name="pocket_judge_summary">Verhindert Bildschirm- und Tasteneingaben, wenn sich das Gerät in einer Tasche befindet</string>
     <string name="fp_swipe_to_dismiss_notifications_title">Über Fingerabdrucksensor streichen, um Benachrichtigungen zu schließen</string>
     <string name="fp_swipe_to_dismiss_notifications_summary">Um Benachrichtigungen zu schließen, nach links oder rechts über den Fingerabdrucksensor streichen.</string>
     <string name="pulse_on_new_tracks_title">Musiktitelanzeige im Inaktivitätsdisplay</string>
     <string name="pulse_on_new_tracks_summary">Inaktivitätsdisplay aktivieren, wenn ein neuer Musiktitel abgespielt wird</string>
-    <!-- Increasing ring tone volume -->
     <string name="increasing_ring_volume_option_title">Ansteigende Klingeltonlautstärke</string>
     <string name="increasing_ring_min_volume_title">Anfangslautstärke</string>
     <string name="increasing_ring_ramp_up_time_title">Anstiegszeit</string>
-    <!-- Volume link notification -->
     <string name="volume_link_notification_title">Klingelton- &amp; Benachrichtigungslautstärke verbinden</string>
-    <!-- [CHAR LIMIT=50] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to be always on -->
     <string name="ambient_display_screen_summary_always_on">Immer aktiviert / erhöhter Akkuverbrauch</string>
-    <!-- [CHAR LIMIT=30] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to show when new notifications come in. -->
     <string name="ambient_display_screen_summary_notifications">Neue Benachrichtigungen</string>
-    <!-- Display : Rotation -->
     <string name="display_rotation_title">Einstellungen für automatische Bildschirmdrehung</string>
     <string name="display_rotation_summary">Automatische Bildschirmdrehung konfigurieren</string>
     <string name="display_rotation_disabled">Deaktiviert</string>
@@ -92,16 +72,12 @@
     <string name="display_rotation_90_title">90 Grad</string>
     <string name="display_rotation_180_title">180 Grad</string>
     <string name="display_rotation_270_title">270 Grad</string>
-    <!-- Navigation settings -->
     <string name="back_height_low_label">Vollständig</string>
     <string name="back_height_high_label">Unten</string>
     <string name="back_options_dialog_title">Optionen</string>
     <string name="back_height_message">Bereich der Bildschirmhöhe, die als berührbare Region für die \"Zurück\"-Geste verwendet wird.</string>
-    <!-- Back gesture animation -->
     <string name="back_gesture_arrow_message">Beweglichen Pfeil für die \"Zurück\"-Geste anzeigen.</string>
-    <!-- NavigationBar Gestural Mode Tweaks -->
     <string name="gesture_pill_message">\"Pille\" in der Navigationsleiste bei Vollbildgesten-Steuerung ausblenden.</string>
-    <!-- Manual provisioning support -->
     <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g> <xliff:g id="status" example="disabled">%2$s</xliff:g></string>
     <string name="sim_disabled">deaktiviert</string>
     <string name="sim_missing">fehlt oder fehlerhaft</string>
