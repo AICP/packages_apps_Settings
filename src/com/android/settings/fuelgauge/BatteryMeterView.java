@@ -133,5 +133,10 @@ public class BatteryMeterView extends ImageView {
         public int getIntrinsicHeight() {
             return mIntrinsicHeight;
         }
+
+        @Override
+        public int getMeterStyle() {
+            return BATTERY_STYLE_Q;
+        }
     }
 }
