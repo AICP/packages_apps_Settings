@@ -37,6 +37,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 	
 import com.aicp.gear.preference.SystemSettingListPreference;
+import com.aicp.gear.preference.SystemSettingSwitchPreference;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,6 +58,8 @@ public class GestureTweaksSettings extends SettingsPreferenceFragment
 
     private Preference mLeftSwipeAppSelection;
     private Preference mRightSwipeAppSelection;
+    private SystemSettingListPreference mTimeout;
+    private SystemSettingSwitchPreference mExtendedSwipe;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -91,6 +94,15 @@ public class GestureTweaksSettings extends SettingsPreferenceFragment
                 Settings.System.RIGHT_LONG_BACK_SWIPE_ACTION, 0, UserHandle.USER_CURRENT) == 5/*action_app_action*/;
         mRightSwipeAppSelection.setEnabled(isAppSelection);
         customAppCheck();
+
+        mTimeout = (SystemSettingListPreference) findPreference("long_back_swipe_timeout");
+        mExtendedSwipe = (SystemSettingSwitchPreference) findPreference("back_swipe_extended");
+        boolean extendedSwipe = Settings.System.getIntForUser(resolver,
+            Settings.System.BACK_SWIPE_EXTENDED, 0,
+            UserHandle.USER_CURRENT) != 0;
+        mExtendedSwipe.setChecked(extendedSwipe);
+        mExtendedSwipe.setOnPreferenceChangeListener(this);
+        mTimeout.setEnabled(!mExtendedSwipe.isChecked());
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -116,6 +128,10 @@ public class GestureTweaksSettings extends SettingsPreferenceFragment
             mRightSwipeAppSelection.setEnabled(rightSwipeActions == 5);
             customAppCheck();
             return true;
+        } else if (preference == mExtendedSwipe) {
+            boolean enabled = ((Boolean) newValue).booleanValue();
+            mExtendedSwipe.setChecked(enabled);
+            mTimeout.setEnabled(!enabled);
         }
         return false;
     }
