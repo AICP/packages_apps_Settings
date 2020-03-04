@@ -420,4 +420,7 @@
 
     <!-- Whether the given language capitalizes nouns -->
     <bool name="language_capitalizes_nouns">false</bool>
+
+    <!-- RTT setting intent action -->
+    <string name="config_rtt_setting_intent_action" translatable="false"></string>
 </resources>
