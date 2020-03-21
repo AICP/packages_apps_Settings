@@ -30,6 +30,6 @@ public class AppVersionPreferenceController extends AppInfoPreferenceControllerB
     @Override
     public CharSequence getSummary() {
         return mContext.getString(R.string.version_text,
-                BidiFormatter.getInstance().unicodeWrap(mParent.getPackageInfo().versionName));
+                BidiFormatter.getInstance().unicodeWrap(mParent.getPackageInfo().versionName + " ("+ mParent.getPackageInfo().versionCode + ")" ));
     }
 }
