@@ -56,12 +56,12 @@
         android:fragment="com.android.settings.display.AutoBrightnessSettings"
         settings:controller="com.android.settings.display.AutoBrightnessPreferenceController"/>
 
-    <Preference
+    <com.aicp.gear.preference.SelfRemovingPreference
         android:key="livedisplay"
         android:title="@*android:string/live_display_title"
         android:summary="@string/live_display_summary">
         <intent android:action="com.android.settings.LIVEDISPLAY_SETTINGS" />
-    </Preference>
+    </com.aicp.gear.preference.SelfRemovingPreference>
 
     <com.android.settingslib.RestrictedPreference
         android:key="wallpaper"
