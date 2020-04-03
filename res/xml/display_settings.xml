@@ -152,6 +152,13 @@
         android:title="@string/device_theme"
         android:summary="@string/summary_placeholder" />
 
+    <SwitchPreference
+        android:key="touch_sensitivity"
+        android:summary="@string/touch_sensitivity_summary"
+        android:title="@string/touch_sensitivity_title"
+        settings:controller="com.android.settings.display.TouchSensitivityPreferenceController"
+        settings:keywords="@string/keywords_touch_sensitivity" />
+
     <Preference
         android:key="vr_display_pref"
         android:title="@string/display_vr_pref_title"
