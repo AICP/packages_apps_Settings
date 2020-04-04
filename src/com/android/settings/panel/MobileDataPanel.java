@@ -87,7 +87,7 @@ public class MobileDataPanel implements PanelContent {
         final SubscriptionInfo defaultSubscription =
                 mSubscriptionManager.getDefaultDataSubscriptionInfo();
         if (defaultSubscription == null) {
-            return mContext.getText(R.string.cellular_data_title);
+            return mContext.getText(R.string.cellular_data_title).toString();
         }
 
         return defaultSubscription.getDisplayName();
