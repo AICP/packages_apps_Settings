@@ -61,7 +61,7 @@ open class FirmwareVersionScreen : PreferenceScreenMixin, PreferenceSummaryProvi
 
     override fun isIndexable(context: Context) = true
 
-    override fun hasCompleteHierarchy() = true
+    override fun hasCompleteHierarchy() = false
 
     override fun getLaunchIntent(context: Context, metadata: PreferenceMetadata?) =
         makeLaunchIntent(context, FirmwareVersionActivity::class.java, metadata?.key)
