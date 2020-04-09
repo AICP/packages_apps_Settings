@@ -21,6 +21,12 @@
     android:title="@string/firmware_version"
     settings:keywords="@string/keywords_android_version">
 
+
+    <!-- AICP Logo -->
+    <PreferenceScreen
+    android:layout="@layout/aicp_logo_layout"
+    android:key="aicp_logo" />
+
     <!-- Android version -->
     <Preference
         android:key="os_firmware_version"
