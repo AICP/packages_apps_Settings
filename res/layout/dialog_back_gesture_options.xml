@@ -15,12 +15,27 @@
   ~ limitations under the License
   -->
 
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clipChildren="true"
+    android:clipToPadding="true">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="12dp">
+
+    <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_weight="1"
+       android:layout_marginBottom="2dp"
+       android:layout_marginStart="12dp"
+       android:gravity="start"
+       android:text="@string/back_sensitivity_dialog_message"
+       android:textAppearance="?android:attr/textAppearance" />
 
     <SeekBar
         android:id="@+id/back_sensitivity_seekbar"
@@ -211,3 +226,4 @@
         android:textAppearance="?android:attr/textAppearance"
         style="@android:style/TextAppearance.Material.Subhead" />
 </LinearLayout>
+</ScrollView>
