@@ -54,6 +54,12 @@ public class ZenModeDurationPreferenceController extends AbstractZenModePreferen
                 int hours = zenDuration / 60;
                 summary = mContext.getResources().getQuantityString(
                         R.plurals.zen_mode_duration_summary_time_hours, hours, hours);
+                if (zenDuration > (hours * 60)) {
+                    int minutes = zenDuration % 60;
+                    String mins = mContext.getResources().getString(
+                                    R.string.zen_mode_duration_summary_time_minutes, minutes);
+                    summary = summary + " " + mins;
+                }
             } else {
                 summary = mContext.getResources().getString(
                         R.string.zen_mode_duration_summary_time_minutes, zenDuration);
