@@ -29,4 +29,11 @@
     -->
     <integer name="config_fingerprintSensorLocation">0</integer>
 
+    <!-- Battery Health -->
+    <string name="config_batCurCap"></string>
+    <string name="config_batDesCap"></string>
+    <string name="config_batChargeCycle"></string>
+    <string name="config_batHealth"></string>
+    <string name="config_batType"></string>
+    <bool name="config_supportBatteryHealth">false</bool>
 </resources>
