@@ -15,6 +15,5 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="aicp_version_title">AICP Experience</string>
-    <string name="aicpextras_title">Aicp Extras</string>
+    <string name="notification_log_summary">نمایش گزارش تاریخچه ی اعلان ها</string>
 </resources>
