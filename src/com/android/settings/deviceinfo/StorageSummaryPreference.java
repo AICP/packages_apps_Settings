@@ -54,8 +54,8 @@ public class StorageSummaryPreference extends Preference {
             progress.setVisibility(View.GONE);
         }
 
-        final TextView summary = (TextView) view.findViewById(android.R.id.summary);
-        summary.setTextColor(Color.parseColor("#8a000000"));
+        //final TextView summary = (TextView) view.findViewById(android.R.id.summary);
+        //summary.setTextColor(Color.parseColor("#8a000000"));
 
         super.onBindViewHolder(view);
     }
