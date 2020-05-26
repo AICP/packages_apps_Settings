@@ -24,4 +24,20 @@
     <string name="pocket_judge_summary">當裝置在口袋中時阻止螢幕和按鍵輸入</string>
     <string name="fp_swipe_to_dismiss_notifications_title">向左或向右滑動指紋以解除通知</string>
     <string name="fp_swipe_to_dismiss_notifications_summary">要解除通知, 請在手機背面的指紋感應器上向左或向右滑動。</string>
+    <string name="notification_log_summary">顯示通知歷史記錄日誌</string>
+    <string name="volume_steps_title">音量調整步進</string>
+    <string name="volume_steps_alarm_title">音量調整步進：鬧鐘</string>
+    <string name="volume_steps_dtmf_title">音量步進等級：DTMF</string>
+    <string name="volume_steps_music_title">音量調整步進：音樂</string>
+    <string name="volume_steps_notification_title">音量調整步進：通知</string>
+    <string name="volume_steps_ring_title">音量調整等級：鈴聲</string>
+    <string name="volume_steps_system_title">音量調整步進：系統</string>
+    <string name="volume_steps_voice_call_title">音量調整步進：語音通話</string>
+    <string name="volume_steps_reset">重設</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
 </resources>
