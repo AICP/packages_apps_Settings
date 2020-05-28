@@ -258,4 +258,7 @@
     <!-- Gesture nav gear options -->
     <!-- [CHAR LIMIT=60] -->
     <string name="show_gestures_navbar_switch_text">Enable to show gestures navbar and pill</string>
+
+    <!-- Search keywords -->
+    <string name="keywords_notification_log">notifications, notification log</string>
 </resources>
