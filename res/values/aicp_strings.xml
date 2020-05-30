@@ -290,6 +290,7 @@
     <string name="kill_app">Kill foreground app</string>
     <string name="skip_song">Skip song</string>
     <string name="prev_song">Previous song</string>
+    <string name="action_power_menu">Power menu</string>
 
     <!-- Vertical Long swipes -->
     <string name="left_vertical_swipe_key_title">Left L swipe</string>
