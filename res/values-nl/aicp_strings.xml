@@ -15,51 +15,78 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Format string for fingerprint location message -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="default">Zoek de vingerafdruksensor op de <xliff:g id="sensor_location">%1$s</xliff:g> van uw telefoon.</string>
+    <!-- Fingerprint sensor locations -->
+    <string name="security_settings_fingerprint_sensor_location_back">achterzijde</string>
+    <string name="security_settings_fingerprint_sensor_location_front">voorzijde</string>
+    <string name="security_settings_fingerprint_sensor_location_left">linkerzijde</string>
+    <string name="security_settings_fingerprint_sensor_location_right">rechterzijde</string>
+    <!-- SELinux status -->
     <string name="selinux_status">SELinux-status</string>
     <string name="selinux_status_disabled">Uitgeschakeld</string>
     <string name="selinux_status_permissive">Permissive (tolerant)</string>
     <string name="selinux_status_enforcing">Enforcing (strikt)</string>
+    <!-- Sound: Title for the option defining the phone ringtone for slot1 on Muilti SIM device. [CHAR LIMIT=50] -->
     <string name="ringtone1_title">Telefoon beltoon - SIM 1</string>
+    <!-- Sound: Title for the option defining the phone ringtone for slot2 on Muilti SIM device. [CHAR LIMIT=50] -->
     <string name="ringtone2_title">Telefoon beltoon - SIM 2</string>
+    <!-- Battery stats reset -->
     <string name="battery_stats_reset">Statistieken resetten</string>
     <string name="battery_stats_message">Accugeschiedenis zal worden gereset</string>
     <string name="aicp_version_title">AICP Experience</string>
     <string name="aicp_version_summary">Aicp 10 Editie - 15.0</string>
     <string name="aicpextras_title">AICP Extras</string>
     <string name="aicpextras_summary">ROM aanpassingen</string>
+    <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Swipe voor schermafbeelding</string>
     <string name="three_finger_gesture_summary">Veeg met 3 vingers om een schermafbeelding te maken</string>
+    <!-- Strings for suggestion card's close button [CHAR LIMIT=20] -->
     <string name="suggestion_button_close">Sluiten</string>
+    <!-- Android debugging over WiFi -->
     <string name="adb_over_network">ADB over netwerk</string>
     <string name="adb_over_network_summary">TCP/IP-foutopsporing over netwerkinterfaces (wifi, USB-netwerken etc.) inschakelen. Wordt hersteld bij opstarten</string>
+    <!-- Warning for Adb over Network -->
     <string name="adb_over_network_warning">Let op: als ADB over netwerk is ingeschakeld, kan op uw apparaat worden ingebroken via alle aangesloten netwerken, inclusief uw GSM-gegevensnetwerk!\n\nGebruik deze functie alleen indien u verbonden bent met vertrouwde netwerken.\n\nWeet u zeker dat u deze functie wilt inschakelen?</string>
     <string name="adb_over_network_warning_title">ADB over netwerk toestaan?</string>
+    <!-- Dashboard -->
     <string name="dashboard_conditions_title">Dashboard condities</string>
     <string name="summary_dashboard_conditions_enabled">Dashboard condities zijn ingeschakeld</string>
     <string name="summary_dashboard_conditions_disabled">Dashboard condities zijn uitgeschakeld</string>
     <string name="dashboard_suggestions_title">Dashboard suggesties</string>
     <string name="summary_dashboard_suggestions_enabled">Dashboard suggesties zijn ingeschakeld</string>
     <string name="summary_dashboard_suggestions_disabled">Dashboard suggesties zijn uitgeschakeld</string>
+    <!-- Custom light color -->
     <string name="custom_light_title">LED kleur</string>
     <string name="custom_light_on_time_title">Inschakelduur van de pulserende LED (in ms)</string>
     <string name="custom_light_off_time_title">Uitschakelduur van de pulserende LED (in ms)</string>
     <string name="show_light_on_zen_title">Knipperen tijdens Niet Storen</string>
+    <!-- Battery temperature -->
     <string name="battery_temp">Accu-temperatuur</string>
+    <!-- App details: open play store link if app is user installed -->
     <string name="app_play_store">Google Play</string>
+    <!-- Media gestures -->
     <string name="prevent_ringing_option_mute_no_media">Dempen, geen mediaweergave</string>
     <string name="prevent_ringing_option_mute_no_media_summary">Ingeschakeld (dempen, geen mediaweergave)</string>
+    <!-- Android debugging as root -->
+    <!-- Pocket judge -->
     <string name="pocket_judge_title">Broekzak detectie</string>
     <string name="pocket_judge_summary">Scherm- en toetsaanrakingen blokkeren wanneer het apparaat in de broekzak zit</string>
     <string name="fp_swipe_to_dismiss_notifications_title">Veeg vingerafdruk naar links of rechts om meldingen te negeren</string>
     <string name="fp_swipe_to_dismiss_notifications_summary">Veeg naar links of rechts over de vingerafdruk sensor om meldingen te negeren.</string>
     <string name="pulse_on_new_tracks_title">Muziekticker op inactiviteitsscherm</string>
     <string name="pulse_on_new_tracks_summary">Toon Ambient Display wanneer een nieuwe track wordt afgespeeld</string>
+    <!-- Increasing ring tone volume -->
     <string name="increasing_ring_volume_option_title">Luider wordende beltoon</string>
     <string name="increasing_ring_min_volume_title">Startvolume</string>
     <string name="increasing_ring_ramp_up_time_title">Ophoogtijd</string>
+    <!-- Volume link notification -->
     <string name="volume_link_notification_title">Beltoon- &amp; notificatievolumes koppelen</string>
+    <!-- [CHAR LIMIT=50] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to be always on -->
     <string name="ambient_display_screen_summary_always_on">Altijd aan / Verhoogd batterijgebruik</string>
+    <!-- [CHAR LIMIT=30] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to show when new notifications come in. -->
     <string name="ambient_display_screen_summary_notifications">Nieuwe meldingen</string>
+    <!-- Display : Rotation -->
     <string name="display_rotation_title">Opties voor Automatisch roteren</string>
     <string name="display_rotation_disabled">Uitgeschakeld</string>
     <string name="display_rotation_unit">graden</string>
@@ -68,11 +95,14 @@
     <string name="display_rotation_90_title">90 graden</string>
     <string name="display_rotation_180_title">180 graden</string>
     <string name="display_rotation_270_title">270 graden</string>
+    <!-- Navigation settings -->
     <string name="back_height_low_label">Volledig</string>
     <string name="back_height_high_label">Onderaan</string>
     <string name="back_options_dialog_title">Opties</string>
+    <!-- Back gesture animation -->
     <string name="back_gesture_arrow_message">Toon een geanimeerde pijl voor Terug-beweging.</string>
     <string name="back_gesture_haptic">Haptisch tikeffect bij terug-gebaar inschakelen</string>
+    <!-- Manual provisioning support -->
     <string name="sim_disabled">uitgeschakeld</string>
     <string name="sim_missing">ontbrekend of foutief</string>
     <string name="sim_enabler_need_disable_sim">Simkaart wordt gedeactiveerd. Wilt u doorgaan?</string>
@@ -85,19 +115,26 @@
     <string name="sub_activate_failed">Inschakelen mislukt.</string>
     <string name="sub_deactivate_success">Simkaart uitgeschakeld.</string>
     <string name="sub_deactivate_failed">Uitschakelen mislukt.</string>
+    <!-- Night Display API strings -->
     <string name="unknown_night_light_time">Onbekend - druk om bij te werken</string>
     <string name="night_display_location_text">\n\nHet schema van zonsondergang tot zonsopgang vereist ingeschakelde locatiediensten om de juiste tijden voor uw locatie te krijgen.</string>
+    <!-- Notification log -->
     <string name="notification_log_summary">Toon geschiedenislogboek van notificaties</string>
+    <!-- Back gesture block ime -->
     <string name="back_block_ime_title">Hoogte van virtueel toetsenbord uitschakelen als aanraakbare regio voor terug-gebaar</string>
+    <!-- Home handle width -->
     <string name="home_handle_sizer_title">Grootte gebarenbalk</string>
     <string name="home_handle_low_label">Standaard</string>
     <string name="home_handle_high_label">Dubbel</string>
+    <!-- Per-app data restrictions -->
     <string name="data_usage_app_restrict_data">Mobiele gegevens</string>
     <string name="data_usage_app_restrict_data_summary">Gebruik van mobiele gegevens inschakelen</string>
     <string name="data_usage_app_restrict_vpn">VPN-gegevens</string>
     <string name="data_usage_app_restrict_vpn_summary">Gebruik van VPN-gegevens inschakelen</string>
     <string name="data_usage_app_restrict_wifi">Wi\u2011Fi gegevens</string>
     <string name="data_usage_app_restrict_wifi_summary">Gebruik van WiFi\u2011gegevens inschakelen</string>
+    <!-- Touch sensitivity -->
+    <!-- Adaptive Playback -->
     <string name="adaptive_playback_timeout_none_summary">Uit</string>
     <string name="adaptive_playback_timeout_30_secs">30 seconden</string>
     <string name="adaptive_playback_timeout_30_secs_summary">Aan (30 seconden)</string>
@@ -109,6 +146,7 @@
     <string name="adaptive_playback_timeout_5_min_summary">Aan (5 minuten)</string>
     <string name="adaptive_playback_timeout_10_min">10 minuten</string>
     <string name="adaptive_playback_timeout_10_min_summary">Aan (10 minuten)</string>
+    <!-- LiveDisplay -->
     <string name="live_display_summary">Uw scherm optimaliseren aan de hand van tijdstip op de dag en lichtomstandigheden om de leesbaarheid te verbeteren en oogvermoeidheid te verminderen</string>
     <string name="live_display_mode">Weergavemodus</string>
     <string name="live_display_color_temperature_title">Kleurtemperatuur</string>
@@ -152,12 +190,15 @@
     <string name="color_red_title">Rood</string>
     <string name="color_green_title">Groen</string>
     <string name="color_blue_title">Blauw</string>
+    <!-- LiveDisplay : Picture Adjustment -->
     <string name="picture_adjustment_title">Beeldaanpassingen</string>
     <string name="picture_adjustment_summary">Tint, verzadiging, intensiteit en contrast aanpassen</string>
     <string name="adj_hue_title">Tint</string>
     <string name="adj_saturation_title">Verzadiging</string>
     <string name="adj_intensity_title">Intensiteit</string>
     <string name="adj_contrast_title">Contrast</string>
+    <!-- String for removal of sensitive info on about, depending on tap -->
+    <!-- Volume Steps -->
     <string name="volume_steps_title">Volume stappen</string>
     <string name="volume_steps_alarm_title">Volume stappen: Alarm</string>
     <string name="volume_steps_dtmf_title">Volume stappen: DTMF</string>
@@ -173,4 +214,9 @@
     <string name="volume_steps_15">15</string>
     <string name="volume_steps_7">7</string>
     <string name="volume_steps_5">5</string>
+    <!-- Gesture nav gear options -->
+    <!-- [CHAR LIMIT=60] -->
+    <!-- Search keywords -->
+    <!-- Allow VPN to Hotspot clients -->
+    <!-- Title for connected TWS device group [CHAR LIMIT=none]-->
 </resources>
