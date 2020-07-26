@@ -233,5 +233,8 @@
     <!-- Search keywords -->
     <string name="keywords_notification_log">notificaciones, registro de notificaciones</string>
     <!-- Allow VPN to Hotspot clients -->
+    <string name="tethering_allow_vpn_upstreams_title">Permitir a los clientes usar VPNs</string>
+    <string name="tethering_allow_vpn_upstreams_summary">Permitir a los clientes de punto de acceso usar las conexiones VPN de este dispositivo\u2019 como conectividad principal</string>
     <!-- Title for connected TWS device group [CHAR LIMIT=none]-->
+    <string name="connected_tws_device_saved_title">Auriculares guardados</string>
 </resources>
