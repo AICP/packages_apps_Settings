@@ -28,5 +28,4 @@
          3 = right side
     -->
     <integer name="config_fingerprintSensorLocation">0</integer>
-
 </resources>
