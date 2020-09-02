@@ -22,6 +22,30 @@
       "revId": "c25dba4f93bffff6c0e580a15827d60061b195fa",
       "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7ab79398_08f9d569",
+        "filename": "src/com/android/settings/security/FodGesturePreferenceController.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1784
+      },
+      "writtenOn": "2020-09-02T07:52:33Z",
+      "side": 1,
+      "message": "How do I check it correctly on AICP?",
+      "parentUuid": "9dda59cb_67e1e683",
+      "range": {
+        "startLine": 40,
+        "startChar": 8,
+        "endLine": 46,
+        "endChar": 9
+      },
+      "revId": "c25dba4f93bffff6c0e580a15827d60061b195fa",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": true
     }
   ]
 }
