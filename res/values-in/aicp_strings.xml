@@ -15,74 +15,41 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Format string for fingerprint location message -->
-    <!-- Fingerprint sensor locations -->
     <string name="security_settings_fingerprint_sensor_location_back">belakang</string>
     <string name="security_settings_fingerprint_sensor_location_front">depan</string>
     <string name="security_settings_fingerprint_sensor_location_left">sisi kiri</string>
     <string name="security_settings_fingerprint_sensor_location_right">sisi kanan</string>
-    <!-- SELinux status -->
     <string name="selinux_status">Status SELinux</string>
     <string name="selinux_status_disabled">Dimatikan</string>
     <string name="selinux_status_permissive">Tidak wajib</string>
     <string name="selinux_status_enforcing">Wajib</string>
-    <!-- Sound: Title for the option defining the phone ringtone for slot1 on Muilti SIM device. [CHAR LIMIT=50] -->
-    <!-- Sound: Title for the option defining the phone ringtone for slot2 on Muilti SIM device. [CHAR LIMIT=50] -->
-    <!-- Battery stats reset -->
     <string name="battery_stats_reset">Setel ulang statistik</string>
     <string name="battery_stats_message">Statistik riwayat baterai akan disetel ulang</string>
     <string name="aicp_version_title">AICP Experience</string>
     <string name="aicpextras_title">Aicp Extras</string>
     <string name="aicpextras_summary">Kustomisasi ROM</string>
-    <!-- Three-fingers-swipe to screenshot -->
-    <!-- Strings for suggestion card's close button [CHAR LIMIT=20] -->
-    <!-- Android debugging over WiFi -->
     <string name="adb_over_network">ADB melalui Jaringan</string>
     <string name="adb_over_network_summary">Hidupkan debug TCP/IP melalui antarmuka jaringan (Wi-Fi, jaringan USB). Setelan ini disetel ulang pada saat mulai ulang</string>
-    <!-- Warning for Adb over Network -->
     <string name="adb_over_network_warning_title">ADB melalui Jaringan?</string>
-    <!-- Dashboard -->
-    <!-- Custom light color -->
     <string name="custom_light_title">Warna terang</string>
     <string name="show_light_on_zen_title">Berkedip selama mode Jangan Ganggu</string>
-    <!-- Battery temperature -->
-    <!-- App details: open play store link if app is user installed -->
-    <!-- Media gestures -->
     <string name="prevent_ringing_option_mute_no_media">Diam, tidak ada media</string>
     <string name="prevent_ringing_option_mute_no_media_summary">Hidup, (diam, tidak ada media)</string>
-    <!-- Android debugging as root -->
-    <!-- Pocket judge -->
     <string name="pocket_judge_title">Deteksi saku</string>
     <string name="pocket_judge_summary">Blokir masukan tombol dan layar saat perangkat berada dalam saku</string>
     <string name="fp_swipe_to_dismiss_notifications_title">Usap menggunakan sidik jari ke kiri atau ke kanan untuk menghapus pemberitahuan</string>
     <string name="fp_swipe_to_dismiss_notifications_summary">Untuk mengabaikan pemberitahuan anda, gesek ke kiri atau kanan pada sensor sidik jari di bagian belakang telepon anda.</string>
-    <!-- Increasing ring tone volume -->
     <string name="increasing_ring_volume_option_title">Meningkatkan volume dering</string>
     <string name="increasing_ring_min_volume_title">Volume awal</string>
-    <!-- Volume link notification -->
     <string name="volume_link_notification_title">Hubungkan volume nada dering &amp; pemberitahuan</string>
-    <!-- [CHAR LIMIT=50] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to be always on -->
-    <!-- [CHAR LIMIT=30] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to show when new notifications come in. -->
-    <!-- Display : Rotation -->
     <string name="display_rotation_disabled">Dimatikan</string>
-    <!-- Navigation settings -->
-    <!-- Back gesture animation -->
-    <!-- Manual provisioning support -->
-    <!-- Night Display API strings -->
-    <!-- Notification log -->
     <string name="notification_log_summary">Tampilkan riwayat pemberitahuan</string>
-    <!-- Back gesture block ime -->
-    <!-- Home handle width -->
-    <!-- Per-app data restrictions -->
     <string name="data_usage_app_restrict_data">Data seluler</string>
     <string name="data_usage_app_restrict_data_summary">Hidupkan penggunaan data seluler</string>
     <string name="data_usage_app_restrict_vpn">Data VPN</string>
     <string name="data_usage_app_restrict_vpn_summary">Hidupkan penggunaan data VPN</string>
     <string name="data_usage_app_restrict_wifi">Data Wi\u2011Fi</string>
     <string name="data_usage_app_restrict_wifi_summary">Hidupkan penggunaan data Wi\u2011Fi</string>
-    <!-- Touch sensitivity -->
-    <!-- Adaptive Playback -->
-    <!-- LiveDisplay -->
     <string name="live_display_mode">Mode tampilan</string>
     <string name="live_display_color_temperature_title">Temperatur warna</string>
     <string name="live_display_color_temperature_summary">Siang: <xliff:g id="day_temperature">%1$d</xliff:g>K;  Malam: <xliff:g id="night_temperature">%2$d</xliff:g>K</string>
@@ -121,15 +88,12 @@
     <string name="color_red_title">Merah</string>
     <string name="color_green_title">Hijau</string>
     <string name="color_blue_title">Biru</string>
-    <!-- LiveDisplay : Picture Adjustment -->
     <string name="picture_adjustment_title">Penyesuaian gambar</string>
     <string name="picture_adjustment_summary">Sesuaikan rona, saturasi, intensitas, dan kontras</string>
     <string name="adj_hue_title">Rona</string>
     <string name="adj_saturation_title">Saturasi</string>
     <string name="adj_intensity_title">Intensitas</string>
     <string name="adj_contrast_title">Kontras</string>
-    <!-- String for removal of sensitive info on about, depending on tap -->
-    <!-- Volume Steps -->
     <string name="volume_steps_title">Tingkat volume</string>
     <string name="volume_steps_alarm_title">Tingkat volume: Alarm</string>
     <string name="volume_steps_dtmf_title">Tingkat volume: DTMF</string>
@@ -145,9 +109,4 @@
     <string name="volume_steps_15">15</string>
     <string name="volume_steps_7">7</string>
     <string name="volume_steps_5">5</string>
-    <!-- Gesture nav gear options -->
-    <!-- [CHAR LIMIT=60] -->
-    <!-- Search keywords -->
-    <!-- Allow VPN to Hotspot clients -->
-    <!-- Title for connected TWS device group [CHAR LIMIT=none]-->
 </resources>

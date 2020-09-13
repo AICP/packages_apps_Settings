@@ -15,78 +15,45 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Format string for fingerprint location message -->
     <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="default">端末の<xliff:g id="sensor_location">%1$s</xliff:g>にある指紋認証センサーを探します</string>
-    <!-- Fingerprint sensor locations -->
     <string name="security_settings_fingerprint_sensor_location_back">背面</string>
     <string name="security_settings_fingerprint_sensor_location_front">前面</string>
     <string name="security_settings_fingerprint_sensor_location_left">左側</string>
     <string name="security_settings_fingerprint_sensor_location_right">右側</string>
-    <!-- SELinux status -->
     <string name="selinux_status">SELinux ステータス</string>
     <string name="selinux_status_disabled">Disabled</string>
     <string name="selinux_status_permissive">Permissive</string>
     <string name="selinux_status_enforcing">Enforcing</string>
-    <!-- Sound: Title for the option defining the phone ringtone for slot1 on Muilti SIM device. [CHAR LIMIT=50] -->
-    <!-- Sound: Title for the option defining the phone ringtone for slot2 on Muilti SIM device. [CHAR LIMIT=50] -->
-    <!-- Battery stats reset -->
     <string name="battery_stats_reset">統計のリセット</string>
     <string name="battery_stats_message">バッテリーの使用統計を初期化します</string>
     <string name="aicp_version_title">AICP Experience</string>
     <string name="aicpextras_title">AICP Extras</string>
     <string name="aicpextras_summary">ROM のカスタマイズ</string>
-    <!-- Three-fingers-swipe to screenshot -->
-    <!-- Strings for suggestion card's close button [CHAR LIMIT=20] -->
-    <!-- Android debugging over WiFi -->
     <string name="adb_over_network">ネットワーク経由の ADB</string>
     <string name="adb_over_network_summary">ネットワークインターフェース (Wi-Fi、USB ネットワーク) 経由での TCP/IP デバッグを有効にします。この設定は再起動時にリセットされます。</string>
-    <!-- Warning for Adb over Network -->
     <string name="adb_over_network_warning">警告: ネットワーク経由での ADB を有効にすると、あなたの携帯電話は GSM データネットワークを含む接続している全てのネットワークから侵入できるようになります。\n\nこの機能は信頼されたネットワークに接続している時にのみ使用して下さい。\n\nこの機能を本当に有効にしますか?</string>
     <string name="adb_over_network_warning_title">ネットワーク経由の ADB を許可しますか?</string>
-    <!-- Dashboard -->
-    <!-- Custom light color -->
     <string name="custom_light_on_time_title">LED 点滅時の光っている時間 (ms)</string>
     <string name="custom_light_off_time_title">LED 点滅時の消えている時間 (ms)</string>
     <string name="show_light_on_zen_title">マナーモードの間はライトを点滅</string>
-    <!-- Battery temperature -->
-    <!-- App details: open play store link if app is user installed -->
-    <!-- Media gestures -->
     <string name="prevent_ringing_option_mute_no_media">ミュート、メディアなし</string>
     <string name="prevent_ringing_option_mute_no_media_summary">ON (ミュート、メディアなし)</string>
-    <!-- Android debugging as root -->
-    <!-- Pocket judge -->
     <string name="pocket_judge_title">ポケット検出</string>
     <string name="pocket_judge_summary">ポケットに入っている時にタッチやボタン入力を無効化する</string>
     <string name="fp_swipe_to_dismiss_notifications_title">指紋センサーで左右にスワイプして通知を削除</string>
     <string name="fp_swipe_to_dismiss_notifications_summary">通知を削除するには端末の指紋センサー上で左右にスワイプして下さい</string>
-    <!-- Increasing ring tone volume -->
     <string name="increasing_ring_volume_option_title">着信音量の増幅</string>
     <string name="increasing_ring_min_volume_title">開始音量</string>
     <string name="increasing_ring_ramp_up_time_title">増幅時間</string>
-    <!-- Volume link notification -->
     <string name="volume_link_notification_title">着信と通知の音量をリンク</string>
-    <!-- [CHAR LIMIT=50] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to be always on -->
-    <!-- [CHAR LIMIT=30] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to show when new notifications come in. -->
-    <!-- Display : Rotation -->
     <string name="display_rotation_disabled">無効</string>
-    <!-- Navigation settings -->
-    <!-- Back gesture animation -->
-    <!-- Manual provisioning support -->
-    <!-- Night Display API strings -->
-    <!-- Notification log -->
     <string name="notification_log_summary">通知履歴を表示する</string>
-    <!-- Back gesture block ime -->
-    <!-- Home handle width -->
-    <!-- Per-app data restrictions -->
     <string name="data_usage_app_restrict_data">モバイルデータ</string>
     <string name="data_usage_app_restrict_data_summary">モバイルデータ使用量を有効化する</string>
     <string name="data_usage_app_restrict_vpn">VPN データ</string>
     <string name="data_usage_app_restrict_vpn_summary">VPN データ使用量を有効化する</string>
     <string name="data_usage_app_restrict_wifi">Wi-Fi データ</string>
     <string name="data_usage_app_restrict_wifi_summary">Wi-Fi データ使用量を有効化する</string>
-    <!-- Touch sensitivity -->
-    <!-- Adaptive Playback -->
-    <!-- LiveDisplay -->
     <string name="live_display_summary">画面を見やすく目の疲れを軽減するために時間と周囲の環境に合わせて画面を最適化する</string>
     <string name="live_display_mode">ディスプレイモード</string>
     <string name="live_display_color_temperature_title">色温度</string>
@@ -129,15 +96,12 @@
     <string name="color_red_title">赤</string>
     <string name="color_green_title">緑</string>
     <string name="color_blue_title">青</string>
-    <!-- LiveDisplay : Picture Adjustment -->
     <string name="picture_adjustment_title">画像調整</string>
     <string name="picture_adjustment_summary">色相・彩度・輝度・コントラストを調整する</string>
     <string name="adj_hue_title">色相</string>
     <string name="adj_saturation_title">彩度</string>
     <string name="adj_intensity_title">輝度</string>
     <string name="adj_contrast_title">コントラスト</string>
-    <!-- String for removal of sensitive info on about, depending on tap -->
-    <!-- Volume Steps -->
     <string name="volume_steps_title">音量レベルの変更</string>
     <string name="volume_steps_alarm_title">音量レベル: アラーム</string>
     <string name="volume_steps_dtmf_title">音量レベル: DTMF</string>
@@ -153,9 +117,4 @@
     <string name="volume_steps_15">15</string>
     <string name="volume_steps_7">7</string>
     <string name="volume_steps_5">5</string>
-    <!-- Gesture nav gear options -->
-    <!-- [CHAR LIMIT=60] -->
-    <!-- Search keywords -->
-    <!-- Allow VPN to Hotspot clients -->
-    <!-- Title for connected TWS device group [CHAR LIMIT=none]-->
 </resources>

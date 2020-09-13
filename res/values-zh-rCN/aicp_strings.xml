@@ -15,82 +15,60 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Format string for fingerprint location message -->
     <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="tablet">在您的平板电脑的 <xliff:g id="sensor_location">%1$s</xliff:g> 找到指纹传感器。</string>
     <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="device">在您的设备的 <xliff:g id="sensor_location">%1$s</xliff:g> 找到指纹传感器。</string>
     <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="default">在您手机的 <xliff:g id="sensor_location">%1$s</xliff:g> 找到指纹传感器。</string>
-    <!-- Fingerprint sensor locations -->
     <string name="security_settings_fingerprint_sensor_location_back">背面</string>
     <string name="security_settings_fingerprint_sensor_location_front">正面</string>
     <string name="security_settings_fingerprint_sensor_location_left">左侧</string>
     <string name="security_settings_fingerprint_sensor_location_right">右侧</string>
-    <!-- SELinux status -->
     <string name="selinux_status">SELinux 状态</string>
     <string name="selinux_status_disabled">禁用</string>
     <string name="selinux_status_permissive">许可</string>
     <string name="selinux_status_enforcing">执行</string>
-    <!-- Sound: Title for the option defining the phone ringtone for slot1 on Muilti SIM device. [CHAR LIMIT=50] -->
     <string name="ringtone1_title">电话铃声 - SIM 1</string>
-    <!-- Sound: Title for the option defining the phone ringtone for slot2 on Muilti SIM device. [CHAR LIMIT=50] -->
     <string name="ringtone2_title">电话铃声 - SIM 2</string>
-    <!-- Battery stats reset -->
     <string name="battery_stats_reset">重置统计数据</string>
     <string name="battery_stats_message">电池的历史统计数据将被重置</string>
     <string name="aicp_version_title">AICP 用户体验</string>
     <string name="aicp_version_summary">Aicp 10 版本 - 15.0</string>
     <string name="aicpextras_title">AICP 额外设置</string>
     <string name="aicpextras_summary">系统自定义</string>
-    <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">滑动截图</string>
     <string name="three_finger_gesture_summary">三指滑动截图</string>
-    <!-- Strings for suggestion card's close button [CHAR LIMIT=20] -->
     <string name="suggestion_button_close">关闭</string>
-    <!-- Android debugging over WiFi -->
     <string name="adb_over_network">网络 ADB 调试</string>
     <string name="adb_over_network_summary">通过网络接口 (WLAN，USB 网络) 启用 TCP/IP 调试。该设置重启后失效</string>
-    <!-- Warning for Adb over Network -->
     <string name="adb_over_network_warning">警告：网络 ADB 调试启用后，您的设备将会在已连接的网络 (包括 GSM 数据网络) 上被视为是开放的，并有可能被侵入！\n\n请仅在您所信任的网络上使用此功能。\n\n您确实要启用该功能吗？</string>
     <string name="adb_over_network_warning_title">网络 ADB 调试?</string>
-    <!-- Dashboard -->
     <string name="dashboard_conditions_title">面板状态摘要</string>
     <string name="summary_dashboard_conditions_enabled">面板状态摘要已启用</string>
     <string name="summary_dashboard_conditions_disabled">面板状态摘要已禁用</string>
     <string name="dashboard_suggestions_title">面板建议摘要</string>
     <string name="summary_dashboard_suggestions_enabled">面板建议已启用</string>
     <string name="summary_dashboard_suggestions_disabled">面板建议已禁用</string>
-    <!-- Custom light color -->
     <string name="custom_light_title">指示灯颜色</string>
     <string name="custom_light_on_time_title">呼吸灯闪烁时亮灯时间 (毫秒)</string>
     <string name="custom_light_off_time_title">呼吸灯闪烁时熄灯时间 (毫秒)\"</string>
     <string name="show_light_on_zen_title">在勿扰期间闪烁</string>
-    <!-- Battery temperature -->
     <string name="battery_temp">电池温度</string>
-    <!-- App details: open play store link if app is user installed -->
     <string name="app_play_store">Google 市场</string>
-    <!-- Media gestures -->
     <string name="prevent_ringing_option_mute_no_media">静音, 无媒体</string>
     <string name="prevent_ringing_option_mute_no_media_summary">打开 (静音, 无媒体)</string>
-    <!-- Android debugging as root -->
     <string name="adb_enable_root">Root Android 调试</string>
     <string name="adb_enable_summary_root">启用 Android 调试作为 root</string>
-    <!-- Pocket judge -->
     <string name="pocket_judge_title">口袋检测</string>
     <string name="pocket_judge_summary">当设备在口袋中时屏蔽屏幕和按键操作</string>
     <string name="fp_swipe_to_dismiss_notifications_title">向左或向右滑动指纹以取消通知</string>
     <string name="fp_swipe_to_dismiss_notifications_summary">要取消通知，请从左右两侧滑动手机背面的指纹传感器。</string>
     <string name="pulse_on_new_tracks_title">息屏音乐信息</string>
     <string name="pulse_on_new_tracks_summary">主动显示新音乐播放</string>
-    <!-- Increasing ring tone volume -->
     <string name="increasing_ring_volume_option_title">铃声音量渐强</string>
     <string name="increasing_ring_min_volume_title">初始音量</string>
     <string name="increasing_ring_ramp_up_time_title">渐强时间</string>
-    <!-- Volume link notification -->
     <string name="volume_link_notification_title">关联铃声和通知音量</string>
-    <!-- [CHAR LIMIT=50] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to be always on -->
     <string name="ambient_display_screen_summary_always_on">一律开启/耗电量更高</string>
-    <!-- [CHAR LIMIT=30] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to show when new notifications come in. -->
     <string name="ambient_display_screen_summary_notifications">新通知</string>
-    <!-- Display : Rotation -->
     <string name="display_rotation_title">自动旋转选项</string>
     <string name="display_rotation_summary">配置屏幕自动旋转功能</string>
     <string name="display_rotation_disabled">禁用</string>
@@ -100,15 +78,12 @@
     <string name="display_rotation_90_title">90 度</string>
     <string name="display_rotation_180_title">180 度</string>
     <string name="display_rotation_270_title">270 度</string>
-    <!-- Navigation settings -->
     <string name="back_height_low_label">充满</string>
     <string name="back_height_high_label">底部</string>
     <string name="back_options_dialog_title">选项</string>
     <string name="back_height_message">屏幕高度作为背面手势的触摸区域</string>
-    <!-- Back gesture animation -->
     <string name="back_gesture_arrow_message">显示后退手势的动画箭头</string>
     <string name="back_gesture_haptic">启用返回手势的振动效果</string>
-    <!-- Manual provisioning support -->
     <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g> <xliff:g id="status" example="disabled">%2$s</xliff:g></string>
     <string name="sim_disabled">禁用</string>
     <string name="sim_missing">缺失或故障</string>
@@ -122,29 +97,22 @@
     <string name="sub_activate_failed">激活失败</string>
     <string name="sub_deactivate_success">SIM 卡已禁用</string>
     <string name="sub_deactivate_failed">禁用失败</string>
-    <!-- Night Display API strings -->
     <string name="unknown_night_light_time">未知 - 按下以更新</string>
     <string name="night_display_location_text">\n\n从日落到日出的时间表需要启用位置服务才能获取您所在位置的正确时间。</string>
-    <!-- Notification log -->
     <string name="notification_log_summary">显示通知历史记录日志</string>
-    <!-- Back gesture block ime -->
     <string name="back_block_ime_title">禁用虚拟键盘的高度作为返回手势的操作区域</string>
-    <!-- Home handle width -->
     <string name="home_handle_sizer_title">手势栏大小</string>
     <string name="home_handle_low_label">默认</string>
     <string name="home_handle_high_label">两倍</string>
-    <!-- Per-app data restrictions -->
     <string name="data_usage_app_restrict_data">移动数据流量</string>
     <string name="data_usage_app_restrict_data_summary">启用移动网络流量使用统计</string>
     <string name="data_usage_app_restrict_vpn">VPN 数据</string>
     <string name="data_usage_app_restrict_vpn_summary">启用 VPN 数据流量使用统计</string>
     <string name="data_usage_app_restrict_wifi">Wi\u2011Fi 数据</string>
     <string name="data_usage_app_restrict_wifi_summary">启用 Wi\u2011Fi 数据流量使用统计</string>
-    <!-- Touch sensitivity -->
     <string name="touch_sensitivity_summary">使用屏幕保护器时提高触摸效果</string>
     <string name="touch_sensitivity_title">增加触摸灵敏度</string>
     <string name="keywords_touch_sensitivity">触摸, 灵敏, 屏幕保护膜, 贴膜, 响应, 敏感, 手套模式</string>
-    <!-- Adaptive Playback -->
     <string name="adaptive_playback_screen_title">静音自动暂停</string>
     <string name="adaptive_playback_timeout_title">指定时间内解除自动续播</string>
     <string name="adaptive_playback_timeout_none_summary">关闭</string>
@@ -158,7 +126,6 @@
     <string name="adaptive_playback_timeout_5_min_summary">开启 (5 分钟)</string>
     <string name="adaptive_playback_timeout_10_min">10 分钟</string>
     <string name="adaptive_playback_timeout_10_min_summary">开启 (10 分钟)</string>
-    <!-- LiveDisplay -->
     <string name="live_display_summary">基于时间和环境条件来优化您的屏幕，以改善可读性和减少眼睛疲劳</string>
     <string name="live_display_mode">显示模式</string>
     <string name="live_display_color_temperature_title">色温</string>
@@ -202,16 +169,13 @@
     <string name="color_red_title">红色</string>
     <string name="color_green_title">绿色</string>
     <string name="color_blue_title">蓝色</string>
-    <!-- LiveDisplay : Picture Adjustment -->
     <string name="picture_adjustment_title">图片调整</string>
     <string name="picture_adjustment_summary">调整色相、饱和度、亮度和对比度</string>
     <string name="adj_hue_title">色调</string>
     <string name="adj_saturation_title">饱和度</string>
     <string name="adj_intensity_title">亮度</string>
     <string name="adj_contrast_title">对比度</string>
-    <!-- String for removal of sensitive info on about, depending on tap -->
     <string name="device_info_protected_single_press">点击以显示信息</string>
-    <!-- Volume Steps -->
     <string name="volume_steps_title">音量级别</string>
     <string name="volume_steps_alarm_title">音量等级:闹钟</string>
     <string name="volume_steps_dtmf_title">音量等级:双音多频</string>
@@ -227,14 +191,9 @@
     <string name="volume_steps_15">15</string>
     <string name="volume_steps_7">7</string>
     <string name="volume_steps_5">5</string>
-    <!-- Gesture nav gear options -->
-    <!-- [CHAR LIMIT=60] -->
     <string name="show_gestures_navbar_switch_text">启用以显示导航栏和药丸的手势</string>
-    <!-- Search keywords -->
     <string name="keywords_notification_log">通知, 通知日志, 通知记录</string>
-    <!-- Allow VPN to Hotspot clients -->
     <string name="tethering_allow_vpn_upstreams_title">允许客户端使用 VPN</string>
     <string name="tethering_allow_vpn_upstreams_summary">允许热点客户端使用此设备的 VPN 连接</string>
-    <!-- Title for connected TWS device group [CHAR LIMIT=none]-->
     <string name="connected_tws_device_saved_title">已保存的耳机</string>
 </resources>

@@ -15,82 +15,60 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Format string for fingerprint location message -->
     <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="tablet">Vyhledejte snímač otisku prstů na <xliff:g id="sensor_location">%1$s</xliff:g> vašeho tabletu.</string>
     <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="device">Vyhledejte snímač otisku prstů na <xliff:g id="sensor_location">%1$s</xliff:g> vašeho zařízení.</string>
     <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="default">Vyhledejte snímač otisku prstů <xliff:g id="sensor_location">%1$s</xliff:g> na telefonu.</string>
-    <!-- Fingerprint sensor locations -->
     <string name="security_settings_fingerprint_sensor_location_back">vzadu</string>
     <string name="security_settings_fingerprint_sensor_location_front">vpředu</string>
     <string name="security_settings_fingerprint_sensor_location_left">ne levé straně</string>
     <string name="security_settings_fingerprint_sensor_location_right">na pravé straně</string>
-    <!-- SELinux status -->
     <string name="selinux_status">Stav SELinux</string>
     <string name="selinux_status_disabled">Zakázáno</string>
     <string name="selinux_status_permissive">Mírný</string>
     <string name="selinux_status_enforcing">Vynucený</string>
-    <!-- Sound: Title for the option defining the phone ringtone for slot1 on Muilti SIM device. [CHAR LIMIT=50] -->
     <string name="ringtone1_title">Vyzváněcí tón telefonu - SIM 1</string>
-    <!-- Sound: Title for the option defining the phone ringtone for slot2 on Muilti SIM device. [CHAR LIMIT=50] -->
     <string name="ringtone2_title">Vyzváněcí tón telefonu - SIM 2</string>
-    <!-- Battery stats reset -->
     <string name="battery_stats_reset">Vynulovat statistiky</string>
     <string name="battery_stats_message">Chystáte se obnovit historii statistiky baterie</string>
     <string name="aicp_version_title">AICP Experience</string>
     <string name="aicp_version_summary">AICP 10 Edition - 15.0</string>
     <string name="aicpextras_title">AICP Extras</string>
     <string name="aicpextras_summary">Přizpůsobení ROM</string>
-    <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Přejetím pořídit snímek obrazovky</string>
     <string name="three_finger_gesture_summary">Přejeďte po displeji třemi prsty pro vytvoření snímku obrazovky</string>
-    <!-- Strings for suggestion card's close button [CHAR LIMIT=20] -->
     <string name="suggestion_button_close">Zavřít</string>
-    <!-- Android debugging over WiFi -->
     <string name="adb_over_network">ADB přes síť</string>
     <string name="adb_over_network_summary">Povolit ladění přes síťové připojení (např. Wi-Fi nebo síť USB). Toto nastavení bude obnoveno po restartu</string>
-    <!-- Warning for Adb over Network -->
     <string name="adb_over_network_warning">UPOZORNĚNÍ: Pokud je povoleno ADB přes síťové připojení, zařízení je otevřené pro pokusy o průniky na všech připojených sítích, včetně GSM datové sítě!\n\nPoužijte tuto vlastnost pouze pokud jste připojeni k důvěryhodné síti.\n\nOpravdu chcete povolit tuto funkci?</string>
     <string name="adb_over_network_warning_title">Povolit ADB přes síť?</string>
-    <!-- Dashboard -->
     <string name="dashboard_conditions_title">Podmínky Hlavního panelu</string>
     <string name="summary_dashboard_conditions_enabled">Podmínky Hlavního panelu jsou povoleny</string>
     <string name="summary_dashboard_conditions_disabled">Podmínky Hlavního panelu jsou zakázány</string>
     <string name="dashboard_suggestions_title">Návrhy Hlavního panelu</string>
     <string name="summary_dashboard_suggestions_enabled">Návrhy Hlavního panelu jsou povoleny</string>
     <string name="summary_dashboard_suggestions_disabled">Návrhy Hlavního panelu jsou zakázány</string>
-    <!-- Custom light color -->
     <string name="custom_light_title">Barva kontrolky</string>
     <string name="custom_light_on_time_title">Doba zapnutí kontrolky LED během pulsování (ms)</string>
     <string name="custom_light_off_time_title">Doba vypnutí kontrolky LED během pulsování (ms)</string>
     <string name="show_light_on_zen_title">Blikat během režimu Nerušit</string>
-    <!-- Battery temperature -->
     <string name="battery_temp">Teplota baterie</string>
-    <!-- App details: open play store link if app is user installed -->
     <string name="app_play_store">Obchod Play</string>
-    <!-- Media gestures -->
     <string name="prevent_ringing_option_mute_no_media">Ztlumit, žádná média</string>
     <string name="prevent_ringing_option_mute_no_media_summary">Zap. (ztlumit, žádná média)</string>
-    <!-- Android debugging as root -->
     <string name="adb_enable_root">Root android ladění</string>
     <string name="adb_enable_summary_root">Povolit android ladění jako root</string>
-    <!-- Pocket judge -->
     <string name="pocket_judge_title">Detekce uložení v kapse</string>
     <string name="pocket_judge_summary">Blokovat obrazovku a hardwarová tlačítka, když je zařízení v kapse</string>
     <string name="fp_swipe_to_dismiss_notifications_title">Pro odmítnutí oznámení přejeďte prstem vlevo nebo vpravo přes snímač otisků prstů</string>
     <string name="fp_swipe_to_dismiss_notifications_summary">Chcete-li zrušit oznámení, přejeďte prstem vlevo nebo vpravo pře snímač otisků prstů na zadní straně telefonu.</string>
     <string name="pulse_on_new_tracks_title">Hudební oznámení na Ambientním displeji</string>
     <string name="pulse_on_new_tracks_summary">Zobrazit Ambientní displej po spuštění nové hudební skladby</string>
-    <!-- Increasing ring tone volume -->
     <string name="increasing_ring_volume_option_title">Narůstající hlasitost vyzvánění</string>
     <string name="increasing_ring_min_volume_title">Počáteční hlasitost</string>
     <string name="increasing_ring_ramp_up_time_title">Doba zesilování</string>
-    <!-- Volume link notification -->
     <string name="volume_link_notification_title">Spojit hlasitost vyzvánění &amp; oznámení</string>
-    <!-- [CHAR LIMIT=50] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to be always on -->
     <string name="ambient_display_screen_summary_always_on">Vždy zapnuto / zvýšené používání baterie</string>
-    <!-- [CHAR LIMIT=30] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to show when new notifications come in. -->
     <string name="ambient_display_screen_summary_notifications">Nová oznámení</string>
-    <!-- Display : Rotation -->
     <string name="display_rotation_title">Možnosti automatického otáčení</string>
     <string name="display_rotation_summary">Konfigurace funkcí automatického otáčení obrazovky</string>
     <string name="display_rotation_disabled">Zakázáno</string>
@@ -100,15 +78,12 @@
     <string name="display_rotation_90_title">90°</string>
     <string name="display_rotation_180_title">180°</string>
     <string name="display_rotation_270_title">270°</string>
-    <!-- Navigation settings -->
     <string name="back_height_low_label">Celá</string>
     <string name="back_height_high_label">Dolní</string>
     <string name="back_options_dialog_title">Možnosti</string>
     <string name="back_height_message">Část výšky obrazovky použité jako dotyková oblast pro gesto Zpět.</string>
-    <!-- Back gesture animation -->
     <string name="back_gesture_arrow_message">Zobrazit animovanou šipku pro gesto Zpět.</string>
     <string name="back_gesture_haptic">Povolit efekt krátkého zavibrování při použití gesta „Zpět“</string>
-    <!-- Manual provisioning support -->
     <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g> je <xliff:g id="status" example="disabled">%2$s</xliff:g></string>
     <string name="sim_disabled">odpojena</string>
     <string name="sim_missing">chybějící nebo vadná</string>
@@ -122,29 +97,24 @@
     <string name="sub_activate_failed">Aktivace selhala.</string>
     <string name="sub_deactivate_success">SIM karta deaktivována.</string>
     <string name="sub_deactivate_failed">Deaktivace selhala.</string>
-    <!-- Night Display API strings -->
     <string name="unknown_night_light_time">Není známo - stiskněte pro aktualizaci</string>
     <string name="night_display_location_text">\n\nPlán od západu do východu slunce vyžaduje povolené lokalizační služby k získání správného času pro vaší polohu.</string>
-    <!-- Notification log -->
     <string name="notification_log_summary">Zobrazit protokol historie oznámení</string>
-    <!-- Back gesture block ime -->
     <string name="back_block_ime_title">Zakázat výšku virtuální klávesnice jako dotykovou oblast pro gesto Zpět</string>
-    <!-- Home handle width -->
     <string name="home_handle_sizer_title">Velikost panelu pro gesta</string>
     <string name="home_handle_low_label">Výchozí</string>
     <string name="home_handle_high_label">Dvojitá</string>
-    <!-- Per-app data restrictions -->
+    <string name="data_usage_app_restrict_all">Povolit přístup k síti</string>
+    <string name="data_usage_app_restrict_all_summary">Povolit využití sítě</string>
     <string name="data_usage_app_restrict_data">Mobilní data</string>
     <string name="data_usage_app_restrict_data_summary">Povolit používání mobilních dat</string>
     <string name="data_usage_app_restrict_vpn">VPN data</string>
     <string name="data_usage_app_restrict_vpn_summary">Povolit používání VPN dat</string>
     <string name="data_usage_app_restrict_wifi">Wi\u2011Fi data</string>
     <string name="data_usage_app_restrict_wifi_summary">Povolit používání Wi\u2011Fi dat</string>
-    <!-- Touch sensitivity -->
     <string name="touch_sensitivity_summary">Vylepšuje dotyk při použití ochranného skla/fólie</string>
     <string name="touch_sensitivity_title">Zvýšení citlivosti dotyku</string>
     <string name="keywords_touch_sensitivity">dotyk, citlivost, citlivý, ochrana obrazovky, film, reagující a reakce</string>
-    <!-- Adaptive Playback -->
     <string name="adaptive_playback_screen_title">Adaptivní přehrávání</string>
     <string name="adaptive_playback_timeout_title">Použít tento časový limit</string>
     <string name="adaptive_playback_timeout_none_summary">Vyp.</string>
@@ -158,7 +128,6 @@
     <string name="adaptive_playback_timeout_5_min_summary">Zap. (5 minuty)</string>
     <string name="adaptive_playback_timeout_10_min">10 minut</string>
     <string name="adaptive_playback_timeout_10_min_summary">Zap. (10 minut)</string>
-    <!-- LiveDisplay -->
     <string name="live_display_summary">Optimalizovat obrazovku podle denní doby a okolních podmínek pro lepší čitelnost a snížení namáhání očí</string>
     <string name="live_display_mode">Režim obrazovky</string>
     <string name="live_display_color_temperature_title">Teplota barev</string>
@@ -202,16 +171,13 @@
     <string name="color_red_title">Červená</string>
     <string name="color_green_title">Zelená</string>
     <string name="color_blue_title">Modrá</string>
-    <!-- LiveDisplay : Picture Adjustment -->
     <string name="picture_adjustment_title">Přizpůsobení obrazu</string>
     <string name="picture_adjustment_summary">Přizpůsobit odstín, sytost, intenzitu a kontrast</string>
     <string name="adj_hue_title">Odstín</string>
     <string name="adj_saturation_title">Sytost</string>
     <string name="adj_intensity_title">Intenzita</string>
     <string name="adj_contrast_title">Kontrast</string>
-    <!-- String for removal of sensitive info on about, depending on tap -->
     <string name="device_info_protected_single_press">Klepnutím zobrazíte informace</string>
-    <!-- Volume Steps -->
     <string name="volume_steps_title">Kroky hlasitosti</string>
     <string name="volume_steps_alarm_title">Kroky hlasitosti: Budík</string>
     <string name="volume_steps_dtmf_title">Kroky hlasitosti: DTMF</string>
@@ -227,14 +193,11 @@
     <string name="volume_steps_15">15</string>
     <string name="volume_steps_7">7</string>
     <string name="volume_steps_5">5</string>
-    <!-- Gesture nav gear options -->
-    <!-- [CHAR LIMIT=60] -->
     <string name="show_gestures_navbar_switch_text">Umožní zobrazovat gesta na navigačním panelu a pilulku</string>
-    <!-- Search keywords -->
     <string name="keywords_notification_log">oznámení, protokol oznámení</string>
-    <!-- Allow VPN to Hotspot clients -->
     <string name="tethering_allow_vpn_upstreams_title">Umožnit klientům používat VPN</string>
     <string name="tethering_allow_vpn_upstreams_summary">Povolit klientům hotspotu používat připojení VPN tohoto zařízení pro odchozí připojení</string>
-    <!-- Title for connected TWS device group [CHAR LIMIT=none]-->
     <string name="connected_tws_device_saved_title">Uložená sluchátka</string>
+    <string name="auto_brightness_min_title">Minimální úroveň jasu</string>
+    <string name="auto_brightness_description_new">Jas obrazovky se automaticky přizpůsobí aktivitám a prostředí, ve kterém se nacházíte.\n\nMůžete si upravit minimální úroveň jasu, která bude použita.</string>
 </resources>

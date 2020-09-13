@@ -15,80 +15,60 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Format string for fingerprint location message -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="tablet">Táblagépén itt található az ujjlenyomat-érzékelő: <xliff:g id="sensor_location">%1$s</xliff:g>.</string>
+    <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="device">Készülékén itt található az ujjlenyomat-érzékelő: <xliff:g id="sensor_location">%1$s</xliff:g>.</string>
     <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="default">Az ujjlenyomat-olvasót megtalálhatja a telefonja <xliff:g id="sensor_location">%1$s</xliff:g>.</string>
-    <!-- Fingerprint sensor locations -->
     <string name="security_settings_fingerprint_sensor_location_back">hátoldalán</string>
     <string name="security_settings_fingerprint_sensor_location_front">előlapján</string>
     <string name="security_settings_fingerprint_sensor_location_left">bal oldalán</string>
     <string name="security_settings_fingerprint_sensor_location_right">jobb oldalán</string>
-    <!-- SELinux status -->
     <string name="selinux_status">A SELinux állapota</string>
     <string name="selinux_status_disabled">Letiltva</string>
     <string name="selinux_status_permissive">Megengedve</string>
     <string name="selinux_status_enforcing">Kényszerítve</string>
-    <!-- Sound: Title for the option defining the phone ringtone for slot1 on Muilti SIM device. [CHAR LIMIT=50] -->
     <string name="ringtone1_title">Telefon-csengőhang a SIM 1-hez</string>
-    <!-- Sound: Title for the option defining the phone ringtone for slot2 on Muilti SIM device. [CHAR LIMIT=50] -->
     <string name="ringtone2_title">Telefon-csengőhang a SIM 2-höz</string>
-    <!-- Battery stats reset -->
     <string name="battery_stats_reset">Statisztikák törlése</string>
     <string name="battery_stats_message">Akkumulátorhasználati statisztika törlésre kerül</string>
     <string name="aicp_version_title">AICP Élmény</string>
     <string name="aicp_version_summary">AICP 10 Edition - 15.0</string>
     <string name="aicpextras_title">AICP Extrák</string>
     <string name="aicpextras_summary">ROM testreszabás</string>
-    <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Képernyőkép csúsztatással</string>
     <string name="three_finger_gesture_summary">Csúsztasson egyszerre három ujjal a képernyőmentéshez</string>
-    <!-- Strings for suggestion card's close button [CHAR LIMIT=20] -->
     <string name="suggestion_button_close">Bezárás</string>
-    <!-- Android debugging over WiFi -->
     <string name="adb_over_network">ADB a hálózaton keresztül</string>
     <string name="adb_over_network_summary">TCP/IP hibakeresés hálózati eszközön keresztüli engedélyezése (Wi-Fi, USB hálózatok). Újraindítás után alaphelyzetbe áll vissza</string>
-    <!-- Warning for Adb over Network -->
     <string name="adb_over_network_warning">FIGYELEM: Ha a hálózati ADB enegdélyezve van, a telefon védtelen minden hálózati behatolás ellen, beleértve a GSM hálózatot is!\n\nCsak akkor használja, ha megbízható hálózatra csatlakozik.\n\nBiztosan engedélyezni kívánja ezt a funkciót?</string>
     <string name="adb_over_network_warning_title">Lehetővé teszi az ADB-t a hálózaton keresztül?</string>
-    <!-- Dashboard -->
     <string name="dashboard_conditions_title">Vezérlőpult-szabályzás</string>
     <string name="summary_dashboard_conditions_enabled">A Vezérlőpult-szabályzás engedélyezve</string>
     <string name="summary_dashboard_conditions_disabled">A Vezérlőpult-szabályzás letiltva</string>
     <string name="dashboard_suggestions_title">Vezérlőpult-javaslatok</string>
     <string name="summary_dashboard_suggestions_enabled">A Vezérlőpult-javaslatok engedélyezve</string>
     <string name="summary_dashboard_suggestions_disabled">A Vezérlőpult-javaslatok letiltva</string>
-    <!-- Custom light color -->
     <string name="custom_light_title">Egyéni fény</string>
     <string name="custom_light_on_time_title">A fény bekapcsolt állapotának ideje pulzálás közben (ms)</string>
     <string name="custom_light_off_time_title">A fény kikapcsolt állapotának ideje pulzálás közben (ms)\"</string>
     <string name="show_light_on_zen_title">Villogás a Ne zavarjanak (DND) módban</string>
-    <!-- Battery temperature -->
     <string name="battery_temp">Akkuhőmérséklet</string>
-    <!-- App details: open play store link if app is user installed -->
     <string name="app_play_store">Google Play Áruház</string>
-    <!-- Media gestures -->
     <string name="prevent_ringing_option_mute_no_media">Némítás, nincs média</string>
     <string name="prevent_ringing_option_mute_no_media_summary">Be (némítás, nincs média)</string>
-    <!-- Android debugging as root -->
     <string name="adb_enable_root">Android (root) hibakeresés</string>
     <string name="adb_enable_summary_root">Hibakeresés engedélyezése mint root</string>
-    <!-- Pocket judge -->
     <string name="pocket_judge_title">Zseb érzékelése</string>
     <string name="pocket_judge_summary">A képernyő és a gombok általi véletlen bevitelek blokkolása, ha a készülék a zsebben van</string>
     <string name="fp_swipe_to_dismiss_notifications_title">Ujjlenyomat csúsztatása jobbra vagy balra az értesítések eltüntetéséhez</string>
     <string name="fp_swipe_to_dismiss_notifications_summary">Az értesítések eltüntetéséhez csúsztasson jobbra vagy balra a telefon hátulján az ujjlenyomatolvasó-szenzoron.</string>
     <string name="pulse_on_new_tracks_title">Ambient Music-jelzőszalag</string>
     <string name="pulse_on_new_tracks_summary">A Környezeti kijelző megjelenítése, ha új zeneszám kerül lejátszásra</string>
-    <!-- Increasing ring tone volume -->
     <string name="increasing_ring_volume_option_title">Emelkedő csengőhang</string>
     <string name="increasing_ring_min_volume_title">Kezdeti hangerő</string>
     <string name="increasing_ring_ramp_up_time_title">Felfutási idő</string>
-    <!-- Volume link notification -->
     <string name="volume_link_notification_title">Csengő és értesítési hangok összekapcsolása</string>
-    <!-- [CHAR LIMIT=50] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to be always on -->
     <string name="ambient_display_screen_summary_always_on">Mindig bekapcsolva / Megnöveli az akkumulátorhasználatot</string>
-    <!-- [CHAR LIMIT=30] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to show when new notifications come in. -->
     <string name="ambient_display_screen_summary_notifications">Új értesítéseknél</string>
-    <!-- Display : Rotation -->
     <string name="display_rotation_title">Az Automatikus elforgatás beállításai</string>
     <string name="display_rotation_summary">Konfigurálhatók a forgatási szabályok</string>
     <string name="display_rotation_disabled">Letiltva</string>
@@ -98,15 +78,12 @@
     <string name="display_rotation_90_title">90° fok</string>
     <string name="display_rotation_180_title">180° fok</string>
     <string name="display_rotation_270_title">270° fok</string>
-    <!-- Navigation settings -->
     <string name="back_height_low_label">Teljes</string>
     <string name="back_height_high_label">Alul</string>
     <string name="back_options_dialog_title">Beállítások</string>
     <string name="back_height_message">A \'Vissza\'-mozdulat felismeréséhez használt képernyőrész.</string>
-    <!-- Back gesture animation -->
     <string name="back_gesture_arrow_message">Mutasson egy animált nyilat a \'Vissza\'-mozdulatvezérléshez.</string>
     <string name="back_gesture_haptic">A \'Vissza mozdulatvezérlésnél\' engedélyezi a rezgő visszajelzést</string>
-    <!-- Manual provisioning support -->
     <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g> állapota <xliff:g id="status" example="disabled">%2$s</xliff:g></string>
     <string name="sim_disabled">letiltott</string>
     <string name="sim_missing">hiányzik vagy hibás</string>
@@ -120,29 +97,22 @@
     <string name="sub_activate_failed">Az aktiválás meghiúsult.</string>
     <string name="sub_deactivate_success">SIM letiltva.</string>
     <string name="sub_deactivate_failed">A deaktiválás meghiúsult.</string>
-    <!-- Night Display API strings -->
     <string name="unknown_night_light_time">Ismeretlen - nyomja meg a frissítéshez</string>
     <string name="night_display_location_text">\n\nA naplemente és a napnyugta ütemezéséhez kötelező a helymeghatározási jogosultság megadása, mert csak így kaphat pontos időbeállításokat.</string>
-    <!-- Notification log -->
     <string name="notification_log_summary">Értesítéselőzmény-napló megjelenítése</string>
-    <!-- Back gesture block ime -->
     <string name="back_block_ime_title">Tiltsa le a virtuális billentyűzet magasságát, hogy a vissza mozdulatvezérlés területe érvényesülni tudjon</string>
-    <!-- Home handle width -->
     <string name="home_handle_sizer_title">A mozdulatvezérlési sáv mérete</string>
     <string name="home_handle_low_label">Alapértelmezett</string>
     <string name="home_handle_high_label">Kétszeres</string>
-    <!-- Per-app data restrictions -->
     <string name="data_usage_app_restrict_data">Mobiladat-kapcsolat</string>
     <string name="data_usage_app_restrict_data_summary">A mobiladat-használat engedélyezése</string>
     <string name="data_usage_app_restrict_vpn">VPN-adatok</string>
     <string name="data_usage_app_restrict_vpn_summary">A VPN-adatok használatának engedélyezése</string>
     <string name="data_usage_app_restrict_wifi">Wi\u2011Fi adathasználat</string>
     <string name="data_usage_app_restrict_wifi_summary">A Wi-Fi-adathasználat engedélyezése</string>
-    <!-- Touch sensitivity -->
     <string name="touch_sensitivity_summary">Érintésérzékelés javítása képernyővédő fólia használatakor</string>
     <string name="touch_sensitivity_title">Érintési érzékenység növelése</string>
     <string name="keywords_touch_sensitivity">érintés, érzékenység, érzékeny, képernyővédő, fólia, reszponzív, fogékonyság</string>
-    <!-- Adaptive Playback -->
     <string name="adaptive_playback_screen_title">Alkalmazkodó lejátszás</string>
     <string name="adaptive_playback_timeout_title">A használt időtúllépés mértéke</string>
     <string name="adaptive_playback_timeout_none_summary">Kikapcsolva</string>
@@ -156,7 +126,6 @@
     <string name="adaptive_playback_timeout_5_min_summary">Be (5 perc)</string>
     <string name="adaptive_playback_timeout_10_min">10 perc</string>
     <string name="adaptive_playback_timeout_10_min_summary">Be (10 perc)</string>
-    <!-- LiveDisplay -->
     <string name="live_display_summary">A napszaknak és a fényviszonyoknak megfelelően optimalizálja a képernyőt, javítva az olvashatóságot és csökkentve a szemek terhelését</string>
     <string name="live_display_mode">Megjelenítési mód</string>
     <string name="live_display_color_temperature_title">Színhőmérséklet</string>
@@ -200,16 +169,13 @@
     <string name="color_red_title">Vörös</string>
     <string name="color_green_title">Zöld</string>
     <string name="color_blue_title">Kék</string>
-    <!-- LiveDisplay : Picture Adjustment -->
     <string name="picture_adjustment_title">Képkorrekciók</string>
     <string name="picture_adjustment_summary">Árnyalat, telítettség, intenzitás és kontraszt beállítása</string>
     <string name="adj_hue_title">Színárnyalat</string>
     <string name="adj_saturation_title">Telítettség</string>
     <string name="adj_intensity_title">Intenzitás</string>
     <string name="adj_contrast_title">Kontraszt</string>
-    <!-- String for removal of sensitive info on about, depending on tap -->
     <string name="device_info_protected_single_press">Érintse meg az információ megjelenítéséhez</string>
-    <!-- Volume Steps -->
     <string name="volume_steps_title">Hangerőléptetés</string>
     <string name="volume_steps_alarm_title">Hangerőléptetés: Ébresztő</string>
     <string name="volume_steps_dtmf_title">Hangerőléptetés: DTMF</string>
@@ -225,10 +191,9 @@
     <string name="volume_steps_15">15</string>
     <string name="volume_steps_7">7</string>
     <string name="volume_steps_5">5</string>
-    <!-- Gesture nav gear options -->
-    <!-- [CHAR LIMIT=60] -->
     <string name="show_gestures_navbar_switch_text">A gesztusok navigációssávjának megjelenítéséhez engedélyezze</string>
-    <!-- Search keywords -->
-    <!-- Allow VPN to Hotspot clients -->
-    <!-- Title for connected TWS device group [CHAR LIMIT=none]-->
+    <string name="keywords_notification_log">értesítések, értesítési napló</string>
+    <string name="tethering_allow_vpn_upstreams_title">Engedélyezi a klienseknek a VPN-használatot</string>
+    <string name="tethering_allow_vpn_upstreams_summary">Engedélyezze a hotspot-klienseknek, hogy a készülék VPN-kapcsolatait felfelé csatlakoztathassák</string>
+    <string name="connected_tws_device_saved_title">Mentett Earbuds fülhallgatók</string>
 </resources>

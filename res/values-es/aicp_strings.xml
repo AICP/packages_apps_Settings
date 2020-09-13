@@ -15,82 +15,60 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Format string for fingerprint location message -->
     <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="tablet">Localice el sensor de huella dactilar en <xliff:g id="sensor_location">%1$s</xliff:g> de su tablet.</string>
     <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="device">Localice el sensor de huella dactilar en <xliff:g id="sensor_location">%1$s</xliff:g> de su dispositivo.</string>
     <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="default">Localiza el sensor de huella dactilar <xliff:g id="sensor_location">%1$s</xliff:g> del teléfono.</string>
-    <!-- Fingerprint sensor locations -->
     <string name="security_settings_fingerprint_sensor_location_back">detrás</string>
     <string name="security_settings_fingerprint_sensor_location_front">delante</string>
     <string name="security_settings_fingerprint_sensor_location_left">lado Izquierdo</string>
     <string name="security_settings_fingerprint_sensor_location_right">lado derecho</string>
-    <!-- SELinux status -->
     <string name="selinux_status">Estado de SELinux</string>
     <string name="selinux_status_disabled">Deshabilitado</string>
     <string name="selinux_status_permissive">Permisivo</string>
     <string name="selinux_status_enforcing">Obligatorio</string>
-    <!-- Sound: Title for the option defining the phone ringtone for slot1 on Muilti SIM device. [CHAR LIMIT=50] -->
     <string name="ringtone1_title">Tono de llamada - SIM 1</string>
-    <!-- Sound: Title for the option defining the phone ringtone for slot2 on Muilti SIM device. [CHAR LIMIT=50] -->
     <string name="ringtone2_title">Tono de llamada - SIM 2</string>
-    <!-- Battery stats reset -->
     <string name="battery_stats_reset">Resetear estadísticas</string>
     <string name="battery_stats_message">Las estadísticas de la batería van a restablecerse</string>
     <string name="aicp_version_title">Experiencia AICP</string>
     <string name="aicp_version_summary">Aicp 10 Versión - 15.0</string>
     <string name="aicpextras_title">AICP Extras</string>
     <string name="aicpextras_summary">Personalización</string>
-    <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Deslizar para capturar pantalla</string>
     <string name="three_finger_gesture_summary">Deslizar tres dedos para hacer captura de pantalla</string>
-    <!-- Strings for suggestion card's close button [CHAR LIMIT=20] -->
     <string name="suggestion_button_close">Cerrar</string>
-    <!-- Android debugging over WiFi -->
     <string name="adb_over_network">ADB sobre red</string>
     <string name="adb_over_network_summary">Activar la depuración TCP/IP sobre las interfaces de red (Wi-Fi, redes USB). Esta configuración se restablece al reiniciar el dispositivo</string>
-    <!-- Warning for Adb over Network -->
     <string name="adb_over_network_warning">AVISO: ¡Cuando ADB sobre red esté activo, el dispositivo estará abierto a intrusiones en todas las redes conectadas, incluida la red de datos GSM!\n\nUsa solo esta característica cuando estés conectado a redes de confianza.\n\n¿Deseas realmente activar esta función?</string>
     <string name="adb_over_network_warning_title">Permitir ADB sobre red?</string>
-    <!-- Dashboard -->
     <string name="dashboard_conditions_title">Condiciones en la pantalla de ajustes</string>
     <string name="summary_dashboard_conditions_enabled">Condiciones habilitadas en la pantalla de ajustes</string>
     <string name="summary_dashboard_conditions_disabled">Condiciones deshabilitadas en la pantalla de ajustes</string>
     <string name="dashboard_suggestions_title">Sugerencias en la pantalla de ajustes</string>
     <string name="summary_dashboard_suggestions_enabled">Sugerencias habilitadas en la pantalla de ajustes</string>
     <string name="summary_dashboard_suggestions_disabled">Sugerencias deshabilitadas en la pantalla de ajustes</string>
-    <!-- Custom light color -->
     <string name="custom_light_title">Color del Led</string>
     <string name="custom_light_on_time_title">Duración del parpadeo del led encendido (ms)</string>
     <string name="custom_light_off_time_title">Duración del parpadeo del led apagado (ms)\"</string>
     <string name="show_light_on_zen_title">Parpadear durante No Molestar</string>
-    <!-- Battery temperature -->
     <string name="battery_temp">Temperatura de la batería</string>
-    <!-- App details: open play store link if app is user installed -->
     <string name="app_play_store">Google Play</string>
-    <!-- Media gestures -->
     <string name="prevent_ringing_option_mute_no_media">Silenciado, sin sonido</string>
     <string name="prevent_ringing_option_mute_no_media_summary">Habilitado (silenciado, sin sonido)</string>
-    <!-- Android debugging as root -->
     <string name="adb_enable_root">Depuración Android Root</string>
     <string name="adb_enable_summary_root">Habilitar depuración Android como root</string>
-    <!-- Pocket judge -->
     <string name="pocket_judge_title">Detección de bolsillo</string>
     <string name="pocket_judge_summary">Bloquear pantalla y botones cuando el dispositivo está en el bolsillo</string>
     <string name="fp_swipe_to_dismiss_notifications_title">Deslizar el dedo sobre el lector de huellas a la derecha para desechar notificaciones</string>
     <string name="fp_swipe_to_dismiss_notifications_summary">Para desechar las notificaciones, deslice el dedo a la izquierda o derecha en el lector de huellas de su teléfono.</string>
     <string name="pulse_on_new_tracks_title">Música en pantalla ambiente</string>
     <string name="pulse_on_new_tracks_summary">Mostrar pantalla ambiente cuando se reproduce una pista de música nueva</string>
-    <!-- Increasing ring tone volume -->
     <string name="increasing_ring_volume_option_title">Volumen de tono ascendente</string>
     <string name="increasing_ring_min_volume_title">Volumen inicial</string>
     <string name="increasing_ring_ramp_up_time_title">Tiempo de incremento</string>
-    <!-- Volume link notification -->
     <string name="volume_link_notification_title">Vincular volumen de tono y notificaciones</string>
-    <!-- [CHAR LIMIT=50] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to be always on -->
     <string name="ambient_display_screen_summary_always_on">Siempre encendido / Incremento del uso de batería</string>
-    <!-- [CHAR LIMIT=30] Summary of the preference that opens the Ambient display settings screen, when Ambient display is set to show when new notifications come in. -->
     <string name="ambient_display_screen_summary_notifications">Nuevas notificaciones</string>
-    <!-- Display : Rotation -->
     <string name="display_rotation_title">Opciones de rotación automática</string>
     <string name="display_rotation_summary">Configurar funciones de rotación automática de pantalla</string>
     <string name="display_rotation_disabled">Deshabilitado</string>
@@ -100,15 +78,12 @@
     <string name="display_rotation_90_title">90 grados</string>
     <string name="display_rotation_180_title">180 grados</string>
     <string name="display_rotation_270_title">270 grados</string>
-    <!-- Navigation settings -->
     <string name="back_height_low_label">Completa</string>
     <string name="back_height_high_label">Debajo</string>
     <string name="back_options_dialog_title">Opciones</string>
     <string name="back_height_message">Parte de la pantalla habilitada para el gesto de volver atrás.</string>
-    <!-- Back gesture animation -->
     <string name="back_gesture_arrow_message">Mostrar una flecha animada para el gesto atrás.</string>
     <string name="back_gesture_haptic">Activar efecto vibración en el gesto atrás</string>
-    <!-- Manual provisioning support -->
     <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g> es <xliff:g id="status" example="disabled">%2$s</xliff:g></string>
     <string name="sim_disabled">deshabilitado</string>
     <string name="sim_missing">ausente o defectuosa</string>
@@ -122,29 +97,24 @@
     <string name="sub_activate_failed">Error al activar.</string>
     <string name="sub_deactivate_success">SIM desactivada.</string>
     <string name="sub_deactivate_failed">Error al desactivar.</string>
-    <!-- Night Display API strings -->
     <string name="unknown_night_light_time">Desconocido - toque para actualizar</string>
     <string name="night_display_location_text">\n\nLa programación de puesta del sol y amanecer necesita que los servicios de ubicación estén habilitados y así poder obtener los horarios correctos.</string>
-    <!-- Notification log -->
     <string name="notification_log_summary">Mostrar historial de notificaciones</string>
-    <!-- Back gesture block ime -->
     <string name="back_block_ime_title">Deshabilita la altura del teclado virtual como zona táctil para el gesto atrás</string>
-    <!-- Home handle width -->
     <string name="home_handle_sizer_title">Tamaño de la barra de gestos</string>
     <string name="home_handle_low_label">Predeterminado</string>
     <string name="home_handle_high_label">Doble</string>
-    <!-- Per-app data restrictions -->
+    <string name="data_usage_app_restrict_all">Permitir acceso a la red</string>
+    <string name="data_usage_app_restrict_all_summary">Habilitar el uso de red</string>
     <string name="data_usage_app_restrict_data">Datos móviles</string>
     <string name="data_usage_app_restrict_data_summary">Habilitar el uso de datos móviles</string>
     <string name="data_usage_app_restrict_vpn">Datos VPN</string>
     <string name="data_usage_app_restrict_vpn_summary">Habilitar el uso de datos VPN</string>
     <string name="data_usage_app_restrict_wifi">Datos Wi\u2011Fi</string>
     <string name="data_usage_app_restrict_wifi_summary">Habilitar el uso de datos Wi\u2011Fi</string>
-    <!-- Touch sensitivity -->
     <string name="touch_sensitivity_summary">Aumenta la sensibilidad de la pantalla al usar protectores de pantalla</string>
     <string name="touch_sensitivity_title">Aumentar la sensibilidad de la pantalla</string>
     <string name="keywords_touch_sensitivity">táctil, sensibilidad, sensible, protector de pantalla, película, sensibilidad</string>
-    <!-- Adaptive Playback -->
     <string name="adaptive_playback_screen_title">Reproducción adaptativa</string>
     <string name="adaptive_playback_timeout_title">Usar un tiempo de espera de</string>
     <string name="adaptive_playback_timeout_none_summary">Desactivado</string>
@@ -158,7 +128,6 @@
     <string name="adaptive_playback_timeout_5_min_summary">Activado (5 minutos)</string>
     <string name="adaptive_playback_timeout_10_min">10 minutos</string>
     <string name="adaptive_playback_timeout_10_min_summary">Activado (10 minutos)</string>
-    <!-- LiveDisplay -->
     <string name="live_display_summary">Optimizar su pantalla basada en la hora del día y las condiciones ambientales para mejorar la lectura y reducir la fatiga visual</string>
     <string name="live_display_mode">Modo de pantalla</string>
     <string name="live_display_color_temperature_title">Temperatura del color</string>
@@ -202,16 +171,13 @@
     <string name="color_red_title">Rojo</string>
     <string name="color_green_title">Verde</string>
     <string name="color_blue_title">Azul</string>
-    <!-- LiveDisplay : Picture Adjustment -->
     <string name="picture_adjustment_title">Ajuste de imagen</string>
     <string name="picture_adjustment_summary">Ajustar tono, saturación, intensidad y contraste</string>
     <string name="adj_hue_title">Matiz</string>
     <string name="adj_saturation_title">Saturación</string>
     <string name="adj_intensity_title">Intensidad</string>
     <string name="adj_contrast_title">Contraste</string>
-    <!-- String for removal of sensitive info on about, depending on tap -->
     <string name="device_info_protected_single_press">Toca para mostrar información</string>
-    <!-- Volume Steps -->
     <string name="volume_steps_title">Escala de volumen</string>
     <string name="volume_steps_alarm_title">Escala de volumen: Alarma</string>
     <string name="volume_steps_dtmf_title">Escala de volumen: DTMF</string>
@@ -227,14 +193,11 @@
     <string name="volume_steps_15">15</string>
     <string name="volume_steps_7">7</string>
     <string name="volume_steps_5">5</string>
-    <!-- Gesture nav gear options -->
-    <!-- [CHAR LIMIT=60] -->
     <string name="show_gestures_navbar_switch_text">Activar para mostrar gestos de barra de navegación</string>
-    <!-- Search keywords -->
     <string name="keywords_notification_log">notificaciones, registro de notificaciones</string>
-    <!-- Allow VPN to Hotspot clients -->
     <string name="tethering_allow_vpn_upstreams_title">Permitir a los clientes usar VPNs</string>
     <string name="tethering_allow_vpn_upstreams_summary">Permitir a los clientes de punto de acceso usar las conexiones VPN de este dispositivo\u2019 como conectividad principal</string>
-    <!-- Title for connected TWS device group [CHAR LIMIT=none]-->
     <string name="connected_tws_device_saved_title">Auriculares guardados</string>
+    <string name="auto_brightness_min_title">Nivel mínimo de brillo</string>
+    <string name="auto_brightness_description_new">El brillo de la pantalla se ajustará automáticamente a su entorno y actividades. \n\nPuede ajustar el nivel mínimo de brillo que se utilizará.</string>
 </resources>
