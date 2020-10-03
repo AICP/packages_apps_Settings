@@ -204,6 +204,13 @@
             android:title="@string/tap_to_wake"
             android:summary="@string/tap_to_wake_summary"/>
 
+        <Preference
+            android:key="display_cutout_force_fullscreen_settings"
+            android:title="@string/display_cutout_force_fullscreen_title"
+            android:summary="@string/display_cutout_force_fullscreen_summary"
+            android:fragment="com.android.settings.display.DisplayCutoutForceFullscreenSettings"
+            settings:controller="com.android.settings.display.DisplayCutoutForceFullscreenPreferenceController" />
+
         <SwitchPreference
             android:key="pocket_judge"
             android:title="@string/pocket_judge_title"

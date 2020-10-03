@@ -364,4 +364,10 @@
     <string name="hide_from_launcher_summary">
         Prevent this application from showing up in launcher. Requires a launcher restart for changes to take effect.
     </string>
+
+    <!-- Notch: Full screen apps -->
+    <string name="display_cutout_force_fullscreen_title">Full screen apps</string>
+    <string name="display_cutout_force_fullscreen_summary">Force apps to ignore notch space</string>
+    <string name="display_cutout_force_fullscreen_no_apps">No apps</string>
+    <string name="display_cutout_force_fullscreen_restart_app">Please restart the application to apply the changes.</string>
 </resources>
