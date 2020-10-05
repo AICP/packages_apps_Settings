@@ -60,4 +60,9 @@
     <string name="aicp_version_summary">Aicp 10 Edition - 15.0</string>
     <string name="aicpextras_title">AICP Extras</string>
     <string name="aicpextras_summary">ROM customization</string>
+
+    <!-- Misc gesture settings -->
+    <string name="back_gesture_haptic_title">Haptic feedback</string>
+    <string name="back_gesture_haptic_summary">Enable haptic tick effect on back gesture</string>
+
 </resources>
