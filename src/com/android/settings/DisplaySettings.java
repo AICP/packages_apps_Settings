@@ -30,6 +30,7 @@ import com.android.settings.display.LiveDisplayPreferenceController;
 import com.android.settings.display.ScreenSaverPreferenceController;
 import com.android.settings.display.ShowOperatorNamePreferenceController;
 import com.android.settings.display.TapToWakePreferenceController;
+import com.android.settings.display.EnableBlursPreferenceController;
 import com.android.settings.display.ThemePreferenceController;
 import com.android.settings.display.VrDisplayPreferenceController;
 import com.android.settings.search.BaseSearchIndexProvider;
@@ -91,6 +92,7 @@ public class DisplaySettings extends DashboardFragment {
                 new AmbientDisplayConfiguration(context),
                 KEY_AMBIENT_DISPLAY));
         controllers.add(new TapToWakePreferenceController(context));
+        controllers.add(new EnableBlursPreferenceController(context));
         controllers.add(new VrDisplayPreferenceController(context));
         controllers.add(new ShowOperatorNamePreferenceController(context));
         controllers.add(new ThemePreferenceController(context));
