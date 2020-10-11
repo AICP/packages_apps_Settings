@@ -21,6 +21,7 @@ import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.os.FileUtils;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 import android.text.format.Formatter;
@@ -102,7 +103,8 @@ public class StorageVolumePreference extends Preference {
             }
 
             final String used = Formatter.formatFileSize(context, usedBytes);
-            final String total = Formatter.formatFileSize(context, totalBytes);
+            // Round the total value, so that it looks good
+            final String total = Formatter.formatFileSize(context, FileUtils.roundStorageSize(totalBytes));
             setSummary(context.getString(R.string.storage_volume_summary, used, total));
             if (totalBytes > 0) {
                 mUsedPercent = (int) ((usedBytes * 100) / totalBytes);
