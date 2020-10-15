@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "32e53113_cbbc5da9",
+        "filename": "res/xml/display_settings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2020-10-15T15:33:02Z",
+      "side": 1,
+      "message": "Not ready yet.\nhttp://haste.aicp-rom.com/wawukudipa.sql",
+      "range": {
+        "startLine": 124,
+        "startChar": 5,
+        "endLine": 124,
+        "endChar": 52
+      },
+      "revId": "8d10fbfad2c209d9c374307a9de82ce4ce7d1a4e",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": true
+    }
+  ]
+}
