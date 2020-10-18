@@ -104,6 +104,8 @@
     <string name="home_handle_sizer_title">手势栏大小</string>
     <string name="home_handle_low_label">默认</string>
     <string name="home_handle_high_label">两倍</string>
+    <string name="data_usage_app_restrict_all">允许网络访问</string>
+    <string name="data_usage_app_restrict_all_summary">启用网络使用情况统计</string>
     <string name="data_usage_app_restrict_data">移动数据流量</string>
     <string name="data_usage_app_restrict_data_summary">启用移动网络流量使用统计</string>
     <string name="data_usage_app_restrict_vpn">VPN 数据</string>
@@ -196,4 +198,6 @@
     <string name="tethering_allow_vpn_upstreams_title">允许客户端使用 VPN</string>
     <string name="tethering_allow_vpn_upstreams_summary">允许热点客户端使用此设备的 VPN 连接</string>
     <string name="connected_tws_device_saved_title">已保存的耳机</string>
+    <string name="auto_brightness_min_title">最小亮度级别</string>
+    <string name="auto_brightness_description_new">您的屏幕亮度将自动根据您的环境和活动进行调整。\n\n您可以调整将使用的最小亮度等级。</string>
 </resources>

@@ -104,6 +104,8 @@
     <string name="home_handle_sizer_title">Размер полосы жестов</string>
     <string name="home_handle_low_label">По умолчанию</string>
     <string name="home_handle_high_label">Двойной</string>
+    <string name="data_usage_app_restrict_all">Разрешить доступ к сети</string>
+    <string name="data_usage_app_restrict_all_summary">Включить отслеживание использования сети</string>
     <string name="data_usage_app_restrict_data">Мобильные данные</string>
     <string name="data_usage_app_restrict_data_summary">Включить использование мобильных данных</string>
     <string name="data_usage_app_restrict_vpn">Данные VPN</string>
@@ -196,4 +198,6 @@
     <string name="tethering_allow_vpn_upstreams_title">Разрешить клиентам использовать VPN</string>
     <string name="tethering_allow_vpn_upstreams_summary">Разрешить клиентам точки доступа использовать VPN-соединения этого устройства для подключения к сети</string>
     <string name="connected_tws_device_saved_title">Сохраненные наушники</string>
+    <string name="auto_brightness_min_title">Минимальный уровень яркости</string>
+    <string name="auto_brightness_description_new">Яркость экрана будет автоматически регулироваться в зависимости от вашего окружения и действий.\n\nВы можете настроить минимальный уровень яркости, который будет использоваться.</string>
 </resources>
