@@ -18,6 +18,12 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- AıcpExtras -->
+    <string name="aicp_version_title">AICP Experience</string>
+    <string name="aicp_version_summary">Aicp 10 Edition - 15.0</string>
+    <string name="aicpextras_title">AICP Extras</string>
+    <string name="aicpextras_summary">ROM customization</string>
+
     <!-- Android debugging as root -->
     <string name="adb_enable_root">Rooted debugging</string>
     <string name="adb_enable_summary_root">Allow running Android debugging as root</string>
