@@ -419,4 +419,8 @@
     <!-- Hotspot Client Manager -->
     <string name="wifi_tether_client_list_title">Client List</string>
     <string name="wifi_tether_client_list_summary">Manage clients connected to hotspot</string>
+
+    <!-- Immersive Navigation -->
+    <string name="immersive_navigation_title">Immersive navigation</string>
+    <string name="immersive_navigation_summary">Hide gestures pill</string>
 </resources>
