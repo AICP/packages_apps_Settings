@@ -57,6 +57,22 @@
             android:selectable="true"
             settings:textStart="@string/low_label"
             settings:textEnd="@string/high_label"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="gesture_height_category"
+        android:summary="@string/back_height_message"
+        android:persistent="false"
+        android:title="@string/gesture_height_category_title">
+
+        <com.android.settings.widget.LabeledSeekBarPreference
+            android:key="gesture_back_height"
+            android:title="@string/gesture_region"
+            android:max="3"
+            android:selectable="true"
+            settings:textStart="@string/back_height_low_label"
+            settings:textEnd="@string/back_height_high_label"/>
     </PreferenceCategory>
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
