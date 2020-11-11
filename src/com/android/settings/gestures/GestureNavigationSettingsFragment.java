@@ -44,12 +44,16 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
 
     private static final String LEFT_EDGE_SEEKBAR_KEY = "gesture_left_back_sensitivity";
     private static final String RIGHT_EDGE_SEEKBAR_KEY = "gesture_right_back_sensitivity";
+    private static final String BACK_REGION_SEEKBAR_KEY = "gesture_back_height";
 
     private WindowManager mWindowManager;
     private BackGestureIndicatorView mIndicatorView;
 
     private float[] mBackGestureInsetScales;
+    private float[] mBackRegionScales;
     private float mDefaultBackGestureInset;
+    private int mCurrentRightWidth;
+    private int mCurrentLeftWidth;
 
     public GestureNavigationSettingsFragment() {
         super();
@@ -72,9 +76,12 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
                 com.android.internal.R.dimen.config_backGestureInset);
         mBackGestureInsetScales = getFloatArray(res.obtainTypedArray(
                 com.android.internal.R.array.config_backGestureInsetScales));
+        mBackRegionScales = getFloatArray(res.obtainTypedArray(
+                com.android.internal.R.array.config_backRegionScales));
 
         initSeekBarPreference(LEFT_EDGE_SEEKBAR_KEY);
         initSeekBarPreference(RIGHT_EDGE_SEEKBAR_KEY);
+        initSeekBarPreference(BACK_REGION_SEEKBAR_KEY);
     }
 
     @Override
@@ -118,17 +125,28 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
         pref.setContinuousUpdates(true);
         pref.setHapticFeedbackMode(SeekBarPreference.HAPTIC_FEEDBACK_MODE_ON_TICKS);
 
-        final String settingsKey = key == LEFT_EDGE_SEEKBAR_KEY
+        final String settingsKey = key == BACK_REGION_SEEKBAR_KEY
+                ? Settings.Secure.BACK_GESTURE_HEIGHT
+                : (key == LEFT_EDGE_SEEKBAR_KEY
                 ? Settings.Secure.BACK_GESTURE_INSET_SCALE_LEFT
-                : Settings.Secure.BACK_GESTURE_INSET_SCALE_RIGHT;
-        final float initScale = Settings.Secure.getFloat(
+                : Settings.Secure.BACK_GESTURE_INSET_SCALE_RIGHT);
+        float initScale = Settings.Secure.getFloat(
                 getContext().getContentResolver(), settingsKey, 1.0f);
+
+        // needed if we just change the height
+        float currentWidthScale = Settings.Secure.getFloat(
+                getContext().getContentResolver(), Settings.Secure.BACK_GESTURE_INSET_SCALE_RIGHT, 1.0f);
+        mCurrentRightWidth = (int) (mDefaultBackGestureInset * currentWidthScale);
+        currentWidthScale = Settings.Secure.getFloat(
+                getContext().getContentResolver(), Settings.Secure.BACK_GESTURE_INSET_SCALE_LEFT, 1.0f);
+        mCurrentLeftWidth = (int) (mDefaultBackGestureInset * currentWidthScale);
 
         // Find the closest value to initScale
         float minDistance = Float.MAX_VALUE;
         int minDistanceIndex = -1;
-        for (int i = 0; i < mBackGestureInsetScales.length; i++) {
-            float d = Math.abs(mBackGestureInsetScales[i] - initScale);
+        final float[] prefScales = key == BACK_REGION_SEEKBAR_KEY ? mBackRegionScales : mBackGestureInsetScales;
+        for (int i = 0; i < prefScales.length; i++) {
+            float d = Math.abs(prefScales[i] - initScale);
             if (d < minDistance) {
                 minDistance = d;
                 minDistanceIndex = i;
@@ -136,18 +154,46 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
         }
         pref.setProgress(minDistanceIndex);
 
-        pref.setOnPreferenceChangeListener((p, v) -> {
-            final int width = (int) (mDefaultBackGestureInset * mBackGestureInsetScales[(int) v]);
-            mIndicatorView.setIndicatorWidth(width, key == LEFT_EDGE_SEEKBAR_KEY);
-            return true;
-        });
+        if (key != BACK_REGION_SEEKBAR_KEY) {
+            pref.setOnPreferenceChangeListener((p, v) -> {
+                final int width = (int) (mDefaultBackGestureInset * prefScales[(int) v]);
+                mIndicatorView.setIndicatorWidth(width, key == LEFT_EDGE_SEEKBAR_KEY);
+                if (key == LEFT_EDGE_SEEKBAR_KEY) {
+                    mCurrentLeftWidth = width;
+                } else {
+                    mCurrentRightWidth = width;
+                }
+                return true;
+            });
 
-        pref.setOnPreferenceChangeStopListener((p, v) -> {
-            mIndicatorView.setIndicatorWidth(0, key == LEFT_EDGE_SEEKBAR_KEY);
-            final float scale = mBackGestureInsetScales[(int) v];
-            Settings.Secure.putFloat(getContext().getContentResolver(), settingsKey, scale);
-            return true;
-        });
+            pref.setOnPreferenceChangeStopListener((p, v) -> {
+                mIndicatorView.setIndicatorWidth(0, key == LEFT_EDGE_SEEKBAR_KEY);
+                final float scale = prefScales[(int) v];
+                Settings.Secure.putFloat(getContext().getContentResolver(), settingsKey, scale);
+                return true;
+            });
+        } else {
+            pref.setOnPreferenceChangeListener((p, v) -> {
+                final int region = (int) prefScales[(int) v];
+                mIndicatorView.setIndicatorHeightScale(region);
+                // dont use updateViewLayout else it will animate
+                mWindowManager.removeView(mIndicatorView);
+                mWindowManager.addView(mIndicatorView, mIndicatorView.getLayoutParams(
+                        getActivity().getWindow().getAttributes()));
+                // peek the indicators
+                mIndicatorView.setIndicatorWidth(mCurrentRightWidth, false);
+                mIndicatorView.setIndicatorWidth(mCurrentLeftWidth, true);
+                return true;
+            });
+
+            pref.setOnPreferenceChangeStopListener((p, v) -> {
+                final int region = (int) prefScales[(int) v];
+                mIndicatorView.setIndicatorWidth(0, false);
+                mIndicatorView.setIndicatorWidth(0, true);
+                Settings.Secure.putInt(getContext().getContentResolver(), settingsKey, region);
+                return true;
+            });
+        }
     }
 
     private static float[] getFloatArray(TypedArray array) {
