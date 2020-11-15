@@ -1160,4 +1160,8 @@ public final class Utils extends com.android.settingslib.Utils {
             Log.d("savePINPasswordLength", "saveLong error: " + e.getMessage());
         }
     }
+
+    public static boolean hasFeatureNfc(Context context) {
+        return context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_NFC);
+    }
 }
