@@ -16,6 +16,24 @@
       "revId": "47e1627b38c23d827b021008abca41fafc7a9b94",
       "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5eb0e2c9_5468fcf1",
+        "filename": "src/com/android/settings/deviceinfo/StorageSummaryPreference.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 209
+      },
+      "writtenOn": "2020-11-17T09:47:39Z",
+      "side": 1,
+      "message": "Since this is AOSP code, keeping it commented allows to find out issues/changes easier with git blame, in case this breaks anything (which I wouldn\u0027t expect), imo",
+      "parentUuid": "563e0295_785dad8e",
+      "revId": "47e1627b38c23d827b021008abca41fafc7a9b94",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": true
     }
   ]
 }
