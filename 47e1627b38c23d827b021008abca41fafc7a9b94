@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "563e0295_785dad8e",
+        "filename": "src/com/android/settings/deviceinfo/StorageSummaryPreference.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1375
+      },
+      "writtenOn": "2020-11-17T09:44:49Z",
+      "side": 1,
+      "message": "don\u0027t comment out -remove",
+      "revId": "47e1627b38c23d827b021008abca41fafc7a9b94",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": true
+    }
+  ]
+}
