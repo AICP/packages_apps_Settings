@@ -30,4 +30,7 @@
     <string name="config_batHealthPercent"></string>
     <integer name="config_batCurCapDivider">1</integer>
     <integer name="config_batDesCapDivider">1</integer>
+
+    <!-- Whether to show min / max refresh rate preference in display settings -->
+    <bool name="config_show_refresh_rate_switch">false</bool>
 </resources>

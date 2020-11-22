@@ -26,8 +26,10 @@ import com.android.settings.display.AmbientDisplayPreferenceController;
 import com.android.settings.display.BrightnessLevelPreferenceController;
 import com.android.settings.display.CameraGesturePreferenceController;
 import com.android.settings.display.LiftToWakePreferenceController;
-import com.android.settings.display.PocketJudgePreferenceController;
 import com.android.settings.display.LiveDisplayPreferenceController;
+import com.android.settings.display.MaxRefreshRatePreferenceController;
+import com.android.settings.display.MinRefreshRatePreferenceController;
+import com.android.settings.display.PocketJudgePreferenceController;
 import com.android.settings.display.ScreenSaverPreferenceController;
 import com.android.settings.display.ShowOperatorNamePreferenceController;
 import com.android.settings.display.TapToWakePreferenceController;
@@ -98,6 +100,8 @@ public class DisplaySettings extends DashboardFragment {
         controllers.add(new ThemePreferenceController(context));
         controllers.add(new BrightnessLevelPreferenceController(context, lifecycle));
         controllers.add(new LiveDisplayPreferenceController(context));
+        controllers.add(new MinRefreshRatePreferenceController(context, lifecycle));
+        controllers.add(new MaxRefreshRatePreferenceController(context, lifecycle));
         return controllers;
     }
 
