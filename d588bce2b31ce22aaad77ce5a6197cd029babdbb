@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "db79bc23_765fc717",
+        "filename": "src/com/android/settings/notification/app/CustomLightsPreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2020-11-23T07:19:28Z",
+      "side": 1,
+      "message": "com.android.internal.R.bool.config_multiColorBatteryLed",
+      "range": {
+        "startLine": 97,
+        "startChar": 28,
+        "endLine": 97,
+        "endChar": 87
+      },
+      "revId": "d588bce2b31ce22aaad77ce5a6197cd029babdbb",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": true
+    }
+  ]
+}
