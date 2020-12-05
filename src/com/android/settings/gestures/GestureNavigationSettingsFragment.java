@@ -45,12 +45,14 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
     private static final String LEFT_EDGE_SEEKBAR_KEY = "gesture_left_back_sensitivity";
     private static final String RIGHT_EDGE_SEEKBAR_KEY = "gesture_right_back_sensitivity";
     private static final String BACK_REGION_SEEKBAR_KEY = "back_gesture_region";
+    private static final String HANDLE_LENGTH_SEEKBAR_KEY = "gesture_handle_length";
 
     private WindowManager mWindowManager;
     private BackGestureIndicatorView mIndicatorView;
 
     private float[] mBackGestureInsetScales;
     private float[] mBackRegionScales;
+    private float[] mHandleLengthScales;
     private float mDefaultBackGestureInset;
 
     public GestureNavigationSettingsFragment() {
@@ -76,10 +78,13 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
                 com.android.internal.R.array.config_backGestureInsetScales));
         mBackRegionScales = getFloatArray(res.obtainTypedArray(
                 com.android.internal.R.array.config_backRegionScales));
+        mHandleLengthScales = getFloatArray(res.obtainTypedArray(
+                com.android.internal.R.array.config_handleLengthScales));
 
         initSeekBarPreference(LEFT_EDGE_SEEKBAR_KEY);
         initSeekBarPreference(RIGHT_EDGE_SEEKBAR_KEY);
         initSeekBarPreference(BACK_REGION_SEEKBAR_KEY);
+        initSeekBarPreference(HANDLE_LENGTH_SEEKBAR_KEY);
     }
 
     @Override
@@ -122,18 +127,21 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
         final LabeledSeekBarPreference pref = getPreferenceScreen().findPreference(key);
         pref.setContinuousUpdates(true);
 
-        final String settingsKey = key == BACK_REGION_SEEKBAR_KEY
+        final String settingsKey = key == HANDLE_LENGTH_SEEKBAR_KEY
+                ? Settings.Secure.NAVIGATION_HANDLE_WIDTH
+                : (key == BACK_REGION_SEEKBAR_KEY
                 ? Settings.Secure.BACK_GESTURE_HEIGHT
                 : (key == LEFT_EDGE_SEEKBAR_KEY
                 ? Settings.Secure.BACK_GESTURE_INSET_SCALE_LEFT
-                : Settings.Secure.BACK_GESTURE_INSET_SCALE_RIGHT);
+                : Settings.Secure.BACK_GESTURE_INSET_SCALE_RIGHT));
         final float initScale = Settings.Secure.getFloat(
                 getContext().getContentResolver(), settingsKey, 1.0f);
 
         // Find the closest value to initScale
         float minDistance = Float.MAX_VALUE;
         int minDistanceIndex = -1;
-        final float[] prefScales = key == BACK_REGION_SEEKBAR_KEY ? mBackRegionScales : mBackGestureInsetScales;
+        final float[] prefScales = key == HANDLE_LENGTH_SEEKBAR_KEY ? mHandleLengthScales
+              : (key == BACK_REGION_SEEKBAR_KEY ? mBackRegionScales : mBackGestureInsetScales);
         for (int i = 0; i < prefScales.length; i++) {
             float d = Math.abs(prefScales[i] - initScale);
             if (d < minDistance) {
@@ -143,7 +151,7 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
         }
         pref.setProgress(minDistanceIndex);
 
-        if (key != BACK_REGION_SEEKBAR_KEY) {
+        if (key != BACK_REGION_SEEKBAR_KEY && key != HANDLE_LENGTH_SEEKBAR_KEY) {
             pref.setOnPreferenceChangeListener((p, v) -> {
                 final int width = (int) (mDefaultBackGestureInset * prefScales[(int) v]);
                 mIndicatorView.setIndicatorWidth(width, key == LEFT_EDGE_SEEKBAR_KEY);
