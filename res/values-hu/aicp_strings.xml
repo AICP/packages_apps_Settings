@@ -104,6 +104,8 @@
     <string name="home_handle_sizer_title">A mozdulatvezérlési sáv mérete</string>
     <string name="home_handle_low_label">Alapértelmezett</string>
     <string name="home_handle_high_label">Kétszeres</string>
+    <string name="data_usage_app_restrict_all">Hálózat-hozzáférés engedélyezése</string>
+    <string name="data_usage_app_restrict_all_summary">Lehetővé teszi a hálózathasználatot</string>
     <string name="data_usage_app_restrict_data">Mobiladat-kapcsolat</string>
     <string name="data_usage_app_restrict_data_summary">A mobiladat-használat engedélyezése</string>
     <string name="data_usage_app_restrict_vpn">VPN-adatok</string>
@@ -196,4 +198,6 @@
     <string name="tethering_allow_vpn_upstreams_title">Engedélyezi a klienseknek a VPN-használatot</string>
     <string name="tethering_allow_vpn_upstreams_summary">Engedélyezze a hotspot-klienseknek, hogy a készülék VPN-kapcsolatait felfelé csatlakoztathassák</string>
     <string name="connected_tws_device_saved_title">Mentett Earbuds fülhallgatók</string>
+    <string name="auto_brightness_min_title">Minimális fényerőszint</string>
+    <string name="auto_brightness_description_new">A képernyő fényereje automatikusan alkalmazkodik a környezethez és a tevékenységekhez.\n\nÖn be tudja állítani a használni kívánt minimális fényerőt.</string>
 </resources>
