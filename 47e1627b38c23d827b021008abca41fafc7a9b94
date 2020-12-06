@@ -1,6 +1,24 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f46ad633_cf93d81d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2020-12-06T15:22:26Z",
+      "side": 1,
+      "message": "Test\n- Ensure an external storage is connected (SD Card/ OTG device)\n- Switch to a dark theme, preferably Black\n- Open Settings \u003e Storage\n- Observe the \"Total used....\" string under the large size text\n\nWith this patch, the text is readable ",
+      "revId": "47e1627b38c23d827b021008abca41fafc7a9b94",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "563e0295_785dad8e",
         "filename": "src/com/android/settings/deviceinfo/StorageSummaryPreference.java",
@@ -14,10 +32,10 @@
       "side": 1,
       "message": "don\u0027t comment out -remove",
       "revId": "47e1627b38c23d827b021008abca41fafc7a9b94",
-      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
-      "unresolved": true
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "5eb0e2c9_5468fcf1",
         "filename": "src/com/android/settings/deviceinfo/StorageSummaryPreference.java",
@@ -32,8 +50,7 @@
       "message": "Since this is AOSP code, keeping it commented allows to find out issues/changes easier with git blame, in case this breaks anything (which I wouldn\u0027t expect), imo",
       "parentUuid": "563e0295_785dad8e",
       "revId": "47e1627b38c23d827b021008abca41fafc7a9b94",
-      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
-      "unresolved": true
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
     }
   ]
 }
