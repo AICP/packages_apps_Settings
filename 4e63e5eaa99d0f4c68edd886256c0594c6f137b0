@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d56967ff_1ca49e93",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 343
+      },
+      "writtenOn": "2020-12-07T15:26:39Z",
+      "side": 1,
+      "message": "Obsolete if we stay to our PartsBin. So i would wait with the Lineage Refreshrate stuff",
+      "revId": "4e63e5eaa99d0f4c68edd886256c0594c6f137b0",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
