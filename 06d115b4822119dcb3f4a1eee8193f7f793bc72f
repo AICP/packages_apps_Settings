@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "79a2fe65_80a20ceb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 774
+      },
+      "writtenOn": "2020-12-13T03:54:28Z",
+      "side": 1,
+      "message": "https://github.com/weirddroid9/packages_apps_Settings/tree/r11.1",
+      "revId": "06d115b4822119dcb3f4a1eee8193f7f793bc72f",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
