@@ -15,6 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="default">Tempatkan sensor sidik jari pada <xliff:g id="sensor_location">%1$s</xliff:g> telepon Anda.</string>
     <string name="security_settings_fingerprint_sensor_location_back">belakang</string>
     <string name="security_settings_fingerprint_sensor_location_front">depan</string>
     <string name="security_settings_fingerprint_sensor_location_left">sisi kiri</string>
@@ -41,6 +42,7 @@
     <string name="fp_swipe_to_dismiss_notifications_summary">Untuk mengabaikan pemberitahuan anda, gesek ke kiri atau kanan pada sensor sidik jari di bagian belakang telepon anda.</string>
     <string name="increasing_ring_volume_option_title">Meningkatkan volume dering</string>
     <string name="increasing_ring_min_volume_title">Volume awal</string>
+    <string name="increasing_ring_ramp_up_time_title">Waktu penguatan</string>
     <string name="volume_link_notification_title">Hubungkan volume nada dering &amp; pemberitahuan</string>
     <string name="display_rotation_disabled">Dimatikan</string>
     <string name="notification_log_summary">Tampilkan riwayat pemberitahuan</string>
