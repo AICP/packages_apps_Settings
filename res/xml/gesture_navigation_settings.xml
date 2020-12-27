@@ -59,20 +59,6 @@
             settings:textEnd="@string/back_height_high_label"/>
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:key="handle_length_category"
-        android:persistent="false"
-        android:title="@string/handle_length_category_title">
-
-        <com.android.settings.widget.LabeledSeekBarPreference
-            android:key="gesture_handle_length"
-            android:title="@string/home_handle_sizer_title"
-            android:max="3"
-            android:selectable="true"
-            settings:textStart="@string/home_handle_low_label"
-            settings:textEnd="@string/home_handle_high_label"/>
-    </PreferenceCategory>
-
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="back_gesture_haptic"
         android:title="@string/back_gesture_haptic_title"
