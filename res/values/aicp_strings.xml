@@ -78,4 +78,8 @@
     <string name="display_rotation_90_title">90 degrees</string>
     <string name="display_rotation_180_title">180 degrees</string>
     <string name="display_rotation_270_title">270 degrees</string>
+
+    <!-- Battery image -->
+    <string name="battery_image">Battery image</string>
+    <string name="battery_image_description">Show battery image in status bar</string>
 </resources>
