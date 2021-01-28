@@ -149,7 +149,7 @@
     <!-- Home handle width -->
     <string name="handle_length_category_title">Gesture bar</string>
     <string name="home_handle_sizer_title">Size</string>
-    <string name="home_handle_low_label">Default</string>
+    <string name="home_handle_low_label">Stock</string>
     <string name="home_handle_high_label">Double</string>
 
     <string name="battery_temp">Battery temperature</string>
