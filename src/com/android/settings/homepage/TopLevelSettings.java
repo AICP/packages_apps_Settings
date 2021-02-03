@@ -137,6 +137,7 @@ public class TopLevelSettings extends DashboardFragment implements
 
         mIconStyle = Settings.System.getInt(getContext().getContentResolver(),
                 Settings.System.THEMING_SETTINGS_DASHBOARD_ICONS, 0);
+        if (mIconStyle == 0) return;
         themePreferences(getPreferenceScreen());
     }
 
