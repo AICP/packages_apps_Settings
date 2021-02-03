@@ -50,6 +50,7 @@ public class TopLevelSettings extends DashboardFragment implements
     private int mIconStyle;
     private int mNormalColor;
     private int mAccentColor;
+    private int mPrimaryColor;
 
     public TopLevelSettings() {
         final Bundle args = new Bundle();
@@ -129,10 +130,12 @@ public class TopLevelSettings extends DashboardFragment implements
         int[] attrs = new int[] {
             android.R.attr.colorControlNormal,
             android.R.attr.colorAccent,
+            android.R.attr.colorPrimary,
         };
         TypedArray ta = getContext().getTheme().obtainStyledAttributes(attrs);
         mNormalColor = ta.getColor(0, 0xff808080);
         mAccentColor = ta.getColor(1, 0xff808080);
+        mPrimaryColor = ta.getColor(2, 0xff808080);
         ta.recycle();
 
         mIconStyle = Settings.System.getInt(getContext().getContentResolver(),
@@ -171,6 +174,14 @@ public class TopLevelSettings extends DashboardFragment implements
                         aIcon.setForegroundColorAicp(mAccentColor);
                         aIcon.setBackgroundColorAicp(0);
                         break;
+                    default:
+                        // Android 11:
+                        // system icons use colorPrimary as foreground color
+                        // but various icon packs use white icons.
+                        // To fix inconsistencies with additional icons not included in icon packs,
+                        // we forcefully overwrite the foreground color here.
+                        aIcon.setForegroundColorAicp(mPrimaryColor);
+                        break;
                 }
             } else if (icon instanceof LayerDrawable) {
                 LayerDrawable lIcon = (LayerDrawable) icon;
@@ -191,6 +202,9 @@ public class TopLevelSettings extends DashboardFragment implements
                         case 3:
                             fg.setTint(mAccentColor);
                             bg.setTint(0);
+                            break;
+                        default:
+                            fg.setTint(mPrimaryColor);
                             break;
                     }
                 }
