@@ -5963,7 +5963,7 @@
     <!-- Title for usage time that full charge lasts. [CHAR LIMIT=60] -->
     <string name="battery_full_charge_last">Full charge lasts about</string>
     <!-- Description for text in battery footer. [CHAR LIMIT=NONE] -->
-    <string name="battery_footer_summary">Battery usage data is approximate and can change based on usage</string>
+    <string name="battery_footer_summary">Battery usage data is approximate and can change based on usage.\nIf available, battery health values are reported by kernel bms.</string>
     <!-- Title for text that shows the amount of time an app has been running while in the foreground. [CHAR LIMIT=80] -->
     <string name="battery_detail_foreground">While in active use</string>
     <!-- Title for text that shows the amount of time an app has been running while in the background. [CHAR LIMIT=80] -->
