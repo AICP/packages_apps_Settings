@@ -117,16 +117,6 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
     @VisibleForTesting
     PowerGaugePreference mBatteryTempPref;
     @VisibleForTesting
-    PowerGaugePreference mBatteryTypePref;
-    @VisibleForTesting
-    PowerGaugePreference mBatteryHealthPref;
-    @VisibleForTesting
-    PowerGaugePreference mCurrentBatteryCapacity;
-    @VisibleForTesting
-    PowerGaugePreference mDesignedBatteryCapacity;
-    @VisibleForTesting
-    PowerGaugePreference mBatteryChargeCycles;
-    @VisibleForTesting
     PowerGaugePreference mLastFullChargePref;
     @VisibleForTesting
     PowerUsageFeatureProvider mPowerFeatureProvider;
@@ -275,18 +265,8 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
 
         mScreenUsagePref = (PowerGaugePreference) findPreference(KEY_SCREEN_USAGE);
         mBatteryTempPref = (PowerGaugePreference) findPreference(KEY_BATTERY_TEMP);
-        mCurrentBatteryCapacity = (PowerGaugePreference) findPreference(
-                KEY_CURRENT_BATTERY_CAPACITY);
-        mDesignedBatteryCapacity = (PowerGaugePreference) findPreference(
-                KEY_DESIGNED_BATTERY_CAPACITY);
-        mBatteryChargeCycles = (PowerGaugePreference) findPreference(
-                KEY_BATTERY_CHARGE_CYCLES);
         mLastFullChargePref = (PowerGaugePreference) findPreference(
                 KEY_TIME_SINCE_LAST_FULL_CHARGE);
-        mBatteryHealthPref = (PowerGaugePreference) findPreference(
-                KEY_BATTERY_HEALTH);
-        mBatteryTypePref = (PowerGaugePreference) findPreference(
-                KEY_BATTERY_TYPE);
         mBatteryUtils = BatteryUtils.getInstance(getContext());
 
         if (Utils.isBatteryPresent(getContext())) {
@@ -312,22 +292,6 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
         }
     }
 
-    private String getPath(String prefKey) {
-        switch (prefKey) {
-            case KEY_DESIGNED_BATTERY_CAPACITY:
-                return getResources().getString(R.string.config_batDesCap);
-            case KEY_CURRENT_BATTERY_CAPACITY:
-                return getResources().getString(R.string.config_batCurCap);
-            case KEY_BATTERY_CHARGE_CYCLES:
-                return getResources().getString(R.string.config_batChargeCycle);
-            case KEY_BATTERY_TYPE:
-                return getResources().getString(R.string.config_batType);
-            case KEY_BATTERY_HEALTH:
-                return getResources().getString(R.string.config_batHealth);
-        }
-        return null;
-    }
-
     private void updateAvailability() {
         final Resources res = getContext().getResources();
         if (!res.getBoolean(R.bool.config_supportBatteryHealth)) {
@@ -335,33 +299,58 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
                 getPreferenceScreen().removePreference(pGPList.get(i));
             }
         } else {
-            if (mBatteryTypePref != null
-                  && (parseLine(res.getString(R.string.config_batType)).isEmpty()
-                  || parseLine(res.getString(R.string.config_batType))
-                        .equals(res.getString(R.string.status_unavailable)))) {
-                mBatteryTypePref.getParent().removePreference(mBatteryTypePref);
-            }
             String configPath = null;
             for (int i = 0; i < pGPList.size(); i++) {
-                configPath = getPath(pGPList.get(i).getKey());
+                configPath = getPrefResources(pGPList.get(i).getKey(), true);
                 if (configPath == null || configPath.isEmpty()) {
                     //remove from preference screen if no config path is available.
                     getPreferenceScreen().removePreference(pGPList.get(i));
                 } else {
                     //for available configPath, check if we can access it and read from it.
-                    checkAndRemovePreference(configPath, (PowerGaugePreference) findPreference(pGPList.get(i).getKey()));
+                    if (checkPreference(configPath, pGPList.get(i))) {
+                        getPreferenceScreen().removePreference(pGPList.get(i));
+                    }
                 }
             }
         }
     }
 
-    private boolean checkAndRemovePreference(String file, PowerGaugePreference preference) {
+    private boolean checkPreference(String file, PowerGaugePreference preference) {
         //If we are having issues accessing the file or reading from it.
-        if (preference != null && "-1".equals(parseInteger(file))) {
-            getPreferenceScreen().removePreference(preference);
-            return true;
+        final boolean isAccessBad = (preference == (PowerGaugePreference) findPreference(KEY_BATTERY_TYPE)) ?
+                getResources().getString(R.string.status_unavailable).equals(parseLine(file)) : parseInteger(file) == -1;
+        return isAccessBad;
+    }
+
+    private String getPrefResources(String prefKey, boolean returnPath) {
+        final Resources res = getResources();
+        switch (prefKey) {
+            case KEY_DESIGNED_BATTERY_CAPACITY:
+                return returnPath ? res.getString(R.string.config_batDesCap)
+                                  : parseInteger(res.getString(R.string.config_batDesCap)) /
+                                      res.getInteger(R.integer.config_batDesCapDivider) + " mAh";
+            case KEY_CURRENT_BATTERY_CAPACITY:
+                return returnPath ? res.getString(R.string.config_batCurCap)
+                                  : parseInteger(res.getString(R.string.config_batCurCap)) /
+                                      res.getInteger(R.integer.config_batCurCapDivider) + " mAh";
+            case KEY_BATTERY_CHARGE_CYCLES:
+                return returnPath ? res.getString(R.string.config_batChargeCycle)
+                                  : parseInteger(res.getString(R.string.config_batChargeCycle)) + " Cycles";
+            case KEY_BATTERY_TYPE:
+                return returnPath ? res.getString(R.string.config_batType)
+                                  : parseLine(res.getString(R.string.config_batType));
+            case KEY_BATTERY_HEALTH:
+                return returnPath ? res.getString(R.string.config_batHealth)
+                                  : parseInteger(res.getString(R.string.config_batHealth)) + " %";
         }
-        return false;
+        return null;
+    }
+
+    private void updateBatteryInfoPreference(PowerGaugePreference preference) {
+        //If preference exists
+        if (preference != null) {
+            preference.setSummary(getPrefResources(preference.getKey(), false));
+        }
     }
 
     @Override
@@ -491,26 +480,10 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
         mScreenUsagePref.setSummary(StringUtil.formatElapsedTime(context,
                 mBatteryUtils.calculateScreenUsageTime(mStatsHelper), false));
         final long elapsedRealtimeUs = SystemClock.elapsedRealtime() * 1000;
-        if (mCurrentBatteryCapacity != null) {
-            mCurrentBatteryCapacity.setSummary(
-                parseInteger(res.getString(R.string.config_batCurCap))/ 1000 + " mAh");
+        for (int i = 0; i < pGPList.size(); i++) {
+             updateBatteryInfoPreference((PowerGaugePreference) pGPList.get(i));
         }
-        if (mDesignedBatteryCapacity != null)  {
-            mDesignedBatteryCapacity.setSummary(
-                parseInteger(res.getString(R.string.config_batDesCap))/ 1000 + " mAh");
-        }
-        if (mBatteryChargeCycles != null) {
-            mBatteryChargeCycles.setSummary(
-                parseInteger(res.getString(R.string.config_batChargeCycle)) + " Cycles");
-        }
-        if (mBatteryHealthPref != null) {
-            mBatteryHealthPref.setSummary(
-                parseInteger(res.getString(R.string.config_batHealth)) + " %");
-        }
-        if (mBatteryTypePref != null) {
-            mBatteryTypePref.setSummary(
-                parseLine(res.getString(R.string.config_batType)));
-        }
+
         Intent batteryBroadcast = context.registerReceiver(null,
                 new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
         BatteryInfo batteryInfo = BatteryInfo.getBatteryInfoOld(context, batteryBroadcast,
