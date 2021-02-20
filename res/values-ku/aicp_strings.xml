@@ -102,6 +102,8 @@
     <string name="home_handle_sizer_title">قەبارەی تووڵی جووڵان</string>
     <string name="home_handle_low_label">بنەڕەت</string>
     <string name="home_handle_high_label">دووانە</string>
+    <string name="data_usage_app_restrict_all">ڕێدان بەگەیشتنی تۆڕ</string>
+    <string name="data_usage_app_restrict_all_summary">ڕێدانی بەکاربردنی تۆڕ</string>
     <string name="data_usage_app_restrict_data">داتای سیمکارت</string>
     <string name="data_usage_app_restrict_data_summary">چالاککردنی تۆماری بەکارهێنانی داتای سیمکارت</string>
     <string name="data_usage_app_restrict_vpn">داتای VPN</string>
