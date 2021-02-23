@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2018 The Android Open Source Project
+     Copyright (C) 2021 Project 404
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,36 +16,47 @@
      limitations under the License.
 -->
 
-<com.google.android.material.card.MaterialCardView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/search_bar"
-    style="@style/SearchBarStyle"
-    android:layout_width="match_parent"
+    android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    app:layout_scrollFlags="scroll|enterAlways">
-    <Toolbar
-        android:id="@+id/search_action_bar"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/search_bar_height"
-        android:layout_marginStart="-2dp"
-        android:background="@drawable/search_bar_selected_background"
-        android:contentInsetStartWithNavigation="@dimen/search_bar_content_inset"
-        android:navigationIcon="@drawable/ic_homepage_search">
-        <TextView
-            android:id="@+id/search_action_bar_title"
-            style="@style/TextAppearance.SearchBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/search_menu"/>
-    </Toolbar>
+    android:gravity="center_vertical"
+    android:layout_margin="@dimen/search_bar_margin" >
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/search_bar"
+        style="@style/SearchBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:layout_scrollFlags="scroll|enterAlways">
+
+        <Toolbar
+            android:id="@+id/search_action_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/search_bar_height"
+            android:background="@drawable/search_bar_selected_background"
+            android:contentInsetStartWithNavigation="@dimen/search_bar_content_inset"
+            android:navigationIcon="@drawable/ic_homepage_search">
+
+            <TextView
+                android:id="@+id/search_action_bar_title"
+                style="@style/TextAppearance.SearchBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="@string/search_menu"/>
+
+
+        </Toolbar>
+    </com.google.android.material.card.MaterialCardView>
+
     <ImageView
         android:id="@+id/account_avatar"
-        android:paddingEnd="@dimen/search_bar_avatar_end_padding"
-        android:paddingTop="@dimen/search_bar_avatar_top_bottom_padding"
-        android:paddingBottom="@dimen/search_bar_avatar_top_bottom_padding"
+        android:layout_marginStart="@dimen/search_bar_margin"
         android:layout_width="@dimen/search_bar_avatar_width"
-        android:layout_height="@dimen/search_bar_height"
+        android:layout_height="@dimen/search_bar_avatar_width"
         android:layout_gravity="end"
         android:contentDescription="@string/search_bar_account_avatar_content_description"/>
-</com.google.android.material.card.MaterialCardView>
+</LinearLayout>
