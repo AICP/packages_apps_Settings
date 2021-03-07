@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f05cf729_59df5908",
+        "filename": "src/com/android/settings/fuelgauge/PowerUsageSummary.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 496,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2021-03-07T06:52:15Z",
+      "side": 1,
+      "message": "on instantnoodlep sysfs file says it\u0027s 4173, but shows only 4. Maybe remove this?",
+      "range": {
+        "startLine": 496,
+        "startChar": 70,
+        "endLine": 496,
+        "endChar": 76
+      },
+      "revId": "b1b8759b71f3d97ea69e01035c79466a7416e3e0",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
