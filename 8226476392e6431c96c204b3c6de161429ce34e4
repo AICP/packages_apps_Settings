@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc864540_567c1c0c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2021-03-07T21:04:24Z",
+      "side": 1,
+      "message": "PS3: added divider configs. \nconfig_batCurCapDivider\nconfig_batDesCapDivider",
+      "revId": "8226476392e6431c96c204b3c6de161429ce34e4",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
