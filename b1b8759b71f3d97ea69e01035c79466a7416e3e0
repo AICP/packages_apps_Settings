@@ -22,6 +22,30 @@
       },
       "revId": "b1b8759b71f3d97ea69e01035c79466a7416e3e0",
       "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6c4ae895_cac66197",
+        "filename": "src/com/android/settings/fuelgauge/PowerUsageSummary.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 496,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2021-03-07T18:11:40Z",
+      "side": 1,
+      "message": "no. just need to add a multiplier to display it properly. Just like we did in SystemUI Info items.",
+      "parentUuid": "f05cf729_59df5908",
+      "range": {
+        "startLine": 496,
+        "startChar": 70,
+        "endLine": 496,
+        "endChar": 76
+      },
+      "revId": "b1b8759b71f3d97ea69e01035c79466a7416e3e0",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
     }
   ]
 }
