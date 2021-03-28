@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0e5ae3db_e7b5b55a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 343
+      },
+      "writtenOn": "2021-03-28T15:08:39Z",
+      "side": 1,
+      "message": "Sorry, but the commit description is a bit \"confusing\" to me. This is not nightlight. It just undervolts the display...\nThat layer does afaik not touch brightness nor is it something that needs to be setup only at night, etc... 😐",
+      "revId": "abfb68af7a1f22ab74b28658ccdbba504f42dae6",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
