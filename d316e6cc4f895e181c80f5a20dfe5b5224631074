@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c0174345_4d4b0fa9",
+        "filename": "res/values/styles.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 314,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2021-03-29T05:44:33Z",
+      "side": 1,
+      "message": "Who dis?\n\nNot shipped on officials",
+      "range": {
+        "startLine": 314,
+        "startChar": 40,
+        "endLine": 314,
+        "endChar": 51
+      },
+      "revId": "d316e6cc4f895e181c80f5a20dfe5b5224631074",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "74717af9_66e1305d",
+        "filename": "res/values/styles.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 671,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2021-03-29T05:44:33Z",
+      "side": 1,
+      "message": "same",
+      "range": {
+        "startLine": 671,
+        "startChar": 40,
+        "endLine": 671,
+        "endChar": 58
+      },
+      "revId": "d316e6cc4f895e181c80f5a20dfe5b5224631074",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
