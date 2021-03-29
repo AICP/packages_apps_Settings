@@ -45,6 +45,30 @@
       },
       "revId": "d316e6cc4f895e181c80f5a20dfe5b5224631074",
       "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "354e120a_0288dce2",
+        "filename": "res/values/styles.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 671,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2021-03-29T17:55:41Z",
+      "side": 1,
+      "message": "Fixed in https://gerrit.aicp-rom.com/c/AICP/packages_apps_Settings/+/108427/2 I guess...",
+      "parentUuid": "74717af9_66e1305d",
+      "range": {
+        "startLine": 671,
+        "startChar": 40,
+        "endLine": 671,
+        "endChar": 58
+      },
+      "revId": "d316e6cc4f895e181c80f5a20dfe5b5224631074",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
     }
   ]
 }
