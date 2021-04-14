@@ -114,4 +114,9 @@
     <!-- Back gesture animation -->
     <string name="back_gesture_arrow_message">Back gesture animation</string>
     <string name="back_gesture_arrow_summary">Show an animated arrow for back gesture.</string>
+
+    <!-- Gesture navigation handle -->
+    <string name="navbar_gesture_handle_category">Gesture handle</string>
+    <string name="navbar_gesture_handle_hide_title">Hide gesture handle</string>
+    <string name="navbar_gesture_handle_hide_summary">Hide horizontal line</string>
 </resources>
