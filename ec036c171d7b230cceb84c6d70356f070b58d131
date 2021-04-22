@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ce986f2a_6a8ff5f4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2021-04-22T17:52:30Z",
+      "side": 1,
+      "message": "Is a handy feature, keep it enabled by default\nElse takes a lot of work to enable ",
+      "revId": "ec036c171d7b230cceb84c6d70356f070b58d131",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
