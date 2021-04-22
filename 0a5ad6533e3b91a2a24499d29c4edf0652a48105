@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e337f456_1ed53743",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2021-04-22T17:42:00Z",
+      "side": 1,
+      "message": "Seems not all devices support this prop",
+      "revId": "0a5ad6533e3b91a2a24499d29c4edf0652a48105",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eb26b435_9757a9cd",
+        "filename": "src/com/android/settings/deviceinfo/firmwareversion/BootloaderVersionPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2021-04-22T17:42:00Z",
+      "side": 1,
+      "message": "return TextUtils.isEmpty(SystemProperties.get(BOOTLOADER_PROPERTY)) ? UNSUPPORTED_ON_DEVICE : AVAILABLE;",
+      "range": {
+        "startLine": 20,
+        "startChar": 8,
+        "endLine": 20,
+        "endChar": 25
+      },
+      "revId": "0a5ad6533e3b91a2a24499d29c4edf0652a48105",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
