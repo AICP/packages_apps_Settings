@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c4e2b05b_bc1a2ed2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2021-04-23T02:51:51Z",
+      "side": 1,
+      "message": "Test:\n- Compiles\n- Bootloader preference is visible with a \"sensible\" value\n- Bootloader preference is invisible when prop value is not found or empty",
+      "revId": "0742a19e39ebab115345cdfce231d7d4491fcbfb",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
