@@ -2,9 +2,8 @@ package com.android.settings.deviceinfo.firmwareversion;
 
 import android.content.Context;
 import android.os.SystemProperties;
+import android.text.TextUtils;
 
-import com.android.settings.R;
-import com.android.settings.Utils;
 import com.android.settings.core.BasePreferenceController;
 
 public class BootloaderVersionPreferenceController extends BasePreferenceController {
@@ -17,12 +16,20 @@ public class BootloaderVersionPreferenceController extends BasePreferenceControl
 
     @Override
     public int getAvailabilityStatus() {
+        CharSequence mBootloaderProp = getBootloaderProp();
+        if (TextUtils.isEmpty(mBootloaderProp) || TextUtils.equals(mBootloaderProp, "unknown")) {
+            return UNSUPPORTED_ON_DEVICE;
+        }
         return AVAILABLE;
     }
 
     @Override
     public CharSequence getSummary() {
-        return SystemProperties.get(BOOTLOADER_PROPERTY,
-                mContext.getString(R.string.device_info_default));
+        return getBootloaderProp();
+    }
+
+    private CharSequence getBootloaderProp() {
+        return SystemProperties.get(BOOTLOADER_PROPERTY);
+
     }
 }
