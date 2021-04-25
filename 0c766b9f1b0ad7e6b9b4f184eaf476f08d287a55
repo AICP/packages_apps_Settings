@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f17c8bf8_21c7ed3f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2021-04-25T09:53:17Z",
+      "side": 1,
+      "message": "3/3 is here: https://github.com/semdoc/system_netd/commit/daa0ee21ab32e5dd9b5ebd278a714b1cb0913687",
+      "revId": "0c766b9f1b0ad7e6b9b4f184eaf476f08d287a55",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
