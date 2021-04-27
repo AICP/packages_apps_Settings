@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d74f1fda_217339fe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2021-04-27T05:18:20Z",
+      "side": 1,
+      "message": "Can this be moved into the \"Device model\" preference which is pretty much empty with two preference entries?",
+      "revId": "fa4829645b98fb4998161b485280fcc76707bf46",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
