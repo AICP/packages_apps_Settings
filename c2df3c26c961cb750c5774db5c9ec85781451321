@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "603f27cc_530ef0a9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2021-04-29T17:25:26Z",
+      "side": 1,
+      "message": "Needed for Op8 and Op7 (on LoS at least).",
+      "revId": "c2df3c26c961cb750c5774db5c9ec85781451321",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
