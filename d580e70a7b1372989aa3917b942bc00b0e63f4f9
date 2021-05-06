@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fee7af83_482f0a29",
+        "filename": "src/com/android/settings/deviceinfo/firmwareversion/BootloaderVersionPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2021-05-06T20:12:43Z",
+      "side": 1,
+      "message": "Dont hardcode. You can use\nmContext.getString(R.string.device_info_default)\ninstead so it can be translated",
+      "range": {
+        "startLine": 20,
+        "startChar": 84,
+        "endLine": 20,
+        "endChar": 93
+      },
+      "revId": "d580e70a7b1372989aa3917b942bc00b0e63f4f9",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
