@@ -411,4 +411,8 @@
     <!-- Whether the keyguard will directly show the lock entry -->
     <string name="directly_show_lock">Direct unlock</string>
     <string name="directly_show_lock_summary">Skip the swipe to unlock screen and immediately begin key entry</string>
+
+    <!-- One shot automatic Brightness -->
+    <string name="auto_brightness_one_shot_title">Only apply when screen is turned on</string>
+    <string name="auto_brightness_one_shot_summary">Adjustment will occur one time</string>
 </resources>
