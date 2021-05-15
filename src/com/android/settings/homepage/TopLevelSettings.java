@@ -165,6 +165,7 @@ public class TopLevelSettings extends DashboardFragment implements
                 switch (mIconStyle) {
                     case 1:
                         aIcon.setBackgroundColorAicp(mAccentColor);
+                        aIcon.setForegroundColorAicp(mPrimaryColor);
                         break;
                     case 2:
                         aIcon.setForegroundColorAicp(mNormalColor);
@@ -194,6 +195,7 @@ public class TopLevelSettings extends DashboardFragment implements
                     switch (mIconStyle) {
                         case 1:
                             bg.setTint(mAccentColor);
+                            fg.setTint(mPrimaryColor);
                             break;
                         case 2:
                             fg.setTint(mNormalColor);
