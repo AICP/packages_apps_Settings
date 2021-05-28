@@ -37,7 +37,7 @@ public class VibrateForCallsPreferenceController extends BasePreferenceControlle
     @VisibleForTesting
     static final String RAMPING_RINGER_ENABLED = "ramping_ringer_enabled";
 
-    private static final boolean isRampingEnabled = DeviceConfig.getBoolean(
+    private final boolean mRampingEnabled = DeviceConfig.getBoolean(
                 DeviceConfig.NAMESPACE_TELEPHONY, RAMPING_RINGER_ENABLED, false);
 
     public VibrateForCallsPreferenceController(Context context, String preferenceKey) {
@@ -54,7 +54,7 @@ public class VibrateForCallsPreferenceController extends BasePreferenceControlle
 
     @Override
     public CharSequence getSummary() {
-        if (isRampingEnabled && Settings.Global.getInt(
+        if (mRampingEnabled && Settings.Global.getInt(
                 mContext.getContentResolver(),
                 Settings.Global.APPLY_RAMPING_RINGER, OFF) == ON) {
             return mContext.getText(R.string.vibrate_when_ringing_option_ramping_ringer);

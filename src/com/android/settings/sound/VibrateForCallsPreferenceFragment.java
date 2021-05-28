@@ -49,7 +49,7 @@ public class VibrateForCallsPreferenceFragment extends RadioButtonPickerFragment
 
     static final String RAMPING_RINGER_ENABLED = "ramping_ringer_enabled";
 
-    private static final boolean mRampingEnabled = DeviceConfig.getBoolean(
+    private final boolean mRampingEnabled = DeviceConfig.getBoolean(
                         DeviceConfig.NAMESPACE_TELEPHONY, RAMPING_RINGER_ENABLED, false);
 
     private static final int ON = 1;
