@@ -16,6 +16,23 @@
       "message": "this is working fine for me on enchilada, but unless I missed something there is no way to change the avatar image if \"multiple users\" is off. But, you can enable it, set the avatar, then disable it and the image will stick fine.",
       "revId": "da1f01cc6bbfb794b3c912922337ca9ee7d545c9",
       "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e31dd389_30a1053e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2021-06-09T17:26:36Z",
+      "side": 1,
+      "message": "Agreed. Needs to switch to multiuser in order to edit. ",
+      "revId": "da1f01cc6bbfb794b3c912922337ca9ee7d545c9",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
     }
   ]
 }
