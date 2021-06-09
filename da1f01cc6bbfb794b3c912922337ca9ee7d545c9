@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e5c23dc7_7c09c0c4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1393
+      },
+      "writtenOn": "2021-06-09T12:05:57Z",
+      "side": 1,
+      "message": "this is working fine for me on enchilada, but unless I missed something there is no way to change the avatar image if \"multiple users\" is off. But, you can enable it, set the avatar, then disable it and the image will stick fine.",
+      "revId": "da1f01cc6bbfb794b3c912922337ca9ee7d545c9",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
