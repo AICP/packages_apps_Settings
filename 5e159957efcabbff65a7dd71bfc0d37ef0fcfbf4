@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f8d2b495_cfdc2052",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2021-06-12T11:30:33Z",
+      "side": 1,
+      "message": "Reference for redesign https://www.androidpolice.com/2021/02/18/android-12s-system-settings-are-looking-a-little-blue/#ap-lightbox",
+      "revId": "5e159957efcabbff65a7dd71bfc0d37ef0fcfbf4",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
