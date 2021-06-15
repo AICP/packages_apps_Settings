@@ -86,6 +86,7 @@ android_library {
         "SettingsLibActivityEmbedding",
         "AicpGear-preference",
         "AicpGear-util",
+        "glide",
     ],
 
     libs: [
@@ -142,4 +143,9 @@ filegroup {
 filegroup {
     name: "Settings_manifest",
     srcs: ["AndroidManifest.xml"],
+}
+
+android_library_import {
+    name: "glide",
+    aars: ["libs/glide-4.9.0.aar"],
 }
