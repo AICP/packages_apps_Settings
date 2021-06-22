@@ -34,8 +34,10 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.SwitchPreference;
 
 import com.android.settings.dashboard.DashboardFragment;
+import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.sound.CustomVibrationPreferenceController;
 import com.android.settingslib.core.AbstractPreferenceController;
+import com.android.settingslib.search.SearchIndexable;
 import com.android.settingslib.widget.RadioButtonPreference;
 
 import com.android.settings.R;
@@ -46,6 +48,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
 public class VibrationSettingsPreferenceFragment extends DashboardFragment
             implements Preference.OnPreferenceClickListener {
 
@@ -266,6 +269,9 @@ public class VibrationSettingsPreferenceFragment extends DashboardFragment
     public int getMetricsCategory() {
         return SettingsEnums.ACCESSIBILITY_VIBRATION;
     }
+
+    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider(R.xml.vibration_settings);
 
     @Override
     protected int getPreferenceScreenResId() {
