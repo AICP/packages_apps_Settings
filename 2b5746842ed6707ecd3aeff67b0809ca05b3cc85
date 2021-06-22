@@ -16,6 +16,23 @@
       "message": "Test:\n- Compiles\n- Set a rather large(shorter side \u003e 720) image as user icon\n- Observe that the image on the search bar doesn\u0027t look pixelated",
       "revId": "2b5746842ed6707ecd3aeff67b0809ca05b3cc85",
       "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d363c348_483b9c7a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1393
+      },
+      "writtenOn": "2021-06-22T17:57:00Z",
+      "side": 1,
+      "message": "much better.",
+      "revId": "2b5746842ed6707ecd3aeff67b0809ca05b3cc85",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
     }
   ]
 }
