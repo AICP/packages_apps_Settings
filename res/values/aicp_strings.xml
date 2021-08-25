@@ -165,8 +165,8 @@
     <string name="device_info_protected_single_press">Tap to show info</string>
 
     <!-- Gestures navbar toggle -->
-    <string name="show_gestures_navbar_switch_title">Show pill</string>
-    <string name="show_gestures_navbar_switch_summary">Show gestures navbar</string>
+    <string name="show_gestures_navbar_switch_title">Navbar pill</string>
+    <string name="show_gestures_navbar_switch_summary">Show gestural navigation hint bar</string>
 
     <!-- Adaptive Playback -->
     <string name="adaptive_playback_screen_title">Adaptive playback</string>
@@ -422,5 +422,5 @@
 
     <!-- Immersive Navigation -->
     <string name="immersive_navigation_title">Immersive navigation</string>
-    <string name="immersive_navigation_summary">Hide gestures pill</string>
+    <string name="immersive_navigation_summary">Hide navbar and pill</string>
 </resources>
