@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2016 The CyanogenMod Project
+     Copyright (C) 2017-2019 The LineageOS Project
+     Copyright (C) 2014-2020 AICP
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="aicp_version_title">AICP Experience</string>
+    <string name="aicpextras_title">AICP Extras</string>
+    <string name="aicpextras_summary">ROM personalizzata</string>
+    <string name="selinux_status">Stato di SELinux</string>
+    <string name="selinux_status_disabled">Disabilitato</string>
+    <string name="selinux_status_permissive">Permissive</string>
+    <string name="selinux_status_enforcing">Applicazione</string>
+    <string name="density_category">Opzioni di densità</string>
+    <string name="app_play_store">Google Play</string>
+    <string name="ambient_display_screen_summary_always_on">Always on / Uso maggiore della batteria</string>
+    <string name="ambient_display_screen_summary_notifications">Nuove notifiche</string>
+    <string name="back_gesture_haptic_summary">Abilita l\'effetto di vibrazione tattile al gesto indietro</string>
+    <string name="dashboard_conditions_title">Condizioni pannello di controllo</string>
+    <string name="summary_dashboard_conditions_enabled">Le condizioni del pannello di controllo sono abilitate</string>
+    <string name="summary_dashboard_conditions_disabled">Le condizioni del pannello di controllo sono disabilitate</string>
+    <string name="dashboard_suggestions_title">Suggerimenti del pannello di controllo</string>
+    <string name="summary_dashboard_suggestions_enabled">I suggerimenti del pannello di controllo sono abilitati</string>
+    <string name="summary_dashboard_suggestions_disabled">I suggerimenti del pannello di controllo sono disabilitati</string>
+    <string name="prevent_ringing_option_mute_no_media">Muto, nessun supporto</string>
+    <string name="prevent_ringing_option_mute_no_media_summary">On (muto, nessuna riproduzione multimediale)</string>
+    <string name="battery_stats_reset">Resetta statistiche</string>
+    <string name="battery_stats_message">Le statistiche della batteria stanno per essere resettate</string>
+    <string name="three_finger_gesture">Scorri per lo screenshot</string>
+    <string name="three_finger_gesture_summary">Scorri tre dita per scattare uno screenshot</string>
+    <string name="volume_link_notification_title">Collega volume suoneria &amp; notifiche</string>
+    <string name="fp_swipe_to_dismiss_notifications_title">Scorri a sinistra o destra sul sensore d\'impronte per rimuovere le notifiche</string>
+    <string name="fp_swipe_to_dismiss_notifications_summary">Per rimuovere le notifiche, scorri a sinistra o destra sul sensore d\'impronte posto sul retro del tuo dispositivo.</string>
+    <string name="volume_steps_title">Livelli volume</string>
+    <string name="volume_steps_alarm_title">Livelli volume: Sveglia</string>
+    <string name="volume_steps_dtmf_title">Livelli volume: DTMF</string>
+    <string name="volume_steps_music_title">Livelli volume: Musica</string>
+    <string name="volume_steps_notification_title">Livelli volume: Notifiche</string>
+    <string name="volume_steps_ring_title">Livelli volume: Suoneria</string>
+    <string name="volume_steps_system_title">Livelli volume: Sistema</string>
+    <string name="volume_steps_voice_call_title">Livelli volume: Chiamata</string>
+    <string name="volume_steps_reset">Ripristina</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
+    <string name="unlock_quick_unlock_control_title">Sblocco rapido</string>
+    <string name="pocket_judge_title">Rilevamento in tasca</string>
+    <string name="pocket_judge_summary">Blocca lo schermo e i pulsanti quando il dispositivo è in tasca</string>
+    <string name="display_rotation_title">Opzioni di Rotazione Automatica</string>
+    <string name="display_rotation_summary">Configura le funzioni di rotazione automatica dello schermo</string>
+    <string name="display_rotation_disabled">Disabilitato</string>
+    <string name="display_rotation_unit">gradi</string>
+    <string name="display_rotation_category_title">Modalità di rotazione</string>
+    <string name="display_rotation_0_title">0 gradi</string>
+    <string name="display_rotation_90_title">90 gradi</string>
+    <string name="display_rotation_180_title">180 gradi</string>
+    <string name="display_rotation_270_title">270 gradi</string>
+    <string name="increasing_ring_volume_option_title">Aumento del volume suoneria</string>
+    <string name="increasing_ring_min_volume_title">Volume iniziale</string>
+    <string name="increasing_ring_ramp_up_time_title">Tempo di aumento</string>
+    <string name="back_height_low_label">Intero</string>
+    <string name="back_height_high_label">In basso</string>
+    <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="tablet">Individua il sensore di impronte digitali sul <xliff:g id="sensor_location">%1$s</xliff:g> del tuo tablet.</string>
+    <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="device">Individua il sensore di impronte digitali sul <xliff:g id="sensor_location">%1$s</xliff:g> del tuo dispositivo.</string>
+    <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="default">Individuare il sensore di impronte digitali sul <xliff:g id="sensor_location">%1$s</xliff:g> del telefono.</string>
+    <string name="security_settings_fingerprint_sensor_location_back">indietro</string>
+    <string name="security_settings_fingerprint_sensor_location_front">avanti</string>
+    <string name="security_settings_fingerprint_sensor_location_left">lato sinistro</string>
+    <string name="security_settings_fingerprint_sensor_location_right">lato destro</string>
+    <string name="back_gesture_arrow_summary">Mostra una freccia animata per il gesto indietro.</string>
+    <string name="unknown_night_light_time">Sconosciuto - premi per aggiornare</string>
+    <string name="night_display_location_text">\n\nLa pianificazione dal tramonto all\'alba richiede l\'abilitazione dei servizi di geolocalizzazione per ottenere gli orari corretti per la tua posizione.</string>
+    <string name="home_handle_high_label">Doppia</string>
+    <string name="battery_temp">Temperatura della batteria</string>
+    <string name="connected_tws_device_saved_title">Auricolari salvati</string>
+    <string name="tethering_allow_vpn_upstreams_title">Consenti ai client di usare le VPN</string>
+    <string name="tethering_allow_vpn_upstreams_summary">Permetti ai client hotspot di usare le connessioni VPN di questo dispositivo per la connettività a monte</string>
+    <string name="device_info_protected_single_press">Tocca per mostrare le informazioni</string>
+    <string name="adaptive_playback_screen_title">Riproduzione adattiva</string>
+    <string name="adaptive_playback_disabled_summary">Off</string>
+    <string name="adaptive_playback_timeout_title">Usa un timeout di</string>
+    <string name="adaptive_playback_timeout_30_secs">30 secondi</string>
+    <string name="adaptive_playback_timeout_30_secs_summary">Attivo (30 secondi)</string>
+    <string name="adaptive_playback_timeout_1_min">1 minuto</string>
+    <string name="adaptive_playback_timeout_1_min_summary">Attiva (1 minuto)</string>
+    <string name="adaptive_playback_timeout_2_min">2 minuti</string>
+    <string name="adaptive_playback_timeout_2_min_summary">Attiva (2 minuti)</string>
+    <string name="adaptive_playback_timeout_5_min">5 minuti</string>
+    <string name="adaptive_playback_timeout_5_min_summary">Attiva (5 minuti)</string>
+    <string name="adaptive_playback_timeout_10_min">10 minuti</string>
+    <string name="adaptive_playback_timeout_10_min_summary">Attiva (10 minuti)</string>
+    <string name="live_display_summary">Ottimizza lo schermo in base all\'ora del giorno e alle condizioni ambientali per migliorare la leggibilità e ridurre l\'affaticamento degli occhi</string>
+    <string name="live_display_mode">Modalità display</string>
+    <string name="live_display_color_temperature_title">Temperatura colore</string>
+    <string name="live_display_color_temperature_summary">Giorno: <xliff:g id="day_temperature">%1$d</xliff:g>K  Notte: <xliff:g id="night_temperature">%2$d</xliff:g>K</string>
+    <string name="live_display_color_temperature_label"><xliff:g id="degrees">%1$d</xliff:g>K</string>
+    <string name="live_display_day">Giorno</string>
+    <string name="live_display_night">Notte</string>
+    <string name="live_display_outdoor_mode_title">Modalità automatica all\'aperto</string>
+    <string name="live_display_outdoor_mode_summary">Aumentare luminosità e saturazione automaticamente in ambienti molto illuminati</string>
+    <string name="live_display_low_power_title">Riduci consumo energetico</string>
+    <string name="live_display_low_power_summary">Regola il display per un consumo energetico più basso senza degradazione</string>
+    <string name="live_display_enhance_color_title">Migliora colori</string>
+    <string name="live_display_enhance_color_summary">Migliora la vividezza del colore dei toni della pelle, paesaggi e altre immagini</string>
+    <string name="live_display_color_profile_title">Profilo colore</string>
+    <string name="live_display_color_profile_standard_title">Standard</string>
+    <string name="live_display_color_profile_standard_summary">Colori accurati e bianchi luminosi</string>
+    <string name="live_display_color_profile_natural_title">Naturale</string>
+    <string name="live_display_color_profile_natural_summary">Colori e toni della pelle realistici</string>
+    <string name="live_display_color_profile_dynamic_title">Dinamico</string>
+    <string name="live_display_color_profile_dynamic_summary">Colori intensi e bianchi luminosi</string>
+    <string name="live_display_color_profile_cinema_title">Cinema</string>
+    <string name="live_display_color_profile_cinema_summary">Riproduzione del colore perfetto per i video</string>
+    <string name="live_display_color_profile_astronomy_title">Astronomia</string>
+    <string name="live_display_color_profile_astronomy_summary">Rosso profondo per la visione notturna</string>
+    <string name="live_display_color_profile_photography_title">Fotografia</string>
+    <string name="live_display_color_profile_photography_summary">Riproduzione colore perfetta per foto</string>
+    <string name="live_display_color_profile_basic_title">Base</string>
+    <string name="live_display_color_profile_basic_summary">Usa schermo non calibrato</string>
+    <string name="live_display_color_profile_adaptive_title">Adattivo</string>
+    <string name="live_display_color_profile_adaptive_summary">I colori si adattano alle condizioni ambientali</string>
+    <string name="live_display_color_profile_reading_title">Lettura</string>
+    <string name="live_display_color_profile_reading_summary">Colori più caldi per ridurre l’affaticamento degli occhi</string>
+    <string name="live_display_color_profile_srgb_title">sRGB</string>
+    <string name="live_display_color_profile_srgb_summary">Colori accurati allo spazio di colore sRGB</string>
+    <string name="live_display_color_profile_dci_p3_title">DCI-P3</string>
+    <string name="live_display_color_profile_dci_p3_summary">Colori accurati allo spazio di colore DCI-P3</string>
+    <string name="live_display_reading_mode_title">Modalità lettura</string>
+    <string name="live_display_reading_mode_summary">Modalità scala di grigi per lettura a lungo termine</string>
+    <string name="color_calibration_title">Calibrazione colore</string>
+    <string name="color_calibration_summary">Calibra i colori dello schermo</string>
+    <string name="color_red_title">Rosso</string>
+    <string name="color_green_title">Verde</string>
+    <string name="color_blue_title">Blu</string>
+    <string name="picture_adjustment_title">Regolazione immagine</string>
+    <string name="picture_adjustment_summary">Regola colore, saturazione, intensità e contrasto</string>
+    <string name="adj_hue_title">Colore</string>
+    <string name="adj_saturation_title">Saturazione</string>
+    <string name="adj_intensity_title">Intensità</string>
+    <string name="adj_contrast_title">Contrasto</string>
+    <string name="background_processes_settings_title">Processi in background</string>
+    <string name="dc_dimming_brightness_disabled">Disabilitato</string>
+    <string name="touch_sensitivity_title">Aumenta la sensibilità al tocco</string>
+    <string name="touch_sensitivity_summary">Migliora il tocco usando le protezioni dello schermo</string>
+    <string name="keywords_touch_sensitivity">tocco, sensibilità, sensibile, protezione dello schermo, film, reattivo, reattività</string>
+    <string name="wifi_timeout_summary2">Disabilitato</string>
+    <string name="wifi_timeout_summary_30secs">30 secondi</string>
+    <string name="wifi_timeout_summary_1min">1 minuto</string>
+    <string name="wifi_timeout_summary_2mins">2 minuti</string>
+    <string name="wifi_timeout_summary_5mins">5 minuti</string>
+    <string name="wifi_timeout_summary_10mins">10 minuti</string>
+    <string name="bluetooth_timeout_summary_30secs">30 secondi</string>
+    <string name="bluetooth_timeout_summary_1min">1 minuto</string>
+    <string name="bluetooth_timeout_summary_2mins">2 minuti</string>
+    <string name="bluetooth_timeout_summary_5mins">5 minuti</string>
+    <string name="bluetooth_timeout_summary_10mins">10 minuti</string>
+    <string name="vibration_intensity_disabled">Disabilitato</string>
+</resources>

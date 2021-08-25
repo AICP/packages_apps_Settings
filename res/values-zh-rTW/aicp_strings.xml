@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2016 The CyanogenMod Project
+     Copyright (C) 2017-2019 The LineageOS Project
+     Copyright (C) 2014-2020 AICP
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="aicp_version_title">AICP 體驗</string>
+    <string name="aicpextras_title">Aicp 額外功能</string>
+    <string name="aicpextras_summary">ROM 自訂</string>
+    <string name="selinux_status">SELinux 狀態</string>
+    <string name="selinux_status_disabled">已停用</string>
+    <string name="selinux_status_permissive">全部許可</string>
+    <string name="selinux_status_enforcing">強制執行</string>
+    <string name="density_category">密度選項</string>
+    <string name="app_play_store">Google Play</string>
+    <string name="prevent_ringing_option_mute_no_media">靜音，沒有媒體</string>
+    <string name="prevent_ringing_option_mute_no_media_summary">開啟 (靜音，沒有媒體)</string>
+    <string name="battery_stats_reset">重設統計</string>
+    <string name="battery_stats_message">電池統計數據即將重設</string>
+    <string name="volume_link_notification_title">連結鈴聲與通知音量</string>
+    <string name="fp_swipe_to_dismiss_notifications_title">向左或向右滑動指紋以解除通知</string>
+    <string name="fp_swipe_to_dismiss_notifications_summary">要解除通知, 請在手機背面的指紋感應器上向左或向右滑動。</string>
+    <string name="volume_steps_title">音量調整步進</string>
+    <string name="volume_steps_alarm_title">音量調整步進：鬧鐘</string>
+    <string name="volume_steps_dtmf_title">音量步進等級：DTMF</string>
+    <string name="volume_steps_music_title">音量調整步進：音樂</string>
+    <string name="volume_steps_notification_title">音量調整步進：通知</string>
+    <string name="volume_steps_ring_title">音量調整等級：鈴聲</string>
+    <string name="volume_steps_system_title">音量調整步進：系統</string>
+    <string name="volume_steps_voice_call_title">音量調整步進：語音通話</string>
+    <string name="volume_steps_reset">重設</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
+    <string name="unlock_quick_unlock_control_title">快速解除鎖定</string>
+    <string name="pocket_judge_title">口袋檢測</string>
+    <string name="pocket_judge_summary">當裝置在口袋中時阻止螢幕和按鍵輸入</string>
+    <string name="display_rotation_disabled">已停用</string>
+    <string name="display_rotation_0_title">0 度</string>
+    <string name="display_rotation_90_title">90 度</string>
+    <string name="display_rotation_180_title">180 度</string>
+    <string name="display_rotation_270_title">270 度</string>
+    <string name="increasing_ring_volume_option_title">漸強鈴聲音量</string>
+    <string name="increasing_ring_min_volume_title">開始音量</string>
+    <string name="increasing_ring_ramp_up_time_title">漸強時間</string>
+    <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="default">在您的手機 <xliff:g id="sensor_location">%1$s</xliff:g> 找到指紋感應器。</string>
+    <string name="security_settings_fingerprint_sensor_location_back">返回</string>
+    <string name="security_settings_fingerprint_sensor_location_front">前側</string>
+    <string name="security_settings_fingerprint_sensor_location_left">左側</string>
+    <string name="security_settings_fingerprint_sensor_location_right">右側</string>
+    <string name="background_processes_settings_title">背景處理程序</string>
+    <string name="dc_dimming_brightness_disabled">已停用</string>
+    <string name="wifi_timeout_summary2">已停用</string>
+    <string name="vibration_intensity_disabled">已停用</string>
+</resources>

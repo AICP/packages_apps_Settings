@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2016 The CyanogenMod Project
+     Copyright (C) 2017-2019 The LineageOS Project
+     Copyright (C) 2014-2020 AICP
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="aicp_version_title">AICP Experience</string>
+    <string name="aicpextras_title">زیاکراوەکانی Aicp</string>
+    <string name="aicpextras_summary">شازدانی ڕۆم</string>
+    <string name="selinux_status">SELinux status</string>
+    <string name="selinux_status_disabled">لەکارخراوە</string>
+    <string name="selinux_status_permissive">ڕێپێدەر</string>
+    <string name="selinux_status_enforcing">سەپاندن</string>
+    <string name="density_category">بژاردەکانی خەستی</string>
+    <string name="app_play_store">گوگڵ پله‌ی</string>
+    <string name="ambient_display_screen_summary_always_on">هەمیشە زیندوو / ووزەی زیاتری پاتری بەکاردەبا</string>
+    <string name="ambient_display_screen_summary_notifications">ئاگانامە نوێیەکان</string>
+    <string name="back_gesture_haptic_summary">چالاککردنی کاریگەری چک چکە لە جوڵەی گەڕانەوە</string>
+    <string name="dashboard_conditions_title">ڕەوشەکانی داشبۆرد</string>
+    <string name="summary_dashboard_conditions_enabled">ڕەوشەکانی داشبۆرد کارایە</string>
+    <string name="summary_dashboard_conditions_disabled">ڕەوشەکانی داشبۆرد ناکارایە</string>
+    <string name="dashboard_suggestions_title">پێشنیارەکانی داشبۆرد</string>
+    <string name="summary_dashboard_suggestions_enabled">پێشنیارەکانی داشبۆرد کارایە</string>
+    <string name="summary_dashboard_suggestions_disabled">پێشنیارەکانی داشبۆرد ناکارایە</string>
+    <string name="prevent_ringing_option_mute_no_media">کپ, بێ میدیا</string>
+    <string name="prevent_ringing_option_mute_no_media_summary">کارا (کپ, بێ میدیا)</string>
+    <string name="battery_stats_reset">گێڕانەوەی ئامار</string>
+    <string name="battery_stats_message">ئاماری مێژووی پاتری سفرەکرێتەوە</string>
+    <string name="three_finger_gesture">ڕاکێشە بۆ چرکاندنی ڕوونما</string>
+    <string name="three_finger_gesture_summary">سێ پەنجەت ڕاکێشە بۆ چرکاندنی ڕوونما</string>
+    <string name="volume_link_notification_title">پێک بەستنی دەنگەکانی زەنگ &amp; ئاگانامە</string>
+    <string name="fp_swipe_to_dismiss_notifications_title">ڕاکێشانی پەنجەمۆر بۆ ڕاست یان چەپ بۆ لادانی ئاگانامەکان</string>
+    <string name="fp_swipe_to_dismiss_notifications_summary">بۆ لادانی ئاگانامەکان، هەستەوەری پەنجەمۆرەکەت بۆلای چەپ یان ڕاست ڕاکێشە لەپشتەوەی مۆبایلەکەتەوە.</string>
+    <string name="volume_steps_title">هەنگاوەکانی دەنگ</string>
+    <string name="volume_steps_alarm_title">هەنگاوی دەنگ: ووریاکەرەوە</string>
+    <string name="volume_steps_dtmf_title">هەنگاوی دەنگ: DTMF</string>
+    <string name="volume_steps_music_title">هەنگاوی دەنگ: میوزیک</string>
+    <string name="volume_steps_notification_title">هەنگاوی دەنگ: ئاگانامە</string>
+    <string name="volume_steps_ring_title">هەنگاوی دەنگ: زەنگلێدەر</string>
+    <string name="volume_steps_system_title">هەنگاوی دەنگ: سیستەم</string>
+    <string name="volume_steps_voice_call_title">هەنگاوی دەنگ: پەیوەندی دەنگی</string>
+    <string name="volume_steps_reset">گێڕانەوە</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
+    <string name="unlock_quick_unlock_control_title">کردنەوەی خێرا</string>
+    <string name="pocket_judge_title">پێزانینی گیرفان</string>
+    <string name="pocket_judge_summary">ڕوونما و دوگمەکان سڕ دەکرێن لەوکاتەی ئامێرەکە لەگیرفاندا بێت</string>
+    <string name="display_rotation_title">بژاردەکانی لاربوونەوەی خۆکار</string>
+    <string name="display_rotation_summary">سازدانی چالاکییەکانی لاربوونەوە-خۆکاری ڕوونما</string>
+    <string name="display_rotation_disabled">لەکارخراوە</string>
+    <string name="display_rotation_unit">پلەکان</string>
+    <string name="display_rotation_category_title">دۆخەکانی لاربوونەوە</string>
+    <string name="display_rotation_0_title">0 پلە</string>
+    <string name="display_rotation_90_title">90 پلە</string>
+    <string name="display_rotation_180_title">180 پلە</string>
+    <string name="display_rotation_270_title">270 پلە</string>
+    <string name="increasing_ring_volume_option_title">بەرزکردنەوەی دەنگی زەنگ</string>
+    <string name="increasing_ring_min_volume_title">دەستپێکی دەنگ</string>
+    <string name="back_height_low_label">پڕ</string>
+    <string name="back_height_high_label">خوارەوە</string>
+    <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="tablet">هەستەوەری پەنجەمۆر ئەکەوێتە <xliff:g id="sensor_location">%1$s</xliff:g> تابلێتەکەت.</string>
+    <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="device">هەستەوەری پەنجەمۆر ئەکەوێتە <xliff:g id="sensor_location">%1$s</xliff:g> ئامێرەکەت.</string>
+    <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="default">هەستەوەری پەنجەمۆرەکەت ئەکەوێتە <xliff:g id="sensor_location">%1$s</xliff:g> ی مۆبایلەکەتەوە.</string>
+    <string name="security_settings_fingerprint_sensor_location_back">پشتەوە</string>
+    <string name="security_settings_fingerprint_sensor_location_front">پێشەوە</string>
+    <string name="security_settings_fingerprint_sensor_location_left">لای چەپ</string>
+    <string name="security_settings_fingerprint_sensor_location_right">لای ڕاست</string>
+    <string name="back_gesture_arrow_summary">پیشاندانی ئەنیمەیشنی تیر بۆ جوڵەی گەڕانەوە.</string>
+    <string name="unknown_night_light_time">نەزانراو - گرتە بۆ نوێکردنەوە</string>
+    <string name="night_display_location_text">\n\nبەکارهێنانی خشتە لە خۆرئاوابوونەوە تا خۆرهەڵاتن پێویستی بە چالاککردنی ناوچە هەیە بۆ دەسکەوتنی کاتی ناوچەکەت.</string>
+    <string name="home_handle_high_label">دووانە</string>
+    <string name="battery_temp">پله‌ی گه‌رمی پاتری</string>
+    <string name="connected_tws_device_saved_title">بیستۆکە خەزنکراوەکان</string>
+    <string name="tethering_allow_vpn_upstreams_title">ڕێگەدان بەکڕیاران بۆ بەکارهێنانی VPN</string>
+    <string name="tethering_allow_vpn_upstreams_summary">ڕێپێدان بە کڕیارانی هۆتسپۆت بۆ بەکارهێنانی VPN ی \u2019 ئەم ئامێرە بۆ تۆڕ و پەیوەستییەکانیان</string>
+    <string name="device_info_protected_single_press">گرتە بۆ پیشاندانی زانیاری</string>
+    <string name="adaptive_playback_screen_title">کارپێکەری گونجێنەر</string>
+    <string name="adaptive_playback_disabled_summary">ناکارا</string>
+    <string name="adaptive_playback_timeout_title">ووچانێک بەکاردەبات لە</string>
+    <string name="adaptive_playback_timeout_30_secs">30 چرکە</string>
+    <string name="adaptive_playback_timeout_30_secs_summary">کارا (30 چرکە)</string>
+    <string name="adaptive_playback_timeout_1_min">1 خولەک</string>
+    <string name="adaptive_playback_timeout_1_min_summary">کارا (1 خولەک)</string>
+    <string name="adaptive_playback_timeout_2_min">2 خوله‌ک</string>
+    <string name="adaptive_playback_timeout_2_min_summary">کارا (2 خولەک)</string>
+    <string name="adaptive_playback_timeout_5_min">5 خوله‌ک</string>
+    <string name="adaptive_playback_timeout_5_min_summary">کارا (5 خولەک)</string>
+    <string name="adaptive_playback_timeout_10_min">10 خوله‌ک</string>
+    <string name="adaptive_playback_timeout_10_min_summary">کارا (10 خولەک)</string>
+    <string name="live_display_mode">دۆخی نیشاندان</string>
+    <string name="live_display_color_temperature_title">پلەی گەرمی ڕەنگ</string>
+    <string name="live_display_color_temperature_summary">ڕۆژ: <xliff:g id="day_temperature">%1$d</xliff:g>K  شەو: <xliff:g id="night_temperature">%2$d</xliff:g>K</string>
+    <string name="live_display_color_temperature_label"><xliff:g id="degrees">%1$d</xliff:g>K</string>
+    <string name="live_display_day">ڕۆژ</string>
+    <string name="live_display_night">شەو</string>
+    <string name="live_display_outdoor_mode_title">دۆخی خۆکاری دەرەوە</string>
+    <string name="live_display_outdoor_mode_summary">زیادکردنی ڕووناکی و ڕەنگتێری بەخۆکاری لەژێر تیشکی ڕووناکی خۆردا</string>
+    <string name="live_display_low_power_title">کەمکردنەوەی هێزی بەکارهێنان</string>
+    <string name="live_display_low_power_summary">ڕێکخستنی ڕوونما بۆ کەمترین هێزی بەکاربردن</string>
+    <string name="live_display_enhance_color_title">باشترکردنی ڕەنگەکان</string>
+    <string name="live_display_enhance_color_summary">بەرەوپێشبردنی ئاستی ڕەنگەکانی دیمەن و هەموو جۆرێکەوە</string>
+    <string name="live_display_color_profile_title">ڕەنگی ژیننامە</string>
+    <string name="live_display_color_profile_standard_title">ستاندارد</string>
+    <string name="live_display_color_profile_standard_summary">تەواوی ڕەنگەکان و سپی ڕۆشن</string>
+    <string name="live_display_color_profile_natural_title">سروشتی</string>
+    <string name="live_display_color_profile_natural_summary">ڕەنگی ڕاستەقینەیی</string>
+    <string name="live_display_color_profile_dynamic_title">داینەمیکی</string>
+    <string name="live_display_color_profile_dynamic_summary">بەرزکردنەوەی ڕەنگەکان و سپی ڕۆشن</string>
+    <string name="live_display_color_profile_cinema_title">سینەمایی</string>
+    <string name="live_display_color_profile_cinema_summary">باشترین چاپکەری ڕەنگ بۆ ڤیدیۆ</string>
+    <string name="live_display_color_profile_astronomy_title">تیشکی گەردوونی</string>
+    <string name="live_display_color_profile_astronomy_summary">سووری قووڵ بۆ پاراستنی بینینی شەوان</string>
+    <string name="live_display_color_profile_photography_title">فۆتۆگرافی</string>
+    <string name="live_display_color_profile_photography_summary">باشترین چاپکەری ڕەنگ بۆ وێنەکان</string>
+    <string name="live_display_color_profile_basic_title">بنچینەیی</string>
+    <string name="live_display_color_profile_basic_summary">بەکارهێنانی پیشاندانی بێ پەرەپێدان</string>
+    <string name="live_display_color_profile_adaptive_title">سازدراو</string>
+    <string name="live_display_color_profile_adaptive_summary">ئەو ڕەنگانەی لەگەڵ دۆخی ڕوونمای زیندوو دەگونجێن</string>
+    <string name="live_display_color_profile_reading_title">خوێندنەوە</string>
+    <string name="live_display_color_profile_reading_summary">ڕەنگی گەرم بۆ زیاتر پاراستنی چاو</string>
+    <string name="live_display_color_profile_srgb_title">sRGB</string>
+    <string name="live_display_color_profile_srgb_summary">ڕەنگەکان بەتەواوی هاوشێوەی sRGB پیشاندەدرێن</string>
+    <string name="live_display_color_profile_dci_p3_title">DCI-P3</string>
+    <string name="live_display_color_profile_dci_p3_summary">ڕەنگەکان بەتەواوی هاوشێوەی DCI-P3 پیشاندەدرێن</string>
+    <string name="live_display_reading_mode_title">دۆخی خوێندنەوە</string>
+    <string name="live_display_reading_mode_summary">دۆخی گرەیسکەیڵ بۆ خوێندنەوەی درێژخایەن</string>
+    <string name="color_calibration_title">ڕاستکردنەوەی ڕەنگ</string>
+    <string name="color_calibration_summary">ڕاستکردنەوەی ڕه‌نگی سەر ڕوونما</string>
+    <string name="color_red_title">سور</string>
+    <string name="color_green_title">سەوز</string>
+    <string name="color_blue_title">شین</string>
+    <string name="picture_adjustment_title">چاکسازی وێنە</string>
+    <string name="picture_adjustment_summary">ڕێکخستنی سێبەر ، تێری ، خەستی و کۆنتراست</string>
+    <string name="adj_hue_title">سێبەر</string>
+    <string name="adj_saturation_title">تێری</string>
+    <string name="adj_intensity_title">خەستی</string>
+    <string name="adj_contrast_title">کۆنتراست</string>
+    <string name="background_processes_settings_title">کردارەکانی پاشبنەما</string>
+    <string name="dc_dimming_brightness_disabled">لەکارخراوە</string>
+    <string name="touch_sensitivity_title">بەرزکردنەوەی هەستیاری دەسلێدان</string>
+    <string name="touch_sensitivity_summary">دەسلێدان بەرەوپێش دەبات لەکاتی بەکارهێنانی پارێزەری ڕوونما</string>
+    <string name="keywords_touch_sensitivity">دەسلێدان، هەستیاری ، هەستەوەر، پارێزەری ڕوونما، فیلم ، وڵامدەر ، وڵامدانەوە</string>
+    <string name="wifi_timeout_summary2">لەکارخراوە</string>
+    <string name="wifi_timeout_summary_30secs">30 چرکە</string>
+    <string name="wifi_timeout_summary_1min">1 خولەک</string>
+    <string name="wifi_timeout_summary_2mins">2 خوله‌ک</string>
+    <string name="wifi_timeout_summary_5mins">5 خوله‌ک</string>
+    <string name="wifi_timeout_summary_10mins">10 خوله‌ک</string>
+    <string name="bluetooth_timeout_summary_30secs">30 چرکە</string>
+    <string name="bluetooth_timeout_summary_1min">1 خولەک</string>
+    <string name="bluetooth_timeout_summary_2mins">2 خوله‌ک</string>
+    <string name="bluetooth_timeout_summary_5mins">5 خوله‌ک</string>
+    <string name="bluetooth_timeout_summary_10mins">10 خوله‌ک</string>
+    <string name="vibration_intensity_disabled">لەکارخراوە</string>
+</resources>

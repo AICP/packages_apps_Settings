@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2016 The CyanogenMod Project
+     Copyright (C) 2017-2019 The LineageOS Project
+     Copyright (C) 2014-2020 AICP
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="aicp_version_title">Experiência AICP</string>
+    <string name="aicpextras_title">AICP Extras</string>
+    <string name="aicpextras_summary">Personalização de ROM</string>
+    <string name="selinux_status">Estado SELinux</string>
+    <string name="selinux_status_disabled">Desativado</string>
+    <string name="selinux_status_permissive">Permissivo</string>
+    <string name="selinux_status_enforcing">Forçador</string>
+    <string name="density_category">Opções de densidade</string>
+    <string name="app_play_store">Google Play</string>
+    <string name="ambient_display_screen_summary_always_on">Sempre ligado / Maior uso de bateria</string>
+    <string name="ambient_display_screen_summary_notifications">Novas notificações</string>
+    <string name="back_gesture_haptic_summary">Ativar o efeito de seleção tátil no gesto para trás</string>
+    <string name="dashboard_conditions_title">Condições do painel</string>
+    <string name="summary_dashboard_conditions_enabled">As condições do painel estão ativadas</string>
+    <string name="summary_dashboard_conditions_disabled">As condições do Painel de definições estão desativadas</string>
+    <string name="dashboard_suggestions_title">Sugestões do painel de configurações</string>
+    <string name="summary_dashboard_suggestions_enabled">As sugestões do Painel de definições estão ativadas</string>
+    <string name="summary_dashboard_suggestions_disabled">Sugestões do painel estão desativadas</string>
+    <string name="prevent_ringing_option_mute_no_media">Sem som, sem mídia</string>
+    <string name="prevent_ringing_option_mute_no_media_summary">Sem som, sem mídia)</string>
+    <string name="battery_stats_reset">Repor estatísticas</string>
+    <string name="battery_stats_message">O histórico de estatísticas da bateria vai ser apagado</string>
+    <string name="three_finger_gesture">Gesto de três dedos</string>
+    <string name="three_finger_gesture_summary">Deslizar três dedos para realizar capturas de ecrã</string>
+    <string name="volume_link_notification_title">Associar volumes de toque e notificação</string>
+    <string name="fp_swipe_to_dismiss_notifications_title">Deslize para a esquerda ou direita no sensor de impressões digitais para dispensar notificações</string>
+    <string name="fp_swipe_to_dismiss_notifications_summary">Para dispensar as notificações, deslize para a direita ou esquerda no sensor de impressões digitais na traseira do seu telefone.</string>
+    <string name="volume_steps_title">Níveis de volume</string>
+    <string name="volume_steps_alarm_title">Níveis de volume: Alarme</string>
+    <string name="volume_steps_dtmf_title">Níveis de volume: DTMF</string>
+    <string name="volume_steps_music_title">Níveis de volume: música</string>
+    <string name="volume_steps_notification_title">Níveis de volume: Notificação</string>
+    <string name="volume_steps_ring_title">Níveis de volume: Toque</string>
+    <string name="volume_steps_system_title">Nível de volume: Sistema</string>
+    <string name="volume_steps_voice_call_title">Niveis de volume: Chamada de voz</string>
+    <string name="volume_steps_reset">Repor</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
+    <string name="unlock_quick_unlock_control_title">Desbloqueio rápido</string>
+    <string name="pocket_judge_title">Detetor de bolso</string>
+    <string name="pocket_judge_summary">Bloquear o ecrã e os botões enquanto o dispositivo estiver no bolso</string>
+    <string name="display_rotation_title">Opções de Rotação</string>
+    <string name="display_rotation_summary">Configurar funções de rotação automática da tela</string>
+    <string name="display_rotation_disabled">Desativado</string>
+    <string name="display_rotation_unit">graus</string>
+    <string name="display_rotation_category_title">Modos de rotação</string>
+    <string name="display_rotation_0_title">0 graus</string>
+    <string name="display_rotation_90_title">90 graus</string>
+    <string name="display_rotation_180_title">180 graus</string>
+    <string name="display_rotation_270_title">270 graus</string>
+    <string name="increasing_ring_volume_option_title">Toque crescente</string>
+    <string name="increasing_ring_min_volume_title">Volume inicial</string>
+    <string name="increasing_ring_ramp_up_time_title">Intervalo de aumento</string>
+    <string name="back_height_low_label">Completo</string>
+    <string name="back_height_high_label">Inferior</string>
+    <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="default">Localize o sensor de impressões digitais na <xliff:g id="sensor_location">%1$s</xliff:g> do seu telefone.</string>
+    <string name="security_settings_fingerprint_sensor_location_back">voltar</string>
+    <string name="security_settings_fingerprint_sensor_location_front">frente</string>
+    <string name="security_settings_fingerprint_sensor_location_left">na lateral esquerda</string>
+    <string name="security_settings_fingerprint_sensor_location_right">no lado direito</string>
+    <string name="back_gesture_arrow_summary">Mostrar uma seta animada para o gesto de voltar</string>
+    <string name="unknown_night_light_time">Desconhecido - pressione para atualizar</string>
+    <string name="night_display_location_text">\n\nA programação do pôr do sol ao nascer requer os serviços de localização ativados para obter os horários corretos da sua localização.</string>
+    <string name="home_handle_high_label">Duplo</string>
+    <string name="battery_temp">Temperatura da bateria</string>
+    <string name="device_info_protected_single_press">Toque para mostrar as informações</string>
+    <string name="adaptive_playback_screen_title">Reprodução adaptativa</string>
+    <string name="adaptive_playback_disabled_summary">Desligado</string>
+    <string name="adaptive_playback_timeout_title">Use um tempo limite de</string>
+    <string name="adaptive_playback_timeout_30_secs">30 segundos</string>
+    <string name="adaptive_playback_timeout_30_secs_summary">Ativado (30 segundos)</string>
+    <string name="adaptive_playback_timeout_1_min">1 minuto</string>
+    <string name="adaptive_playback_timeout_1_min_summary">em 1 minuto</string>
+    <string name="adaptive_playback_timeout_2_min">2 minutos</string>
+    <string name="adaptive_playback_timeout_2_min_summary">em 2 minuto</string>
+    <string name="adaptive_playback_timeout_5_min">5 minutos</string>
+    <string name="adaptive_playback_timeout_5_min_summary">em 5 minuto</string>
+    <string name="adaptive_playback_timeout_10_min">10 minutos</string>
+    <string name="adaptive_playback_timeout_10_min_summary">em 10 minuto</string>
+    <string name="live_display_summary">Otimiza o ecrã com base na hora do dia e condições do ambiente para melhorar a legibilidade e reduzir a fadiga ocular</string>
+    <string name="live_display_mode">Modo de exibição</string>
+    <string name="live_display_color_temperature_title">Temperatura da cor</string>
+    <string name="live_display_color_temperature_summary">Dia: <xliff:g id="day_temperature">%1$d</xliff:g>K  Noite: <xliff:g id="night_temperature">%2$d</xliff:g>K</string>
+    <string name="live_display_color_temperature_label"><xliff:g id="degrees">%1$d</xliff:g>K</string>
+    <string name="live_display_day">Dia</string>
+    <string name="live_display_night">Noite</string>
+    <string name="live_display_outdoor_mode_title">Modo de exterior automático</string>
+    <string name="live_display_outdoor_mode_summary">Aumentar o brilho e saturação automaticamente sob luz solar intensa</string>
+    <string name="live_display_low_power_title">Reduzir o consumo de energia</string>
+    <string name="live_display_low_power_summary">Ajustar o ecrã para consumir menos energia, sem degradação</string>
+    <string name="live_display_enhance_color_title">Realçar cores</string>
+    <string name="live_display_enhance_color_summary">Melhorar a vivacidade da cor de tons de pele, cenário e outras imagens</string>
+    <string name="live_display_color_profile_title">Perfil de cor</string>
+    <string name="live_display_color_profile_standard_title">Standard</string>
+    <string name="live_display_color_profile_standard_summary">Cores precisas e brancos brilhantes</string>
+    <string name="live_display_color_profile_natural_title">Naturais</string>
+    <string name="live_display_color_profile_natural_summary">Cores e tons de pele realistas</string>
+    <string name="live_display_color_profile_dynamic_title">Dinâmica</string>
+    <string name="live_display_color_profile_dynamic_summary">Cores melhoradas e brancos brilhantes</string>
+    <string name="live_display_color_profile_cinema_title">Cine</string>
+    <string name="live_display_color_profile_cinema_summary">Melhor reprodução de cor para vídeo</string>
+    <string name="live_display_color_profile_astronomy_title">Astronomia</string>
+    <string name="live_display_color_profile_astronomy_summary">Vermelho profundo para preservar a visão noturna</string>
+    <string name="live_display_color_profile_photography_title">Fotografia</string>
+    <string name="live_display_color_profile_photography_summary">Melhor reprodução de cor para fotos</string>
+    <string name="live_display_color_profile_basic_title">Básica</string>
+    <string name="live_display_color_profile_basic_summary">Utilizar o ecrã não calibrado</string>
+    <string name="live_display_color_profile_adaptive_title">Adaptável</string>
+    <string name="live_display_color_profile_adaptive_summary">As cores adaptam-se às condições ambientais</string>
+    <string name="live_display_color_profile_reading_title">Leitura</string>
+    <string name="live_display_color_profile_reading_summary">Cores mais quentes para reduzir a fadiga ocular</string>
+    <string name="live_display_color_profile_srgb_title">sRGB</string>
+    <string name="live_display_color_profile_srgb_summary">Cores precisas para o espaço de cor sRGB</string>
+    <string name="live_display_color_profile_dci_p3_title">DCI-P3</string>
+    <string name="live_display_color_profile_dci_p3_summary">Cores precisas para o espaço de cor DCI-P3</string>
+    <string name="live_display_reading_mode_title">Modo de leitura</string>
+    <string name="live_display_reading_mode_summary">Modo em tons de cinzento para leituras por longos períodos</string>
+    <string name="color_calibration_title">Calibração de cores</string>
+    <string name="color_calibration_summary">Calibrar no visor as cores</string>
+    <string name="color_red_title">Vermelho</string>
+    <string name="color_green_title">Verde</string>
+    <string name="color_blue_title">Azul</string>
+    <string name="picture_adjustment_title">Ajuste da imagem</string>
+    <string name="picture_adjustment_summary">Ajustar a tonalidade, a saturação, a intensidade e o contraste</string>
+    <string name="adj_hue_title">Matiz</string>
+    <string name="adj_saturation_title">Saturação</string>
+    <string name="adj_intensity_title">Intensidade</string>
+    <string name="adj_contrast_title">Contraste</string>
+    <string name="background_processes_settings_title">Processos em segundo plano</string>
+    <string name="dc_dimming_brightness_disabled">Desativado</string>
+    <string name="touch_sensitivity_title">Aumentar sensibilidade do toque</string>
+    <string name="touch_sensitivity_summary">Melhora o toque ao usar protetores de tela</string>
+    <string name="keywords_touch_sensitivity">toque, sensibilidade, sensibilidade, protetor de tela, filme, responsivos, capacidade de resposta</string>
+    <string name="wifi_timeout_summary2">Desativado</string>
+    <string name="wifi_timeout_summary_30secs">30 segundos</string>
+    <string name="wifi_timeout_summary_1min">1 minuto</string>
+    <string name="wifi_timeout_summary_2mins">2 minutos</string>
+    <string name="wifi_timeout_summary_5mins">5 minutos</string>
+    <string name="wifi_timeout_summary_10mins">10 minutos</string>
+    <string name="bluetooth_timeout_summary_30secs">30 segundos</string>
+    <string name="bluetooth_timeout_summary_1min">1 minuto</string>
+    <string name="bluetooth_timeout_summary_2mins">2 minutos</string>
+    <string name="bluetooth_timeout_summary_5mins">5 minutos</string>
+    <string name="bluetooth_timeout_summary_10mins">10 minutos</string>
+    <string name="vibration_intensity_disabled">Desativado</string>
+</resources>

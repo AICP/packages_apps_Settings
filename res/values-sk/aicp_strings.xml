@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2016 The CyanogenMod Project
+     Copyright (C) 2017-2019 The LineageOS Project
+     Copyright (C) 2014-2020 AICP
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="aicp_version_title">AICP skúsenosti</string>
+    <string name="aicpextras_title">AICP Rozšírenia</string>
+    <string name="aicpextras_summary">Prispôsobenie ROM</string>
+    <string name="density_category">Možnosti hustoty zobrazenia</string>
+    <string name="battery_stats_reset">Vynulovať štatistiky</string>
+    <string name="battery_stats_message">Chystáte sa vymazať históriu štatistiky batérie</string>
+    <string name="fp_swipe_to_dismiss_notifications_title">Ak chcete odmietnuť upozornenia, prejdite prstom cez snímač odtlačkov prstov doľava alebo doprava</string>
+    <string name="fp_swipe_to_dismiss_notifications_summary">Ak chcete zrušiť upozornenia, prejdite prstom doľava alebo doprava po snímači odtlačkov prstov.</string>
+    <string name="volume_steps_title">Úrovne hlasitosti</string>
+    <string name="volume_steps_alarm_title">Úrovne hlasitosti: Budík</string>
+    <string name="volume_steps_dtmf_title">Úrovne hlasitosti: DTMF</string>
+    <string name="volume_steps_music_title">Úrovne hlasitosti: Hudba</string>
+    <string name="volume_steps_notification_title">Úrovne hlasitosti: Upozornenia</string>
+    <string name="volume_steps_ring_title">Úrovne hlasitosti: Tón Zvonenia</string>
+    <string name="volume_steps_system_title">Úrovne hlasitosti: Systém</string>
+    <string name="volume_steps_voice_call_title">Úrovne hlasitosti: Hlasový hovor</string>
+    <string name="volume_steps_reset">Resetovať</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
+    <string name="unlock_quick_unlock_control_title">Rýchle odomknutie</string>
+    <string name="pocket_judge_title">Detekcia režimu Vo vrecku</string>
+    <string name="pocket_judge_summary">Blokovať obrazovku a hardvérové tlačidlá, keď je zariadenie vo vrecku</string>
+    <string name="background_processes_settings_title">Procesy na pozadí</string>
+</resources>

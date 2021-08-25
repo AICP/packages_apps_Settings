@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2016 The CyanogenMod Project
+     Copyright (C) 2017-2019 The LineageOS Project
+     Copyright (C) 2014-2020 AICP
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="aicp_version_title">AICP Experience</string>
+    <string name="aicpextras_title">AICP Extras</string>
+    <string name="aicpextras_summary">ROM aanpassingen</string>
+    <string name="selinux_status">SELinux-status</string>
+    <string name="selinux_status_disabled">Uitgeschakeld</string>
+    <string name="selinux_status_permissive">Permissive (tolerant)</string>
+    <string name="selinux_status_enforcing">Enforcing (strikt)</string>
+    <string name="density_category">Schermresolutie opties</string>
+    <string name="app_play_store">Google Play</string>
+    <string name="ambient_display_screen_summary_always_on">Altijd aan / Verhoogd batterijgebruik</string>
+    <string name="ambient_display_screen_summary_notifications">Nieuwe meldingen</string>
+    <string name="back_gesture_haptic_summary">Haptisch tikeffect bij terug-gebaar inschakelen</string>
+    <string name="dashboard_conditions_title">Dashboard condities</string>
+    <string name="summary_dashboard_conditions_enabled">Dashboard condities zijn ingeschakeld</string>
+    <string name="summary_dashboard_conditions_disabled">Dashboard condities zijn uitgeschakeld</string>
+    <string name="dashboard_suggestions_title">Dashboard suggesties</string>
+    <string name="summary_dashboard_suggestions_enabled">Dashboard suggesties zijn ingeschakeld</string>
+    <string name="summary_dashboard_suggestions_disabled">Dashboard suggesties zijn uitgeschakeld</string>
+    <string name="prevent_ringing_option_mute_no_media">Dempen, geen mediaweergave</string>
+    <string name="prevent_ringing_option_mute_no_media_summary">Ingeschakeld (dempen, geen mediaweergave)</string>
+    <string name="battery_stats_reset">Statistieken resetten</string>
+    <string name="battery_stats_message">Accugeschiedenis zal worden gereset</string>
+    <string name="three_finger_gesture">Swipe voor schermafbeelding</string>
+    <string name="three_finger_gesture_summary">Veeg met 3 vingers om een schermafbeelding te maken</string>
+    <string name="volume_link_notification_title">Beltoon- &amp; notificatievolumes koppelen</string>
+    <string name="fp_swipe_to_dismiss_notifications_title">Veeg vingerafdruk naar links of rechts om meldingen te negeren</string>
+    <string name="fp_swipe_to_dismiss_notifications_summary">Veeg naar links of rechts over de vingerafdruk sensor om meldingen te negeren.</string>
+    <string name="volume_steps_title">Volume stappen</string>
+    <string name="volume_steps_alarm_title">Volume stappen: Alarm</string>
+    <string name="volume_steps_dtmf_title">Volume stappen: DTMF</string>
+    <string name="volume_steps_music_title">Volume stappen: Muziek</string>
+    <string name="volume_steps_notification_title">Volume stappen: Notificaties</string>
+    <string name="volume_steps_ring_title">Volume stappen: Beltoon</string>
+    <string name="volume_steps_system_title">Volume stappen: Systeem</string>
+    <string name="volume_steps_voice_call_title">Volume stappen: Bellen</string>
+    <string name="volume_steps_reset">Herstellen</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
+    <string name="unlock_quick_unlock_control_title">Snel ontgrendelen</string>
+    <string name="pocket_judge_title">Broekzak detectie</string>
+    <string name="pocket_judge_summary">Scherm- en toetsaanrakingen blokkeren wanneer het apparaat in de broekzak zit</string>
+    <string name="display_rotation_title">Opties voor Automatisch roteren</string>
+    <string name="display_rotation_disabled">Uitgeschakeld</string>
+    <string name="display_rotation_unit">graden</string>
+    <string name="display_rotation_category_title">Rotatie modi</string>
+    <string name="display_rotation_0_title">0 graden</string>
+    <string name="display_rotation_90_title">90 graden</string>
+    <string name="display_rotation_180_title">180 graden</string>
+    <string name="display_rotation_270_title">270 graden</string>
+    <string name="increasing_ring_volume_option_title">Luider wordende beltoon</string>
+    <string name="increasing_ring_min_volume_title">Startvolume</string>
+    <string name="increasing_ring_ramp_up_time_title">Ophoogtijd</string>
+    <string name="back_height_low_label">Volledig</string>
+    <string name="back_height_high_label">Onderaan</string>
+    <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="default">Zoek de vingerafdruksensor op de <xliff:g id="sensor_location">%1$s</xliff:g> van uw telefoon.</string>
+    <string name="security_settings_fingerprint_sensor_location_back">achterzijde</string>
+    <string name="security_settings_fingerprint_sensor_location_front">voorzijde</string>
+    <string name="security_settings_fingerprint_sensor_location_left">linkerzijde</string>
+    <string name="security_settings_fingerprint_sensor_location_right">rechterzijde</string>
+    <string name="back_gesture_arrow_summary">Toon een geanimeerde pijl voor Terug-beweging.</string>
+    <string name="unknown_night_light_time">Onbekend - druk om bij te werken</string>
+    <string name="night_display_location_text">\n\nHet schema van zonsondergang tot zonsopgang vereist ingeschakelde locatiediensten om de juiste tijden voor uw locatie te krijgen.</string>
+    <string name="home_handle_high_label">Dubbel</string>
+    <string name="battery_temp">Accu-temperatuur</string>
+    <string name="adaptive_playback_disabled_summary">Uit</string>
+    <string name="adaptive_playback_timeout_30_secs">30 seconden</string>
+    <string name="adaptive_playback_timeout_30_secs_summary">Aan (30 seconden)</string>
+    <string name="adaptive_playback_timeout_1_min">1 minuut</string>
+    <string name="adaptive_playback_timeout_1_min_summary">Aan (1 minuut)</string>
+    <string name="adaptive_playback_timeout_2_min">2 minuten</string>
+    <string name="adaptive_playback_timeout_2_min_summary">Aan (2 minuten)</string>
+    <string name="adaptive_playback_timeout_5_min">5 minuten</string>
+    <string name="adaptive_playback_timeout_5_min_summary">Aan (5 minuten)</string>
+    <string name="adaptive_playback_timeout_10_min">10 minuten</string>
+    <string name="adaptive_playback_timeout_10_min_summary">Aan (10 minuten)</string>
+    <string name="live_display_summary">Uw scherm optimaliseren aan de hand van tijdstip op de dag en lichtomstandigheden om de leesbaarheid te verbeteren en oogvermoeidheid te verminderen</string>
+    <string name="live_display_mode">Weergavemodus</string>
+    <string name="live_display_color_temperature_title">Kleurtemperatuur</string>
+    <string name="live_display_color_temperature_summary">Dag: <xliff:g id="day_temperature">%1$d</xliff:g>K Nacht: <xliff:g id="night_temperature">%2$d</xliff:g>K</string>
+    <string name="live_display_color_temperature_label"><xliff:g id="degrees">%1$d</xliff:g>K</string>
+    <string name="live_display_day">Dag</string>
+    <string name="live_display_night">Nacht</string>
+    <string name="live_display_outdoor_mode_title">Automatische buitenmodus</string>
+    <string name="live_display_outdoor_mode_summary">Automatisch de helderheid en verzadiging verhogen bij fel zonlicht</string>
+    <string name="live_display_low_power_title">Energieverbruik beperken</string>
+    <string name="live_display_low_power_summary">Scherm aanpassen voor laagst mogelijke energieverbruik zonder kwaliteitsverlies</string>
+    <string name="live_display_enhance_color_title">Kleuren verbeteren</string>
+    <string name="live_display_enhance_color_summary">Kleurlevendigheid van huidtinten, landschappen en andere afbeeldingen verbeteren</string>
+    <string name="live_display_color_profile_title">Kleurprofiel</string>
+    <string name="live_display_color_profile_standard_title">Standaard</string>
+    <string name="live_display_color_profile_standard_summary">Nauwkeurige kleuren en heldere witwaarden</string>
+    <string name="live_display_color_profile_natural_title">Natuurlijk</string>
+    <string name="live_display_color_profile_natural_summary">Realistische kleuren en huidtinten</string>
+    <string name="live_display_color_profile_dynamic_title">Dynamisch</string>
+    <string name="live_display_color_profile_dynamic_summary">Verbeterde kleuren en heldere witwaarden</string>
+    <string name="live_display_color_profile_cinema_title">Bioscoop</string>
+    <string name="live_display_color_profile_cinema_summary">Perfecte kleurweergave voor video</string>
+    <string name="live_display_color_profile_astronomy_title">Astronomie</string>
+    <string name="live_display_color_profile_astronomy_summary">Dieprood voor het behoud van nachtzicht</string>
+    <string name="live_display_color_profile_photography_title">Fotografie</string>
+    <string name="live_display_color_profile_photography_summary">Perfecte kleurweergave voor foto\'s</string>
+    <string name="live_display_color_profile_basic_title">Basis</string>
+    <string name="live_display_color_profile_basic_summary">Scherm ongekalibreerd gebruiken</string>
+    <string name="live_display_color_profile_adaptive_title">Adaptief</string>
+    <string name="live_display_color_profile_adaptive_summary">Kleuren passen zich aan aan de omgeving</string>
+    <string name="live_display_color_profile_reading_title">Lezen</string>
+    <string name="live_display_color_profile_reading_summary">Warmere kleuren voor minder vermoeidheid van de ogen</string>
+    <string name="live_display_color_profile_srgb_title">sRGB</string>
+    <string name="live_display_color_profile_srgb_summary">Kleuren binnen het sRGB-kleurenpalet</string>
+    <string name="live_display_color_profile_dci_p3_title">DCI-P3</string>
+    <string name="live_display_color_profile_dci_p3_summary">Kleuren binnen het DCI-P3-kleurenpalet</string>
+    <string name="live_display_reading_mode_title">Leesmodus</string>
+    <string name="live_display_reading_mode_summary">Grijstintenmodus voor langdurig lezen</string>
+    <string name="color_calibration_title">Kleurkalibratie</string>
+    <string name="color_calibration_summary">Kalibreren van schermkleuren</string>
+    <string name="color_red_title">Rood</string>
+    <string name="color_green_title">Groen</string>
+    <string name="color_blue_title">Blauw</string>
+    <string name="picture_adjustment_title">Beeldaanpassingen</string>
+    <string name="picture_adjustment_summary">Tint, verzadiging, intensiteit en contrast aanpassen</string>
+    <string name="adj_hue_title">Tint</string>
+    <string name="adj_saturation_title">Verzadiging</string>
+    <string name="adj_intensity_title">Intensiteit</string>
+    <string name="adj_contrast_title">Contrast</string>
+    <string name="background_processes_settings_title">Achtergrondprocessen</string>
+    <string name="dc_dimming_brightness_disabled">Uitgeschakeld</string>
+    <string name="wifi_timeout_summary2">Uitgeschakeld</string>
+    <string name="wifi_timeout_summary_30secs">30 seconden</string>
+    <string name="wifi_timeout_summary_1min">1 minuut</string>
+    <string name="wifi_timeout_summary_2mins">2 minuten</string>
+    <string name="wifi_timeout_summary_5mins">5 minuten</string>
+    <string name="wifi_timeout_summary_10mins">10 minuten</string>
+    <string name="bluetooth_timeout_summary_30secs">30 seconden</string>
+    <string name="bluetooth_timeout_summary_1min">1 minuut</string>
+    <string name="bluetooth_timeout_summary_2mins">2 minuten</string>
+    <string name="bluetooth_timeout_summary_5mins">5 minuten</string>
+    <string name="bluetooth_timeout_summary_10mins">10 minuten</string>
+    <string name="vibration_intensity_disabled">Uitgeschakeld</string>
+    <string name="vibration_intensity_light">Licht</string>
+    <string name="vibration_intensity_medium">Middel</string>
+    <string name="vibration_intensity_strong">Sterk</string>
+    <string name="vibration_intensity_custom">Aangepast</string>
+    <string name="pattern_mm_mm_mm">mm-mm-mm</string>
+    <string name="pattern_custom">Aangepast</string>
+    <string name="wakelock_blocker_save">Opslaan</string>
+    <string name="wakelock_blocker_reload">Vernieuwen</string>
+    <string name="alarm_blocker_title">Inschakelen</string>
+    <string name="alarm_blocker_save">Opslaan</string>
+    <string name="alarm_list_header">Beschikbare alarmen</string>
+    <string name="alarm_blocker_reload">Vernieuwen</string>
+</resources>
