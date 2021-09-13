@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1edd60a9_d996a0d9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2021-09-13T17:36:30Z",
+      "side": 1,
+      "message": "Better to just use a new string, rather than messing with AOSP strings",
+      "revId": "678c76e4078387245b9866829f65f3f592daeb47",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
