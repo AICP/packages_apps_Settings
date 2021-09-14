@@ -16,6 +16,23 @@
       "message": "Better to just use a new string, rather than messing with AOSP strings",
       "revId": "678c76e4078387245b9866829f65f3f592daeb47",
       "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "963da074_e792ca3d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1587
+      },
+      "writtenOn": "2021-09-14T09:45:17Z",
+      "side": 1,
+      "message": "why would we make a new string instead of modifying this?, if we used a new one this would become unused, this only makes it so the peak refresh rate is auto detected instead of hardcoded 90",
+      "revId": "678c76e4078387245b9866829f65f3f592daeb47",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
     }
   ]
 }
