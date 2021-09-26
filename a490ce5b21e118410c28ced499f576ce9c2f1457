@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3f1f5b0e_771d9c0c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2021-09-26T04:46:19Z",
+      "side": 1,
+      "message": "Test:\n- Compiles\n- No sign of the duplicate tile in QS tiles panel or in Developer options \u003e Quick settings developer tiles",
+      "revId": "a490ce5b21e118410c28ced499f576ce9c2f1457",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
