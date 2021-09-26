@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ced2ea8c_b2acf0a3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2021-09-26T04:42:39Z",
+      "side": 1,
+      "message": "Test:\n- Compiles, without any warnings\n- All the icons show up properly in the lockscreen method selection screen\n- All icons follow same color\n\nNote: Last patch just tidies up the entire change",
+      "revId": "832b696078764edf0cb60e8940262ec4b264841e",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
