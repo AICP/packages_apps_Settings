@@ -51,6 +51,8 @@
     <!-- Misc gesture settings -->
     <string name="back_gesture_haptic_title">Haptic feedback</string>
     <string name="back_gesture_haptic_summary">Enable haptic tick effect on back gesture</string>
+    <string name="navigation_bar_ime_space_title">Remove extra space below keyboard</string>
+    <string name="navigation_bar_ime_space_summary">If Immersive Mode is enabled, this does nothing</string>
 
     <!-- Dashboard Conditions & Suggestions -->
     <string name="dashboard_conditions_title">Dashboard conditions</string>
