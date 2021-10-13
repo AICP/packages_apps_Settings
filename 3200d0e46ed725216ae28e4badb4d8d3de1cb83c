@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "65688bb3_3ba13564",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2021-10-13T20:43:02Z",
+      "side": 1,
+      "message": "The rest of this topic is here: https://review.lineageos.org/q/topic:%22wifi-6-type%22+(status:open%20OR%20status:merged)",
+      "revId": "3200d0e46ed725216ae28e4badb4d8d3de1cb83c",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
