@@ -415,8 +415,4 @@
     <!-- One shot automatic brightness -->
     <string name="auto_brightness_one_shot_title">One shot auto-brightness</string>
     <string name="auto_brightness_one_shot_summary">Brightness adjustment will only occur at the moment the screen is turned on</string>
-
-    <!-- Hotspot Client Manager -->
-    <string name="wifi_tether_client_list_title">Client List</string>
-    <string name="wifi_tether_client_list_summary">Manage clients connected to hotspot</string>
 </resources>
