@@ -16,6 +16,24 @@
       "message": "Better to just get this https://review.lineageos.org/c/LineageOS/android_packages_apps_Settings/+/318047",
       "revId": "45d76b8949982b1b70f29a6d471cdec2040afac0",
       "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a1e84c0e_0e789f6d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 343
+      },
+      "writtenOn": "2021-10-16T03:13:29Z",
+      "side": 1,
+      "message": "I agree.",
+      "parentUuid": "e3605149_490edce6",
+      "revId": "45d76b8949982b1b70f29a6d471cdec2040afac0",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
     }
   ]
 }
