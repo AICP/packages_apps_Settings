@@ -104,8 +104,8 @@
     <string name="tethering_allow_vpn_upstreams_title">Permitir a los clientes usar VPNs</string>
     <string name="tethering_allow_vpn_upstreams_summary">Permitir a los clientes de punto de acceso usar las conexiones VPN de este dispositivo\u2019 como conectividad principal</string>
     <string name="device_info_protected_single_press">Toca para mostrar información</string>
-    <string name="show_gestures_navbar_switch_title">Mostrar píldora</string>
-    <string name="show_gestures_navbar_switch_summary">Mostrar gestos de barra de navegación</string>
+    <string name="show_gestures_navbar_switch_title">Indicador bajo la barra de navegación</string>
+    <string name="show_gestures_navbar_switch_summary">Mostrar barra de sugerencias de navegación con gestos</string>
     <string name="adaptive_playback_screen_title">Reproducción adaptativa</string>
     <string name="adaptive_playback_disabled_summary">Desactivado</string>
     <string name="adaptive_playback_timeout_title">Usar un tiempo de espera de</string>
@@ -296,4 +296,10 @@
     <string name="alarm_blocker_warning">Bloquear alarmas puede causar inestabilidad, cierres forzados o pérdida de datos.</string>
     <string name="directly_show_lock">Desbloqueo directo</string>
     <string name="directly_show_lock_summary">Omitir el deslizado para desbloquear la pantalla e iniciar inmediatamente la el panel de introducción del pin</string>
+    <string name="auto_brightness_one_shot_title">Brillo automático en un toque</string>
+    <string name="auto_brightness_one_shot_summary">El ajuste de brillo solo se producirá en el momento en que la pantalla esté encendida</string>
+    <string name="wifi_tether_client_list_title">Lista de clientes</string>
+    <string name="wifi_tether_client_list_summary">Administrar clientes conectados al punto de acceso</string>
+    <string name="immersive_navigation_title">Navegación inmersiva</string>
+    <string name="immersive_navigation_summary">Ocultar barra de navegación y su indicador</string>
 </resources>

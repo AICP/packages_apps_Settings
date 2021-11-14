@@ -105,8 +105,8 @@
     <string name="tethering_allow_vpn_upstreams_title">Engedélyezi a klienseknek a VPN-használatot</string>
     <string name="tethering_allow_vpn_upstreams_summary">Engedélyezze a hotspot-klienseknek, hogy a készülék VPN-kapcsolatait felfelé csatlakoztathassák</string>
     <string name="device_info_protected_single_press">Érintse meg az információ megjelenítéséhez</string>
-    <string name="show_gestures_navbar_switch_title">Állapotsáv-kapszula</string>
-    <string name="show_gestures_navbar_switch_summary">A vezérlés-állapotsáv megjelenítsée</string>
+    <string name="show_gestures_navbar_switch_title">Kapszula</string>
+    <string name="show_gestures_navbar_switch_summary">Mozdulatvezérlési navigációs-célsáv megjelenítése</string>
     <string name="adaptive_playback_screen_title">Alkalmazkodó lejátszás</string>
     <string name="adaptive_playback_disabled_summary">Kikapcsolva</string>
     <string name="adaptive_playback_timeout_title">A használt időtúllépés mértéke</string>
@@ -297,4 +297,10 @@
     <string name="alarm_blocker_warning">A riasztásblokkolás instabilitáshoz, összeomláshoz vagy adatvesztéshez vezethet.</string>
     <string name="directly_show_lock">Közvetlen feloldás</string>
     <string name="directly_show_lock_summary">Kihagyja a csúsztatásos feloldóképernyőt és azonnal a kódos belépéssel kezdi</string>
+    <string name="auto_brightness_one_shot_title">Egylövéses automata-fényerő</string>
+    <string name="auto_brightness_one_shot_summary">A fényerőbeállítás csak a képernyő bekapcsolásának pillanatában történik</string>
+    <string name="wifi_tether_client_list_title">Klienslista</string>
+    <string name="wifi_tether_client_list_summary">A hotspot-hoz csatlakozott kliensek kezelése</string>
+    <string name="immersive_navigation_title">Immerzív navigáció</string>
+    <string name="immersive_navigation_summary">A navigációs sáv és a buborék elrejtése</string>
 </resources>

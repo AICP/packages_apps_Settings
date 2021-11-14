@@ -105,8 +105,8 @@
     <string name="tethering_allow_vpn_upstreams_title">Erlaube Teilnehmern VPNs zu verwenden</string>
     <string name="tethering_allow_vpn_upstreams_summary">Erlaube Hotspot-Teilnehmern die VPN-Verbindungen dieses Gerätes für die Upstream-Konnektivität zu verwenden</string>
     <string name="device_info_protected_single_press">Zur Anzeige sensitiver Informationen einmal tippen</string>
-    <string name="show_gestures_navbar_switch_title">\"Pille\" anzeigen</string>
-    <string name="show_gestures_navbar_switch_summary">Gestenleiste anzeigen</string>
+    <string name="show_gestures_navbar_switch_title">\"Pille\" bei Gesten-Navigation</string>
+    <string name="show_gestures_navbar_switch_summary">\"Pille\" zur Indikation bei Gesten-Navigation anzeigen</string>
     <string name="adaptive_playback_screen_title">Angepasste Wiedergabedarstellung</string>
     <string name="adaptive_playback_disabled_summary">Aus</string>
     <string name="adaptive_playback_timeout_title">Abschalten nach</string>
@@ -297,4 +297,10 @@
     <string name="alarm_blocker_warning">Das Blockieren von Alarmen kann Instabilität, Abstürze und Datenverlust verursachen.</string>
     <string name="directly_show_lock">Direktes Entsperren</string>
     <string name="directly_show_lock_summary">Wischen zum Entsperren des Bildschirms überspringen und direkt mit der PIN-Eingabe fortfahren</string>
+    <string name="auto_brightness_one_shot_title">Schnelle automatische Helligkeit</string>
+    <string name="auto_brightness_one_shot_summary">Helligkeitsanpassung erfolgt nur im Moment der Bildschirmeinschaltung</string>
+    <string name="wifi_tether_client_list_title">Liste der Hotspot-Nutzer</string>
+    <string name="wifi_tether_client_list_summary">Mit dem Hotspot verbundene Nutzer/Geräte verwalten</string>
+    <string name="immersive_navigation_title">Navigationsleiste ausblenden</string>
+    <string name="immersive_navigation_summary">Navigationsleiste und \"Pille\" ausblenden</string>
 </resources>

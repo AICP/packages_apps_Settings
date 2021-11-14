@@ -104,8 +104,8 @@
     <string name="tethering_allow_vpn_upstreams_title">クライアントの VPN 使用の許可</string>
     <string name="tethering_allow_vpn_upstreams_summary">この端末の VPN 接続をホットスポットのクライアントが送信接続に使うことを許可する</string>
     <string name="device_info_protected_single_press">タップして情報を表示</string>
-    <string name="show_gestures_navbar_switch_title">ピルを表示</string>
-    <string name="show_gestures_navbar_switch_summary">ジェスチャーナビゲーションバーを表示する</string>
+    <string name="show_gestures_navbar_switch_title">ナビゲーションバーのピル</string>
+    <string name="show_gestures_navbar_switch_summary">ジェスチャーナビゲーションのヒントバーを表示する</string>
     <string name="adaptive_playback_screen_title">アダプティブ再生</string>
     <string name="adaptive_playback_disabled_summary">OFF</string>
     <string name="adaptive_playback_timeout_title">使用する点灯時間</string>
@@ -295,4 +295,10 @@
     <string name="alarm_blocker_warning">Alarm のブロックは端末を不安定にしたり、クラッシュやデータの損失などを起こす可能性があります</string>
     <string name="directly_show_lock">直接ロックを解除</string>
     <string name="directly_show_lock_summary">ロック解除のスワイプをスキップしてすぐに PIN 入力画面を表示する</string>
+    <string name="auto_brightness_one_shot_title">復帰時のみ自動明るさ調節を起動</string>
+    <string name="auto_brightness_one_shot_summary">画面が復帰した時に1度だけ自動で画面の明るさ調整が行われます</string>
+    <string name="wifi_tether_client_list_title">クライアントリスト</string>
+    <string name="wifi_tether_client_list_summary">ホットスポットに接続されているクライアントを管理する</string>
+    <string name="immersive_navigation_title">没入ナビゲーション</string>
+    <string name="immersive_navigation_summary">ナビゲーションバーとピルを隠す</string>
 </resources>

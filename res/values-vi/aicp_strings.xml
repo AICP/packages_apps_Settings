@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2016 The CyanogenMod Project
+     Copyright (C) 2017-2019 The LineageOS Project
+     Copyright (C) 2014-2020 AICP
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="aicp_version_title">AICP Experience</string>
+    <string name="aicpextras_title">Tùy biến AICP</string>
+    <string name="density_category">Tùy chọn mật độ</string>
+    <string name="battery_stats_reset">Thiết lập lại thống kê</string>
+    <string name="battery_stats_message">Số liệu thống kê lịch sử pin sẽ được thiết lập lại</string>
+    <string name="fp_swipe_to_dismiss_notifications_title">Vuốt cảm biến vân tay sang trái hoặc phải để loại bỏ thông báo</string>
+    <string name="fp_swipe_to_dismiss_notifications_summary">Để loại bỏ thông báo của bạn, hãy vuốt sang trái hoặc phải trên bộ cảm biến dấu vân tay ở mặt sau của điện thoại.</string>
+    <string name="volume_steps_title">Các mức âm lượng</string>
+    <string name="volume_steps_alarm_title">Mức âm lượng: Báo thức</string>
+    <string name="volume_steps_dtmf_title">Mức âm lượng: DTMF</string>
+    <string name="volume_steps_music_title">Mức âm lượng: Nhạc</string>
+    <string name="volume_steps_notification_title">Mức âm lượng: Thông báo</string>
+    <string name="volume_steps_ring_title">Mức âm lượng: Chuông</string>
+    <string name="volume_steps_system_title">Mức âm lượng: Hệ thống</string>
+    <string name="volume_steps_voice_call_title">Mức âm lượng: Gọi thoại</string>
+    <string name="volume_steps_reset">Đặt lại</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
+    <string name="unlock_quick_unlock_control_title">Mở khoá nhanh</string>
+    <string name="pocket_judge_title">Phát hiện trong túi</string>
+    <string name="pocket_judge_summary">Chặn bật màn hình và các nút bấm khi thiết bị ở trong túi</string>
+    <string name="background_processes_settings_title">Quá trình nền</string>
+</resources>

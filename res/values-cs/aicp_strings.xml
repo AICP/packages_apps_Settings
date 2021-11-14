@@ -104,8 +104,8 @@
     <string name="tethering_allow_vpn_upstreams_title">Umožnit klientům používat VPN</string>
     <string name="tethering_allow_vpn_upstreams_summary">Povolit klientům hotspotu používat připojení VPN tohoto zařízení pro odchozí připojení</string>
     <string name="device_info_protected_single_press">Klepnutím zobrazíte informace</string>
-    <string name="show_gestures_navbar_switch_title">Zobrazit pilulku</string>
-    <string name="show_gestures_navbar_switch_summary">Zobrazit gesta navigačního panelu</string>
+    <string name="show_gestures_navbar_switch_title">Pilulka navigačního panelu</string>
+    <string name="show_gestures_navbar_switch_summary">Zobrazit panel nápovědy pro gesta</string>
     <string name="adaptive_playback_screen_title">Adaptivní přehrávání</string>
     <string name="adaptive_playback_disabled_summary">Vyp.</string>
     <string name="adaptive_playback_timeout_title">Použít tento časový limit</string>
@@ -298,4 +298,10 @@
     <string name="alarm_blocker_warning">Blokováním alarmů můžete způsobit nestabilitu, pády nebo ztrátu dat.</string>
     <string name="directly_show_lock">Odemykat přímo</string>
     <string name="directly_show_lock_summary">Přeskočit odemčení obrazovky přejetím a okamžitě spustit zadávání</string>
+    <string name="auto_brightness_one_shot_title">Rychlé nastavení autom. jasu</string>
+    <string name="auto_brightness_one_shot_summary">K nastavení jasu dojde pouze v okamžiku zapnutí obrazovky</string>
+    <string name="wifi_tether_client_list_title">Seznam klientů</string>
+    <string name="wifi_tether_client_list_summary">Správa klientů připojených k hotspotu</string>
+    <string name="immersive_navigation_title">Navigace přes celou obrazovku</string>
+    <string name="immersive_navigation_summary">Skrýt navigační panel a pilulku</string>
 </resources>

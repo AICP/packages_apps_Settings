@@ -104,8 +104,8 @@
     <string name="tethering_allow_vpn_upstreams_title">İstemcilerin VPN kullanmasına izin ver</string>
     <string name="tethering_allow_vpn_upstreams_summary">Hotspot kullanıcılarının bağlantıları sırasında bu cihazın\u2019s VPN bağlantısını kullanmasına izin ver</string>
     <string name="device_info_protected_single_press">Bilgileri göstermek için dokunun</string>
-    <string name="show_gestures_navbar_switch_title">Hareketleri göster</string>
-    <string name="show_gestures_navbar_switch_summary">Gezinme çubuğunda hareketleri göster</string>
+    <string name="show_gestures_navbar_switch_title">Gezinme çubuğu</string>
+    <string name="show_gestures_navbar_switch_summary">Hareketle gezinme ipucu çubuğunu göster</string>
     <string name="adaptive_playback_screen_title">Uyarlanabilir oynatma</string>
     <string name="adaptive_playback_disabled_summary">Kapalı</string>
     <string name="adaptive_playback_timeout_title">Zaman aşımı kullan</string>
@@ -296,4 +296,10 @@
     <string name="alarm_blocker_warning">Alarmları engellemek, kararsızlık çökmelere veya veri kaybına neden olabilir.</string>
     <string name="directly_show_lock">Doğrudan kilit aç</string>
     <string name="directly_show_lock_summary">Ekran kilidini açmak için kaydırmayı atlayın ve hemen şifreyi girin</string>
+    <string name="auto_brightness_one_shot_title">Bir kez otomatik parlaklık</string>
+    <string name="auto_brightness_one_shot_summary">Parlaklık ayarlamaları sadece ekran açıldığı anda gerçekleşecek</string>
+    <string name="wifi_tether_client_list_title">İstemci listesi</string>
+    <string name="wifi_tether_client_list_summary">Hotspot\'a bağlı istemcileri yönetin</string>
+    <string name="immersive_navigation_title">Tam ekran gezinme</string>
+    <string name="immersive_navigation_summary">Gezinti çubuğunu ve hapı gizle</string>
 </resources>

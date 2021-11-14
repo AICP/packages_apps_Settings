@@ -104,8 +104,6 @@
     <string name="tethering_allow_vpn_upstreams_title">Разрешить клиентам использовать VPN</string>
     <string name="tethering_allow_vpn_upstreams_summary">Разрешить клиентам точки доступа использовать VPN-соединения этого устройства для подключения к сети</string>
     <string name="device_info_protected_single_press">Нажмите, чтобы показать информацию</string>
-    <string name="show_gestures_navbar_switch_title">Показывать полоску жестов</string>
-    <string name="show_gestures_navbar_switch_summary">Показывать панель навигации жестов</string>
     <string name="adaptive_playback_screen_title">Адаптивное воспроизведение</string>
     <string name="adaptive_playback_disabled_summary">Выкл</string>
     <string name="adaptive_playback_timeout_title">Использовать таймаут</string>
