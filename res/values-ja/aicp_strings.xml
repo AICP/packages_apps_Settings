@@ -297,8 +297,6 @@
     <string name="directly_show_lock_summary">ロック解除のスワイプをスキップしてすぐに PIN 入力画面を表示する</string>
     <string name="auto_brightness_one_shot_title">復帰時のみ自動明るさ調節を起動</string>
     <string name="auto_brightness_one_shot_summary">画面が復帰した時に1度だけ自動で画面の明るさ調整が行われます</string>
-    <string name="wifi_tether_client_list_title">クライアントリスト</string>
-    <string name="wifi_tether_client_list_summary">ホットスポットに接続されているクライアントを管理する</string>
     <string name="immersive_navigation_title">没入ナビゲーション</string>
     <string name="immersive_navigation_summary">ナビゲーションバーとピルを隠す</string>
 </resources>

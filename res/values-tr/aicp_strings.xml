@@ -298,8 +298,7 @@
     <string name="directly_show_lock_summary">Ekran kilidini açmak için kaydırmayı atlayın ve hemen şifreyi girin</string>
     <string name="auto_brightness_one_shot_title">Bir kez otomatik parlaklık</string>
     <string name="auto_brightness_one_shot_summary">Parlaklık ayarlamaları sadece ekran açıldığı anda gerçekleşecek</string>
-    <string name="wifi_tether_client_list_title">İstemci listesi</string>
-    <string name="wifi_tether_client_list_summary">Hotspot\'a bağlı istemcileri yönetin</string>
     <string name="immersive_navigation_title">Tam ekran gezinme</string>
     <string name="immersive_navigation_summary">Gezinti çubuğunu ve hapı gizle</string>
+    <string name="wifi_setup_wizard_title">Wi\u2011Fi ağı seçin</string>
 </resources>

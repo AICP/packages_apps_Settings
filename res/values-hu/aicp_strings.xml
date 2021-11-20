@@ -299,8 +299,7 @@
     <string name="directly_show_lock_summary">Kihagyja a csúsztatásos feloldóképernyőt és azonnal a kódos belépéssel kezdi</string>
     <string name="auto_brightness_one_shot_title">Egylövéses automata-fényerő</string>
     <string name="auto_brightness_one_shot_summary">A fényerőbeállítás csak a képernyő bekapcsolásának pillanatában történik</string>
-    <string name="wifi_tether_client_list_title">Klienslista</string>
-    <string name="wifi_tether_client_list_summary">A hotspot-hoz csatlakozott kliensek kezelése</string>
     <string name="immersive_navigation_title">Immerzív navigáció</string>
     <string name="immersive_navigation_summary">A navigációs sáv és a buborék elrejtése</string>
+    <string name="wifi_setup_wizard_title">A Wi-Fi-hálózat kiválasztása</string>
 </resources>

@@ -297,8 +297,6 @@
     <string name="directly_show_lock_summary">跳过滑动解锁屏幕并立即开始按键输入</string>
     <string name="auto_brightness_one_shot_title">一键自动亮度</string>
     <string name="auto_brightness_one_shot_summary">亮度调整只会在屏幕打开的那一刻发生</string>
-    <string name="wifi_tether_client_list_title">客户端列表</string>
-    <string name="wifi_tether_client_list_summary">管理连接到热点的客户端</string>
     <string name="immersive_navigation_title">沉浸式导航</string>
     <string name="immersive_navigation_summary">隐藏导航栏和秀丸</string>
 </resources>

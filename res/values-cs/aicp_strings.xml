@@ -300,8 +300,7 @@
     <string name="directly_show_lock_summary">Přeskočit odemčení obrazovky přejetím a okamžitě spustit zadávání</string>
     <string name="auto_brightness_one_shot_title">Rychlé nastavení autom. jasu</string>
     <string name="auto_brightness_one_shot_summary">K nastavení jasu dojde pouze v okamžiku zapnutí obrazovky</string>
-    <string name="wifi_tether_client_list_title">Seznam klientů</string>
-    <string name="wifi_tether_client_list_summary">Správa klientů připojených k hotspotu</string>
     <string name="immersive_navigation_title">Navigace přes celou obrazovku</string>
     <string name="immersive_navigation_summary">Skrýt navigační panel a pilulku</string>
+    <string name="wifi_setup_wizard_title">Vyberte síť Wi\u2011Fi</string>
 </resources>

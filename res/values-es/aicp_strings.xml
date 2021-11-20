@@ -298,8 +298,7 @@
     <string name="directly_show_lock_summary">Omitir el deslizado para desbloquear la pantalla e iniciar inmediatamente la el panel de introducción del pin</string>
     <string name="auto_brightness_one_shot_title">Brillo automático en un toque</string>
     <string name="auto_brightness_one_shot_summary">El ajuste de brillo solo se producirá en el momento en que la pantalla esté encendida</string>
-    <string name="wifi_tether_client_list_title">Lista de clientes</string>
-    <string name="wifi_tether_client_list_summary">Administrar clientes conectados al punto de acceso</string>
     <string name="immersive_navigation_title">Navegación inmersiva</string>
     <string name="immersive_navigation_summary">Ocultar barra de navegación y su indicador</string>
+    <string name="wifi_setup_wizard_title">Seleccionar red Wi\u2011Fi</string>
 </resources>
