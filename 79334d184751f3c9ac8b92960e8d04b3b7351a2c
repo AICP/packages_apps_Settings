@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d73d82d_9c46bc18",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2021-11-23T05:00:20Z",
+      "side": 1,
+      "message": "Test:\n- Compiles\n- Show the devices peak refresh rate in preference summary (Unable to test)\n\nSquashed the changes from the fixup commit, as it was proposed here already",
+      "revId": "79334d184751f3c9ac8b92960e8d04b3b7351a2c",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
