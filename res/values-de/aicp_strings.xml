@@ -299,8 +299,7 @@
     <string name="directly_show_lock_summary">Wischen zum Entsperren des Bildschirms überspringen und direkt mit der PIN-Eingabe fortfahren</string>
     <string name="auto_brightness_one_shot_title">Schnelle automatische Helligkeit</string>
     <string name="auto_brightness_one_shot_summary">Helligkeitsanpassung erfolgt nur im Moment der Bildschirmeinschaltung</string>
-    <string name="wifi_tether_client_list_title">Liste der Hotspot-Nutzer</string>
-    <string name="wifi_tether_client_list_summary">Mit dem Hotspot verbundene Nutzer/Geräte verwalten</string>
     <string name="immersive_navigation_title">Navigationsleiste ausblenden</string>
     <string name="immersive_navigation_summary">Navigationsleiste und \"Pille\" ausblenden</string>
+    <string name="wifi_setup_wizard_title">WLAN-Netzwerk auswählen</string>
 </resources>

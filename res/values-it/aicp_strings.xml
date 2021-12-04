@@ -298,8 +298,6 @@
     <string name="directly_show_lock_summary">Salta lo scorrimento per sbloccare lo schermo e vai immediatamente all\'immissione del Pin/Password</string>
     <string name="auto_brightness_one_shot_title">Luminosità automatica in un colpo</string>
     <string name="auto_brightness_one_shot_summary">La regolazione della luminosità avverrà solo nel momento in cui lo schermo è acceso</string>
-    <string name="wifi_tether_client_list_title">Elenco Client</string>
-    <string name="wifi_tether_client_list_summary">Gestisci i client connessi all\'hotspot</string>
     <string name="immersive_navigation_title">Navigazione immersiva</string>
     <string name="immersive_navigation_summary">Nascondi barra di navigazione e pill</string>
 </resources>

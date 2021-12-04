@@ -298,8 +298,6 @@
     <string name="directly_show_lock_summary">Spring strøget over, for at låse skærmen op og øjeblikkeligt påbegynde nøgleindtastning</string>
     <string name="auto_brightness_one_shot_title">Etskuds automatisk lysstyrke</string>
     <string name="auto_brightness_one_shot_summary">Lysstyrkejustering vil kun forekomme i det øjeblik, skærmen tændes</string>
-    <string name="wifi_tether_client_list_title">Klientliste</string>
-    <string name="wifi_tether_client_list_summary">Administrér klienter forbundet til hotspot</string>
     <string name="immersive_navigation_title">Inddragende navigation</string>
     <string name="immersive_navigation_summary">Skjul navilinje og pille</string>
 </resources>
