@@ -52,6 +52,7 @@
         settings:controller="com.android.settings.deviceinfo.firmwareversion.SecurityPatchLevelPreferenceController"/>
 
     <!-- Mainline module version -->
+    <!--
     <Preference
         android:key="module_version"
         android:title="@string/module_version"
@@ -59,6 +60,7 @@
         settings:enableCopying="true"
         android:selectable="false"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.MainlineModuleVersionPreferenceController"/>
+    -->
 
     <!-- Baseband -->
     <Preference
