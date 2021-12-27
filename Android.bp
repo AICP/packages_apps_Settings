@@ -94,6 +94,8 @@ android_library {
         "glide",
         "kotlinx_coroutines_android",
         "kotlinx_coroutines",
+        "SystemUISharedLib",
+        "powerusagefeaturegoogle",
     ],
 
     libs: [
@@ -160,4 +162,10 @@ android_library_import {
 android_library_import {
     name: "androidx.preference_preference-ktx",
     aars: ["libs/preference-ktx-1.2.0-alpha02.aar"],
+}
+
+java_import {
+    name: "powerusagefeaturegoogle",
+    jars: ["libs/powerusagefeaturegoogle.jar"],
+    sdk_version: "current",
 }
