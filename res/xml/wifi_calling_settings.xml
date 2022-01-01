@@ -49,4 +49,9 @@
             android:key="no_options_description"
             isPreferenceVisible="false" />
 
+    <com.android.settingslib.widget.FooterPreference
+            android:key="wfc_screen_footer"
+            android:selectable="false"
+            settings:searchable="false"/>
+
 </PreferenceScreen>
