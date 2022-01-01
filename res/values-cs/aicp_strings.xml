@@ -303,4 +303,5 @@
     <string name="immersive_navigation_title">Navigace přes celou obrazovku</string>
     <string name="immersive_navigation_summary">Skrýt navigační panel a pilulku</string>
     <string name="wifi_setup_wizard_title">Vyberte síť Wi\u2011Fi</string>
+    <string name="peak_refresh_rate_summary_custom">U některého obsahu automaticky zvýší obnovovací frekvenci z 60 na %1$d Hz. Zvyšuje využití baterie.</string>
 </resources>

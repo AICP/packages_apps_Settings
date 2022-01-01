@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2016 The CyanogenMod Project
+     Copyright (C) 2017-2019 The LineageOS Project
+     Copyright (C) 2014-2020 AICP
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="aicp_version_summary">AICP 11 Ediție - 16.1</string>
+    <string name="adb_enable_root">Depanare ca root</string>
+    <string name="adb_enable_summary_root">Permite depanării sistemului Android să ruleze în modul root</string>
+    <string name="back_gesture_haptic_title">Vibraţii la atingere</string>
+    <string name="unlock_quick_unlock_control_summary">Deblocare automată cu succes/parolă fără tasta pin/password</string>
+    <string name="gesture_height_category_title">Locație spate</string>
+    <string name="gesture_region">Inaltime</string>
+    <string name="back_height_message">Locația este acea parte a înălțimii ecranului folosită ca regiune accesibilă pentru gestul din spate.</string>
+    <string name="back_gesture_arrow_message">Animație gest înapoi</string>
+    <string name="handle_length_category_title">Bară de gesturi</string>
+    <string name="home_handle_sizer_title">Dimensiune</string>
+    <string name="home_handle_low_label">Stoc</string>
+    <string name="show_gestures_navbar_switch_title">Bară de navigare Pill</string>
+    <string name="show_gestures_navbar_switch_summary">Arată bara de sugestii de navigare gesturală</string>
+    <string name="adaptive_playback_timeout_none">Fără pauză</string>
+    <string name="adaptive_playback_timeout_none_summary">Pornit</string>
+    <string name="prevent_ringing_option_cycle">Ciclu cu moduri</string>
+    <string name="prevent_ringing_option_cycle_summary">Pe (ciclu prin moduri)</string>
+    <string name="live_display_anti_flicker_title">Anti-pâlpâire</string>
+    <string name="live_display_anti_flicker_summary">Prevenirea pâlpâirii extinse și reducerea oboselii ochilor în condiții de lumină slabă. E posibil degradarea culorii și afectarea modulului în care sunt afișate unele elemente.</string>
+    <string name="battery_health_title">Integritatea Bateriei</string>
+    <string name="battery_health_summary">Monitorizați starea bateriei dispozitivului dumneavoastră</string>
+    <string name="battery_type">Tipul bateriei</string>
+    <string name="current_battery_capacity">Capacitatea curentă a bateriei</string>
+    <string name="current_battery_capacity_summary">Capacitatea curentă a bateriei măsurată de kernel</string>
+    <string name="designed_battery_capacity">Capacitatea proiectată a bateriei</string>
+    <string name="designed_battery_capacity_summary">Capacitatea bateriei proiectată de producător</string>
+    <string name="battery_charge_cycles">Cicluri de încărcare finalizate</string>
+    <string name="dc_dimming_title">Mod întunecare protectie ochi</string>
+    <string name="dc_dimming_info">Reduce sușa ochilor în condiții de lumină joasă, dar poate duce la o calitate redusă a imaginii și la o producție slabă de culori.</string>
+    <string name="dc_dimming_auto_mode_title">Orar</string>
+    <string name="dc_dimming_mode_brightness">Porniți când luminozitatea este sub prag</string>
+    <string name="dc_dimming_mode_full">Depinde de timp și luminozitate</string>
+    <string name="dc_dimming_brightness_title">Pragul de luminozitate</string>
+    <string name="dc_dimming_restore_auto_mode">Restabilire mod automat</string>
+    <string name="dc_dimming_brightness_info">Activează întunecare DC doar când luminozitatea medie este sub prag</string>
+    <string name="dc_dimming_off_auto_mode_auto">Se va activa automat</string>
+    <string name="dc_dimming_on_auto_mode_auto">Se va activa automat</string>
+    <string name="keywords_display_dc_dimming">dc redus, pâlpâi, ochi, tulpină</string>
+    <string name="applock_title">Blocaj aplicații</string>
+    <string name="applock_locked">Blocat</string>
+    <string name="applock_unlocked">Deprotejat</string>
+    <string name="applock_locked_apps">Aplicații blocate</string>
+    <string name="applock_unlocked_apps">Aplicații deprotejate</string>
+    <string name="applock_lock_after_title">Când se blochează</string>
+    <string name="applock_lock_after_instantly">Instantaneu</string>
+    <string name="applock_lock_after_15_seconds">15 Secunde</string>
+    <string name="applock_lock_after_screen_off">Închidere ecran</string>
+    <string name="applock_lock_after_summary">Aplicația va fi blocată după expirarea timpului selectat</string>
+    <string name="applock_lock_after_instantly_summary">Aplicația va fi blocată instantaneu când este închisă</string>
+    <string name="applock_lock_after_15_seconds_summary">Aplicația va fi blocată la 15 secunde după închidere</string>
+    <string name="applock_lock_after_screen_off_summary">Aplicația va fi blocată când ecranul este oprit</string>
+    <string name="applock_notification_info">Puteți afișa/ascunde conținutul notificărilor pe bază de aplicație, făcând clic pe pictograma de notificare afișată pe preferințele fiecărei aplicații blocate</string>
+    <string name="applock_show_notif">Afișarea conținutului notificărilor</string>
+    <string name="applock_hide_notif">Ascundeți conținutul notificărilor</string>
+    <string name="applock_setup">Configurare lacăt aplicații</string>
+    <string name="applock_overlay_summary">Această caracteristică nu este disponibilă deoarece această aplicație este blocată</string>
+    <string name="keywords_applock_settings">applock, applocker, blocare aplicație, localizare aplicații</string>
+    <string name="lock_settings_picker_pattern_size_message">Alegeți dimensiunea modelului</string>
+    <string name="lockpattern_settings_enable_error_path_title">Afișare eroare model</string>
+    <string name="lockpattern_settings_enable_dots_title">Afișare puncte șablon</string>
+    <string name="radio_info_title">Informații radio</string>
+    <string name="duration_less_than_one_minute">Mai puţin de un minut</string>
+    <string name="screen_time_summary_usage_today">%1$s astăzi</string>
+    <string name="cleartext_network_policy_title">Restricționați traficul de rețea necartext</string>
+    <string name="cleartext_network_policy_summary">Blochează tot traficul de rețea non-TLS. Necesită configurație DNS privat. Notă: fără exceptări explicite, Tor și majoritatea VPN-urilor nu vor funcționa</string>
+    <string name="wifi_timeout">Opriți rețeaua Wi-Fi automat</string>
+    <string name="wifi_timeout_summary">Wi-Fi se va dezactiva după <xliff:g id="timeout_description">%1$s</xliff:g> dacă nu este conectat la rețea</string>
+    <string name="wifi_timeout_summary_never">Niciodată</string>
+    <string name="wifi_timeout_summary_15secs">15 secunde</string>
+    <string name="wifi_timeout_summary_30mins">30 minute</string>
+    <string name="wifi_timeout_summary_1hour">1 oră</string>
+    <string name="wifi_timeout_summary_2hours">2 ore</string>
+    <string name="wifi_timeout_summary_4hours">4 ore</string>
+    <string name="wifi_timeout_summary_8hours">8 ore</string>
+    <string name="bluetooth_timeout">Pauza Bluetooth</string>
+    <string name="bluetooth_timeout_summary">Bluetooth se va dezactiva după <xliff:g id="timeout_description">%1$s</xliff:g> dacă nu există dispozitive conectate</string>
+    <string name="bluetooth_timeout_summary2">Nu dezactivați automat Bluetooth</string>
+    <string name="bluetooth_timeout_summary_never">Niciodată</string>
+    <string name="bluetooth_timeout_summary_15secs">15 secunde</string>
+    <string name="bluetooth_timeout_summary_30mins">30 minute</string>
+    <string name="bluetooth_timeout_summary_1hour">1 oră</string>
+    <string name="bluetooth_timeout_summary_2hours">2 ore</string>
+    <string name="bluetooth_timeout_summary_4hours">4 ore</string>
+    <string name="bluetooth_timeout_summary_8hours">8 ore</string>
+    <string name="incall_feeedback_vibrate_title">Vibrare în apel</string>
+    <string name="incall_feeedback_summary">Vibrare pentru a indica starea apelului</string>
+    <string name="vibration_preferences">Vibrații</string>
+    <string name="summary_vibration_preferences">Schimbaţi intensitatea, modelul și altele</string>
+    <string name="keywords_vibration_preferences">model de vibraţie, intensitate vibraţii, apel, atingere, intensitate vibraţie</string>
+    <string name="ringtone_vibration_pattern">Model vibrație ton de sonerie</string>
+    <string name="vibration_intensity_ringer">Intensitatea vibraţiei tonului de sonerie</string>
+    <string name="vibration_intensity_notification">Intensitatea vibraţiei notificări</string>
+    <string name="vibration_intensity_light">Luminos</string>
+    <string name="vibration_intensity_medium">Mediu</string>
+    <string name="vibration_intensity_strong">Puternic</string>
+    <string name="vibration_intensity_custom">Particularizat</string>
+    <string name="pattern_dzzz_dzzz">dzzz-dzzz</string>
+    <string name="pattern_dzzz_da">dzzz-da</string>
+    <string name="pattern_mm_mm_mm">mm-mm-mm</string>
+    <string name="pattern_da_da_dzzz">da-da-dzzz</string>
+    <string name="pattern_da_dzzz_da">da-dzzz-da</string>
+    <string name="pattern_custom">Particularizat</string>
+    <string name="custom_vibration_pattern_title">Setaţi un model personalizat de vibraţii</string>
+    <string name="wakelock_blocker_title">Blocator Wakelock</string>
+    <string name="wakelock_blocker_summary">Blocare Wakelock-uri de sistem</string>
+    <string name="wakelock_blocker_save">Salvați</string>
+    <string name="wakelock_list_header">Wakelock-uri disponibile</string>
+    <string name="wakelock_blocker_reload">Reîncărcare</string>
+    <string name="wakelock_blocker_warning_title">Continuați cu precauție</string>
+    <string name="wakelock_blocker_warning">Blocarea wakelock-urilor poate cauza instabilitate, blocări sau pierderi de date</string>
+    <string name="alarm_blocker">Blocator Alarmă</string>
+    <string name="alarm_blocker_title">Activare</string>
+    <string name="alarm_blocker_summary">Blochează alarme în timp ce ecranul este oprit</string>
+    <string name="alarm_blocker_save">Salvați</string>
+    <string name="alarm_list_header">Alarme disponibile</string>
+    <string name="alarm_blocker_reload">Reîncărcare</string>
+    <string name="alarm_blocker_warning_title">Continuați cu precauție</string>
+    <string name="alarm_blocker_warning">Blocarea alarmelor poate cauza instabilitate, blocări sau pierderi de date.</string>
+    <string name="directly_show_lock">Deblocare directă</string>
+    <string name="directly_show_lock_summary">Treci peste glisarea pentru deblocare și începe imediat introducerea codului</string>
+    <string name="auto_brightness_one_shot_title">Luminozitate automată instantă</string>
+    <string name="auto_brightness_one_shot_summary">Ajustarea luminozității va avea loc doar în momentul în care ecranul este pornit</string>
+    <string name="immersive_navigation_title">Navigare imersivă</string>
+    <string name="immersive_navigation_summary">Ascunde bara de navigare și pilula</string>
+    <string name="wifi_setup_wizard_title">Selectați rețeaua Wi\u2011Fi</string>
+</resources>

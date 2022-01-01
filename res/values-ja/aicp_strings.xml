@@ -299,4 +299,6 @@
     <string name="auto_brightness_one_shot_summary">画面が復帰した時に1度だけ自動で画面の明るさ調整が行われます</string>
     <string name="immersive_navigation_title">没入ナビゲーション</string>
     <string name="immersive_navigation_summary">ナビゲーションバーとピルを隠す</string>
+    <string name="wifi_setup_wizard_title">Wi\u2011Fi ネットワークの選択</string>
+    <string name="peak_refresh_rate_summary_custom">コンテンツに応じてリフレッシュレートを自動的に 60 Hz から %1$d Hz に変更します。また電池使用量が増えます。</string>
 </resources>

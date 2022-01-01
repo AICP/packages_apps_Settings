@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2016 The CyanogenMod Project
+     Copyright (C) 2017-2019 The LineageOS Project
+     Copyright (C) 2014-2020 AICP
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="aicp_version_summary">AICP 11 ویرایش- 16.1</string>
+    <string name="adb_enable_root">اشکال‌زدایی ریشه‌ای</string>
+    <string name="adb_enable_summary_root">اجازه دادن به اشکال‌زدایی اندروید که به صورت روت اجرا شود</string>
+    <string name="back_gesture_haptic_title">بازخورد لمسی</string>
+    <string name="unlock_quick_unlock_control_summary">قفل خودکار با پین/رمز عبور موفق و بدون کلید Enter باز شود</string>
+    <string name="gesture_height_category_title">محل بازگشت</string>
+    <string name="gesture_region">بلندا</string>
+    <string name="back_height_message">مکان بخشی از ارتفاع صفحه نمایش است که به عنوان منطقه قابل لمس برای کشیدن بازگشت استفاده می‌شود.</string>
+    <string name="back_gesture_arrow_message">انیمیشن کشیدن به عقب</string>
+    <string name="handle_length_category_title">نوار کشیدن</string>
+    <string name="home_handle_sizer_title">سایز</string>
+    <string name="home_handle_low_label">معمولی</string>
+    <string name="show_gestures_navbar_switch_title">نشاگر نوار ناوبری</string>
+    <string name="show_gestures_navbar_switch_summary">نمایش نوار راهنمایی جهت‌یابی کشیدن</string>
+    <string name="adaptive_playback_timeout_none">بدون تنظیم زمان</string>
+    <string name="adaptive_playback_timeout_none_summary">روشن(بدون وقفه)</string>
+    <string name="prevent_ringing_option_cycle">چرخه در میان حالت‌ها</string>
+    <string name="prevent_ringing_option_cycle_summary">روشن (چرخه در میان حالت‌ها)</string>
+    <string name="live_display_anti_flicker_title">تصویر بدون پرش</string>
+    <string name="live_display_anti_flicker_summary">از پرش گسترده تصویر جلوگیری کرده و خستگی چشم را در شرایط کم نور کاهش می‌دهد. این قابلیت ممکن است دقت رنگ را کاهش داده و بر نحوه نمایش برخی موارد تأثیر بگذارد.</string>
+    <string name="battery_health_title">سلامت باتری</string>
+    <string name="battery_health_summary">سلامت باتری دستگاه شما را بررسی می‌کند</string>
+    <string name="battery_type">نوع باتری</string>
+    <string name="current_battery_capacity">ظرفیت حال حاضر باتری</string>
+    <string name="current_battery_capacity_summary">ظرفیت حال حاضر باتری، اندازه گیری توسط کرنل</string>
+    <string name="designed_battery_capacity">ظرفیت باتری طراحی شده</string>
+    <string name="designed_battery_capacity_summary">ظرفیت باتری که شرکت سازنده برای این گوشی در نظر گرفته</string>
+    <string name="battery_charge_cycles">چرخه شارژ کردن کامل شد</string>
+    <string name="dc_dimming_title">تیره کردن DC</string>
+    <string name="dc_dimming_info">فشار چشم را در شرایط نور کم کاهش می دهد اما ممکن است منجر به کاهش کیفیت تصویر و تولید رنگ ضعیف شود.</string>
+    <string name="dc_dimming_auto_mode_title">زمان‌بندی</string>
+    <string name="dc_dimming_mode_brightness">وقتی روشنایی زیر آستانه است روشن شود</string>
+    <string name="dc_dimming_mode_full">بستگی به زمان و روشنایی</string>
+    <string name="dc_dimming_brightness_title">آستانه روشنایی</string>
+    <string name="dc_dimming_restore_auto_mode">حالت بازیابی خودکار</string>
+    <string name="dc_dimming_brightness_info">نور کم را فقط زمانی فعال کنید که میانگین روشنایی کمتر از حد باشد</string>
+    <string name="dc_dimming_off_auto_mode_auto">به طور خودکار روشن می‌شود</string>
+    <string name="dc_dimming_on_auto_mode_auto">به طور خودکار خاموش می‌شود</string>
+    <string name="keywords_display_dc_dimming">تاریکی dc، سوسو زدن، چشم، فشار</string>
+    <string name="applock_title">قفل‌کننده برنامه</string>
+    <string name="applock_locked">قفل شده</string>
+    <string name="applock_unlocked">باز شد</string>
+    <string name="applock_locked_apps">برنامه‌های قفل شده</string>
+    <string name="applock_unlocked_apps">ﺑﺮﻧامه‌ﻫﺎﯼ ﻗﻔﻞ ﻧﺸﺪﻩ</string>
+    <string name="applock_lock_after_title">هنگام قفل</string>
+    <string name="applock_lock_after_instantly">فوری</string>
+    <string name="applock_lock_after_15_seconds">۱۵ ثانیه</string>
+    <string name="applock_lock_after_screen_off">صفحه خاموش</string>
+    <string name="applock_lock_after_summary">پس از اتمام زمان انتخاب شده، برنامه قفل خواهد شد</string>
+    <string name="applock_lock_after_instantly_summary">برنامه در صورت بسته شدن فورا قفل می‌شود</string>
+    <string name="applock_lock_after_15_seconds_summary">برنامه ۱۵ ثانیه پس از بسته شدن قفل می‌شود</string>
+    <string name="applock_lock_after_screen_off_summary">با خاموش شدن صفحه نمایش، برنامه قفل خواهد شد</string>
+    <string name="applock_notification_info">برای هر برنامه در قسمت تنظیمات آن می‌توانید محتوی آگاه‌سازی ها را غیرفعال کنید</string>
+    <string name="applock_show_notif">نمایش محتوای اعلان</string>
+    <string name="applock_hide_notif">پنهان‌سازی محتوای اعلان</string>
+    <string name="applock_setup">راه‌اندازی قفل برنامه</string>
+    <string name="applock_overlay_summary">این ویژگی در دسترس نیست زیرا این برنامه قفل است</string>
+    <plurals name="applock_summary">
+        <item quantity="one">۱ برنامه قفل شد</item>
+        <item quantity="other">%d برنامه قفل شد</item>
+    </plurals>
+    <string name="keywords_applock_settings">قفل برنامه</string>
+    <string name="lock_settings_picker_pattern_size_message">اندازه‌ی الگو را انتخاب کنید</string>
+    <string name="lockpattern_settings_enable_error_path_title">نمایش الگوی اشتباه</string>
+    <string name="lockpattern_settings_enable_dots_title">نمایش نقطه‌های الگو</string>
+    <string name="radio_info_title">اطلاعات رادیو</string>
+    <string name="duration_less_than_one_minute">کمتر از یک دقیقه</string>
+    <string name="screen_time_summary_usage_today">امروز: %1$s</string>
+    <string name="cleartext_network_policy_title">متن شفاف، میزان استفاده اینترنت را محدود کنید</string>
+    <string name="cleartext_network_policy_summary">تمام ترافیک شبکه غیر TLS را مسدود می کند. به پیکربندی دی ان اس خصوصی نیاز دارد. توجه: بدون اجازه های شما، تور و اکثر فیلترشکن ها کار نخواهند کرد</string>
+    <string name="wifi_timeout">وای فای را خودکار خاموش کنید</string>
+    <string name="wifi_timeout_summary">در صورت عدم اتصال، وای‌فای بعد از <xliff:g id="timeout_description">%1$s</xliff:g> خاموش خواهد شد </string>
+    <string name="wifi_timeout_summary_never">هرگز</string>
+    <string name="wifi_timeout_summary_15secs">۱۵ ثانیه</string>
+    <string name="wifi_timeout_summary_30mins">۳۰ دقیقه</string>
+    <string name="wifi_timeout_summary_1hour">۱ ساعت</string>
+    <string name="wifi_timeout_summary_2hours">۲ ساعت</string>
+    <string name="wifi_timeout_summary_4hours">۴ ساعت</string>
+    <string name="wifi_timeout_summary_8hours">۸ ساعت</string>
+    <string name="bluetooth_timeout">مهلت زمانی بلوتوث</string>
+    <string name="bluetooth_timeout_summary">بلوتوث بعد از <xliff:g id="timeout_description">%1$s</xliff:g> اگر دستگاهی متصل نباشد، خاموش می‌شود</string>
+    <string name="bluetooth_timeout_summary2">بلوتوث را بطور خودکار خاموش نکن</string>
+    <string name="bluetooth_timeout_summary_never">هرگز</string>
+    <string name="bluetooth_timeout_summary_15secs">۱۵ ثانیه</string>
+    <string name="bluetooth_timeout_summary_30mins">۳۰ دقیقه</string>
+    <string name="bluetooth_timeout_summary_1hour">۱ ساعت</string>
+    <string name="bluetooth_timeout_summary_2hours">۲ ساعت</string>
+    <string name="bluetooth_timeout_summary_4hours">۴ ساعت</string>
+    <string name="bluetooth_timeout_summary_8hours">۸ ساعت</string>
+    <string name="incall_feeedback_vibrate_title">‌لرزش‌های تماس ورودی</string>
+    <string name="incall_feeedback_summary">لرزش برای مشخص کردن وضعیت تماس</string>
+    <string name="vibration_preferences">لرزش &amp; کنش‌ها</string>
+    <string name="summary_vibration_preferences">تغییر شدت، الگوها و غیره</string>
+    <string name="keywords_vibration_preferences">الگو لرزش، شدت لرزش، در حین تماس، کنش‌ها، ضربه، سختی لرزش</string>
+    <string name="ringtone_vibration_pattern">الگوی لرزش در هنگام زنگ خوردن</string>
+    <string name="vibration_intensity_ringer">شدت لرزش زنگ خوردن</string>
+    <string name="vibration_intensity_notification">شدت لرزش اعلان</string>
+    <string name="vibration_intensity_light">سبک</string>
+    <string name="vibration_intensity_medium">میانه</string>
+    <string name="vibration_intensity_strong">شدید</string>
+    <string name="vibration_intensity_custom">سفارشی</string>
+    <string name="pattern_dzzz_dzzz">dzzz-dzzz</string>
+    <string name="pattern_dzzz_da">dzzz-da</string>
+    <string name="pattern_mm_mm_mm">mm-mm-mm</string>
+    <string name="pattern_da_da_dzzz">da-da-dzzz</string>
+    <string name="pattern_da_dzzz_da">da-dzzz-da</string>
+    <string name="pattern_custom">سفارشی</string>
+    <string name="custom_vibration_pattern_title">تنظیم الگوی سفارشی لرزش</string>
+    <string name="wakelock_blocker_title">مسدود کردن بیدار کننده‌ها</string>
+    <string name="wakelock_blocker_summary">مسدود کردن عوامل سیستمی بیدار کردن دستگاه در حالت بدون استفاده دستگاه</string>
+    <string name="wakelock_blocker_save">ذخیره</string>
+    <string name="wakelock_list_header">بیدار کردن دستگاه در دسترس</string>
+    <string name="wakelock_blocker_reload">ﻧﻮﺳﺎﺯﯼ</string>
+    <string name="wakelock_blocker_warning_title">با هوشیاری پیش بروید</string>
+    <string name="wakelock_blocker_warning">مسدود کردن بیدار کننده‌ها این توانایی را دارد که باعث بی‌ثباتی، خرابی یا از دست دادن داده شود</string>
+    <string name="alarm_blocker">مسدود کننده هشدار</string>
+    <string name="alarm_blocker_title">فعال‌سازی</string>
+    <string name="alarm_blocker_summary">مسدود کردن هشدارها در زمانی خاموشی صفحه نمایش</string>
+    <string name="alarm_blocker_save">ذخیره</string>
+    <string name="alarm_list_header">هشدارهای در دسترس</string>
+    <string name="alarm_blocker_reload">ﻧﻮﺳﺎﺯﯼ</string>
+    <string name="alarm_blocker_warning_title">با هوشیاری پیش بروید</string>
+    <string name="alarm_blocker_warning">مسدود کردن هشدارها این توانایی را دارد که باعث بی‌ثباتی، خرابی یا از دست دادن داده شود.</string>
+    <string name="directly_show_lock">بازکردن مستقیم قفل</string>
+    <string name="directly_show_lock_summary">رد کردن بالا کشیدن در قفل صفحه و درجا انتقال به بخش وارد کردن رمز</string>
+    <string name="auto_brightness_one_shot_title">روشنایی خودکار تک ضربه</string>
+    <string name="auto_brightness_one_shot_summary">تنظیم روشنایی فقط در لحظه روشن شدن صفحه نمایش انجام می‌شود</string>
+    <string name="immersive_navigation_title">ناوبری همه جانبه</string>
+    <string name="immersive_navigation_summary">پنهان‌سازی ناوبری</string>
+    <string name="wifi_setup_wizard_title">شبکه Wi\u2011Fi را انتخاب کنید</string>
+</resources>

@@ -300,4 +300,6 @@
     <string name="auto_brightness_one_shot_summary">La regolazione della luminosità avverrà solo nel momento in cui lo schermo è acceso</string>
     <string name="immersive_navigation_title">Navigazione immersiva</string>
     <string name="immersive_navigation_summary">Nascondi barra di navigazione e pill</string>
+    <string name="wifi_setup_wizard_title">Seleziona la rete Wi\u2011Fi</string>
+    <string name="peak_refresh_rate_summary_custom">Aumenta automaticamente la frequenza di aggiornamento da 60 a %1$d Hz per alcuni contenuti. Aumenta il consumo della batteria.</string>
 </resources>

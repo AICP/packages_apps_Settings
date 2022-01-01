@@ -300,4 +300,5 @@
     <string name="immersive_navigation_title">沉浸式导航</string>
     <string name="immersive_navigation_summary">隐藏导航栏和秀丸</string>
     <string name="wifi_setup_wizard_title">选择 WLAN 网络</string>
+    <string name="peak_refresh_rate_summary_custom">自动将某些内容的刷新频率从 60 Hz 调高到 %1$d Hz，这么做会增加耗电量</string>
 </resources>
