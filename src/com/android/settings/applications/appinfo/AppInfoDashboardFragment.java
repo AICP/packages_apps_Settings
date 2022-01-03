@@ -526,6 +526,10 @@ public class AppInfoDashboardFragment extends DashboardFragment
     }
      private boolean isAospOrStore(String packageName) {
         return packageName.contains("com.android");
+
+    @Override
+    protected boolean shouldSkipForInitialSUW() {
+        return true;
     }
 
     private void uninstallPkg(String packageName, boolean allUsers, boolean andDisable) {
