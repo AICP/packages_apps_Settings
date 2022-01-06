@@ -26,6 +26,8 @@ import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 
 import com.android.settings.R;
+import com.android.internal.util.aicp.PackageUtils;
+
 import com.android.settings.core.TogglePreferenceController;
 import com.android.settings.overlay.FeatureFactory;
 import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
@@ -42,9 +44,11 @@ public class AmbientDisplayNotificationsPreferenceController extends
 
     private final MetricsFeatureProvider mMetricsFeatureProvider;
     private AmbientDisplayConfiguration mConfig;
+    private Context mContext;
 
     public AmbientDisplayNotificationsPreferenceController(Context context, String key) {
         super(context, key);
+        mContext = context;
         mMetricsFeatureProvider = FeatureFactory.getFactory(context).getMetricsFeatureProvider();
     }
 
@@ -81,6 +85,7 @@ public class AmbientDisplayNotificationsPreferenceController extends
     @Override
     public int getAvailabilityStatus() {
         return getAmbientConfig().pulseOnNotificationAvailable()
+                && !PackageUtils.isDozePackageAvailable(mContext)
                 ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
     }
 

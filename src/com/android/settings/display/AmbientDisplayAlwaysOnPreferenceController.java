@@ -26,6 +26,7 @@ import android.text.TextUtils;
 
 import androidx.preference.Preference;
 
+import com.android.internal.util.aicp.PackageUtils;
 import com.android.settings.R;
 import com.android.settings.core.TogglePreferenceController;
 
@@ -39,15 +40,18 @@ public class AmbientDisplayAlwaysOnPreferenceController extends TogglePreference
     private static final String AOD_SUPPRESSED_TOKEN = "winddown";
 
     private AmbientDisplayConfiguration mConfig;
+    private Context mContext;
 
     public AmbientDisplayAlwaysOnPreferenceController(Context context, String key) {
         super(context, key);
+        mContext = context;
     }
 
     @Override
     public int getAvailabilityStatus() {
         return isAvailable(getConfig())
-                && !SystemProperties.getBoolean(PROP_AWARE_AVAILABLE, false) ?
+                && !SystemProperties.getBoolean(PROP_AWARE_AVAILABLE, false)
+                && !PackageUtils.isDozePackageAvailable(mContext) ?
                 AVAILABLE : UNSUPPORTED_ON_DEVICE;
     }
 
