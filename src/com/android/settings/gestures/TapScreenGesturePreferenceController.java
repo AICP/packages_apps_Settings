@@ -24,6 +24,8 @@ import android.hardware.display.AmbientDisplayConfiguration;
 import android.os.UserHandle;
 import android.provider.Settings;
 
+import com.android.internal.util.aicp.PackageUtils;
+
 public class TapScreenGesturePreferenceController extends GesturePreferenceController {
 
     private static final String PREF_KEY_VIDEO = "gesture_tap_screen_video";
@@ -32,9 +34,12 @@ public class TapScreenGesturePreferenceController extends GesturePreferenceContr
     @UserIdInt
     private final int mUserId;
 
+    private Context mContext;
+
     public TapScreenGesturePreferenceController(Context context, String key) {
         super(context, key);
         mUserId = UserHandle.myUserId();
+        mContext = context;
     }
 
     public TapScreenGesturePreferenceController setConfig(AmbientDisplayConfiguration config) {
@@ -44,8 +49,10 @@ public class TapScreenGesturePreferenceController extends GesturePreferenceContr
 
     @Override
     public int getAvailabilityStatus() {
-        // No hardware support for this Gesture
-        if (!getAmbientConfig().tapSensorAvailable()) {
+        // No hardware support for this Gesture or
+        // custom touch gestures package is available
+        if (!getAmbientConfig().tapSensorAvailable() ||
+                PackageUtils.isTouchGesturesPackageAvailable(mContext)) {
             return UNSUPPORTED_ON_DEVICE;
         }
 
