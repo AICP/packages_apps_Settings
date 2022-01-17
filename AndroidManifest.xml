@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:androidprv="http://schemas.android.com/apk/prv/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         package="com.android.settings"
         coreApp="true"
         android:sharedUserId="android.uid.system">
@@ -40,7 +41,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CLEAR_APP_USER_DATA" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
     <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
@@ -122,6 +122,7 @@
             android:usesCleartextTraffic="true"
             android:defaultToDeviceProtectedStorage="true"
             android:directBootAware="true"
+            tools:replace="android:appComponentFactory"
             android:appComponentFactory="androidx.core.app.CoreComponentFactory">
 
         <uses-library android:name="org.apache.http.legacy"/>
@@ -4192,6 +4193,20 @@
                        android:value="com.android.settings.sound.MediaControlsSettings" />
             <meta-data android:name="com.android.settings.HIGHLIGHT_MENU_KEY"
                        android:value="@string/menu_key_sound"/>
+        </activity>
+
+        <!-- AicpExtras -->
+        <activity android:name=".Settings$AicpSettingsActivity"
+            android:exported="true"
+            android:label="@string/aicpextras_title"
+            android:icon="@drawable/ic_homepage_aicpextras"
+            android:parentActivityName="com.android.settings">
+            <intent-filter android:priority="69">
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.android.settings.SHORTCUT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.aicp.settings.AicpSettings" />
         </activity>
 
         <receiver
