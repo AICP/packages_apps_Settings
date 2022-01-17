@@ -55,6 +55,14 @@
         android:summary="@string/notification_dashboard_summary"/>
 
     <Preference
+        android:key="top_level_aicp_settings"
+        android:title="@string/aicpextras_title"
+        android:summary="@string/aicpextras_summary"
+        android:icon="@drawable/ic_settings_aicpextras"
+        android:order="-95"
+        android:fragment="com.aicp.settings.AicpSettings"/>
+
+    <Preference
         android:fragment="com.android.settings.fuelgauge.PowerUsageSummary"
         android:icon="@drawable/ic_settings_battery_white"
         android:key="top_level_battery"
