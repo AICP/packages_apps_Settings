@@ -18,8 +18,10 @@ package com.android.settings.fuelgauge;
 
 import static com.android.settings.fuelgauge.BatteryBroadcastReceiver.BatteryUpdateType;
 
+import android.app.AlertDialog;
 import android.app.settings.SettingsEnums;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.database.ContentObserver;
 import android.net.Uri;
 import android.os.Bundle;
@@ -30,6 +32,8 @@ import androidx.annotation.VisibleForTesting;
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.Loader;
 import androidx.preference.Preference;
+
+import com.android.internal.os.BatteryStatsHelper;
 
 import com.android.settings.R;
 import com.android.settings.SettingsActivity;
@@ -43,6 +47,7 @@ import com.android.settings.overlay.FeatureFactory;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 import com.android.settingslib.widget.LayoutPreference;
+
 
 import java.util.List;
 
@@ -60,6 +65,10 @@ public class PowerUsageSummary extends PowerUsageBase implements
     static final String KEY_BATTERY_ERROR = "battery_help_message";
     @VisibleForTesting
     static final String KEY_BATTERY_USAGE = "battery_usage_summary";
+
+    private static final String KEY_BATTERY_USAGE_RESET = "battery_usage_stats_reset";
+
+    private BatteryStatsHelper mStatsHelper;
 
     @VisibleForTesting
     static final int BATTERY_INFO_LOADER = 1;
@@ -143,6 +152,7 @@ public class PowerUsageSummary extends PowerUsageBase implements
     public void onAttach(Context context) {
         super.onAttach(context);
         final SettingsActivity activity = (SettingsActivity) getActivity();
+        mStatsHelper = new BatteryStatsHelper(activity, true);
 
         mBatteryHeaderPreferenceController = use(BatteryHeaderPreferenceController.class);
         mBatteryHeaderPreferenceController.setActivity(activity);
@@ -183,6 +193,9 @@ public class PowerUsageSummary extends PowerUsageBase implements
                         .setSourceMetricsCategory(getMetricsCategory())
                         .setTitleRes(R.string.advanced_battery_title)
                         .launch();
+            return true;
+        } else if (KEY_BATTERY_USAGE_RESET.equals(preference.getKey())) {
+            resetStats();
             return true;
         }
         return super.onPreferenceTreeClick(preference);
@@ -314,6 +327,22 @@ public class PowerUsageSummary extends PowerUsageBase implements
     @Override
     public void onBatteryTipHandled(BatteryTip batteryTip) {
         restartBatteryTipLoader();
+    }
+
+    private void resetStats() {
+        AlertDialog dialog = new AlertDialog.Builder(getActivity())
+            .setTitle(R.string.battery_usage_stats_reset)
+            .setMessage(R.string.battery_usage_stats_reset_message)
+            .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    mStatsHelper.resetStatistics();
+                    refreshUi(BatteryUpdateType.MANUAL);
+                }
+            })
+            .setNegativeButton(R.string.cancel, null)
+            .create();
+        dialog.show();
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
