@@ -120,6 +120,8 @@ android_library {
         // Lineage dependencies
         "org.lineageos.platform.internal",
         "LineagePreferenceLib",
+        "AicpGear-preference",
+        "AicpGear-util",
     ],
 
     plugins: [
@@ -149,6 +151,7 @@ android_library {
         "android.view.contentprotection.flags-aconfig",
         "keyboard_flags",
     ],
+    additional_manifests: ["AndroidManifest-Aicp.xml"],
 }
 
 platform_compat_config {

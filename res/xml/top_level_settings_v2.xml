@@ -151,6 +151,15 @@
             settings:highlightableMenuKey="@string/menu_key_system"/>
 
         <com.android.settings.widget.HomepagePreference
+            android:fragment="com.android.settings.aicp.StartAe"
+            android:icon="@drawable/ic_settings_aicpextras"
+            android:key="top_level_ae"
+            android:order="-15"
+            android:title="@string/aicpextras_title"
+            android:summary="@string/aicpextras_summary"
+            settings:highlightableMenuKey="@string/menu_key_ae"/>
+
+        <com.android.settings.widget.HomepagePreference
             android:fragment="com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment"
             android:icon="@drawable/ic_settings_about_device_filled"
             android:key="top_level_about_device"

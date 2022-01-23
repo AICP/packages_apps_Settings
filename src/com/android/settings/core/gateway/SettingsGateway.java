@@ -44,6 +44,7 @@ import com.android.settings.accounts.AccountDashboardFragment;
 import com.android.settings.accounts.AccountSyncSettings;
 import com.android.settings.accounts.ChooseAccountFragment;
 import com.android.settings.accounts.ManagedProfileSettings;
+import com.android.settings.aicp.StartAe;
 import com.android.settings.applications.AppDashboardFragment;
 import com.android.settings.applications.AppStorageSettings;
 import com.android.settings.applications.ProcessStatsSummary;
@@ -422,6 +423,7 @@ public class SettingsGateway {
             ContentProtectionPreferenceFragment.class.getName(),
             ToggleScreenMagnificationPreferenceFragment.class.getName(),
             FlashNotificationsPreferenceFragment.class.getName(),
+            StartAe.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -468,5 +470,6 @@ public class SettingsGateway {
             UserBackupSettingsActivity.class.getName(),
             Settings.MemtagPageActivity.class.getName(),
             Settings.NavigationModeSettingsActivity.class.getName(),
+            Settings.StartAeActivity.class.getName(),
     };
 }
