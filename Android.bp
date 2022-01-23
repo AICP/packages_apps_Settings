@@ -117,6 +117,9 @@ android_library {
         "org.lineageos.platform.internal",
         "LineagePreferenceLib",
         "vendor.lineage.fastcharge-V1.0-java",
+
+        "AicpGear-preference",
+        "AicpGear-util",
     ],
 
     plugins: [
@@ -143,6 +146,7 @@ android_library {
         "android.security.flags-aconfig",
         "keyboard_flags",
     ],
+    additional_manifests: ["AndroidManifest-Aicp.xml"],
 }
 
 platform_compat_config {
