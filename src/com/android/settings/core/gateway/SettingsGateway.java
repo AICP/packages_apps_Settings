@@ -166,8 +166,6 @@ import com.android.settings.wifi.p2p.WifiP2pSettings;
 import com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSettings2;
 import com.android.settings.wifi.tether.WifiTetherSettings;
 
-import com.aicp.settings.AicpSettings;
-
 public class SettingsGateway {
 
     /**
@@ -321,7 +319,6 @@ public class SettingsGateway {
             NetworkProviderSettings.class.getName(),
             AlarmsAndRemindersDetails.class.getName(),
             MediaManagementAppsDetails.class.getName(),
-            AicpSettings.class.getName(),
             RunningServices.class.getName(),
     };
 
@@ -362,7 +359,6 @@ public class SettingsGateway {
             Settings.MyDeviceInfoActivity.class.getName(),
             Settings.ModuleLicensesActivity.class.getName(),
             UserBackupSettingsActivity.class.getName(),
-            Settings.AicpSettingsActivity.class.getName(),
             Settings.DevRunningServicesActivity.class.getName(),
     };
 }
