@@ -44,7 +44,14 @@ android_library {
         "SettingsLib-search-defaults",
     ],
 
-    srcs: ["src/**/*.java", "src/**/*.kt"],
+    srcs: [
+        "src/**/*.java",
+        "src/**/*.kt",
+        "AicpExtras/src/**/*.java",
+        "AicpExtras/src/**/*.kt",
+    ],
+
+    aaptflags: ["--extra-packages com.aicp.extras"],
 
     static_libs: [
         "androidx-constraintlayout_constraintlayout",
@@ -86,6 +93,7 @@ android_library {
         "ims-common",
         "app-compat-annotations",
     ],
+    additional_manifests: ["AndroidManifest-Aicp.xml"],
 }
 
 platform_compat_config {
