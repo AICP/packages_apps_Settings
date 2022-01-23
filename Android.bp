@@ -44,16 +44,7 @@ android_library {
         "SettingsLib-search-defaults",
     ],
 
-    srcs: ["src/**/*.java",
-           "AicpSettings/src/**/*.java",
-    ],
-
-
-    aaptflags: ["--extra-packages com.aicp.settings"],
-
-    resource_dirs: ["res",
-                    "AicpSettings/res"
-    ],
+    srcs: ["src/**/*.java"],
 
     static_libs: [
         "androidx-constraintlayout_constraintlayout",
@@ -72,7 +63,6 @@ android_library {
         "androidx.lifecycle_lifecycle-runtime",
         "androidx.lifecycle_lifecycle-extensions",
         "guava",
-        "glide",
         "jsr305",
         "settings-contextual-card-protos-lite",
         "settings-log-bridge-protos-lite",
