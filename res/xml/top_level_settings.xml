@@ -60,6 +60,14 @@
         settings:highlightableMenuKey="@string/menu_key_apps"/>
 
     <com.android.settings.widget.HomepagePreference
+        android:key="top_level_ae"
+        android:title="@string/aicpextras_title"
+        android:summary="@string/aicpextras_summary"
+        android:icon="@drawable/ic_settings_aicpextras"
+        android:fragment="com.android.settings.aicp.StartAe"
+        android:order="-125"/>
+
+    <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.notification.ConfigureNotificationSettings"
         android:icon="@drawable/ic_notifications"
         android:key="top_level_notifications"
