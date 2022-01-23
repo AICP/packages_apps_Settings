@@ -326,6 +326,5 @@ public class Settings extends SettingsActivity {
     public static class AppDashboardActivity extends SettingsActivity {}
 
     // AicpExtras
-    public static class AicpSettingsActivity extends SettingsActivity {}
     public static class DevRunningServicesActivity extends SettingsActivity { /* empty */ }
 }
