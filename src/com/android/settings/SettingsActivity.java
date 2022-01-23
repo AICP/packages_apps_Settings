@@ -52,6 +52,8 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
 
+import com.aicp.gear.util.AicpUtils;
+
 import com.android.internal.util.ArrayUtils;
 import com.android.settings.Settings.WifiSettingsActivity;
 import com.android.settings.activityembedding.ActivityEmbeddingUtils;
@@ -769,6 +771,11 @@ public class SettingsActivity extends SettingsBaseActivity
         somethingChanged = setTileEnabled(changedList, new ComponentName(packageName,
                         Settings.WifiDisplaySettingsActivity.class.getName()),
                 WifiDisplaySettings.isAvailable(this), isAdmin)
+                || somethingChanged;
+
+        boolean aicpExtrasSupported = AicpUtils.isPackageEnabled("com.aicp.extras", pm);
+        somethingChanged = setTileEnabled(changedList, new ComponentName(packageName,
+                Settings.StartAeActivity.class.getName()), aicpExtrasSupported, isAdmin)
                 || somethingChanged;
 
         if (UserHandle.MU_ENABLED && !isAdmin) {

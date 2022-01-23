@@ -480,4 +480,7 @@ public class Settings extends SettingsActivity {
     public static class PreviouslyConnectedDeviceActivity extends SettingsActivity { /* empty */ }
 
     public static class ScreenTimeoutActivity extends SettingsActivity { /* empty */ }
+
+    // AICP Activities
+    public static class StartAeActivity extends SettingsActivity {}
 }
