@@ -119,4 +119,8 @@
     <string name="navbar_gesture_handle_category">Gesture handle</string>
     <string name="navbar_gesture_handle_hide_title">Hide gesture handle</string>
     <string name="navbar_gesture_handle_hide_summary">Hide horizontal line</string>
+
+    <!-- Battery stats reset -->
+    <string name="battery_usage_stats_reset">Reset stats</string>
+    <string name="battery_usage_stats_reset_message">Battery history stats are going to be reset</string>
 </resources>
