@@ -104,6 +104,8 @@
     <string name="tethering_allow_vpn_upstreams_title">Zezwalaj klientom na korzystanie z sieci VPN</string>
     <string name="tethering_allow_vpn_upstreams_summary">Pozwól klientom hotspotów na korzystanie z tego urządzenia\u2019s połączenia VPN dla połączenia wyższego szczebla</string>
     <string name="device_info_protected_single_press">Dotknij, aby wyświetlić informacje</string>
+    <string name="show_gestures_navbar_switch_title">Pokaż pigułkę</string>
+    <string name="show_gestures_navbar_switch_summary">Pokaż pasek gestów</string>
     <string name="adaptive_playback_screen_title">Odtwarzanie adaptacyjne</string>
     <string name="adaptive_playback_disabled_summary">Wyłączony</string>
     <string name="adaptive_playback_timeout_title">Użyj limitu czasu</string>
@@ -290,5 +292,10 @@
     <string name="alarm_blocker_warning">Blokowanie alarmów może potencjalnie doprowadzić do niestabilności, wyłączeń bądź utraty danych.</string>
     <string name="directly_show_lock">Bezpośrednie odblokowanie</string>
     <string name="directly_show_lock_summary">Pomiń przesunięcie, aby odblokować ekran i natychmiast rozpocznij wprowadzanie kodu Pin</string>
+    <string name="auto_brightness_one_shot_title">Automatyczna jasność jednego rzutu</string>
+    <string name="auto_brightness_one_shot_summary">Regulacja jasności pojawi się dopiero w chwili, gdy ekran jest włączony</string>
+    <string name="immersive_navigation_title">Włącz nawigację pełnoekranową</string>
+    <string name="immersive_navigation_summary">Ukryj pasek nawigacji i pigułkę</string>
+    <string name="wifi_setup_wizard_title">Wybierz sieć Wi\u2011Fi</string>
     <string name="peak_refresh_rate_summary_custom">W przypadku niektórych treści automatycznie podwyższa częstotliwość odświeżania z 60 na %1$d Hz. Zwiększa zużycie baterii.</string>
 </resources>

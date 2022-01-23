@@ -73,6 +73,7 @@
     <string name="display_rotation_270_title">270 پلە</string>
     <string name="increasing_ring_volume_option_title">بەرزکردنەوەی دەنگی زەنگ</string>
     <string name="increasing_ring_min_volume_title">دەستپێکی دەنگ</string>
+    <string name="increasing_ring_ramp_up_time_title">کاتی Ramp-up</string>
     <string name="back_height_low_label">پڕ</string>
     <string name="back_height_high_label">خوارەوە</string>
     <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="tablet">هەستەوەری پەنجەمۆر ئەکەوێتە <xliff:g id="sensor_location">%1$s</xliff:g> تابلێتەکەت.</string>
