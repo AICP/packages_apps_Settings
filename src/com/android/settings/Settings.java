@@ -653,4 +653,7 @@ public class Settings extends SettingsActivity {
         }
     }
     public static class SafetyCenterActivity extends SettingsActivity { }
+
+    // AICP Activities
+    public static class StartAeActivity extends SettingsActivity {}
 }
