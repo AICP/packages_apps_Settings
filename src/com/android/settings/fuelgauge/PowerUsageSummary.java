@@ -35,6 +35,7 @@ import com.android.settings.R;
 import com.android.settings.SettingsActivity;
 import com.android.settings.Utils;
 import com.android.settings.core.SubSettingLauncher;
+import com.android.settings.fuelgauge.BatteryHeaderPreferenceController;
 import com.android.settings.fuelgauge.batterytip.BatteryTipLoader;
 import com.android.settings.fuelgauge.batterytip.BatteryTipPreferenceController;
 import com.android.settings.fuelgauge.batterytip.tips.BatteryTip;
@@ -59,8 +60,6 @@ public class PowerUsageSummary extends PowerUsageBase implements
     static final String KEY_BATTERY_ERROR = "battery_help_message";
     @VisibleForTesting
     static final String KEY_BATTERY_USAGE = "battery_usage_summary";
-
-    private static final String KEY_BATTERY_HEADER = "battery_header";
 
     @VisibleForTesting
     static final int BATTERY_INFO_LOADER = 1;
@@ -178,7 +177,7 @@ public class PowerUsageSummary extends PowerUsageBase implements
 
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
-        if (KEY_BATTERY_HEADER.equals(preference.getKey())) {
+        if (BatteryHeaderPreferenceController.KEY_BATTERY_HEADER.equals(preference.getKey())) {
             new SubSettingLauncher(getContext())
                         .setDestination(PowerUsageAdvanced.class.getName())
                         .setSourceMetricsCategory(getMetricsCategory())
