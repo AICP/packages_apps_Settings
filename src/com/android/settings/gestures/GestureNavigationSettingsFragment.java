@@ -131,7 +131,7 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
                 ? Settings.Secure.BACK_GESTURE_INSET_SCALE_LEFT
                 : Settings.Secure.BACK_GESTURE_INSET_SCALE_RIGHT);
         float initScale = Settings.Secure.getFloat(
-                getContext().getContentResolver(), settingsKey, 1.0f);
+                getContext().getContentResolver(), settingsKey, key == BACK_REGION_SEEKBAR_KEY ? 0.0f : 1.0f);
 
         // needed if we just change the height
         float currentWidthScale = Settings.Secure.getFloat(
