@@ -53,8 +53,8 @@ public class FingerprintEnrollFindSensor extends BiometricEnrollBase implements
 
     private FingerprintEnrollSidecar mSidecar;
     private boolean mNextClicked;
-    private boolean mCanAssumeUdfps;
     private boolean mCanAssumeSidefps;
+    private boolean mCanAssumeUdfps;
 
     private OrientationEventListener mOrientationEventListener;
     private int mPreviousRotation = 0;
@@ -66,6 +66,7 @@ public class FingerprintEnrollFindSensor extends BiometricEnrollBase implements
         final FingerprintManager fingerprintManager = getSystemService(FingerprintManager.class);
         final List<FingerprintSensorPropertiesInternal> props =
                 fingerprintManager.getSensorPropertiesInternal();
+        mCanAssumeSidefps = props != null && props.size() == 1 && props.get(0).isAnySidefpsType();
         mCanAssumeUdfps = props != null && props.size() == 1 && props.get(0).isAnyUdfpsType();
         mCanAssumeSidefps = props != null && props.size() == 1 && props.get(0).isAnySidefpsType();
         setContentView(getContentView());
@@ -122,8 +123,19 @@ public class FingerprintEnrollFindSensor extends BiometricEnrollBase implements
                     break;
             }
         } else {
+            final boolean isFrontFacingFps = getResources().getBoolean(
+                    R.bool.config_is_front_facing_fps);
+            final String fpsLocation = getString(mCanAssumeSidefps
+                    ? R.string.fingerprint_enroll_find_sensor_message_side : isFrontFacingFps
+                            ? R.string.fingerprint_enroll_find_sensor_message_front
+                            : R.string.fingerprint_enroll_find_sensor_message_rear);
+
             setHeaderText(R.string.security_settings_fingerprint_enroll_find_sensor_title);
-            setDescriptionText(R.string.security_settings_fingerprint_enroll_find_sensor_message);
+            setDescriptionText(fpsLocation);
+            if (isFrontFacingFps) {
+                findViewById(R.id.fingerprint_sensor_location_front_overlay)
+                        .setVisibility(View.VISIBLE);
+            }
         }
 
         // This is an entry point for SetNewPasswordController, e.g.
