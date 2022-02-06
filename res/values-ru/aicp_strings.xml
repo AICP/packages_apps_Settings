@@ -104,6 +104,8 @@
     <string name="tethering_allow_vpn_upstreams_title">Разрешить клиентам использовать VPN</string>
     <string name="tethering_allow_vpn_upstreams_summary">Разрешить клиентам точки доступа использовать VPN-соединения этого устройства для подключения к сети</string>
     <string name="device_info_protected_single_press">Нажмите, чтобы показать информацию</string>
+    <string name="show_gestures_navbar_switch_title">Показать полоску жестов</string>
+    <string name="show_gestures_navbar_switch_summary">Показывать панель подсказки в панели навигации</string>
     <string name="adaptive_playback_screen_title">Адаптивное воспроизведение</string>
     <string name="adaptive_playback_disabled_summary">Выкл</string>
     <string name="adaptive_playback_timeout_title">Использовать таймаут</string>
@@ -296,4 +298,10 @@
     <string name="alarm_blocker_warning">Блокировка сигналов может привести к нестабильности, ошибкам и потере данных.</string>
     <string name="directly_show_lock">Прямая разблокировка</string>
     <string name="directly_show_lock_summary">Пропускать свайп для разблокировки экрана и сразу же переходить к вводу ключа</string>
+    <string name="auto_brightness_one_shot_title">Однократная автоматическая яркость</string>
+    <string name="auto_brightness_one_shot_summary">Регулировка яркости будет происходить только в момент включения экрана</string>
+    <string name="immersive_navigation_title">Полноэкранная навигация</string>
+    <string name="immersive_navigation_summary">Скрыть панель навигации и таблетку</string>
+    <string name="wifi_setup_wizard_title">Выберите Wi\u2011Fi сеть</string>
+    <string name="peak_refresh_rate_summary_custom">Автоматически изменять частоту обновления экрана с 60 до %1$d Гц для некоторых типов контента. При этом батарея разряжается быстрее.</string>
 </resources>
