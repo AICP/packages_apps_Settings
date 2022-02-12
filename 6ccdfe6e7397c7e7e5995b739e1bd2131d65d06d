@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d58e0eac_d8c62df9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2022-02-12T04:44:30Z",
+      "side": 1,
+      "message": "Test:\n- Compiles\n- The temperature preference in Battery section is displayed with units",
+      "revId": "6ccdfe6e7397c7e7e5995b739e1bd2131d65d06d",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
