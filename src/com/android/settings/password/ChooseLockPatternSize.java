@@ -38,6 +38,8 @@ import com.android.settings.utils.SettingsDividerItemDecoration;
 
 import com.google.android.setupdesign.GlifPreferenceLayout;
 
+import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
+
 public class ChooseLockPatternSize extends SettingsActivity {
 
     @Override
