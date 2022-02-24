@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "477c879d_0e0984ae",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2022-02-24T17:59:34Z",
+      "side": 1,
+      "message": "You will need fw_av commit from https://github.com/semdoc/frameworks_av/commits/s12.0",
+      "revId": "f8bdabcb007230322e6a0289a645c1fa93b8c5c6",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
