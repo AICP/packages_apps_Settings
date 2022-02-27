@@ -29,7 +29,7 @@
         <item>@string/volume_steps_5</item>
     </string-array>
 
-    <!-- Custom timeout for Wifi -->
+    <!-- Custom timeout for Wifi/Bluetooth -->
     <string-array name="custom_timeout_entries">
         <item>@string/custom_timeout_summary_never</item>
         <item>@string/custom_timeout_summary_15secs</item>
