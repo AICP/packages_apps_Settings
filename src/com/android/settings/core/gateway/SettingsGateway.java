@@ -81,7 +81,9 @@ import com.android.settings.datausage.DataUsageList;
 import com.android.settings.datausage.DataUsageSummary;
 import com.android.settings.datetime.DateTimeSettings;
 import com.android.settings.deletionhelper.AutomaticStorageManagerSettings;
+import com.android.settings.development.AlarmBlocker;
 import com.android.settings.development.DevelopmentSettingsDashboardFragment;
+import com.android.settings.development.WakeLockBlocker;
 import com.android.settings.deviceinfo.PrivateVolumeForget;
 import com.android.settings.deviceinfo.PublicVolumeSettings;
 import com.android.settings.deviceinfo.StorageDashboardFragment;
@@ -327,7 +329,9 @@ public class SettingsGateway {
             AlarmsAndRemindersDetails.class.getName(),
             MediaManagementAppsDetails.class.getName(),
             RunningServices.class.getName(),
-            StartAe.class.getName()
+            StartAe.class.getName(),
+            AlarmBlocker.class.getName(),
+            WakeLockBlocker.class.getName()
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -370,6 +374,8 @@ public class SettingsGateway {
             UserBackupSettingsActivity.class.getName(),
             Settings.DevRunningServicesActivity.class.getName(),
             Settings.StartAeActivity.class.getName(),
+            Settings.DevAlarmBlockerActivity.class.getName(),
+            Settings.DevWakeLockBlockerActivity.class.getName(),
 
     };
 }
