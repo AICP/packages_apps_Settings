@@ -69,7 +69,8 @@ public class BluetoothPanel implements PanelContent {
                 ConnectedDeviceDashboardFragment.class.getName(),
                 null /* key */,
                 screenTitle,
-                SettingsEnums.SETTINGS_CONNECTED_DEVICE_CATEGORY);
+                SettingsEnums.SETTINGS_CONNECTED_DEVICE_CATEGORY,
+                R.string.menu_key_connected_devices /* SliceHighlightMenuRes */);
         intent.setClassName(mContext.getPackageName(), SubSettings.class.getName());
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         return intent;
