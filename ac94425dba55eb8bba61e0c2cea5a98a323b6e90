@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "72019464_25b1cb69",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2022-03-18T16:51:27Z",
+      "side": 1,
+      "message": "To be abandoned when fwb counterpart is merged on s12.1",
+      "revId": "ac94425dba55eb8bba61e0c2cea5a98a323b6e90",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
