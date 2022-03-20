@@ -22,6 +22,30 @@
       },
       "revId": "110c4df287f4378d704194e2dcd26f20eb2e8dd8",
       "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "afa2d32b_71094798",
+        "filename": "res/values/aicp_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 774
+      },
+      "writtenOn": "2022-03-20T18:04:58Z",
+      "side": 1,
+      "message": "it reports as 12 on the pixel 12.1 stock rom too, just Google being Google I guess",
+      "parentUuid": "1a678772_92680ae8",
+      "range": {
+        "startLine": 26,
+        "startChar": 40,
+        "endLine": 26,
+        "endChar": 63
+      },
+      "revId": "110c4df287f4378d704194e2dcd26f20eb2e8dd8",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
     }
   ]
 }
