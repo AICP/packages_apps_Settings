@@ -16,6 +16,23 @@
       "message": "To be abandoned when fwb counterpart is merged on s12.1",
       "revId": "ac94425dba55eb8bba61e0c2cea5a98a323b6e90",
       "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b1cbff87_55912b97",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2022-03-21T02:07:00Z",
+      "side": 1,
+      "message": "fwb part needs lot of work for now, so better to just revert this",
+      "revId": "ac94425dba55eb8bba61e0c2cea5a98a323b6e90",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
     }
   ]
 }
