@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c01dd89b_1b6e6e39",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2022-03-22T17:11:43Z",
+      "side": 1,
+      "message": "Removes the duplicated (and non-functional) AICP Extras entry in Settings app",
+      "revId": "ef9d7db2d45d06af56885c5f11084593999fb8dc",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
