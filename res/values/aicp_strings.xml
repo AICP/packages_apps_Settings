@@ -191,4 +191,7 @@
 
     <!-- Per-app volume -->
     <string name="app_volume">App volume</string>
+
+    <!-- GmsCompat app -->
+    <string name="sandboxed_google_play">Sandboxed Google Play</string>
 </resources>
