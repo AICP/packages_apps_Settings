@@ -31,6 +31,7 @@ import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.overlay.FeatureFactory;
 import com.android.settings.safetycenter.SafetyCenterManagerWrapper;
 import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.security.applock.AppLockSettingsPreferenceController;
 import com.android.settings.security.trustagent.TrustAgentListPreferenceController;
 import com.android.settings.widget.PreferenceCategoryController;
 import com.android.settingslib.core.AbstractPreferenceController;
@@ -52,6 +53,8 @@ public class SecuritySettings extends DashboardFragment {
 
     private static final String SECURITY_STATUS_KEY = "security_status";
     private static final String SECURITY_CATEGORY_KEY = "security_category";
+
+    private static final String APP_LOCK_PREF_KEY = "app_lock";
 
     @Override
     public int getMetricsCategory() {
@@ -129,6 +132,8 @@ public class SecuritySettings extends DashboardFragment {
         securityPreferenceControllers.add(new ChangeScreenLockPreferenceController(context, host));
         controllers.add(new PreferenceCategoryController(context, SECURITY_CATEGORY)
                 .setChildren(securityPreferenceControllers));
+        controllers.add(new AppLockSettingsPreferenceController(
+                context, APP_LOCK_PREF_KEY, host, lifecycle));
         controllers.addAll(securityPreferenceControllers);
 
         return controllers;
