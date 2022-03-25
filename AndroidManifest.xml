@@ -127,6 +127,9 @@
     <!-- LiveDisplay -->
     <uses-permission android:name="lineageos.permission.MANAGE_LIVEDISPLAY" />
 
+    <!-- AppLock -->
+    <uses-permission android:name="android.permission.MANAGE_APP_LOCK" />
+
     <application
             android:name=".SettingsApplication"
             android:label="@string/settings_label"
@@ -4535,6 +4538,25 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+
+        <!-- App Lock Activity -->
+        <activity android:name="com.android.settings.security.applock.AppLockCredentialActivity"
+            android:exported="false"
+            android:permission="android.permission.MANAGE_APP_LOCK"
+            android:excludeFromRecents="true"
+            android:stateNotNeeded="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.app.action.UNLOCK_APP" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.android.settings.security.applock.AppLockSubSettings"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:taskAffinity="com.android.settings.applock"
+            android:launchMode="singleTask" />
 
         <!-- Bluetooth Timeout -->
         <receiver android:name="com.android.settingslib.bluetooth.BluetoothTimeoutReceiver"
