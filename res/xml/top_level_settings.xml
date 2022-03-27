@@ -77,14 +77,6 @@
         settings:controller="com.android.settings.fuelgauge.TopLevelBatteryPreferenceController"/>
 
     <com.android.settings.widget.HomepagePreference
-        android:key="top_level_aicp_settings"
-        android:title="@string/aicpextras_title"
-        android:summary="@string/aicpextras_summary"
-        android:icon="@drawable/ic_settings_aicpextras"
-        android:order="-95"
-        android:fragment="com.aicp.settings.AicpSettings"/>
-
-    <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.deviceinfo.StorageDashboardFragment"
         android:icon="@drawable/ic_storage_white"
         android:key="top_level_storage"
