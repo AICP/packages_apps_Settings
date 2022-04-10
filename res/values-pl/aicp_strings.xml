@@ -213,6 +213,12 @@
     <string name="applock_hide_notif">Ukryj treść powiadomień</string>
     <string name="applock_setup">Ustaw blokadę aplikacji</string>
     <string name="applock_overlay_summary">Ta funkcja nie jest dostępna, ponieważ ta aplikacja jest zablokowana</string>
+    <plurals name="applock_summary">
+        <item quantity="one">1 aplikacja zablokowana</item>
+        <item quantity="few">Zablokowano %d aplikacji</item>
+        <item quantity="many">%d aplikacji zablokowanych</item>
+        <item quantity="other">%d aplikacji zablokowanych</item>
+    </plurals>
     <string name="keywords_applock_settings">applock, applocker, blokada aplikacji, blokader aplikacji</string>
     <string name="lock_settings_picker_pattern_size_message">Wybierz rozmiar wzoru</string>
     <string name="lockpattern_settings_enable_error_path_title">Pokazuj błędny wzór</string>
