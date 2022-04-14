@@ -26,6 +26,8 @@ import android.database.ContentObserver;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.UserHandle;
+import android.provider.Settings;
 import android.provider.Settings.Global;
 
 import androidx.annotation.VisibleForTesting;
@@ -103,6 +105,7 @@ public class PowerUsageSummary extends PowerUsageBase implements
         @Override
         public void onChange(boolean selfChange, Uri uri) {
             restartBatteryInfoLoader();
+            initPreference();
         }
     };
 
@@ -211,6 +214,10 @@ public class PowerUsageSummary extends PowerUsageBase implements
                 Global.getUriFor(Global.BATTERY_ESTIMATES_LAST_UPDATE_TIME),
                 false,
                 mSettingsObserver);
+        getContentResolver().registerContentObserver(
+                Settings.System.getUriFor("battery_24_hrs_stats"),
+                false,
+                mSettingsObserver);
     }
 
     @Override
@@ -286,8 +293,10 @@ public class PowerUsageSummary extends PowerUsageBase implements
     @VisibleForTesting
     void initPreference() {
         mBatteryUsagePreference = findPreference(KEY_BATTERY_USAGE);
+        boolean isChartGraphEnabled = Settings.System.getIntForUser(getContext().getContentResolver(),
+                "battery_24_hrs_stats", 0, UserHandle.USER_CURRENT) != 0;
         mBatteryUsagePreference.setSummary(
-                mPowerFeatureProvider.isChartGraphEnabled(getContext()) ?
+                isChartGraphEnabled ?
                         getString(R.string.advanced_battery_preference_summary_with_hours) :
                         getString(R.string.advanced_battery_preference_summary));
 
