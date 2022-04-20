@@ -302,5 +302,6 @@
 
     <!-- Hidden apps -->
     <string name="hidden_apps_title">Hidden apps</string>
-    <string name="hidden_apps_summary">Applications that should be hidden from launcher.</string>
+    <string name="hidden_apps_summary">Applications that should be hidden from launcher</string>
+    <string name="hidden_app_authentication_dialog_title">Unlock to hide apps</string>
 </resources>
