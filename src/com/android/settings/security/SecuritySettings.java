@@ -33,6 +33,7 @@ import com.android.settings.enterprise.EnterprisePrivacyPreferenceController;
 import com.android.settings.enterprise.FinancedPrivacyPreferenceController;
 import com.android.settings.overlay.FeatureFactory;
 import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.security.applock.AppLockSettingsPreferenceController;
 import com.android.settings.security.trustagent.ManageTrustAgentsPreferenceController;
 import com.android.settings.security.trustagent.TrustAgentListPreferenceController;
 import com.android.settings.widget.PreferenceCategoryController;
@@ -141,6 +142,7 @@ public class SecuritySettings extends DashboardFragment {
         controllers.add(new PreferenceCategoryController(context, WORK_PROFILE_SECURITY_CATEGORY)
                 .setChildren(profileSecurityControllers));
         controllers.addAll(profileSecurityControllers);
+        controllers.add(new AppLockSettingsPreferenceController(context, host, lifecycle));
 
         return controllers;
     }
