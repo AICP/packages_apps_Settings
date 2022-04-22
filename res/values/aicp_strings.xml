@@ -32,4 +32,7 @@
     <string name="backup_transport_setting_label">Change backup provider</string>
     <string name="backup_transport_title">Select backup provider</string>
 
+    <!-- Battery health -->
+    <string name="current_battery_capacity">Current battery capacity</string>
+    <string name="designed_battery_capacity">Designed battery capacity</string>
 </resources>
