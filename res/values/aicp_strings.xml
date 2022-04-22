@@ -33,4 +33,8 @@
     <string name="aicpextras_title">AICP Extras</string>
     <string name="aicpextras_summary">ROM customization</string>
      <string name="menu_key_ae" translatable="false">top_level_ae</string>
+
+    <!-- Battery health -->
+    <string name="current_battery_capacity">Current battery capacity</string>
+    <string name="designed_battery_capacity">Designed battery capacity</string>
 </resources>
