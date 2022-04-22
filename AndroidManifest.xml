@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:androidprv="http://schemas.android.com/apk/prv/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         package="com.android.settings"
         coreApp="true"
         android:sharedUserId="android.uid.system">
@@ -111,6 +112,9 @@
     <uses-permission android:name="android.permission.LAUNCH_MULTI_PANE_SETTINGS_DEEP_LINK" />
     <uses-permission android:name="android.permission.ALLOW_PLACE_IN_MULTI_PANE_SETTINGS" />
 
+    <!-- App lock -->
+    <uses-permission android:name="android.permission.MANAGE_APP_LOCK" />
+
     <application
             android:name=".SettingsApplication"
             android:label="@string/settings_label"
@@ -123,6 +127,7 @@
             android:usesCleartextTraffic="true"
             android:defaultToDeviceProtectedStorage="true"
             android:directBootAware="true"
+            tools:replace="android:appComponentFactory"
             android:appComponentFactory="androidx.core.app.CoreComponentFactory">
 
         <uses-library android:name="org.apache.http.legacy"/>
@@ -4312,6 +4317,18 @@
                 android:value="com.android.settings.aicp.StartAe" />
             <meta-data android:name="com.android.settings.summary"
                        android:resource="@string/aicpextras_summary"/>
+        </activity>
+
+        <activity android:name="com.android.settings.security.applock.AppLockCredentialActivity"
+            android:exported="false"
+            android:permission="android.permission.MANAGE_USERS"
+            android:excludeFromRecents="true"
+            android:stateNotNeeded="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.app.action.UNLOCK_APP" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
 
         <!-- This is the longest AndroidManifest.xml ever. -->
