@@ -24,6 +24,14 @@
         android:persistent="false"
         android:fragment="com.android.settings.security.applock.AppLockPackageListFragment" />
 
+    <!-- Hidden apps -->
+    <Preference
+        android:key="hidden_apps"
+        android:title="@string/hidden_apps_title"
+        android:summary="@string/hidden_apps_summary"
+        android:persistent="false"
+        android:fragment="com.android.settings.security.applock.miscellaneous.HiddenAppSettingsFragment" />
+
     <ListPreference
         android:key="app_lock_timeout"
         android:title="@string/app_lock_timeout_title"
@@ -52,11 +60,4 @@
         android:selectable="false"
         settings:searchable="false" />
 
-    <!-- Hidden apps -->
-    <Preference
-        android:key="hidden_apps"
-        android:title="@string/hidden_apps_title"
-        android:summary="@string/hidden_apps_summary"
-        android:persistent="false"
-        android:fragment="com.android.settings.security.applock.miscellaneous.HiddenAppSettingsFragment" />
 </PreferenceScreen>
