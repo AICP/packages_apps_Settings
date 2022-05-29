@@ -98,9 +98,21 @@
         android:selectable="false" />
 
     <com.android.settings.fuelgauge.PowerGaugePreference
+        android:key="battery_health_percent"
+        android:title="@string/battery_health_percent"
+        android:selectable="false" />
+
+
+    <com.android.settings.fuelgauge.PowerGaugePreference
         android:key="battery_charge_cycles"
         android:title="@string/battery_charge_cycles"
         android:selectable="false" />
+
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="optimized_charge_enabled"
+        android:title="@string/optimized_charge_title"
+        android:summary="@string/optimized_charge_summary"
+        android:defaultValue="false"/>
 
     <com.android.settingslib.widget.FooterPreference
         android:key="power_usage_footer"
