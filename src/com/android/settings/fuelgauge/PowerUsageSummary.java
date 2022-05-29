@@ -310,9 +310,9 @@ public class PowerUsageSummary extends PowerUsageBase implements
         mBatteryTempPref.setSummary(BatteryInfo.batteryTemp + " \u2103");
 
         if (mBatteryHealthSupported) {
-            mCurrentBatteryCapacity.setSummary(parseBatterymAhText(getResources().getString(R.string.config_batteryCalculatedCapacity)));
-            mDesignedBatteryCapacity.setSummary(parseBatterymAhText(getResources().getString(R.string.config_batteryDesignCapacity)));
-            mBatteryChargeCycles.setSummary(parseBatteryCycle(getResources().getString(R.string.config_batteryChargeCycles)));
+            mCurrentBatteryCapacity.setSummary(parseCurrentBatterymAhText(getResources().getString(R.string.config_batCurCap)));
+            mDesignedBatteryCapacity.setSummary(parseDesignedBatterymAhText(getResources().getString(R.string.config_batDesCap)));
+            mBatteryChargeCycles.setSummary(parseBatteryCycle(getResources().getString(R.string.config_batChargeCycle)));
         }
     }
 
@@ -407,9 +407,22 @@ public class PowerUsageSummary extends PowerUsageBase implements
         }
     }
 
-    private String parseBatterymAhText(String file) {
+    private String parseCurrentBatterymAhText(String file) {
         try {
             return Integer.parseInt(readLine(file)) / 1000 + " mAh";
+        } catch (IOException ioe) {
+            Log.e(TAG, "Cannot read battery capacity from "
+                    + file, ioe);
+        } catch (NumberFormatException nfe) {
+            Log.e(TAG, "Read a badly formatted battery capacity from "
+                    + file, nfe);
+        }
+        return getResources().getString(R.string.status_unavailable);
+    }
+
+    private String parseDesignedBatterymAhText(String file) {
+        try {
+            return Integer.parseInt(readLine(file)) + " mAh";
         } catch (IOException ioe) {
             Log.e(TAG, "Cannot read battery capacity from "
                     + file, ioe);
