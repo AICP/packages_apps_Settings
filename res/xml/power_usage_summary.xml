@@ -98,6 +98,11 @@
         android:selectable="false" />
 
     <com.android.settings.fuelgauge.PowerGaugePreference
+        android:key="battery_health_percent"
+        android:title="@string/battery_health_percent"
+        android:selectable="false" />
+
+    <com.android.settings.fuelgauge.PowerGaugePreference
         android:key="battery_charge_cycles"
         android:title="@string/battery_charge_cycles"
         android:selectable="false" />
