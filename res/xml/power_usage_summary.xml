@@ -87,17 +87,22 @@
         android:title="@string/battery_temperature"
         android:selectable="false" />
 
-    <com.android.settings.fuelgauge.PowerGaugePreference
+    <com.android.settings.fuelgauge.batteryusage.PowerGaugePreference
         android:key="designed_battery_capacity"
         android:title="@string/designed_battery_capacity"
         android:selectable="false" />
 
-    <com.android.settings.fuelgauge.PowerGaugePreference
+    <com.android.settings.fuelgauge.batteryusage.PowerGaugePreference
         android:key="current_battery_capacity"
         android:title="@string/current_battery_capacity"
         android:selectable="false" />
 
-    <com.android.settings.fuelgauge.PowerGaugePreference
+    <com.android.settings.fuelgauge.batteryusage.PowerGaugePreference
+        android:key="battery_health_percent"
+        android:title="@string/battery_health_percent"
+        android:selectable="false" />
+
+    <com.android.settings.fuelgauge.batteryusage.PowerGaugePreference
         android:key="battery_charge_cycles"
         android:title="@string/battery_charge_cycles"
         android:selectable="false" />
