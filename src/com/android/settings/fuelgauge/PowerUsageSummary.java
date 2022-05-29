@@ -83,6 +83,7 @@ public class PowerUsageSummary extends PowerUsageBase implements
     private static final String KEY_CURRENT_BATTERY_CAPACITY = "current_battery_capacity";
     private static final String KEY_DESIGNED_BATTERY_CAPACITY = "designed_battery_capacity";
     private static final String KEY_BATTERY_CHARGE_CYCLES = "battery_charge_cycles";
+    private static final String KEY_BATTERY_HEALTH_PERCENT = "battery_health_percent";
 
     private BatteryStatsHelper mStatsHelper;
 
@@ -110,6 +111,8 @@ public class PowerUsageSummary extends PowerUsageBase implements
     PowerGaugePreference mDesignedBatteryCapacity;
     @VisibleForTesting
     PowerGaugePreference mBatteryChargeCycles;
+    @VisibleForTesting
+    PowerGaugePreference mBatteryHealthPercent;
 
     @VisibleForTesting
     BatteryHeaderPreferenceController mBatteryHeaderPreferenceController;
@@ -209,6 +212,8 @@ public class PowerUsageSummary extends PowerUsageBase implements
                 KEY_DESIGNED_BATTERY_CAPACITY);
         mBatteryChargeCycles = (PowerGaugePreference) findPreference(
                 KEY_BATTERY_CHARGE_CYCLES);
+        mBatteryHealthPercent = (PowerGaugePreference) findPreference(
+                KEY_BATTERY_HEALTH_PERCENT);
         mBatteryUtils = BatteryUtils.getInstance(getContext());
 
         mBatteryHealthSupported = getResources().getBoolean(R.bool.config_supportBatteryHealth);
@@ -216,6 +221,7 @@ public class PowerUsageSummary extends PowerUsageBase implements
             getPreferenceScreen().removePreference(mCurrentBatteryCapacity);
             getPreferenceScreen().removePreference(mDesignedBatteryCapacity);
             getPreferenceScreen().removePreference(mBatteryChargeCycles);
+            getPreferenceScreen().removePreference(mBatteryHealthPercent);
         }
 
         if (Utils.isBatteryPresent(getContext())) {
@@ -310,9 +316,10 @@ public class PowerUsageSummary extends PowerUsageBase implements
         mBatteryTempPref.setSummary(BatteryInfo.batteryTemp + " \u2103");
 
         if (mBatteryHealthSupported) {
-            mCurrentBatteryCapacity.setSummary(parseBatterymAhText(getResources().getString(R.string.config_batteryCalculatedCapacity)));
-            mDesignedBatteryCapacity.setSummary(parseBatterymAhText(getResources().getString(R.string.config_batteryDesignCapacity)));
-            mBatteryChargeCycles.setSummary(parseBatteryCycle(getResources().getString(R.string.config_batteryChargeCycles)));
+            mCurrentBatteryCapacity.setSummary(parseCurrentBatterymAhText(getResources().getString(R.string.config_batCurCap)));
+            mDesignedBatteryCapacity.setSummary(parseDesignedBatterymAhText(getResources().getString(R.string.config_batDesCap)));
+            mBatteryChargeCycles.setSummary(parseBatteryCycle(getResources().getString(R.string.config_batChargeCycle)));
+            mBatteryHealthPercent.setSummary(parseBatteryHealthPercent(getResources().getString(R.string.config_batHealthPercent)));
         }
     }
 
@@ -407,7 +414,20 @@ public class PowerUsageSummary extends PowerUsageBase implements
         }
     }
 
-    private String parseBatterymAhText(String file) {
+    private String parseCurrentBatterymAhText(String file) {
+        try {
+            return Integer.parseInt(readLine(file)) / 1000 + " mAh";
+        } catch (IOException ioe) {
+            Log.e(TAG, "Cannot read battery capacity from "
+                    + file, ioe);
+        } catch (NumberFormatException nfe) {
+            Log.e(TAG, "Read a badly formatted battery capacity from "
+                    + file, nfe);
+        }
+        return getResources().getString(R.string.status_unavailable);
+    }
+
+    private String parseDesignedBatterymAhText(String file) {
         try {
             return Integer.parseInt(readLine(file)) / 1000 + " mAh";
         } catch (IOException ioe) {
@@ -423,6 +443,19 @@ public class PowerUsageSummary extends PowerUsageBase implements
     private String parseBatteryCycle(String file) {
         try {
             return Integer.parseInt(readLine(file)) + " Cycles";
+        } catch (IOException ioe) {
+            Log.e(TAG, "Cannot read battery cycle from "
+                    + file, ioe);
+        } catch (NumberFormatException nfe) {
+            Log.e(TAG, "Read a badly formatted battery cycle from "
+                    + file, nfe);
+        }
+        return getResources().getString(R.string.status_unavailable);
+    }
+
+    private String parseBatteryHealthPercent(String file) {
+        try {
+            return Integer.parseInt(readLine(file)) + " %";
         } catch (IOException ioe) {
             Log.e(TAG, "Cannot read battery cycle from "
                     + file, ioe);
