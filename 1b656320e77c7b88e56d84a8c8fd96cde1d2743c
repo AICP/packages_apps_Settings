@@ -3,6 +3,23 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "f29cf5c6_befd5ece",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2022-06-01T19:06:16Z",
+      "side": 1,
+      "message": "It was fine with PS3 for me. There was a reason to divide Current \u0026 Designated strings for our kernel.\n\nHow it looks with PS3 for you?",
+      "revId": "1b656320e77c7b88e56d84a8c8fd96cde1d2743c",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "bcc61a61_27225557",
         "filename": "src/com/android/settings/fuelgauge/PowerUsageSummary.java",
         "patchSetId": 4
