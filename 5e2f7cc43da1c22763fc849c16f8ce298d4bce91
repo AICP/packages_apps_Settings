@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2ea5f8e6_39a798a9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2022-06-02T21:11:28Z",
+      "side": 1,
+      "message": "example for device overlays: https://gerrit.aicp-rom.com/c/AICP/device_oneplus_sm8250-common/+/115416",
+      "revId": "5e2f7cc43da1c22763fc849c16f8ce298d4bce91",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
