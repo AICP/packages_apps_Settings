@@ -20,6 +20,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "211a94f3_6dbb4024",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1646
+      },
+      "writtenOn": "2022-06-02T09:58:32Z",
+      "side": 1,
+      "message": "With PS3 i had design string *1000. Both values have same number of digits for me:\n\nbarbet:/ # cat /sys/class/power_supply/bms/charge_full\n4734000\nat /sys/class/power_supply/bms/charge_full_design                         \u003c\n4737000\nbarbet:/ # \n\nI guess for you its different. Maybe we should use the divider bools again?",
+      "parentUuid": "f29cf5c6_befd5ece",
+      "revId": "1b656320e77c7b88e56d84a8c8fd96cde1d2743c",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "bcc61a61_27225557",
         "filename": "src/com/android/settings/fuelgauge/PowerUsageSummary.java",
         "patchSetId": 4
