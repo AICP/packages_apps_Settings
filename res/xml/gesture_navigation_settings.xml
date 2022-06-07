@@ -92,6 +92,12 @@
             android:defaultValue="false"
             settings:controller="com.android.settings.gestures.GestureHandlePreferenceController"/>
 
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="navigation_bar_gestural_narrow"
+            android:title="@string/gestural_navbar_narrow_title"
+            android:summary="@string/gestural_navbar_narrow_summary"
+            android:defaultValue="false" />
+
     </PreferenceCategory>
 
     <com.aicp.gear.preference.SecureSettingSwitchPreference
