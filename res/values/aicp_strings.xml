@@ -405,4 +405,8 @@
     <string name="min_refresh_rate_title">Minimum refresh rate</string>
     <string name="max_refresh_rate_title">Maximum refresh rate</string>
     <string name="refresh_rate_placeholder"><xliff:g id="refresh_rate" example="60">%1$s</xliff:g> Hz</string>
+
+    <!-- Narrow gestural navigation bar -->
+    <string name="gestural_navbar_narrow_title">Remove space under keyboard</string>
+    <string name="gestural_navbar_narrow_summary">Make the navigation bar under the keyboard narrow</string>
 </resources>
