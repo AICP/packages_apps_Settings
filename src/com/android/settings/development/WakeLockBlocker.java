@@ -17,6 +17,7 @@
 
 package com.android.settings.development;
 
+import android.app.ActionBar;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.os.Bundle;
@@ -116,13 +117,16 @@ public class WakeLockBlocker extends SettingsPreferenceFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d(TAG, "running");
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         mInflater = inflater;
+        final ActionBar actionBar = getActivity().getActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(false);
+        }
         setHasOptionsMenu(true);
         return inflater.inflate(R.layout.wakelock_blocker, container, false);
     }
@@ -185,7 +189,6 @@ public class WakeLockBlocker extends SettingsPreferenceFragment {
 
     private void updateSeenWakeLocksList() {
         PowerManager pm = (PowerManager) getActivity().getSystemService(Context.POWER_SERVICE);
-        Log.d(TAG, pm.getSeenWakeLocks());
 
         String seenWakeLocks =  pm.getSeenWakeLocks();
         mSeenWakeLocks = new ArrayList<String>();
@@ -234,7 +237,6 @@ public class WakeLockBlocker extends SettingsPreferenceFragment {
         if(buffer.length() > 0) {
             buffer.deleteCharAt(buffer.length() - 1);
         }
-        Log.d(TAG, buffer.toString());
         Settings.Global.putString(getActivity().getContentResolver(),
                 Settings.Global.WAKELOCK_BLOCKING_LIST, buffer.toString());
     }
