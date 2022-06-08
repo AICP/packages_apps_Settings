@@ -249,7 +249,9 @@
     <string name="back_gesture_arrow_message">Back gesture animation</string>
     <string name="back_gesture_arrow_summary">Show an animated arrow for back gesture</string>
 
-    <!-- Narrow gestural navigation bar -->
-    <string name="gestural_navbar_narrow_title">Remove space under keyboard</string>
-    <string name="gestural_navbar_narrow_summary">Make the navigation bar under the keyboard narrow</string>
+    <!-- Navigation bar IME space -->
+    <string name="navigation_bar_ime_space_title">Space under the keyboard</string>
+    <string name="navigation_bar_ime_space_value_narrow">Narrow</string>
+    <string name="default_string">Default</string>
+    <string name="hidden_string">Hidden</string>
 </resources>
