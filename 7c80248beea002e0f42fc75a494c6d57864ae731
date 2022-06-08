@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b4a860fd_0641dc58",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 343
+      },
+      "writtenOn": "2022-06-08T19:13:21Z",
+      "side": 1,
+      "message": "Looks good to me, although I wonder why the log tags were in the code anyway.🤔",
+      "revId": "7c80248beea002e0f42fc75a494c6d57864ae731",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
