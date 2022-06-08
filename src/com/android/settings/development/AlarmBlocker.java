@@ -18,6 +18,7 @@
 
 package com.android.settings.development;
 
+import android.app.ActionBar;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.os.Bundle;
@@ -112,13 +113,16 @@ public class AlarmBlocker extends SettingsPreferenceFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d(TAG, "running");
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         mInflater = inflater;
+        final ActionBar actionBar = getActivity().getActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(false);
+        }
         setHasOptionsMenu(true);
         return inflater.inflate(R.layout.alarm_blocker, container, false);
     }
@@ -184,7 +188,6 @@ public class AlarmBlocker extends SettingsPreferenceFragment {
 
     private void updateSeenAlarmsList() {
         AlarmManager pm = (AlarmManager) getActivity().getSystemService(Context.ALARM_SERVICE);
-        Log.d(TAG, pm.getSeenAlarms());
 
         String seenAlarms =  pm.getSeenAlarms();
         mSeenAlarms = new ArrayList<String>();
