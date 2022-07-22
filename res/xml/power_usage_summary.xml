@@ -17,6 +17,7 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
+    xmlns:aicpextras="http://schemas.android.com/apk/res-auto">
     android:key="power_usage_summary_screen"
     android:title="@string/power_usage_summary_title"
     settings:keywords="@string/keywords_battery">
@@ -74,26 +75,31 @@
         android:title="@string/battery_temp"
         android:selectable="false" />
 
-    <com.android.settings.fuelgauge.PowerGaugePreference
-        android:key="designed_battery_capacity"
-        android:title="@string/designed_battery_capacity"
-        android:selectable="false" />
+    <com.aicp.gear.preference.SelfRemovingPreferenceCategory
+        android:key="category_battery_health"
+        android:title="@string/category_battery_health_title"
+        aicpextras:requiresConfig="@bool/config_supportBatteryHealth">
 
-    <com.android.settings.fuelgauge.PowerGaugePreference
-        android:key="current_battery_capacity"
-        android:title="@string/current_battery_capacity"
-        android:selectable="false" />
+        <com.android.settings.fuelgauge.PowerGaugePreference
+            android:key="designed_battery_capacity"
+            android:title="@string/designed_battery_capacity"
+            android:selectable="false" />
 
-    <com.android.settings.fuelgauge.PowerGaugePreference
-        android:key="battery_health_percent"
-        android:title="@string/battery_health_percent"
-        android:selectable="false" />
+        <com.android.settings.fuelgauge.PowerGaugePreference
+            android:key="current_battery_capacity"
+            android:title="@string/current_battery_capacity"
+            android:selectable="false" />
 
+        <com.android.settings.fuelgauge.PowerGaugePreference
+            android:key="battery_health_percent"
+            android:title="@string/battery_health_percent"
+            android:selectable="false" />
 
-    <com.android.settings.fuelgauge.PowerGaugePreference
-        android:key="battery_charge_cycles"
-        android:title="@string/battery_charge_cycles"
-        android:selectable="false" />
+        <com.android.settings.fuelgauge.PowerGaugePreference
+            android:key="battery_charge_cycles"
+            android:title="@string/battery_charge_cycles"
+            android:selectable="false" />
+    </com.aicp.gear.preference.SelfRemovingPreferenceCategory>
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="optimized_charge_enabled"
