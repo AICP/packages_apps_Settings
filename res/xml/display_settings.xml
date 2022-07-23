@@ -18,6 +18,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aicp="http://schemas.android.com/apk/res-auto"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
+    xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:key="display_settings_screen"
     android:title="@string/display_settings"
     settings:keywords="@string/keywords_display">
@@ -122,6 +123,22 @@
             settings:keywords="@string/keywords_color_mode"/>
     </PreferenceCategory>
 
+    <com.aicp.gear.preference.SelfRemovingPreferenceCategory
+        android:key="category_screen_refresh"
+        android:title="@string/screen_refresh_category_title"
+        aicpextras:requiresConfig="@bool/config_show_refresh_rate_switch">
+
+        <ListPreference
+            android:key="min_refresh_rate"
+            android:title="@string/min_refresh_rate_title"
+            android:summary="@string/summary_placeholder" />
+
+        <ListPreference
+            android:key="max_refresh_rate"
+            android:title="@string/max_refresh_rate_title"
+            android:summary="@string/summary_placeholder" />
+    </com.aicp.gear.preference.SelfRemovingPreferenceCategory>
+
     <PreferenceCategory
         android:title="@string/category_name_display_controls">
 
@@ -137,16 +154,6 @@
             android:title="@string/display_white_balance_title"
             android:summary="@string/display_white_balance_summary"
             settings:controller="com.android.settings.display.DisplayWhiteBalancePreferenceController"/>
-
-        <ListPreference
-            android:key="min_refresh_rate"
-            android:title="@string/min_refresh_rate_title"
-            android:summary="@string/summary_placeholder" />
-
-        <ListPreference
-            android:key="max_refresh_rate"
-            android:title="@string/max_refresh_rate_title"
-            android:summary="@string/summary_placeholder" />
 
         <SwitchPreference
             android:key="peak_refresh_rate"
