@@ -16,6 +16,23 @@
       "message": "compiles and works as intended on instantnoodlep",
       "revId": "d15924d258d2073b308e47f531c5cde99d01970b",
       "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a9f6eee2_70ecc86e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2022-08-15T05:47:59Z",
+      "side": 1,
+      "message": "Tried with Navbar Pulse enabled, had issues in last cycle",
+      "revId": "d15924d258d2073b308e47f531c5cde99d01970b",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
     }
   ]
 }
