@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2016 The CyanogenMod Project
+     Copyright (C) 2017-2019 The LineageOS Project
+     Copyright (C) 2014-2020 AICP
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="connected_tws_device_saved_title">Earbud tersimpan</string>
+    <string name="aicp_version_title">Versi AICP</string>
+    <string name="aicp_version_summary">AICP Edisi 12L - 17.1</string>
+    <string name="aicpextras_title">AICP Extras</string>
+    <string name="aicpextras_summary">Kustomisasi ROM</string>
+    <string name="selinux_status">Status SELinux</string>
+    <string name="selinux_status_disabled">Dimatikan</string>
+    <string name="selinux_status_permissive">Tidak wajib</string>
+    <string name="selinux_status_enforcing">Wajib</string>
+    <string name="app_play_store">Google Play</string>
+    <string name="ambient_display_screen_summary_always_on">Selalu aktif / Peningkatan penggunaan baterai</string>
+    <string name="ambient_display_screen_summary_notifications">Pemberitahuan Baru</string>
+    <string name="adb_enable_root">Debugging Root</string>
+    <string name="adb_enable_summary_root">Izinkan menjalankan debugging Android sebagai root</string>
+    <string name="about_device_name">Perangkat</string>
+    <string name="platform_revision">Platform</string>
+    <string name="total_ram">Total RAM</string>
+    <string name="notification_log_summary">Tampilkan log riwayat notifikasi</string>
+    <string name="duration_less_than_one_minute">Kurang dari 1 Menit</string>
+    <string name="screen_time_summary_usage_today">%1$s hari ini</string>
+    <string name="volume_link_notification_title">Hubungkan volume nada dering &amp; pemberitahuan</string>
+    <string name="back_gesture_haptic_title">Umpan balik haptik</string>
+    <string name="back_gesture_haptic_summary">Aktifkan efek getaran pada tombol gerakan kembali</string>
+    <string name="display_rotation_title">Opsi Rotasi Otomatis</string>
+    <string name="display_rotation_summary">Konfigurasikan fungsi putar otomatis layar</string>
+    <string name="display_rotation_disabled">Dimatikan</string>
+    <string name="display_rotation_unit">derajat</string>
+    <string name="display_rotation_category_title">Mode rotasi</string>
+    <string name="display_rotation_0_title">0 derajat</string>
+    <string name="display_rotation_90_title">90 derajat</string>
+    <string name="display_rotation_180_title">180 derajat</string>
+    <string name="display_rotation_270_title">270 derajat</string>
+    <string name="prevent_ringing_option_mute_no_media">Diam, tidak ada media</string>
+    <string name="prevent_ringing_option_mute_no_media_summary">Hidup, (diam, tidak ada media)</string>
+    <string name="back_height_low_label">Penuh</string>
+    <string name="back_height_high_label">Bawah</string>
+    <string name="gesture_height_category_title">Gestur kembali</string>
+    <string name="gesture_region">Wilayah vertikal</string>
+    <string name="back_height_message">Ukuran area samping tampilan vertikal yang digunakan untuk gestur kembali.</string>
+    <string name="volume_steps_title">Tingkat volume</string>
+    <string name="volume_steps_alarm_title">Tingkat volume: Alarm</string>
+    <string name="volume_steps_dtmf_title">Tingkat volume: DTMF</string>
+    <string name="volume_steps_music_title">Tingkat volume: Musik</string>
+    <string name="volume_steps_notification_title">Tingkat volume: Pemberitahuan</string>
+    <string name="volume_steps_ring_title">Tingkat volume: Dering</string>
+    <string name="volume_steps_system_title">Tingkat volume: Sistem</string>
+    <string name="volume_steps_voice_call_title">Tingkat volume: Panggilan Suara</string>
+    <string name="volume_steps_reset">Setel ulang</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
+    <string name="back_gesture_arrow_message">Animasi gestur kembali</string>
+    <string name="back_gesture_arrow_summary">Tampilkan animasi panah untuk gerakan kembali.</string>
+    <string name="navbar_gesture_handle_category">Pegangan gestur</string>
+    <string name="navbar_gesture_handle_hide_title">Sembunyikan pegangan gestur</string>
+    <string name="navbar_gesture_handle_hide_summary">Sembunyikan garis horizontal</string>
+    <string name="battery_usage_stats_reset">Setel ulang statistik</string>
+    <string name="battery_usage_stats_reset_message">Statistik riwayat baterai akan disetel ulang</string>
+    <string name="battery_temp">Suhu Baterai</string>
+    <string name="fingerprint_enroll_find_sensor_message_front" product="tablet">Temukan sensor sidik jari di bagian depan tablet Anda.</string>
+    <string name="fingerprint_enroll_find_sensor_message_front" product="device">Temukan sensor sidik jari di bagian depan perangkat Anda.</string>
+    <string name="fingerprint_enroll_find_sensor_message_front" product="default">Temukan sensor sidik jari di bagian depan ponsel Anda.</string>
+    <string name="fingerprint_enroll_find_sensor_message_rear" product="tablet">Temukan sensor sidik jari di bagian belakang tablet Anda.</string>
+    <string name="fingerprint_enroll_find_sensor_message_rear" product="device">Temukan sensor sidik jari di bagian belakang perangkat Anda.</string>
+    <string name="fingerprint_enroll_find_sensor_message_rear" product="default">Temukan sensor sidik jari di bagian belakang ponsel Anda.</string>
+    <string name="fingerprint_enroll_find_sensor_message_side" product="tablet">Temukan sensor sidik jari di bagian samping tablet Anda.</string>
+    <string name="fingerprint_enroll_find_sensor_message_side" product="device">Temukan sensor sidik jari di bagian samping perangkat Anda.</string>
+    <string name="fingerprint_enroll_find_sensor_message_side" product="default">Temukan sensor sidik jari di bagian samping ponsel Anda.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_front" product="tablet">Sentuh sensor di bagian depan tablet Anda.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_front" product="device">Sentuh sensor di bagian depan perangkat Anda.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_front" product="default">Sentuh sensor di bagian depan ponsel Anda.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_rear" product="tablet">Sentuh sensor di bagian belakang tablet Anda.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_rear" product="device">Sentuh sensor di bagian belakang perangkat Anda.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_rear" product="default">Sentuh sensor di bagian belakang ponsel Anda.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_side" product="tablet">Sentuh sensor di bagian samping tablet Anda.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_side" product="device">Sentuh sensor di bagian samping perangkat Anda.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_side" product="default">Sentuh sensor di bagian samping ponsel Anda.</string>
+    <string name="vibration_preferences">Getaran &amp; haptic</string>
+    <string name="summary_vibration_preferences">Ubah intensitas getaran, pola, dan lainnya</string>
+    <string name="keywords_vibration_preferences">pola getaran, intensitas getaran, dalam panggilan, intensitas, haptik, ketuk, kekuatan getaran</string>
+    <string name="ringtone_vibration_pattern">Pola getaran nada dering</string>
+    <string name="vibration_intensity_ringer">Intensitas getaran nada dering</string>
+    <string name="vibration_intensity_notification">Intensitas getaran notifikasi</string>
+    <string name="haptic_feedback_intensity">Intensitas umpan balik haptik</string>
+    <string name="vibration_intensity_disabled">Dimatikan</string>
+    <string name="vibration_intensity_light">Ringan</string>
+    <string name="vibration_intensity_medium">Sedang</string>
+    <string name="vibration_intensity_strong">Kuat</string>
+    <string name="vibration_intensity_custom">Kustom</string>
+    <string name="pattern_dzzz_dzzz">dzzz-dzzz</string>
+    <string name="pattern_dzzz_da">dzzz-da</string>
+    <string name="pattern_mm_mm_mm">mm-mm-mm</string>
+    <string name="pattern_da_da_dzzz">da-da-dzzz</string>
+    <string name="pattern_da_dzzz_da">da-dzzz-da</string>
+    <string name="three_finger_gesture">Usap untuk menangkap layar</string>
+    <string name="three_finger_gesture_summary">Usap 3 jari untuk mengambil tangkapan layar</string>
+    <string name="device_info_protected_single_press">Sentuh untuk melihat info</string>
+    <string name="data_usage_app_restrict_all">Izinkan akses jaringan</string>
+    <string name="data_usage_app_restrict_all_summary">Aktifkan penggunaan jaringan</string>
+    <string name="data_usage_app_restrict_mobile">Data seluler</string>
+    <string name="data_usage_app_restrict_mobile_summary">Aktifkan penggunaan data seluler</string>
+    <string name="data_usage_app_restrict_vpn">Data VPN</string>
+    <string name="data_usage_app_restrict_vpn_summary">Aktifkan penggunaan data VPN</string>
+    <string name="data_usage_app_restrict_wifi">Data Wi\u2011Fi</string>
+    <string name="data_usage_app_restrict_wifi_summary">Aktifkan penggunaan data Wi\u2011Fi</string>
+    <string name="tethering_allow_vpn_upstreams_title">Izinkan klien untuk menggunakan VPN</string>
+    <string name="tethering_allow_vpn_upstreams_summary">Izinkan klien hotspot untuk menggunakan koneksi VPN perangkat\u2019 ini untuk konektivitas upstream</string>
+    <string name="increasing_ring_volume_option_title">Meningkatkan volume dering</string>
+    <string name="increasing_ring_min_volume_title">Volume awal</string>
+    <string name="increasing_ring_ramp_up_time_title">Waktu penguatan</string>
+    <string name="app_volume">Volume aplikasi</string>
+    <string name="lock_settings_picker_pattern_size_message">Pilih ukuran pola</string>
+    <string name="lockpattern_settings_enable_error_path_title">Tampilkan kesalahan pola</string>
+    <string name="lockpattern_settings_enable_dots_title">Tampilkan titik-titik pola</string>
+    <string name="pocket_judge_title">Deteksi saku</string>
+    <string name="pocket_judge_summary">Blokir masukan tombol dan layar saat perangkat berada dalam saku</string>
+    <string name="unlock_quick_unlock_control_title">Buka cepat</string>
+    <string name="unlock_quick_unlock_control_summary">Buka kunci secara otomatis ketika PIN/kata sandi yang benar dimasukkan</string>
+    <string name="auto_brightness_one_shot_title">Kecerahan otomatis satu bidikan</string>
+    <string name="auto_brightness_one_shot_summary">Penyesuaian kecerahan hanya akan terjadi pada saat layar dihidupkan</string>
+    <string name="app_volume_title">Kontrol volume per-aplikasi</string>
+    <string name="app_volume_summary">Izinkan untuk mengatur tingkat volume yang berbeda untuk setiap aplikasi</string>
+    <string name="wifi_timeout">Batas waktu WiFi</string>
+    <string name="wifi_timeout_summary">Jangan matikan WiFi secara otomatis</string>
+    <string name="wifi_timeout_summary_auto">WiFi akan dimatikan setelah <xliff:g id="timeout_description">%1$s</xliff:g> jika tidak ada jaringan terhubung</string>
+    <string name="bluetooth_timeout">Batas waktu Bluetooth</string>
+    <string name="bluetooth_timeout_summary">Jangan matikan Bluetooth secara otomatis</string>
+    <string name="bluetooth_timeout_summary_auto">Bluetooth akan dimatikan setelah <xliff:g id="timeout_description">%1$s</xliff:g> jika tidak ada perangkat terhubung</string>
+    <string name="custom_timeout_summary_never">Jangan pernah</string>
+    <string name="custom_timeout_summary_15secs">15 detik</string>
+    <string name="custom_timeout_summary_30secs">30 detik</string>
+    <string name="custom_timeout_summary_1min">1 menit</string>
+    <string name="custom_timeout_summary_2mins">2 menit</string>
+    <string name="custom_timeout_summary_5mins">5 menit</string>
+    <string name="custom_timeout_summary_10mins">10 menit</string>
+    <string name="custom_timeout_summary_30mins">30 menit</string>
+    <string name="custom_timeout_summary_1hour">1 jam</string>
+    <string name="custom_timeout_summary_2hours">2 jam</string>
+    <string name="custom_timeout_summary_4hours">4 jam</string>
+    <string name="custom_timeout_summary_8hours">8 Jam</string>
+    <string name="prevent_ringing_option_cycle">Melalui mode siklus</string>
+    <string name="prevent_ringing_option_cycle_summary">Aktif (Melalui mode siklus)</string>
+    <string name="adaptive_playback_screen_title">Pemutaran Adaptif</string>
+    <string name="adaptive_playback_disabled_summary">Mati</string>
+    <string name="adaptive_playback_timeout_title">Gunakan batas waktu</string>
+    <string name="adaptive_playback_timeout_none">Tanpa batas waktu</string>
+    <string name="adaptive_playback_timeout_none_summary">Aktif (tidak ada batas waktu)</string>
+    <string name="adaptive_playback_timeout_30_secs">30 detik</string>
+    <string name="adaptive_playback_timeout_30_secs_summary">Hidup (30 detik)</string>
+    <string name="adaptive_playback_timeout_1_min">1 menit</string>
+    <string name="adaptive_playback_timeout_1_min_summary">Hidup (1 menit)</string>
+    <string name="adaptive_playback_timeout_2_min">2 menit</string>
+    <string name="adaptive_playback_timeout_2_min_summary">Hidup (2 menit)</string>
+    <string name="adaptive_playback_timeout_5_min">5 menit</string>
+    <string name="adaptive_playback_timeout_5_min_summary">Hidup (5 menit)</string>
+    <string name="adaptive_playback_timeout_10_min">10 menit</string>
+    <string name="adaptive_playback_timeout_10_min_summary">Hidup (10 menit)</string>
+    <string name="wakelock_blocker_title">Pemblokir Wakelock</string>
+    <string name="wakelock_blocker_summary">Memblokir sistem wakelock</string>
+    <string name="wakelock_blocker_save">Simpan</string>
+    <string name="wakelock_list_header">Wakelocks tersedia</string>
+    <string name="wakelock_blocker_reload">Muat ulang</string>
+    <string name="wakelock_blocker_warning_title">Lanjutkan dengan hati-hati</string>
+    <string name="wakelock_blocker_warning">Memblokiran wakelock bisa menyebabkan ketidakstabilan, kerusakan, atau hilangnya data</string>
+    <string name="alarm_blocker">Pemblokir alarm</string>
+    <string name="alarm_blocker_title">Aktif</string>
+    <string name="alarm_blocker_summary">Memblokir alarm saat layar mati</string>
+    <string name="alarm_blocker_save">Simpan</string>
+    <string name="alarm_list_header">Alarm tersedia</string>
+    <string name="alarm_blocker_reload">Muat ulang</string>
+    <string name="alarm_blocker_warning_title">Lanjutkan dengan hati-hati</string>
+    <string name="alarm_blocker_warning">Memblokir alarm bisa menyebabkan ketidakstabilan, kerusakan, atau hilangnya data.</string>
+    <string name="app_lock_title">Kunci Aplikasi</string>
+    <string name="app_lock_summary_singular">1 aplikasi dilindungi</string>
+    <string name="app_lock_summary_plural"><xliff:g example="2" id="Number of applications">%1$d</xliff:g> aplikasi dilindungi</string>
+    <string name="app_lock_authentication_dialog_title">Buka untuk melanjutkan</string>
+    <string name="app_lock_packages_title">Aplikasi dilindungi</string>
+    <string name="app_lock_packages_summary">Pilih aplikasi yang akan dilindungi dengan biometrik atau kredensial perangkat</string>
+    <string name="app_lock_timeout_title">Batas waktu penguncian otomatis</string>
+    <string name="app_lock_timeout_summary">Durasi waktu setelah aplikasi yang tidak terkunci di latar belakang harus dikunci</string>
+    <string name="app_lock_notifications_title">Matikan notifikasi</string>
+    <string name="app_lock_notifications_summary">Konten notifikasi akan disembunyikan dan dimatikan untuk aplikasi yang dipilih saat terkunci.
+          Notifikasi mengambang akan dinonaktifkan secara otomatis.
+    </string>
+    <string name="app_lock_notifications_disabled_summary">Lindungi aplikasi terlebih dahulu</string>
+    <string name="app_lock_biometrics_allowed_title">Aktifkan biometrik untuk membuka kunci</string>
+    <string name="app_lock_footer_text">Gelembung akan ditutup secara otomatis setelah waktu habis</string>
+    <string name="search">Pencarian</string>
+    <string name="search_apps">Cari aplikasi</string>
+    <string name="hidden_apps_title">Aplikasi tersembunyi</string>
+    <string name="hidden_apps_summary">Aplikasi yang akan disembunyikan dari peluncur</string>
+    <string name="hidden_app_authentication_dialog_title">Buka kunci untuk menyembunyikan aplikasi</string>
+    <string name="package_details_group_title">Rincian paket</string>
+    <string name="package_name">Nama paket</string>
+    <string name="package_version">Versi paket</string>
+    <string name="optimized_charge_title">Pengisian daya yang dioptimalkan</string>
+    <string name="optimized_charge_summary">Batasi pengisian hingga 75% - 80% untuk memperpanjang masa pakai baterai</string>
+    <string name="battery_charge_cycles">Siklus Mengisi Selesai</string>
+    <string name="current_battery_capacity">Kapasitas baterai saat ini</string>
+    <string name="designed_battery_capacity">Kapasitas baterai yang dirancang</string>
+    <string name="battery_health_percent">Kesehatan Baterai</string>
+    <string name="ambient_display_screen_off_udfps_title" product="default">Tekan lama pada sensor sidik jari untuk membuka kunci ponsel</string>
+    <string name="ambient_display_screen_off_udfps_title" product="tablet">Tekan lama pada sensor sidik jari untuk membuka kunci tablet</string>
+    <string name="ambient_display_screen_off_udfps_title" product="device">Tekan lama pada sensor sidik jari untuk membuka kunci perangkat</string>
+    <string name="ambient_display_screen_off_udfps_summary">Untuk mengaktifkan layar dan membuka kunci, tekan lama sensor sidik jari di bawah layar.</string>
+</resources>

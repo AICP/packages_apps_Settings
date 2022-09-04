@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2016 The CyanogenMod Project
+     Copyright (C) 2017-2019 The LineageOS Project
+     Copyright (C) 2014-2020 AICP
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="connected_tws_device_saved_title">Earbud-uri salvate</string>
+    <string name="aicp_version_title">Experiența AICP</string>
+    <string name="aicpextras_title">AICP Extras</string>
+    <string name="aicpextras_summary">Personalizare ROM</string>
+    <string name="selinux_status">Stare SELinux</string>
+    <string name="selinux_status_disabled">Dezactivat</string>
+    <string name="selinux_status_permissive">Permisiv</string>
+    <string name="selinux_status_enforcing">Obligatoriu</string>
+    <string name="app_play_store">Google Play</string>
+    <string name="ambient_display_screen_summary_always_on">Activat permanent/Utilizare ridicată a bateriei</string>
+    <string name="ambient_display_screen_summary_notifications">Notificări noi</string>
+    <string name="adb_enable_root">Depanare ca root</string>
+    <string name="adb_enable_summary_root">Permite depanării sistemului Android să ruleze în modul root</string>
+    <string name="screen_time_summary_usage_today">%1$s astăzi</string>
+    <string name="volume_link_notification_title">Leagă volumele de apel &amp; notificare</string>
+    <string name="back_gesture_haptic_title">Vibraţii la atingere</string>
+    <string name="back_gesture_haptic_summary">Activați vibtrație haptică pentru gestul de înapoi</string>
+    <string name="display_rotation_title">Opțiuni Rotire automată</string>
+    <string name="display_rotation_summary">Configurați funcțiile de auto-rotire a ecranului</string>
+    <string name="display_rotation_disabled">Dezactivat</string>
+    <string name="display_rotation_unit">degradare</string>
+    <string name="display_rotation_category_title">Moduri de rotire</string>
+    <string name="display_rotation_0_title">0 grade</string>
+    <string name="display_rotation_90_title">90 grade</string>
+    <string name="display_rotation_180_title">180 grade</string>
+    <string name="display_rotation_270_title">270 grade</string>
+    <string name="prevent_ringing_option_mute_no_media">Fără sunet, nici o media</string>
+    <string name="prevent_ringing_option_mute_no_media_summary">Pornit (Fără sunet, fără media)</string>
+    <string name="back_height_low_label">Plin</string>
+    <string name="back_height_high_label">Jos</string>
+    <string name="volume_steps_title">Trepte Volum</string>
+    <string name="volume_steps_alarm_title">Trepte volum: Alarmă</string>
+    <string name="volume_steps_dtmf_title">Trepte de volum: DTMF</string>
+    <string name="volume_steps_music_title">Pași volum: Muzică</string>
+    <string name="volume_steps_notification_title">Trepte volum: Notificare</string>
+    <string name="volume_steps_ring_title">Trepte volum: Sunet de apel</string>
+    <string name="volume_steps_system_title">Trepte de volum: Sistem</string>
+    <string name="volume_steps_voice_call_title">Trepte volum: Apel vocal</string>
+    <string name="volume_steps_reset">Resetaţi</string>
+    <string name="back_gesture_arrow_message">Animație gest înapoi</string>
+    <string name="back_gesture_arrow_summary">Afișează o săgeată animată pentru gestul de înapoi.</string>
+    <string name="battery_usage_stats_reset">Resetare statistici</string>
+    <string name="battery_usage_stats_reset_message">Statisticile privind istoricul bateriei vor fi resetate</string>
+    <string name="battery_temp">Temperatura bateriei</string>
+    <string name="vibration_preferences">Vibrații</string>
+    <string name="ringtone_vibration_pattern">Model vibrație ton de sonerie</string>
+    <string name="vibration_intensity_ringer">Intensitatea vibraţiei tonului de sonerie</string>
+    <string name="vibration_intensity_notification">Intensitatea vibraţiei notificări</string>
+    <string name="vibration_intensity_disabled">Dezactivat</string>
+    <string name="vibration_intensity_light">Luminos</string>
+    <string name="vibration_intensity_medium">Mediu</string>
+    <string name="vibration_intensity_strong">Puternic</string>
+    <string name="vibration_intensity_custom">Particularizat</string>
+    <string name="pattern_dzzz_dzzz">dzzz-dzzz</string>
+    <string name="pattern_dzzz_da">dzzz-da</string>
+    <string name="pattern_mm_mm_mm">mm-mm-mm</string>
+    <string name="pattern_da_da_dzzz">da-da-dzzz</string>
+    <string name="pattern_da_dzzz_da">da-dzzz-da</string>
+    <string name="three_finger_gesture">Glisează pentru a face captură de ecran</string>
+    <string name="three_finger_gesture_summary">Glisați trei degete pentru captură de ecran</string>
+    <string name="device_info_protected_single_press">Atingeți pentru a afișa informații</string>
+    <string name="tethering_allow_vpn_upstreams_title">Permite clienților să utilizeze VPN-uri</string>
+    <string name="tethering_allow_vpn_upstreams_summary">Permite clienților hotspot-ului să utilizeze conexiunile VPN ale acestui dispozitiv pentru conexiunea upstream</string>
+    <string name="increasing_ring_volume_option_title">Volum ascendent</string>
+    <string name="increasing_ring_min_volume_title">Volum iniţial</string>
+    <string name="increasing_ring_ramp_up_time_title">Timp de creştere a volumului</string>
+    <string name="lock_settings_picker_pattern_size_message">Alegeți dimensiunea modelului</string>
+    <string name="lockpattern_settings_enable_error_path_title">Afișare eroare model</string>
+    <string name="lockpattern_settings_enable_dots_title">Afișare puncte șablon</string>
+    <string name="pocket_judge_title">Detectare buzunar</string>
+    <string name="pocket_judge_summary">Blocare ecran și butoane atunci când dispozitivul este în buzunar</string>
+    <string name="unlock_quick_unlock_control_title">Deblocare rapidă</string>
+    <string name="auto_brightness_one_shot_title">Luminozitate automată instantă</string>
+    <string name="auto_brightness_one_shot_summary">Ajustarea luminozității va avea loc doar în momentul în care ecranul este pornit</string>
+    <string name="bluetooth_timeout">Pauza Bluetooth</string>
+    <string name="bluetooth_timeout_summary">Nu dezactivați automat Bluetooth</string>
+    <string name="bluetooth_timeout_summary_auto">Bluetooth se va dezactiva după <xliff:g id="timeout_description">%1$s</xliff:g> dacă nu există dispozitive conectate</string>
+    <string name="custom_timeout_summary_never">Niciodată</string>
+    <string name="custom_timeout_summary_15secs">15 secunde</string>
+    <string name="custom_timeout_summary_30secs">30 de secunde</string>
+    <string name="custom_timeout_summary_1min">1 minut</string>
+    <string name="custom_timeout_summary_2mins">2 minute</string>
+    <string name="custom_timeout_summary_5mins">5 minute</string>
+    <string name="custom_timeout_summary_10mins">10 minute</string>
+    <string name="custom_timeout_summary_30mins">30 minute</string>
+    <string name="custom_timeout_summary_1hour">1 oră</string>
+    <string name="custom_timeout_summary_2hours">2 ore</string>
+    <string name="custom_timeout_summary_4hours">4 ore</string>
+    <string name="custom_timeout_summary_8hours">8 ore</string>
+    <string name="prevent_ringing_option_cycle">Ciclu cu moduri</string>
+    <string name="prevent_ringing_option_cycle_summary">Pe (ciclu prin moduri)</string>
+    <string name="adaptive_playback_screen_title">Redare adaptivă</string>
+    <string name="adaptive_playback_disabled_summary">Oprit</string>
+    <string name="adaptive_playback_timeout_title">Folosește un timp expirare de</string>
+    <string name="adaptive_playback_timeout_none">Fără pauză</string>
+    <string name="adaptive_playback_timeout_none_summary">Pornit</string>
+    <string name="adaptive_playback_timeout_30_secs">30 de secunde</string>
+    <string name="adaptive_playback_timeout_30_secs_summary">Pornit (30 de secunde)</string>
+    <string name="adaptive_playback_timeout_1_min">1 minut</string>
+    <string name="adaptive_playback_timeout_1_min_summary">Pornit (1 minut)</string>
+    <string name="adaptive_playback_timeout_2_min">2 minute</string>
+    <string name="adaptive_playback_timeout_2_min_summary">Pornit (2 minute)</string>
+    <string name="adaptive_playback_timeout_5_min">5 minute</string>
+    <string name="adaptive_playback_timeout_5_min_summary">Pornit (5 minute)</string>
+    <string name="adaptive_playback_timeout_10_min">10 minute</string>
+    <string name="adaptive_playback_timeout_10_min_summary">Pornit (10 minute)</string>
+    <string name="wakelock_blocker_summary">Blocare Wakelock-uri de sistem</string>
+    <string name="wakelock_blocker_save">Salvați</string>
+    <string name="wakelock_list_header">Wakelock-uri disponibile</string>
+    <string name="wakelock_blocker_reload">Reîncărcare</string>
+    <string name="wakelock_blocker_warning_title">Continuați cu precauție</string>
+    <string name="wakelock_blocker_warning">Blocarea wakelock-urilor poate cauza instabilitate, blocări sau pierderi de date</string>
+    <string name="alarm_blocker">Blocator Alarmă</string>
+    <string name="alarm_blocker_title">Activare</string>
+    <string name="alarm_blocker_summary">Blochează alarme în timp ce ecranul este oprit</string>
+    <string name="alarm_blocker_save">Salvați</string>
+    <string name="alarm_list_header">Alarme disponibile</string>
+    <string name="alarm_blocker_reload">Reîncărcare</string>
+    <string name="alarm_blocker_warning_title">Continuați cu precauție</string>
+    <string name="alarm_blocker_warning">Blocarea alarmelor poate cauza instabilitate, blocări sau pierderi de date.</string>
+    <string name="current_battery_capacity">Capacitatea curentă a bateriei</string>
+    <string name="designed_battery_capacity">Capacitatea proiectată a bateriei</string>
+    <string name="battery_health_percent">Integritatea Bateriei</string>
+</resources>

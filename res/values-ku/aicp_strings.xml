@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2016 The CyanogenMod Project
+     Copyright (C) 2017-2019 The LineageOS Project
+     Copyright (C) 2014-2020 AICP
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="connected_tws_device_saved_title">بیستۆکە خەزنکراوەکان</string>
+    <string name="aicp_version_title">AICP Experience</string>
+    <string name="aicpextras_title">زیاکراوەکانی Aicp</string>
+    <string name="aicpextras_summary">شازدانی ڕۆم</string>
+    <string name="selinux_status">SELinux status</string>
+    <string name="selinux_status_disabled">لەکارخراوە</string>
+    <string name="selinux_status_permissive">ڕێپێدەر</string>
+    <string name="selinux_status_enforcing">سەپاندن</string>
+    <string name="app_play_store">گوگڵ پله‌ی</string>
+    <string name="ambient_display_screen_summary_always_on">هەمیشە زیندوو / ووزەی زیاتری پاتری بەکاردەبا</string>
+    <string name="ambient_display_screen_summary_notifications">ئاگانامە نوێیەکان</string>
+    <string name="volume_link_notification_title">پێک بەستنی دەنگەکانی زەنگ &amp; ئاگانامە</string>
+    <string name="back_gesture_haptic_summary">چالاککردنی کاریگەری چک چکە لە جوڵەی گەڕانەوە</string>
+    <string name="display_rotation_title">بژاردەکانی لاربوونەوەی خۆکار</string>
+    <string name="display_rotation_summary">سازدانی چالاکییەکانی لاربوونەوە-خۆکاری ڕوونما</string>
+    <string name="display_rotation_disabled">لەکارخراوە</string>
+    <string name="display_rotation_unit">پلەکان</string>
+    <string name="display_rotation_category_title">دۆخەکانی لاربوونەوە</string>
+    <string name="display_rotation_0_title">0 پلە</string>
+    <string name="display_rotation_90_title">90 پلە</string>
+    <string name="display_rotation_180_title">180 پلە</string>
+    <string name="display_rotation_270_title">270 پلە</string>
+    <string name="prevent_ringing_option_mute_no_media">کپ, بێ میدیا</string>
+    <string name="prevent_ringing_option_mute_no_media_summary">کارا (کپ, بێ میدیا)</string>
+    <string name="back_height_low_label">پڕ</string>
+    <string name="back_height_high_label">خوارەوە</string>
+    <string name="volume_steps_title">هەنگاوەکانی دەنگ</string>
+    <string name="volume_steps_alarm_title">هەنگاوی دەنگ: ووریاکەرەوە</string>
+    <string name="volume_steps_dtmf_title">هەنگاوی دەنگ: DTMF</string>
+    <string name="volume_steps_music_title">هەنگاوی دەنگ: میوزیک</string>
+    <string name="volume_steps_notification_title">هەنگاوی دەنگ: ئاگانامە</string>
+    <string name="volume_steps_ring_title">هەنگاوی دەنگ: زەنگلێدەر</string>
+    <string name="volume_steps_system_title">هەنگاوی دەنگ: سیستەم</string>
+    <string name="volume_steps_voice_call_title">هەنگاوی دەنگ: پەیوەندی دەنگی</string>
+    <string name="volume_steps_reset">گێڕانەوە</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
+    <string name="back_gesture_arrow_summary">پیشاندانی ئەنیمەیشنی تیر بۆ جوڵەی گەڕانەوە.</string>
+    <string name="battery_usage_stats_reset">گێڕانەوەی ئامار</string>
+    <string name="battery_usage_stats_reset_message">ئاماری مێژووی پاتری سفرەکرێتەوە</string>
+    <string name="battery_temp">پله‌ی گه‌رمی پاتری</string>
+    <string name="vibration_intensity_disabled">لەکارخراوە</string>
+    <string name="three_finger_gesture">ڕاکێشە بۆ چرکاندنی ڕوونما</string>
+    <string name="three_finger_gesture_summary">سێ پەنجەت ڕاکێشە بۆ چرکاندنی ڕوونما</string>
+    <string name="device_info_protected_single_press">گرتە بۆ پیشاندانی زانیاری</string>
+    <string name="tethering_allow_vpn_upstreams_title">ڕێگەدان بەکڕیاران بۆ بەکارهێنانی VPN</string>
+    <string name="tethering_allow_vpn_upstreams_summary">ڕێپێدان بە کڕیارانی هۆتسپۆت بۆ بەکارهێنانی VPN ی \u2019 ئەم ئامێرە بۆ تۆڕ و پەیوەستییەکانیان</string>
+    <string name="increasing_ring_volume_option_title">بەرزکردنەوەی دەنگی زەنگ</string>
+    <string name="increasing_ring_min_volume_title">دەستپێکی دەنگ</string>
+    <string name="increasing_ring_ramp_up_time_title">کاتی Ramp-up</string>
+    <string name="pocket_judge_title">پێزانینی گیرفان</string>
+    <string name="pocket_judge_summary">ڕوونما و دوگمەکان سڕ دەکرێن لەوکاتەی ئامێرەکە لەگیرفاندا بێت</string>
+    <string name="unlock_quick_unlock_control_title">کردنەوەی خێرا</string>
+    <string name="custom_timeout_summary_30secs">30 چرکە</string>
+    <string name="custom_timeout_summary_1min">1 خولەک</string>
+    <string name="custom_timeout_summary_2mins">2 خوله‌ک</string>
+    <string name="custom_timeout_summary_5mins">5 خوله‌ک</string>
+    <string name="custom_timeout_summary_10mins">10 خوله‌ک</string>
+    <string name="adaptive_playback_screen_title">کارپێکەری گونجێنەر</string>
+    <string name="adaptive_playback_disabled_summary">ناکارا</string>
+    <string name="adaptive_playback_timeout_title">ووچانێک بەکاردەبات لە</string>
+    <string name="adaptive_playback_timeout_30_secs">30 چرکە</string>
+    <string name="adaptive_playback_timeout_30_secs_summary">کارا (30 چرکە)</string>
+    <string name="adaptive_playback_timeout_1_min">1 خولەک</string>
+    <string name="adaptive_playback_timeout_1_min_summary">کارا (1 خولەک)</string>
+    <string name="adaptive_playback_timeout_2_min">2 خوله‌ک</string>
+    <string name="adaptive_playback_timeout_2_min_summary">کارا (2 خولەک)</string>
+    <string name="adaptive_playback_timeout_5_min">5 خوله‌ک</string>
+    <string name="adaptive_playback_timeout_5_min_summary">کارا (5 خولەک)</string>
+    <string name="adaptive_playback_timeout_10_min">10 خوله‌ک</string>
+    <string name="adaptive_playback_timeout_10_min_summary">کارا (10 خولەک)</string>
+</resources>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2016 The CyanogenMod Project
+     Copyright (C) 2017-2019 The LineageOS Project
+     Copyright (C) 2014-2020 AICP
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="connected_tws_device_saved_title">Auriculares guardados</string>
+    <string name="aicp_version_title">Experiencia AICP</string>
+    <string name="aicp_version_summary">AICP versión 12L - 17.1</string>
+    <string name="aicpextras_title">AICP Extras</string>
+    <string name="aicpextras_summary">Personalización</string>
+    <string name="selinux_status">Estado de SELinux</string>
+    <string name="selinux_status_disabled">Deshabilitado</string>
+    <string name="selinux_status_permissive">Permisivo</string>
+    <string name="selinux_status_enforcing">Obligatorio</string>
+    <string name="app_play_store">Google Play</string>
+    <string name="ambient_display_screen_summary_always_on">Siempre encendido / Incremento del uso de batería</string>
+    <string name="ambient_display_screen_summary_notifications">Nuevas notificaciones</string>
+    <string name="adb_enable_root">Depuración como root</string>
+    <string name="adb_enable_summary_root">Permitir ejecutar la depuración de Android como root</string>
+    <string name="about_device_name">Dispositivo</string>
+    <string name="platform_revision">Plataforma</string>
+    <string name="total_ram">RAM total</string>
+    <string name="notification_log_summary">Mostrar historial de notificaciones</string>
+    <string name="duration_less_than_one_minute">Menos de 1 minuto</string>
+    <string name="screen_time_summary_usage_today">%1$s hoy</string>
+    <string name="volume_link_notification_title">Vincular volumen de tono y notificaciones</string>
+    <string name="back_gesture_haptic_title">Respuesta háptica</string>
+    <string name="back_gesture_haptic_summary">Activar efecto vibración en el gesto atrás</string>
+    <string name="display_rotation_title">Opciones de rotación automática</string>
+    <string name="display_rotation_summary">Configurar funciones de rotación automática de pantalla</string>
+    <string name="display_rotation_disabled">Deshabilitado</string>
+    <string name="display_rotation_unit">grados</string>
+    <string name="display_rotation_category_title">Modos de rotación</string>
+    <string name="display_rotation_0_title">0 grados</string>
+    <string name="display_rotation_90_title">90 grados</string>
+    <string name="display_rotation_180_title">180 grados</string>
+    <string name="display_rotation_270_title">270 grados</string>
+    <string name="prevent_ringing_option_mute_no_media">Silenciado, sin sonido</string>
+    <string name="prevent_ringing_option_mute_no_media_summary">Habilitado (silenciado, sin sonido)</string>
+    <string name="back_height_low_label">Completa</string>
+    <string name="back_height_high_label">Debajo</string>
+    <string name="gesture_height_category_title">Gesto atrás</string>
+    <string name="gesture_region">Región vertical</string>
+    <string name="back_height_message">Tamaño de las áreas laterales de la pantalla vertical utilizadas para el gesto atrás.</string>
+    <string name="volume_steps_title">Escala de volumen</string>
+    <string name="volume_steps_alarm_title">Escala de volumen: Alarma</string>
+    <string name="volume_steps_dtmf_title">Escala de volumen: DTMF</string>
+    <string name="volume_steps_music_title">Escala de volumen: Música</string>
+    <string name="volume_steps_notification_title">Escala de volumen: Notificaciones</string>
+    <string name="volume_steps_ring_title">Escala de volumen: Tono de llamada</string>
+    <string name="volume_steps_system_title">Escala de volumen: Sistema</string>
+    <string name="volume_steps_voice_call_title">Escala de volumen: Llamadas de voz</string>
+    <string name="volume_steps_reset">Restablecer</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
+    <string name="back_gesture_arrow_message">Animación del gesto atrás</string>
+    <string name="back_gesture_arrow_summary">Mostrar una flecha animada para el gesto atrás.</string>
+    <string name="navbar_gesture_handle_category">Gestión de navegación por gestos</string>
+    <string name="navbar_gesture_handle_hide_title">Ocultar gestor</string>
+    <string name="navbar_gesture_handle_hide_summary">Ocultar línea horizontal</string>
+    <string name="battery_usage_stats_reset">Resetear estadísticas</string>
+    <string name="battery_usage_stats_reset_message">Las estadísticas de la batería van a restablecerse</string>
+    <string name="battery_temp">Temperatura de la batería</string>
+    <string name="fingerprint_enroll_find_sensor_message_front" product="tablet">Localice el sensor de huella digital en la parte delantera de su tablet.</string>
+    <string name="fingerprint_enroll_find_sensor_message_front" product="device">Localice el sensor de huella digital en la parte delantera de su dispositivo.</string>
+    <string name="fingerprint_enroll_find_sensor_message_front" product="default">Localice el sensor de huella digital en la parte delantera de su teléfono.</string>
+    <string name="fingerprint_enroll_find_sensor_message_rear" product="tablet">Localiza el sensor de huellas dactilares en la parte trasera de tu tablet.</string>
+    <string name="fingerprint_enroll_find_sensor_message_rear" product="device">Localice el sensor de huella digital en la parte trasera de su dispositivo.</string>
+    <string name="fingerprint_enroll_find_sensor_message_rear" product="default">Localice el sensor de huella digital en la parte trasera de su teléfono.</string>
+    <string name="fingerprint_enroll_find_sensor_message_side" product="tablet">Localice el sensor de huella digital en el lateral de su tablet.</string>
+    <string name="fingerprint_enroll_find_sensor_message_side" product="device">Localice el sensor de huella digital en lateral de su dispositivo.</string>
+    <string name="fingerprint_enroll_find_sensor_message_side" product="default">Localice el sensor de huella digital en el lateral de su teléfono.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_front" product="tablet">Toque el sensor en la parte frontal de su tableta.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_front" product="device">Toque el sensor en la parte frontal de su dispositivo.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_front" product="default">Toque el sensor en la parte frontal de su teléfono.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_rear" product="tablet">Toque el sensor en la parte trasera de su tableta.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_rear" product="device">Toque el sensor en la parte trasera de su dispositivo.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_rear" product="default">Toque el sensor en la parte trasera de su teléfono.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_side" product="tablet">Toque el sensor en el lateral de su tableta.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_side" product="device">Toque el sensor en el lateral de su dispositivo.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_side" product="default">Toque el sensor en el lateral de su teléfono.</string>
+    <string name="vibration_preferences">Intensidad de la respuesta táctil &amp; vibración</string>
+    <string name="summary_vibration_preferences">Cambiar intensidades de vibración, patrón y más</string>
+    <string name="keywords_vibration_preferences">patrón de vibración, intensidad de vibración, llamada, háptica, toque, fuerza de vibración</string>
+    <string name="ringtone_vibration_pattern">Patrón de vibración de tono de llamada</string>
+    <string name="vibration_intensity_ringer">Intensidad de vibración de tono de llamada</string>
+    <string name="vibration_intensity_notification">Intensidad de vibración de notificación</string>
+    <string name="haptic_feedback_intensity">Intensidad de retroalimentación háptica</string>
+    <string name="vibration_intensity_disabled">Deshabilitado</string>
+    <string name="vibration_intensity_light">Baja</string>
+    <string name="vibration_intensity_medium">Media</string>
+    <string name="vibration_intensity_strong">Fuerte</string>
+    <string name="vibration_intensity_custom">Personalizada</string>
+    <string name="pattern_dzzz_dzzz">dzzz-dzzz</string>
+    <string name="pattern_dzzz_da">dzzz-da</string>
+    <string name="pattern_mm_mm_mm">mm-mm-mm</string>
+    <string name="pattern_da_da_dzzz">da-da-dzzz</string>
+    <string name="pattern_da_dzzz_da">da-dzz-da</string>
+    <string name="three_finger_gesture">Deslizar para capturar pantalla</string>
+    <string name="three_finger_gesture_summary">Deslizar tres dedos para hacer captura de pantalla</string>
+    <string name="device_info_protected_single_press">Toca para mostrar información</string>
+    <string name="data_usage_app_restrict_all">Permitir acceso a la red</string>
+    <string name="data_usage_app_restrict_all_summary">Habilitar el uso de red</string>
+    <string name="data_usage_app_restrict_mobile">Datos Móviles</string>
+    <string name="data_usage_app_restrict_mobile_summary">Habilitar el uso de datos móviles</string>
+    <string name="data_usage_app_restrict_vpn">Datos VPN</string>
+    <string name="data_usage_app_restrict_vpn_summary">Habilitar el uso de datos VPN</string>
+    <string name="data_usage_app_restrict_wifi">Datos Wi\u2011Fi</string>
+    <string name="data_usage_app_restrict_wifi_summary">Habilitar el uso de datos Wi\u2011Fi</string>
+    <string name="tethering_allow_vpn_upstreams_title">Permitir a los clientes usar VPNs</string>
+    <string name="tethering_allow_vpn_upstreams_summary">Permitir a los clientes de punto de acceso usar las conexiones VPN de este dispositivo\u2019 como conectividad principal</string>
+    <string name="increasing_ring_volume_option_title">Volumen de tono ascendente</string>
+    <string name="increasing_ring_min_volume_title">Volumen inicial</string>
+    <string name="increasing_ring_ramp_up_time_title">Tiempo de incremento</string>
+    <string name="app_volume">Volumen por aplicación</string>
+    <string name="lock_settings_picker_pattern_size_message">Elegir un tamaño de patrón</string>
+    <string name="lockpattern_settings_enable_error_path_title">Mostrar patrón erróneo</string>
+    <string name="lockpattern_settings_enable_dots_title">Mostrar puntos del patrón</string>
+    <string name="pocket_judge_title">Detección de bolsillo</string>
+    <string name="pocket_judge_summary">Bloquear pantalla y botones cuando el dispositivo está en el bolsillo</string>
+    <string name="unlock_quick_unlock_control_title">Desbloqueo rápido</string>
+    <string name="unlock_quick_unlock_control_summary">Desbloquear automáticamente cuando se introduce el PIN o contraseña</string>
+    <string name="auto_brightness_one_shot_title">Brillo automático en un toque</string>
+    <string name="auto_brightness_one_shot_summary">El ajuste de brillo solo se producirá en el momento en que la pantalla esté encendida</string>
+    <string name="app_volume_title">Control de volumen por aplicación</string>
+    <string name="app_volume_summary">Permite establecer diferentes niveles de volumen para cada aplicación</string>
+    <string name="wifi_timeout">Tiempo de espera WiFi</string>
+    <string name="wifi_timeout_summary">No apagar automáticamente el Wi-Fi</string>
+    <string name="wifi_timeout_summary_auto">Wi-Fi se apagará después de <xliff:g id="timeout_description">%1$s</xliff:g> si no se conectó a ninguna red</string>
+    <string name="bluetooth_timeout">Tiempo de espera de Bluetooth</string>
+    <string name="bluetooth_timeout_summary">No apagar automáticamente el Bluetooth</string>
+    <string name="bluetooth_timeout_summary_auto">Bluetooth se apagará después de <xliff:g id="timeout_description">%1$s</xliff:g> si no hay dispositivos conectados</string>
+    <string name="custom_timeout_summary_never">Nunca</string>
+    <string name="custom_timeout_summary_15secs">15 segundos</string>
+    <string name="custom_timeout_summary_30secs">30 segundos</string>
+    <string name="custom_timeout_summary_1min">1 minuto</string>
+    <string name="custom_timeout_summary_2mins">2 minutos</string>
+    <string name="custom_timeout_summary_5mins">5 minutos</string>
+    <string name="custom_timeout_summary_10mins">10 minutos</string>
+    <string name="custom_timeout_summary_30mins">30 minutos</string>
+    <string name="custom_timeout_summary_1hour">1 hora</string>
+    <string name="custom_timeout_summary_2hours">2 horas</string>
+    <string name="custom_timeout_summary_4hours">4 horas</string>
+    <string name="custom_timeout_summary_8hours">8 horas</string>
+    <string name="prevent_ringing_option_cycle">Ciclo entre modos</string>
+    <string name="prevent_ringing_option_cycle_summary">Encendido (Alternar entre modos)</string>
+    <string name="adaptive_playback_screen_title">Reproducción adaptativa</string>
+    <string name="adaptive_playback_disabled_summary">Desactivado</string>
+    <string name="adaptive_playback_timeout_title">Usar un tiempo de espera de</string>
+    <string name="adaptive_playback_timeout_none">Sin tiempo de espera</string>
+    <string name="adaptive_playback_timeout_none_summary">Encendido (sin tiempo de espera)</string>
+    <string name="adaptive_playback_timeout_30_secs">30 segundos</string>
+    <string name="adaptive_playback_timeout_30_secs_summary">Activado (30 segundos)</string>
+    <string name="adaptive_playback_timeout_1_min">1 minuto</string>
+    <string name="adaptive_playback_timeout_1_min_summary">Activado (1 minuto)</string>
+    <string name="adaptive_playback_timeout_2_min">2 minutos</string>
+    <string name="adaptive_playback_timeout_2_min_summary">Activado (2 minutos)</string>
+    <string name="adaptive_playback_timeout_5_min">5 minutos</string>
+    <string name="adaptive_playback_timeout_5_min_summary">Activado (5 minutos)</string>
+    <string name="adaptive_playback_timeout_10_min">10 minutos</string>
+    <string name="adaptive_playback_timeout_10_min_summary">Activado (10 minutos)</string>
+    <string name="wakelock_blocker_title">Bloqueador de Wakelock</string>
+    <string name="wakelock_blocker_summary">Bloquear wakelocks del sistema</string>
+    <string name="wakelock_blocker_save">Guardar</string>
+    <string name="wakelock_list_header">Wakelocks disponibles</string>
+    <string name="wakelock_blocker_reload">Actualizar</string>
+    <string name="wakelock_blocker_warning_title">Proceder con precaución</string>
+    <string name="wakelock_blocker_warning">El bloqueo de wakelocks puede causar inestabilidad, fallos o pérdida de datos</string>
+    <string name="alarm_blocker">Bloqueador de alarmas</string>
+    <string name="alarm_blocker_title">Habilitar</string>
+    <string name="alarm_blocker_summary">Bloquear alarmas mientras la pantalla esté apagada</string>
+    <string name="alarm_blocker_save">Guardar</string>
+    <string name="alarm_list_header">Alarmas disponibles</string>
+    <string name="alarm_blocker_reload">Actualizar</string>
+    <string name="alarm_blocker_warning_title">Proceder con precaución</string>
+    <string name="alarm_blocker_warning">Bloquear alarmas puede causar inestabilidad, cierres forzados o pérdida de datos.</string>
+    <string name="app_lock_title">Bloqueo de aplicaciones</string>
+    <string name="app_lock_summary_singular">1 aplicación está protegida</string>
+    <string name="app_lock_summary_plural"><xliff:g example="2" id="Number of applications">%1$d</xliff:g> aplicaciones están protegidas</string>
+    <string name="app_lock_authentication_dialog_title">Desbloquear para continuar</string>
+    <string name="app_lock_packages_title">Aplicaciones protegidas</string>
+    <string name="app_lock_packages_summary">Seleccionar las aplicaciones a proteger con datos biométricos o credenciales del dispositivo</string>
+    <string name="app_lock_timeout_title">Tiempo de bloqueo automático</string>
+    <string name="app_lock_timeout_summary">Tiempo tras el cual una aplicación desbloqueada en segundo plano debe ser bloqueada</string>
+    <string name="app_lock_notifications_title">Cerrar panel de notificaciones</string>
+    <string name="app_lock_notifications_summary">          El contenido de las notificaciones se ocultará y contraerá para las aplicaciones seleccionadas cuando estén bloqueadas.
+          Las notificaciones emergentes se desactivarán automáticamente.
+    </string>
+    <string name="app_lock_notifications_disabled_summary">Proteger primero una aplicación</string>
+    <string name="app_lock_biometrics_allowed_title">Habilitar lector de huella para desbloquear</string>
+    <string name="app_lock_footer_text">Las burbujas se descartarán automáticamente después del tiempo de espera</string>
+    <string name="search">Búsqueda</string>
+    <string name="search_apps">Buscar aplicaciones</string>
+    <string name="hidden_apps_title">Aplicaciones ocultas</string>
+    <string name="hidden_apps_summary">Aplicaciones que deben ocultarse del lanzador</string>
+    <string name="hidden_app_authentication_dialog_title">Desbloquear para ocultar aplicaciones</string>
+    <string name="package_details_group_title">Detalles del paquete</string>
+    <string name="package_name">Nombre de paquete</string>
+    <string name="package_version">Versión del paquete</string>
+    <string name="optimized_charge_title">Carga optimizada</string>
+    <string name="optimized_charge_summary">Limita la carga al 75%-80% para prolongar la duración de la batería</string>
+    <string name="battery_charge_cycles">Ciclos de carga completados</string>
+    <string name="current_battery_capacity">Capacidad actual de la batería</string>
+    <string name="designed_battery_capacity">Capacidad de la batería (Según diseño)</string>
+    <string name="battery_health_percent">Salud de la batería</string>
+    <string name="ambient_display_screen_off_udfps_title" product="default">Pulsación larga en el sensor de huella digital para desbloquear el teléfono</string>
+    <string name="ambient_display_screen_off_udfps_title" product="tablet">Pulsación larga en el sensor de huella dactilar para desbloquear la tableta</string>
+    <string name="ambient_display_screen_off_udfps_title" product="device">Pulsación larga en el sensor de huella dactilar para desbloquear dispositivo</string>
+    <string name="ambient_display_screen_off_udfps_summary">Mantén pulsado el sensor de huella dactilar para encender la pantalla y desbloquear el dispositivo.</string>
+</resources>

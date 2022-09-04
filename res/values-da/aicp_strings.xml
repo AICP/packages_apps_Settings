@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2016 The CyanogenMod Project
+     Copyright (C) 2017-2019 The LineageOS Project
+     Copyright (C) 2014-2020 AICP
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="connected_tws_device_saved_title">Gemte Ørepropper</string>
+    <string name="aicp_version_title">AICP-Oplevelse</string>
+    <string name="aicpextras_title">AICP-Ekstra</string>
+    <string name="aicpextras_summary">ROM-tilpasning</string>
+    <string name="selinux_status">SELinux-status</string>
+    <string name="selinux_status_disabled">Deaktiveret</string>
+    <string name="selinux_status_permissive">Lempelig</string>
+    <string name="selinux_status_enforcing">Streng</string>
+    <string name="app_play_store">Google Play</string>
+    <string name="ambient_display_screen_summary_always_on">Altid tændt / Forøget batteriforbrug</string>
+    <string name="ambient_display_screen_summary_notifications">Nye notifikationer</string>
+    <string name="adb_enable_root">Rodtildelt fejlfinding</string>
+    <string name="adb_enable_summary_root">Tillad kørsel af Android fejlretning som \'root\'</string>
+    <string name="screen_time_summary_usage_today">%1$s i dag</string>
+    <string name="volume_link_notification_title">Forbind ringetone- &amp; notifikationslydstyrker</string>
+    <string name="back_gesture_haptic_title">Haptisk tilbagemelding</string>
+    <string name="back_gesture_haptic_summary">Aktivér haptisk tik-effekt ved tilbage-berøring</string>
+    <string name="display_rotation_title">Automatisk Rotation-Valgmuligheder</string>
+    <string name="display_rotation_summary">Konfigurér automatisk skærmrotation-funktioner</string>
+    <string name="display_rotation_disabled">Deaktiveret</string>
+    <string name="display_rotation_unit">grader</string>
+    <string name="display_rotation_category_title">Rotationstilstande</string>
+    <string name="display_rotation_0_title">0 grader</string>
+    <string name="display_rotation_90_title">90 grader</string>
+    <string name="display_rotation_180_title">180 grader</string>
+    <string name="display_rotation_270_title">270 grader</string>
+    <string name="prevent_ringing_option_mute_no_media">Lydløs, ingen medier</string>
+    <string name="prevent_ringing_option_mute_no_media_summary">Til (lydløs, ingen medier)</string>
+    <string name="back_height_low_label">Fuld</string>
+    <string name="back_height_high_label">Nederst</string>
+    <string name="volume_steps_title">Lydstyrketrin</string>
+    <string name="volume_steps_alarm_title">Lydstyrketrin: Alarm</string>
+    <string name="volume_steps_dtmf_title">Lydstyrketrin: DTMF</string>
+    <string name="volume_steps_music_title">Lydstyrketrin: Musik</string>
+    <string name="volume_steps_notification_title">Lydstyrketrin: Notifikation</string>
+    <string name="volume_steps_ring_title">Lydstyrketrin: Ringetone</string>
+    <string name="volume_steps_system_title">Lydstyrketrin: System</string>
+    <string name="volume_steps_voice_call_title">Lydstyrketrin: Lydopkald</string>
+    <string name="volume_steps_reset">Nulstil</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
+    <string name="back_gesture_arrow_message">Tilbage-berøringsanimation</string>
+    <string name="back_gesture_arrow_summary">Vis en animeret pil for tilbage-berøring.</string>
+    <string name="battery_usage_stats_reset">Nulstil statistikker</string>
+    <string name="battery_usage_stats_reset_message">Batterihistorik-statistikker vil blive nulstillede</string>
+    <string name="battery_temp">Batteritemperatur</string>
+    <string name="vibration_preferences">Vibration &amp; haptik</string>
+    <string name="ringtone_vibration_pattern">Ringetone vibrationsmønster</string>
+    <string name="vibration_intensity_ringer">Ringetone vibrationsintensitet</string>
+    <string name="vibration_intensity_notification">Notifikation vibrationsintensitet</string>
+    <string name="vibration_intensity_disabled">Deaktiveret</string>
+    <string name="vibration_intensity_light">Let</string>
+    <string name="vibration_intensity_medium">Middel</string>
+    <string name="vibration_intensity_strong">Kraftig</string>
+    <string name="vibration_intensity_custom">Tilpasset</string>
+    <string name="pattern_dzzz_dzzz">dzzz-dzzz</string>
+    <string name="pattern_dzzz_da">dzzz-da</string>
+    <string name="pattern_mm_mm_mm">mm-mm-mm</string>
+    <string name="pattern_da_da_dzzz">da-da-dzzz</string>
+    <string name="pattern_da_dzzz_da">da-dzzz-da</string>
+    <string name="three_finger_gesture">Stryg for skærmbillede</string>
+    <string name="three_finger_gesture_summary">Stryg med tre fingre, for at tage skærmbillede</string>
+    <string name="device_info_protected_single_press">Tryk for at vise info</string>
+    <string name="tethering_allow_vpn_upstreams_title">Tillad klienter, at bruge VPNer</string>
+    <string name="tethering_allow_vpn_upstreams_summary">Giv hotspot-klienter tilladelse til, at bruge denne enheds VPN-forbindelser til udgående-forbindelse</string>
+    <string name="increasing_ring_volume_option_title">Stigende ringetone-lydstyrke</string>
+    <string name="increasing_ring_min_volume_title">Start-lydstyrke</string>
+    <string name="increasing_ring_ramp_up_time_title">Opvarmningstid</string>
+    <string name="lock_settings_picker_pattern_size_message">Vælg en mønsterstørrelse</string>
+    <string name="lockpattern_settings_enable_error_path_title">Vis mønsterfejl</string>
+    <string name="lockpattern_settings_enable_dots_title">Vis mønsterprikker</string>
+    <string name="pocket_judge_title">Lommeregistrering</string>
+    <string name="pocket_judge_summary">Blokér skærm- og knapinput, når enhed er i lomme</string>
+    <string name="unlock_quick_unlock_control_title">Kvikoplåsning</string>
+    <string name="auto_brightness_one_shot_title">Etskuds automatisk lysstyrke</string>
+    <string name="auto_brightness_one_shot_summary">Lysstyrkejustering vil kun forekomme i det øjeblik, skærmen tændes</string>
+    <string name="bluetooth_timeout">Bluetooth-tidsudløb</string>
+    <string name="bluetooth_timeout_summary">Slå ikke automatisk Bluetooth fra</string>
+    <string name="bluetooth_timeout_summary_auto">Bluetooth vil slås fra efter <xliff:g id="timeout_description">%1$s</xliff:g>, hvis ingen enheder tilsluttet</string>
+    <string name="custom_timeout_summary_never">Aldrig</string>
+    <string name="custom_timeout_summary_15secs">15 sekunder</string>
+    <string name="custom_timeout_summary_30secs">30 sekunder</string>
+    <string name="custom_timeout_summary_1min">1 minut</string>
+    <string name="custom_timeout_summary_2mins">2 minutter</string>
+    <string name="custom_timeout_summary_5mins">5 minutter</string>
+    <string name="custom_timeout_summary_10mins">10 minutter</string>
+    <string name="custom_timeout_summary_30mins">30 minutter</string>
+    <string name="custom_timeout_summary_1hour">1 time</string>
+    <string name="custom_timeout_summary_2hours">2 timer</string>
+    <string name="custom_timeout_summary_4hours">4 timer</string>
+    <string name="custom_timeout_summary_8hours">8 timer</string>
+    <string name="prevent_ringing_option_cycle">Cykel igennem tilstande</string>
+    <string name="prevent_ringing_option_cycle_summary">Til (cykel igennem tilstande)</string>
+    <string name="adaptive_playback_screen_title">Tilpassende afspilning</string>
+    <string name="adaptive_playback_disabled_summary">Fra</string>
+    <string name="adaptive_playback_timeout_title">Brug et tidsudløb på</string>
+    <string name="adaptive_playback_timeout_none">Intet tidsudløb</string>
+    <string name="adaptive_playback_timeout_none_summary">Til (intet tidsudløb)</string>
+    <string name="adaptive_playback_timeout_30_secs">30 sekunder</string>
+    <string name="adaptive_playback_timeout_30_secs_summary">Til (30 sekunder)</string>
+    <string name="adaptive_playback_timeout_1_min">1 minut</string>
+    <string name="adaptive_playback_timeout_1_min_summary">Til (1 minut)</string>
+    <string name="adaptive_playback_timeout_2_min">2 minutter</string>
+    <string name="adaptive_playback_timeout_2_min_summary">Til (2 minutter)</string>
+    <string name="adaptive_playback_timeout_5_min">5 minutter</string>
+    <string name="adaptive_playback_timeout_5_min_summary">Til (5 minutter)</string>
+    <string name="adaptive_playback_timeout_10_min">10 minutter</string>
+    <string name="adaptive_playback_timeout_10_min_summary">Til (10 minutter)</string>
+    <string name="wakelock_blocker_summary">Blokér system-vågelåse</string>
+    <string name="wakelock_blocker_save">Gem</string>
+    <string name="wakelock_list_header">Tilgængelige vågelåse</string>
+    <string name="wakelock_blocker_reload">Genindlæs</string>
+    <string name="wakelock_blocker_warning_title">Fortsæt varsomt</string>
+    <string name="wakelock_blocker_warning">Blokering af vågelåse har potentiale til, at forårsage ustabilitet, nedbrud, eller tab af data</string>
+    <string name="alarm_blocker">Alarmblokering</string>
+    <string name="alarm_blocker_title">Aktivér</string>
+    <string name="alarm_blocker_summary">Blokér alarmer, mens skærm er slukket</string>
+    <string name="alarm_blocker_save">Gem</string>
+    <string name="alarm_list_header">Tilgængelige alarmer</string>
+    <string name="alarm_blocker_reload">Genindlæs</string>
+    <string name="alarm_blocker_warning_title">Fortsæt varsomt</string>
+    <string name="alarm_blocker_warning">Blokering af alarmer har potentiale til at forårsage ustabilitet, nedbrud eller tab af data.</string>
+    <string name="current_battery_capacity">Nuværende batterikapacitet</string>
+    <string name="designed_battery_capacity">Designet batterikapacitet</string>
+    <string name="battery_health_percent">Batterihelbred</string>
+</resources>

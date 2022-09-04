@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2016 The CyanogenMod Project
+     Copyright (C) 2017-2019 The LineageOS Project
+     Copyright (C) 2014-2020 AICP
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="connected_tws_device_saved_title">Сохраненные наушники</string>
+    <string name="aicp_version_title">Опыт использования AICP</string>
+    <string name="aicpextras_title">AICP Extras</string>
+    <string name="aicpextras_summary">Настройка прошивки</string>
+    <string name="selinux_status">Статус SELinux</string>
+    <string name="selinux_status_disabled">Отключено</string>
+    <string name="selinux_status_permissive">Только предупреждение</string>
+    <string name="selinux_status_enforcing">Блокировка</string>
+    <string name="app_play_store">Google Play</string>
+    <string name="ambient_display_screen_summary_always_on">Всегда включено (батарея разряжается быстрее)</string>
+    <string name="ambient_display_screen_summary_notifications">Новые уведомления</string>
+    <string name="adb_enable_root">Отладка с root правами</string>
+    <string name="adb_enable_summary_root">Разрешить запуск отладки Android с root правами</string>
+    <string name="screen_time_summary_usage_today">%1$s сегодня</string>
+    <string name="volume_link_notification_title">Связать громкость рингтона и уведомлений</string>
+    <string name="back_gesture_haptic_title">Виброотклик</string>
+    <string name="back_gesture_haptic_summary">Включить вибрацию для жеста \"Назад\"</string>
+    <string name="display_rotation_title">Параметры автоповорота</string>
+    <string name="display_rotation_summary">Настройка функций автоповорота экрана</string>
+    <string name="display_rotation_disabled">Выключено</string>
+    <string name="display_rotation_unit">градусы</string>
+    <string name="display_rotation_category_title">Режимы поворота</string>
+    <string name="display_rotation_0_title">0 градусов</string>
+    <string name="display_rotation_90_title">90 градусов</string>
+    <string name="display_rotation_180_title">180 градусов</string>
+    <string name="display_rotation_270_title">270 градусов</string>
+    <string name="prevent_ringing_option_mute_no_media">Отключение звука, отсутствие воспроизведения мультимедиа</string>
+    <string name="prevent_ringing_option_mute_no_media_summary">Включено (отключение звука, отсутствие воспроизведения мультимедиа)</string>
+    <string name="back_height_low_label">Заполнено</string>
+    <string name="back_height_high_label">Снизу</string>
+    <string name="volume_steps_title">Количество уровней громкости</string>
+    <string name="volume_steps_alarm_title">Будильник</string>
+    <string name="volume_steps_dtmf_title">Набор номера</string>
+    <string name="volume_steps_music_title">Мультимедиа</string>
+    <string name="volume_steps_notification_title">Уведомления</string>
+    <string name="volume_steps_ring_title">Звонок</string>
+    <string name="volume_steps_system_title">Система</string>
+    <string name="volume_steps_voice_call_title">Голосовой вызов</string>
+    <string name="volume_steps_reset">Сбросить</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
+    <string name="back_gesture_arrow_message">Анимация жеста \"Назад\"</string>
+    <string name="back_gesture_arrow_summary">Показать анимированную стрелку для жеста \"Назад\".</string>
+    <string name="battery_usage_stats_reset">Сброс статистики</string>
+    <string name="battery_usage_stats_reset_message">Статистика батареи будет сброшена</string>
+    <string name="battery_temp">Температура батареи</string>
+    <string name="vibration_preferences">Вибрация и отклик</string>
+    <string name="ringtone_vibration_pattern">Шаблон вибрации мелодии вызова</string>
+    <string name="vibration_intensity_ringer">Интенсивность вибрации мелодии вызова</string>
+    <string name="vibration_intensity_notification">Интенсивность вибрации уведомления</string>
+    <string name="vibration_intensity_disabled">Выключено</string>
+    <string name="vibration_intensity_light">Слабая</string>
+    <string name="vibration_intensity_medium">Средняя</string>
+    <string name="vibration_intensity_strong">Сильная</string>
+    <string name="vibration_intensity_custom">Пользовательская</string>
+    <string name="pattern_dzzz_dzzz">дззз-дззз</string>
+    <string name="pattern_dzzz_da">дззз-да</string>
+    <string name="pattern_mm_mm_mm">мм-мм-мм</string>
+    <string name="pattern_da_da_dzzz">да-да-дззз</string>
+    <string name="pattern_da_dzzz_da">да-дззз-да</string>
+    <string name="three_finger_gesture">Свайп для создания скриншота</string>
+    <string name="three_finger_gesture_summary">Свайп тремя пальцами вниз для создания скриншота</string>
+    <string name="device_info_protected_single_press">Нажмите, чтобы показать информацию</string>
+    <string name="tethering_allow_vpn_upstreams_title">Разрешить клиентам использовать VPN</string>
+    <string name="tethering_allow_vpn_upstreams_summary">Разрешить клиентам точки доступа использовать VPN-соединения этого устройства для подключения к сети</string>
+    <string name="increasing_ring_volume_option_title">Возрастающая громкость звонка</string>
+    <string name="increasing_ring_min_volume_title">Начальная громкость</string>
+    <string name="increasing_ring_ramp_up_time_title">Время нарастания</string>
+    <string name="lock_settings_picker_pattern_size_message">Выберите размер графического ключа</string>
+    <string name="lockpattern_settings_enable_error_path_title">Показывать ошибку графического ключа</string>
+    <string name="lockpattern_settings_enable_dots_title">Показывать точки графического ключа</string>
+    <string name="pocket_judge_title">Режим \"В кармане\"</string>
+    <string name="pocket_judge_summary">Блокировать экран и физические кнопки, когда устройство находится в кармане</string>
+    <string name="unlock_quick_unlock_control_title">Быстрая разблокировка</string>
+    <string name="auto_brightness_one_shot_title">Однократная автоматическая яркость</string>
+    <string name="auto_brightness_one_shot_summary">Регулировка яркости будет происходить только в момент включения экрана</string>
+    <string name="bluetooth_timeout">Bluetooth тайм-аут</string>
+    <string name="bluetooth_timeout_summary">Не выключать Bluetooth автоматически</string>
+    <string name="bluetooth_timeout_summary_auto">Bluetooth будет выключен через <xliff:g id="timeout_description">%1$s</xliff:g>, если нет подключённых устройств</string>
+    <string name="custom_timeout_summary_never">Никогда</string>
+    <string name="custom_timeout_summary_15secs">15 секунд</string>
+    <string name="custom_timeout_summary_30secs">30 секунд</string>
+    <string name="custom_timeout_summary_1min">1 минута</string>
+    <string name="custom_timeout_summary_2mins">2 минуты</string>
+    <string name="custom_timeout_summary_5mins">5 минут</string>
+    <string name="custom_timeout_summary_10mins">10 минут</string>
+    <string name="custom_timeout_summary_30mins">30 минут</string>
+    <string name="custom_timeout_summary_1hour">1 час</string>
+    <string name="custom_timeout_summary_2hours">2 часа</string>
+    <string name="custom_timeout_summary_4hours">4 часа</string>
+    <string name="custom_timeout_summary_8hours">8 часов</string>
+    <string name="prevent_ringing_option_cycle">Циклический переход между режимами</string>
+    <string name="prevent_ringing_option_cycle_summary">Вкл. (циклический переход между режимами)</string>
+    <string name="adaptive_playback_screen_title">Адаптивное воспроизведение</string>
+    <string name="adaptive_playback_disabled_summary">Выкл</string>
+    <string name="adaptive_playback_timeout_title">Использовать таймаут</string>
+    <string name="adaptive_playback_timeout_none">Без задержки</string>
+    <string name="adaptive_playback_timeout_none_summary">Вкл. (без задержки)</string>
+    <string name="adaptive_playback_timeout_30_secs">30 секунд</string>
+    <string name="adaptive_playback_timeout_30_secs_summary">Вкл (30 секунд)</string>
+    <string name="adaptive_playback_timeout_1_min">1 минута</string>
+    <string name="adaptive_playback_timeout_1_min_summary">Вкл (1 минута)</string>
+    <string name="adaptive_playback_timeout_2_min">2 минуты</string>
+    <string name="adaptive_playback_timeout_2_min_summary">Вкл (2 минуты)</string>
+    <string name="adaptive_playback_timeout_5_min">5 минут</string>
+    <string name="adaptive_playback_timeout_5_min_summary">Вкл (5 минут)</string>
+    <string name="adaptive_playback_timeout_10_min">10 минут</string>
+    <string name="adaptive_playback_timeout_10_min_summary">Вкл (10 минут)</string>
+    <string name="wakelock_blocker_summary">Блокировать системные пробуждения</string>
+    <string name="wakelock_blocker_save">Сохранить</string>
+    <string name="wakelock_list_header">Доступные пробуждения</string>
+    <string name="wakelock_blocker_reload">Обновить</string>
+    <string name="wakelock_blocker_warning_title">Продолжайте с осторожностью</string>
+    <string name="wakelock_blocker_warning">Блокировка пробуждений может привести к нестабильности, ошибкам и потере данных</string>
+    <string name="alarm_blocker">Блокировщик сигналов</string>
+    <string name="alarm_blocker_title">Включить</string>
+    <string name="alarm_blocker_summary">Заблокировать сигналы при выключенном экране</string>
+    <string name="alarm_blocker_save">Сохранить</string>
+    <string name="alarm_list_header">Доступные сигналы</string>
+    <string name="alarm_blocker_reload">Обновить</string>
+    <string name="alarm_blocker_warning_title">Продолжайте с осторожностью</string>
+    <string name="alarm_blocker_warning">Блокировка сигналов может привести к нестабильности, ошибкам и потере данных.</string>
+    <string name="current_battery_capacity">Текущая емкость батареи</string>
+    <string name="designed_battery_capacity">Заявленная ёмкость батареи</string>
+    <string name="battery_health_percent">Состояние батареи</string>
+</resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2016 The CyanogenMod Project
+     Copyright (C) 2017-2019 The LineageOS Project
+     Copyright (C) 2014-2020 AICP
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="aicp_version_title">AICP Experience</string>
+    <string name="aicpextras_title">Aicp Extras</string>
+    <string name="aicpextras_summary">Personnalisation de la ROM</string>
+    <string name="selinux_status">État SELinux</string>
+    <string name="selinux_status_disabled">Désactivé</string>
+    <string name="selinux_status_permissive">Permissif</string>
+    <string name="selinux_status_enforcing">Enforcing</string>
+    <string name="app_play_store">Google Play</string>
+    <string name="ambient_display_screen_summary_always_on">Toujours activé/Batterie davantage sollicitée</string>
+    <string name="ambient_display_screen_summary_notifications">Nouvelles notifications</string>
+    <string name="volume_link_notification_title">Lier le volume de la sonnerie et des notifications</string>
+    <string name="back_gesture_haptic_summary">Activer le retour haptique sur le geste arrière</string>
+    <string name="display_rotation_title">Options de rotation automatique</string>
+    <string name="display_rotation_summary">Configurer les fonctions de rotation automatique de l\'écran</string>
+    <string name="display_rotation_disabled">Désactivé</string>
+    <string name="display_rotation_unit">degrés</string>
+    <string name="display_rotation_category_title">Modes de rotation</string>
+    <string name="display_rotation_0_title">0 degrés</string>
+    <string name="display_rotation_90_title">90 degrés</string>
+    <string name="display_rotation_180_title">180 degrés</string>
+    <string name="display_rotation_270_title">270 degrés</string>
+    <string name="prevent_ringing_option_mute_no_media">Muet, pas de média</string>
+    <string name="prevent_ringing_option_mute_no_media_summary">Activé (muet, aucun média)</string>
+    <string name="back_height_low_label">Plein</string>
+    <string name="back_height_high_label">Bas</string>
+    <string name="volume_steps_title">Niveaux du volume</string>
+    <string name="volume_steps_alarm_title">Niveaux du volume: Alarme</string>
+    <string name="volume_steps_dtmf_title">Niveaux du volume : DTMF</string>
+    <string name="volume_steps_music_title">Niveaux du volume : Musique</string>
+    <string name="volume_steps_notification_title">Niveaux du volume : Notification</string>
+    <string name="volume_steps_ring_title">Niveaux du volume : Sonnerie</string>
+    <string name="volume_steps_system_title">Niveaux du volume : Système</string>
+    <string name="volume_steps_voice_call_title">Niveaux du volume : Appel Vocal</string>
+    <string name="volume_steps_reset">Réinitialiser</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
+    <string name="back_gesture_arrow_summary">Afficher une flèche animée pour le geste retour.</string>
+    <string name="battery_usage_stats_reset">Réinitialiser les statistiques</string>
+    <string name="battery_usage_stats_reset_message">Les statistiques de batterie vont être réinitialisées</string>
+    <string name="battery_temp">Température de la Batterie</string>
+    <string name="vibration_intensity_disabled">Désactivé</string>
+    <string name="three_finger_gesture">Glisser pour prendre une capture d\'écran</string>
+    <string name="three_finger_gesture_summary">Glissez trois doigts pour faire une capture d\'écran</string>
+    <string name="increasing_ring_volume_option_title">Sonnerie progressive</string>
+    <string name="increasing_ring_min_volume_title">Volume de départ</string>
+    <string name="increasing_ring_ramp_up_time_title">Temps de montée en puissance</string>
+    <string name="pocket_judge_title">Détection de poche</string>
+    <string name="pocket_judge_summary">Verrouiller l\'écran et les boutons quand l\'appareil est dans votre poche</string>
+    <string name="unlock_quick_unlock_control_title">Déverrouillage rapide</string>
+</resources>

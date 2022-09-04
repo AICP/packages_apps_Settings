@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2016 The CyanogenMod Project
+     Copyright (C) 2017-2019 The LineageOS Project
+     Copyright (C) 2014-2020 AICP
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="connected_tws_device_saved_title">Gespeicherte Kopfhörer</string>
+    <string name="packagename_text">"<xliff:g id="package_name">%1$s</xliff:g>"</string>
+    <string name="aicp_version_title">AICP Version</string>
+    <string name="aicp_version_summary">AICP 12L Edition - 17.1</string>
+    <string name="aicpextras_title">AICP Extras</string>
+    <string name="aicpextras_summary">ROM-Anpassung</string>
+    <string name="selinux_status">SELinux-Status</string>
+    <string name="selinux_status_disabled">Deaktiviert</string>
+    <string name="selinux_status_permissive">Moderat</string>
+    <string name="selinux_status_enforcing">Strikt</string>
+    <string name="app_play_store">Google Play</string>
+    <string name="ambient_display_screen_summary_always_on">Immer aktiviert / erhöhter Akkuverbrauch</string>
+    <string name="ambient_display_screen_summary_notifications">Neue Benachrichtigungen</string>
+    <string name="adb_enable_root">Android Debugging als root</string>
+    <string name="adb_enable_summary_root">Erlaubt das Ausführen von Android Debugging mit root-Rechten</string>
+    <string name="about_device_name">Gerät</string>
+    <string name="platform_revision">Plattform</string>
+    <string name="total_ram">Gesamter Arbeitsspeicher</string>
+    <string name="notification_log_summary">Zeige Benachrichtigungsverlauf</string>
+    <string name="duration_less_than_one_minute">Weniger als 1 Minute</string>
+    <string name="screen_time_summary_usage_today">%1$s heute</string>
+    <string name="volume_link_notification_title">Klingelton- &amp; Benachrichtigungslautstärke verbinden</string>
+    <string name="back_gesture_haptic_title">Haptische Rückmeldung</string>
+    <string name="back_gesture_haptic_summary">Vibrations-Effekt bei Zurück-Geste aktivieren</string>
+    <string name="display_rotation_title">Einstellungen für automatische Bildschirmdrehung</string>
+    <string name="display_rotation_summary">Automatische Bildschirmdrehung konfigurieren</string>
+    <string name="display_rotation_disabled">Deaktiviert</string>
+    <string name="display_rotation_unit">Grad</string>
+    <string name="display_rotation_category_title">Bildschirmausrichtung</string>
+    <string name="display_rotation_0_title">0 Grad</string>
+    <string name="display_rotation_90_title">90 Grad</string>
+    <string name="display_rotation_180_title">180 Grad</string>
+    <string name="display_rotation_270_title">270 Grad</string>
+    <string name="prevent_ringing_option_mute_no_media">Stumm, keine Medienwiedergabe</string>
+    <string name="prevent_ringing_option_mute_no_media_summary">AN (Stumm, keine Medienwiedergabe)</string>
+    <string name="back_height_low_label">Vollständig</string>
+    <string name="back_height_high_label">Unten</string>
+    <string name="gesture_height_category_title">Zurück-Geste</string>
+    <string name="gesture_region">Vertikaler Bereich</string>
+    <string name="back_height_message">Vertikaler Seitenbereich des Bildschirms, der für die Zurück-Geste verwendet wird.</string>
+    <string name="volume_steps_title">Lautstärke-Schritte</string>
+    <string name="volume_steps_alarm_title">Lautstärke-Schritte: Wecker</string>
+    <string name="volume_steps_dtmf_title">Lautstärke-Schritte: MFV-Töne</string>
+    <string name="volume_steps_music_title">Lautstärke-Schritte: Musik</string>
+    <string name="volume_steps_notification_title">Lautstärke-Schritte: Benachrichtigung</string>
+    <string name="volume_steps_ring_title">Lautstärke-Schritte: Klingelton</string>
+    <string name="volume_steps_system_title">Lautstärke-Schritte: System</string>
+    <string name="volume_steps_voice_call_title">Lautstärke-Schritte: Sprachanruf</string>
+    <string name="volume_steps_reset">Zurücksetzen</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
+    <string name="back_gesture_arrow_message">Animation der Zurück-Geste</string>
+    <string name="back_gesture_arrow_summary">Beweglichen Pfeil für die \"Zurück\"-Geste anzeigen.</string>
+    <string name="navbar_gesture_handle_category">Gestenleiste</string>
+    <string name="navbar_gesture_handle_hide_title">Gestenleiste ausblenden</string>
+    <string name="navbar_gesture_handle_hide_summary">Blendet die horizontale Gestenleiste an unteren Bildschirmrand aus</string>
+    <string name="battery_usage_stats_reset">Statistik zurücksetzen</string>
+    <string name="battery_usage_stats_reset_message">Akkuverbrauch-Statistiken werden zurückgesetzt werden</string>
+    <string name="battery_temp">Akku-Temperatur</string>
+    <string name="fingerprint_enroll_find_sensor_message_front" product="tablet">Suchen Sie den Fingerabdrucksensor auf der Vorderseite Ihres Tablets.</string>
+    <string name="fingerprint_enroll_find_sensor_message_front" product="device">Suchen Sie den Fingerabdrucksensor auf der Vorderseite Ihres Geräts.</string>
+    <string name="fingerprint_enroll_find_sensor_message_front" product="default">Suchen Sie den Fingerabdrucksensor auf der Vorderseite Ihres Telefons.</string>
+    <string name="fingerprint_enroll_find_sensor_message_rear" product="tablet">Suchen Sie den Fingerabdrucksensor auf der Rückseite Ihres Tablets.</string>
+    <string name="fingerprint_enroll_find_sensor_message_rear" product="device">Suchen Sie den Fingerabdrucksensor auf der Rückseite Ihres Geräts.</string>
+    <string name="fingerprint_enroll_find_sensor_message_rear" product="default">Suchen Sie den Fingerabdrucksensor auf der Rückseite Ihres Telefons.</string>
+    <string name="fingerprint_enroll_find_sensor_message_side" product="tablet">Suchen Sie den Fingerabdrucksensor an der Seite Ihres Tablets.</string>
+    <string name="fingerprint_enroll_find_sensor_message_side" product="device">Suchen Sie den Fingerabdrucksensor an der Seite Ihres Geräts.</string>
+    <string name="fingerprint_enroll_find_sensor_message_side" product="default">Suchen Sie den Fingerabdrucksensor an der Seite Ihres Telefons.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_front" product="tablet">Berühren Sie den Sensor auf der Vorderseite Ihres Tablets.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_front" product="device">Berühren Sie den Sensor auf der Vorderseite Ihres Geräts.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_front" product="default">Berühren Sie den Sensor auf der Vorderseite Ihres Telefons.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_rear" product="tablet">Berühren Sie den Sensor auf der Rückseite Ihres Tablets.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_rear" product="device">Berühren Sie den Sensor auf der Rückseite Ihres Geräts.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_rear" product="default">Berühren Sie den Sensor auf der Rückseite Ihres Telefons.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_side" product="tablet">Berühren Sie den Sensor an der Seite Ihres Tablets.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_side" product="device">Berühren Sie den Sensor an der Seite Ihres Geräts.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_side" product="default">Berühren Sie den Sensor an der Seite des Telefons.</string>
+    <string name="vibration_preferences">Vibration &amp; Haptik</string>
+    <string name="summary_vibration_preferences">Vibrationsstärke, -muster und mehr anpassen</string>
+    <string name="keywords_vibration_preferences">Vibrationsmuster, Vibrationsintensität, Anruf, Haptik, Tippen, Vibrationsstärke</string>
+    <string name="ringtone_vibration_pattern">Vibrationsmuster bei Anrufen</string>
+    <string name="vibration_intensity_ringer">Vibrationsintensität bei Anrufen</string>
+    <string name="vibration_intensity_notification">Vibrationsintensität bei Benachrichtigungen</string>
+    <string name="haptic_feedback_intensity">Vibrationsstärke bei haptischem Feedback</string>
+    <string name="vibration_intensity_disabled">Deaktiviert</string>
+    <string name="vibration_intensity_light">Leicht</string>
+    <string name="vibration_intensity_medium">Mittel</string>
+    <string name="vibration_intensity_strong">Stark</string>
+    <string name="vibration_intensity_custom">Benutzerdefiniert</string>
+    <string name="pattern_dzzz_dzzz">dzzz-dzzz</string>
+    <string name="pattern_dzzz_da">dzzz-da</string>
+    <string name="pattern_mm_mm_mm">mm-mm-mm</string>
+    <string name="pattern_da_da_dzzz">da-da-dzzz</string>
+    <string name="pattern_da_dzzz_da">da-dzzz-da</string>
+    <string name="three_finger_gesture">Wischen für Bildschirmfoto</string>
+    <string name="three_finger_gesture_summary">Mit drei Fingern wischen, um ein Bildschirmfoto aufzunehmen</string>
+    <string name="device_info_protected_single_press">Zur Anzeige sensitiver Informationen einmal tippen</string>
+    <string name="data_usage_app_restrict_all">Netzwerkzugriff erlauben</string>
+    <string name="data_usage_app_restrict_all_summary">Netzwerk-Datennutzung aktivieren</string>
+    <string name="data_usage_app_restrict_mobile">Mobilfunkdaten</string>
+    <string name="data_usage_app_restrict_mobile_summary">Nutzung von Mobilfunkdaten aktivieren</string>
+    <string name="data_usage_app_restrict_vpn">VPN-Datennutzung</string>
+    <string name="data_usage_app_restrict_vpn_summary">Nutzung von VPN-Verbindungen aktivieren</string>
+    <string name="data_usage_app_restrict_wifi">WLAN-Datennutzung</string>
+    <string name="data_usage_app_restrict_wifi_summary">WLAN-Datennutzung aktivieren</string>
+    <string name="tethering_allow_vpn_upstreams_title">Erlaube Teilnehmern VPNs zu verwenden</string>
+    <string name="tethering_allow_vpn_upstreams_summary">Erlaube Hotspot-Teilnehmern die VPN-Verbindungen dieses Gerätes für die Upstream-Konnektivität zu verwenden</string>
+    <string name="increasing_ring_volume_option_title">Ansteigende Klingeltonlautstärke</string>
+    <string name="increasing_ring_min_volume_title">Anfangslautstärke</string>
+    <string name="increasing_ring_ramp_up_time_title">Anstiegszeit</string>
+    <string name="app_volume">App-Lautstärke</string>
+    <string name="lock_settings_picker_pattern_size_message">Größe des Entsperrmusters wählen</string>
+    <string name="lockpattern_settings_enable_error_path_title">Fehlerhaftes Entsperrmuster anzeigen</string>
+    <string name="lockpattern_settings_enable_dots_title">Entsperrmuster-Punkte anzeigen</string>
+    <string name="pocket_judge_title">Taschenerkennung</string>
+    <string name="pocket_judge_summary">Verhindert Bildschirm- und Tasteneingaben, wenn sich das Gerät in einer Tasche befindet</string>
+    <string name="unlock_quick_unlock_control_title">Schnelles Entsperren</string>
+    <string name="unlock_quick_unlock_control_summary">Automatisch entsperren, sobald PIN/Passwort korrekt eingegeben wurde</string>
+    <string name="auto_brightness_one_shot_title">Schnelle automatische Helligkeit</string>
+    <string name="auto_brightness_one_shot_summary">Helligkeitsanpassung erfolgt nur im Moment der Bildschirmeinschaltung</string>
+    <string name="app_volume_title">Lautstärkeregelung pro Anwendung</string>
+    <string name="app_volume_summary">Erlaubt das Festlegen verschiedener Lautstärkepegel für jede Anwendung</string>
+    <string name="wifi_timeout">WLAN-Abschaltung</string>
+    <string name="wifi_timeout_summary">WLAN nicht automatisch ausschalten</string>
+    <string name="wifi_timeout_summary_auto">WLAN wird nach <xliff:g id="timeout_description">%1$s</xliff:g> ausgeschaltet, sofern kein Netzwerk verbunden ist</string>
+    <string name="bluetooth_timeout">Bluetooth-Abschaltung</string>
+    <string name="bluetooth_timeout_summary">Bluetooth nicht automatisch ausschalten</string>
+    <string name="bluetooth_timeout_summary_auto">Bluetooth wird <xliff:g id="timeout_description">%1$s</xliff:g> ausgeschaltet, wenn kein Gerät verbunden ist</string>
+    <string name="custom_timeout_summary_never">niemals</string>
+    <string name="custom_timeout_summary_15secs">nach 15 Sekunden</string>
+    <string name="custom_timeout_summary_30secs">30 Sekunden</string>
+    <string name="custom_timeout_summary_1min">1 Minute</string>
+    <string name="custom_timeout_summary_2mins">2 Minuten</string>
+    <string name="custom_timeout_summary_5mins">5 Minuten</string>
+    <string name="custom_timeout_summary_10mins">10 Minuten</string>
+    <string name="custom_timeout_summary_30mins">nach 30 Minuten</string>
+    <string name="custom_timeout_summary_1hour">nach 1 Stunde</string>
+    <string name="custom_timeout_summary_2hours">nach 2 Stunden</string>
+    <string name="custom_timeout_summary_4hours">nach 4 Stunden</string>
+    <string name="custom_timeout_summary_8hours">nach 8 Stunden</string>
+    <string name="prevent_ringing_option_cycle">Zwischen den Modi wechseln</string>
+    <string name="prevent_ringing_option_cycle_summary">An (Zwischen den Modi wechseln)</string>
+    <string name="adaptive_playback_screen_title">Angepasste Wiedergabedarstellung</string>
+    <string name="adaptive_playback_disabled_summary">Aus</string>
+    <string name="adaptive_playback_timeout_title">Abschalten nach</string>
+    <string name="adaptive_playback_timeout_none">Kein Zeitlimit</string>
+    <string name="adaptive_playback_timeout_none_summary">An (kein Zeitlimit)</string>
+    <string name="adaptive_playback_timeout_30_secs">30 Sekunden</string>
+    <string name="adaptive_playback_timeout_30_secs_summary">An (30 Sekunden)</string>
+    <string name="adaptive_playback_timeout_1_min">1 Minute</string>
+    <string name="adaptive_playback_timeout_1_min_summary">An (1 Minute)</string>
+    <string name="adaptive_playback_timeout_2_min">2 Minuten</string>
+    <string name="adaptive_playback_timeout_2_min_summary">An (2 Minuten)</string>
+    <string name="adaptive_playback_timeout_5_min">5 Minuten</string>
+    <string name="adaptive_playback_timeout_5_min_summary">An (5 Minuten)</string>
+    <string name="adaptive_playback_timeout_10_min">10 Minuten</string>
+    <string name="adaptive_playback_timeout_10_min_summary">An (10 Minuten)</string>
+    <string name="wakelock_blocker_title">Wakelock Blocker</string>
+    <string name="wakelock_blocker_summary">Blockiert systemeigene Wakelocks</string>
+    <string name="wakelock_blocker_save">Speichern</string>
+    <string name="wakelock_list_header">Verfügbare Wakelocks</string>
+    <string name="wakelock_blocker_reload">Aktualisieren</string>
+    <string name="wakelock_blocker_warning_title">Fortfahren auf eigene Gefahr</string>
+    <string name="wakelock_blocker_warning">Blockieren von Wakelocks kann zu Instabilität, Abstürzen oder Datenverlust führen</string>
+    <string name="alarm_blocker">Alarm Blocker</string>
+    <string name="alarm_blocker_title">Aktivieren</string>
+    <string name="alarm_blocker_summary">Alarme bei ausgeschaltetem Bildschirm blockieren</string>
+    <string name="alarm_blocker_save">Speichern</string>
+    <string name="alarm_list_header">Verfügbare Alarme</string>
+    <string name="alarm_blocker_reload">Aktualisieren</string>
+    <string name="alarm_blocker_warning_title">Fortfahren auf eigene Gefahr</string>
+    <string name="alarm_blocker_warning">Das Blockieren von Alarmen kann Instabilität, Abstürze und Datenverlust verursachen.</string>
+    <string name="app_lock_title">App-Sperre</string>
+    <string name="app_lock_summary_singular">1 Anwendung ist geschützt</string>
+    <string name="app_lock_summary_plural"><xliff:g example="2" id="Number of applications">%1$d</xliff:g> Anwendungen sind geschützt</string>
+    <string name="app_lock_authentication_dialog_title">Zum Fortfahren entsperren</string>
+    <string name="app_lock_packages_title">Geschützte Anwendungen</string>
+    <string name="app_lock_packages_summary">Anwendungen auswählen, die mittels biometrischer oder konventioneller Eingaben geschützt werden sollen</string>
+    <string name="app_lock_timeout_title">Zeit bis zur automatischen Sperrung</string>
+    <string name="app_lock_timeout_summary">Dauer, nach der eine entsperrte App im Hintergrund wieder gesperrt wird</string>
+    <string name="app_lock_notifications_title">Benachrichtigungen einklappen</string>
+    <string name="app_lock_notifications_summary">          Benachrichtigungsinhalte werden ausgeblendet und einklappt für ausgewählte Apps, wenn sie gesperrt sind.
+          Pop-Up-Benachrichtigungen werden automatisch deaktiviert.
+    </string>
+    <string name="app_lock_notifications_disabled_summary">Schützen Sie zuerst eine Anwendung</string>
+    <string name="app_lock_biometrics_allowed_title">Biometrisches Entsperren aktivieren</string>
+    <string name="app_lock_footer_text">Benachrichtigungsblasen werden nach Ablauf der Zeit automatisch gelöscht</string>
+    <string name="search">Suche</string>
+    <string name="search_apps">Anwendungen suchen</string>
+    <string name="hidden_apps_title">Ausgeblendete Anwendungen</string>
+    <string name="hidden_apps_summary">Anwendungen, die im Startprogramm ausgeblendet werden sollen</string>
+    <string name="hidden_app_authentication_dialog_title">Entsperren um Anwendungen zu verstecken</string>
+    <string name="package_details_group_title">Paketinformationen</string>
+    <string name="package_name">Paketname</string>
+    <string name="package_version">Paketversion</string>
+    <string name="optimized_charge_title">Optimiertes Laden</string>
+    <string name="optimized_charge_summary">Begrenze das Laden auf 75\u0025 - 80\u0025 um die Akku-Lebensdauer zu verlängern</string>
+    <string name="battery_charge_cycles">Abgeschlossene Ladezyklen</string>
+    <string name="current_battery_capacity">Aktuelle Akkukapazität / Entladung</string>
+    <string name="designed_battery_capacity">Maximal mögliche Akkukapazität</string>
+    <string name="battery_health_percent">Akku-Zustand</string>
+    <string name="ambient_display_screen_off_udfps_title" product="default">Fingerabdrucksensor lange drücken, um das Telefon zu entsperren</string>
+    <string name="ambient_display_screen_off_udfps_title" product="tablet">Fingerabdrucksensor lange drücken, um das Tablet zu entsperren</string>
+    <string name="ambient_display_screen_off_udfps_title" product="device">Fingerabdrucksensor lange drücken, um das Gerät zu entsperren</string>
+    <string name="ambient_display_screen_off_udfps_summary">Um den Bildschirm aufzuwecken und zu entsperren, lange auf den Fingerabdrucksensor im Display drücken.</string>
+    <string name="high_touch_sensitivity_title">Hohe Berührungsempfindlichkeit</string>
+    <string name="high_touch_sensitivity_summary">Berührungsempfindlichkeit erhöhen, damit das Gerät beim Tragen von Handschuhen verwendet werden kann</string>
+    <string name="touchscreen_hovering_title">Touchscreen als Maus verwenden</string>
+    <string name="touchscreen_hovering_summary">Erlaubt es den Bildschirm wie eine Maus zu nutzen, unter anderem bei Webbrowsern, etc.</string>
+    <string name="high_touch_polling_rate_title">Hohe Touchscreen-Abtastrate</string>
+    <string name="high_touch_polling_rate_summary">Touchscreen-Abtastrate erhöhen</string>
+    <string name="live_display_summary">Optimiert Ihren Bildschirm basierend auf der Tageszeit und den Umgebungsbedingungen, um die Lesbarkeit zu verbessern und die Ermüdung der Augen zu mildern</string>
+    <string name="live_display_mode">Bildschirmmodus</string>
+    <string name="live_display_color_temperature_title">Farbtemperatur</string>
+    <string name="live_display_color_temperature_summary">Tag: <xliff:g id="day_temperature">%1$d</xliff:g>K Nacht: <xliff:g id="night_temperature">%2$d</xliff:g>K</string>
+    <string name="live_display_color_temperature_label"><xliff:g id="degrees">%1$d</xliff:g>K</string>
+    <string name="live_display_day">Tag</string>
+    <string name="live_display_night">Nacht</string>
+    <string name="live_display_outdoor_mode_title">Automatischer Draußen-Modus</string>
+    <string name="live_display_outdoor_mode_summary">Erhöht Helligkeit und Sättigung automatisch bei hellem Sonnenlicht</string>
+    <string name="live_display_anti_flicker_title">Anti-Flimmern</string>
+    <string name="live_display_anti_flicker_summary">Verhindert starkes Flimmern und reduziert die Belastung der Augen bei schlechten Lichtverhältnissen. Kann die Farbgenauigkeit verschlechtern und die Art und Weise, wie einige Elemente angezeigt werden, beeinträchtigen.</string>
+    <string name="live_display_low_power_title">Akkuverbrauch reduzieren</string>
+    <string name="live_display_low_power_summary">Anpassen der Anzeige für den geringsten Akkuverbrauch ohne Beeinträchtigungen</string>
+    <string name="live_display_enhance_color_title">Farben verbessern</string>
+    <string name="live_display_enhance_color_summary">Verbessert die Farben von Hauttönen, Landschaften und von anderen Bildern</string>
+    <string name="live_display_color_profile_title">Farbprofil</string>
+    <string name="live_display_color_profile_standard_title">Standard</string>
+    <string name="live_display_color_profile_standard_summary">Genaue Farbdarstellung und helle Weißtöne</string>
+    <string name="live_display_color_profile_natural_title">Natürlich</string>
+    <string name="live_display_color_profile_natural_summary">Realistische Farben und Hauttöne</string>
+    <string name="live_display_color_profile_dynamic_title">Dynamisch</string>
+    <string name="live_display_color_profile_dynamic_summary">Verbesserte Farbdarstellung und helle Weißtöne</string>
+    <string name="live_display_color_profile_cinema_title">Kino</string>
+    <string name="live_display_color_profile_cinema_summary">Perfekte Farbwiedergabe für Videos</string>
+    <string name="live_display_color_profile_astronomy_title">Astronomie</string>
+    <string name="live_display_color_profile_astronomy_summary">Tiefes Rot für den Erhalt der Nachtsicht</string>
+    <string name="live_display_color_profile_photography_title">Fotografie</string>
+    <string name="live_display_color_profile_photography_summary">Perfekte Farbwiedergabe für Fotos</string>
+    <string name="live_display_color_profile_basic_title">Einfach</string>
+    <string name="live_display_color_profile_basic_summary">Bildschirm unkalibriert verwenden</string>
+    <string name="live_display_color_profile_adaptive_title">Adaptiv</string>
+    <string name="live_display_color_profile_adaptive_summary">Farben an Umgebungsbedingungen anpassen</string>
+    <string name="live_display_color_profile_reading_title">Lesen</string>
+    <string name="live_display_color_profile_reading_summary">Wärmere Farben für weniger Augenbelastung</string>
+    <string name="live_display_color_profile_srgb_title">sRGB</string>
+    <string name="live_display_color_profile_srgb_summary">Farben passend zum sRGB-Farbraum</string>
+    <string name="live_display_color_profile_dci_p3_title">DCI-P3</string>
+    <string name="live_display_color_profile_dci_p3_summary">Farben passend zum DCI-P3-Farbraum</string>
+    <string name="live_display_reading_mode_title">Lesemodus</string>
+    <string name="live_display_reading_mode_summary">Graustufen-Modus für längeres Lesen</string>
+    <string name="color_calibration_title">Farbkalibrierung</string>
+    <string name="color_calibration_summary">Bildschirmfarben kalibrieren</string>
+    <string name="color_red_title">Rot</string>
+    <string name="color_green_title">Grün</string>
+    <string name="color_blue_title">Blau</string>
+    <string name="picture_adjustment_title">Bildanpassung</string>
+    <string name="picture_adjustment_summary">Farbton, Sättigung, Leuchtdichte und Kontrast anpassen</string>
+    <string name="adj_hue_title">Farbton</string>
+    <string name="adj_saturation_title">Sättigung</string>
+    <string name="adj_intensity_title">Intensität</string>
+    <string name="adj_contrast_title">Kontrast</string>
+    <string name="category_battery_health_title">Erweiterte Akku-Gesundheitsinformationen</string>
+    <string name="screen_refresh_category_title">Aktualisierungsrate des Bildschirms</string>
+    <string name="min_refresh_rate_title">Minimale Aktualisierungsrate</string>
+    <string name="max_refresh_rate_title">Maximale Aktualisierungsrate</string>
+    <string name="refresh_rate_placeholder"><xliff:g id="refresh_rate" example="60">%1$s</xliff:g> Hz</string>
+    <string name="default_string">Standard</string>
+    <string name="hidden_string">Ausgeblendet</string>
+    <string name="navigation_bar_ime_space_title">IME-Schaltflächenbereich</string>
+    <string name="navigation_bar_ime_space_value_narrow">Schmal</string>
+</resources>

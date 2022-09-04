@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2016 The CyanogenMod Project
+     Copyright (C) 2017-2019 The LineageOS Project
+     Copyright (C) 2014-2020 AICP
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="connected_tws_device_saved_title">保存されたイヤホン</string>
+    <string name="aicp_version_title">AICP Experience</string>
+    <string name="aicpextras_title">AICP Extras</string>
+    <string name="aicpextras_summary">ROM のカスタマイズ</string>
+    <string name="selinux_status">SELinux ステータス</string>
+    <string name="selinux_status_disabled">Disabled</string>
+    <string name="selinux_status_permissive">Permissive</string>
+    <string name="selinux_status_enforcing">Enforcing</string>
+    <string name="app_play_store">Google Play</string>
+    <string name="ambient_display_screen_summary_always_on">常に ON / 電池使用量が増えます</string>
+    <string name="ambient_display_screen_summary_notifications">新しい通知</string>
+    <string name="adb_enable_root">ルート状態のデバッグ</string>
+    <string name="adb_enable_summary_root">ルート状態でも Android デバッグを許可する</string>
+    <string name="screen_time_summary_usage_today">今日: %1$s</string>
+    <string name="volume_link_notification_title">着信と通知の音量をリンク</string>
+    <string name="back_gesture_haptic_title">振動フィードバック</string>
+    <string name="back_gesture_haptic_summary">戻るジェスチャー時の振動の有効化</string>
+    <string name="display_rotation_title">自動回転のオプション</string>
+    <string name="display_rotation_summary">画面の自動回転の機能を編集する</string>
+    <string name="display_rotation_disabled">無効</string>
+    <string name="display_rotation_unit">角度</string>
+    <string name="display_rotation_category_title">回転のモード</string>
+    <string name="display_rotation_0_title">0度</string>
+    <string name="display_rotation_90_title">90度</string>
+    <string name="display_rotation_180_title">180度</string>
+    <string name="display_rotation_270_title">270度</string>
+    <string name="prevent_ringing_option_mute_no_media">ミュート、メディアなし</string>
+    <string name="prevent_ringing_option_mute_no_media_summary">ON (ミュート、メディアなし)</string>
+    <string name="back_height_low_label">全て</string>
+    <string name="back_height_high_label">下部</string>
+    <string name="volume_steps_title">音量レベルの変更</string>
+    <string name="volume_steps_alarm_title">音量レベル: アラーム</string>
+    <string name="volume_steps_dtmf_title">音量レベル: DTMF</string>
+    <string name="volume_steps_music_title">音量レベル: メディア</string>
+    <string name="volume_steps_notification_title">音量レベル: 通知</string>
+    <string name="volume_steps_ring_title">音量レベル: 着信音</string>
+    <string name="volume_steps_system_title">音量レベル: システム</string>
+    <string name="volume_steps_voice_call_title">音量レベル: 音声通話</string>
+    <string name="volume_steps_reset">リセット</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
+    <string name="back_gesture_arrow_message">戻るジェスチャーのアニメーション</string>
+    <string name="back_gesture_arrow_summary">戻るジェスチャーの矢印をアニメーションする</string>
+    <string name="battery_usage_stats_reset">統計のリセット</string>
+    <string name="battery_usage_stats_reset_message">バッテリーの使用統計を初期化します</string>
+    <string name="battery_temp">バッテリー温度</string>
+    <string name="vibration_preferences">振動と触覚フィードバック</string>
+    <string name="ringtone_vibration_pattern">着信音の振動のパターン</string>
+    <string name="vibration_intensity_ringer">着信音の振動の強さ</string>
+    <string name="vibration_intensity_notification">通知の振動の強さ</string>
+    <string name="vibration_intensity_disabled">無効</string>
+    <string name="vibration_intensity_light">軽い</string>
+    <string name="vibration_intensity_medium">標準</string>
+    <string name="vibration_intensity_strong">強い</string>
+    <string name="vibration_intensity_custom">カスタム</string>
+    <string name="pattern_dzzz_dzzz">dzzz-dzzz</string>
+    <string name="pattern_dzzz_da">dzzz-da</string>
+    <string name="pattern_mm_mm_mm">mm-mm-mm</string>
+    <string name="pattern_da_da_dzzz">da-da-dzzz</string>
+    <string name="pattern_da_dzzz_da">da-dzzz-da</string>
+    <string name="three_finger_gesture">スワイプでスクリーンショット</string>
+    <string name="three_finger_gesture_summary">3本指でスワイプしてスクリーンショットを取得する</string>
+    <string name="device_info_protected_single_press">タップして情報を表示</string>
+    <string name="tethering_allow_vpn_upstreams_title">クライアントの VPN 使用の許可</string>
+    <string name="tethering_allow_vpn_upstreams_summary">この端末の VPN 接続をホットスポットのクライアントが送信接続に使うことを許可する</string>
+    <string name="increasing_ring_volume_option_title">着信音量の増幅</string>
+    <string name="increasing_ring_min_volume_title">開始音量</string>
+    <string name="increasing_ring_ramp_up_time_title">増幅時間</string>
+    <string name="lock_settings_picker_pattern_size_message">パターンを選択して下さい</string>
+    <string name="lockpattern_settings_enable_error_path_title">間違えたパターンを表示</string>
+    <string name="lockpattern_settings_enable_dots_title">パターンのドットを表示</string>
+    <string name="pocket_judge_title">ポケット検出</string>
+    <string name="pocket_judge_summary">ポケットに入っている時にタッチやボタン入力を無効化する</string>
+    <string name="unlock_quick_unlock_control_title">クイックロック解除</string>
+    <string name="auto_brightness_one_shot_title">復帰時のみ自動明るさ調節を起動</string>
+    <string name="auto_brightness_one_shot_summary">画面が復帰した時に1度だけ自動で画面の明るさ調整が行われます</string>
+    <string name="bluetooth_timeout">Bluetooth の制限時間</string>
+    <string name="bluetooth_timeout_summary">自動的に Bluetooth をオフにしない</string>
+    <string name="bluetooth_timeout_summary_auto">端末が接続されていない場合は<xliff:g id="timeout_description">%1$s</xliff:g>後に Bluetooth はオフになります</string>
+    <string name="custom_timeout_summary_never">なし</string>
+    <string name="custom_timeout_summary_15secs">15秒</string>
+    <string name="custom_timeout_summary_30secs">30秒</string>
+    <string name="custom_timeout_summary_1min">1分</string>
+    <string name="custom_timeout_summary_2mins">2分</string>
+    <string name="custom_timeout_summary_5mins">5分</string>
+    <string name="custom_timeout_summary_10mins">10分</string>
+    <string name="custom_timeout_summary_30mins">30分</string>
+    <string name="custom_timeout_summary_1hour">1時間</string>
+    <string name="custom_timeout_summary_2hours">2時間</string>
+    <string name="custom_timeout_summary_4hours">4時間</string>
+    <string name="custom_timeout_summary_8hours">8時間</string>
+    <string name="prevent_ringing_option_cycle">サイクルスルーモード</string>
+    <string name="prevent_ringing_option_cycle_summary">ON (サイクルスルーモード)</string>
+    <string name="adaptive_playback_screen_title">アダプティブ再生</string>
+    <string name="adaptive_playback_disabled_summary">OFF</string>
+    <string name="adaptive_playback_timeout_title">使用する点灯時間</string>
+    <string name="adaptive_playback_timeout_none">制限なし</string>
+    <string name="adaptive_playback_timeout_none_summary">ON (制限なし)</string>
+    <string name="adaptive_playback_timeout_30_secs">30秒</string>
+    <string name="adaptive_playback_timeout_30_secs_summary">ON (30秒)</string>
+    <string name="adaptive_playback_timeout_1_min">1分</string>
+    <string name="adaptive_playback_timeout_1_min_summary">ON (1分)</string>
+    <string name="adaptive_playback_timeout_2_min">2分</string>
+    <string name="adaptive_playback_timeout_2_min_summary">ON (2分)</string>
+    <string name="adaptive_playback_timeout_5_min">5分</string>
+    <string name="adaptive_playback_timeout_5_min_summary">ON (5分)</string>
+    <string name="adaptive_playback_timeout_10_min">10分</string>
+    <string name="adaptive_playback_timeout_10_min_summary">ON (10分)</string>
+    <string name="wakelock_blocker_summary">システムの WakeLock をブロックする</string>
+    <string name="wakelock_blocker_save">保存</string>
+    <string name="wakelock_list_header">利用可能な WakeLock</string>
+    <string name="wakelock_blocker_reload">再読み込み</string>
+    <string name="wakelock_blocker_warning_title">注意して進めて下さい</string>
+    <string name="wakelock_blocker_warning">WakeLockのブロックは、端末が不安定になったりクラッシュやデータ損失などが発生する可能性があります。</string>
+    <string name="alarm_blocker">Alarm ブロッカー</string>
+    <string name="alarm_blocker_title">有効</string>
+    <string name="alarm_blocker_summary">画面消灯中は Alarm をブロックする</string>
+    <string name="alarm_blocker_save">保存</string>
+    <string name="alarm_list_header">使用可能な Alarm</string>
+    <string name="alarm_blocker_reload">再読み込み</string>
+    <string name="alarm_blocker_warning_title">注意して進めて下さい</string>
+    <string name="alarm_blocker_warning">Alarm のブロックは端末を不安定にしたり、クラッシュやデータの損失などを起こす可能性があります</string>
+    <string name="current_battery_capacity">現在のバッテリー容量</string>
+    <string name="designed_battery_capacity">設計バッテリー容量</string>
+    <string name="battery_health_percent">バッテリー健康度</string>
+</resources>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2016 The CyanogenMod Project
+     Copyright (C) 2017-2019 The LineageOS Project
+     Copyright (C) 2014-2020 AICP
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="connected_tws_device_saved_title">저장된 무선 이어폰</string>
+    <string name="aicp_version_title">AICP 경험</string>
+    <string name="aicpextras_title">AICP Extras</string>
+    <string name="aicpextras_summary">ROM 사용자 설정</string>
+    <string name="selinux_status">SELinux 상태</string>
+    <string name="selinux_status_disabled">비활성화됨</string>
+    <string name="selinux_status_permissive">허용</string>
+    <string name="selinux_status_enforcing">Enforcing (사용)</string>
+    <string name="app_play_store">구글 플레이</string>
+    <string name="ambient_display_screen_summary_always_on">상시 사용 설정/배터리 사용량 증가</string>
+    <string name="ambient_display_screen_summary_notifications">새로운 알림</string>
+    <string name="volume_link_notification_title">벨소리 볼륨과 알림 볼륨 연결</string>
+    <string name="back_gesture_haptic_summary">뒤로 제스처에서 햅틱 틱 효과 사용</string>
+    <string name="display_rotation_title">자동 회전 옵션</string>
+    <string name="display_rotation_summary">화면 자동 회전 기능 구성</string>
+    <string name="display_rotation_disabled">비활성화됨</string>
+    <string name="display_rotation_unit">각도</string>
+    <string name="display_rotation_category_title">회전 모드</string>
+    <string name="display_rotation_0_title">0 도</string>
+    <string name="display_rotation_90_title">90 도</string>
+    <string name="display_rotation_180_title">180 도</string>
+    <string name="display_rotation_270_title">270 도</string>
+    <string name="prevent_ringing_option_mute_no_media">음소거, 미디어 없음</string>
+    <string name="prevent_ringing_option_mute_no_media_summary">켜기 (음소거, 미디어 없음)</string>
+    <string name="back_height_low_label">Full</string>
+    <string name="back_height_high_label">하단</string>
+    <string name="volume_steps_title">불륨 단계</string>
+    <string name="volume_steps_alarm_title">볼륨 단계: 알람</string>
+    <string name="volume_steps_dtmf_title">볼륨 단계: DTMF</string>
+    <string name="volume_steps_music_title">볼륨 단계: 음악</string>
+    <string name="volume_steps_notification_title">볼륨 단계: 알림</string>
+    <string name="volume_steps_ring_title">볼륨 단계: 벨소리</string>
+    <string name="volume_steps_system_title">볼륨 단계: 시스템</string>
+    <string name="volume_steps_voice_call_title">볼륨 단계: 전화</string>
+    <string name="volume_steps_reset">초기화</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
+    <string name="back_gesture_arrow_summary">뒤로가기 제스처를 위해 애니메이션 화살표를 표시합니다.</string>
+    <string name="battery_usage_stats_reset">상태 초기화</string>
+    <string name="battery_usage_stats_reset_message">배터리 사용 기록이 초기화됩니다</string>
+    <string name="battery_temp">배터리 온도</string>
+    <string name="vibration_intensity_disabled">비활성화됨</string>
+    <string name="three_finger_gesture">화면을 쓸어 스크린샷 찍기</string>
+    <string name="three_finger_gesture_summary">세 손가락을 스와이프 해서 스크린샷을 찍습니다</string>
+    <string name="device_info_protected_single_press">정보를 보려면 탭하세요.</string>
+    <string name="tethering_allow_vpn_upstreams_title">클라이언트가 VPN을 사용하도록 허용</string>
+    <string name="tethering_allow_vpn_upstreams_summary">핫스팟이나 테더링 클라이언트가 연결성 향상을 위해 내 장치의 VPN연결을 사용하도록 허용합니다.</string>
+    <string name="increasing_ring_volume_option_title">점점 커지는 벨 소리</string>
+    <string name="increasing_ring_min_volume_title">시작 볼륨</string>
+    <string name="increasing_ring_ramp_up_time_title">볼륨 증가 시간</string>
+    <string name="pocket_judge_title">주머니 감지</string>
+    <string name="pocket_judge_summary">기기가 주머니에 있을 때 화면과 버튼 입력을 방지합니다.</string>
+    <string name="unlock_quick_unlock_control_title">빠른 잠금 해제</string>
+    <string name="custom_timeout_summary_30secs">30 초</string>
+    <string name="custom_timeout_summary_1min">1 분</string>
+    <string name="custom_timeout_summary_2mins">2 분</string>
+    <string name="custom_timeout_summary_5mins">5 분</string>
+    <string name="custom_timeout_summary_10mins">10 분</string>
+    <string name="adaptive_playback_screen_title">적응형 재생</string>
+    <string name="adaptive_playback_disabled_summary">끄기</string>
+    <string name="adaptive_playback_timeout_title">시간 제한</string>
+    <string name="adaptive_playback_timeout_30_secs">30 초</string>
+    <string name="adaptive_playback_timeout_30_secs_summary">사용 (30초)</string>
+    <string name="adaptive_playback_timeout_1_min">1 분</string>
+    <string name="adaptive_playback_timeout_1_min_summary">사용 (1분)</string>
+    <string name="adaptive_playback_timeout_2_min">2 분</string>
+    <string name="adaptive_playback_timeout_2_min_summary">사용 (2분)</string>
+    <string name="adaptive_playback_timeout_5_min">5 분</string>
+    <string name="adaptive_playback_timeout_5_min_summary">사용 (5분)</string>
+    <string name="adaptive_playback_timeout_10_min">10 분</string>
+    <string name="adaptive_playback_timeout_10_min_summary">사용 (10분)</string>
+</resources>

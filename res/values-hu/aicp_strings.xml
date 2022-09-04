@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2012-2016 The CyanogenMod Project
+     Copyright (C) 2017-2019 The LineageOS Project
+     Copyright (C) 2014-2020 AICP
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="connected_tws_device_saved_title">Mentett Earbuds fülhallgatók</string>
+    <string name="packagename_text">"<xliff:g id="package_name">%1$s</xliff:g>"</string>
+    <string name="aicp_version_title">AICP Élmény</string>
+    <string name="aicpextras_title">AICP Extrák</string>
+    <string name="aicpextras_summary">ROM testreszabás</string>
+    <string name="selinux_status">A SELinux állapota</string>
+    <string name="selinux_status_disabled">Letiltva</string>
+    <string name="selinux_status_permissive">Megengedve</string>
+    <string name="selinux_status_enforcing">Kényszerítve</string>
+    <string name="app_play_store">Google Play Áruház</string>
+    <string name="ambient_display_screen_summary_always_on">Mindig bekapcsolva / Megnöveli az akkumulátorhasználatot</string>
+    <string name="ambient_display_screen_summary_notifications">Új értesítéseknél</string>
+    <string name="adb_enable_root">Rootolt hibakeresés</string>
+    <string name="adb_enable_summary_root">Rootolva engedélyezi az Android hibakeresését</string>
+    <string name="screen_time_summary_usage_today">Ma: %1$s</string>
+    <string name="volume_link_notification_title">Csengő és értesítési hangok összekapcsolása</string>
+    <string name="back_gesture_haptic_title">Érintési visszajelzés</string>
+    <string name="back_gesture_haptic_summary">A \'Vissza mozdulatvezérlésnél\' engedélyezi a rezgő visszajelzést</string>
+    <string name="display_rotation_title">Az Automatikus elforgatás beállításai</string>
+    <string name="display_rotation_summary">Konfigurálhatók a forgatási szabályok</string>
+    <string name="display_rotation_disabled">Letiltva</string>
+    <string name="display_rotation_unit">° fok</string>
+    <string name="display_rotation_category_title">Forgatásmódok</string>
+    <string name="display_rotation_0_title">0° fok</string>
+    <string name="display_rotation_90_title">90° fok</string>
+    <string name="display_rotation_180_title">180° fok</string>
+    <string name="display_rotation_270_title">270° fok</string>
+    <string name="prevent_ringing_option_mute_no_media">Némítás, nincs média</string>
+    <string name="prevent_ringing_option_mute_no_media_summary">Be (némítás, nincs média)</string>
+    <string name="back_height_low_label">Teljes</string>
+    <string name="back_height_high_label">Alul</string>
+    <string name="volume_steps_title">Hangerőléptetés</string>
+    <string name="volume_steps_alarm_title">Hangerőléptetés: Ébresztő</string>
+    <string name="volume_steps_dtmf_title">Hangerőléptetés: DTMF</string>
+    <string name="volume_steps_music_title">Hangerőléptetés: Zene</string>
+    <string name="volume_steps_notification_title">Hangerőléptetés: Értesítés</string>
+    <string name="volume_steps_ring_title">Hangerőléptetés: Csengés</string>
+    <string name="volume_steps_system_title">Hangerőléptetés: Rendszer</string>
+    <string name="volume_steps_voice_call_title">Hangerőléptetés: Hanghívás</string>
+    <string name="volume_steps_reset">Visszaállítás</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
+    <string name="back_gesture_arrow_message">A \'Vissza\'-vezérlés animációja</string>
+    <string name="back_gesture_arrow_summary">Mutasson egy animált nyilat a \'Vissza\'-mozdulatvezérléshez.</string>
+    <string name="battery_usage_stats_reset">Statisztikák törlése</string>
+    <string name="battery_usage_stats_reset_message">Akkumulátorhasználati statisztika törlésre kerül</string>
+    <string name="battery_temp">Akkuhőmérséklet</string>
+    <string name="vibration_preferences">Rezgés és rezgő visszajelzés</string>
+    <string name="ringtone_vibration_pattern">Csengőhang-rezgések fajtái</string>
+    <string name="vibration_intensity_ringer">Csengőhang-rezgések erőssége</string>
+    <string name="vibration_intensity_notification">Értesítéshang-rezgések erőssége</string>
+    <string name="vibration_intensity_disabled">Letiltva</string>
+    <string name="vibration_intensity_light">Gyenge</string>
+    <string name="vibration_intensity_medium">Közepes</string>
+    <string name="vibration_intensity_strong">Erős</string>
+    <string name="vibration_intensity_custom">Egyéni</string>
+    <string name="pattern_dzzz_dzzz">dzzz-dzzz</string>
+    <string name="pattern_dzzz_da">dzzz-da</string>
+    <string name="pattern_mm_mm_mm">mm-mm-mm</string>
+    <string name="pattern_da_da_dzzz">da-da-dzzz</string>
+    <string name="pattern_da_dzzz_da">da-dzzz-da</string>
+    <string name="three_finger_gesture">Képernyőkép csúsztatással</string>
+    <string name="three_finger_gesture_summary">Csúsztasson egyszerre három ujjal a képernyőmentéshez</string>
+    <string name="device_info_protected_single_press">Érintse meg az információ megjelenítéséhez</string>
+    <string name="tethering_allow_vpn_upstreams_title">Engedélyezi a klienseknek a VPN-használatot</string>
+    <string name="tethering_allow_vpn_upstreams_summary">Engedélyezze a hotspot-klienseknek, hogy a készülék VPN-kapcsolatait felfelé csatlakoztathassák</string>
+    <string name="increasing_ring_volume_option_title">Emelkedő csengőhang</string>
+    <string name="increasing_ring_min_volume_title">Kezdeti hangerő</string>
+    <string name="increasing_ring_ramp_up_time_title">Felfutási idő</string>
+    <string name="lock_settings_picker_pattern_size_message">A Feloldóminta mérete</string>
+    <string name="lockpattern_settings_enable_error_path_title">Jelenítse meg a hibás mintát</string>
+    <string name="lockpattern_settings_enable_dots_title">Jelenítse meg a feloldási pontokat</string>
+    <string name="pocket_judge_title">Zseb érzékelése</string>
+    <string name="pocket_judge_summary">A képernyő és a gombok általi véletlen bevitelek blokkolása, ha a készülék a zsebben van</string>
+    <string name="unlock_quick_unlock_control_title">Gyorsfeloldás</string>
+    <string name="auto_brightness_one_shot_title">Egylövéses automata-fényerő</string>
+    <string name="auto_brightness_one_shot_summary">A fényerőbeállítás csak a képernyő bekapcsolásának pillanatában történik</string>
+    <string name="bluetooth_timeout">Bluetooth szüneteltetés</string>
+    <string name="bluetooth_timeout_summary">Ne kapcsolódjon ki automaikusan a Bluetooth</string>
+    <string name="bluetooth_timeout_summary_auto">Ha nincs csatlakoztatott eszköz, a Bluetooth <xliff:g id="timeout_description">%1$s</xliff:g> elteltével kikapcsol</string>
+    <string name="custom_timeout_summary_never">Soha</string>
+    <string name="custom_timeout_summary_15secs">15 másodperc</string>
+    <string name="custom_timeout_summary_30secs">30 másodperc</string>
+    <string name="custom_timeout_summary_1min">1 perc</string>
+    <string name="custom_timeout_summary_2mins">2 perc</string>
+    <string name="custom_timeout_summary_5mins">5 perc</string>
+    <string name="custom_timeout_summary_10mins">10 perc</string>
+    <string name="custom_timeout_summary_30mins">30 perc</string>
+    <string name="custom_timeout_summary_1hour">1 óra</string>
+    <string name="custom_timeout_summary_2hours">2 óra</string>
+    <string name="custom_timeout_summary_4hours">4 óra</string>
+    <string name="custom_timeout_summary_8hours">8 óra</string>
+    <string name="prevent_ringing_option_cycle">Üzemmódok közötti váltás</string>
+    <string name="prevent_ringing_option_cycle_summary">Be (üzemmódok közötti váltás)</string>
+    <string name="adaptive_playback_screen_title">Alkalmazkodó lejátszás</string>
+    <string name="adaptive_playback_disabled_summary">Kikapcsolva</string>
+    <string name="adaptive_playback_timeout_title">A használt időtúllépés mértéke</string>
+    <string name="adaptive_playback_timeout_none">Nincs időkorlát</string>
+    <string name="adaptive_playback_timeout_none_summary">Be (nincs időkorlát)</string>
+    <string name="adaptive_playback_timeout_30_secs">30 másodperc</string>
+    <string name="adaptive_playback_timeout_30_secs_summary">Be (30 másodperc)</string>
+    <string name="adaptive_playback_timeout_1_min">1 perc</string>
+    <string name="adaptive_playback_timeout_1_min_summary">Be (1 perc)</string>
+    <string name="adaptive_playback_timeout_2_min">2 perc</string>
+    <string name="adaptive_playback_timeout_2_min_summary">Be (2 perc)</string>
+    <string name="adaptive_playback_timeout_5_min">5 perc</string>
+    <string name="adaptive_playback_timeout_5_min_summary">Be (5 perc)</string>
+    <string name="adaptive_playback_timeout_10_min">10 perc</string>
+    <string name="adaptive_playback_timeout_10_min_summary">Be (10 perc)</string>
+    <string name="wakelock_blocker_summary">A kéretlen rendszerébresztések blokkolása</string>
+    <string name="wakelock_blocker_save">Mentés</string>
+    <string name="wakelock_list_header">Megengedett rendszerébresztések</string>
+    <string name="wakelock_blocker_reload">Újratöltés</string>
+    <string name="wakelock_blocker_warning_title">Körültekintően járjon el!</string>
+    <string name="wakelock_blocker_warning">A rendszerébresztések blokkolása instabilitáshoz, összeomláshoz vagy adatvesztéshez vezethet</string>
+    <string name="alarm_blocker">Ébresztésblokkoló</string>
+    <string name="alarm_blocker_title">Engedélyezés</string>
+    <string name="alarm_blocker_summary">Riasztások blokkolása kikapcsolt képernyőnél</string>
+    <string name="alarm_blocker_save">Mentés</string>
+    <string name="alarm_list_header">Megengedett riasztások</string>
+    <string name="alarm_blocker_reload">Újratöltés</string>
+    <string name="alarm_blocker_warning_title">Körültekintően járjon el!</string>
+    <string name="alarm_blocker_warning">A riasztásblokkolás instabilitáshoz, összeomláshoz vagy adatvesztéshez vezethet.</string>
+    <string name="current_battery_capacity">Az akkumulátor jelenlegi kapacítása</string>
+    <string name="designed_battery_capacity">Tervezett akkumulátor-kapacítás</string>
+    <string name="battery_health_percent">Akkumulátorállapot</string>
+</resources>
