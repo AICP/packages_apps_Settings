@@ -32,4 +32,6 @@
     <string name="backup_transport_setting_label">Change backup provider</string>
     <string name="backup_transport_title">Select backup provider</string>
 
+    <!-- Per-app volume -->
+    <string name="app_volume">App volume</string>
 </resources>
