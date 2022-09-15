@@ -95,6 +95,12 @@
         settings:controller="com.android.settings.gestures.PowerMenuPreferenceController" />
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="click_partial_screenshot"
+        android:title="@string/click_partial_screenshot_title"
+        android:summary="@string/click_partial_screenshot_summary"
+        android:defaultValue="false" />
+
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="three_finger_gesture"
         android:title="@string/three_finger_gesture"
         android:summary="@string/three_finger_gesture_summary"
