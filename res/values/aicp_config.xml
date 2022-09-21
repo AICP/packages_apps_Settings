@@ -36,4 +36,6 @@
     <!-- Whether SELinux status should be shown or not. -->
     <bool name="config_show_selinux_status">true</bool>
 
+    <!-- Whether to show or hide sensitive info (like IMEI and Phone Number) on About phone -->
+    <bool name="configShowDeviceSensitiveInfo">false</bool>
 </resources>
