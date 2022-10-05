@@ -40,6 +40,8 @@ import com.android.settingslib.widget.FooterPreference;
 import com.android.settingslib.widget.IllustrationPreference;
 import com.android.settingslib.widget.SelectorWithWidgetPreference;
 
+import com.android.internal.util.aicp.AicpUtils;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -135,6 +137,11 @@ public class ScreenResolutionFragment extends RadioButtonPickerFragment {
     private Display.Mode getPreferMode(int width) {
         for (Point resolution : mResolutions) {
             if (resolution.x == width) {
+                final String screenDiagonalLength = getResources().getString(
+                    R.string.config_screen_diagonal_length);
+                if (screenDiagonalLength != null) {
+                    AicpUtils.changeScreenDPI(resolution.x, resolution.y, Float.parseFloat(screenDiagonalLength));
+                }
                 return new Display.Mode(
                         resolution.x, resolution.y, getDisplayMode().getRefreshRate());
             }

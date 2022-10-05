@@ -41,4 +41,7 @@
 
     <!-- Max network scan search time in seconds -->
     <integer name="config_network_scan_helper_max_search_time_sec">300</integer>
+
+    <!-- Diagonal Screen length provided -->
+    <string name="config_screen_diagonal_length" translatable="false"></string>
 </resources>
