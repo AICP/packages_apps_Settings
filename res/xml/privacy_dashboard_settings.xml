@@ -61,19 +61,19 @@
         <intent android:action="android.intent.action.MANAGE_PERMISSIONS"/>
     </Preference>
 
-    <!-- Camera toggle -->
+    <!-- Camera toggle
     <com.android.settingslib.RestrictedSwitchPreference
         android:key="privacy_camera_toggle"
         android:title="@string/camera_toggle_title"
         android:summary="@string/perm_toggle_description"
-        settings:controller="com.android.settings.privacy.CameraToggleController"/>
+        settings:controller="com.android.settings.privacy.CameraToggleController"/> -->
 
-    <!-- Microphone toggle -->
+    <!-- Microphone toggle
     <com.android.settingslib.RestrictedSwitchPreference
         android:key="privacy_mic_toggle"
         android:title="@string/mic_toggle_title"
         android:summary="@string/mic_toggle_description"
-        settings:controller="com.android.settings.privacy.MicToggleController"/>
+        settings:controller="com.android.settings.privacy.MicToggleController"/> -->
 
     <!-- Show passwords -->
     <SwitchPreference
