@@ -444,4 +444,9 @@ public class Settings extends SettingsActivity {
 
     // AICP Activities
     public static class StartAeActivity extends SettingsActivity {}
+
+    /**
+     * Activity for PreviouslyConnectedDeviceDashboardFragment
+     */
+    public static class PreviouslyConnectedDevicesActivity extends SettingsActivity { /* empty */ }
 }
