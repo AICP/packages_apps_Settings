@@ -47,6 +47,12 @@
             android:selectable="true"
             settings:textStart="@string/hide_label"
             settings:textEnd="@string/long_label"/>
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="hide_ime_space_enable"
+            android:title="@string/navigation_bar_ime_space_title"
+            android:summary="@string/navigation_bar_ime_space_summary"
+            android:defaultValue="true" />
     </PreferenceCategory>
 
     <PreferenceCategory
