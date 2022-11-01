@@ -352,4 +352,8 @@
     <string name="gesture_navbar_length_title">Pill length</string>
     <string name="hide_label">Hidden</string>
     <string name="long_label">Long</string>
+
+    <!-- IME button space -->
+    <string name="navigation_bar_ime_space_title">Hide IME button space</string>
+    <string name="navigation_bar_ime_space_summary">Hide IME button space below keyboard</string>
 </resources>
