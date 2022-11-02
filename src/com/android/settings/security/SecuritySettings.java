@@ -37,8 +37,6 @@ import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.settingslib.search.SearchIndexable;
 
-import com.android.settings.security.applock.AppLockSettingsPreferenceController;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -54,8 +52,6 @@ public class SecuritySettings extends DashboardFragment {
 
     private static final String SECURITY_STATUS_KEY = "security_status";
     private static final String SECURITY_CATEGORY_KEY = "security_category";
-
-    private static final String APP_LOCK_PREF_KEY = "app_lock";
 
     @Override
     public int getMetricsCategory() {
@@ -134,7 +130,6 @@ public class SecuritySettings extends DashboardFragment {
         controllers.add(new PreferenceCategoryController(context, SECURITY_CATEGORY)
                 .setChildren(securityPreferenceControllers));
         controllers.addAll(securityPreferenceControllers);
-        controllers.add(new AppLockSettingsPreferenceController(context, APP_LOCK_PREF_KEY, host, lifecycle));
         return controllers;
     }
 
