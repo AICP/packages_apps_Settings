@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb31e3fe_9697fda2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2022-11-17T05:04:37Z",
+      "side": 1,
+      "message": "without this commit, Pocket judge switch is set to false, but still there. Even isn\u0027t set to true in device overlay.",
+      "revId": "552c3399fc5e673143c86064f765d57ca423213a",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
