@@ -286,6 +286,8 @@ public class SoundSettings extends DashboardFragment implements OnActivityResult
         // === Other Sound Settings ===
         final DialPadTonePreferenceController dialPadTonePreferenceController =
                 new DialPadTonePreferenceController(context, fragment, lifecycle);
+        final InCallNotificationsPreferenceController inCallNotificationsPreferenceController =
+                new InCallNotificationsPreferenceController(context, fragment, lifecycle);
         final ScreenLockSoundPreferenceController screenLockSoundPreferenceController =
                 new ScreenLockSoundPreferenceController(context, fragment, lifecycle);
         final ChargingSoundPreferenceController chargingSoundPreferenceController =
@@ -304,6 +306,7 @@ public class SoundSettings extends DashboardFragment implements OnActivityResult
                 new VibrateIconPreferenceController(context, fragment, lifecycle);
 
         controllers.add(dialPadTonePreferenceController);
+        controllers.add(inCallNotificationsPreferenceController);
         controllers.add(screenLockSoundPreferenceController);
         controllers.add(chargingSoundPreferenceController);
         controllers.add(dockingSoundPreferenceController);
@@ -315,6 +318,7 @@ public class SoundSettings extends DashboardFragment implements OnActivityResult
         controllers.add(new PreferenceCategoryController(context,
                 "other_sounds_and_vibrations_category").setChildren(
                 Arrays.asList(dialPadTonePreferenceController,
+                        inCallNotificationsPreferenceController,
                         screenLockSoundPreferenceController,
                         chargingSoundPreferenceController,
                         dockingSoundPreferenceController,
