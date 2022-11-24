@@ -344,4 +344,7 @@
 
     <!-- Screen resolution -->
     <string name="custom_screen_resolution_title">Custom screen resolution</string>
+
+    <!-- In-call notifications -->
+    <string name="in_call_notifications_title">In-call notifications</string>
 </resources>
