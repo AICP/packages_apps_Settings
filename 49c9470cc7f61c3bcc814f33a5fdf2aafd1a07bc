@@ -16,6 +16,24 @@
       "message": "Do we need all this for just a switch, Also can we move it to AE?",
       "revId": "49c9470cc7f61c3bcc814f33a5fdf2aafd1a07bc",
       "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eb161b69_f7b4d630",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2022-11-29T09:42:45Z",
+      "side": 1,
+      "message": "TY for your review. Do we need this? If it works, ıt\u0027s fine for me. \n\nDoes it belongs to AE ? Not sure.",
+      "parentUuid": "1b7146ee_ce402a29",
+      "revId": "49c9470cc7f61c3bcc814f33a5fdf2aafd1a07bc",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
     }
   ]
 }
