@@ -389,5 +389,8 @@
 
     <!-- Battery stats reset -->
     <string name="battery_stats_reset">Reset stats</string>
-    <string name="battery_stats_message">Battery history stats are going to be reset</string> 
+    <string name="battery_stats_message">Battery history stats are going to be reset</string>
+
+    <!-- Screen resolution -->
+    <string name="custom_screen_resolution_title">Custom screen resolution</string>
 </resources>
