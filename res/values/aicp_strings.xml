@@ -339,4 +339,7 @@
     <!-- Proximity wake -->
     <string name="proximity_wake_title">Prevent accidental wake-up</string>
     <string name="proximity_wake_summary">Check the proximity sensor prior to waking up screen</string>
+
+    <!-- Warning message for the sd card setup -->
+    <string name="storage_warning_internal">Warning: This option may not work properly or lead to data loss and is therefore not recommended!</string>
 </resources>
