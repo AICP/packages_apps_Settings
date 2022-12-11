@@ -39,7 +39,7 @@
         settings:controller="com.android.settings.fuelgauge.batterytip.BatteryTipPreferenceController" />
 
     <Preference
-        android:fragment="com.android.settings.fuelgauge.PowerUsageAdvanced"
+        android:fragment="com.android.settings.fuelgauge.batteryusage.PowerUsageAdvanced"
         android:key="battery_usage_summary"
         android:title="@string/advanced_battery_preference_title"
         settings:keywords="@string/keywords_battery_usage" />
@@ -70,7 +70,7 @@
         <intent android:action="android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS" />
     </Preference>
 
-    <com.android.settings.fuelgauge.PowerGaugePreference
+    <com.android.settings.fuelgauge.batteryusage.PowerGaugePreference
         android:key="battery_temperature"
         android:title="@string/battery_temperature"
         android:selectable="false" />
