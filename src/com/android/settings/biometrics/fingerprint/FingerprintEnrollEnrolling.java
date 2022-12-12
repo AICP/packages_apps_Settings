@@ -153,7 +153,8 @@ public class FingerprintEnrollEnrolling extends BiometricsEnrollEnrolling {
 
     private FingerprintManager mFingerprintManager;
     private boolean mCanAssumeUdfps;
-    private static boolean sCanAssumeSidefps;
+    private boolean mCanAssumeSfps;
+    private static boolean sCanAssumeSfps;
     @Nullable private ProgressBar mProgressBar;
     private ObjectAnimator mProgressAnim;
     private TextView mErrorText;
