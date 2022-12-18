@@ -171,9 +171,10 @@
         settings:keywords="@string/keywords_vibration"/>
 
     <!-- Live Volume Steps -->
-    <PreferenceScreen
+    <Preference
         android:key="volume_steps"
         android:title="@string/volume_steps_title"
+        android:order="-85"
         android:fragment="com.android.settings.aicp.VolumeSteps" />
 
     <com.android.settingslib.PrimarySwitchPreference
