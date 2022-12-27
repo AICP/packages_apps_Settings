@@ -234,23 +234,9 @@
     <string name="volume_steps_7">7</string>
     <string name="volume_steps_5">5</string>
 
-    <!-- Fullscreen gestures -->
-    <string name="navbar_category">Navigation bar</string>
-
-    <!-- Gesture navbar length -->
-    <string name="gesture_navbar_length_title">Pill length</string>
-    <string name="hide_label">Hidden</string>
-    <string name="long_label">Long</string>
-
     <!-- Back gesture animation -->
     <string name="back_gesture_arrow_message">Back gesture animation</string>
     <string name="back_gesture_arrow_summary">Show an animated arrow for back gesture</string>
-
-    <!-- Navigation bar IME space -->
-    <string name="navigation_bar_ime_space_title">Space under the keyboard</string>
-    <string name="navigation_bar_ime_space_value_narrow">Narrow</string>
-    <string name="default_string">Default</string>
-    <string name="hidden_string">Hidden</string>
 
     <!-- Back gesture height -->
     <string name="back_height_low_label">Full</string>

@@ -17,12 +17,10 @@
 package com.android.settings.gestures;
 
 import android.app.settings.SettingsEnums;
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.os.Bundle;
-import android.os.UserHandle;
 import android.provider.Settings;
 import android.view.WindowManager;
 
@@ -47,7 +45,6 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
     private static final String LEFT_EDGE_SEEKBAR_KEY = "gesture_left_back_sensitivity";
     private static final String RIGHT_EDGE_SEEKBAR_KEY = "gesture_right_back_sensitivity";
     private static final String KEY_BACK_HEIGHT = "gesture_back_height";
-    private static final String GESTURE_NAVBAR_LENGTH_KEY = "gesture_navbar_length_preference";
 
     private WindowManager mWindowManager;
     private BackGestureIndicatorView mIndicatorView;
@@ -57,8 +54,6 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
     private float[] mBackGestureHeightScales = { 0f, 1f, 2f, 3f };
     private int mCurrentRightWidth;
     private int mCurrentLefttWidth;
-
-    private LabeledSeekBarPreference mGestureNavbarLengthPreference;
 
     public GestureNavigationSettingsFragment() {
         super();
@@ -76,7 +71,7 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         super.onCreatePreferences(savedInstanceState, rootKey);
 
-        final Resources res = getResources();
+        final Resources res = getActivity().getResources();
         mDefaultBackGestureInset = res.getDimensionPixelSize(
                 com.android.internal.R.dimen.config_backGestureInset);
         mBackGestureInsetScales = getFloatArray(res.obtainTypedArray(
@@ -85,8 +80,6 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
         initSeekBarPreference(LEFT_EDGE_SEEKBAR_KEY);
         initSeekBarPreference(RIGHT_EDGE_SEEKBAR_KEY);
         initSeekBarPreference(KEY_BACK_HEIGHT);
-
-        initGestureNavbarLengthPreference();
     }
 
     @Override
@@ -126,7 +119,7 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
     }
 
     private void initSeekBarPreference(final String key) {
-        final LabeledSeekBarPreference pref = findPreference(key);
+        final LabeledSeekBarPreference pref = getPreferenceScreen().findPreference(key);
         pref.setContinuousUpdates(true);
         pref.setHapticFeedbackMode(SeekBarPreference.HAPTIC_FEEDBACK_MODE_ON_TICKS);
 
@@ -213,18 +206,6 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
             }
             return true;
         });
-    }
-
-    private void initGestureNavbarLengthPreference() {
-        final ContentResolver resolver = getContext().getContentResolver();
-        mGestureNavbarLengthPreference = getPreferenceScreen().findPreference(GESTURE_NAVBAR_LENGTH_KEY);
-        mGestureNavbarLengthPreference.setContinuousUpdates(true);
-        mGestureNavbarLengthPreference.setProgress(Settings.Secure.getIntForUser(
-            resolver, Settings.Secure.GESTURE_NAVBAR_LENGTH_MODE,
-            1, UserHandle.USER_CURRENT));
-        mGestureNavbarLengthPreference.setOnPreferenceChangeListener((p, v) ->
-            Settings.Secure.putIntForUser(resolver, Settings.Secure.GESTURE_NAVBAR_LENGTH_MODE,
-                (Integer) v, UserHandle.USER_CURRENT));
     }
 
     private static float[] getFloatArray(TypedArray array) {
