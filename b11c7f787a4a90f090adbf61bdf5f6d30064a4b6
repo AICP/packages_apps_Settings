@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9314e8ca_d166d3f2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2022-12-30T06:39:30Z",
+      "side": 1,
+      "message": "Merged on LoS: https://review.lineageos.org/c/LineageOS/android_packages_apps_Settings/+/345756",
+      "revId": "b11c7f787a4a90f090adbf61bdf5f6d30064a4b6",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
