@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7a970d51_d5da27f2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2023-02-19T11:52:51Z",
+      "side": 1,
+      "message": "we will need this commit when we merge https://gerrit.aicp-rom.com/q/topic:t-navbar-tunning topic.",
+      "revId": "05236d3e7974b3adcb38effc66f3190dce914862",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
