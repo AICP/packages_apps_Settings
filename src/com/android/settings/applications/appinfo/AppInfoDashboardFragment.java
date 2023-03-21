@@ -532,6 +532,7 @@ public class AppInfoDashboardFragment extends DashboardFragment
     }
      private boolean isAospOrStore(String packageName) {
         return packageName.contains("com.android");
+    }
 
     @Override
     protected boolean shouldSkipForInitialSUW() {
