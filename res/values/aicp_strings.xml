@@ -357,4 +357,8 @@
     <!-- Navigation compact layout -->
     <string name="navigation_bar_compact_layout_title">Compact layout</string>
     <string name="navigation_bar_compact_layout_summary">Use a compact layout in the navigation bar</string>
+
+    <!-- IME button space -->
+    <string name="navigation_bar_ime_space_title">Hide IME button space</string>
+    <string name="navigation_bar_ime_space_summary">Hide IME button space below keyboard</string>
 </resources>
