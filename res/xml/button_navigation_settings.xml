@@ -42,5 +42,11 @@
         android:summary="@string/navbar_invert_info"
         android:defaultValue="false" />
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="navigation_bar_menu_arrow_keys"
+        android:title="@string/navigation_bar_arrow_keys_title"
+        android:summary="@string/navigation_bar_arrow_keys_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
 
