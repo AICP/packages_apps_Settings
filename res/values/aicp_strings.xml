@@ -349,4 +349,8 @@
     <!-- Navbar options -->
     <string name="navbar_invert_layout_title">Invert navigation bar layout</string>
     <string name="navbar_invert_info">Swap the \"Back\" and \"Recents\" buttons on the navigation bar</string>
+
+    <!-- Navigation bar arrow keys -->
+    <string name="navigation_bar_arrow_keys_title">Show arrow keys while typing</string>
+    <string name="navigation_bar_arrow_keys_summary">Display left and right cursor buttons while typing. Overrides IME switcher.</string>
 </resources>
