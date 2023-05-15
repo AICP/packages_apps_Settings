@@ -60,6 +60,8 @@ public class AppInstallerInfoPreferenceController extends AppInfoPreferenceContr
         Intent intent = AppStoreUtil.getAppStoreLink(mContext, mInstallerPackage, mPackageName);
         if (intent != null) {
             preference.setIntent(intent);
+        } else {
+            preference.setEnabled(false);
         }
     }
 
