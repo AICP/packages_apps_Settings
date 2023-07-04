@@ -1233,6 +1233,24 @@ public final class Utils extends com.android.settingslib.Utils {
         return context.getColor(R.color.accent_select_primary_text);
     }
 
+    /**
+     * Returns if dreams are available to the current user.
+     */
+    public static boolean areDreamsAvailableToCurrentUser(Context context) {
+        if (!context.getResources().getBoolean(
+                com.android.internal.R.bool.config_dreamsSupported)) {
+            return false;
+        }
+
+        if (!context.getResources().getBoolean(
+                com.android.internal.R.bool.config_dreamsOnlyEnabledForDockUser)) {
+            return true;
+        }
+
+        final UserManager userManager = context.getSystemService(UserManager.class);
+        return userManager != null && userManager.isSystemUser();
+    }
+
     public static int getPINPasswordLength(LockPatternUtils lockPatternUtils, int userId) {
         int pinLength = 0;
         try {
