@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c5ad6791_3ad01c2d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1375
+      },
+      "writtenOn": "2024-04-03T08:46:10Z",
+      "side": 1,
+      "message": "@ronny.horn.rh@gmail.com if I\u0027m right you have a device with hw keys. can you test?",
+      "revId": "58af193ce15b489714b0e38c4768c7b83e7843c4",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
