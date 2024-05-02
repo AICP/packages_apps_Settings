@@ -103,8 +103,8 @@ android_library {
         "settings-logtags",
         "settings-telephony-protos-lite",
         "statslog-settings",
-        "OmniLib",
-        "OmniPreference",
+        "AicpGear-preference",
+        "AicpGear-util",
     ],
 
     plugins: ["androidx.room_room-compiler-plugin"],

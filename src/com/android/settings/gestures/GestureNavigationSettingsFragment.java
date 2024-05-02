@@ -31,8 +31,6 @@ import com.android.settings.widget.LabeledSeekBarPreference;
 import com.android.settings.widget.SeekBarPreference;
 import com.android.settingslib.search.SearchIndexable;
 
-import org.omnirom.omnilib.utils.OmniSettings;
-
 /**
  * A fragment to include all the settings related to Gesture Navigation mode.
  */
@@ -129,7 +127,7 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
                 Settings.Secure.BACK_GESTURE_INSET_SCALE_LEFT
                 : key == RIGHT_EDGE_SEEKBAR_KEY ?
                 Settings.Secure.BACK_GESTURE_INSET_SCALE_RIGHT
-                : OmniSettings.OMNI_BACK_GESTURE_HEIGHT;
+                : Settings.System.OMNI_BACK_GESTURE_HEIGHT;
 
 
         float initScale = Settings.Secure.getFloat(

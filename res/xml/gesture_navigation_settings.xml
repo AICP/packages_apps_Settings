@@ -70,14 +70,14 @@
         android:persistent="false"
         android:title="@string/navbar_gesture_handle_category">
 
-        <omnirom.preference.SystemSettingSwitchPreference
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="navbar_gesture_handle_hide"
             android:title="@string/navbar_gesture_handle_hide_title"
             android:summary="@string/navbar_gesture_handle_hide_summary"
             android:defaultValue="false"
             settings:controller="com.android.settings.gestures.GestureHandlePreferenceController"/>
 
-        <omnirom.preference.SystemSettingSwitchPreference
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="navbar_gesture_handle_small"
             android:title="@string/navbar_gesture_handle_small_title"
             android:summary="@string/navbar_gesture_handle_small_summary"

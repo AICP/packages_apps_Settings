@@ -35,7 +35,6 @@ import com.android.settingslib.core.lifecycle.LifecycleObserver;
 import com.android.settingslib.core.lifecycle.events.OnPause;
 import com.android.settingslib.core.lifecycle.events.OnResume;
 
-import org.omnirom.omnilib.utils.OmniSettings;
 
 public class GestureSmallPreferenceController extends BasePreferenceController implements
         LifecycleObserver, OnResume, OnPause {
@@ -61,13 +60,13 @@ public class GestureSmallPreferenceController extends BasePreferenceController i
 
     private boolean hideGestureHandle() {
         return Settings.System.getInt(mContext.getContentResolver(),
-                OmniSettings.OMNI_GESTURE_HANDLE_HIDE, 0) != 0;
+                Settings.System.OMNI_GESTURE_HANDLE_HIDE, 0) != 0;
     }
 
     @Override
     public void onResume() {
         mContext.getContentResolver().registerContentObserver(
-                Settings.System.getUriFor(OmniSettings.OMNI_GESTURE_HANDLE_HIDE),
+                Settings.System.getUriFor(Settings.System.OMNI_GESTURE_HANDLE_HIDE),
                 false, mObserver);
     }
 
