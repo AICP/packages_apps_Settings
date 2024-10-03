@@ -20,19 +20,11 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="top_level_settings">
 
-    <com.android.settings.widget.HomepagePreference 
-        android:key="top_level_ae" 
-        android:title="@string/aicpextras_title" 
-        android:summary="@string/aicpextras_summary" 
-        android:icon="@drawable/ic_settings_aicpextras" 
-        android:fragment="com.android.settings.aicp.StartAe"
-        android:order="-150"/>
-
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.network.NetworkDashboardFragment"
         android:icon="@drawable/ic_settings_wireless"
         android:key="top_level_network"
-        android:order="-145"
+        android:order="-150"
         android:title="@string/network_dashboard_title"
         android:summary="@string/summary_placeholder"
         settings:highlightableMenuKey="@string/menu_key_network"
@@ -42,7 +34,7 @@
         android:fragment="com.android.settings.communal.CommunalDashboardFragment"
         android:icon="@drawable/ia_settings_communal"
         android:key="top_level_communal"
-        android:order="-140"
+        android:order="-145"
         android:title="@string/communal_settings_title"
         android:summary="@string/communal_settings_summary"
         settings:highlightableMenuKey="@string/menu_key_communal"
@@ -52,7 +44,7 @@
         android:fragment="com.android.settings.connecteddevice.ConnectedDeviceDashboardFragment"
         android:icon="@drawable/ic_devices_other"
         android:key="top_level_connected_devices"
-        android:order="-135"
+        android:order="-140"
         android:title="@string/connected_devices_dashboard_title"
         android:summary="@string/connected_devices_dashboard_default_summary"
         settings:highlightableMenuKey="@string/menu_key_connected_devices"
@@ -66,6 +58,14 @@
         android:title="@string/apps_dashboard_title"
         android:summary="@string/app_and_notification_dashboard_summary"
         settings:highlightableMenuKey="@string/menu_key_apps"/>
+
+    <com.android.settings.widget.HomepagePreference
+        android:key="top_level_ae"
+        android:title="@string/aicpextras_title"
+        android:summary="@string/aicpextras_summary"
+        android:icon="@drawable/ic_settings_aicpextras"
+        android:fragment="com.android.settings.aicp.StartAe"
+        android:order="-125"/>
 
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.notification.ConfigureNotificationSettings"
