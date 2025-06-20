@@ -183,9 +183,11 @@ public class PowerUsageSummary extends PowerUsageBase
             getPreferenceScreen().removePreference(mCurrentBatteryCapacity);
             getPreferenceScreen().removePreference(mDesignedBatteryCapacity);
             getPreferenceScreen().removePreference(mBatteryChargeCycles);
-            getPreferenceScreen().removePreference(mBatteryHealthPercent);
         }
 
+        if (getResources().getString(R.string.config_batHealthPercent).isEmpty()) {
+            getPreferenceScreen().removePreference(mBatteryHealthPercent);
+        }
         if (Utils.isBatteryPresent(getContext())) {
             restartBatteryInfoLoader();
         } else {
