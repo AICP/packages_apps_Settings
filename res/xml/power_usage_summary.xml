@@ -75,12 +75,12 @@
         settings:requiresConfig="@*lineageos.platform:integer/config_deviceLightCapabilities"
         settings:requiresConfigMask="64" />
 
-    <SwitchPreferenceCompat
+<!--    <SwitchPreferenceCompat
         android:key="status_bar_show_battery_percent"
         android:title="@string/battery_percentage"
         android:summary="@string/battery_percentage_description"
         settings:controller="com.android.settings.display.BatteryPercentagePreferenceController" />
-
+    -->
     <SwitchPreferenceCompat
         android:key="fast_charging"
         android:title="@string/fast_charging_title"
