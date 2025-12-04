@@ -97,6 +97,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="category_key_color"
         android:title="@string/category_name_color"
         android:order="-170">
 
@@ -106,10 +107,6 @@
             android:fragment="com.android.settings.display.NightDisplaySettings"
             settings:controller="com.android.settings.display.NightDisplayPreferenceController"
             settings:keywords="@string/keywords_display_night_display"/>
-
-        <lineageos.preference.LineagePartsPreference
-            android:key="livedisplay"
-            settings:requiresConfig="@*lineageos.platform:bool/config_enableLiveDisplay" />
 
         <Preference
             android:key="color_mode"
