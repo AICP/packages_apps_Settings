@@ -38,4 +38,8 @@
     <string name="app_volume">App volume</string>
     <string name="app_volume_title">Per-app volume control</string>
     <string name="app_volume_summary">Show per-app volume button into volume dialog</string>
+
+    <!-- Smart 5G -->
+    <string name="smart_5g_title">Smart 5G</string>
+    <string name="smart_5g_summary">Automatically switch between 5G and 4G to reduce battery consumption</string>
 </resources>

@@ -270,6 +270,8 @@ fun PrimarySimImpl(
         Icons.Outlined.DataUsage,
         actionSetMobileData,
     )
+
+    Smart5gPreference()
 }
 
 @Composable
