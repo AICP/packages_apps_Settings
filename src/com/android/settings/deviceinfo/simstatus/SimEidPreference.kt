@@ -63,7 +63,8 @@ class SimEidPreference(
 
     override fun getTitle(context: Context): CharSequence? = formattedTitle
 
-    override fun getSummary(context: Context): CharSequence? = eidMetadata?.eid
+    override fun getSummary(context: Context): CharSequence? =
+        context.getString(R.string.device_info_protected_single_press)
 
     override fun bind(preference: Preference, metadata: PreferenceMetadata) {
         super.bind(preference, metadata)
@@ -71,8 +72,9 @@ class SimEidPreference(
     }
 
     override fun onCreate(context: PreferenceLifecycleContext) {
-        context.requirePreference<Preference>(key).onPreferenceClickListener =
-            Preference.OnPreferenceClickListener {
+        val preference = context.requirePreference<Preference>(key)
+        preference.onPreferenceClickListener = Preference.OnPreferenceClickListener {
+                preference.summary = eidMetadata?.eid
                 SimEidDialogFragment.show(
                     context.childFragmentManager, formattedTitle,
                     eidMetadata?.eid ?: ""
