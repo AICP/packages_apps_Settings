@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.deviceinfo.firmwareversion;
+package com.android.settings.deviceinfo;
 
 import android.content.Context;
 import android.os.SELinux;
