@@ -30,12 +30,27 @@
         settings:searchable="false"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController"/>
 
+    <!-- Lineage version -->
+    <Preference
+        android:key="lineage_version"
+	    android:title="@string/aicp_version"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.LineageVersionDetailPreferenceController"/>
+
     <!-- Security patch -->
     <Preference
         android:key="security_key"
         android:title="@string/security_patch"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.SecurityPatchLevelPreferenceController"/>
+
+    <!-- Vendor Security patch -->
+    <Preference
+        android:key="vendor_security_key"
+        android:title="@string/security_patch"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.LineageVendorSecurityPatchLevelPreference"/>
 
     <!-- Mainline module version -->
     <Preference
@@ -62,6 +77,15 @@
         android:selectable="false"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.KernelVersionPreferenceController"/>
+
+    <!-- Build date -->
+    <Preference
+        android:key="os_build_date"
+        android:title="@*lineageos.platform:string/build_date"
+        android:summary="@string/summary_placeholder"
+        android:selectable="false"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.LineageBuildDatePreferenceController"/>
 
     <!-- Build -->
     <Preference
