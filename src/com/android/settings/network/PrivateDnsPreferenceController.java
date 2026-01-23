@@ -65,9 +65,6 @@ public class PrivateDnsPreferenceController extends BasePreferenceController
         Settings.Global.getUriFor(PRIVATE_DNS_SPECIFIER),
     };
 
-    // Only used in Settings, update on additions to ConnectivitySettingsUtils
-    private static final int PRIVATE_DNS_MODE_CLOUDFLARE = 4;
-
     private final Handler mHandler;
     private final ContentObserver mSettingsObserver;
     private final ConnectivityManager mConnectivityManager;
@@ -132,22 +129,46 @@ public class PrivateDnsPreferenceController extends BasePreferenceController
         switch (mode) {
             case PRIVATE_DNS_MODE_OFF:
                 return res.getString(com.android.settingslib.R.string.private_dns_mode_off);
-            case PRIVATE_DNS_MODE_CLOUDFLARE:
             case PRIVATE_DNS_MODE_OPPORTUNISTIC:
                 return dnsesResolved ? res.getString(R.string.private_dns_mode_on)
                         : res.getString(
                                 com.android.settingslib.R.string.private_dns_mode_opportunistic);
             case PRIVATE_DNS_MODE_PROVIDER_HOSTNAME:
                 if (!dnsesResolved) {
-                    return res.getString(
-                            com.android.settingslib.R.string.private_dns_mode_provider_failure);
+                    return res.getString(com.android.settingslib.R.string.private_dns_mode_provider_failure);
                 }
                 final String privateDnsHostname =
                         ConnectivitySettingsManager.getPrivateDnsHostname(mContext);
-                final String cloudflareHostname =
-                        res.getString(R.string.private_dns_hostname_cloudflare);
-                if (privateDnsHostname.equals(cloudflareHostname)) {
+                if (privateDnsHostname.equals(res.getString(R.string.private_dns_hostname_adguard))) {
+                    return res.getString(R.string.private_dns_mode_adguard);
+                } else if (privateDnsHostname.equals(res.getString(R.string.private_dns_hostname_appliedprivacy))) {
+                    return res.getString(R.string.private_dns_mode_appliedprivacy);
+                } else if (privateDnsHostname.equals(res.getString(R.string.private_dns_hostname_cira))) {
+                    return res.getString(R.string.private_dns_mode_cira);
+                } else if (privateDnsHostname.equals(res.getString(R.string.private_dns_hostname_cleanbrowsing))) {
+                    return res.getString(R.string.private_dns_mode_cleanbrowsing);
+                } else if (privateDnsHostname.equals(res.getString(R.string.private_dns_hostname_cloudflare))) {
                     return res.getString(R.string.private_dns_mode_cloudflare);
+                } else if (privateDnsHostname.equals(res.getString(R.string.private_dns_hostname_controld))) {
+                    return res.getString(R.string.private_dns_mode_controld);
+                } else if (privateDnsHostname.equals(res.getString(R.string.private_dns_hostname_cznic))) {
+                    return res.getString(R.string.private_dns_mode_cznic);
+                } else if (privateDnsHostname.equals(res.getString(R.string.private_dns_hostname_dnszero))) {
+                    return res.getString(R.string.private_dns_mode_dnszero);
+                } else if (privateDnsHostname.equals(res.getString(R.string.private_dns_hostname_dnssb))) {
+                    return res.getString(R.string.private_dns_mode_dnssb);
+                } else if (privateDnsHostname.equals(res.getString(R.string.private_dns_hostname_google))) {
+                    return res.getString(R.string.private_dns_mode_google);
+                } else if (privateDnsHostname.equals(res.getString(R.string.private_dns_hostname_mullvad))) {
+                    return res.getString(R.string.private_dns_mode_mullvad);
+                } else if (privateDnsHostname.equals(res.getString(R.string.private_dns_hostname_quadnine))) {
+                    return res.getString(R.string.private_dns_mode_quadnine);
+                } else if (privateDnsHostname.equals(res.getString(R.string.private_dns_hostname_restena))) {
+                    return res.getString(R.string.private_dns_mode_restena);
+                } else if (privateDnsHostname.equals(res.getString(R.string.private_dns_hostname_switch))) {
+                    return res.getString(R.string.private_dns_mode_switch);
+                } else if (privateDnsHostname.equals(res.getString(R.string.private_dns_hostname_uncensoreddns))) {
+                    return res.getString(R.string.private_dns_mode_uncensoreddns);
                 }
                 return privateDnsHostname;
         }
