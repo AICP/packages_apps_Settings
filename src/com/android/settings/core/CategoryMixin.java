@@ -114,11 +114,11 @@ public class CategoryMixin implements LifecycleObserver {
         updateCategories(false /* fromBroadcast */);
     }
 
-    void addToDenylist(ComponentName component) {
+    public void addToDenylist(ComponentName component) {
         sTileDenylist.add(component);
     }
 
-    void removeFromDenylist(ComponentName component) {
+    public void removeFromDenylist(ComponentName component) {
         sTileDenylist.remove(component);
     }
 

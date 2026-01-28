@@ -262,6 +262,11 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         getLifecycle().addObserver(new HideNonSystemOverlayMixin(this));
         mCategoryMixin = new CategoryMixin(this);
         getLifecycle().addObserver(mCategoryMixin);
+        
+        // Block GMS Core backup/restore entry from injecting into Settings
+        mCategoryMixin.addToDenylist(new ComponentName(
+                "com.google.android.gms",
+                "com.google.android.gms.backup.component.BackupOrRestoreSettingsActivity"));
 
         final String highlightMenuKey = getHighlightMenuKey();
         // Only allow features on high ram devices.
