@@ -105,7 +105,7 @@ class LineageVersionDetailPreference :
         const val LINEAGE_VERSION_PROPERTY: String = "ro.lineage.version"
 
         const val PLATLOGO_PACKAGE_NAME: String = "org.lineageos.lineageparts"
-        const val PLATLOGO_ACTIVITY_CLASS: String = PLATLOGO_PACKAGE_NAME + ".logo.PlatLogoActivity"
+        const val PLATLOGO_ACTIVITY_CLASS: String = PLATLOGO_PACKAGE_NAME + ".PlatLogoActivity"
     }
 }
 // LINT.ThenChange(LineageVersionDetailPreferenceController.java)
